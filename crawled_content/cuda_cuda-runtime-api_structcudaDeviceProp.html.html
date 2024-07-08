@@ -1,0 +1,3075 @@
+<html><head><title>CUDA Runtime API :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/index.html" title="CUDA Runtime API">
+  CUDA Runtime API
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/driver-vs-runtime-api.html#driver-vs-runtime-api">
+    1.Â Difference between the driver and runtime APIs
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/api-sync-behavior.html#api-sync-behavior">
+    2.Â API synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/stream-sync-behavior.html#stream-sync-behavior">
+    3.Â Stream synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/graphs-thread-safety.html#graphs-thread-safety">
+    4.Â Graph object thread safety
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/version-mixing-rules.html#version-mixing-rules">
+    5.Â Rules for version mixing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/modules.html#modules">
+    6.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE">
+      6.1.Â Device Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE__DEPRECATED.html#group__CUDART__DEVICE__DEPRECATED">
+      6.2.Â Device Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__THREAD__DEPRECATED.html#group__CUDART__THREAD__DEPRECATED">
+      6.3.Â Thread Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__ERROR.html#group__CUDART__ERROR">
+      6.4.Â Error Handling
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__STREAM.html#group__CUDART__STREAM">
+      6.5.Â Stream Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT">
+      6.6.Â Event Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXTRES__INTEROP.html#group__CUDART__EXTRES__INTEROP">
+      6.7.Â External Resource Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION.html#group__CUDART__EXECUTION">
+      6.8.Â Execution Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION__DEPRECATED.html#group__CUDART__EXECUTION__DEPRECATED">
+      6.9.Â Execution Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OCCUPANCY.html#group__CUDART__OCCUPANCY">
+      6.10.Â Occupancy
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html#group__CUDART__MEMORY">
+      6.11.Â Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__DEPRECATED.html#group__CUDART__MEMORY__DEPRECATED">
+      6.12.Â Memory Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__POOLS.html#group__CUDART__MEMORY__POOLS">
+      6.13.Â Stream Ordered Memory Allocator
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__UNIFIED.html#group__CUDART__UNIFIED">
+      6.14.Â Unified Addressing
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PEER.html#group__CUDART__PEER">
+      6.15.Â Peer Device Memory Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL.html#group__CUDART__OPENGL">
+      6.16.Â OpenGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL__DEPRECATED.html#group__CUDART__OPENGL__DEPRECATED">
+      6.17.Â OpenGL Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html#group__CUDART__D3D9">
+      6.18.Â Direct3D 9 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED">
+      6.19.Â Direct3D 9 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10.html#group__CUDART__D3D10">
+      6.20.Â Direct3D 10 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10__DEPRECATED.html#group__CUDART__D3D10__DEPRECATED">
+      6.21.Â Direct3D 10 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11.html#group__CUDART__D3D11">
+      6.22.Â Direct3D 11 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11__DEPRECATED.html#group__CUDART__D3D11__DEPRECATED">
+      6.23.Â Direct3D 11 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__VDPAU.html#group__CUDART__VDPAU">
+      6.24.Â VDPAU Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL">
+      6.25.Â EGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP">
+      6.26.Â Graphics Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TEXTURE__OBJECT.html#group__CUDART__TEXTURE__OBJECT">
+      6.27.Â Texture Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__SURFACE__OBJECT.html#group__CUDART__SURFACE__OBJECT">
+      6.28.Â Surface Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART____VERSION.html#group__CUDART____VERSION">
+      6.29.Â Version Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__GRAPH.html#group__CUDART__GRAPH">
+      6.30.Â Graph Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER__ENTRY__POINT.html#group__CUDART__DRIVER__ENTRY__POINT">
+      6.31.Â Driver Entry Point Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL">
+      6.32.Â C++ API Routines
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER">
+      6.33.Â Interactions with the CUDA Driver API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PROFILER.html#group__CUDART__PROFILER">
+      6.34.Â Profiler Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES">
+      6.35.Â Data types used by CUDA Runtime
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/annotated.html#annotated">
+    7.Â Data Structures
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/class____cudaOccupancyB2DHelper.html#class____cudaOccupancyB2DHelper">
+      7.1.Â __cudaOccupancyB2DHelper
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAccessPolicyWindow.html#structcudaAccessPolicyWindow">
+      7.2.Â cudaAccessPolicyWindow
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArrayMemoryRequirements.html#structcudaArrayMemoryRequirements">
+      7.3.Â cudaArrayMemoryRequirements
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArraySparseProperties.html#structcudaArraySparseProperties">
+      7.4.Â cudaArraySparseProperties
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAsyncNotificationInfo__t.html#structcudaAsyncNotificationInfo__t">
+      7.5.Â cudaAsyncNotificationInfo_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChannelFormatDesc.html#structcudaChannelFormatDesc">
+      7.6.Â cudaChannelFormatDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChildGraphNodeParams.html#structcudaChildGraphNodeParams">
+      7.7.Â cudaChildGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaConditionalNodeParams.html#structcudaConditionalNodeParams">
+      7.8.Â cudaConditionalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp">
+      7.9.Â cudaDeviceProp
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame">
+      7.10.Â cudaEglFrame
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc">
+      7.11.Â cudaEglPlaneDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventRecordNodeParams.html#structcudaEventRecordNodeParams">
+      7.12.Â cudaEventRecordNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventWaitNodeParams.html#structcudaEventWaitNodeParams">
+      7.13.Â cudaEventWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExtent.html#structcudaExtent">
+      7.14.Â cudaExtent
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryBufferDesc.html#structcudaExternalMemoryBufferDesc">
+      7.15.Â cudaExternalMemoryBufferDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryHandleDesc.html#structcudaExternalMemoryHandleDesc">
+      7.16.Â cudaExternalMemoryHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryMipmappedArrayDesc.html#structcudaExternalMemoryMipmappedArrayDesc">
+      7.17.Â cudaExternalMemoryMipmappedArrayDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreHandleDesc.html#structcudaExternalSemaphoreHandleDesc">
+      7.18.Â cudaExternalSemaphoreHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParams.html#structcudaExternalSemaphoreSignalNodeParams">
+      7.19.Â cudaExternalSemaphoreSignalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParamsV2.html#structcudaExternalSemaphoreSignalNodeParamsV2">
+      7.20.Â cudaExternalSemaphoreSignalNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams.html#structcudaExternalSemaphoreSignalParams">
+      7.21.Â cudaExternalSemaphoreSignalParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams__v1.html#structcudaExternalSemaphoreSignalParams__v1">
+      7.22.Â cudaExternalSemaphoreSignalParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParams.html#structcudaExternalSemaphoreWaitNodeParams">
+      7.23.Â cudaExternalSemaphoreWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParamsV2.html#structcudaExternalSemaphoreWaitNodeParamsV2">
+      7.24.Â cudaExternalSemaphoreWaitNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams.html#structcudaExternalSemaphoreWaitParams">
+      7.25.Â cudaExternalSemaphoreWaitParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams__v1.html#structcudaExternalSemaphoreWaitParams__v1">
+      7.26.Â cudaExternalSemaphoreWaitParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaFuncAttributes.html#structcudaFuncAttributes">
+      7.27.Â cudaFuncAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphEdgeData.html#structcudaGraphEdgeData">
+      7.28.Â cudaGraphEdgeData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphExecUpdateResultInfo.html#structcudaGraphExecUpdateResultInfo">
+      7.29.Â cudaGraphExecUpdateResultInfo
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphInstantiateParams.html#structcudaGraphInstantiateParams">
+      7.30.Â cudaGraphInstantiateParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphKernelNodeUpdate.html#structcudaGraphKernelNodeUpdate">
+      7.31.Â cudaGraphKernelNodeUpdate
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphNodeParams.html#structcudaGraphNodeParams">
+      7.32.Â cudaGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParams.html#structcudaHostNodeParams">
+      7.33.Â cudaHostNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParamsV2.html#structcudaHostNodeParamsV2">
+      7.34.Â cudaHostNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcEventHandle__t.html#structcudaIpcEventHandle__t">
+      7.35.Â cudaIpcEventHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcMemHandle__t.html#structcudaIpcMemHandle__t">
+      7.36.Â cudaIpcMemHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParams.html#structcudaKernelNodeParams">
+      7.37.Â cudaKernelNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParamsV2.html#structcudaKernelNodeParamsV2">
+      7.38.Â cudaKernelNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchAttribute.html#structcudaLaunchAttribute">
+      7.39.Â cudaLaunchAttribute
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/unioncudaLaunchAttributeValue.html#unioncudaLaunchAttributeValue">
+      7.40.Â cudaLaunchAttributeValue
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchConfig__t.html#structcudaLaunchConfig__t">
+      7.41.Â cudaLaunchConfig_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchMemSyncDomainMap.html#structcudaLaunchMemSyncDomainMap">
+      7.42.Â cudaLaunchMemSyncDomainMap
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchParams.html#structcudaLaunchParams">
+      7.43.Â cudaLaunchParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAccessDesc.html#structcudaMemAccessDesc">
+      7.44.Â cudaMemAccessDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParams.html#structcudaMemAllocNodeParams">
+      7.45.Â cudaMemAllocNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParamsV2.html#structcudaMemAllocNodeParamsV2">
+      7.46.Â cudaMemAllocNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DParms.html#structcudaMemcpy3DParms">
+      7.47.Â cudaMemcpy3DParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DPeerParms.html#structcudaMemcpy3DPeerParms">
+      7.48.Â cudaMemcpy3DPeerParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpyNodeParams.html#structcudaMemcpyNodeParams">
+      7.49.Â cudaMemcpyNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemFreeNodeParams.html#structcudaMemFreeNodeParams">
+      7.50.Â cudaMemFreeNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemLocation.html#structcudaMemLocation">
+      7.51.Â cudaMemLocation
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolProps.html#structcudaMemPoolProps">
+      7.52.Â cudaMemPoolProps
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolPtrExportData.html#structcudaMemPoolPtrExportData">
+      7.53.Â cudaMemPoolPtrExportData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParams.html#structcudaMemsetParams">
+      7.54.Â cudaMemsetParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParamsV2.html#structcudaMemsetParamsV2">
+      7.55.Â cudaMemsetParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr">
+      7.56.Â cudaPitchedPtr
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPointerAttributes.html#structcudaPointerAttributes">
+      7.57.Â cudaPointerAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPos.html#structcudaPos">
+      7.58.Â cudaPos
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceDesc.html#structcudaResourceDesc">
+      7.59.Â cudaResourceDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceViewDesc.html#structcudaResourceViewDesc">
+      7.60.Â cudaResourceViewDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaTextureDesc.html#structcudaTextureDesc">
+      7.61.Â cudaTextureDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structCUuuid__st.html#structCUuuid__st">
+      7.62.Â CUuuid_st
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/functions.html#functions">
+    8.Â Data Fields
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated">
+    9.Â Deprecated List
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaConditionalNodeParams.html" shape="rect">
+  &lt; Previous
+ </a>
+ |
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html" shape="rect">
+  Next &gt;
+ </a>
+ CUDA Runtime API
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CUDA_Runtime_API.pdf">
+  PDF
+ </a>
+ )
+                  -
+                   
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20CUDA%20Runtime%20API">
+  Send Feedback
+ </a>
+ <a name="structcudaDeviceProp" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="topictitle2 cppClass">
+  7.9.Â cudaDeviceProp Struct Reference
+ </h2>
+ <h2>
+  [
+  <a class="xref xref apiRelation cppClassifierModule" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html" shape="rect">
+   Data types used by CUDA Runtime
+  </a>
+  ]
+ </h2>
+ <p>
+  CUDA device properties
+ </p>
+ <h3 class="fake_sectiontitle member_header">
+  Public Variables
+ </h3>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_172919e0168f8dc8a719e2c38355b80ab" shape="rect">
+   ECCEnabled
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_192470653c71f372dbec29bd693d55316" shape="rect">
+   accessPolicyMaxWindowSize
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_105a89c028bee8fe480d0f44ddd43357b" shape="rect">
+   asyncEngineCount
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_115414c4b1fedd1a22030522d54caa653" shape="rect">
+   canMapHostMemory
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1ae79e062f076b0270625b38bb91285b8" shape="rect">
+   canUseHostPointerForRegisteredMem
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1dee14230e417cb3059d697d6804da414" shape="rect">
+   clockRate
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1d5909d1563000146dd3f12646f3c98c7" shape="rect">
+   clusterLaunch
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_15458a603dcbca1dd361ac5b99c07675b" shape="rect">
+   computeMode
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_154a9a6e0067360f23dc91e60e7cf88d1" shape="rect">
+   computePreemptionSupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18e2fe2a3b264901816874516af12a097" shape="rect">
+   concurrentKernels
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_116f9619ccc85e93bc456b8c69c80e78b" shape="rect">
+   concurrentManagedAccess
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13c26ab51c96f39b115d7826337541914" shape="rect">
+   cooperativeLaunch
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_183271637b431ccb5f5b58c46d0bd8cc9" shape="rect">
+   cooperativeMultiDeviceLaunch
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f557e52f68c1844a785aa6c1c187acca" shape="rect">
+   deferredMappingCudaArraySupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13281f4cdba05e2ca43be1caae2bcb29b" shape="rect">
+   deviceOverlap
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b47773cf29bec05e6f1ba569346889e8" shape="rect">
+   directManagedMemAccessFromHost
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1551ac00fc5ba827a91d705b164288bff" shape="rect">
+   globalL1CacheSupported
+  </a>
+ </span>
+ <span class="member_type">
+  unsigned int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_179f31a48236e1100df36df98c63d8f47" shape="rect">
+   gpuDirectRDMAFlushWritesOptions
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18365322f55133cf8226f59aebff0b49f" shape="rect">
+   gpuDirectRDMASupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_10b1f11deaf3873f4c365036d2a530695" shape="rect">
+   gpuDirectRDMAWritesOrdering
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1ef82fd7d1d0413c7d6f33287e5b6306f" shape="rect">
+   hostNativeAtomicSupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17e123c52deb1c940d9e0dc4bbac64a76" shape="rect">
+   hostRegisterReadOnlySupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1861e700db4605a3fb81cb994e3d2d9c2" shape="rect">
+   hostRegisterSupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1613bf3e02c6120db852a2ecd5ff9605a" shape="rect">
+   integrated
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_15a49ec0bc568c80b40fcbb76cbaa5089" shape="rect">
+   ipcEventSupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1512d849f57e6a6a0ece1d21879c3ae35" shape="rect">
+   isMultiGpuBoard
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_19a63114766c4d2309f00403c1bf056c8" shape="rect">
+   kernelExecTimeoutEnabled
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b40b9ed0e542e9f09667b0a89fb6ad85" shape="rect">
+   l2CacheSize
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e1772eeb293a76aae0bbf7f965a403d5" shape="rect">
+   localL1CacheSupported
+  </a>
+ </span>
+ <span class="member_type">
+  char Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b1fe931f3f41d1b97c8679c8b15d94e3" shape="rect">
+   luid
+  </a>
+  [8]
+ </span>
+ <span class="member_type">
+  unsigned int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17e9a4d56377db11fd9d6b013de9cbf08" shape="rect">
+   luidDeviceNodeMask
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_164490976c8e07e028a8f1ce1f5cd42d6" shape="rect">
+   major
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f7230860be3e37047c7ce5d32542b54b" shape="rect">
+   managedMemory
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17f337476973ea65db85c277f4646f0b3" shape="rect">
+   maxBlocksPerMultiProcessor
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17d138a572315b3bbb6caf7ccc914a130" shape="rect">
+   maxGridSize
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1fd25f5ae34d7eeb2c52f87b9e932fe05" shape="rect">
+   maxSurface1D
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16cf36809ff5ed6b8aa836177d0292200" shape="rect">
+   maxSurface1DLayered
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1a85bc895583a26251fbfef635c7644a9" shape="rect">
+   maxSurface2D
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1edeed8d96d802c4b01149e2e6a7b4ea8" shape="rect">
+   maxSurface2DLayered
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_14fdf5cd399b60955ee35421a7cc6418a" shape="rect">
+   maxSurface3D
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1d170a7ad44ced64478d50fd7b6378b41" shape="rect">
+   maxSurfaceCubemap
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1d4564200e6bc420be63b61251c6d39b8" shape="rect">
+   maxSurfaceCubemapLayered
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_121e1544ca58ec5e559d0d498c5af9061" shape="rect">
+   maxTexture1D
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11047afc38a23fcdfd5f202002caa53f5" shape="rect">
+   maxTexture1DLayered
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_120efbdc4556a390720e0f75b62b8f83d" shape="rect">
+   maxTexture1DLinear
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16875f2ba4ab9d9733948545303786cc4" shape="rect">
+   maxTexture1DMipmap
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1618ac703b9a48adf50713897689a3eb2" shape="rect">
+   maxTexture2D
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11468730923ddf5a68ecc9bb42053c1c9" shape="rect">
+   maxTexture2DGather
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16011fd7e13a77d58fbbd4a5ba1801fbf" shape="rect">
+   maxTexture2DLayered
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1757a4245a175441c2a1535ef9c9524a4" shape="rect">
+   maxTexture2DLinear
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f227daa1f3c12d90898c77152b1136bf" shape="rect">
+   maxTexture2DMipmap
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16ea5619e4e11617451c6adc8560f068b" shape="rect">
+   maxTexture3D
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16f5f5ba8a7dc088392be0d2f8f51faed" shape="rect">
+   maxTexture3DAlt
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f9076f17639b08ea1783bb3035b1f707" shape="rect">
+   maxTextureCubemap
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f838fe5c7528d1e345a83659d001d799" shape="rect">
+   maxTextureCubemapLayered
+  </a>
+  [2]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_192d195493a9d36b2d827aaf3ffd89f1e" shape="rect">
+   maxThreadsDim
+  </a>
+  [3]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_118f38f08c66c8812b1ddeb16e4bf51a4" shape="rect">
+   maxThreadsPerBlock
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_196dac83c7095e29b86300cc02851844c" shape="rect">
+   maxThreadsPerMultiProcessor
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_14382eddd3f5836f1195ca988388783bb" shape="rect">
+   memPitch
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e764fca4d15a459279b31cb533435c19" shape="rect">
+   memoryBusWidth
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b200f01a8ec81912285c2633117109c4" shape="rect">
+   memoryClockRate
+  </a>
+ </span>
+ <span class="member_type">
+  unsigned int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e885cf451108cf85dc3b313bce0c9026" shape="rect">
+   memoryPoolSupportedHandleTypes
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16c4af6a4889a35c0bc21bbd3dd7443bb" shape="rect">
+   memoryPoolsSupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_150d477d8d5d3a04e0785f469277c65bb" shape="rect">
+   minor
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_163af976611c9d29f169882f5c32472d4" shape="rect">
+   multiGpuBoardGroupID
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13e36d9d236f97095ef2b496cd2f98121" shape="rect">
+   multiProcessorCount
+  </a>
+ </span>
+ <span class="member_type">
+  char Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11e26f1c6bd42f4821b7ef1a4bd3bd25c" shape="rect">
+   name
+  </a>
+  [256]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_146116bab1064b5d7d0642d78f6c27ce1" shape="rect">
+   pageableMemoryAccess
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e9f1ed6bffd5606eb81d438728a844ca" shape="rect">
+   pageableMemoryAccessUsesHostPageTables
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1c5adc2ef8c6b89fb139b4684175db54a" shape="rect">
+   pciBusID
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_156978c2bfc433d26ac3b4c765ee536bb" shape="rect">
+   pciDeviceID
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f3a69f0796e32c0e32d17c151443fab0" shape="rect">
+   pciDomainID
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1708c0ea6df419516e4bd702dd26f802c" shape="rect">
+   persistingL2CacheMaxSize
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_184472707f521930fc052663820d635fc" shape="rect">
+   regsPerBlock
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1de02e669caefcadadaaa42877b08e80a" shape="rect">
+   regsPerMultiprocessor
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11b4194b6ba5a8879f4374a37f483a2a9" shape="rect">
+   reserved
+  </a>
+  [60]
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_12e824a437e389ad0aa1b0a265969320d" shape="rect">
+   reserved1
+  </a>
+  [1]
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_15a1f6049e9e9fd8af0d2a8a5df289ab7" shape="rect">
+   reservedSharedMemPerBlock
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_182ec4c5e244addb9cd57f5b9da0eaca7" shape="rect">
+   sharedMemPerBlock
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1c23eacaeeb59e1798d6d442be70f1c3e" shape="rect">
+   sharedMemPerBlockOptin
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16cede1829516e86917f0842a5f6498c8" shape="rect">
+   sharedMemPerMultiprocessor
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_14bd4d531bf2ac497d659b03910440315" shape="rect">
+   singleToDoublePrecisionPerfRatio
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13237d19d8b4f8ed68411937b4ea001b8" shape="rect">
+   sparseCudaArraySupported
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_143e968b12978ffd2a80bde224d7dc782" shape="rect">
+   streamPrioritiesSupported
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18fe20825e4239ff91a7708c9468a02b5" shape="rect">
+   surfaceAlignment
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1fcc96a9e56f84f4a0e853c18ce8e2c0d" shape="rect">
+   tccDriver
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1500248658a996f51752e1ab1769f8a88" shape="rect">
+   textureAlignment
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13a3f10d2833bdc82ceb370a449aafeec" shape="rect">
+   texturePitchAlignment
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f2eb506be3f63db30715725d2e19ac1d" shape="rect">
+   timelineSemaphoreInteropSupported
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b4047e5e22082b1aefeac3b9ef39d0be" shape="rect">
+   totalConstMem
+  </a>
+ </span>
+ <span class="member_type">
+  size_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1983c292e2078dd5a4240f49c41d647f3" shape="rect">
+   totalGlobalMem
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_107b0114cefb43da05e05c65ec859542c" shape="rect">
+   unifiedAddressing
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_19f94309e6d30a640821cc9de9591e565" shape="rect">
+   unifiedFunctionPointers
+  </a>
+ </span>
+ <span class="member_type">
+  cudaUUID_t Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1626c20637498c7be1381db55a6261308" shape="rect">
+   uuid
+  </a>
+ </span>
+ <span class="member_type">
+  int Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18656f53eb2a7e54500f6fb95a830b47d" shape="rect">
+   warpSize
+  </a>
+ </span>
+ <h3 class="sectiontitle">
+  Variables
+ </h3>
+ <a id="structcudaDeviceProp_172919e0168f8dc8a719e2c38355b80ab" name="structcudaDeviceProp_172919e0168f8dc8a719e2c38355b80ab" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_172919e0168f8dc8a719e2c38355b80ab" shape="rect">
+   ECCEnabled
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device has ECC support enabled
+ </p>
+ <a id="structcudaDeviceProp_192470653c71f372dbec29bd693d55316" name="structcudaDeviceProp_192470653c71f372dbec29bd693d55316" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_192470653c71f372dbec29bd693d55316" shape="rect">
+   accessPolicyMaxWindowSize
+  </a>
+  [inherited]
+ </span>
+ <p>
+  The maximum value of
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAccessPolicyWindow.html#structcudaAccessPolicyWindow_1bbd68021cb5c3cb1928bee0a2941eb24" shape="rect">
+   cudaAccessPolicyWindow::num_bytes
+  </a>
+  .
+ </p>
+ <a id="structcudaDeviceProp_105a89c028bee8fe480d0f44ddd43357b" name="structcudaDeviceProp_105a89c028bee8fe480d0f44ddd43357b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_105a89c028bee8fe480d0f44ddd43357b" shape="rect">
+   asyncEngineCount
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Number of asynchronous engines
+ </p>
+ <a id="structcudaDeviceProp_115414c4b1fedd1a22030522d54caa653" name="structcudaDeviceProp_115414c4b1fedd1a22030522d54caa653" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_115414c4b1fedd1a22030522d54caa653" shape="rect">
+   canMapHostMemory
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device can map host memory with cudaHostAlloc/cudaHostGetDevicePointer
+ </p>
+ <a id="structcudaDeviceProp_1ae79e062f076b0270625b38bb91285b8" name="structcudaDeviceProp_1ae79e062f076b0270625b38bb91285b8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1ae79e062f076b0270625b38bb91285b8" shape="rect">
+   canUseHostPointerForRegisteredMem
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device can access host registered memory at the same virtual address as the CPU
+ </p>
+ <a id="structcudaDeviceProp_1dee14230e417cb3059d697d6804da414" name="structcudaDeviceProp_1dee14230e417cb3059d697d6804da414" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1dee14230e417cb3059d697d6804da414" shape="rect">
+   clockRate
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, Clock frequency in kilohertz
+ </p>
+ <a id="structcudaDeviceProp_1d5909d1563000146dd3f12646f3c98c7" name="structcudaDeviceProp_1d5909d1563000146dd3f12646f3c98c7" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1d5909d1563000146dd3f12646f3c98c7" shape="rect">
+   clusterLaunch
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Indicates device supports cluster launch
+ </p>
+ <a id="structcudaDeviceProp_15458a603dcbca1dd361ac5b99c07675b" name="structcudaDeviceProp_15458a603dcbca1dd361ac5b99c07675b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_15458a603dcbca1dd361ac5b99c07675b" shape="rect">
+   computeMode
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, Compute mode (See
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g7eb25f5413a962faad0956d92bae10d0" shape="rect">
+   cudaComputeMode
+  </a>
+  )
+ </p>
+ <a id="structcudaDeviceProp_154a9a6e0067360f23dc91e60e7cf88d1" name="structcudaDeviceProp_154a9a6e0067360f23dc91e60e7cf88d1" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_154a9a6e0067360f23dc91e60e7cf88d1" shape="rect">
+   computePreemptionSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports Compute Preemption
+ </p>
+ <a id="structcudaDeviceProp_18e2fe2a3b264901816874516af12a097" name="structcudaDeviceProp_18e2fe2a3b264901816874516af12a097" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18e2fe2a3b264901816874516af12a097" shape="rect">
+   concurrentKernels
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device can possibly execute multiple kernels concurrently
+ </p>
+ <a id="structcudaDeviceProp_116f9619ccc85e93bc456b8c69c80e78b" name="structcudaDeviceProp_116f9619ccc85e93bc456b8c69c80e78b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_116f9619ccc85e93bc456b8c69c80e78b" shape="rect">
+   concurrentManagedAccess
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device can coherently access managed memory concurrently with the CPU
+ </p>
+ <a id="structcudaDeviceProp_13c26ab51c96f39b115d7826337541914" name="structcudaDeviceProp_13c26ab51c96f39b115d7826337541914" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13c26ab51c96f39b115d7826337541914" shape="rect">
+   cooperativeLaunch
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports launching cooperative kernels via
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL_1gc0210b928f9bf4e212af07d35ac11d67" shape="rect" title="Launches a device function.">
+   cudaLaunchCooperativeKernel
+  </a>
+ </p>
+ <a id="structcudaDeviceProp_183271637b431ccb5f5b58c46d0bd8cc9" name="structcudaDeviceProp_183271637b431ccb5f5b58c46d0bd8cc9" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_183271637b431ccb5f5b58c46d0bd8cc9" shape="rect">
+   cooperativeMultiDeviceLaunch
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, cudaLaunchCooperativeKernelMultiDevice is deprecated.
+ </p>
+ <a id="structcudaDeviceProp_1f557e52f68c1844a785aa6c1c187acca" name="structcudaDeviceProp_1f557e52f68c1844a785aa6c1c187acca" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f557e52f68c1844a785aa6c1c187acca" shape="rect">
+   deferredMappingCudaArraySupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  1 if the device supports deferred mapping CUDA arrays and CUDA mipmapped arrays
+ </p>
+ <a id="structcudaDeviceProp_13281f4cdba05e2ca43be1caae2bcb29b" name="structcudaDeviceProp_13281f4cdba05e2ca43be1caae2bcb29b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13281f4cdba05e2ca43be1caae2bcb29b" shape="rect">
+   deviceOverlap
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device can concurrently copy memory and execute a kernel. Deprecated. Use instead asyncEngineCount.
+ </p>
+ <a id="structcudaDeviceProp_1b47773cf29bec05e6f1ba569346889e8" name="structcudaDeviceProp_1b47773cf29bec05e6f1ba569346889e8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b47773cf29bec05e6f1ba569346889e8" shape="rect">
+   directManagedMemAccessFromHost
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Host can directly access managed memory on the device without migration.
+ </p>
+ <a id="structcudaDeviceProp_1551ac00fc5ba827a91d705b164288bff" name="structcudaDeviceProp_1551ac00fc5ba827a91d705b164288bff" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1551ac00fc5ba827a91d705b164288bff" shape="rect">
+   globalL1CacheSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports caching globals in L1
+ </p>
+ <a id="structcudaDeviceProp_179f31a48236e1100df36df98c63d8f47" name="structcudaDeviceProp_179f31a48236e1100df36df98c63d8f47" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  unsigned int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_179f31a48236e1100df36df98c63d8f47" shape="rect">
+   gpuDirectRDMAFlushWritesOptions
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Bitmask to be interpreted according to the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g08213e5a1b0dfdeeb88ed0146ca86f63" shape="rect">
+   cudaFlushGPUDirectRDMAWritesOptions
+  </a>
+  enum
+ </p>
+ <a id="structcudaDeviceProp_18365322f55133cf8226f59aebff0b49f" name="structcudaDeviceProp_18365322f55133cf8226f59aebff0b49f" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18365322f55133cf8226f59aebff0b49f" shape="rect">
+   gpuDirectRDMASupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  1 if the device supports GPUDirect RDMA APIs, 0 otherwise
+ </p>
+ <a id="structcudaDeviceProp_10b1f11deaf3873f4c365036d2a530695" name="structcudaDeviceProp_10b1f11deaf3873f4c365036d2a530695" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_10b1f11deaf3873f4c365036d2a530695" shape="rect">
+   gpuDirectRDMAWritesOrdering
+  </a>
+  [inherited]
+ </span>
+ <p>
+  See the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gd945c8e3f04e38760c1dac290519eb19" shape="rect">
+   cudaGPUDirectRDMAWritesOrdering
+  </a>
+  enum for numerical values
+ </p>
+ <a id="structcudaDeviceProp_1ef82fd7d1d0413c7d6f33287e5b6306f" name="structcudaDeviceProp_1ef82fd7d1d0413c7d6f33287e5b6306f" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1ef82fd7d1d0413c7d6f33287e5b6306f" shape="rect">
+   hostNativeAtomicSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Link between the device and the host supports native atomic operations
+ </p>
+ <a id="structcudaDeviceProp_17e123c52deb1c940d9e0dc4bbac64a76" name="structcudaDeviceProp_17e123c52deb1c940d9e0dc4bbac64a76" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17e123c52deb1c940d9e0dc4bbac64a76" shape="rect">
+   hostRegisterReadOnlySupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports using the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html#group__CUDART__MEMORY_1ge8d5c17670f16ac4fc8fcb4181cb490c" shape="rect" title="Registers an existing host memory range for use by CUDA.">
+   cudaHostRegister
+  </a>
+  flag cudaHostRegisterReadOnly to register memory that must be mapped as read-only to the GPU
+ </p>
+ <a id="structcudaDeviceProp_1861e700db4605a3fb81cb994e3d2d9c2" name="structcudaDeviceProp_1861e700db4605a3fb81cb994e3d2d9c2" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1861e700db4605a3fb81cb994e3d2d9c2" shape="rect">
+   hostRegisterSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports host memory registration via
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html#group__CUDART__MEMORY_1ge8d5c17670f16ac4fc8fcb4181cb490c" shape="rect" title="Registers an existing host memory range for use by CUDA.">
+   cudaHostRegister
+  </a>
+  .
+ </p>
+ <a id="structcudaDeviceProp_1613bf3e02c6120db852a2ecd5ff9605a" name="structcudaDeviceProp_1613bf3e02c6120db852a2ecd5ff9605a" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1613bf3e02c6120db852a2ecd5ff9605a" shape="rect">
+   integrated
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device is integrated as opposed to discrete
+ </p>
+ <a id="structcudaDeviceProp_15a49ec0bc568c80b40fcbb76cbaa5089" name="structcudaDeviceProp_15a49ec0bc568c80b40fcbb76cbaa5089" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_15a49ec0bc568c80b40fcbb76cbaa5089" shape="rect">
+   ipcEventSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports IPC Events.
+ </p>
+ <a id="structcudaDeviceProp_1512d849f57e6a6a0ece1d21879c3ae35" name="structcudaDeviceProp_1512d849f57e6a6a0ece1d21879c3ae35" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1512d849f57e6a6a0ece1d21879c3ae35" shape="rect">
+   isMultiGpuBoard
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device is on a multi-GPU board
+ </p>
+ <a id="structcudaDeviceProp_19a63114766c4d2309f00403c1bf056c8" name="structcudaDeviceProp_19a63114766c4d2309f00403c1bf056c8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_19a63114766c4d2309f00403c1bf056c8" shape="rect">
+   kernelExecTimeoutEnabled
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, Specified whether there is a run time limit on kernels
+ </p>
+ <a id="structcudaDeviceProp_1b40b9ed0e542e9f09667b0a89fb6ad85" name="structcudaDeviceProp_1b40b9ed0e542e9f09667b0a89fb6ad85" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b40b9ed0e542e9f09667b0a89fb6ad85" shape="rect">
+   l2CacheSize
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Size of L2 cache in bytes
+ </p>
+ <a id="structcudaDeviceProp_1e1772eeb293a76aae0bbf7f965a403d5" name="structcudaDeviceProp_1e1772eeb293a76aae0bbf7f965a403d5" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e1772eeb293a76aae0bbf7f965a403d5" shape="rect">
+   localL1CacheSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports caching locals in L1
+ </p>
+ <a id="structcudaDeviceProp_1b1fe931f3f41d1b97c8679c8b15d94e3" name="structcudaDeviceProp_1b1fe931f3f41d1b97c8679c8b15d94e3" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  char
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b1fe931f3f41d1b97c8679c8b15d94e3" shape="rect">
+   luid
+  </a>
+  [8] [inherited]
+ </span>
+ <p>
+  8-byte locally unique identifier. Value is undefined on TCC and non-Windows platforms
+ </p>
+ <a id="structcudaDeviceProp_17e9a4d56377db11fd9d6b013de9cbf08" name="structcudaDeviceProp_17e9a4d56377db11fd9d6b013de9cbf08" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  unsigned int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17e9a4d56377db11fd9d6b013de9cbf08" shape="rect">
+   luidDeviceNodeMask
+  </a>
+  [inherited]
+ </span>
+ <p>
+  LUID device node mask. Value is undefined on TCC and non-Windows platforms
+ </p>
+ <a id="structcudaDeviceProp_164490976c8e07e028a8f1ce1f5cd42d6" name="structcudaDeviceProp_164490976c8e07e028a8f1ce1f5cd42d6" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_164490976c8e07e028a8f1ce1f5cd42d6" shape="rect">
+   major
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Major compute capability
+ </p>
+ <a id="structcudaDeviceProp_1f7230860be3e37047c7ce5d32542b54b" name="structcudaDeviceProp_1f7230860be3e37047c7ce5d32542b54b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f7230860be3e37047c7ce5d32542b54b" shape="rect">
+   managedMemory
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports allocating managed memory on this system
+ </p>
+ <a id="structcudaDeviceProp_17f337476973ea65db85c277f4646f0b3" name="structcudaDeviceProp_17f337476973ea65db85c277f4646f0b3" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17f337476973ea65db85c277f4646f0b3" shape="rect">
+   maxBlocksPerMultiProcessor
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum number of resident blocks per multiprocessor
+ </p>
+ <a id="structcudaDeviceProp_17d138a572315b3bbb6caf7ccc914a130" name="structcudaDeviceProp_17d138a572315b3bbb6caf7ccc914a130" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_17d138a572315b3bbb6caf7ccc914a130" shape="rect">
+   maxGridSize
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum size of each dimension of a grid
+ </p>
+ <a id="structcudaDeviceProp_1fd25f5ae34d7eeb2c52f87b9e932fe05" name="structcudaDeviceProp_1fd25f5ae34d7eeb2c52f87b9e932fe05" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1fd25f5ae34d7eeb2c52f87b9e932fe05" shape="rect">
+   maxSurface1D
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum 1D surface size
+ </p>
+ <a id="structcudaDeviceProp_16cf36809ff5ed6b8aa836177d0292200" name="structcudaDeviceProp_16cf36809ff5ed6b8aa836177d0292200" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16cf36809ff5ed6b8aa836177d0292200" shape="rect">
+   maxSurface1DLayered
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum 1D layered surface dimensions
+ </p>
+ <a id="structcudaDeviceProp_1a85bc895583a26251fbfef635c7644a9" name="structcudaDeviceProp_1a85bc895583a26251fbfef635c7644a9" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1a85bc895583a26251fbfef635c7644a9" shape="rect">
+   maxSurface2D
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum 2D surface dimensions
+ </p>
+ <a id="structcudaDeviceProp_1edeed8d96d802c4b01149e2e6a7b4ea8" name="structcudaDeviceProp_1edeed8d96d802c4b01149e2e6a7b4ea8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1edeed8d96d802c4b01149e2e6a7b4ea8" shape="rect">
+   maxSurface2DLayered
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum 2D layered surface dimensions
+ </p>
+ <a id="structcudaDeviceProp_14fdf5cd399b60955ee35421a7cc6418a" name="structcudaDeviceProp_14fdf5cd399b60955ee35421a7cc6418a" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_14fdf5cd399b60955ee35421a7cc6418a" shape="rect">
+   maxSurface3D
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum 3D surface dimensions
+ </p>
+ <a id="structcudaDeviceProp_1d170a7ad44ced64478d50fd7b6378b41" name="structcudaDeviceProp_1d170a7ad44ced64478d50fd7b6378b41" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1d170a7ad44ced64478d50fd7b6378b41" shape="rect">
+   maxSurfaceCubemap
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum Cubemap surface dimensions
+ </p>
+ <a id="structcudaDeviceProp_1d4564200e6bc420be63b61251c6d39b8" name="structcudaDeviceProp_1d4564200e6bc420be63b61251c6d39b8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1d4564200e6bc420be63b61251c6d39b8" shape="rect">
+   maxSurfaceCubemapLayered
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum Cubemap layered surface dimensions
+ </p>
+ <a id="structcudaDeviceProp_121e1544ca58ec5e559d0d498c5af9061" name="structcudaDeviceProp_121e1544ca58ec5e559d0d498c5af9061" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_121e1544ca58ec5e559d0d498c5af9061" shape="rect">
+   maxTexture1D
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum 1D texture size
+ </p>
+ <a id="structcudaDeviceProp_11047afc38a23fcdfd5f202002caa53f5" name="structcudaDeviceProp_11047afc38a23fcdfd5f202002caa53f5" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11047afc38a23fcdfd5f202002caa53f5" shape="rect">
+   maxTexture1DLayered
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum 1D layered texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_120efbdc4556a390720e0f75b62b8f83d" name="structcudaDeviceProp_120efbdc4556a390720e0f75b62b8f83d" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_120efbdc4556a390720e0f75b62b8f83d" shape="rect">
+   maxTexture1DLinear
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, do not use. Use
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1g45f0345fd7a3697d0766596593920f61" shape="rect" title="Returns the maximum number of elements allocatable in a 1D linear texture for a given element size.">
+   cudaDeviceGetTexture1DLinearMaxWidth()
+  </a>
+  or
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DEVICE.html#group__CUDA__DEVICE_1gb41b3a675bae9932bffa1c0ae969b1e0" shape="rect" target="_blank">
+   cuDeviceGetTexture1DLinearMaxWidth()
+  </a>
+  instead.
+ </p>
+ <a id="structcudaDeviceProp_16875f2ba4ab9d9733948545303786cc4" name="structcudaDeviceProp_16875f2ba4ab9d9733948545303786cc4" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16875f2ba4ab9d9733948545303786cc4" shape="rect">
+   maxTexture1DMipmap
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum 1D mipmapped texture size
+ </p>
+ <a id="structcudaDeviceProp_1618ac703b9a48adf50713897689a3eb2" name="structcudaDeviceProp_1618ac703b9a48adf50713897689a3eb2" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1618ac703b9a48adf50713897689a3eb2" shape="rect">
+   maxTexture2D
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum 2D texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_11468730923ddf5a68ecc9bb42053c1c9" name="structcudaDeviceProp_11468730923ddf5a68ecc9bb42053c1c9" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11468730923ddf5a68ecc9bb42053c1c9" shape="rect">
+   maxTexture2DGather
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum 2D texture dimensions if texture gather operations have to be performed
+ </p>
+ <a id="structcudaDeviceProp_16011fd7e13a77d58fbbd4a5ba1801fbf" name="structcudaDeviceProp_16011fd7e13a77d58fbbd4a5ba1801fbf" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16011fd7e13a77d58fbbd4a5ba1801fbf" shape="rect">
+   maxTexture2DLayered
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum 2D layered texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_1757a4245a175441c2a1535ef9c9524a4" name="structcudaDeviceProp_1757a4245a175441c2a1535ef9c9524a4" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1757a4245a175441c2a1535ef9c9524a4" shape="rect">
+   maxTexture2DLinear
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum dimensions (width, height, pitch) for 2D textures bound to pitched memory
+ </p>
+ <a id="structcudaDeviceProp_1f227daa1f3c12d90898c77152b1136bf" name="structcudaDeviceProp_1f227daa1f3c12d90898c77152b1136bf" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f227daa1f3c12d90898c77152b1136bf" shape="rect">
+   maxTexture2DMipmap
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum 2D mipmapped texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_16ea5619e4e11617451c6adc8560f068b" name="structcudaDeviceProp_16ea5619e4e11617451c6adc8560f068b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16ea5619e4e11617451c6adc8560f068b" shape="rect">
+   maxTexture3D
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum 3D texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_16f5f5ba8a7dc088392be0d2f8f51faed" name="structcudaDeviceProp_16f5f5ba8a7dc088392be0d2f8f51faed" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16f5f5ba8a7dc088392be0d2f8f51faed" shape="rect">
+   maxTexture3DAlt
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum alternate 3D texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_1f9076f17639b08ea1783bb3035b1f707" name="structcudaDeviceProp_1f9076f17639b08ea1783bb3035b1f707" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f9076f17639b08ea1783bb3035b1f707" shape="rect">
+   maxTextureCubemap
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum Cubemap texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_1f838fe5c7528d1e345a83659d001d799" name="structcudaDeviceProp_1f838fe5c7528d1e345a83659d001d799" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f838fe5c7528d1e345a83659d001d799" shape="rect">
+   maxTextureCubemapLayered
+  </a>
+  [2] [inherited]
+ </span>
+ <p>
+  Maximum Cubemap layered texture dimensions
+ </p>
+ <a id="structcudaDeviceProp_192d195493a9d36b2d827aaf3ffd89f1e" name="structcudaDeviceProp_192d195493a9d36b2d827aaf3ffd89f1e" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_192d195493a9d36b2d827aaf3ffd89f1e" shape="rect">
+   maxThreadsDim
+  </a>
+  [3] [inherited]
+ </span>
+ <p>
+  Maximum size of each dimension of a block
+ </p>
+ <a id="structcudaDeviceProp_118f38f08c66c8812b1ddeb16e4bf51a4" name="structcudaDeviceProp_118f38f08c66c8812b1ddeb16e4bf51a4" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_118f38f08c66c8812b1ddeb16e4bf51a4" shape="rect">
+   maxThreadsPerBlock
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum number of threads per block
+ </p>
+ <a id="structcudaDeviceProp_196dac83c7095e29b86300cc02851844c" name="structcudaDeviceProp_196dac83c7095e29b86300cc02851844c" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_196dac83c7095e29b86300cc02851844c" shape="rect">
+   maxThreadsPerMultiProcessor
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum resident threads per multiprocessor
+ </p>
+ <a id="structcudaDeviceProp_14382eddd3f5836f1195ca988388783bb" name="structcudaDeviceProp_14382eddd3f5836f1195ca988388783bb" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_14382eddd3f5836f1195ca988388783bb" shape="rect">
+   memPitch
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Maximum pitch in bytes allowed by memory copies
+ </p>
+ <a id="structcudaDeviceProp_1e764fca4d15a459279b31cb533435c19" name="structcudaDeviceProp_1e764fca4d15a459279b31cb533435c19" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e764fca4d15a459279b31cb533435c19" shape="rect">
+   memoryBusWidth
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Global memory bus width in bits
+ </p>
+ <a id="structcudaDeviceProp_1b200f01a8ec81912285c2633117109c4" name="structcudaDeviceProp_1b200f01a8ec81912285c2633117109c4" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b200f01a8ec81912285c2633117109c4" shape="rect">
+   memoryClockRate
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, Peak memory clock frequency in kilohertz
+ </p>
+ <a id="structcudaDeviceProp_1e885cf451108cf85dc3b313bce0c9026" name="structcudaDeviceProp_1e885cf451108cf85dc3b313bce0c9026" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  unsigned int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e885cf451108cf85dc3b313bce0c9026" shape="rect">
+   memoryPoolSupportedHandleTypes
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Bitmask of handle types supported with mempool-based IPC
+ </p>
+ <a id="structcudaDeviceProp_16c4af6a4889a35c0bc21bbd3dd7443bb" name="structcudaDeviceProp_16c4af6a4889a35c0bc21bbd3dd7443bb" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16c4af6a4889a35c0bc21bbd3dd7443bb" shape="rect">
+   memoryPoolsSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  1 if the device supports using the cudaMallocAsync and cudaMemPool family of APIs, 0 otherwise
+ </p>
+ <a id="structcudaDeviceProp_150d477d8d5d3a04e0785f469277c65bb" name="structcudaDeviceProp_150d477d8d5d3a04e0785f469277c65bb" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_150d477d8d5d3a04e0785f469277c65bb" shape="rect">
+   minor
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Minor compute capability
+ </p>
+ <a id="structcudaDeviceProp_163af976611c9d29f169882f5c32472d4" name="structcudaDeviceProp_163af976611c9d29f169882f5c32472d4" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_163af976611c9d29f169882f5c32472d4" shape="rect">
+   multiGpuBoardGroupID
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Unique identifier for a group of devices on the same multi-GPU board
+ </p>
+ <a id="structcudaDeviceProp_13e36d9d236f97095ef2b496cd2f98121" name="structcudaDeviceProp_13e36d9d236f97095ef2b496cd2f98121" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13e36d9d236f97095ef2b496cd2f98121" shape="rect">
+   multiProcessorCount
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Number of multiprocessors on device
+ </p>
+ <a id="structcudaDeviceProp_11e26f1c6bd42f4821b7ef1a4bd3bd25c" name="structcudaDeviceProp_11e26f1c6bd42f4821b7ef1a4bd3bd25c" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  char
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11e26f1c6bd42f4821b7ef1a4bd3bd25c" shape="rect">
+   name
+  </a>
+  [256] [inherited]
+ </span>
+ <p>
+  ASCII string identifying device
+ </p>
+ <a id="structcudaDeviceProp_146116bab1064b5d7d0642d78f6c27ce1" name="structcudaDeviceProp_146116bab1064b5d7d0642d78f6c27ce1" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_146116bab1064b5d7d0642d78f6c27ce1" shape="rect">
+   pageableMemoryAccess
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports coherently accessing pageable memory without calling cudaHostRegister on it
+ </p>
+ <a id="structcudaDeviceProp_1e9f1ed6bffd5606eb81d438728a844ca" name="structcudaDeviceProp_1e9f1ed6bffd5606eb81d438728a844ca" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1e9f1ed6bffd5606eb81d438728a844ca" shape="rect">
+   pageableMemoryAccessUsesHostPageTables
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device accesses pageable memory via the host's page tables
+ </p>
+ <a id="structcudaDeviceProp_1c5adc2ef8c6b89fb139b4684175db54a" name="structcudaDeviceProp_1c5adc2ef8c6b89fb139b4684175db54a" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1c5adc2ef8c6b89fb139b4684175db54a" shape="rect">
+   pciBusID
+  </a>
+  [inherited]
+ </span>
+ <p>
+  PCI bus ID of the device
+ </p>
+ <a id="structcudaDeviceProp_156978c2bfc433d26ac3b4c765ee536bb" name="structcudaDeviceProp_156978c2bfc433d26ac3b4c765ee536bb" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_156978c2bfc433d26ac3b4c765ee536bb" shape="rect">
+   pciDeviceID
+  </a>
+  [inherited]
+ </span>
+ <p>
+  PCI device ID of the device
+ </p>
+ <a id="structcudaDeviceProp_1f3a69f0796e32c0e32d17c151443fab0" name="structcudaDeviceProp_1f3a69f0796e32c0e32d17c151443fab0" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f3a69f0796e32c0e32d17c151443fab0" shape="rect">
+   pciDomainID
+  </a>
+  [inherited]
+ </span>
+ <p>
+  PCI domain ID of the device
+ </p>
+ <a id="structcudaDeviceProp_1708c0ea6df419516e4bd702dd26f802c" name="structcudaDeviceProp_1708c0ea6df419516e4bd702dd26f802c" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1708c0ea6df419516e4bd702dd26f802c" shape="rect">
+   persistingL2CacheMaxSize
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device's maximum l2 persisting lines capacity setting in bytes
+ </p>
+ <a id="structcudaDeviceProp_184472707f521930fc052663820d635fc" name="structcudaDeviceProp_184472707f521930fc052663820d635fc" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_184472707f521930fc052663820d635fc" shape="rect">
+   regsPerBlock
+  </a>
+  [inherited]
+ </span>
+ <p>
+  32-bit registers available per block
+ </p>
+ <a id="structcudaDeviceProp_1de02e669caefcadadaaa42877b08e80a" name="structcudaDeviceProp_1de02e669caefcadadaaa42877b08e80a" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1de02e669caefcadadaaa42877b08e80a" shape="rect">
+   regsPerMultiprocessor
+  </a>
+  [inherited]
+ </span>
+ <p>
+  32-bit registers available per multiprocessor
+ </p>
+ <a id="structcudaDeviceProp_11b4194b6ba5a8879f4374a37f483a2a9" name="structcudaDeviceProp_11b4194b6ba5a8879f4374a37f483a2a9" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_11b4194b6ba5a8879f4374a37f483a2a9" shape="rect">
+   reserved
+  </a>
+  [60] [inherited]
+ </span>
+ <p>
+  Reserved for future use
+ </p>
+ <a id="structcudaDeviceProp_12e824a437e389ad0aa1b0a265969320d" name="structcudaDeviceProp_12e824a437e389ad0aa1b0a265969320d" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_12e824a437e389ad0aa1b0a265969320d" shape="rect">
+   reserved1
+  </a>
+  [1] [inherited]
+ </span>
+ <p>
+  Reserved for future use
+ </p>
+ <a id="structcudaDeviceProp_15a1f6049e9e9fd8af0d2a8a5df289ab7" name="structcudaDeviceProp_15a1f6049e9e9fd8af0d2a8a5df289ab7" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_15a1f6049e9e9fd8af0d2a8a5df289ab7" shape="rect">
+   reservedSharedMemPerBlock
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Shared memory reserved by CUDA driver per block in bytes
+ </p>
+ <a id="structcudaDeviceProp_182ec4c5e244addb9cd57f5b9da0eaca7" name="structcudaDeviceProp_182ec4c5e244addb9cd57f5b9da0eaca7" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_182ec4c5e244addb9cd57f5b9da0eaca7" shape="rect">
+   sharedMemPerBlock
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Shared memory available per block in bytes
+ </p>
+ <a id="structcudaDeviceProp_1c23eacaeeb59e1798d6d442be70f1c3e" name="structcudaDeviceProp_1c23eacaeeb59e1798d6d442be70f1c3e" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1c23eacaeeb59e1798d6d442be70f1c3e" shape="rect">
+   sharedMemPerBlockOptin
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Per device maximum shared memory per block usable by special opt in
+ </p>
+ <a id="structcudaDeviceProp_16cede1829516e86917f0842a5f6498c8" name="structcudaDeviceProp_16cede1829516e86917f0842a5f6498c8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_16cede1829516e86917f0842a5f6498c8" shape="rect">
+   sharedMemPerMultiprocessor
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Shared memory available per multiprocessor in bytes
+ </p>
+ <a id="structcudaDeviceProp_14bd4d531bf2ac497d659b03910440315" name="structcudaDeviceProp_14bd4d531bf2ac497d659b03910440315" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_14bd4d531bf2ac497d659b03910440315" shape="rect">
+   singleToDoublePrecisionPerfRatio
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Deprecated, Ratio of single precision performance (in floating-point operations per second) to double precision performance
+ </p>
+ <a id="structcudaDeviceProp_13237d19d8b4f8ed68411937b4ea001b8" name="structcudaDeviceProp_13237d19d8b4f8ed68411937b4ea001b8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13237d19d8b4f8ed68411937b4ea001b8" shape="rect">
+   sparseCudaArraySupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  1 if the device supports sparse CUDA arrays and sparse CUDA mipmapped arrays, 0 otherwise
+ </p>
+ <a id="structcudaDeviceProp_143e968b12978ffd2a80bde224d7dc782" name="structcudaDeviceProp_143e968b12978ffd2a80bde224d7dc782" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_143e968b12978ffd2a80bde224d7dc782" shape="rect">
+   streamPrioritiesSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device supports stream priorities
+ </p>
+ <a id="structcudaDeviceProp_18fe20825e4239ff91a7708c9468a02b5" name="structcudaDeviceProp_18fe20825e4239ff91a7708c9468a02b5" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18fe20825e4239ff91a7708c9468a02b5" shape="rect">
+   surfaceAlignment
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Alignment requirements for surfaces
+ </p>
+ <a id="structcudaDeviceProp_1fcc96a9e56f84f4a0e853c18ce8e2c0d" name="structcudaDeviceProp_1fcc96a9e56f84f4a0e853c18ce8e2c0d" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1fcc96a9e56f84f4a0e853c18ce8e2c0d" shape="rect">
+   tccDriver
+  </a>
+  [inherited]
+ </span>
+ <p>
+  1 if device is a Tesla device using TCC driver, 0 otherwise
+ </p>
+ <a id="structcudaDeviceProp_1500248658a996f51752e1ab1769f8a88" name="structcudaDeviceProp_1500248658a996f51752e1ab1769f8a88" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1500248658a996f51752e1ab1769f8a88" shape="rect">
+   textureAlignment
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Alignment requirement for textures
+ </p>
+ <a id="structcudaDeviceProp_13a3f10d2833bdc82ceb370a449aafeec" name="structcudaDeviceProp_13a3f10d2833bdc82ceb370a449aafeec" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_13a3f10d2833bdc82ceb370a449aafeec" shape="rect">
+   texturePitchAlignment
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Pitch alignment requirement for texture references bound to pitched memory
+ </p>
+ <a id="structcudaDeviceProp_1f2eb506be3f63db30715725d2e19ac1d" name="structcudaDeviceProp_1f2eb506be3f63db30715725d2e19ac1d" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1f2eb506be3f63db30715725d2e19ac1d" shape="rect">
+   timelineSemaphoreInteropSupported
+  </a>
+  [inherited]
+ </span>
+ <p>
+  External timeline semaphore interop is supported on the device
+ </p>
+ <a id="structcudaDeviceProp_1b4047e5e22082b1aefeac3b9ef39d0be" name="structcudaDeviceProp_1b4047e5e22082b1aefeac3b9ef39d0be" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1b4047e5e22082b1aefeac3b9ef39d0be" shape="rect">
+   totalConstMem
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Constant memory available on device in bytes
+ </p>
+ <a id="structcudaDeviceProp_1983c292e2078dd5a4240f49c41d647f3" name="structcudaDeviceProp_1983c292e2078dd5a4240f49c41d647f3" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  size_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1983c292e2078dd5a4240f49c41d647f3" shape="rect">
+   totalGlobalMem
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Global memory available on device in bytes
+ </p>
+ <a id="structcudaDeviceProp_107b0114cefb43da05e05c65ec859542c" name="structcudaDeviceProp_107b0114cefb43da05e05c65ec859542c" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_107b0114cefb43da05e05c65ec859542c" shape="rect">
+   unifiedAddressing
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Device shares a unified address space with the host
+ </p>
+ <a id="structcudaDeviceProp_19f94309e6d30a640821cc9de9591e565" name="structcudaDeviceProp_19f94309e6d30a640821cc9de9591e565" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_19f94309e6d30a640821cc9de9591e565" shape="rect">
+   unifiedFunctionPointers
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Indicates device supports unified pointers
+ </p>
+ <a id="structcudaDeviceProp_1626c20637498c7be1381db55a6261308" name="structcudaDeviceProp_1626c20637498c7be1381db55a6261308" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  cudaUUID_t
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_1626c20637498c7be1381db55a6261308" shape="rect">
+   uuid
+  </a>
+  [inherited]
+ </span>
+ <p>
+  16-byte unique identifier
+ </p>
+ <a id="structcudaDeviceProp_18656f53eb2a7e54500f6fb95a830b47d" name="structcudaDeviceProp_18656f53eb2a7e54500f6fb95a830b47d" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  int
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp" shape="rect" title="">
+   cudaDeviceProp
+  </a>
+  ::
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp_18656f53eb2a7e54500f6fb95a830b47d" shape="rect">
+   warpSize
+  </a>
+  [inherited]
+ </span>
+ <p>
+  Warp size in threads
+ </p>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

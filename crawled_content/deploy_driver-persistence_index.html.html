@@ -1,0 +1,795 @@
+<html><head><title>Driver Persistence :: GPU Deployment and Management Documentation</title></head><body><body>
+ Driver Persistence
+            (
+ <a href="http://docs.nvidia.com/pdf/Driver_Persistence.pdf">
+  PDF
+ </a>
+ )
+            -
+            
+            vR525
+            (
+ <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon">
+  older
+ </a>
+ )
+            -
+            Last updated March 15, 2023
+            -
+ <a href="mailto:cudatools@nvidia.com?subject=GPU Deployment and Management Documentation Feedback: Driver Persistence">
+  Send Feedback
+ </a>
+ <a name="overview" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#overview" name="overview" shape="rect">
+   1. Overview
+  </a>
+ </h2>
+ <p class="p">
+  The NVIDIA kernel mode driver must be running and connected to a target GPU device before any user 
+                  interactions with that device can take place. The driver behavior differs depending on the OS.
+                  Generally, if the kernel mode driver is not already running or connected to a target GPU, the invocation 
+                  of any program that attempts to interact with that GPU will transparently cause the driver to load and/or 
+                  initialize the GPU. When all GPU clients terminate the driver will then deinitialize the GPU. 
+                  Driver load behavior is important for end users in two ways:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   Application start latency
+   <p class="p">
+    Applications that trigger GPU initilization may incur a short (order of 1-3 second) startup cost per 
+                        GPU due to ECC scrubbing behavior. If the GPU is already initialized this scrubbing does not take place.
+   </p>
+  </li>
+  <li class="li">
+   Preservation of driver state
+   <p class="p">
+    If the driver deinitializes a GPU some non-persistent state associated with that GPU will be lost 
+                        and revert back to defaults the next time the GPU is initialized. See
+    <a class="xref" href="http://docs.nvidia.com/deploy/driver-persistence/index.html#data-persistence" shape="rect">
+     Data Persistence
+    </a>
+    . 
+                        To avoid this the GPU should be kept initialized.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Default driver behavior differs between operating systems:
+ </p>
+ <a name="windows" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#windows" name="windows" shape="rect">
+   1.1. Windows
+  </a>
+ </h3>
+ <p class="p">
+  On Windows the kernel mode driver is loaded at Windows startup and kept loaded until Windows shutdown. 
+                     Consequently Windows users can mostly ignore the driver persistence implications described in this document.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ Driver reload events, e.g. due to TDR or new driver installation, will result in reset of non-persistent state.
+ <a name="linux" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#linux" name="linux" shape="rect">
+   1.2. Linux
+  </a>
+ </h3>
+ <p class="p">
+  Under Linux systems where X runs by default on the target GPU the kernel mode driver will generally 
+                     be initalized and kept alive from machine startup to shutdown, courtesy of the X process. On headless systems or situations
+                     where 
+                     no long-lived X-like client maintains a handle to the target GPU, the kernel mode driver will 
+                     initilize and deinitialize the target GPU each time a target GPU application starts and stops. 
+                     In HPC environments this situation is quite common. Since it is often desireable to keep the GPU 
+                     initialized in these cases, NVIDIA provides two options for changing driver behavior:
+  <a class="xref" href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-mode" shape="rect">
+   Persistence Mode (Legacy)
+  </a>
+  and the
+  <a class="xref" href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon" shape="rect">
+   Persistence Daemon
+  </a>
+  .
+ </p>
+ <a name="data-persistence" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#data-persistence" name="data-persistence" shape="rect">
+   2. Data Persistence
+  </a>
+ </h2>
+ <p class="p">
+  Different classes of driver state have different lifetime durations.
+                  It can be important to understand the differences, as this can affect the 
+                  behavior of GPU management features like clock settings, ECC mode, etc.
+                  Generally, driver state falls into the following categories. This is not 
+                  intended to be an exhaustive list, but will cover common cases:
+ </p>
+ <a name="gpu-initialization-lifecycle" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#gpu-initialization-lifecycle" name="gpu-initialization-lifecycle" shape="rect">
+   2.1. GPU Initialization Lifecycle
+  </a>
+ </h3>
+ <p class="p">
+  State of this type lasts from the time the driver initializes a GPU until the time the 
+                     GPU is unititialized. This is the narrowest lifecycle, as the kernel driver itself is still
+                     loaded and may be managing other GPUs. The GPU typically initializes a GPU if a client application
+                     tries to access the GPU. The GPU is typically deinitialized after the last client exits.
+ </p>
+ <p class="p">
+  State:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   Compute Mode, Accounting Mode, Persistence Mode
+  </li>
+  <li class="li">
+   Application Clocks, Application Clocks Permission Settings
+  </li>
+  <li class="li">
+   SW-Based Power Capping Limit
+  </li>
+  <li class="li">
+   Volatile ECC errors, Pending Retired Pages
+  </li>
+ </ul>
+ <a name="kernel-driver-lifecycle" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#kernel-driver-lifecycle" name="kernel-driver-lifecycle" shape="rect">
+   2.2. Kernel Driver Lifecycle
+  </a>
+ </h3>
+ <p class="p">
+  State of this type lasts from the time the driver loads until the time the driver unloads (e.g. rmmod).
+                     In most environments this is the entire machine boot cycle. Exceptions include GPU reset events
+                     and driver installs.
+ </p>
+ <p class="p">
+  State:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   Accounting process data
+  </li>
+ </ul>
+ <a name="gpu-board-lifecycle" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#gpu-board-lifecycle" name="gpu-board-lifecycle" shape="rect">
+   2.3. GPU Board Lifecycle
+  </a>
+ </h3>
+ <p class="p">
+  State of this type lasts across boot cycles, as it is stored in the board's persistent inforom.
+                     In some cases such state can be explicitly cleared, but in general this state is deemed to be
+                     persistent for the entire life of the board -- or until next changed by the user.
+ </p>
+ <p class="p">
+  State:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   ECC Mode, Aggregate ECC errors, Retired Pages
+  </li>
+  <li class="li">
+   GPU Operation Mode, Driver Model
+  </li>
+ </ul>
+ <a name="background" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#background" name="background" shape="rect">
+   3. Background
+  </a>
+ </h2>
+ <p class="p">
+  The NVIDIA GPU driver has historically followed Unix design philosophies by
+                  only initializing software and hardware state when the user has configured the
+                  system to do so. Traditionally, this configuration was done via the X Server
+                  and the GPUs were only initialized when the X Server (on behalf of the user)
+                  requested that they be enabled. This is very important for the ability to
+                  reconfigure the GPUs without a reboot (for example, changing SLI mode or bus
+                  settings, especially in the AGP days).
+ </p>
+ <p class="p">
+  More recently, this has proven to be a problem within compute-only
+                  environments, where X is not used and the GPUs are accessed via transient
+                  instantiations of the Cuda library. This results in the GPU state being
+                  initialized and deinitialized more often than the user truly wants and leads
+                  to long load times for each Cuda job, on the order of seconds.
+ </p>
+ <p class="p">
+  NVIDIA previously provided Persistence Mode to solve this issue. This is a
+                  kernel-level solution that can be configured using nvidia-smi. This approach
+                  would prevent the kernel module from fully unloading software and hardware state
+                  when no user software was using the GPU. However, this approach creates subtle
+                  interaction problems with the rest of the system that have made maintenance
+                  difficult.
+ </p>
+ <p class="p">
+  The purpose of the NVIDIA Persistence Daemon is to replace this kernel-level
+                  solution with a more robust user-space solution. This enables compute-only
+                  environments to more closely resemble the historically typical graphics
+                  environments that the NVIDIA GPU driver was designed around.
+ </p>
+ <a name="persistence-mode" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-mode" name="persistence-mode" shape="rect">
+   4. Persistence Mode (Legacy)
+  </a>
+ </h2>
+ <p class="p">
+  Persistence Mode is the term for a user-settable driver property that keeps a target GPU 
+                  initialized even when no clients are connected to it. This solution is near end-of-life 
+                  and will be eventually deprecated in favor the
+  <a class="xref" href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon" shape="rect">
+   Persistence Daemon
+  </a>
+ </p>
+ <p class="p">
+  Persistence mode can be set using nvidia-smi or programmaticaly via the NVML API.
+ </p>
+ <p class="p">
+  To enable persistence mode using nvidia-smi (as root):
+ </p>
+ <pre class="pre screen" xml:space="preserve">nvidia-smi -i &lt;target gpu&gt; -pm ENABLED
+    Enabled persistence mode for GPU &lt;target gpu&gt;.
+    All done.</pre>
+ <p class="p">
+  To view current persistence mode using nvidia-smi:
+ </p>
+ <pre class="pre screen" xml:space="preserve">nvidia-smi -i &lt;target gpu&gt; - q
+    ==============NVSMI LOG==============
+
+    Timestamp                           : ----
+    Driver Version                      : ----
+
+    Attached GPUs                       : ----
+    GPU 0000:01:00.0
+        Product Name                    : ----
+        Display Mode                    : ----
+        Display Active                  : ----
+        Persistence Mode                : Enabled
+        Accounting Mode                 : ----
+        ...
+    </pre>
+ <a name="persistence-mode-supported-environments" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-mode-supported-environments" name="persistence-mode-supported-environments" shape="rect">
+   4.1. Supported Environments
+  </a>
+ </h3>
+ <ul class="ul">
+  <li class="li">
+   Drivers: All shipping driver versions
+  </li>
+  <li class="li">
+   OSes: All standard driver-supported Linux platforms
+  </li>
+  <li class="li">
+   GPUs:	All shipping Tesla, Quadro and GRID products
+  </li>
+ </ul>
+ <a name="persistence-daemon" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon" name="persistence-daemon" shape="rect">
+   5. Persistence Daemon
+  </a>
+ </h2>
+ <p class="p">
+  NVIDIA is providing a user-space daemon on Linux to support persistence of 
+                  driver state across Cuda job runs. The daemon approach provides a more 
+                  elegant and robust solution to this problem than persistence mode.
+ </p>
+ <p class="p">
+  NVIDIA will support both solutions for the near future (likely through Cuda
+                  8.0), but will focus all future development and bug fixes on the daemon.
+ </p>
+ <p class="p">
+  The daemon is installed in /usr/bin, while sample installation and init scripts
+                  are included with the driver in the documentation directory. The scripts
+                  are provided as a guide for installing the daemon to run on system startup for
+                  some common init systems; they may require some changes for certain
+                  distributions, due to the wide variety of init system configurations.
+ </p>
+ <p class="p">
+  NVIDIA encourages customers to shift to this daemon approach at their earliest
+                  availability.
+ </p>
+ <a name="persistence-daemon-supported-environments" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon-supported-environments" name="persistence-daemon-supported-environments" shape="rect">
+   5.1. Supported Environments
+  </a>
+ </h3>
+ <ul class="ul">
+  <li class="li">
+   Drivers: R319 and higher
+  </li>
+  <li class="li">
+   OSes: All standard driver-supported Linux platforms
+  </li>
+  <li class="li">
+   GPUs:	All shipping Tesla, Quadro and GRID products
+  </li>
+ </ul>
+ <a name="implementation" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#implementation" name="implementation" shape="rect">
+   5.2. Implementation Details
+  </a>
+ </h3>
+ <p class="p">
+  On Linux systems running the NVIDIA GPU driver, clients attach a GPU by opening
+                     its device file. Conversely, the GPU is detached by closing the device file. The
+                     GPU state remains loaded in the driver whenever one or more clients have the
+                     device file open. Once all clients have closed the device file, the GPU state
+                     will be unloaded unless persistence mode is enabled.
+ </p>
+ <p class="p">
+  To simulate graphics environments without incurring the overhead of user-space
+                     graphics drivers, we have implemented the NVIDIA Persistence Daemon, which
+                     essentially runs in the background and sleeps with the device files open. The
+                     daemon uses libnvidia-cfg to open and close the correct device files based on
+                     its PCI bus address, and provides an RPC interface to control the persistence
+                     mode of each GPU individually. Thus, while the daemon holds the device files
+                     open, at least one client, the daemon, has the GPU attached and the driver will
+                     not unload the GPU state. Once the daemon starts running, it remains in the
+                     background until it is killed, even if persistence mode is disabled for all
+                     devices.
+ </p>
+ <p class="p">
+  Because of the nature of the solution, the daemon can be used as a drop-in
+                     replacement for what we are now calling "legacy persistence mode" as implemented
+                     in the NVIDIA kernel-mode driver. NVIDIA SMI has been updated in driver version 319 
+                     to use the daemon's RPC interface to set the persistence mode using the daemon if the
+                     daemon is running, and will fall back to setting the legacy persistence mode in
+                     the kernel-mode driver if the daemon is not running. This is all handled
+                     transparently by NVIDIA SMI, so there should be no change in how persistence
+                     mode is configured. Eventually, the legacy persistence mode will be deprecated
+                     and removed in favor of the NVIDIA Persistence Daemon, once it has achieved wide
+                     adoption in the relevant use cases.
+ </p>
+ <a name="security" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#security" name="security" shape="rect">
+   5.3. Permissions and Security
+  </a>
+ </h3>
+ <p class="p">
+  The NVIDIA Persistence Daemon provides a more robust implementation of
+                     persistence mode on Linux, since it simply mimics an external client of the GPU
+                     but does not actually use the GPU for any work. In this way, it causes the
+                     NVIDIA GPU driver to operate within the assumptions of its original design.
+ </p>
+ <p class="p">
+  Once the daemon is running, there is minimal overhead for keeping persistence
+                     mode enabled. The daemon will simply sleep waiting for a command.
+ </p>
+ The daemon does not require super-user privileges to run - however, it does
+                     require super-user privileges to set up some runtime data in /var/run. The
+                     daemon allows for two mechanisms to run as a user without super-user privileges:
+ <ul class="ul">
+  <li class="li">
+   An administrator (or script run with super-user privileges) may create
+                           the /var/run/nvidia-persistenced directory and `chown` it to the user
+                           the daemon will run as. The daemon can then be run as the intended user
+                           using `su` or similar. In this case, the /var/run/nvidia-persistenced
+                           directory will not be removed when the daemon is killed.
+  </li>
+  <li class="li">
+   The daemon may be started with super-user privileges and use the
+                           `--user` option. This will force the daemon to drop its super-user
+                           privileges as soon as possible after creating the
+                           /var/run/nvidia-persistenced directory and run as the specified user.
+                           Note that with this mechanism, the daemon may not be able to remove the
+                           /var/run/nvidia-persistenced directory when it is killed, since the
+                           user may not have write permissions to /var/run.
+  </li>
+ </ul>
+ <p class="p">
+  Note that in both cases, the daemon may not be able to remove its runtime data
+                     directory when it is killed, so this task should typically be handled by the
+                     init script or service for the daemon.
+ </p>
+ <p class="p">
+  The daemon may also be run with perpetual super-user privileges by simply
+                     omitting the `--user` option, but this is not recommended and is not necessary
+                     for functionality.
+ </p>
+ <p class="p">
+  The daemon also provides a `--verbose` option, which increases its logging
+                     output to syslog for debugging purposes.
+ </p>
+ <p class="p">
+  The source code for the daemon is also available under the MIT license, to allow
+                     for second- and third-party security auditing.
+ </p>
+ <a name="usage" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#usage" name="usage" shape="rect">
+   5.4. Usage
+  </a>
+ </h3>
+ <p class="p">
+  To run the NVIDIA Persistence Daemon, simply run (as root):
+ </p>
+ <pre class="pre screen" xml:space="preserve"># nvidia-persistenced --user foo</pre>
+ <p class="p">
+  After doing a minimal amount of setup tasks that require super-user privileges,
+                     the daemon will drop super-user privileges and run as user 'foo'.
+ </p>
+ <p class="p">
+  You may use NVIDIA SMI to change the persistence mode setting. For example,
+                     to disable persistence mode on all GPUs, simply run (again, as root):
+ </p>
+ <pre class="pre screen" xml:space="preserve"># nvidia-smi -pm 0</pre>
+ <p class="p">
+  Please see the nvidia-persistenced(1) manpage, which is installed by the
+                     NVIDIA GPU driver installer, or the output of:
+ </p>
+ <pre class="pre screen" xml:space="preserve">% nvidia-persistenced --help</pre>
+ <p class="p">
+  for detailed usage information.
+ </p>
+ <p class="p">
+  Please see
+  <a class="xref" href="http://docs.nvidia.com/deploy/driver-persistence/index.html#installation" shape="rect">
+   Installation Caveats
+  </a>
+  for details about
+                     installing the daemon to always run on system startup.
+ </p>
+ <a name="installation" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#installation" name="installation" shape="rect">
+   5.5. Installation Caveats
+  </a>
+ </h3>
+ <p class="p">
+  The reason why we cannot immediately deprecate the legacy persistence mode and
+                     switch transparently to the NVIDIA Persistence Daemon is because at this time,
+                     we cannot guarantee that the NVIDIA Persistence Daemon will be running. This
+                     would be a feature regression as persistence mode might not be available out-of-
+                     the-box.
+ </p>
+ <p class="p">
+  The NVIDIA Persistence Daemon ships with the NVIDIA Linux GPU driver starting in
+                     driver version 319 and is installed by the installer as /usr/bin/nvidia-persistenced. 
+                     Ideally, the daemon would start on system initialization according to the Linux
+                     distribution's init system, transparently to the user, and exit on system
+                     shutdown. Unfortunately, there is no single standard for installing an
+                     application to start on system initialization on Linux, so we cannot reliably do
+                     so on the wide range of systems the NVIDIA GPU driver supports.
+ </p>
+ <p class="p">
+  Therefore, we want to encourage individual distributions, who typically
+                     re-package the NVIDIA GPU driver for installation via their package manager, to
+                     install the NVIDIA Persistence Daemon to start on system initialization, which
+                     is a nearly trivial task once the init system is known. To this end, we are
+                     providing sample "init scripts" in the driver package to aid in this
+                     installation. These scripts attempt to cover three of the most prevalent init
+                     systems found in Linux distributions today: SystemV, systemd, and Upstart. The
+                     sample scripts also come with an installer script that attempts to detect the
+                     init system and install the appropriate script for the user. The sample scripts
+                     and installer script are installed to
+                     /usr/share/doc/NVIDIA_GLX-1.0/sample/nvidia-persistenced-init.tar.bz2 by the
+                     NVIDIA GPU driver installer. They are not unpacked or run by the driver
+                     installer since we cannot guarantee that they will work correctly on all
+                     supported systems out-of-the-box.
+ </p>
+ <p class="p">
+  By default, the installer scripts attempt to create a new system user for the
+                     daemon to run as, and the sample init scripts demonstrate the second option 
+                     described in
+  <a class="xref" href="http://docs.nvidia.com/deploy/driver-persistence/index.html#security" shape="rect">
+   Permissions and Security
+  </a>
+  for running the daemon without
+                     super-user privileges.
+ </p>
+ <a name="visibility" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#visibility" name="visibility" shape="rect">
+   5.6. Customer Visibility
+  </a>
+ </h3>
+ <p class="p">
+  The daemon is visible to end customers, as it will typically require some
+                     sort of manual installation into the init system. However, after initial
+                     installation steps are taken, the daemon should operate transparently in the background, 
+                     with NVIDIA SMI handling the necessary switching to determine if the
+                     daemon persistence mode can be used. Ideally, the eventual deprecation and
+                     removal of the legacy persistence mode will be transparent to customers using
+                     the daemon.
+ </p>
+ <a name="notices-header" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#notices-header" name="notices-header" shape="rect">
+   Notices
+  </a>
+ </h2>
+ <a name="notice" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#notice" name="notice" shape="rect">
+   Notice
+  </a>
+ </h3>
+ <p class="p">
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND
+                        SEPARATELY, "MATERIALS") ARE BEING PROVIDED "AS IS." NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE
+                        WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS
+                        FOR A PARTICULAR PURPOSE.
+ </p>
+ <p class="p">
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the
+                        consequences of use of such information or for any infringement of patents or other rights of third parties that may result
+                        from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications
+                        mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information
+                        previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems
+                        without express written approval of NVIDIA Corporation.
+ </p>
+ <a name="trademarks" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#trademarks" name="trademarks" shape="rect">
+   Trademarks
+  </a>
+ </h3>
+ <p class="p">
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation
+                        in the U.S. and other countries.  Other company and product names may be trademarks of
+                        the respective companies with which they are associated.
+ </p>
+ <a name="copyright-past-to-present" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#copyright-past-to-present" name="copyright-past-to-present" shape="rect">
+   Copyright
+  </a>
+ </h3>
+ <p class="p">
+  Â©
+  <span class="ph">
+   2013
+  </span>
+  -
+  <span class="ph">
+   2023
+  </span>
+  NVIDIA
+                        Corporation. All rights reserved.
+ </p>
+ Driver Persistence
+            (
+ <a href="http://docs.nvidia.com/pdf/Driver_Persistence.pdf">
+  PDF
+ </a>
+ )
+            -
+            
+            vR525
+            (
+ <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon">
+  older
+ </a>
+ )
+            -
+            Last updated March 15, 2023
+            -
+ <a href="mailto:cudatools@nvidia.com?subject=GPU Deployment and Management Documentation Feedback: Driver Persistence">
+  Send Feedback
+ </a>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  GPU Deployment and Management Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <span class="twiddle">
+  â·
+ </span>
+ <a href="http://docs.nvidia.com/deploy/index.html" title="The root of the site.">
+  Docs Home
+ </a>
+ <ul class="closed">
+  <li>
+   <a href="http://docs.nvidia.com/deploy/cuda-compatibility/index.html" title="CUDA Compatibility document describes the use of new CUDA toolkit components on systems with older base installations.">
+    CUDA Compatibility
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/mps/index.html" title="The Multi-Process Service (MPS) is an alternative, binary-compatible implementation of the CUDA Application Programming Interface (API). The MPS runtime architecture is designed to transparently enable co-operative multi-process CUDA applications, typically MPI jobs, to utilize Hyper-Q capabilities on the latest NVIDIA (Kepler-based) Tesla and Quadro GPUs">
+    Multi-Process Service
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html" title="Any interactions with NVIDIA GPUs require that an instance of the kernel mode driver be running. This driver may be persistent in some environments and transient in others. This document describes the default driver behavior and options for modifying that behavior.">
+    Driver Persistence
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/healthmon-user-guide/index.html" title="Nvidia-healthmon is the system administrator and cluster manager's tool for detecting and troubleshooting common problems affecting NVIDIATesla GPUs in a high performance computing environments. Nvidia-healthmon focuses on software and system configuration issues, with only limited hardware diagnostic capabilities.">
+    Healthmon User Guide
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/nvvs-user-guide/index.html" title="NVVS is the system administrator and cluster manager's tool for detecting and troubleshooting common problems affecting NVIDIATesla GPUs in a high performance computing environments. NVVS focuses on software and system configuration issues, diagnostics, topological concerns, and relative performance.">
+    NVIDIA Validation Suite User Guide
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/hw-field-diag/index.html" title="The HW field diag is the comprehensive tool for verifying GPU HW integrity in the field, and a required piece of the RMA process.">
+    HW Field Diag
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/rma-process/index.html" title="A standardized process must be followed to identify products that qualify for RMA. This document provides an overview of that process.">
+    RMA Process
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/dynamic-page-retirement/index.html" title='The NVIDIA driver supports "retiring" framebuffer pages that contain bad memory cells. This is called "dynamic page retirement" and is done automatically for cells that are degrading in quality. This feature can improve the longevity of an otherwise good board and and is thus an important resiliency feature on supported products, especially in HPC and enterprise environments.'>
+    Dynamic Page Retirement
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/xid-errors/index.html" title="This document explains what Xid messages are, and is intended to assist system administrators, developers, and FAEs in understanding the meaning behind these messages as an aid in analyzing and resolving GPU-related problems.">
+    XID Errors
+   </a>
+  </li>
+ </ul>
+ <span class="twiddle">
+  â¼
+ </span>
+ <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html" title="Driver Persistence">
+  Driver Persistence
+ </a>
+ <ul>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#overview">
+    1. Overview
+   </a>
+   <ul>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#windows">
+      1.1. Windows
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#linux">
+      1.2. Linux
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#data-persistence">
+    2. Data Persistence
+   </a>
+   <ul>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#gpu-initialization-lifecycle">
+      2.1. GPU Initialization Lifecycle
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#kernel-driver-lifecycle">
+      2.2. Kernel Driver Lifecycle
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#gpu-board-lifecycle">
+      2.3. GPU Board Lifecycle
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#background">
+    3. Background
+   </a>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-mode">
+    4. Persistence Mode (Legacy)
+   </a>
+   <ul>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-mode-supported-environments">
+      4.1. Supported Environments
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon">
+    5. Persistence Daemon
+   </a>
+   <ul>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon-supported-environments">
+      5.1. Supported Environments
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#implementation">
+      5.2. Implementation Details
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#security">
+      5.3. Permissions and Security
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#usage">
+      5.4. Usage
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#installation">
+      5.5. Installation Caveats
+     </a>
+    </li>
+    <li>
+     <a href="http://docs.nvidia.com/deploy/driver-persistence/index.html#visibility">
+      5.6. Customer Visibility
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ <a href="http://www.omniture.com" title="Web Analytics">
+ </a>
+</body>
+</body></html>

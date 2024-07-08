@@ -1,0 +1,3236 @@
+<html><head><title>Inspect State — nsight-visual-studio-edition 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/introduction/index.html">
+    Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/release-notes/index.html">
+    Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html">
+    Installation and Setup
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   CUDA Debugger
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html">
+    Getting Started with the CUDA Debugger
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html">
+    Build and Run
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html">
+    Control GPU Execution
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html">
+    Inspect State
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#id1">
+      Inspect State
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#specify-debugger-context">
+      Specify Debugger Context
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#choose-a-block-and-thread-of-interest">
+        Choose a Block and Thread of Interest
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#which-thread-has-focus">
+        Which Thread Has Focus?
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#how-to-view-memory">
+      How To: View Memory
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-the-contents-of-gpu-memory">
+        View the Contents of GPU Memory
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-variables-in-locals-window-in-memory">
+        View Variables in Locals Window in Memory
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-variables-in-watch-window-in-memory">
+        View Variables in Watch Window in Memory
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#how-to-view-variables">
+      How To: View Variables
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-the-value-of-a-local-variable">
+        View the Value of a Local Variable
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#evaluate-the-value-of-an-expression">
+        Evaluate the Value of an Expression
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#configure-formatting-of-expressions">
+        Configure Formatting of Expressions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#legacy-cuda-info-view">
+      Legacy CUDA Info View
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#general-features-of-the-cuda-information-tool-window">
+        General Features of the CUDA Information Tool Window
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-info-tool-window-pages">
+        CUDA Info Tool Window Pages
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#next-gen-state-inspection-views">
+      Next-Gen State Inspection Views
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#general-features-of-the-next-gen-cuda-information-tool-window">
+        General Features of the Next-Gen CUDA Information Tool Window
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#next-gen-cuda-debugger-tool-windows">
+        Next-Gen CUDA Debugger Tool Windows
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#warp-info">
+          Warp Info
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#warp-watch">
+          Warp Watch
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#id3">
+          Next-Gen CUDA Debugger Tool Windows
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#resources">
+          Resources
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#registers">
+          Registers
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-warp-watch">
+      CUDA Warp Watch
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#example-scenarios">
+        Example Scenarios
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#gpu-core-dump-files">
+      GPU Core Dump Files
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html">
+    Advanced Topics
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Reference
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/reference/index.html">
+    Reference
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Information
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Copyright and License Notices
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/eula/index.html">
+    EULA
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+  nsight-visual-studio-edition
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   Inspect State
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-2024_2-new-features">
+    v2024.2.1 |
+   </a>
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-archive">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  Inspect State
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#inspect-state" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  Inspect State
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#id1" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  In this section, learn more about how to use various state inspection features of the CUDA Debugger, such as specifying the debugger context, viewing memory and variables, using the CUDA Info View, and using the CUDA Warp Watch.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#specify-debugger-context">
+     Specify Debugger Context
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#memory">
+     View Memory
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#variables">
+     View Variables
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view">
+     Legacy CUDA Info View
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-nextgen-info-view">
+     Next-Gen State Inspection Views
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-warp-watch">
+     CUDA Warp Watch
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#gpu-core-dump">
+     GPU Core Dump
+    </a>
+   </p>
+  </li>
+ </ul>
+ <h2>
+  Specify Debugger Context
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#specify-debugger-context" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This feature is only supported by the Legacy CUDA Debugger. The Next-Gen CUDA Debugger will support this in a future release.
+ </p>
+ <p>
+  Program execution in CUDA takes place over hundreds or thousands of threads simultaneously. The CUDA Debugger features the
+  CUDA Focus Picker
+  , which lets you choose the blocks and threads of interest in the currently debugged application.
+ </p>
+ <p>
+  The
+  Locals
+  and
+  Watch
+  window, as well as the
+  Step Into
+  function use the block and thread of interest as context for their functionality.
+ </p>
+ <h3>
+  Choose a Block and Thread of Interest
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#choose-a-block-and-thread-of-interest" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+     Nsight menu
+    </a>
+    , choose
+    Windows
+    &gt;
+    CUDA Debug Focusâ¦
+    to launch the CUDA Debug Focus dialog.
+   </p>
+   <p>
+    Alternatively, the
+    Nsight CUDA Debug
+    toolbar groupâs
+    CUDA
+    focus picker item displays block and thread indexes, and launches the
+    CUDA Debug Focus
+    dialog.
+   </p>
+  </li>
+  <li>
+   <p>
+    Enter the desired block index and thread index in the text fields provided. The block text field will show you valid indices as you type. You can only choose blocks that are currently executing on the GPU hardware.
+   </p>
+  </li>
+  <li>
+   <p>
+    Choose OK.
+   </p>
+   <p>
+    The
+    Locals
+    and
+    Watch
+    tool windows show variables and expressions evaluated in the context of the newly chosen thread.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The Focus Picker affects the behavior of breakpoints.
+ </p>
+ <p>
+  Breakpoints are initially unconditional. When the debugger encounters the first breakpoint, the location of the breakpoint becomes the focus for all debugging. Stepping and breakpoints are set on the focus thread. This resets on the next kernel launch, going back to unconditional breakpoints. |
+ </p>
+ <p>
+  For example, if the current focus is
+  <span class="pre">
+   Block(0,0,0):Thread(5,2,0)
+  </span>
+  , then breakpoints will only hit when block and thread indices match the current focus indices.                                                                                                                                    |
+ </p>
+ <h3>
+  Which Thread Has Focus?
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#which-thread-has-focus" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Consider how threads grab focus in the CUDA Debugger. For example, the debugger can changeÂ focus to another thread without notifying you. If the focus thread is not at a breakpoint, and a different thread hits a data breakpoint, conditional breakpoint, or an unconditional breakpoint, the CUDA Debugger changes the current focus thread.
+ </p>
+ <p>
+  For example, if stopped in block (0,0,0) and thread (0,0,0) and a breakpoint hits in block (1,0,0) thread (0,0,0), the debugger will switch to the new thread. The debugger does not switch the focus thread when stepping, since the other threads are frozen.
+ </p>
+ <h2>
+  How To: View Memory
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#how-to-view-memory" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The NVIDIA Nsightâ¢ VSE Legacy and Next-Gen CUDA Debuggers support the Visual Studio Memory window for examining the contents of memory on a GPU. The CUDA Debugger supports viewing shared, local, and global memory on the current state of CUDAÂ within the process that is being debugged.
+ </p>
+ <p>
+  While the Next-Gen Debugger also supports memory viewing while CPU debugging, this section only discusses GPU memory. To view GPU memory while at a CPU breakpoint or exception, you must change the thread focus to a CUDA Thread. If no GPU thread is running, the Source window will show
+  <span class="pre">
+   Code
+  </span>
+  <span class="pre">
+   not
+  </span>
+  <span class="pre">
+   running
+  </span>
+  .
+ </p>
+ <p>
+  You can view values in GPU memory only when running a CUDA application, with the target application halted at a breakpoint in CUDA source code. Keep the following in mind:
+ </p>
+ <p>
+  Shared Memory:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Is accessible by any thread of the block from which it was created.
+   </p>
+  </li>
+  <li>
+   <p>
+    Has the lifetime of the block.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Local Memory:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Is only accessible by the thread.
+   </p>
+  </li>
+  <li>
+   <p>
+    Has the lifetime of the thread.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Global Memory:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Is accessible from either the host or the device.
+   </p>
+  </li>
+  <li>
+   <p>
+    Has the lifetime of the application.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  View the Contents of GPU Memory
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-the-contents-of-gpu-memory" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p class="rubric" id="to-view-the-contents-of-global-memory">
+  To View the Contents of Global Memory
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the
+    Debug
+    menu, choose
+    Windows
+    &gt;
+    Memory
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Select one of the
+    Memory
+    windows. The Memory window opens or grabs focus if already opened.
+   </p>
+  </li>
+  <li>
+   <p>
+    In the
+    Address
+    field of the Memory window, type the GPU memory address you want to see.
+   </p>
+   <p>
+    Type either the hexadecimal value or the name of a valid pointer that is in the current lexical scope.
+   </p>
+  </li>
+  <li>
+   <p>
+    Press the Enter key. The Memory window shows the contents of memory beginning with the specified address.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Tip: Right-click on the
+  Memory
+  window to change the way memory contents are displayed, including displaying memory contents as floating-point numbers.
+ </p>
+ <p class="rubric" id="to-view-the-contents-of-shared-memory">
+  To View the Contents of Shared Memory
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the
+    Debug
+    menu, choose
+    Windows
+    &gt;
+    Memory
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Select one of the
+    Memory
+    windows. The Memory window opens or grabs focus if already opened.
+   </p>
+  </li>
+  <li>
+   <p>
+    In the
+    Address
+    field of the Memory window, type the GPU memory address for the shared memory location to display.
+   </p>
+   <p>
+    Make sure to cast the pointer to a pointer in Shared memory by using the following syntax:
+   </p>
+   <pre><span class="p">(</span><span class="n">__shared__</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">p</span>
+</pre>
+  </li>
+  <li>
+   <p>
+    Right-click on the
+    Memory
+    window to see display options.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The following examples show the syntax used to cast a pointer/address to a different memory space.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Shared:
+    <span class="pre">
+     (__shared__
+    </span>
+    <span class="pre">
+     int*)0x00
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Local:
+    <span class="pre">
+     (__local__
+    </span>
+    <span class="pre">
+     int*)0
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Global:
+    <span class="pre">
+     (__device__
+    </span>
+    <span class="pre">
+     int*)0x2001b000
+    </span>
+   </p>
+  </li>
+ </ul>
+ <p>
+  NOTE: You cannot change the value in GPU memory by editing the value in the Memory window.
+ </p>
+ <h3>
+  View Variables in Locals Window in Memory
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-variables-in-locals-window-in-memory" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start the CUDA Debugger.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      in Visual Studio, choose
+     </p>
+     <ul>
+      <li>
+       <p>
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Start CUDA Debugging (Next-Gen)
+       </p>
+       <p>
+        For information on choosing the correct debugger for your system configuration see the
+        <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+         System Requirements
+        </a>
+        page.
+       </p>
+       <p>
+        Alternatively, these debugging sessions may be started by:
+       </p>
+      </li>
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and select the
+        Debug
+        submenu.
+       </p>
+      </li>
+      <li>
+       <p>
+        Click on the associated icon in the
+        Nsight CUDA Debug
+        toolbar.
+       </p>
+      </li>
+      <li>
+       <p>
+        Select the associated item in the
+        Nsight Connections
+        drop-down list.
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      Pause execution or allow the application to run to a breakpoint, or set a breakpoint if none enabled.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the
+    Debug
+    menu, choose
+    Windows
+    &gt;
+    Memory
+    &gt;
+    Memory Window 1
+    .
+   </p>
+   <p>
+    The
+    Memory
+    window opens.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click and drag a variable from the
+    Locals
+    window onto the
+    Memory
+    window.
+   </p>
+   <p>
+    The Memory window displays the values at the addresses that correspond to the variable (or pointer).
+   </p>
+  </li>
+  <li>
+   <p>
+    Alternately, you can type the name of the variable into the
+    Address
+    field of the Memory window.
+   </p>
+  </li>
+  <li>
+   <p>
+    When viewing memory in
+    <span class="pre">
+     __local__
+    </span>
+    ,
+    <span class="pre">
+     __const__
+    </span>
+    or
+    <span class="pre">
+     __shared__
+    </span>
+    make sure the Visual Studio Memory view is set to Re-evaluate automatically. This will ensure that the memory shown is for the correct memory space. Without this, the display can change to an address which defaults to global memory.
+   </p>
+  </li>
+ </ol>
+ <p>
+  NOTE: You cannot change the value in GPU memory by editing the value in the Locals window.
+ </p>
+ <h3>
+  View Variables in Watch Window in Memory
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-variables-in-watch-window-in-memory" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start the CUDA Debugger.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the
+      Nsight
+      menu in Visual Studio, choose
+     </p>
+     <ul>
+      <li>
+       <p>
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Start CUDA Debugging (Next-Gen)
+       </p>
+       <p>
+        For information on choosing the correct debugger for your system configuration see the
+        <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+         System Requirements
+        </a>
+        page.
+       </p>
+      </li>
+     </ul>
+     <p>
+      Alternatively, these debugging sessions may be started by:
+     </p>
+     <ul class="simple">
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and select the
+        Debug
+        submenu.
+       </p>
+      </li>
+      <li>
+       <p>
+        Click on the associated icon in the
+        Nsight CUDA Debug
+        toolbar.
+       </p>
+      </li>
+      <li>
+       <p>
+        Select the associated item in the
+        Nsight Connections
+        drop-down list.
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      Pause execution or allow the application to run to a breakpoint (or set a breakpoint if none are enabled).
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the
+    Debug
+    menu, choose
+    Windows
+    &gt;
+    Watch
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Select one of the
+    Watch
+    windows. The Watch window opens or grabs focus if already opened.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click and drag a variable from the
+    Watch
+    window onto the
+    Memory
+    window. The memory window displays the values at the addresses that correspond to the variable (or pointer).
+   </p>
+  </li>
+ </ol>
+ <h2>
+  How To: View Variables
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#how-to-view-variables" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA Nsightâ¢ VSE supports the standard Visual Studio
+  Locals
+  window for examining the value of local variables in CUDA source code, and the
+  Watch
+  window for interactively evaluating expressions.
+ </p>
+ <p>
+  The information in the
+  Locals
+  window and
+  Watch
+  window are available in the CUDA Debugger only when:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    A CUDA-based application is running, and
+   </p>
+  </li>
+  <li>
+   <p>
+    Application execution is halted while executing CUDA source code.
+   </p>
+  </li>
+  <li>
+   <p>
+    When not restricted by a private/internal library. As an example, see
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+     OptiX restrictions
+    </a>
+    , especially as they apply to viewing variables.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  View the Value of a Local Variable
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#view-the-value-of-a-local-variable" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start a debugging session.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      In Visual Studio, open a CUDA-based project.
+     </p>
+    </li>
+    <li>
+     <p>
+      Define at least one breakpoint.
+     </p>
+    </li>
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , choose
+     </p>
+     <ul>
+      <li>
+       <p>
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Start CUDA Debugging (Next-Gen)
+       </p>
+       <p>
+        For information on choosing the correct debugger for your system configuration see the
+        <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+         System Requirements
+        </a>
+        page.
+       </p>
+      </li>
+     </ul>
+     <p>
+      Alternatively, these debugging sessions may be started by:
+     </p>
+     <ul class="simple">
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and select the
+        Debug
+        submenu.
+       </p>
+      </li>
+      <li>
+       <p>
+        Click on the associated icon in the
+        Nsight CUDA Debug
+        toolbar.
+       </p>
+      </li>
+      <li>
+       <p>
+        Select the associated item in the
+        Nsight Connections
+        drop-down list.
+       </p>
+      </li>
+     </ul>
+     <p>
+      Your applications starts and the CUDA Debugger launches, stopping at the first breakpoint encountered.
+     </p>
+    </li>
+    <li>
+     <p>
+      Pause execution or allow the application to run to a breakpoint, or set a breakpoint if none enabled.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the
+    Debug
+    menu, choose
+    Windows
+    &gt;
+    Locals
+    . The
+    Locals
+    window opens.
+   </p>
+  </li>
+ </ol>
+ <p>
+  The
+  Locals
+  window shows the list of variables, their assigned values, and type in the current lexical scope.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The block and thread indices are exposed in the
+  <span class="pre">
+   blockDim
+  </span>
+  and the
+  <span class="pre">
+   threadIdx
+  </span>
+  variables.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Variables that have not yet been initialized show triple question marks as their value:
+  <span class="pre">
+   ???
+  </span>
+ </p>
+ <h3>
+  Evaluate the Value of an Expression
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#evaluate-the-value-of-an-expression" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the Debug menu, choose
+    Windows
+    &gt;Â
+    Watch
+    &gt;
+    Watch1
+    Â to open or focus the
+    Watch
+    window.
+   </p>
+  </li>
+  <li>
+   <p>
+    Left-click on the expression portion of the window.
+   </p>
+  </li>
+  <li>
+   <p>
+    Type any valid expression recognized by the debugger. The expression can contain any variable valid at the current execution location.
+   </p>
+  </li>
+  <li>
+   <p>
+    Press the Enter key.
+   </p>
+   <p>
+    The CUDA Debugger evaluates the expression displayed in the
+    Name
+    column, and places the result in the
+    Value
+    Â column.
+   </p>
+   <p>
+    If the expression refers to a variable that is not valid at the current execution location, the expression value displays an error message.
+   </p>
+   <p>
+    If the expression is a variable, you can edit the value in this column to change the contents of the variable. You cannot edit the value of
+    const
+    variables. The right column of the
+    Watch
+    window shows the value to which the expression evaluates.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The CUDA Debugger supports a significant percentage of C++ expression syntax, including:
+ </p>
+ <ul>
+  <li>
+   <p>
+    Bitwise and Logical Operators
+    :
+    <span class="pre">
+     &amp;,
+    </span>
+    <span class="pre">
+     |,
+    </span>
+    <span class="pre">
+     ^,
+    </span>
+    <span class="pre">
+     &amp;&amp;,
+    </span>
+    <span class="pre">
+     ||,
+    </span>
+    <span class="pre">
+     &lt;&lt;,
+    </span>
+    <span class="pre">
+     &gt;&gt;
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Arithmetic Operators
+    :
+    <span class="pre">
+     +,
+    </span>
+    <span class="pre">
+     -,
+    </span>
+    <span class="pre">
+     *,
+    </span>
+    <span class="pre">
+     /
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Pointer Arithmetic
+    : For example:Â
+    <span class="pre">
+     p+4
+    </span>
+    <span class="pre">
+     ,
+    </span>
+    <span class="pre">
+     p[4]
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Casting
+    :
+    <span class="pre">
+     (int
+    </span>
+    <span class="pre">
+     *)p,
+    </span>
+    <span class="pre">
+     (float4*)p,
+    </span>
+    <span class="pre">
+     (__shared
+    </span>
+    <span class="pre">
+     float4*)p
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Array,Length
+    format specification (Legacy Debugger Only):
+   </p>
+   <p>
+    Given the source variable
+    <span class="pre">
+     int*
+    </span>
+    <span class="pre">
+     p
+    </span>
+    , entering
+    <span class="pre">
+     p
+    </span>
+    <span class="pre">
+     ,3
+    </span>
+    in the watch window will treat the variable as an array of three elements; all elements will be visible when the variable is expanded.
+   </p>
+  </li>
+ </ul>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  To use a register in the variable Watch Window or in a conditional breakpoint, specify the register a capital
+  <span class="pre">
+   R
+  </span>
+  , and the decimal (not hex) register number. For example:
+  <span class="pre">
+   R9
+  </span>
+  or
+  <span class="pre">
+   R10
+  </span>
+  .
+ </p>
+ <p>
+  In the Next-Gen CUDA Debugger, you may also preface with a
+  <span class="pre">
+   $
+  </span>
+  to differentiate from variables with equivalent names.Â  For example:
+  <span class="pre">
+   $R9
+  </span>
+  or
+  <span class="pre">
+   $R10
+  </span>
+  .
+ </p>
+ <p>
+  You may also hover over a register in the disassembly view to get a tool tip providing the register value.
+ </p>
+ <p>
+  Next-Gen CUDA Debugger
+  : see also the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-nextgen-windows-registers">
+   Next-Gen CUDA Debugger registers view
+  </a>
+  , and the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#ptx-sass-assembly-debugging">
+   Visual Studio debugger registers view
+  </a>
+  .
+ </p>
+ <p>
+  Legacy CUDA Debugger
+  : see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#ptx-sass-assembly-debugging">
+   Visual Studio debugger registers view
+  </a>
+  .
+ </p>
+ <h3>
+  Configure Formatting of Expressions
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#configure-formatting-of-expressions" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    From the
+    Nsight
+    menu, choose
+    Nsight Options
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Select the
+    Debugger
+    group in the left pane of the
+    Nsight Options
+    window.
+   </p>
+  </li>
+  <li>
+   <p>
+    Mark the options that you want to enable.
+   </p>
+  </li>
+ </ol>
+ <h2>
+  Legacy CUDA Info View
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#legacy-cuda-info-view" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The CUDA Info View shows information on the current state of CUDA within the process that is being debugged.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Applications built with the OptiX framework restrict debugging and profiling capabilities. See
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+   Restrictions when Debugging and Profiling OptiX Applications
+  </a>
+  .
+ </p>
+ <p class="rubric" id="to-view-the-cuda-information-tool-window">
+  To View the CUDA Information Tool Window:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Launch the Legacy CUDA Debugger.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      Open a CUDA-based project.
+     </p>
+    </li>
+    <li>
+     <p>
+      Make sure that the Nsight Monitor is running on the target machine.
+     </p>
+    </li>
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , select
+      Start CUDA Debugging (Legacy)
+      . Or you can use one of the following alternate methods:
+     </p>
+     <ul class="simple">
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and choose
+        Debug
+        &gt;
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Nsight CUDA Debugging toolbar &gt;
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Nsight Connections toolbar &gt;
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      The Legacy CUDA Debugger starts and launches the target application.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the Nsight menu, choose Windows &gt; CUDA Info. Select the CUDA Info page that you wish to open.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  General Features of the CUDA Information Tool Window
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#general-features-of-the-cuda-information-tool-window" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p class="rubric" id="viewing-rows">
+  Viewing Rows
+ </p>
+ <p>
+  This displays the number of rows in the current view. If the view is filtered, the number shown may be less than the number of total rows.
+ </p>
+ <p class="rubric" id="cuda-legacy-info-view-general-features-hyperlinks">
+  Hyperlinks
+ </p>
+ <p>
+  A hyperlink will use a specific filter to jump the current tool window to another page. For example, clicking a link in the Modules column will link you to the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view-window-pages-modules">
+   Modules
+  </a>
+  Â tool window.
+ </p>
+ <p class="rubric" id="filtering-results">
+  Filtering Results
+ </p>
+ <p>
+  Use
+  <span class="pre">
+   $("Column
+  </span>
+  <span class="pre">
+   Name")
+  </span>
+  to specify by the exact name of the column, including spaces. The column name must be quoted.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    For example, in the Warps Page:
+    <span class="pre">
+     $("Active
+    </span>
+    <span class="pre">
+     Mask")
+    </span>
+    <span class="pre">
+     ==
+    </span>
+    <span class="pre">
+     0xffffffff
+    </span>
+   </p>
+  </li>
+ </ul>
+ <p>
+  The results in each page can be filtered by an expression. This leads to shorter expressions.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    For example, in the Warps Page:
+    <span class="pre">
+     Status=="Breakpoint"
+    </span>
+    <span class="pre">
+     &amp;&amp;
+    </span>
+    <span class="pre">
+     FlatBlockIdx
+    </span>
+    <span class="pre">
+     &gt;
+    </span>
+    <span class="pre">
+     30
+    </span>
+   </p>
+  </li>
+ </ul>
+ <p>
+  Other tips for filtering:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    To see an auto-completion window, type the first letter of the column. Use
+    Reset Filter
+    to clear the current filter for the page.
+   </p>
+  </li>
+  <li>
+   <p>
+    To find all functions with a certain string, you can use
+    <span class="pre">
+     Name.StartsWith("bar")
+    </span>
+    ,
+    <span class="pre">
+     Name.Contains("bar")
+    </span>
+    ,
+    <span class="pre">
+     Name.Endswith("bar")
+    </span>
+    , and
+    <span class="pre">
+     !
+    </span>
+    operations.
+   </p>
+  </li>
+  <li>
+   <p>
+    Filters that have been created by hyperlinks are not persisted between debug sessions. This is because these often have specific identifiers, such as context or module IDs, which would not make sense in the next debug session. However, any filter that is created by a user will persist with the page, whether it contains unique IDs or not.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="bookmarks">
+  Bookmarks
+ </p>
+ <p>
+  Bookmarks are a quick way to jump to a specific page, with a preset filter.
+ </p>
+ <p class="rubric" id="persistence">
+  Persistence
+ </p>
+ <p>
+  When debugging, each page will persist the last state that it was displaying. Any filters that have been created by clicking on a hyperlink will not be persisted in the next debug session.
+ </p>
+ <p class="rubric" id="cuda-legacy-info-view-general-features-focus">
+  Focus
+ </p>
+ <p>
+  To update the current focus in the Warps and Lanes pages, you can use any of the following methods:
+ </p>
+ <ul>
+  <li>
+   <p>
+    CUDA Focus Picker
+   </p>
+  </li>
+  <li>
+   <p>
+    Next Warp
+    or
+    Previous Warp
+    commands
+   </p>
+   <p>
+    These commands are available either from the Nsight menu in Visual Studio, or from the Nsight toolbar.
+   </p>
+  </li>
+  <li>
+   <p>
+    Using
+    Set Focus
+    in the Warp page
+   </p>
+   <p>
+    This is available by double-clicking or right-clicking on the thread and selecting
+    Set-Focus
+    .
+   </p>
+   <p>
+    Using right-click &gt;Â
+    Set Focus
+    , or double-clicking elsewhere in the same row, will go to the first active thread in the selected warp, as indicated by the
+    <span class="pre">
+     threadIdx
+    </span>
+    value of that row.
+   </p>
+  </li>
+  <li>
+   <p>
+    Using
+    Set Focus
+    in the Lanes page
+   </p>
+   <p>
+    This is available by double-clicking or right-clicking on the thread and selecting
+    Set-Focus
+    .
+   </p>
+  </li>
+ </ul>
+ <h3>
+  CUDA Info Tool Window Pages
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-info-tool-window-pages" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  There are several pages within this tool window that allow you to view different aspects of your CUDA application that is being debugged.
+ </p>
+ <p>
+  The CUDA Information tool window pages include the following:
+ </p>
+ <p class="rubric" id="arrays">
+  Arrays
+ </p>
+ <p>
+  The
+  Arrays
+  page shows information about all arrays in the process that is being debugged.
+ </p>
+ <p>
+  For more information on the Arrays page, see
+  <a class="reference external" href="http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#cuda-arrays">
+   CUDA Arrays
+  </a>
+  .
+ </p>
+ <p class="rubric" id="blocks">
+  Blocks
+ </p>
+ <p>
+  The
+  Blocks
+  page shows all active blocks in the current kernel running on the GPU. The link in the
+  CUcontext
+  column will open the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view-window-pages-contexts">
+   Contexts
+  </a>
+  page. The
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view-general-features-hyperlinks">
+   hyperlink
+  </a>
+  in the
+  # Warps
+  column will jump to the Warps page, filtered to the specific block.
+ </p>
+ <p class="rubric" id="cuda-legacy-info-view-window-pages-contexts">
+  Contexts
+ </p>
+ <p>
+  The
+  Contexts
+  page shows information about all contexts on all GPUs in the process that is currently being debugged. Information on this page is always available, even when the process has not been stopped.
+ </p>
+ <p>
+  Note that the
+  SW Preemption
+  column is used to show if the application is using software preemption (on a single GPU) or non-preemption (either classic or hardware).
+ </p>
+ <p>
+  For more information on CUDA context object types, see
+  <a class="reference external" href="http://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9">
+   CUcontext
+  </a>
+  .
+ </p>
+ <p class="rubric" id="functions">
+  Functions
+ </p>
+ <p>
+  The
+  Functions
+  page shows information about all functions in all loaded modules. Information on this page is always available, even when the process has not been stopped.
+ </p>
+ <p class="rubric" id="grids">
+  Grids
+ </p>
+ <p>
+  The
+  Grids
+  page shows all active and queued kernels on the GPU. The current kernel will have a
+  # Blocks
+  greater than 0. Other kernels will show
+  # Blocks
+  set to 0.
+ </p>
+ <p class="rubric" id="lanes">
+  Lanes
+ </p>
+ <p>
+  The
+  Lanes
+  page displays information about all lanes in the current focus warp. A lane is a single thread in one
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view-window-pages-warps">
+   warp
+  </a>
+  .
+ </p>
+ <p>
+  The current state of the lane is shown as a barrier in the
+  Status
+  column.
+ </p>
+ <p class="rubric" id="memory-allocations">
+  Memory Allocations
+ </p>
+ <p>
+  This page shows information for all CUDA global memory allocations, in all
+  <span class="pre">
+   CUcontexts
+  </span>
+  in the application. This page automatically updates when suspended in a kernel.
+ </p>
+ <p>
+  Like other pages, the results can be filtered. For example:
+ </p>
+ <pre>CUcontext==0x02c8c258
+MemoryAllocationType == "Host" &amp;&amp; Size &gt; 100
+</pre>
+ <p>
+  A few columns to note on this page include the following:
+ </p>
+ <ul>
+  <li>
+   <p>
+    CUContext
+    â The context that contains this memory allocation.
+   </p>
+  </li>
+  <li>
+   <p>
+    Type
+    â Device or Host.
+    Device
+    is used when the user includes any device side allocation call (e.g.
+    <span class="pre">
+     cudaMalloc
+    </span>
+    ).
+    Host
+    is used for any memory allocated from the host mapped on the device (e.g.,
+    <span class="pre">
+     cudaHostAlloc
+    </span>
+    ,
+    <span class="pre">
+     cudaHostRegister
+    </span>
+    , or other CUDA API calls).
+   </p>
+  </li>
+  <li>
+   <p>
+    Address
+    â The device side address. For an allocation where the type is âHost,â this device side address may be retrieved from the
+    <span class="pre">
+     HostPtr
+    </span>
+    address via
+    <span class="pre">
+     cudaHostGetDevicePointer
+    </span>
+    .
+   </p>
+   <p>
+    The
+    <span class="pre">
+     Host
+    </span>
+    <span class="pre">
+     Ptr
+    </span>
+    is as follows:
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      For
+      Device
+      allocations, this is
+      <span class="pre">
+       0x00000000
+      </span>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      For
+      Host
+      allocations, this will have the address returned from the
+      <span class="pre">
+       cudaHostAlloc
+      </span>
+      ,
+      <span class="pre">
+       cudaHostRegister
+      </span>
+      , or other host mapping function.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    End Address
+    â Simply the address plus size (exclusive end range).
+   </p>
+  </li>
+  <li>
+   <p>
+    The
+    Name
+    column may be used in the future for named memory allocations.
+   </p>
+  </li>
+  <li>
+   <p>
+    Portable
+    ,
+    Device Mapped
+    , and
+    Write Combined
+    flags will be filled in where used with the associated
+    <span class="pre">
+     cudaHostAlloc
+    </span>
+    or
+    <span class="pre">
+     cudaHostRegister
+    </span>
+    call.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Right-click on a particular line and select
+  Set Memory View Expression
+  to open the Memory window.
+ </p>
+ <p class="rubric" id="cuda-legacy-info-view-window-pages-modules">
+  Modules
+ </p>
+ <p>
+  The
+  Modules
+  page displays information about all modules in all contexts. The information shown here matches the modules that are seen in the Visual Studio Modules view. Information on this page is always available, even when the process has not been stopped.
+ </p>
+ <p>
+  Tips for using the Modules page:
+ </p>
+ <ul>
+  <li>
+   <p>
+    Filtering results: Use
+    HasSymbols
+    to see only the loaded modules that have symbols.
+   </p>
+  </li>
+  <li>
+   <p>
+    Any module without symbols will not be able to hit a breakpoint in a kernel.
+   </p>
+  </li>
+ </ul>
+ <p>
+  The Dynamic Parallelism column shows whether there is a nested kernel launch, in which a kernel launches another kernel. For more information, see
+  <a class="reference external" href="http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#cuda-dynamic-parallelism">
+   CUDA Dynamic Parallelism
+  </a>
+  .
+ </p>
+ <p class="rubric" id="surfaces">
+  Surfaces
+ </p>
+ <p>
+  The
+  Surfaces
+  page provides details on all of the CUDA surface object handle types per CUDA context.
+ </p>
+ <p>
+  For more information, see
+  <a class="reference external" href="http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#surface-object-api">
+   Surface Object API
+  </a>
+  .
+ </p>
+ <p class="rubric" id="textures">
+  Textures
+ </p>
+ <p>
+  The
+  Textures
+  page provides details on all of the CUDA texture object handle types per CUDA context.
+ </p>
+ <p>
+  For more information, see
+  <a class="reference external" href="http://docs.nvidia.com/cuda/cuda-c-programming-guide#texture-object-api">
+   Texture Object API
+  </a>
+  .
+ </p>
+ <p class="rubric" id="cuda-legacy-info-view-window-pages-warps">
+  Warps
+ </p>
+ <p>
+  The
+  Warps
+  page displays all active warps on the GPU. Each row represents one warp, and the
+  Lanes
+  column displays information about all lanes for each of the warps in the view. A lane is a single thread in one warp. The Lanes column gives per-lane details about any warp exceptions; the current state is shown in the Lanes column.
+ </p>
+ <p>
+  Focus
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The current focus is denoted by a yellow arrow in the
+    Lanes
+    column.
+   </p>
+  </li>
+  <li>
+   <p>
+    Focus changes affect the position of the yellow arrow with respect to
+    Warp
+    row and
+    Lane
+    column thread. Other columns are unaffected on focus changes.
+   </p>
+  </li>
+  <li>
+   <p>
+    Changing the Warp or Lane focus, will also update other views (i.e., Locals, Watch, Callstack, â¦).
+   </p>
+  </li>
+  <li>
+   <p>
+    Thread focus can be manually changed using one of the methods outlined in the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view-general-features-focus">
+     Focus section
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Hovering your cursor over a row in the
+    Lanes
+    column will produce a tool tip with the state of the lane.
+   </p>
+  </li>
+  <li>
+   <p>
+    The user can switch to either active or inactive lanes; however, the focus cannot be changed to
+    Not Launched
+    lanes.
+   </p>
+  </li>
+  <li>
+   <p>
+    The user can freeze specific warps within the warps page itself. This set of frozen warps is managed separately from the global freeze control. Freezing warps 1, 2, and 3, and then toggling the global freeze state will leave those warps frozen. (See
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+     How To: Use the Global Freeze Page
+    </a>
+    for more details.)
+   </p>
+  </li>
+ </ul>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Frozen warp rows are disabled and have
+  Warp
+  in the
+  Frozen
+  column.
+ </p>
+ <p>
+  Filtering results:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Use the
+    Warp Exceptions
+    bookmark to filter to only the warps currently in an exception state.
+   </p>
+  </li>
+  <li>
+   <p>
+    Use the
+    Warps @ Breakpoint
+    bookmark to filter to only the warps that have hit a breakpoint.
+   </p>
+  </li>
+ </ul>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/cuda_info_view_warps.001.png">
+ </a>
+ <p>
+  The color legend for the Lanes column is as follows:
+ </p>
+ <table class="docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Color
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Thread State
+    </p>
+   </th>
+  </tr>
+ </table>
+ <p>
+  For more information on the Warps page, see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#warp-watch-examples">
+   Example Scenarios
+  </a>
+  of the CUDA Warp Watch section.
+ </p>
+ <h2>
+  Next-Gen State Inspection Views
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#next-gen-state-inspection-views" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA Nsight Visual Studio EditionÂ 5.5, and later, brings developers unprecedented application development capabilities, combining native Visual Studio CPU and CUDA GPU debugging within the same debugging session. This new debugging architecture extends Nsightâs capabilities to the latest Volta GPUs, while providing a seamless, homogeneous debugging experience on GPU kernels and native CPU code.
+ </p>
+ <p>
+  The Next-Gen CUDA Debugger provides a number of independent tool windows to inspect the target applicationâs state.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The Next-Gen CUDA Debugger is designed to work with Pascal, Volta, and Turing family GPUs with the latest drivers and operating systems. Some Legacy CUDA Debugger features, older GPUs, drivers, and OSs may not be supported. Please refer to the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+   system requirements
+  </a>
+  for the differences between the Legacy CUDA Debugger and the Next-Gen CUDA Debugger to determine which one fits your needs.
+ </p>
+ <p class="rubric" id="to-view-the-next-gen-cuda-information-tool-windows">
+  To View the Next-Gen CUDA Information Tool Windows:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Launch the Next-Gen CUDA Debugger.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      Open a CUDA-based project.
+     </p>
+    </li>
+    <li>
+     <p>
+      Make sure that the Nsight Monitor is running on the target machine.
+     </p>
+    </li>
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , select Start CUDA Debugging (Next-Gen). Or you can use one of the following alternate methods:
+     </p>
+     <ul class="simple">
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and choose
+        Debug
+        &gt;
+        Start CUDA Debugging (Next-Gen)
+       </p>
+      </li>
+      <li>
+       <p>
+        Nsight CUDA Debugging toolbar &gt;
+        Start CUDA Debugging (Next-Gen)
+       </p>
+      </li>
+      <li>
+       <p>
+        Nsight Connections toolbar &gt;
+        Start CUDA Debugging (Next-Gen)
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      The Next-Gen CUDA Debugger starts and launches the target application.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the
+    Nsight
+    menu, choose
+    Windows
+    to select a supported tool that will allow you to inspect the state of the target application (
+    Warp Info
+    ,
+    Lanes
+    ,
+    Warp Watch
+    ,
+    Resources
+    , or
+    GPU Registers
+    ).
+   </p>
+  </li>
+ </ol>
+ <h3>
+  General Features of the Next-Gen CUDA Information Tool Window
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#general-features-of-the-next-gen-cuda-information-tool-window" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p class="rubric" id="filtering-results-1">
+  Filtering Results
+ </p>
+ <p>
+  There are two modes that can be used to create filters:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    JavaScript Mode â Create JavaScript expressions using the exact name of the column, including spaces, in the format
+    <span class="pre">
+     $("Column
+    </span>
+    <span class="pre">
+     Name")
+    </span>
+    . Typing
+    <span class="pre">
+     '$'
+    </span>
+    will produce a list that can be used to select a pre-formatted column name.
+   </p>
+   <pre>$('Grid ID') == 2 || $('BP Hit Mask') == 1
+</pre>
+   <pre>$('Active Mask') == 80000000
+</pre>
+   <pre>$('Active Mask') != "FFFFFFFF" &amp;&amp; $('Status') == "Breakpoint")
+</pre>
+   <pre>$('Status').match(/breakpoint/i)
+</pre>
+   <pre>(function (a, b) { return a.toLowerCase() == b.toLowerCase(); })($("Status"), "breakpoint")
+</pre>
+  </li>
+  <li>
+   <p>
+    RegEx Mode â Create regular expressions to match the (case insensitive) text of the desired rowâs cells
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      <span class="pre">
+       ^8
+      </span>
+      :Â filters for rows that have cells with strings beginning with
+      <span class="pre">
+       '8'
+      </span>
+     </p>
+    </li>
+    <li>
+     <p>
+      <span class="pre">
+       point
+      </span>
+      : filters for rows that have cells with strings containing
+      <span class="pre">
+       'point'
+      </span>
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ol>
+ <p class="rubric" id="cuda-nextgen-info-view-general-features-focus">
+  Focus
+ </p>
+ <p>
+  To update the current CUDA thread focus in the Warp Info and Lanes pages, you can use any of the following methods:
+ </p>
+ <ul>
+  <li>
+   <p>
+    Next Warp
+    or
+    Previous Warp
+    commands
+   </p>
+   <p>
+    These commands are available either from the Nsight menu in Visual Studio, or from the Nsight toolbar.
+   </p>
+  </li>
+  <li>
+   <p>
+    Using
+    Set Focus
+    in the Warp page
+   </p>
+   <p>
+    This is available by double-clicking on the thread (lane of a warp).
+   </p>
+  </li>
+  <li>
+   <p>
+    Using
+    Set Focus
+    in the Lanes page
+   </p>
+   <p>
+    This is available by double-clicking on the thread (lane of a warp).
+   </p>
+  </li>
+ </ul>
+ <h3>
+  Next-Gen CUDA Debugger Tool Windows
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#next-gen-cuda-debugger-tool-windows" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  There are several pages within this tool window that allow you to view different aspects of your CUDA application that is being debugged.
+ </p>
+ <p>
+  The CUDA Information tool window pages include the following:
+ </p>
+ <h4>
+  Warp Info
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#warp-info" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The
+  Warp Info
+  page displays all active warps on the GPU. Each row represents one warp, and the
+  Threads
+  column displays information about all lanes (sub-columns)Â for each of the warps (rows) in the view. A lane is a single thread in one warp. The Threads column gives per-lane details about any warp exceptions; the current state is shown in the Threads column.
+ </p>
+ <p>
+  Focus
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The current focus is denoted by a yellow arrow in the
+    Threads
+    column.
+   </p>
+  </li>
+  <li>
+   <p>
+    Thread focus can be manually changed using one of the methods outlined in the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-nextgen-info-view-general-features-focus">
+     Focus section
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Focus changes affect the position of the yellow arrow with respect to
+    Warp
+    row and
+    Thread
+    column thread. Other columns are unaffected by focus changes.
+   </p>
+  </li>
+  <li>
+   <p>
+    Changing the Warp or Lane focus, will also update other views (i.e., Locals, Watch, Callstack, â¦).
+   </p>
+  </li>
+  <li>
+   <p>
+    The user can switch to either active or inactive lanes; however, the focus cannot be changed to
+    Not Launched
+    lanes.
+   </p>
+  </li>
+  <li>
+   <p>
+    The user can freeze specific warps within the warps page itself. This set of frozen warps is managed separately from the global freeze control. Freezing warps 1, 2, and 3, and then toggling the global freeze state will leave those warps frozen. (See
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+     How To: Use the Global Freeze Page
+    </a>
+    for more details.)
+   </p>
+  </li>
+ </ul>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Unlike the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view">
+   Legacy CUDA Debugger
+  </a>
+  , frozen warp rows are not disabled and there is no
+  Frozen
+  column. This indicator will be added in a future version.
+ </p>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/cuda_info_view_nextgen_warp_info.001.png">
+ </a>
+ <p>
+  The color legend for the Threads column is as follows:
+ </p>
+ <p>
+  For more information on the Warps page, see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#example-scenarios">
+   Example Scenarios
+  </a>
+  of the CUDA Warp Watch section.
+ </p>
+ <h4>
+  Warp Watch
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#warp-watch" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The Warp Watch page displays information about the current state of watched variables in all warps.
+ </p>
+ <p>
+  For more information, see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-warp-watch">
+   Warp Watch
+  </a>
+  documentation, common to both Next-Gen and Legacy CUDA Debuggers.
+ </p>
+ <h4>
+  Next-Gen CUDA Debugger Tool Windows
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#id3" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The
+  Lanes
+  page displays information about all lanes in the current focus warp. A lane is a single thread in one
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-nextgen-windows-warp-info">
+   warp
+  </a>
+  .
+ </p>
+ <p>
+  The current state of the lane is shown as a barrier in the
+  Status
+  column.
+ </p>
+ <p>
+  Focus
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The current focus is denoted by a yellow arrow in the first column.
+   </p>
+  </li>
+  <li>
+   <p>
+    Thread focus, and therefore lane focus, can be manually changed using one of the methods outlined in the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-nextgen-info-view-general-features-focus">
+     Focus section
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Focus changes affect the row position of the yellow.
+   </p>
+  </li>
+  <li>
+   <p>
+    Changing the Warp or Lane focus, will also update other views (i.e., Locals, Watch, Callstack, â¦).
+   </p>
+  </li>
+  <li>
+   <p>
+    The user can switch to either active or inactive lanes; however, the focus cannot be changed to
+    Not Launched
+    lanes.
+   </p>
+  </li>
+ </ul>
+ <h4>
+  Resources
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#resources" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The
+  Resources
+  view shows the different aspects of the CUDA application that is being debugged.
+ </p>
+ <p>
+  Using the drop-down on the top, different views can be selected, where each view is specific to one kind of resource (context, stream, kernel, â¦). The Filter edit allows you to create filter expressions using the column headers of the currently selected resource.
+ </p>
+ <p>
+  The resource table shows all information for each resource instance. Resources are dynamically added and are available at both runtime and while the target application is suspended. When a resource is destroyed, it is removed from its table.
+ </p>
+ <p class="rubric" id="devices">
+  Devices
+ </p>
+ <p>
+  The
+  Devices
+  setting shows information about the GPU being debugged.
+ </p>
+ <p>
+  The 1st column represents the âNameâ of a device attribute.
+ </p>
+ <p>
+  The following columns represent the device index after
+  <span class="pre">
+   CUDA_VISIBLE_DEVICE
+  </span>
+  device remapping.
+  <span class="pre">
+   Device
+  </span>
+  <span class="pre">
+   0
+  </span>
+  is shown here.
+ </p>
+ <p class="rubric" id="contexts-1">
+  Contexts
+ </p>
+ <p>
+  The
+  Context
+  setting shows information about all contexts on all GPUs in the process that is currently being debugged. Information on this page is always available, even when the process has not been stopped.
+ </p>
+ <p class="rubric" id="streams">
+  Streams
+ </p>
+ <p>
+  The
+  Streams
+  setting shows information about concurrent kernel streams, their IDs and priorities.
+ </p>
+ <p class="rubric" id="modules-1">
+  Modules
+ </p>
+ <p>
+  The
+  Modules
+  setting displays information about all modules in all contexts. The information shown here matches the modules that are seen in the Visual Studio Modules view. Information on this page is always available, even when the process has not been stopped.
+ </p>
+ <p class="rubric" id="functions-1">
+  Functions
+ </p>
+ <p>
+  The
+  Functions
+  setting shows information about all functions in all loaded modules. Information on this page is always available, even when the process has not been stopped.
+ </p>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/nextgen-resources-functions.01.png">
+ </a>
+ <p class="rubric" id="memory-allocations-1">
+  Memory Allocations
+ </p>
+ <p>
+  This page shows information for all CUDA global memory allocations, in all
+  <span class="pre">
+   CUcontexts
+  </span>
+  in the application. This page automatically updates when suspended in a kernel.
+ </p>
+ <p>
+  Like other pages, the results can be filtered. For example:
+ </p>
+ <pre>$('Context') == 0x23e4c4400a0
+$('Allocation type') == "HOST MEMORY ALLOC"  &amp;&amp;  $('Size Requested') &gt; 100
+</pre>
+ <p>
+  A few columns to note on this page include the following:
+ </p>
+ <ul>
+  <li>
+   <p>
+    Allocation Type
+    â Device or Host.
+   </p>
+  </li>
+  <li>
+   <p>
+    Device
+    is used when the user includes any device side allocation call (e.g.
+    <span class="pre">
+     cudaMalloc
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    Host
+    is used for any memory allocated from the host mapped on the device (e.g.,
+    <span class="pre">
+     cudaHostAlloc
+    </span>
+    ,
+    <span class="pre">
+     cudaHostRegister
+    </span>
+    , or other CUDA API calls).
+   </p>
+  </li>
+  <li>
+   <p>
+    Address
+    â The device side address. For an allocation where the type is âHost,â this device side address may be retrieved from the
+    <span class="pre">
+     Host
+    </span>
+    <span class="pre">
+     Address
+    </span>
+    address via
+    <span class="pre">
+     cudaHostGetDevicePointer
+    </span>
+    .
+   </p>
+   <p>
+    The
+    <span class="pre">
+     Host
+    </span>
+    <span class="pre">
+     Address
+    </span>
+    is as follows:
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      For
+      Device
+      allocations, this is
+      <span class="pre">
+       None
+      </span>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      For
+      Host
+      allocations, this will have the address returned from the
+      <span class="pre">
+       cudaHostAlloc
+      </span>
+      ,
+      <span class="pre">
+       cudaHostRegister
+      </span>
+      , or other host mapping function.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    Context
+    â The context that contains this memory allocation.
+   </p>
+  </li>
+  <li>
+   <p>
+    CUmemoryPool
+    â Address of the memory pool for this allocation. 0x0 if not using a pool.
+   </p>
+  </li>
+  <li>
+   <p>
+    Pool Allocation Mode
+    â cudaMemPoolAttr.enumerator used when allocating from a pool
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="graphs">
+  Graphs
+ </p>
+ <p>
+  The
+  Graphs
+  setting shows CUDA Graph launch information.
+ </p>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/nextgen-resources-graphs.01.png">
+ </a>
+ <p class="rubric" id="graph-nodes">
+  Graph Nodes
+ </p>
+ <p>
+  The
+  Graph Nodes
+  setting shows Graph Node information for each CUDA Graph launch.
+ </p>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/nextgen-resources-graph-nodes.01.png">
+ </a>
+ <p class="rubric" id="compiled-graphs">
+  Compiled Graphs
+ </p>
+ <p>
+  The
+  Compiled Graphs
+  setting shows information on compiled CUDA Graphs launches.
+ </p>
+ <p class="rubric" id="compiled-graph-nodes">
+  Compiled Graph Nodes
+ </p>
+ <p>
+  The
+  Compiled Graphs Nodes
+  setting shows Graph Node information for each Compiled CUDA Graph launch.
+ </p>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/nextgen-resources-compiled-graph-nodes.01.png">
+ </a>
+ <p class="rubric" id="graph-instances">
+  Graph Instances
+ </p>
+ <p>
+  The Graph Instances setting shows information on each CUDA Graph instance.
+ </p>
+ <h4>
+  Registers
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#registers" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The
+  Registers
+  view shows the current state of the GPU registers. If a value has been changed since the last execution break, the register and its value will appear red.
+ </p>
+ <p>
+  This view is broken into 5 sections:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    SASS
+    â This section shows the shader assembly code registers.
+   </p>
+  </li>
+  <li>
+   <p>
+    Predicate
+    â These registers show the current predication state for the current thread.
+   </p>
+  </li>
+  <li>
+   <p>
+    Condition Codes
+    â Logical condition codes base on the last executed instruction.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX
+    â Shows PTX registers.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX loc
+    â Shows in-scope GPU PTX registers.
+   </p>
+   <p>
+    NOTE:
+    Condition Code registers are not available on Volta family GPUs or later.
+   </p>
+  </li>
+ </ol>
+ <p>
+  You can right-click on the Registers view to configure the view, or to copy the contents to the clipboard.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  To use a SASS register in the variable Watch Window or in a conditional breakpoint, specify the register a capital
+  <span class="pre">
+   R
+  </span>
+  , and the decimal (not hex) register number. For example:
+  <span class="pre">
+   R9
+  </span>
+  or
+  <span class="pre">
+   R10
+  </span>
+  .
+ </p>
+ <p>
+  In the Next-Gen CUDA Debugger, you may also preface with a
+  <span class="pre">
+   $
+  </span>
+  to differentiate SASS registers from variables with equivalent names. For example:
+  <span class="pre">
+   $R9
+  </span>
+  or
+  <span class="pre">
+   $R10
+  </span>
+  .
+ </p>
+ <p>
+  You may also hover over a SASS register in the disassembly view to get a tool tip providing the register value.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  PTX registers and variables may be used in the Watch Window, by prefixing the register or variable with
+  <span class="pre">
+   %
+  </span>
+  symbols. For example:
+  <span class="pre">
+   %R17
+  </span>
+  . Currently, you cannot use PTX registers for conditional breakpoints.
+ </p>
+ <p>
+  Note that sometimes PTX registers may span SASS register pairs, as indicated by the following format:
+ </p>
+ <pre>&lt;PTX register double&gt; = &lt;SASS register&gt;,SASS register&gt;)
+</pre>
+ <p>
+  for example
+ </p>
+ <pre>%rd3 = R6,R7
+</pre>
+ <p>
+  If the application is not built with the nvcc flag to generate symbolics information for CUDA kernels, (
+  <span class="pre">
+   âG
+  </span>
+  ), the PTX registers will be blank.|
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  If debugging on a Turing (compute capability 7.5) or later GPU, you will also be able to Hide/Show âUniformâ and âUniform Predicateâ registers.
+ </p>
+ <p>
+  Note: To use a Uniform or âUniform Predicateâ register in the variable Watch Window or in a conditional breakpoint, specify the register a capital
+  <span class="pre">
+   UR
+  </span>
+  or
+  <span class="pre">
+   UP
+  </span>
+  , and the decimal (not hex) register number. For example:
+  <span class="pre">
+   UP9
+  </span>
+  or
+  <span class="pre">
+   UR10
+  </span>
+  .
+ </p>
+ <p>
+  In the Next-Gen CUDA Debugger, you may also preface with a
+  <span class="pre">
+   $
+  </span>
+  to differentiate Uniform registers from variables with equivalent names. For example:
+  <span class="pre">
+   $UP9
+  </span>
+  or
+  <span class="pre">
+   $UR10
+  </span>
+  .
+ </p>
+ <p>
+  For more information, see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#ptx-sass-assembly-debugging">
+   Visual Studio debugger registers view
+  </a>
+  .
+ </p>
+ <h2>
+  CUDA Warp Watch
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-warp-watch" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  As of NVIDIA Nsight Visual Studio Edition 2020.1, this feature is supported by both the Next-Gen and Legacy CUDA Debuggers.
+ </p>
+ <p>
+  Visual Studioâs local and global variable tool windows only support viewing a variable in a single thread at a time. The NVIDIA Nsightâ¢ VSE CUDA Debuggers use the current focus thread and stack frame to evaluate these expressions.
+ </p>
+ <p>
+  The Legacy Debuggerâs CUDA Warp Watch tool window shows information about evaluated expressions of a single focused warp.
+ </p>
+ <p class="rubric" id="to-use-the-cuda-debugger-warp-watch-feature">
+  To Use the CUDA Debugger Warp Watch Feature:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Begin debugging your project in Visual Studio.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      In Visual Studio, open a CUDA-based project.
+     </p>
+    </li>
+    <li>
+     <p>
+      Define at least one breakpoint.
+     </p>
+    </li>
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , choose
+      Start CUDA Debugging (Legacy or Next-Gen)
+      .
+     </p>
+     <p>
+      Alternately, this debugging session may be started by:
+     </p>
+     <ul class="simple">
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and select the
+        Debug
+        submenu.
+       </p>
+      </li>
+      <li>
+       <p>
+        Click on the associated icon in the
+        Nsight CUDAÂ Debug toolbar
+        .
+       </p>
+      </li>
+      <li>
+       <p>
+        Select the associated item in the
+        Nsight Connections
+        drop-down list.
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    Your application starts, and the CUDA Legacy Debugger launches.
+   </p>
+   <p>
+    Pause execution, allow the application to run to a breakpoint, or set a breakpoint if none were enabled.
+   </p>
+  </li>
+  <li>
+   <p>
+    From the
+    Nsight
+    menu, choose
+    Windows
+    &gt;
+    CUDA Warp Watch
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Select the appropriate warp watch window.
+   </p>
+  </li>
+ </ol>
+ <ol class="arabic">
+  <li>
+   <p>
+    After selecting, you will be presented with a Warp Watch window, in which users can add their own expressions to watch.
+   </p>
+   <p>
+    Expressions will be evaluated when the CUDA Debugger stops in a kernel by hitting a breakpoint or exception (for example, from the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#memory-checker">
+     CUDA memory checker
+    </a>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    The expressions can be edited from the
+    Warp Watch
+    context menu, by right-clicking on the tool window.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This context menu is not provided by the Next-Gen CUDA Debugger.
+ </p>
+ <p>
+  The features shown here include the following:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Add Watch
+    â Adds a new expression to the Watch window. (You can use F2 to edit the expression in the current column.)
+   </p>
+  </li>
+  <li>
+   <p>
+    Copy column
+    â This will copy elements to the clipboard so they may be pasted into another document (e.g., a spreadsheet).
+   </p>
+  </li>
+  <li>
+   <p>
+    Delete Watch / Clear All
+    â Deletes the current expression, or deletes all expressions that have been entered.
+   </p>
+  </li>
+  <li>
+   <p>
+    Hexadecimal Display
+    â This menu item controls the Visual Studio global hexadecimal display setting. It is the same setting used in the Visual Studio watch, locals, and autos windows.
+   </p>
+  </li>
+ </ul>
+ <ol class="arabic">
+  <li>
+   <p>
+    The CUDA focus can be changed via one of the following four tool windows:
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      CUDA Focus Picker
+     </p>
+    </li>
+    <li>
+     <p>
+      CUDA Info Pages
+     </p>
+    </li>
+    <li>
+     <p>
+      The Next / Previous warp commands
+     </p>
+    </li>
+    <li>
+     <p>
+      A suspend event
+     </p>
+    </li>
+   </ul>
+   <p>
+    The view updates when the current CUDA focus changes, and always shows the warp that contains the current focus thread.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  Example Scenarios
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#example-scenarios" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p class="rubric" id="example-diverged-warp-watch">
+  Example: Diverged Warp Watch
+ </p>
+ <p>
+  In this scenario, the lane is at a different PC than the focus lane. Lanes diverged from focus have a gray background.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Note this is NOT the same as inactive lanes. You can change to an inactive lane, and the other lanes will show diverged.
+ </p>
+ <p>
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/graphics/cuda_warp_watch.001.png">
+  </a>
+  Example 1.
+  An example of a successful evaluation, diverged at lane 16. In this figure, the focus is lane 16.
+ </p>
+ <p>
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/graphics/cuda_warp_watch.002.png">
+  </a>
+  Example 2.
+  Changing to a different focus shows the other lanes as diverged from focus. (This is represented by reversing the white and gray backgrounds.)Â In this instance, the lane was changed to 0, so lanes 16-31 are now gray; the PC is at line 54.
+ </p>
+ <p>
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/graphics/cuda_warp_watch.004.png">
+  </a>
+  Example 3.
+  Here, you can see that it is possible to have a variable that is valid in some lanes, but not in others.
+ </p>
+ <p class="rubric" id="example-error-types">
+  Example: Error Types
+ </p>
+ <p>
+  Errors can occur for various reasons within the warp watch. For example:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    A lane may be at a different PC; hence the evaluation scope of a given expression could be different.
+   </p>
+  </li>
+  <li>
+   <p>
+    A shadow variable could be a different type than the focus lane.
+   </p>
+  </li>
+ </ul>
+ <p>
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/graphics/cuda_warp_watch_error.001.png">
+  </a>
+  Example 4.
+  This illustrates a shadow variable error. Here, the focus variableâs type is
+  <span class="pre">
+   float
+  </span>
+  , but it is shadowing an
+  <span class="pre">
+   int
+  </span>
+  .
+ </p>
+ <p>
+  Another common cause for error is when the lane has diverged from the focus lane and is in a different stack frame. The CUDA Warp Watch feature does not evaluate in other stack frames.
+ </p>
+ <p>
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/graphics/cuda_warp_watch_stackframe.001.png">
+  </a>
+  Example 5.
+  This illustrates a stack frame error. Here, the frame âSubFrameâ does not exist in the even lanes, hence it cannot evaluate.
+ </p>
+ <h2>
+  GPU Core Dump Files
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#gpu-core-dump-files" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Note: The Legacy CUDA Debugger does not support debugging with OptiX application core dumps.
+ </p>
+ <p>
+  See
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+   Restrictions When Debugging and Profiling OptiX Applications
+  </a>
+  :
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+     Legacy CUDAÂ Debugger
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+     Next-Gen CUDA Debugger &gt; Core Dumps
+    </a>
+   </p>
+  </li>
+ </ul>
+ <p>
+  NVIDIA Nsightâ¢ VSE supports debugging CUDA GPU core dumps. To use this feature, there are 3 requirements:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    The system environment variable
+    <span class="pre">
+     CUDA_ENABLE_COREDUMP_ON_EXCEPTION=1
+    </span>
+    needs to be set.
+   </p>
+  </li>
+  <li>
+   <p>
+    Generate GPU debug information needs to be enabled in the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html#cuda-properties-config">
+     CUDA Project Properties
+    </a>
+    , and the application needs to be compiled with
+    <span class="pre">
+     -G
+    </span>
+    in the command line arguments.
+   </p>
+  </li>
+  <li>
+   <p>
+    The specified GPU CUDA Debugger supports the GPU architecture on which the core dump was generated.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      Legacy CUDA Debugger
+      supports Maxwell GPUs, noting that generating a coredump on Maxwell devices is not supported in the WDDM or MCDM driver modes.
+     </p>
+    </li>
+    <li>
+     <p>
+      Next-Gen CUDA Debugger
+      supports Pascal and later GPUs.
+     </p>
+    </li>
+   </ol>
+  </li>
+ </ol>
+ <p>
+  The GPU core dump will be generated as a
+  <span class="pre">
+   *.nvcudmp
+  </span>
+  file in the current directory. In Visual Studio, the current directory is set via the project setting: Project Properties &gt; Debugging &gt; Working Directory. Using
+  <span class="pre">
+   $(OutDir)
+  </span>
+  will specify the application exectuable directory. Note that the application could also change the working directory. If you are not using
+  <span class="pre">
+   NSIGHT_CUDA_DEBUGGER=1
+  </span>
+  to make a process CUDA-attachable, you can specify a different location and name of the
+  <span class="pre">
+   .nvcudmp
+  </span>
+  file using the
+  <span class="pre">
+   CUDA_COREDUMP_FILE
+  </span>
+  environment variable, optionally using these format specifiers:
+  <span class="pre">
+   %p
+  </span>
+  (PID) ;
+  <span class="pre">
+   %h
+  </span>
+  (hostname) ;
+  <span class="pre">
+   %t
+  </span>
+  (timestamp).
+ </p>
+ <p>
+  You can open this generated file (or a core dump file that was previously generated) in Visual Studio, either from the
+  File
+  &gt;
+  Open
+  menu, or by dragging and dropping it into Visual Studio.
+ </p>
+ <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/cuda_gpu_core_dump.003.png">
+ </a>
+ <p>
+  This shows you a read-only view of raw information in three collapsible sections: a dump summary, registers, and visible CUDA devices.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  At this time, NVIDIA Nsightâ¢ VSE only supports GPU core dumps; any generated CPU core dump information will be ignored.
+ </p>
+ <p>
+  From this summary view, you can launch either of the following:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The Next-Gen CUDA Debugger for core dump files generated on Pascal or later GPUs.
+   </p>
+  </li>
+  <li>
+   <p>
+    The Legacy CUDA Debugger for core dump files generated on Pascal or earlier GPUs.
+   </p>
+  </li>
+ </ul>
+ <p>
+  The appropriate CUDA debugger needs to be launched with the GPU core dump file set as the target application. Note that this will only work with a local debugging configuration, so the Nsight Monitor will have to be running on the local machine. This will allow you to view CUDA debugging information, which can provide more diagnostic details, such as:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The exception that caused a fatal error.
+   </p>
+  </li>
+  <li>
+   <p>
+    A list of devices and their info, such as ID, Name, Description, SM, Number of SMs, Number of Warps, Number of Lanes.
+   </p>
+  </li>
+  <li>
+   <p>
+    The address of the PC.
+   </p>
+  </li>
+  <li>
+   <p>
+    A list of registers and their values.
+   </p>
+  </li>
+  <li>
+   <p>
+    Which device, grid, block, warp, and thread the exception hit.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric-h1 rubric">
+  Notices
+ </p>
+ <p class="rubric-h2 rubric">
+  Notice
+ </p>
+ <p>
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+ </p>
+ <p>
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems without express written approval of NVIDIA Corporation.
+ </p>
+ <p class="rubric-h2 rubric">
+  Trademarks
+ </p>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jun 03, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

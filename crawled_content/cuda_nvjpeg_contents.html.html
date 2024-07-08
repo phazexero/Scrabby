@@ -1,0 +1,883 @@
+<html><head><title>Contents â nvJPEG 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/nvjpeg/contents.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html">
+    1. Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-decoding">
+    2. JPEG Decoding
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-encoding">
+    3. JPEG Encoding
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-transcoding">
+    4. JPEG Transcoding
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#list-of-dropped-apis">
+    5. List of Dropped APIs
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#known-issues">
+    6. Known Issues
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#notices">
+    7. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/nvjpeg/contents.html">
+  nvJPEG
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Contents
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/nvJPEG.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Contents
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvjpeg/contents.html#contents" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html">
+    1. Introduction
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-decoder">
+      1.1. nvJPEG Decoder
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-encoder">
+      1.2. nvJPEG Encoder
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#thread-safety">
+      1.3. Thread Safety
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#multi-gpu-support">
+      1.4. Multi-GPU support
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#hardware-acceleration">
+      1.5. Hardware Acceleration
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-decoding">
+    2. JPEG Decoding
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#using-jpeg-decoding">
+      2.1. Using JPEG Decoding
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#single-image-decoding">
+        2.1.1. Single Image Decoding
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#decode-using-decoupled-phases">
+        2.1.2. Decode using Decoupled Phases
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#batched-image-decoding">
+        2.1.3. Batched Image Decoding
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#single-phase">
+          2.1.3.1. Single Phase
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-type-declarations">
+      2.2. nvJPEG Type Declarations
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-backend">
+        2.2.1. nvJPEG Backend
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-bitstream-handle">
+        2.2.2. nvJPEG Bitstream Handle
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-decode-device-buffer-handle">
+        2.2.3. nvJPEG Decode Device Buffer Handle
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-decode-parameter-handle">
+        2.2.4. nvJPEG Decode Parameter Handle
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-decode-pinned-buffer-handle">
+        2.2.5. nvJPEG Decode Pinned Buffer Handle
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-decoder-handle">
+        2.2.6. nvJPEG Decoder Handle
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-host-pinned-memory-allocator-interface">
+        2.2.7. nvJPEG Host Pinned Memory Allocator Interface
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-extended-host-pinned-memory-allocator-interface">
+        2.2.8. nvJPEG Extended Host Pinned Memory Allocator Interface
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-image">
+        2.2.9. nvJPEG Image
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-device-memory-allocator-interface">
+        2.2.10. nvJPEG Device Memory Allocator Interface
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-extended-device-memory-allocator-interface">
+        2.2.11. nvJPEG Extended Device Memory Allocator Interface
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-opaque-jpeg-decoding-state-handle">
+        2.2.12. nvJPEG Opaque JPEG Decoding State Handle
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-opaque-library-handle-struct">
+        2.2.13. nvJPEG Opaque Library Handle Struct
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-output-pointer-struct">
+        2.2.14. nvJPEG Output Pointer Struct
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-jpeg-encoding">
+        2.2.15. nvJPEG Jpeg Encoding
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-scale-factor">
+        2.2.16. nvJPEG Scale Factor
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-flags">
+        2.2.17. nvJPEG Flags
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-exif-orientation">
+        2.2.18. nvJPEG Exif Orientation
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-api-reference">
+      2.3. nvJPEG API Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-helper-api-reference">
+        2.3.1. nvJPEG Helper API Reference
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeggetproperty">
+          2.3.1.1. nvjpegGetProperty()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeggetcudartproperty">
+          2.3.1.2. nvjpegGetCudartProperty()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegcreate-deprecated">
+          2.3.1.3. nvjpegCreate() [DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegcreatesimple">
+          2.3.1.4. nvjpegCreateSimple()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegcreateex">
+          2.3.1.5. nvjpegCreateEx()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegcreateexv2">
+          2.3.1.6. nvjpegCreateExV2()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdestroy">
+          2.3.1.7. nvjpegDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegsetdevicememorypadding">
+          2.3.1.8. nvjpegSetDeviceMemoryPadding()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeggetdevicememorypadding">
+          2.3.1.9. nvjpegGetDeviceMemoryPadding()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegsetpinnedmemorypadding">
+          2.3.1.10. nvjpegSetPinnedMemoryPadding()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeggetpinnedmemorypadding">
+          2.3.1.11. nvjpegGetPinnedMemoryPadding()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeggethardwaredecoderinfo">
+          2.3.1.12. nvjpegGetHardwareDecoderInfo()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstatecreate">
+          2.3.1.13. nvjpegJpegStateCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstatedestroy">
+          2.3.1.14. nvjpegJpegStateDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodercreate">
+          2.3.1.15. nvjpegDecoderCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecoderdestroy">
+          2.3.1.16. nvjpegDecoderDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecoderjpegsupported">
+          2.3.1.17. nvjpegDecoderJpegSupported()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecoderstatecreate">
+          2.3.1.18. nvjpegDecoderStateCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamcreate">
+          2.3.1.19. nvjpegJpegStreamCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamdestroy">
+          2.3.1.20. nvjpegJpegStreamDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferpinnedcreate">
+          2.3.1.21. nvjpegBufferPinnedCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferpinnedcreatev2">
+          2.3.1.22. nvjpegBufferPinnedCreateV2()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferpinneddestroy">
+          2.3.1.23. nvjpegBufferPinnedDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegstateattachpinnedbuffer">
+          2.3.1.24. nvjpegStateAttachPinnedBuffer()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferpinnedretrieve">
+          2.3.1.25. nvjpegBufferPinnedRetrieve()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferpinnedresize">
+          2.3.1.26. nvjpegBufferPinnedResize()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferdevicecreate">
+          2.3.1.27. nvjpegBufferDeviceCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferdevicecreatev2">
+          2.3.1.28. nvjpegBufferDeviceCreateV2()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferdevicedestroy">
+          2.3.1.29. nvjpegBufferDeviceDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegstateattachdevicebuffer">
+          2.3.1.30. nvjpegStateAttachDeviceBuffer()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferdeviceretrieve">
+          2.3.1.31. nvjpegBufferDeviceRetrieve()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegbufferdeviceresize">
+          2.3.1.32. nvjpegBufferDeviceResize()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamscreate">
+          2.3.1.33. nvjpegDecodeParamsCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamsdestroy">
+          2.3.1.34. nvjpegDecodeParamsDestroy()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#retrieve-encoded-image-information-api">
+        2.3.2. Retrieve Encoded Image Information API
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeggetimageinfo">
+          2.3.2.1. nvjpegGetImageInfo()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-stream-api">
+          2.3.2.2. nvJPEG Stream API
+         </a>
+         <ul>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamparse">
+            2.3.2.2.1. nvjpegJpegStreamParse()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamparseheader">
+            2.3.2.2.2. nvjpegJpegStreamParseHeader()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamparsetables">
+            2.3.2.2.3. nvjpegJpegStreamParseTables()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetframedimensions">
+            2.3.2.2.4. nvjpegJpegStreamGetFrameDimensions()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetcomponentsnum">
+            2.3.2.2.5. nvjpegJpegStreamGetComponentsNum()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetcomponentdimensions">
+            2.3.2.2.6. nvjpegJpegStreamGetComponentDimensions()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetchromasubsampling">
+            2.3.2.2.7. nvjpegJpegStreamGetChromaSubsampling()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetjpegencoding">
+            2.3.2.2.8. nvjpegJpegStreamGetJpegEncoding()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetexiforientation">
+            2.3.2.2.9. nvjpegJpegStreamGetExifOrientation()
+           </a>
+          </li>
+          <li class="toctree-l5">
+           <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegjpegstreamgetsampleprecision">
+            2.3.2.2.10. nvjpegJpegStreamGetSamplePrecision()
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#decode-apisingle-phase">
+        2.3.3. Decode APIâSingle Phase
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecode">
+          2.3.3.1. ânvjpegDecode()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatchedinitialize">
+          2.3.3.2. ânvjpegDecodeBatchedInitialize()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatched">
+          2.3.3.3. ânvjpegDecodeBatched()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatchedex">
+          2.3.3.4. nvjpegDecodeBatchedEx()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatchedsupported">
+          2.3.3.5. nvjpegDecodeBatchedSupported()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatchedsupportedex">
+          2.3.3.6. nvjpegDecodeBatchedSupportedEx()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatchedpreallocate">
+          2.3.3.7. nvjpegDecodeBatchedPreAllocate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodebatchedparsejpegtables">
+          2.3.3.8. nvjpegDecodeBatchedParseJpegTables()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#decode-apidecoupled-decoding">
+        2.3.4. Decode APIâDecoupled Decoding
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodejpeghost">
+          2.3.4.1. nvjpegDecodeJpegHost()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodejpegtransfertodevice">
+          2.3.4.2. nvjpegDecodeJpegTransferToDevice()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodejpegdevice">
+          2.3.4.3. nvjpegDecodeJpegDevice()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodejpeg">
+          2.3.4.4. nvjpegDecodeJpeg()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-decode-parameters">
+        2.3.5. nvJPEG Decode Parameters
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamssetoutputformat">
+          2.3.5.1. nvjpegDecodeParamsSetOutputFormat()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamssetroi">
+          2.3.5.2. nvjpegDecodeParamsSetROI()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamssetallowcmyk">
+          2.3.5.3. nvjpegDecodeParamsSetAllowCMYK()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamssetscalefactor">
+          2.3.5.4. nvjpegDecodeParamsSetScaleFactor()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegdecodeparamssetexiforientation">
+          2.3.5.5. nvjpegDecodeParamsSetExifOrientation()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-api-return-codes">
+        2.3.6. nvJPEG API Return Codes
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-chroma-subsampling">
+        2.3.7. nvJPEG Chroma Subsampling
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#reference-documents">
+        2.3.8. Reference Documents
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#examples-of-nvjpeg">
+      2.4. Examples of nvJPEG
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-encoding">
+    3. JPEG Encoding
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#using-the-encoder">
+      3.1. Using the Encoder
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#encoding-the-parameters">
+        3.1.1. Encoding the Parameters
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#encoding-the-state">
+        3.1.2. Encoding the State
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#encoding-the-image">
+        3.1.3. Encoding the Image
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencodeyuv">
+          3.1.3.1. nvjpegEncodeYUV
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencodeimage">
+          3.1.3.2. nvjpegEncodeImage
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#retrieving-the-compressed-stream">
+        3.1.4. Retrieving the Compressed Stream
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-encoding-example">
+        3.1.5. JPEG Encoding Example
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-encoder-type-declarations">
+      3.2. nvJPEG Encoder Type Declarations
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeginputformat-t">
+        3.2.1. nvjpegInputFormat_t
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderstate-t">
+        3.2.2. nvjpegEncoderState_t
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparams-t">
+        3.2.3. nvjpegEncoderParams_t
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-encoder-helper-api-reference">
+      3.3. nvJPEG Encoder Helper API Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderstatecreate">
+        3.3.1. nvjpegEncoderStateCreate()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderstatedestroy">
+        3.3.2. nvjpegEncoderStateDestroy()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamscreate">
+        3.3.3. nvjpegEncoderParamsCreate()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamsdestroy">
+        3.3.4. nvjpegEncoderParamsDestroy()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamssetencoding">
+        3.3.5. nvjpegEncoderParamsSetEncoding()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamssetquality">
+        3.3.6. nvjpegEncoderParamsSetQuality()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamssetoptimizedhuffman">
+        3.3.7. nvjpegEncoderParamsSetOptimizedHuffman()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamssetsamplingfactors">
+        3.3.8. nvjpegEncoderParamsSetSamplingFactors()
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-encoder-api-reference">
+      3.4. nvJPEG Encoder API Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencodegetbuffersize">
+        3.4.1. nvjpegEncodeGetBufferSize()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#id1">
+        3.4.2. nvjpegEncodeYUV()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#id2">
+        3.4.3. nvjpegEncodeImage()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderetrievebitstream">
+        3.4.4. nvjpegEncodeRetrieveBitstream()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderetrievebitstreamdevice">
+        3.4.5. nvjpegEncodeRetrieveBitstreamDevice()
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-transcoding">
+    4. JPEG Transcoding
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpeg-transcoder-helper-api-reference">
+      4.1. nvJPEG Transcoder Helper API Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamscopymetadata">
+        4.1.1. nvjpegEncoderParamsCopyMetadata()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamscopyquantizationtables">
+        4.1.2. nvjpegEncoderParamsCopyQuantizationTables()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#nvjpegencoderparamscopyhuffmantables-deprecated">
+        4.1.3. nvjpegEncoderParamsCopyHuffmanTables() [Deprecated]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#jpeg-transcoding-example">
+      4.2. JPEG Transcoding Example
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#list-of-dropped-apis">
+    5. List of Dropped APIs
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#known-issues">
+    6. Known Issues
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#notices">
+    7. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#notice">
+      7.1. Notice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#opencl">
+      7.2. OpenCL
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvjpeg/index.html#trademarks">
+      7.3. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2018-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jun 20, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

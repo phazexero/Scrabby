@@ -1,0 +1,3242 @@
+<html><head><title>Image Memory Management Functions â npp 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+ </a>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Contents:
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html">
+    What is NPP ?
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#general-conventions">
+    General Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#image-processing-conventions">
+    Image Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#signal-processing-conventions">
+    Signal Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html">
+    Data Types, Structs, Enums, and Constants
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_arithmetic_and_logical_operations.html">
+    Image Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_color_conversion.html">
+    Image Color Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_data_exchange_and_initialization.html">
+    Image Data Exchange And Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_filtering_functions.html">
+    Image Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_geometry_transforms.html">
+    Image Geometry Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_linear_transforms.html">
+    Image Linear Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_morphological_operations.html">
+    Image Morphological Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_statistics_functions.html">
+    Image Statistics Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_threshold_and_compare_operations.html">
+    Image Threshold And Compare Operations
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html">
+    Image Memory Management Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_arithmetic_and_logical_operations.html">
+    Signal Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_conversion_functions.html">
+    Signal Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html">
+    Signal Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_initialization.html">
+    Signal Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_statistical_functions.html">
+    Signal Statistical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html">
+    Signal Memory Management Functions
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+  npp
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Image Memory Management Functions
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v23.05 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/NPP_Library.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Image Memory Management Functions
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#image-memory-management-functions" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p id="group__image__memory__management">
+  Routines for allocating and deallocating pitched image storage.
+ </p>
+ <p>
+  These methods are provided for convenience. They allocate memory that may contain additional padding bytes at the end of each line of pixels. Though padding is not necessary for any of the NPP image-processing primitives to work correctly, its absense may cause sever performance degradation compared to properly padded images.
+ </p>
+ <p>
+  These functions can be found in the nppisu library. Linking to only the sub-libraries that you use can significantly save link time, application load time, and CUDA runtime startup time when using dynamic libraries.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-image-memory-allocation">
+  Image Memory Allocation
+ </p>
+ <p>
+  ImageAllocator methods for 2D arrays of data.
+ </p>
+ <p>
+  The allocators have width and height parameters to specify the size of the image data being allocated. They return a pointer to the newly created memory and return the numbers of bytes between successive lines.
+ </p>
+ <p>
+  If the memory allocation failed due to lack of free device memory or device memory fragmentation the routine returns 0.
+ </p>
+ <p>
+  All allocators return memory with line strides that are beneficial for performance. It is not mandatory to use these allocators. Any valid CUDA device-memory pointers can be used by the NPP primitives and there are no restrictions on line strides.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_8u_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_8u_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_8u_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_8u_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 8-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_8u_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_8u_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 8-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_8u_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_8u_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 8-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16u_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16u_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16u_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16u_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 16-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16u_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16u_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 16-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16u_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16u_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 16-bit unsigned image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Npp16s">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16s_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16s_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit signed image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Npp16s">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16s_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16s_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 16-bit signed image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Npp16s">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16s_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16s_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 16-bit signed image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc" title="Npp16sc">
+  <span class="n">
+   <span class="pre">
+    Npp16sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16sc_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16sc_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  1 channel 16-bit signed complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc" title="Npp16sc">
+  <span class="n">
+   <span class="pre">
+    Npp16sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16sc_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16sc_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 16-bit signed complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc" title="Npp16sc">
+  <span class="n">
+   <span class="pre">
+    Npp16sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16sc_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16sc_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 16-bit signed complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc" title="Npp16sc">
+  <span class="n">
+   <span class="pre">
+    Npp16sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_16sc_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_16sc_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 16-bit signed complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32s_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32s_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit signed image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32s_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32s_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 32-bit signed image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32s_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32s_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 32-bit signed image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc" title="Npp32sc">
+  <span class="n">
+   <span class="pre">
+    Npp32sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32sc_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32sc_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit integer complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc" title="Npp32sc">
+  <span class="n">
+   <span class="pre">
+    Npp32sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32sc_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32sc_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 32-bit integer complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc" title="Npp32sc">
+  <span class="n">
+   <span class="pre">
+    Npp32sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32sc_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32sc_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 32-bit integer complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc" title="Npp32sc">
+  <span class="n">
+   <span class="pre">
+    Npp32sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32sc_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32sc_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 32-bit integer complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32f_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32f_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit floating point image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32f_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32f_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 32-bit floating point image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32f_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32f_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 32-bit floating point image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32f_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32f_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 32-bit floating point image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc" title="Npp32fc">
+  <span class="n">
+   <span class="pre">
+    Npp32fc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32fc_C1
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32fc_C1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit float complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc" title="Npp32fc">
+  <span class="n">
+   <span class="pre">
+    Npp32fc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32fc_C2
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32fc_C2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2 channel 32-bit float complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc" title="Npp32fc">
+  <span class="n">
+   <span class="pre">
+    Npp32fc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32fc_C3
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32fc_C3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 channel 32-bit float complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc" title="Npp32fc">
+  <span class="n">
+   <span class="pre">
+    Npp32fc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiMalloc_32fc_C4
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nWidthPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nHeightPixels
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pStepBytes
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiMalloc_32fc_C4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  4 channel 32-bit float complex image memory allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nWidthPixels
+    â Image width.
+   </p>
+  </li>
+  <li>
+   <p>
+    nHeightPixels
+    â Image height.
+   </p>
+  </li>
+  <li>
+   <p>
+    pStepBytes
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#nppi_conventions_lb_1line_step">
+     <span class="std std-ref">
+      Line Step
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  Pointer to new image data.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-functions">
+  Functions
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiFree
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pData
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html#c.nppiFree" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Free method for any 2D allocated memory.
+ </p>
+ <p>
+  This method should be used to free memory allocated with any of the nppiMalloc_&lt;modifier&gt; methods.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    pData
+    â A pointer to memory allocated using nppiMalloc_&lt;modifier&gt;.
+   </p>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2009-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

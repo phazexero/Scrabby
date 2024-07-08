@@ -1,0 +1,1283 @@
+<html><head><title>Installation Guide — nsight-systems 2024.4 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-systems/index.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html">
+    Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html">
+    Installation Guide
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#overview">
+      Overview
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#system-requirements">
+      System Requirements
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#supported-platforms">
+        Supported Platforms
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#cuda-version">
+        CUDA Version
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#requirements-for-x86-64-and-arm-sbsa-targets-on-linux">
+        Requirements for x86_64 and Arm SBSA Targets on Linux
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#x86-64-windows-target-device-requirements">
+        x86_64 Windows Target Device Requirements
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#host-application-requirements">
+        Host Application Requirements
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#getting-started-guide">
+      Getting Started Guide
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#finding-the-right-package">
+        Finding the Right Package
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#package-manager-installation">
+        Package Manager Installation
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#installing-gui-on-the-host-system">
+        Installing GUI on the Host System
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#optional-setting-up-the-cli">
+        Optional: Setting up the CLI
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#launching-the-gui">
+        Launching the GUI
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#installing-multi-report-analysis-system">
+        Installing Multi Report Analysis System
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/UserGuide/index.html">
+    User Guide
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/CopyrightAndLicenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Archives
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-systems/Archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-systems/index.html">
+  nsight-systems
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/nsight-systems/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   Installation Guide
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.4 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/nsight-systems/Archives/index.html">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  Installation Guide
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#installation-guide" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  NVIDIA Nsight Systems installation guide.
+ </p>
+ <h2>
+  Overview
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#overview" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Nsight Systems is a statistical sampling profiler with tracing features. It is
+designed to work with devices and devkits based on NVIDIA Tegra SoCs
+(system-on-chip), Arm SBSA (server based system architecture) systems, and
+systems based on the x86_64 processor architecture that also include NVIDIA GPU(s).
+ </p>
+ <p>
+  Throughout this document we will refer to the device on which profiling happens
+as the
+  target
+  , and the computer on which the user works and controls the
+profiling session as the
+  host
+  . Note that for x86_64 based systems these may
+be on the same device, whereas with Tegra or Arm based systems they will always
+be separate.
+ </p>
+ <p>
+  Furthermore, three different activities are distinguished as follows:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Profiling
+    â The process of collecting any performance data. A profiling
+session in Nsight Systems typically includes sampling and tracing.
+   </p>
+  </li>
+  <li>
+   <p>
+    Sampling
+    â The process of periodically stopping the
+    profilee
+    (the
+application under investigation during the profiling session), typically to
+collect backtraces (call stacks of active threads), which allows you to
+understand statistically how much time is spent in each function.
+Additionally, hardware counters can also be sampled. This process is
+inherently imprecise when a low number of samples have been collected.
+   </p>
+  </li>
+  <li>
+   <p>
+    Tracing
+    â The process of collecting precise information about various
+activities happening in the profilee or in the system. For example, profilee
+API execution may be traced providing the exact time and duration of a
+function call.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Nsight Systems supports multiple generations of Tegra SoCs, NVIDIA discrete GPUs,
+and various CPU architectures, as well as various target and host operating
+systems. This documentation describes the full set of features available in any
+version of Nsight Systems. In the event that a feature is not available in all
+versions, that will be noted in the text. In general, Nsight Systems Embedded Platforms Edition indicates
+the package that supports Tegra processors for the embedded and automotive
+market and Nsight Systems Workstation Edition supports x86_64 and Arm server (SBSA) processors
+for the workstation, cluster, and cloud markets.
+ </p>
+ <p>
+  Common features that are supported by Nsight Systems on most platforms include
+the following:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Sampling of the profilee and collecting backtraces using multiple algorithms
+(such as frame pointers or DWARF data). Building top-down, bottom-up, and
+flat views as appropriate. This information helps identify performance
+bottlenecks in CPU-intensive code.
+   </p>
+  </li>
+  <li>
+   <p>
+    Sampling or tracing system power behaviors, such as CPU frequency.
+   </p>
+  </li>
+  <li>
+   <p>
+    (Only on Nsight Systems Embedded Platforms Edition)Sampling counters from Arm PMU (Performance Monitoring
+Unit). Information such as cache misses gets statistically correlated with
+function execution.
+   </p>
+  </li>
+  <li>
+   <p>
+    Support for multiple windows. Users with multiple monitors can see multiple
+reports simultaneously, or have multiple views into the same report file.
+   </p>
+  </li>
+ </ul>
+ <p>
+  With Nsight Systems, a user could:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Identify call paths that monopolize the CPU.
+   </p>
+  </li>
+  <li>
+   <p>
+    Identify individual functions that monopolize the CPU (across different call
+paths).
+   </p>
+  </li>
+  <li>
+   <p>
+    For Nsight Systems Embedded Platforms Edition, identify functions that have poor cache utilization.
+   </p>
+  </li>
+  <li>
+   <p>
+    If platform supports CUDA, see visual representation of CUDA Runtime and
+Driver API calls, as well as CUDA GPU workload. Nsight Systems uses the CUDA
+Profiling Tools Interface (CUPTI), for more information, see:
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cupti/index.html">
+     CUPTI
+documentation
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If the user annotates with NVIDIA Tools Extension (NVTX), see visual
+representation of NVTX annotations: ranges, markers, and thread names.
+   </p>
+  </li>
+  <li>
+   <p>
+    For Windows targets, see visual representation of D3D12: which API calls are
+being made on the CPU, graphic frames, stutter analysis, as well as GPU
+workloads (command lists and debug ranges).
+   </p>
+  </li>
+  <li>
+   <p>
+    For x86_64 targets, see visual representation of Vulkan: which API calls are
+being made on the CPU, graphic frames, stutter analysis, as well as Vulkan
+GPU workloads (command buffers and debug ranges).
+   </p>
+  </li>
+ </ul>
+ <h2>
+  System Requirements
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#system-requirements" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Nsight Systems supports multiple platforms. For simplicity, think of these as
+Nsight Systems Embedded Platforms Edition and Nsight Systems Workstation Edition, where Nsight Systems Workstation Edition supports desktops,
+workstations, clusters, and clouds with x86_64 or Arm SBSA CPUs on Linux and
+Windows OSs, while Nsight Systems Embedded Platforms Edition supports NVIDIA Tegra products for the embedded
+and gaming space on Linux for Tegra and QNX OSs.
+ </p>
+ <h3>
+  Supported Platforms
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#supported-platforms" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Depending on your OS, different GPUs are supported
+ </p>
+ <p>
+  L4T (Linux for Tegra)
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Jetson AGX Orin
+   </p>
+  </li>
+  <li>
+   <p>
+    Jetson AGX Xavier
+   </p>
+  </li>
+  <li>
+   <p>
+    Jetson TX2
+   </p>
+  </li>
+  <li>
+   <p>
+    Jetson TX2i
+   </p>
+  </li>
+  <li>
+   <p>
+    Jetson TX
+   </p>
+  </li>
+  <li>
+   <p>
+    Jetson Nano
+   </p>
+  </li>
+  <li>
+   <p>
+    Jetson Xavier NX
+   </p>
+  </li>
+ </ul>
+ <p>
+  x86_64 or Arm SBSA
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    NVIDIA GPU architectures starting with Pascal
+   </p>
+  </li>
+  <li>
+   <p>
+    OS (64 bit only)
+   </p>
+   <ul>
+    <li>
+     <p>
+      Ubuntu 20.04 and 22.04
+     </p>
+    </li>
+    <li>
+     <p>
+      CentOS 8.0 and RedHat Enterprise Linux 8+
+     </p>
+    </li>
+    <li>
+     <p>
+      Win Server 2022+
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  Networking Components
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    NVIDIA DPUs
+   </p>
+  </li>
+  <li>
+   <p>
+    NVIDIA SuperNICs
+   </p>
+  </li>
+ </ul>
+ <h3>
+  CUDA Version
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#cuda-version" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul class="simple">
+  <li>
+   <p>
+    Nsight Systems supports CUDA 10.0+ for most platforms
+   </p>
+  </li>
+  <li>
+   <p>
+    Nsight Systems on Arm SBSA supports 10.2+
+   </p>
+  </li>
+ </ul>
+ <p>
+  Note that CUDA version and driver version must be compatible.
+ </p>
+ <table class="table-no-stripes docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     CUDA Version
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Driver minimum version
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     11.0
+    </p>
+   </td>
+   <td>
+    <p>
+     450
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     10.2
+    </p>
+   </td>
+   <td>
+    <p>
+     440.30
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     10.1
+    </p>
+   </td>
+   <td>
+    <p>
+     418.39
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     10.0
+    </p>
+   </td>
+   <td>
+    <p>
+     410.48
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  From CUDA 11.X on, any driver from 450 on will be supported, although new
+features introduced in more recent drivers will not be available.
+ </p>
+ <p>
+  For information about which drivers were specifically released with each toolkit,
+see
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions">
+   CUDA Toolkit Release Notes - Major Component Versions
+  </a>
+ </p>
+ <h3>
+  Requirements for x86_64 and Arm SBSA Targets on Linux
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#requirements-for-x86-64-and-arm-sbsa-targets-on-linux" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When attaching to x86_64 or Arm SBSA Linux-based target from the GUI on the host,
+the connection is established through SSH.
+ </p>
+ <p>
+  Use of Linux Perf
+  : To collect thread scheduling data and IP (instruction
+pointer) samples, the Linux operating systemâs perf_event_paranoid level must be
+2 or less. Use the following command to check:
+ </p>
+ <pre>cat /proc/sys/kernel/perf_event_paranoid
+</pre>
+ <p>
+  If the output is &gt;2, then do the following to temporarily adjust the paranoid
+level (note that this has to be done after each reboot):
+ </p>
+ <pre>sudo sh -c 'echo 2 &gt;/proc/sys/kernel/perf_event_paranoid'
+</pre>
+ <p>
+  To make the change permanent, use the following command:
+ </p>
+ <pre>sudo sh -c 'echo kernel.perf_event_paranoid=2 &gt; /etc/sysctl.d/local.conf'
+</pre>
+ <p>
+  Kernel version
+  : To collect thread scheduling data and IP (instruction
+pointer) samples and backtraces, the kernel version must be:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    3.10.0-693 or later for CentOS and RedHat Enterprise Linux 7.4+
+   </p>
+  </li>
+  <li>
+   <p>
+    4.3 or greater for all other distros including Ubuntu
+   </p>
+  </li>
+ </ul>
+ <p>
+  To check the version number of the kernel on a target device, run the following
+command on the device:
+ </p>
+ <pre>uname -a
+</pre>
+ <p>
+  Note that only CentOS, RedHat, and Ubuntu distros are tested/confirmed to work
+correctly.
+ </p>
+ <p>
+  glibc version
+  : To check the glibc version on a target device, run the
+following command:
+ </p>
+ <pre>ldd --version
+</pre>
+ <p>
+  Nsight Systems requires glibc 2.17 or more recent.
+ </p>
+ <p>
+  CUDA
+  : See above for supported CUDA versions in this release. Use the
+deviceQuery command to determine the CUDA driver and runtime versions on the
+system. The deviceQuery command is available in the CUDA SDK. It is normally
+installed at:
+ </p>
+ <pre>/usr/local/cuda/samples/1_Utilities/deviceQuery
+</pre>
+ <p>
+  Only pure 64-bit environments are supported. In other words, 32-bit systems or
+32-bit processes running within a 64-bit environment are not supported.
+ </p>
+ <p>
+  Nsight Systems requires write permission to the
+  <span class="pre">
+   /var/lock
+  </span>
+  directory on the
+target system.
+ </p>
+ <p>
+  Docker
+  : See Container Support section of the User Guide for
+more information.
+ </p>
+ <h3>
+  x86_64 Windows Target Device Requirements
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#x86-64-windows-target-device-requirements" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  DX12 Requires
+  :
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Windows 10 with NVIDIA Driver 411.63 or higher for DX12 trace
+   </p>
+  </li>
+  <li>
+   <p>
+    Windows 10 April 2018 Update (version 1803, AKA Redstone 4) with NVIDIA
+Driver 411.63 or higher for DirectX Ray Tracing, and tracing DX12 Copy
+command queues.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  Host Application Requirements
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#host-application-requirements" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The Nsight Systems host application runs on the following host platforms:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Windows 10, Windows Server 2019. Only 64-bit versions are supported.
+   </p>
+  </li>
+  <li>
+   <p>
+    Linux Ubuntu 14.04 and higher are known to work, running on other modern distributions should be possible as well. Only 64-bit versions are supported.
+   </p>
+  </li>
+  <li>
+   <p>
+    OS X 10.10 âYosemiteâ and higher.
+   </p>
+  </li>
+ </ul>
+ <h2>
+  Getting Started Guide
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#getting-started-guide" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  Finding the Right Package
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#finding-the-right-package" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Nsight Systems is available for multiple targets and multiple host OSs. To
+choose the right package, first consider the target system to be analyzed.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    For Tegra target systems, select Nsight Systems Embedded Platforms Edition available as part of
+    <a class="reference external" href="https://developer.nvidia.com/embedded/jetpack">
+     NVIDIA JetPack SDK
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    For x86_64 or Arm SBSA select from the target packages from Nsight Systems Workstation Edition,
+available from
+    <a class="reference external" href="https://developer.nvidia.com/nsight-systems">
+     https://developer.nvidia.com/nsight-systems
+    </a>
+    . This web release
+will always contain the latest and greatest Nsight Systems features.
+   </p>
+  </li>
+  <li>
+   <p>
+    The x86_64 and Arm SBSA target versions of Nsight Systems are also available
+in the
+    <a class="reference external" href="https://developer.nvidia.com/cuda-downloads">
+     CUDA Toolkit.
+    </a>
+   </p>
+  </li>
+ </ul>
+ <p>
+  Each package is limited to one architecture. For example, Tegra packages do not
+contain support for profiling x86 targets, and x86 packages do not contain
+support for profiling Tegra targets.
+ </p>
+ <p>
+  After choosing an appropriate target version, select the package corresponding
+to the host OS, the OS on the system where results will be viewed. These
+packages are in the form of common installer types: .msi for Windows; .run,
+.rpm, and .deb for x86 Linux; and .dmg for the macOS installer.
+ </p>
+ <p>
+  Note: Arm SBSA package does not have a GUI for visualization of the result. If
+you wish to visualize your result, please download and install the GUI available
+for macOS, x86_64 Linux, or Windows systems.
+ </p>
+ <p>
+  Tegra packages
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Windows host - Install .msi on Windows machine. Enables remote access to
+Tegra device for profiling.
+   </p>
+  </li>
+  <li>
+   <p>
+    Linux host - Install .run on Linux system. Enables remote access to Tegra
+device for profiling.
+   </p>
+  </li>
+  <li>
+   <p>
+    macOS host - Install .dmg on macOS machine. Enables remote access to Tegra
+device for profiling.
+   </p>
+  </li>
+ </ul>
+ <p>
+  x86_64 packages
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Windows host - Install .msi on Windows machine. Enables remote access to
+Linux x86_64 or Windows devices for profiling as well as running on local system.
+   </p>
+  </li>
+  <li>
+   <p>
+    Linux host - Install .run, .rpm, or .deb on Linux system. Enables remote
+access to Linux x86_64 or Windows devices for profiling or running collection
+on localhost.
+   </p>
+  </li>
+  <li>
+   <p>
+    Linux CLI only - The Linux CLI is shipped in all x86 packages, but if you
+just want the CLI, we have a package for that. Install .deb on Linux system.
+Enables only CLI collection, report can be imported or opened in x86_64 host.
+   </p>
+  </li>
+  <li>
+   <p>
+    macOS host - Install .dmg on macOS machine. Enables remote access to Linux
+x86_64 device for profiling.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Arm SBSA packages
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Arm SBSA CLI only - Arm SBSA support does not include a host GUI. Install
+.deb or .rpm on your Arm SBSA system. Enables only CLI collection, report
+can be imported or opened in GUI on any supported host platform.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  Package Manager Installation
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#package-manager-installation" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Installation using RPM or Debian packages interfaces with your systemâs package
+management system. When using RPM or Debian local repo installers, the
+downloaded package contains a repository snapshot stored on the local
+filesystem in /var/. Such a package only informs the package manager where to
+find the actual installation packages, but will not install them.
+ </p>
+ <p>
+  If the online network repository is enabled, RPM or Debian packages will be
+automatically downloaded at installation time using the package manager:
+apt-get, dnf, yum, or zypper.
+ </p>
+ <p>
+  Users can download Nsight Systems (full package
+  nsight-systems
+  or CLI-only
+package
+  nsight-systems-cli
+  ) from publicly available repositories. The below
+commands are given as examples and are not intended to be precisely correct.
+ </p>
+ <p>
+  Ubuntu (minimal setup for containers)
+ </p>
+ <p>
+  These instructions assume that you have root in the container.  Example
+command to launch a container:
+  <span class="pre">
+   sudo
+  </span>
+  <span class="pre">
+   docker
+  </span>
+  <span class="pre">
+   run
+  </span>
+  <span class="pre">
+   -it
+  </span>
+  <span class="pre">
+   --rm
+  </span>
+  <span class="pre">
+   ubuntu:latest
+  </span>
+  <span class="pre">
+   bash
+  </span>
+ </p>
+ <pre>apt update
+apt install -y --no-install-recommends gnupg
+echo "deb http://developer.download.nvidia.com/devtools/repos/ubuntu$(source /etc/lsb-release; echo "$DISTRIB_RELEASE" | tr -d .)/$(dpkg --print-architecture) /" | tee /etc/apt/sources.list.d/nvidia-devtools.list
+apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+apt update
+apt install nsight-systems-cli
+</pre>
+ <p>
+  Ubuntu (desktop)
+ </p>
+ <pre>sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/devtools/repos/ubuntu$(source /etc/lsb-release; echo "$DISTRIB_RELEASE" | tr -d .)/$(dpkg --print-architecture)/ /"
+sudo apt install nsight-systems
+</pre>
+ <p>
+  CentOS and RHEL (minimal setup for containers)
+ </p>
+ <p>
+  Same as above for Ubuntu, these instructions assume that you have root in the
+container.  Example command to launch a container:
+  <span class="pre">
+   sudo
+  </span>
+  <span class="pre">
+   docker
+  </span>
+  <span class="pre">
+   run
+  </span>
+  <span class="pre">
+   -it
+  </span>
+  <span class="pre">
+   --rm
+  </span>
+  <span class="pre">
+   centos:latest
+  </span>
+  <span class="pre">
+   bash
+  </span>
+ </p>
+ <pre>rpm --import https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+dnf install -y 'dnf-command(config-manager)'
+dnf config-manager --add-repo "https://developer.download.nvidia.com/devtools/repos/rhel$(source /etc/os-release; echo $VERSION_ID)/$(rpm --eval '%{_arch}' | sed s/aarch/arm/)/"
+dnf install -y nsight-systems-cli
+</pre>
+ <p>
+  CentOS and RHEL (desktop)
+ </p>
+ <pre>sudo rpm --import https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo dnf install -y 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo "https://developer.download.nvidia.com/devtools/repos/rhel$(source /etc/os-release; echo $VERSION_ID)/$(rpm --eval '%{_arch}' | sed s/aarch/arm/)/"
+sudo dnf install nsight-systems
+</pre>
+ <h3>
+  Installing GUI on the Host System
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#installing-gui-on-the-host-system" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Copy the appropriate file to your host system in a directory where you have write and execute permissions. Run the install file, accept the EULA, and Nsight Systems will install on your system.
+ </p>
+ <p>
+  On Linux, there are special options to enable automated installation. Running the installer with the
+  <span class="pre">
+   --accept
+  </span>
+  flag will automatically accept the EULA, running with the
+  <span class="pre">
+   --accept
+  </span>
+  flag and the
+  <span class="pre">
+   --quiet
+  </span>
+  flag will automatically accept the EULA without printing to stdout. Running with
+  <span class="pre">
+   --quiet
+  </span>
+  without
+  <span class="pre">
+   --accept
+  </span>
+  will display an error.
+ </p>
+ <p>
+  The installation will create a Host directory for this host and a Target directory for each target this Nsight Systems package supports.
+ </p>
+ <p>
+  All binaries needed to collect data on a target device will be installed on the target by the host on first connection to the device. There is no need to install the package on the target device.
+ </p>
+ <p>
+  If installing from the CUDA Toolkit, see the
+  <a class="reference external" href="https://docs.nvidia.com/cuda/">
+   CUDA Toolkit documentation
+  </a>
+  .
+ </p>
+ <h3>
+  Optional: Setting up the CLI
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#optional-setting-up-the-cli" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  All Nsight Systems targets can be profiled using the CLI. Arm SBSA targets can
+only be profiled using the CLI. The CLI is especially helpful when scripts are
+used to run unattended collections or when access to the target system via ssh
+is not possible. In particular, this can be used to enable collection in a
+Docker container.
+ </p>
+ <p>
+  The CLI can be found in the Target directory of the Nsight Systems installation.
+Users who want to install the CLI as a standalone tool can do so by copying the
+files within the Target directory to the location of their choice.
+ </p>
+ <p>
+  If you wish to run the CLI without root (recommended mode) you will want to
+install in a directory where you have full access.
+ </p>
+ <p>
+  Once you have the CLI set up, you can use the
+  <span class="pre">
+   nsys
+  </span>
+  <span class="pre">
+   status
+  </span>
+  <span class="pre">
+   -e
+  </span>
+  command to
+check your environment.
+ </p>
+ <pre><span class="o">~</span><span class="n">$</span><span class="n">nsys</span><span class="n">status</span><span class="o">-</span><span class="n">e</span>
+
+<span class="n">Sampling</span><span class="n">Environment</span><span class="n">Check</span>
+<span class="n">Linux</span><span class="n">Kernel</span><span class="n">Paranoid</span><span class="n">Level</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="n">OK</span>
+<span class="n">Linux</span><span class="n">Distribution</span><span class="o">=</span><span class="n">Ubuntu</span>
+<span class="n">Linux</span><span class="n">Kernel</span><span class="n">Version</span><span class="o">=</span><span class="mf">4.15.0</span><span class="mi">-109</span><span class="o">-</span><span class="n">generic</span><span class="o">:</span><span class="n">OK</span>
+<span class="n">Linux</span><span class="n">perf_event_open</span><span class="n">syscall</span><span class="n">available</span><span class="o">:</span><span class="n">OK</span>
+<span class="n">Sampling</span><span class="n">trigger</span><span class="n">event</span><span class="n">available</span><span class="o">:</span><span class="n">OK</span>
+<span class="n">Intel</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="n">Last</span><span class="n">Branch</span><span class="n">Record</span><span class="n">support</span><span class="o">:</span><span class="n">Available</span>
+<span class="n">Sampling</span><span class="n">Environment</span><span class="o">:</span><span class="n">OK</span>
+</pre>
+ <p>
+  This status check allows you to ensure that the system requirements for CPU
+sampling using Nsight Systems are met in your local environment. If the
+Sampling Environment is not OK, you will still be able to run various trace
+operations.
+ </p>
+ <p>
+  Intel(c) Last Branch Record allows tools, including Nsight Systems to use
+hardware to quickly get limited stack information. Nsight Systems will use this
+method for stack resolution by default if available.
+ </p>
+ <p>
+  For information about changing these environment settings, see System
+Requirements section in the Installation Guide. For information about changing
+the backtrace method, see Profiling from the CLI in the User Guide.
+ </p>
+ <p>
+  To get started using the CLI, run
+  <span class="pre">
+   nsys
+  </span>
+  <span class="pre">
+   --help
+  </span>
+  for a list of options or see
+Profiling Applications from the CLI in the User Guide for full documentation.
+ </p>
+ <h3>
+  Launching the GUI
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#launching-the-gui" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Depending on your OS, Nsight Systems will have installed an icon on your host desktop that you can use to launch the GUI. To launch the GUI directly, run the
+  <span class="pre">
+   nsys-ui
+  </span>
+  executable in the Host sub-directory of your installation.
+ </p>
+ <h3>
+  Installing Multi Report Analysis System
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-systems/InstallationGuide/index.html#installing-multi-report-analysis-system" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  PREVIEW FEATURE
+ </p>
+ <p>
+  The Nsight Systems multi-report analysis system can be located in the
+  <span class="pre">
+   &lt;install-dir&gt;/target-linux-x64/python/packages
+  </span>
+  directory. For this initial preview release, multi-node analysis is only available to run recipes on Linux targets, and only available to visualize on Linux or Windows hosts.
+ </p>
+ <p>
+  Recipe Dependencies
+ </p>
+ <p>
+  The system is written in Python and depends on a set of Python packages. The prerequisites are Python 3.6 or newer with pip and venv. If you donât have Python, you can install it from python.org or your Linux package manager.
+ </p>
+ <p>
+  Pip/venv on Ubuntu
+ </p>
+ <p>
+  If pip/venv were not installed with Python, run:
+ </p>
+ <pre>$ sudo apt-get install python3-pip
+$ sudo apt-get install python3-venv
+</pre>
+ <p>
+  On a fresh Ubuntu install, we will need to run the following before the above commands:
+ </p>
+ <pre>$ sudo apt-get update
+</pre>
+ <p>
+  The dependent packages can either be installed automatically by an automated script or manually.
+ </p>
+ <p>
+  Automated script
+ </p>
+ <p>
+  The
+  <span class="pre">
+   &lt;install-dir&gt;/target-linux-x64/python/packages/nsys_recipe/install.py
+  </span>
+  script automates the installation of the recipe dependencies. You must select either the
+  <span class="pre">
+   --current
+  </span>
+  or
+  <span class="pre">
+   --venv
+  </span>
+  <span class="pre">
+   PATH
+  </span>
+  option when you run the script.
+ </p>
+ <p>
+  Options:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     -h
+    </span>
+    : Display help
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --current
+    </span>
+    : Install packages in the current environment. If a venv is active, packages will be installed there. Otherwise, packages will be installed in the system site-packages directory. It enables usage of
+    <span class="pre">
+     nsys
+    </span>
+    <span class="pre">
+     recipe
+    </span>
+    without having to source a virtual environment. However, new packages risk colliding with existing ones if different versions are required.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --venv
+    </span>
+    <span class="pre">
+     PATH
+    </span>
+    : Install packages in a virtual environment. If it doesnât already exist, it is created. It prevents risk of package collision in the current environment but requires the virtual environment to be activated before running
+    <span class="pre">
+     nsys
+    </span>
+    <span class="pre">
+     recipe
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --tar
+    </span>
+    : download wheel packages online and tar them
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --untar
+    </span>
+    : untar the wheel packages and install
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --python
+    </span>
+    : change the python executable (default is python3)
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --no-jupyter
+    </span>
+    : do not install requirements for the jupyter notebook
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     --no-dask
+    </span>
+    : do not install requirements for Dask
+   </p>
+  </li>
+ </ul>
+ <p>
+  If
+  <span class="pre">
+   --tar
+  </span>
+  or
+  <span class="pre">
+   --untar
+  </span>
+  option wasnât specified, the script will directly download the pip packages from the internet.
+ </p>
+ <p>
+  Manual steps
+ </p>
+ <p>
+  If you would rather install the dependencies manually, please follow the following steps:
+ </p>
+ <ul>
+  <li>
+   <p>
+    Create a virtual environment
+   </p>
+   <p>
+    We recommend creating a virtual environment to avoid installing packages directly into your system Python. The commands create the virtual environment in the current working directory.
+   </p>
+   <p>
+    See
+    <a class="reference external" href="https://docs.python.org/3/library/venv.html">
+     venv - python doc
+    </a>
+   </p>
+   <p>
+    To create a venv named recipe_env:
+   </p>
+   <pre>$ python3 -m venv recipe_env
+$ source recipe_env/bin/activate
+</pre>
+  </li>
+  <li>
+   <p>
+    List of dependencies
+   </p>
+   <p>
+    We have three files located in
+    <span class="pre">
+     &lt;install-dir&gt;/target-linux-x64/python/packages/nsys_recipe/requirements
+    </span>
+    for the dependencies:
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      Common.txt (required): dependencies needed by all recipes
+     </p>
+    </li>
+    <li>
+     <p>
+      Dask.txt (optional): dependencies needed by the Dask mode
+     </p>
+    </li>
+    <li>
+     <p>
+      Jupyter.txt (optional): dependencies needed to open the Jupyter notebook
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  One-step installation
+ </p>
+ <p>
+  The following command will install all dependencies for CLI and GUI. Please note that you will want to activate your venv first as described above, otherwise the modules will not be available in the venv.
+ </p>
+ <pre>$ python3 -m pip install -r nsys_recipe/requirements/dask.txt -r nsys_recipe/requirements/common.txt -r nsys_recipe/requirements/jupyter.txt
+</pre>
+ <p>
+  Two-step installation (for machines without internet)
+ </p>
+ <p>
+  If you wish to download the dependencies on a machine without internet, you can download the wheel packages on a machine with internet, transfer them to the target machine and install the packages there.
+ </p>
+ <p>
+  On the machine with internet:
+ </p>
+ <pre>$  python3 -m pip download -r nsys_recipe/requirements/dask.txt -r nsys_recipe/requirements/common.txt -r nsys_recipe/requirements/jupyter.txt -d ârecipe-depsâ
+$ tar -cvfz recipe-deps.tar.gz recipe-deps
+</pre>
+ <p>
+  On the machine with no internet:
+ </p>
+ <pre>$ tar -xvfz recipe-deps.tar.gz
+$ python3 -m pip install recipe-deps/* --no-index
+</pre>
+ <p>
+  Jupyter Notebook
+ </p>
+ <p>
+  The Nsight Systems UI has the ability to internally load a Jupyter notebook. It uses the Jupyter notebook installation associated with the Python on your $PATH, which is expected to be the Python installed into the virtual environment created in the earlier steps of this guide.
+ </p>
+ <p>
+  If Jupyter is installed in a different location, you can add a third variable to the config.ini file that will override the default path to Jupyter:
+ </p>
+ <pre>JupyterPythonExe=â/path/to/recipe_env/bin/pythonâ
+</pre>
+ <p>
+  This config.ini file should be placed in
+  <span class="pre">
+   &lt;install_dir&gt;/host-linux-x64
+  </span>
+ </p>
+ <p>
+  Note that on Windows, the path should use Windows slashes and they must be double slashes:
+ </p>
+ <pre>JupyterPythonExe=âc:\\path\\to\\recipe_env\\bin\\python.exeâ
+</pre>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on May 21, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

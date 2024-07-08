@@ -1,0 +1,8509 @@
+<html><head><title>4. Nsight Compute CLI — NsightCompute 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-compute/index.html">
+ </a>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Nsight Compute
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/ReleaseNotes/index.html">
+    1. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html">
+    2. Kernel Profiling Guide
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightCompute/index.html">
+    3. Nsight Compute
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html">
+    4. Nsight Compute CLI
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#introduction">
+      4.1. Introduction
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#quickstart">
+      4.2. Quickstart
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#usage">
+      4.3. Usage
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#modes">
+        4.3.1. Modes
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#multi-process-support">
+        4.3.2. Multi-Process Support
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#output-pages">
+        4.3.3. Output Pages
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#profile-import">
+        4.3.4. Profile Import
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#metrics-and-units">
+        4.3.5. Metrics and Units
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvtx-filtering">
+        4.3.6. NVTX Filtering
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#config-file">
+        4.3.7. Config File
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#kernel-renaming">
+        4.3.8. Kernel Renaming
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options">
+      4.4. Command Line Options
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#general">
+        4.4.1. General
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#launch">
+        4.4.2. Launch
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#attach">
+        4.4.3. Attach
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#profile">
+        4.4.4. Profile
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#pm-sampling">
+        4.4.5. PM Sampling
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#warp-sampling">
+        4.4.6. Warp Sampling
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#file">
+        4.4.7. File
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#console-output">
+        4.4.8. Console Output
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#response-file">
+        4.4.9. Response File
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#file-macros">
+        4.4.10. File Macros
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#environment-variables">
+      4.5. Environment Variables
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvprof-transition-guide">
+      4.6. Nvprof Transition Guide
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#trace">
+        4.6.1. Trace
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#metric-collection">
+        4.6.2. Metric Collection
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#metric-comparison">
+        4.6.3. Metric Comparison
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#event-comparison">
+        4.6.4. Event Comparison
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#filtering">
+        4.6.5. Filtering
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#output">
+        4.6.6. Output
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#launch-and-attach">
+        4.6.7. Launch and Attach
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Developer Interfaces
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html">
+    1. Customization Guide
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NvRulesAPI/index.html">
+    2. NvRules API
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Training
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/Training/index.html">
+    Training
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Information
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/Archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Copyright and Licenses
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CopyrightAndLicenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-compute/index.html">
+  NsightCompute
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/nsight-compute/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    4.
+   </span>
+   Nsight Compute CLI
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.2.1 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/nsight-compute-history">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   4.
+  </span>
+  Nsight Compute CLI
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nsight-compute-cli" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The User Guide for Nsight Compute CLI.
+ </p>
+ <h2>
+  <span class="section-number">
+   4.1.
+  </span>
+  Introduction
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#introduction" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA Nsight Compute CLI (ncu) provides a non-interactive way to profile applications from the command line. It can print the results directly on the command line or store them in a report file. It can also be used to simply launch the target application (see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-general">
+   General
+  </a>
+  for details) and later attach with NVIDIA Nsight Compute or another ncu instance.
+ </p>
+ <p>
+  For users migrating from nvprof to NVIDIA Nsight Compute, please additionally see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvprof-guide">
+   Nvprof Transition Guide
+  </a>
+  for comparison of features and workflows.
+ </p>
+ <h2>
+  <span class="section-number">
+   4.2.
+  </span>
+  Quickstart
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#quickstart" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <ol class="arabic">
+  <li>
+   <p>
+    Launch the target application with the command line profiler
+   </p>
+   <p>
+    The command line profiler launches the target application, instruments the target API, and collects profile results for the specified kernels. The CLI executable is called ncu. A shortcut with this name is located in the base directory of the NVIDIA Nsight Compute installation. The actual executable is located in the folder
+    <span class="pre">
+     target\windows-desktop-win7-x64
+    </span>
+    on Windows or
+    <span class="pre">
+     target/linux-desktop-glibc_2_11_3-x64
+    </span>
+    on Linux. By default, NVIDIA Nsight Compute is installed in
+    <span class="pre">
+     /usr/local/cuda-&lt;cuda-version&gt;/NsightCompute-&lt;version&gt;
+    </span>
+    on Linux and in
+    <span class="pre">
+     C:\Program
+    </span>
+    <span class="pre">
+     Files\NVIDIA
+    </span>
+    <span class="pre">
+     Corporation\Nsight
+    </span>
+    <span class="pre">
+     Compute
+    </span>
+    <span class="pre">
+     &lt;version&gt;
+    </span>
+    on Windows.
+   </p>
+   <p>
+    To collect the
+    <span class="pre">
+     basic
+    </span>
+    set for all kernel launches in the target application, launch:
+   </p>
+   <pre>$ ncu -o profile CuVectorAddMulti.exe
+</pre>
+   <p>
+    The application runs in instrumented mode and for each kernel launch, a profile result is created. The results are written by default to profile.nsight-cuprof. Each output from the compute profiler starts with
+    <span class="pre">
+     ==PROF==
+    </span>
+    The other lines are output from the application itself. For each profiled kernel, the name of the kernel function and the progress of data collection is shown. To collect all requested profile information, it may be required to replay the kernels multiple times. The total number of replay passes per kernel is shown after profiling has completed.
+   </p>
+   <pre>[Vector addition of 1144477 elements]
+==PROF== Connected to process 5268
+Copy input data from the host memory to the CUDA device
+CUDA kernel launch A with 4471 blocks of 256 threads
+==PROF== Profiling "vectorAdd_A" - 0: 0%....50%....100% - 46 passes
+CUDA kernel launch B with 4471 blocks of 256 threads
+==PROF== Profiling "vectorAdd_B" - 1: 0%....50%....100% - 46 passes
+Copy output data from the CUDA device to the host memory
+Done
+==PROF== Disconnected from process 5268
+==PROF== Report: profile.ncu-rep
+</pre>
+  </li>
+  <li>
+   <p>
+    Customizing data collection
+   </p>
+   <p>
+    Options are available to specify for which kernels data should be collected.
+    <span class="pre">
+     -c
+    </span>
+    limits the number of kernel launches collected.
+    <span class="pre">
+     -s
+    </span>
+    skips the given number of kernels before data collection starts.
+    <span class="pre">
+     -k
+    </span>
+    allows you to filter the kernels by a regex match of their names.
+    <span class="pre">
+     --kernel-id
+    </span>
+    allows you to filter kernels by context, stream, name and invocation, similar to nvprof.
+   </p>
+   <p>
+    To limit what should be collected for each kernel launch, specify the exact *.section (files) by their identifier using
+    <span class="pre">
+     --section
+    </span>
+    . Each section file defines a set of metrics to be collected, grouped logically to solve a specific performance question. By default, the sections associated with the
+    <span class="pre">
+     basic
+    </span>
+    set are collected. Use
+    <span class="pre">
+     --list-sets
+    </span>
+    to see the list of currently available sets. Use
+    <span class="pre">
+     --list-sections
+    </span>
+    to see the list of currently available sections. The default search directory and location of pre-defined section files is also called
+    <span class="pre">
+     sections/
+    </span>
+    . See the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#sets-and-sections">
+     Profiling Guide
+    </a>
+    for more details.
+   </p>
+   <p>
+    Alternatively, you can collect a set of individual metrics using
+    <span class="pre">
+     --metrics
+    </span>
+    . The available metrics can be queried using
+    <span class="pre">
+     --query-metrics
+    </span>
+    . For an explanation of the naming conventions and structuring of metrics, see
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-structure">
+     Metrics Structure
+    </a>
+    .
+   </p>
+   <p>
+    Most metrics in NVIDIA Nsight Compute are named using a base name and various suffixes, e.g.
+    sm__throughput.avg.pct_of_peak_sustained_elapsed
+    . The base name is
+    sm__throughput and the suffix is avg.pct_of_peak_sustained_elapsed
+    . This is because most metrics follow the same structure and have the same set of suffixes. You need to pass the base or full name to NVIDIA Nsight Compute when selecting a metric for profiling. Use
+    <span class="pre">
+     --query-metrics-mode
+    </span>
+    <span class="pre">
+     suffix
+    </span>
+    <span class="pre">
+     --metrics
+    </span>
+    <span class="pre">
+     &lt;metrics
+    </span>
+    <span class="pre">
+     list&gt;
+    </span>
+    to see the full names for the chosen metrics.
+   </p>
+   <p>
+    Some additional metrics do not follow this structured naming. They are documented in the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-reference">
+     Metrics Reference
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Changing command line output
+   </p>
+   <p>
+    By default, a temporary file is used to store profiling results, and data is printed to the command line. To permanently store the profiler report, use
+    <span class="pre">
+     -o
+    </span>
+    to specify the output filename.
+   </p>
+   <p>
+    Besides storing results in a report file, the command line profiler can print results using different pages. Those pages correspond to the respective pages in the UIâs report. By default, the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#output-pages">
+     Details page
+    </a>
+    is printed, if no explicit output file is specified. To select a different page or print in addition to storing in an explicit file, use the
+    <span class="pre">
+     --page=&lt;Page&gt;
+    </span>
+    command. Currently, the following pages are supported:
+    <span class="pre">
+     details,
+    </span>
+    <span class="pre">
+     raw,
+    </span>
+    <span class="pre">
+     source
+    </span>
+    .
+   </p>
+   <p>
+    Use
+    <span class="pre">
+     --csv
+    </span>
+    to make any output comma separated and easier to process further. See
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-console-output">
+     Console Output
+    </a>
+    for further options, e.g. summary views.
+   </p>
+  </li>
+  <li>
+   <p>
+    Open the report in the UI
+   </p>
+   <p>
+    The UI executable is called ncu-ui. A shortcut with this name is located in the base directory of the NVIDIA Nsight Compute installation. The actual executable is located in the folder
+    <span class="pre">
+     host\windows-desktop-win7-x64
+    </span>
+    on Windows or
+    <span class="pre">
+     host/linux-desktop-glibc_2_11_3-x64
+    </span>
+    on Linux. In the UI window, close the
+    Connection
+    dialog and open the report file through
+    File
+    &gt;
+    Open
+    , by dragging the report file into NVIDIA Nsight Compute.
+   </p>
+   <p>
+    You can also specify the report file as a command line parameter to the executable, i.e. as
+    <span class="pre">
+     ncu-ui
+    </span>
+    <span class="pre">
+     &lt;MyReport.ncu-rep&gt;
+    </span>
+    . Alternatively, when using NVIDIA Nsight Compute CLI on a platform with host support,
+    <span class="pre">
+     --open-in-ui
+    </span>
+    can be used directly with ncu to open a collected report in the user interface.
+   </p>
+   <p>
+    The report opens in a new document window. For more information about the report, see the
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightCompute/index.html#profiler-report">
+     Profiler Report
+    </a>
+    for collecting profile information through NVIDIA Nsight Compute.
+   </p>
+  </li>
+ </ol>
+ <h2>
+  <span class="section-number">
+   4.3.
+  </span>
+  Usage
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#usage" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   4.3.1.
+  </span>
+  Modes
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#modes" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Modes change the fundamental behavior of the command line profiler. Depending on which mode is chosen, different
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options">
+   Command Line Options
+  </a>
+  become available. For example,
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-launch">
+   Launch
+  </a>
+  is invalid if the
+  Attach
+  mode is selected.
+ </p>
+ <ul>
+  <li>
+   <p>
+    Launch-and-attach:
+    The target application is launched on the local system with the toolâs injection libraries. Depending on which profiling options are chosen, selected kernels in the application are profiled and the results printed to the console or stored in a report file. The tool exits once the target application finishes or crashes, and once all results are processed.
+   </p>
+   <p>
+    This is the default, and the only mode that supports profiling of child processes on selected platforms.
+   </p>
+  </li>
+  <li>
+   <p>
+    Launch:
+    The target application is launched on the local system with the toolâs injection libraries. As soon as the first intercepted API call is reached (commonly
+    <span class="pre">
+     cuInit()
+    </span>
+    ), all application threads are suspended. The application now expects a tool to attach for profiling. You can attach using NVIDIA Nsight Compute or using the command line profilerâs
+    Attach
+    mode.
+   </p>
+  </li>
+  <li>
+   <p>
+    Attach:
+    The tool tries to connect to a target application previously launched using NVIDIA Nsight Compute or using the command line profilerâs
+    Launch
+    mode. The tool can attach to a target on the local system or using a remote connection.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.3.2.
+  </span>
+  Multi-Process Support
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#multi-process-support" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  NVIDIA Nsight Compute CLI supports profiling multi-process applications on the following platforms: x86_64 Windows, x86_64 Linux, DRIVE OS Linux, DRIVE OS QNX, PowerPC. See the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-launch">
+   Launch
+  </a>
+  options on how to enable this feature.
+ </p>
+ <p>
+  On x86_64 Windows, NVIDIA Nsight Compute CLI supports profiling 64-bit processes launched from 32-bit applications by default . On x86_64 Linux, launching from 32-bit applications requires you to enable the
+  <span class="pre">
+   support-32bit
+  </span>
+  option, and the required 32-bit libraries must be installed on your system. On DRIVE OS Linux, DRIVE OS QNX and PowerPC, tracking of 32-bit applications is not supported. Profiling of 32-bit processes is not supported on any platform.
+ </p>
+ Profiling MPI applications is a special case of multi-process profiling.
+ <p>
+  NVIDIA Nsight Compute CLI can be used to profile applications launched with the
+  <span class="pre">
+   mpirun
+  </span>
+  command.
+ </p>
+ <ul>
+  <li>
+   <p>
+    To profile all ranks on a node and store all the profiling data in a single report file:
+   </p>
+   <pre><span class="n">ncu</span><span class="o">--</span><span class="n">target</span><span class="o">-</span><span class="n">processes</span><span class="n">all</span><span class="o">-</span><span class="n">o</span><span class="o">&lt;</span><span class="n">report</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="n">mpirun</span><span class="p">[</span><span class="n">mpi</span><span class="n">arguments</span><span class="p">]</span><span class="o">&lt;</span><span class="n">app</span><span class="o">&gt;</span><span class="p">[</span><span class="n">app</span><span class="n">arguments</span><span class="p">]</span>
+</pre>
+  </li>
+  <li>
+   <p>
+    To profile multi-node submissions, one instance of NVIDIA Nsight Compute CLI can be used per node. Ensure that you specify unique report files per rank.
+   </p>
+   <pre><span class="n">mpirun</span><span class="p">[</span><span class="n">mpi</span><span class="n">arguments</span><span class="p">]</span><span class="n">ncu</span><span class="o">-</span><span class="n">o</span><span class="n">report_</span><span class="o">%</span><span class="n">q</span><span class="p">{</span><span class="n">OMPI_COMM_WORLD_RANK</span><span class="p">}</span><span class="o">&lt;</span><span class="n">app</span><span class="o">&gt;</span><span class="p">[</span><span class="n">app</span><span class="n">arguments</span><span class="p">]</span>
+</pre>
+  </li>
+  <li>
+   <p>
+    To profile a single rank one can use a wrapper script. The following script (called âwrap.shâ) profiles rank 0 only:
+   </p>
+   <pre><span class="cp">#!/bin/bash</span>
+<span class="k">if</span><span class="p">[[</span><span class="n">$OMPI_COMM_WORLD_RANK</span><span class="o">==</span><span class="mi">0</span><span class="p">]];</span><span class="n">then</span>
+<span class="n">ncu</span><span class="o">-</span><span class="n">o</span><span class="n">report_$</span><span class="p">{</span><span class="n">OMPI_COMM_WORLD_RANK</span><span class="p">}</span><span class="o">--</span><span class="n">target</span><span class="o">-</span><span class="n">processes</span><span class="n">all</span><span class="s">"$@"</span>
+<span class="k">else</span>
+<span class="s">"$@"</span>
+<span class="n">fi</span>
+</pre>
+   <p>
+    and then execute:
+   </p>
+   <pre><span class="n">mpirun</span><span class="p">[</span><span class="n">mpi</span><span class="n">arguments</span><span class="p">]</span><span class="p">.</span><span class="o">/</span><span class="n">wrap</span><span class="p">.</span><span class="n">sh</span><span class="o">&lt;</span><span class="n">app</span><span class="o">&gt;</span><span class="p">[</span><span class="n">app</span><span class="n">arguments</span><span class="p">]</span>
+</pre>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.3.3.
+  </span>
+  Output Pages
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#output-pages" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The command line profiler supports printing results to the console using various pages. Each page has an equivalent in NVIDIA Nsight Computeâs
+  Profiler Report
+  . In the command line profiler, they are slightly adapted to fit console output. To select a page, use the
+  <span class="pre">
+   --page
+  </span>
+  option. By default, the details page is used. Note that if
+  <span class="pre">
+   --page
+  </span>
+  is not used but
+  <span class="pre">
+   --export
+  </span>
+  is, no results will be printed to the console.
+ </p>
+ <ul>
+  <li>
+   <p>
+    Details:
+    This page represents NVIDIA Nsight Computeâs
+    Details
+    page. For every profiled kernel launch, each collected is printed as section as a three-column table, followed by any rule results applied to this section. Rule results not associated with any section are printed after the kernelâs sections.
+   </p>
+   <p>
+    The first section table column shows the metric name. If the metric was given a label in the section, it is used instead. The second column shows the metric unit, if available. The third column shows the unit value. Both metric unit and value are automatically adjusted to the most fitting order of magnitude. By default, only metrics defined in section headers are shown. This can be changed by passing the
+    <span class="pre">
+     --details-all
+    </span>
+    option on the command line.
+   </p>
+   <p>
+    Some metrics will show multiple values, separated by â;â, e.g. memory_l2_transactions_globalÂ KbytesÂ 240; 240; 240; 240; 240. Those are instanced metrics, which have one value per represented instance. An instance can be a streaming multiprocessor, an assembly source line, etc.
+   </p>
+  </li>
+  <li>
+   <p>
+    Raw:
+    This page represents NVIDIA Nsight Computeâs
+    Raw
+    page. For every profiled kernel launch, each collected metric is printed as a three-column table. Besides metrics from sections, this includes automatically collected metrics such as device attributes and kernel launch information.
+   </p>
+   <p>
+    The first column shows the metric name. The second and third columns show the metric unit and value, respectively. Both metric unit and value are automatically adjusted to the most fitting order of magnitude. No unresolved regex:, group:, or breakdown: metrics are included.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.3.4.
+  </span>
+  Profile Import
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#profile-import" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Using the
+  <span class="pre">
+   --import
+  </span>
+  option, saved reports can be imported into the command line profiler. When using this flag, most other options are not available, except for certain result filterting options. They are marked as such in the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-profile">
+   Profile options
+  </a>
+  table.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.3.5.
+  </span>
+  Metrics and Units
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#metrics-and-units" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When available and applicable, metrics are shown along with their unit. This is to make it apparent if a metric represents cycles, threads, bytes/s, and so on.
+ </p>
+ <p>
+  By default, units are scaled automatically so that metric values are shown with a reasonable order of magnitude. Units are scaled using their SI-factors, i.e. byte-based units are scaled using a factor of 1000 and the prefixes K, M, G, etc. Time-based units are also scaled using a factor of 1000, with the prefixes n, u and m. This scaling can be changed using a command line option, see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-console-output">
+   Console Output
+  </a>
+  options for details.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.3.6.
+  </span>
+  NVTX Filtering
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvtx-filtering" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <span class="pre">
+  --nvtx-include
+ </span>
+ <span class="pre">
+  &lt;configuration&gt;
+ </span>
+ <span class="pre">
+  --nvtx-exclude
+ </span>
+ <span class="pre">
+  &lt;configuration&gt;
+ </span>
+ These options are used to profile only those kernels which satisfy the conditions mentioned in the configuration. Through these options, you can choose which kernel falls into a specific range or collection of ranges.
+ <p>
+  You can use both options multiple times, mentioning all the
+  <span class="pre">
+   --nvtx-include
+  </span>
+  configurations followed by all
+  <span class="pre">
+   --nvtx-exclude
+  </span>
+  configurations. NVTX filtering requires
+  <span class="pre">
+   --nvtx
+  </span>
+  option.
+ </p>
+ <p>
+  NVTX ranges are of two types: NvtxRangeStart/End and NvtxRangePush/Pop. The configuration syntax for both the types are briefly described below.
+Both range and domain names can contain whitespace. Note that âDomainâ and ârangeâ in below example are for illustration purposes only and are not required to mark domain or range names.
+ </p>
+ <ul>
+  <li>
+   <p>
+    Push-Pop Ranges
+   </p>
+   <table class="table-no-stripes docutils align-default">
+    <tr class="row-odd">
+     <th class="head">
+      <p>
+       Quantifier
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Description
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Example
+      </p>
+     </th>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       /
+      </p>
+     </td>
+     <td>
+      <p>
+       Delimiter between range names. When only a single range name is
+given, the delimiter must be appended to indicate that this
+refers to a push/pop range.
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        A_range/
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        A_range/B
+       </span>
+       <span class="pre">
+        range
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        A_range/\*/B
+       </span>
+       <span class="pre">
+        range
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       [
+      </p>
+     </td>
+     <td>
+      <p>
+       Range is at the bottom of the stack
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        [A_range
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        [A_range/+/Range
+       </span>
+       <span class="pre">
+        Z
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       ]
+      </p>
+     </td>
+     <td>
+      <p>
+       Range is at the top of the stack
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        Range
+       </span>
+       <span class="pre">
+        Z]
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        Range
+       </span>
+       <span class="pre">
+        C/\*/Range
+       </span>
+       <span class="pre">
+        Z]
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       Only one B rangeetween the two other ranges
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        B
+       </span>
+       <span class="pre">
+        range/+/Range
+       </span>
+       <span class="pre">
+        D
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       *
+      </p>
+     </td>
+     <td>
+      <p>
+       Zero or more range(s) between the two other ranges
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        B
+       </span>
+       <span class="pre">
+        range/\*/Range
+       </span>
+       <span class="pre">
+        Z
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       @
+      </p>
+     </td>
+     <td>
+      <p>
+       Specify domain name. If not mentioned, assuming &lt;default domain&gt;
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        Domain-A@A_range
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        Domain
+       </span>
+       <span class="pre">
+        B@A_range/\*/Range
+       </span>
+       <span class="pre">
+        Z]
+       </span>
+      </p>
+     </td>
+    </tr>
+   </table>
+   <p>
+    Include kernels wrapped inside push/pop range âA_rangeâ of â&lt;default-domain&gt;â:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "A_range/" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside push/pop range âA_rangeâ of âDomain-Aâ:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "Domain-A@A_range/" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside push/pop range âA_rangeâ of â&lt;default domain&gt;â, where âA_rangeâ is at the bottom of the stack:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "[A_range" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside push/pop ranges âA_rangeâ and âB rangeâ of â&lt;default domain&gt;â, with zero or many ranges between them:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "A_range/*/B range" CuNvtx.exe
+</pre>
+   <p>
+    Exclude kernels wrapped inside push/pop ranges âA_rangeâ and âB rangeâ of â&lt;default domain&gt;â, with zero or many ranges between them:
+   </p>
+   <pre>ncu --nvtx --nvtx-exclude "A_range/*/B range" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside only push/pop range âA_rangeâ of â&lt;default domain&gt;â but not inside âB rangeâ at the top of the stack:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "A_range/" --nvtx-exclude "B range]" CuNvtx.exe
+</pre>
+  </li>
+  <li>
+   <p>
+    Start-End Ranges
+   </p>
+   <table class="table-no-stripes docutils align-default">
+    <tr class="row-odd">
+     <th class="head">
+      <p>
+       Quantifier
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Description
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Example
+      </p>
+     </th>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       ,
+      </p>
+     </td>
+     <td>
+      <p>
+       Delimiter between range names
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        A_range,B
+       </span>
+       <span class="pre">
+        range
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        B
+       </span>
+       <span class="pre">
+        range,A_range,Range
+       </span>
+       <span class="pre">
+        C
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       @
+      </p>
+     </td>
+     <td>
+      <p>
+       Specify domain name. If not mentioned, assuming &lt;default domain&gt;
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        Domain-A@A_range
+       </span>
+      </p>
+      <p>
+       <span class="pre">
+        Domain
+       </span>
+       <span class="pre">
+        B@B
+       </span>
+       <span class="pre">
+        range,Range
+       </span>
+       <span class="pre">
+        Z
+       </span>
+      </p>
+     </td>
+    </tr>
+   </table>
+   <p>
+    Include kernels wrapped inside start/end range âA_rangeâ of âDomain-Aâ:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "Domain-A@A_range" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside both start/end ranges, âA_rangeâ and âB rangeâ of â&lt;default domain&gt;â:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "A_range,B range" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside start/end ranges, âA_rangeâ or âB rangeâ of â&lt;default domain&gt;â:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "A_range" --nvtx-include "B range" CuNvtx.exe
+</pre>
+   <p>
+    Include all kernels, except those which are wrapped inside start/end range âA_rangeâ of â&lt;default domain&gt;â:
+   </p>
+   <pre>ncu --nvtx --nvtx-exclude "A_range" CuNvtx.exe
+</pre>
+   <p>
+    Include kernels wrapped inside only start/end âB rangeâ and not âA_rangeâ of â&lt;default domain&gt;â:
+   </p>
+   <pre>ncu --nvtx --nvtx-include "B range"--nvtx-exclude "A_range" CuNvtx.exe
+</pre>
+  </li>
+  <li>
+   <p>
+    Regular Expression Support
+   </p>
+   <p>
+    The configuration syntax for both the types NvtxRangeStart/End and NvtxRangePush/Pop is the same. Additionally, to use regular expressions, follow the following syntax.
+   </p>
+   <ul>
+    <li>
+     <p>
+      Provide prefix âregex:â to treat nvtx config as regular expression.
+     </p>
+     <pre>ncu --nvtx --nvtx-include "regex:Domain[A-Z]@Range[0-9]/" CuNvtx.exe
+</pre>
+     The kernels wrapped inside push/pop range with matching regex âRange[0-9]â of domain with matching regex âDomain[A-Z]â are profiled.
+    </li>
+    <li>
+     <p>
+      Provide â/â as a prefix to â[â or â]â only for the range part of the config if â[â or â]â is at the start or at the end of the range part, respectively. This is needed so that NCU can distinguish if â[â or â]â is part of the regex or represents the top/bottom of the stack.
+     </p>
+     <pre>ncu --nvtx --nvtx-include "regex:[0-9]domainA@/[0-9]rangeA,RangeC[0-9/]" CuNvtx.exe
+</pre>
+     The kernels wrapped inside start/end ranges with matching regex â[0-9]rangeAâ and âRangeC[0-9]â of domain with matching regex â[0-9]domainAâ are profiled.
+    </li>
+    <li>
+     <p>
+      If any quantifier is part of the domain/range name, you need to use â\\â or â\â as a prefix. For the â$â quantifier, only the â\\â prefix is valid.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    Additional Information
+   </p>
+   <pre>--nvtx-include DomainA@RangeA,DomainB@RangeB //Not a valid config
+</pre>
+   <p>
+    In a single NVTX configuration, multiple ranges with regard to a single domain can be specified. Mentioning ranges from different domains inside a single NVTX config is not supported.
+   </p>
+   <pre>--nvtx-include "A_range\[i\]"
+</pre>
+   <p>
+    Quantifiers â@â â,â â[â â]â â/â â*â â+â can be used in range names using prefix â\â. The kernels wrapped inside âA_range[i]â of â&lt;default domain&gt;â in the application are profiled.
+   </p>
+   <pre>--nvtx-include "A_range"  //Start/End configuration
+--nvtx-inlcude "A_range/" //Push/Pop configuration
+--nvtx-inlcude "A_range]" //Push/Pop configuration
+</pre>
+   <p>
+    If the domain/range name contains â\â, you need to provide â\\\\â in the config.
+   </p>
+   <p>
+    Do not use â\\\\â before any quantifier.
+   </p>
+   <p>
+    Including/Excluding only single range for Push/Pop configuration without specifying stack frame position â[â or â]â, use â/â quantifier at the end.
+   </p>
+   <pre>--nvtx-include "A_range/*/B range"
+</pre>
+   <p>
+    The order in which you mention Push/Pop configurations is important. In the above example, âA_rangeâ should be below âB rangeâ in the stack of ranges so that the kernel is profiled.
+   </p>
+   <p>
+    NVTX filtering honors cudaProfilerStart() and cudaProfilerStop(). There is no support for ranges with no name.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.3.7.
+  </span>
+  Config File
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#config-file" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ Using the
+ <span class="pre">
+  --config-file
+ </span>
+ <span class="pre">
+  on/off
+ </span>
+ option, parsing parameters from config file can be enabled or disabled.
+ Using the
+ <span class="pre">
+  --config-file-path
+ </span>
+ <span class="pre">
+  &lt;path&gt;
+ </span>
+ option, default path and name of config file can be overwritten.
+ By default, config-file with name
+ <span class="pre">
+  config.ncu-cfg
+ </span>
+ is searched in the current working directory,
+ <span class="pre">
+  $HOME/.config/NVIDIA
+ </span>
+ <span class="pre">
+  Corporation
+ </span>
+ on Linux and
+ <span class="pre">
+  %APPDATA%\NVIDIA
+ </span>
+ <span class="pre">
+  Corporation\
+ </span>
+ on Windows. If a valid config file is found, ncu parses the file and initializes any command line parameters to the values set in the file. If the same command line parameter is also set explicitly during the current invocation, the latter takes precedence.
+ <p>
+  Parameters can be set under various general modes and ncu command line parameters are used to determine which general-mode needs to be parsed from the config file. See the table below for more details.
+ </p>
+ <table class="table-no-stripes docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Command line parameters
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     General Mode
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     ncu âmode launch-and-attach CuVectorAddMulti.exe
+    </p>
+   </td>
+   <td>
+    <p>
+     Launch-and-attach
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     ncu âmode launch CuVectorAddMulti.exe
+    </p>
+   </td>
+   <td>
+    <p>
+     Launch
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     ncu âmode attach
+    </p>
+   </td>
+   <td>
+    <p>
+     Attach
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     ncu âlist-sets, ncu âlist-sections, ncu âlist-rules and ncu âlist-metrics
+    </p>
+   </td>
+   <td>
+    <p>
+     List
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     ncu âquery-metrics
+    </p>
+   </td>
+   <td>
+    <p>
+     Query
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     ncu -i &lt;MyReport.ncu-rep&gt;
+    </p>
+   </td>
+   <td>
+    <p>
+     Import
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  These general modes should be defined in the config file using INI-like syntax as:
+ </p>
+ <pre>[&lt;general-mode&gt;]
+&lt;parameter&gt;=&lt;value&gt;
+;&lt;comments&gt;
+</pre>
+ <p>
+  Sample usage
+ </p>
+ <pre>[Launch-and-attach]
+-c = 1
+--section = LaunchStats, Occupancy
+[Import]
+--open-in-ui
+-c = 1
+--section = LaunchStats, Occupancy
+</pre>
+ <p>
+  From this configuration, ncu will parse parameters set under
+  <span class="pre">
+   [Launch-and-attach]
+  </span>
+  block whenever an application is profiled in
+  <span class="pre">
+   launch-and-attach
+  </span>
+  mode. In the same manner, parameters set under
+  <span class="pre">
+   [Import]
+  </span>
+  block will be parsed whenever a report is imported. Different modes can be clubbed together if there exists a set of parameters which is common to each mode. Sample shown above can be rewritten after clubbing both modes as:
+ </p>
+ <pre>[Launch-and-attach, import]
+-c = 1
+--section = LaunchStats, Occupancy
+[Import]
+--open-in-ui
+</pre>
+ <p>
+  Additional points
+ </p>
+ <ul>
+  <li>
+   <p>
+    Options like
+    <span class="pre">
+     --open-in-ui
+    </span>
+    do not expect any value to be set. These options should not be passed any value.
+   </p>
+  </li>
+  <li>
+   <p>
+    Options like
+    <span class="pre">
+     --section
+    </span>
+    can be passed multiple times in the command line. These options should be written only once under a general-mode with all required values seperated by comma as shown below. Explicitly setting values for these options will not overwrite the config file values. Instead, all values will be composed together and set to the option.
+   </p>
+   <pre>[&lt;general-mode&gt;]
+&lt;parameter&gt;=&lt;value1&gt;,&lt;value2&gt;,...
+</pre>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.3.8.
+  </span>
+  Kernel Renaming
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#kernel-renaming" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  In some cases, it gets difficult to distinguish between results using the kernel function or mangled name.
+However, demangled names can be quite long and complex to understand. To handle such cases, kernel demangled names are auto-simplified to some extent.
+To see original kernel demangled names, disable kernel renaming using
+  <span class="pre">
+   --rename-kernels
+  </span>
+  <span class="pre">
+   off
+  </span>
+  option.
+If a simplified kernel demangled name turns out to be not useful, you can rename it through the configuration file.
+A kernel renaming configuration file should be a YAML file written in the following format:
+ </p>
+ <pre>-
+ - Original: mergeRanksAndIndicesKernel(unsigned int *, unsigned int *, unsigned int, unsigned int, unsigned int)
+ - Renamed: Merge Rank Kernel
+-
+ - Original: void mergeSortSharedKernel&lt;(unsigned int)1&gt;(unsigned int *, unsigned int *, unsigned int *, unsigned int *, unsigned int)
+ - Renamed: Merge Sort Kernel
+</pre>
+ By default, kernel renaming config file with name
+ <span class="pre">
+  ncu-kernel-renames.yaml
+ </span>
+ is searched in the similar way as
+ <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#config-file">
+  config file
+ </a>
+ is searched.
+ To avoid manually writing demangled names in the config file, one can use
+ <span class="pre">
+  --rename-kernels-export
+ </span>
+ <span class="pre">
+  on
+ </span>
+ option to export demangled names from the report to the config file with mappings for renaming them.
+ Using the
+ <span class="pre">
+  --rename-kernels-path
+ </span>
+ <span class="pre">
+  &lt;path&gt;
+ </span>
+ option, default path and name of the file used while importing renamed names and exporting can be overwritten.
+ Note that renamed names can later be used to filter kernels in the report using
+ <span class="pre">
+  --kernel-name
+ </span>
+ and
+ <span class="pre">
+  --kernel-id
+ </span>
+ options.
+ <h2>
+  <span class="section-number">
+   4.4.
+  </span>
+  Command Line Options
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  For long command line options, passing a unique initial substring can be sufficient.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.4.1.
+  </span>
+  General
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#general" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id19">
+  <span class="caption-text">
+   Table 1. General Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id19" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     h,help
+    </p>
+   </td>
+   <td>
+    <p>
+     Show help message
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     v,version
+    </p>
+   </td>
+   <td>
+    <p>
+     Show version information
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     mode
+    </p>
+   </td>
+   <td>
+    <p>
+     Select the mode of interaction with the target application
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       launch-and-attach:
+       Launch the target application and immediately attach for profiling.
+      </p>
+     </li>
+     <li>
+      <p>
+       launch:
+       Launch the target application and suspend in the first intercepted API call, wait for tool to attach.
+      </p>
+     </li>
+     <li>
+      <p>
+       attach:
+       Attach to a previously launched application to which no other tool is attached.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     launch-and-attach
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     p,port
+    </p>
+   </td>
+   <td>
+    <p>
+     Base port used for connecting to target applications for
+     <span class="pre">
+      --mode
+     </span>
+     <span class="pre">
+      launch/attach
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     49152
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     max-connections
+    </p>
+   </td>
+   <td>
+    <p>
+     Maximum number of ports for connecting to target applications
+    </p>
+   </td>
+   <td>
+    <p>
+     64
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     config-file
+    </p>
+   </td>
+   <td>
+    <p>
+     Use config.ncu-cfg config file to set parameters. Searches in the current working directory, in â$HOME/.config/NVIDIA Corporationâ on Linux and in â%APPDATA%\NVIDIA Corporation\â on Windows.
+    </p>
+   </td>
+   <td>
+    <p>
+     on
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     config-file-path
+    </p>
+   </td>
+   <td>
+    <p>
+     Override the default path for config file.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.2.
+  </span>
+  Launch
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#launch" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id20">
+  <span class="caption-text">
+   Table 2. Launch Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id20" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     check-exit-code
+    </p>
+   </td>
+   <td>
+    <p>
+     Check the application exit code and print an error if it is different than 0. If set,
+     <span class="pre">
+      --replay-mode
+     </span>
+     <span class="pre">
+      application
+     </span>
+     will stop after the first pass if the exit code is not 0.
+    </p>
+   </td>
+   <td>
+    <p>
+     yes
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     injection-path-64
+    </p>
+   </td>
+   <td>
+    <p>
+     Override the default path for the injection libraries. The injection libraries are used by the tools to intercept relevant APIs (like CUDA or NVTX).
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     preload-library
+    </p>
+   </td>
+   <td>
+    <p>
+     Prepend a shared library to be loaded by the application before the injection libraries. This option can be given multiple times and the libraries will be loaded in the order they were specified.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     call-stack
+    </p>
+   </td>
+   <td>
+    <p>
+     Enable CPU Call Stack collection.
+    </p>
+   </td>
+   <td>
+    <p>
+     false
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     call-stack-type
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the call stack type(s) that should be collected. More than one type may be specified.
+Implies
+     âcall-stack
+     .
+    </p>
+    <p>
+     Note that Python call stack collection requires CPython version 3.9 or later.
+    </p>
+   </td>
+   <td>
+    <p>
+     native
+    </p>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      --call-stack-type
+     </span>
+     <span class="pre">
+      native
+     </span>
+     <span class="pre">
+      --call-stack-type
+     </span>
+     <span class="pre">
+      python
+     </span>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvtx
+    </p>
+   </td>
+   <td>
+    <p>
+     Enable NVTX support for tools.
+    </p>
+   </td>
+   <td>
+    <p>
+     false
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     target-processes
+    </p>
+   </td>
+   <td>
+    <p>
+     Select the processes you want to profile. Available modes are:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       application-only
+       Profile only the root application process.
+      </p>
+     </li>
+     <li>
+      <p>
+       all
+       Profile the application and all its child processes.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     all
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     target-processes-filter
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the comma separated expressions to filter which processes are profiled.
+    </p>
+    <ul>
+     <li>
+      <p>
+       <span class="pre">
+        &lt;process
+       </span>
+       <span class="pre">
+        name&gt;
+       </span>
+       Set the exact process name to include for profiling.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        regex:&lt;expression&gt;
+       </span>
+       Set the regex to filter matching process name profiling. On shells that recognize regular expression symbols as special characters (e.g. Linux bash),
+the expression needs to be escaped with quotes, e.g.
+       <span class="pre">
+        --target-processes-filter
+       </span>
+       <span class="pre">
+        regex:".*Process"
+       </span>
+       .
+      </p>
+      <p>
+       When using
+       <span class="pre">
+        regex:
+       </span>
+       , the expression must not include any commas.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        exclude:&lt;process
+       </span>
+       <span class="pre">
+        name&gt;
+       </span>
+       Set the exact process name to exclude for profiling.
+      </p>
+     </li>
+     <li>
+      <p>
+       exclude-tree:&lt;process name&gt; Set the exact process name to exclude for profiling and further process tracking. None of its child processes will be profiled, even if they match a positive filter.
+This option is not available on Windows.
+      </p>
+     </li>
+    </ul>
+    <p>
+     The executable name part of the process will be considered in the match. Processing of filters stops at the first match.
+If any positive filter is specified, no process that is not matching a positive filter is profiled.
+    </p>
+   </td>
+   <td>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      --target-processes-filter
+     </span>
+     <span class="pre">
+      MatrixMul
+     </span>
+     Filter all processes having executable name exactly as âMatrixMulâ.
+    </p>
+    <p>
+     <span class="pre">
+      --target-processes-filter
+     </span>
+     <span class="pre">
+      regex:Matrix
+     </span>
+     Filter all processes that include the string âMatrixâ in their executable name, e.g. âMatrixMulâ and âMatrixAddâ.
+    </p>
+    <p>
+     <span class="pre">
+      --target-processes-filter
+     </span>
+     <span class="pre">
+      MatrixMul,MatrixAdd
+     </span>
+     Filter all processes having executable name exactly as âMatrixMulâ or âMatrixAddâ.
+    </p>
+    <p>
+     <span class="pre">
+      --target-processes-filter
+     </span>
+     <span class="pre">
+      exclude:MatrixMul.exe
+     </span>
+     Exclude only âMatrixMul.exeâ.
+    </p>
+    <p>
+     <span class="pre">
+      --target-processes-filter
+     </span>
+     <span class="pre">
+      exclude-tree:ChildLauncher,ParentProcess
+     </span>
+     Exclude âChildLauncherâ and all its sub-processes.
+Include (only) âParentProcessâ, but not if itâs a child of âChildLauncherâ.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     support-32bit
+    </p>
+   </td>
+   <td>
+    <p>
+     Support profiling processes launched from 32-bit applications. This option is only available on x86_64 Linux. On Windows, tracking 32-bit applications is enabled by default.
+    </p>
+   </td>
+   <td>
+    <p>
+     no
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     null-stdin
+    </p>
+   </td>
+   <td>
+    <p>
+     Launch the application with â/dev/nullâ as its standard input. This avoids applications reading from standard input being stopped by
+     <span class="pre">
+      SIGTTIN
+     </span>
+     signals and hanging when running as backgrounded processes.
+    </p>
+   </td>
+   <td>
+    <p>
+     false
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.3.
+  </span>
+  Attach
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#attach" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id21">
+  <span class="caption-text">
+   Table 3. Attach Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id21" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     hostname
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the hostname or IP address for connecting to the machine on which the target application is running. When attaching to a local target application, use 127.0.0.1.
+    </p>
+   </td>
+   <td>
+    <p>
+     127.0.0.1
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.4.
+  </span>
+  Profile
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#profile" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id22">
+  <span class="caption-text">
+   Table 4. Profile Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id22" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default/Examples
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     devices
+    </p>
+   </td>
+   <td>
+    <p>
+     List the GPU devices to enable profiling on, separated by comma.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id6">
+      1
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     All devices
+    </p>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      --devices
+     </span>
+     <span class="pre">
+      0,2
+     </span>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     filter-mode
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the filtering mode for kernel launches. Available modes:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       global:
+       Apply provided launch filters on kernel launches collectively.
+      </p>
+     </li>
+     <li>
+      <p>
+       per-gpu:
+       Apply provided launch filters on kernel launches separately on each device. Effective launch filters for this mode are
+       <span class="pre">
+        --launch-count
+       </span>
+       and
+       <span class="pre">
+        --launch-skip
+       </span>
+      </p>
+     </li>
+     <li>
+      <p>
+       per-launch-config:
+       Apply kernel filters and launch filters on kernel launches separately for each GPU launch parameter i.e. Grid Size, Block Size and Shared Memory.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     global
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     kernel-id
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the identifier to use for matching kernels. If the kernel does not match the identifier, it will be ignored for profiling.
+    </p>
+    <p>
+     The identifier must be of the following format:
+     context-id:stream-id:[name-operator:]kernel-name:invocation-nr
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       context-id
+       is the CUDA context ID or regular expression to match the NVTX name.
+      </p>
+     </li>
+     <li>
+      <p>
+       stream-id
+       is the CUDA stream ID or regular expression to match the NVTX name.
+      </p>
+     </li>
+     <li>
+      <p>
+       name-operator
+       is an optional operator to
+       kernel-name
+       . Currently,
+       regex
+       is the only supported operator.
+      </p>
+     </li>
+     <li>
+      <p>
+       kernel-name
+       is the expression to match the kernel name. By default, this is a full, literal match to what is specified by
+       <span class="pre">
+        --kernel-name-base
+       </span>
+       . When specifying the optional
+       regex
+       name operator, this is a partial regular expression match to what is specified by
+       <span class="pre">
+        --kernel-name-base
+       </span>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       invocation-nr
+       is the Nâth invocation of this kernel function. Multiple invocations can also be specified using regular expressions.
+      </p>
+     </li>
+    </ul>
+    <p>
+     If the context/stream ID is a positive number, it will be strictly matched against the CUDA context/stream ID. Otherwise it will be treated as a regular expression and matched against the context/stream name specified using the NVTX library.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id7">
+      1
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      --kernel-id
+     </span>
+     <span class="pre">
+      ::foo:2
+     </span>
+     For kernel âfooâ, match the second invocation.
+    </p>
+    <p>
+     <span class="pre">
+      --kernel-id
+     </span>
+     <span class="pre">
+      :::".*5|3"
+     </span>
+     For all kernels, match the third invocation, and all for which the invocation number ends in â5â.
+    </p>
+    <p>
+     <span class="pre">
+      --kernel-id
+     </span>
+     <span class="pre">
+      ::regex:^.*foo$:
+     </span>
+     Match all kernels ending in âfooâ.
+    </p>
+    <p>
+     <span class="pre">
+      --kernel-id
+     </span>
+     <span class="pre">
+      ::regex:^(?!foo):
+     </span>
+     Match all kernels except those starting with âfooâ. Note that depending on your OS and shell, `
+you might need to quote the expression, e.g. using single quotes in Linux
+     bash
+     :
+     <span class="pre">
+      --kernel-id
+     </span>
+     <span class="pre">
+      ::regex:'^(?!foo)':
+     </span>
+    </p>
+    <p>
+     <span class="pre">
+      --kernel-id
+     </span>
+     <span class="pre">
+      1:2::7
+     </span>
+     Match all seventh kernel invocations on context 1, stream 2.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     k,kernel-name
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the expression to use when matching kernel names.
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       <span class="pre">
+        &lt;kernel
+       </span>
+       <span class="pre">
+        name&gt;
+       </span>
+       Set the kernel name for an exact match.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        regex:&lt;expression&gt;
+       </span>
+       Set the regex to use for matching the kernel name. On shells that recognize regular expression symbols as special characters (e.g. Linux bash), the expression needs to be escaped with quotes, e.g.
+       <span class="pre">
+        --kernel-name
+       </span>
+       <span class="pre">
+        regex:".*Foo"
+       </span>
+       .
+      </p>
+     </li>
+    </ul>
+    <p>
+     If the kernel name or the provided expression do not match, it will be ignored for profiling.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id8">
+      1
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      -k
+     </span>
+     <span class="pre">
+      foo
+     </span>
+     Match all kernels named exactly âfooâ.
+    </p>
+    <p>
+     <span class="pre">
+      -k
+     </span>
+     <span class="pre">
+      regex:foo
+     </span>
+     Match all kernels that include the string âfooâ, e.g. âfooâ and âfooBarâ.
+    </p>
+    <p>
+     <span class="pre">
+      -k
+     </span>
+     <span class="pre">
+      regex:"foo|bar"
+     </span>
+     Match all kernels including the strings âfooâ or âbarâ, e.g. âfooâ, âfoobarâ, â_bar2â.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     kernel-name-base
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the basis for
+     <span class="pre">
+      --kernel-name
+     </span>
+     , and
+     <span class="pre">
+      --kernel-id
+     </span>
+     kernel-name.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id9">
+      1
+     </a>
+     Options are:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       function:
+       Function name without parameters, templates etc. e.g.
+       <span class="pre">
+        dmatrixmul
+       </span>
+      </p>
+     </li>
+     <li>
+      <p>
+       demangled:
+       Demangled function name, including parameters, templates, etc. e.g.
+       <span class="pre">
+        dmatrixmul(float*,int,int)
+       </span>
+       . Use
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#kernel-renaming">
+        Kernel Renaming
+       </a>
+       to rename the demangled name.
+      </p>
+     </li>
+     <li>
+      <p>
+       mangled:
+       Mangled function name. e.g.
+       <span class="pre">
+        _Z10dmatrixmulPfiiS_iiS_
+       </span>
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     function
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     rename-kernels
+    </p>
+   </td>
+   <td>
+    <p>
+     Perform simplification on the kernel demangled names. Rename demangled names using a config file. See
+     <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#kernel-renaming">
+      Kernel Renaming
+     </a>
+     for more details.
+    </p>
+   </td>
+   <td>
+    <p>
+     on
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     rename-kernels-export
+    </p>
+   </td>
+   <td>
+    <p>
+     Export demangled names from the report to a new file and specify mappings for renaming them. Use
+     <span class="pre">
+      --rename-kernels-path
+     </span>
+     option to specify the export file path.
+    </p>
+   </td>
+   <td>
+    <p>
+     off
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     rename-kernels-path
+    </p>
+   </td>
+   <td>
+    <p>
+     Override the default path of the configuration file which should be used while importing renamed kernels or exporting demangled names. Only valid while using
+     <span class="pre">
+      --rename-kernels
+     </span>
+     or
+     <span class="pre">
+      --rename-kernels-export
+     </span>
+     .
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     c,launch-count
+    </p>
+   </td>
+   <td>
+    <p>
+     Limit the number of profiled kernel launches. The count is only incremented for launches that match the kernel filters.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id10">
+      1
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     s,launch-skip
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the number of kernel launches to skip before starting to profile kernels. The number takes into account only launches that match the kernel filters.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id11">
+      1
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     launch-skip-before-match
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the number of kernel launches to skip before starting to profile. The count is incremented for all launches, regardless of the kernel filters.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id12">
+      1
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     range-filter
+    </p>
+   </td>
+   <td>
+    <p>
+     Filter to profile specified instance(s) of matching NVTX ranges or start/stop ranges created through cu(da)ProfilerStart/Stop APIs.
+    </p>
+    <p>
+     Specify in format
+     [yes/no/on/off]:[start/stop range instance(s)]:[NVTX range instance(s)]
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       [yes/no/on/off] : default is âno/offâ. If set to âyes/onâ then NVTX range numbering starts from 1 inside every start/stop range.
+      </p>
+     </li>
+     <li>
+      <p>
+       provide numbers in regex form e.g, [2-4] or 2|3|4 to profile 2nd, 3rd and 4th instance of the matching range.
+      </p>
+     </li>
+     <li>
+      <p>
+       NVTX range numbers will be counted for matching range provided using ânvtx-include.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      --range-filter
+     </span>
+     <span class="pre">
+      :2:3
+     </span>
+     <span class="pre">
+      --nvtx-include
+     </span>
+     <span class="pre">
+      A/
+     </span>
+     Match 2nd start/stop range and also 3rd NVTX push/pop range A in the app.
+    </p>
+    <p>
+     <span class="pre">
+      --range-filter
+     </span>
+     <span class="pre">
+      yes:2:3
+     </span>
+     <span class="pre">
+      --nvtx-include
+     </span>
+     <span class="pre">
+      A/
+     </span>
+     Match 3rd NVTX push/pop range A from 2nd start/stop range.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     kill
+    </p>
+   </td>
+   <td>
+    <p>
+     Terminate the target application when the requested âlaunch-count was profiled. Allowed values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       on/off
+      </p>
+     </li>
+     <li>
+      <p>
+       yes/no
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     no
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     replay-mode
+    </p>
+   </td>
+   <td>
+    <p>
+     Mechanism used for replaying a kernel launch multiple times to collect all requested profiling data:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       kernel:
+       Replay individual kernel launches âtransparentlyâ during the execution of the application. See
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#kernel-replay">
+        Kernel Replay
+       </a>
+       for more details.
+      </p>
+     </li>
+     <li>
+      <p>
+       application:
+       Relaunch the entire application multiple times. Requires deterministic program execution. See
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#application-replay">
+        Application Replay
+       </a>
+       for more details.
+      </p>
+     </li>
+     <li>
+      <p>
+       range:
+       Replay ranges of CUDA API calls and kernel launches âtransparentlyâ during the execution of the application. Ranges must be defined using
+       <span class="pre">
+        cu(da)ProfilerStart/Stop
+       </span>
+       API pairs or
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvtx-filtering">
+        NVTX expressions
+       </a>
+       . See
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#range-replay">
+        Range Replay
+       </a>
+       for more details.
+      </p>
+     </li>
+     <li>
+      <p>
+       app-range:
+       Profile ranges without API capture by relaunching the entire application multiple times. Requires deterministic program execution. Ranges must be defined using
+       <span class="pre">
+        cu(da)ProfilerStart/Stop
+       </span>
+       API pairs or
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvtx-filtering">
+        NVTX expressions
+       </a>
+       . See
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#application-range-replay">
+        Application Range Replay
+       </a>
+       for more details.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     kernel
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     app-replay-buffer
+    </p>
+   </td>
+   <td>
+    <p>
+     Application replay buffer location.
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       file:
+       Replay pass data is buffered in a temporary file. The report is created after profiling completed. This mode is more scalable, as the amount of required memory does not scale with the number of profiled kernels.
+      </p>
+     </li>
+     <li>
+      <p>
+       memory:
+       Replay pass data is buffered in memory, and the report is created while profiling. This mode can result in better performance if the filesystem is slow, but the amount of required memory scales with the number of profiled kernels.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     file
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     app-replay-match
+    </p>
+   </td>
+   <td>
+    <p>
+     Application replay kernel matching strategy. For all options, kernels are matched on a per-process and per-device (GPU) basis. Below options are used to configure the applied strategy in more detail.
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       name:
+       Kernels are matched in the following order: 1. (mangled) name, 2. order of execution
+      </p>
+     </li>
+     <li>
+      <p>
+       grid:
+       Kernels are matched in the following order: 1. (mangled) name, 2. CUDA grid/block size, 3. order of execution
+      </p>
+     </li>
+     <li>
+      <p>
+       all:
+       Kernels are matched in the following order: 1. (mangled) name, 2. CUDA grid/block size, 3. CUDA context ID, 4. CUDA stream ID, 5. order of execution
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     grid
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     app-replay-mode
+    </p>
+   </td>
+   <td>
+    <p>
+     Application replay kernel matching mode:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       strict:
+       Requires all kernels to match across all replay passes.
+      </p>
+     </li>
+     <li>
+      <p>
+       relaxed:
+       Produces results only for kernels that could be matched across replay passes.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     strict
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     range-replay-options
+    </p>
+   </td>
+   <td>
+    <p>
+     Range replay options, separated by comma. Below options are supported:
+    </p>
+    <ul>
+     <li>
+      <p>
+       enable-greedy-sync
+      </p>
+      <p>
+       Insert ctx sync for applicable deferred APIs during capture.
+      </p>
+     </li>
+     <li>
+      <p>
+       disable-host-restore
+      </p>
+      <p>
+       Disable restoring device-written host allocations.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     none
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     graph-profiling
+    </p>
+   </td>
+   <td>
+    <p>
+     CUDA graph profiling mode:
+    </p>
+    <ul>
+     <li>
+      <p>
+       node
+      </p>
+      <p>
+       Profile individual kernel nodes as regular CUDA kernels.
+      </p>
+     </li>
+     <li>
+      <p>
+       graph
+      </p>
+      <p>
+       Profile entire graphs as one workload (but disable profiling of individual graph kernel nodes). See the
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#graph-profiling">
+        Kernel Profiling Guide
+       </a>
+       for more information on this mode.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     node
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     list-sections
+    </p>
+   </td>
+   <td>
+    <p>
+     List all sections found in the searched section folders and exit.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     section
+    </p>
+   </td>
+   <td>
+    <p>
+     Add a section identifier to collect in one of the following ways:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       <span class="pre">
+        &lt;section
+       </span>
+       <span class="pre">
+        identifier&gt;
+       </span>
+       Set the section identifier for an exact match.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        regex:&lt;expression&gt;
+       </span>
+       Regular expression allows matching full section identifier. For example,
+       <span class="pre">
+        .*Stats
+       </span>
+       , matches all sections ending with âStatsâ. On shells that recognize regular expression symbols as special characters (e.g. Linux bash), the expression needs to be escaped with quotes, e.g.
+       <span class="pre">
+        --section
+       </span>
+       <span class="pre">
+        "regex:.*Stats"
+       </span>
+       .
+      </p>
+     </li>
+    </ul>
+    <p>
+     This option is ignored when used with
+     <span class="pre">
+      --import
+     </span>
+     and
+     <span class="pre">
+      --page
+     </span>
+     <span class="pre">
+      raw
+     </span>
+     or
+     <span class="pre">
+      --page
+     </span>
+     <span class="pre">
+      source
+     </span>
+     .
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id13">
+      1
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     If no
+     <span class="pre">
+      --section
+     </span>
+     options are given, the sections associated with the
+     <span class="pre">
+      basic
+     </span>
+     set are collected. If no sets are found, all sections are collected.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     section-folder
+    </p>
+   </td>
+   <td>
+    <p>
+     Add a non-recursive search path for
+     <span class="pre">
+      .section
+     </span>
+     and
+     <span class="pre">
+      .py
+     </span>
+     rule files. Section files in this folder will be made available to the
+     <span class="pre">
+      --section
+     </span>
+     option. Individual files from directories including an
+     <span class="pre">
+      .ncu-ignore
+     </span>
+     file are ignored.
+    </p>
+   </td>
+   <td>
+    <p>
+     If no
+     <span class="pre">
+      --section-folder
+     </span>
+     options are given, the
+     <span class="pre">
+      sections
+     </span>
+     folder is added by default.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     section-folder-recursive
+    </p>
+   </td>
+   <td>
+    <p>
+     Add a recursive search path for
+     <span class="pre">
+      .section
+     </span>
+     and
+     <span class="pre">
+      .py
+     </span>
+     rule files. Section files in this folder and all folders below will be made available to the
+     <span class="pre">
+      --section
+     </span>
+     option. Individual files from directories including an
+     <span class="pre">
+      .ncu-ignore
+     </span>
+     file are ignored.
+    </p>
+   </td>
+   <td>
+    <p>
+     If no
+     <span class="pre">
+      --section-folder
+     </span>
+     options are given, the
+     <span class="pre">
+      sections
+     </span>
+     folder is added by default.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     list-rules
+    </p>
+   </td>
+   <td>
+    <p>
+     List all rules found in the searched section folders and exit.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     apply-rules
+    </p>
+   </td>
+   <td>
+    <p>
+     Apply active and applicable rules to each profiling result. Use
+     <span class="pre">
+      --rule
+     </span>
+     to limit which rules to apply. Allowed values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       on/off
+      </p>
+     </li>
+     <li>
+      <p>
+       yes/no
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     yes
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     rule
+    </p>
+   </td>
+   <td>
+    <p>
+     Add a rule identifier to apply. Implies
+     <span class="pre">
+      --apply-rules
+     </span>
+     <span class="pre">
+      yes
+     </span>
+     .
+    </p>
+   </td>
+   <td>
+    <p>
+     If no
+     <span class="pre">
+      --rule
+     </span>
+     options are given, all applicable rules in the
+     <span class="pre">
+      sections
+     </span>
+     folder are applied.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     import-source
+    </p>
+   </td>
+   <td>
+    <p>
+     If available from -lineinfo, correlated CUDA source files are permanently imported into the report. Allowed values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       on/off
+      </p>
+     </li>
+     <li>
+      <p>
+       yes/no
+      </p>
+     </li>
+    </ul>
+    <p>
+     Use
+     <span class="pre">
+      --source-folders
+     </span>
+     option to provide missing source files.
+    </p>
+   </td>
+   <td>
+    <p>
+     no
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     source-folders
+    </p>
+   </td>
+   <td>
+    <p>
+     Add comma separated recursive search paths for missing CUDA source files to import into the report.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     list-metrics
+    </p>
+   </td>
+   <td>
+    <p>
+     List all metrics collected from active sections. If the list of active sections is restricted using the
+     <span class="pre">
+      --section
+     </span>
+     option, only metrics from those sections will be listed.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     query-metrics
+    </p>
+   </td>
+   <td>
+    <p>
+     Query available metrics for the devices on system. Use
+     <span class="pre">
+      --devices
+     </span>
+     and
+     <span class="pre">
+      --chips
+     </span>
+     to filter which devices to query. Note that by default, listed metric names need to be appended a valid suffix in order for them to become valid metrics. See
+     <span class="pre">
+      --query-metrics-mode
+     </span>
+     for how to get the list of valid suffixes, or check the
+     <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-structure">
+      Kernel Profiling Guide
+     </a>
+     .
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     query-metrics-mode
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the mode for querying metrics. Implies
+     <span class="pre">
+      --query-metrics
+     </span>
+     . Available modes:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       base:
+       Only the base names of the metrics.
+      </p>
+     </li>
+     <li>
+      <p>
+       suffix:
+       Suffix names for the base metrics. This gives the list of all metrics derived from the base metrics. Use
+       <span class="pre">
+        --metrics
+       </span>
+       to specify the base metrics to query.
+      </p>
+     </li>
+     <li>
+      <p>
+       all:
+       Full names for all metrics. This gives the list of all base metrics and their suffix metrics.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     base
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     query-metrics-collection
+    </p>
+   </td>
+   <td>
+    <p>
+     Set which metric collection kind to query. Implies
+     <span class="pre">
+      --query-metrics
+     </span>
+     . Available collections:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       profiling:
+       Query metrics available for profiling.
+      </p>
+     </li>
+     <li>
+      <p>
+       pmsampling:
+       Query metrics available for
+       <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#pm-sampling">
+        PM sampling
+       </a>
+       .
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     profiling
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     metrics
+    </p>
+   </td>
+   <td>
+    <p>
+     Specify all metrics to be profiled, separated by comma. If no
+     <span class="pre">
+      --section
+     </span>
+     options are given, only the temporary section containing all metrics listed using this option is collected. If
+     <span class="pre">
+      --section
+     </span>
+     options are given in addition to
+     <span class="pre">
+      --metrics
+     </span>
+     , all metrics from those sections and from
+     <span class="pre">
+      --metrics
+     </span>
+     are collected.
+    </p>
+    <p>
+     Names passed to this option support the following prefixes:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       <span class="pre">
+        regex:&lt;expression&gt;
+       </span>
+       expands to all metrics that partially match the expression. Enclose the regular expression in ^â¦$ to force a full match.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        group:&lt;name&gt;
+       </span>
+       lists all metrics of the metric group with that name. See section files for valid group names.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        breakdown:&lt;metric&gt;
+       </span>
+       expands to the input metrics of the high-level throughput metric.
+      </p>
+     </li>
+     <li>
+      <p>
+       <span class="pre">
+        pmsampling:&lt;metric&gt;
+       </span>
+       collects the metric using PM sampling. Only single-pass metrics that donât require SASS-patching (_sass_) are supported. Using this prefix adds a timeline element to the reportâs details page.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Combining multiple prefixes is not supported.
+    </p>
+    <p>
+     If a metric requires a suffix to be valid, and neither
+     <span class="pre">
+      regex:
+     </span>
+     nor
+     <span class="pre">
+      group:
+     </span>
+     are used, this option automatically expands the name to all available first-level sub-metrics.
+    </p>
+    <p>
+     When importing a report,
+     <span class="pre">
+      :group
+     </span>
+     and
+     <span class="pre">
+      :breakdown
+     </span>
+     are not supported.
+    </p>
+    <p>
+     When using
+     <span class="pre">
+      regex:
+     </span>
+     , the expression must not include any commas.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id14">
+      1
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     disable-extra-suffixes
+    </p>
+   </td>
+   <td>
+    <p>
+     Disable the collection of extra suffixes (avg, min, max, sum) for all metrics. Only collect what is explicity specified.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     list-chips
+    </p>
+   </td>
+   <td>
+    <p>
+     List all supported chips that can be used with
+     <span class="pre">
+      --chips
+     </span>
+     .
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     chips
+    </p>
+   </td>
+   <td>
+    <p>
+     Specify the chips for querying metrics, separated by comma.
+    </p>
+   </td>
+   <td>
+    <p>
+     Examples
+    </p>
+    <p>
+     <span class="pre">
+      --chips
+     </span>
+     <span class="pre">
+      gv100,tu102
+     </span>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     profile-from-start
+    </p>
+   </td>
+   <td>
+    <p>
+     Set if application should be profiled from its start. Allowed values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       on/off
+      </p>
+     </li>
+     <li>
+      <p>
+       yes/no
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     yes
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     disable-profiler-start-stop
+    </p>
+   </td>
+   <td>
+    <p>
+     Disable profiler start/stop. When enabled,
+     <span class="pre">
+      cu(da)ProfilerStart/Stop
+     </span>
+     API calls are ignored.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     quiet
+    </p>
+   </td>
+   <td>
+    <p>
+     Suppress all profiling output.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     verbose
+    </p>
+   </td>
+   <td>
+    <p>
+     Make profiler output more verbose.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     cache-control
+    </p>
+   </td>
+   <td>
+    <p>
+     Control the behavior of the GPU caches during profiling. Allowed values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       all:
+       All GPU caches are flushed before each kernel replay iteration during profiling. While metric values in the execution environment of the application might be slightly different without invalidating the caches, this mode offers the most reproducible metric results across the replay passes and also across multiple runs of the target application.
+      </p>
+     </li>
+     <li>
+      <p>
+       none:
+       No GPU caches are flushed during profiling. This can improve performance and better replicates the application behavior if only a single kernel replay pass is necessary for metric collection. However, some metric results will vary depending on prior GPU work, and between replay iterations. This can lead to inconsistent and out-of-bounds metric values.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     all
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     clock-control
+    </p>
+   </td>
+   <td>
+    <p>
+     Control the behavior of the GPU clocks during profiling. Allowed values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       base:
+       GPC and memory clocks are locked to their respective base frequency during profiling. This has no impact on thermal throttling. Note that actual clocks might still vary, depending on the level of driver support for this feature. As an alternative, use
+       <span class="pre">
+        nvidia-smi
+       </span>
+       to lock the clocks externally and set this option to
+       <span class="pre">
+        none
+       </span>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       none:
+       No GPC or memory frequencies are changed during profiling.
+      </p>
+     </li>
+     <li>
+      <p>
+       reset:
+       Reset GPC and memory clocks for all or the selected devices and exit. Use if a previous, killed execution of ncu left the GPU clocks in a locked state.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     base
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvtx-include
+    </p>
+   </td>
+   <td>
+    <p>
+     Adds an include statement to the
+     <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvtx-filtering">
+      NVTX filter
+     </a>
+     , which allows selecting kernels to profile based on NVTX ranges.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id15">
+      1
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvtx-exclude
+    </p>
+   </td>
+   <td>
+    <p>
+     Adds an exclude statement to the
+     <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvtx-filtering">
+      NVTX filter
+     </a>
+     , which allows selecting kernels to profile based on NVTX ranges.
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn1" id="id16">
+      1
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+ <span class="brackets">
+  1
+ </span>
+ <span class="fn-backref">
+  (
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id6">
+   1
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id7">
+   2
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id8">
+   3
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id9">
+   4
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id10">
+   5
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id11">
+   6
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id12">
+   7
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id13">
+   8
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id14">
+   9
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id15">
+   10
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id16">
+   11
+  </a>
+  )
+ </span>
+ <p>
+  This filtering option is available when using
+  <span class="pre">
+   --import
+  </span>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   4.4.5.
+  </span>
+  PM Sampling
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#pm-sampling" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  These options apply to
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#overhead">
+   PM sampling
+  </a>
+  . See
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-sampling">
+   here
+  </a>
+  for options used in warp state sampling.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id23">
+  <span class="caption-text">
+   Table 5. PM Sampling Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id23" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     pm-sampling-interval
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the PM sampling interval in cycles or ns (depending on the architecture), or determine dynamically when 0.
+    </p>
+   </td>
+   <td>
+    <p>
+     0 (auto)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     pm-sampling-buffer-size
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the size of the device-sided allocation for PM sampling in bytes, or determine dynamically when 0.
+    </p>
+   </td>
+   <td>
+    <p>
+     0 (auto)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     pm-sampling-max-passes
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the maximum number of passes used for PM sampling, or determine dynamically when 0.
+    </p>
+   </td>
+   <td>
+    <p>
+     0 (auto)
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.6.
+  </span>
+  Warp Sampling
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#warp-sampling" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id24">
+  <span class="caption-text">
+   Table 6. Warp Sampling Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id24" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     warp-sampling-interval
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the sampling period in the range of [0..31]. The actual frequency is 2 ^ (5 + value) cycles. If set to âautoâ, the profiler tries to automatically determine a high sampling frequency without skipping samples or overflowing the output buffer.
+    </p>
+   </td>
+   <td>
+    <p>
+     auto
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     warp-sampling-max-passes
+    </p>
+   </td>
+   <td>
+    <p>
+     Set maximum number of passes used for sampling (see the
+     <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#overhead">
+      Kernel Profiling Guide
+     </a>
+     for more details on profiling overhead).
+    </p>
+   </td>
+   <td>
+    <p>
+     5
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     warp-sampling-buffer-size
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the size of the device-sided allocation for samples in bytes.
+    </p>
+   </td>
+   <td>
+    <p>
+     32*1024*1024
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.7.
+  </span>
+  File
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#file" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id25">
+  <span class="caption-text">
+   Table 7. File Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id25" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     log-file
+    </p>
+   </td>
+   <td>
+    <p>
+     Send all tool output to the specified file, or one of the standard channels. The file will be overwritten. If the file doesnât exist, a new one will be created.âstdoutâ as the whole file name indicates standard output channel (stdout). âstderrâ as the whole file name indicates standard error channel (stderr).â
+    </p>
+   </td>
+   <td>
+    <p>
+     If
+     <span class="pre">
+      --log-file
+     </span>
+     is not set , profile results will be printed on the console.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     o,export
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the output file for writing the profile report. If not set, a temporary file will be used which is removed afterwards. The specified name supports macro expansion. See
+     <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-file-macros">
+      File Macros
+     </a>
+     for more details.
+    </p>
+   </td>
+   <td>
+    <p>
+     If
+     <span class="pre">
+      --export
+     </span>
+     is set and no
+     <span class="pre">
+      --page
+     </span>
+     option is given, no profile results will be printed on the console.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     f,force-overwrite
+    </p>
+   </td>
+   <td>
+    <p>
+     Force overwriting all output files.
+    </p>
+   </td>
+   <td>
+    <p>
+     By default, the profiler wonât overwrite existing output files and show an error instead.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     i,import
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the input file for reading the profile results.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     open-in-ui
+    </p>
+   </td>
+   <td>
+    <p>
+     Open report in UI instead of showing result on terminal. (Only available on host platforms)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     section-folder-restore
+    </p>
+   </td>
+   <td>
+    <p>
+     Restores stock files to the default section folder or the folder specified by an accompanying
+     âsection-folder
+     option. If the operation will overwrite modified files then the
+     âforce-overwrite
+     option is required.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.8.
+  </span>
+  Console Output
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#console-output" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <table class="table-no-stripes docutils align-default" id="id26">
+  <span class="caption-text">
+   Table 8. Console Output Command Line Options
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id26" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Option
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     csv
+    </p>
+   </td>
+   <td>
+    <p>
+     Use comma-separated values as console output. Implies âprint-units base by default.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     page
+    </p>
+   </td>
+   <td>
+    <p>
+     Select the report page to print console output for. Available pages are:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       details
+       Show results grouped as sections, include rule results. Some metrics that are collected by default (e.g. device attributes) are omitted if not specified explicitly in any section or using
+       <span class="pre">
+        --metrics
+       </span>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       raw
+       Show all collected metrics by kernel launch.
+      </p>
+     </li>
+     <li>
+      <p>
+       source
+       Show source. See
+       <span class="pre">
+        --print-source
+       </span>
+       to select the source view.
+      </p>
+     </li>
+     <li>
+      <p>
+       session
+       Show launch settings, session info, process info and device attributes.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     details
+     . If no
+     <span class="pre">
+      --page
+     </span>
+     option is given and
+     <span class="pre">
+      --export
+     </span>
+     is set, no results are printed to the console output.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     print-source
+    </p>
+   </td>
+   <td>
+    <p>
+     Select the source view:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       sass
+       Show SASS (assembly) instructions for each kernel launch.
+      </p>
+     </li>
+     <li>
+      <p>
+       ptx
+       Show PTX source of every cubin whose at least one kernel is profiled.
+      </p>
+     </li>
+     <li>
+      <p>
+       cuda
+       Show entire CUDA-C source file which has kernel code as per kernel launch. CLI shows CUDA source only if file exists on the host machine.
+      </p>
+     </li>
+     <li>
+      <p>
+       cuda,sass
+       Show SASS CUDA-C source correlation for each kernel launch. CLI shows CUDA source only if file exists on the host machine.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Metric correlation with source is available in
+     sass
+     , and
+     cuda,sass
+     source view. Metrics specified with
+     <span class="pre">
+      --metrics
+     </span>
+     and specified section file with
+     <span class="pre">
+      --section
+     </span>
+     are correlated. Consider restricting the number of selected metrics such that values fit into a single output row.
+    </p>
+   </td>
+   <td>
+    <p>
+     sass
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     resolve-source-file
+    </p>
+   </td>
+   <td>
+    <p>
+     Resolve CUDA source file in the
+     <span class="pre">
+      --page
+     </span>
+     <span class="pre">
+      source
+     </span>
+     output. Provide comma separated files full path.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     print-details
+    </p>
+   </td>
+   <td>
+    <p>
+     Select which part of a section should be shown in the details page output:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       header
+       Show all metrics from header of the section.
+      </p>
+     </li>
+     <li>
+      <p>
+       body
+       Show all metrics from body of the section.
+      </p>
+     </li>
+     <li>
+      <p>
+       all
+       Show all metrics from the section.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Replaces deprecated option
+     <span class="pre">
+      --details-all
+     </span>
+     .
+    </p>
+   </td>
+   <td>
+    <p>
+     header
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     print-metric-name
+    </p>
+   </td>
+   <td>
+    <p>
+     Select one of the option to show it in the Metric Name column:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       label
+       Show metric label.
+      </p>
+     </li>
+     <li>
+      <p>
+       name
+       Show metric name.
+      </p>
+     </li>
+     <li>
+      <p>
+       label-name
+       Show both metric label and metric name.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     label
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     print-units
+    </p>
+   </td>
+   <td>
+    <p>
+     Select the mode for scaling of metric units. Available modes are:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       auto
+       Show all metrics automatically scaled to the most fitting order of magnitude.
+      </p>
+     </li>
+     <li>
+      <p>
+       base
+       Show all metrics in their base unit.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     auto
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     print-fp
+    </p>
+   </td>
+   <td>
+    <p>
+     Show all numeric metrics in the console output as floating point numbers.
+    </p>
+   </td>
+   <td>
+    <p>
+     false
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     print-kernel-base
+    </p>
+   </td>
+   <td>
+    <p>
+     Set the basis for kernel name output. See
+     <span class="pre">
+      --kernel-regex-base
+     </span>
+     for options.
+    </p>
+   </td>
+   <td>
+    <p>
+     demangled
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     print-metric-instances
+    </p>
+   </td>
+   <td>
+    <p>
+     Set output mode for metrics with instance values:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       none
+       Only show GPU aggregate value.
+      </p>
+     </li>
+     <li>
+      <p>
+       values
+       Show GPU aggregate followed by all instance values.
+      </p>
+     </li>
+     <li>
+      <p>
+       details
+       Show aggregate value, followed by correlation IDs and instance values
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     none
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     print-nvtx-rename
+    </p>
+   </td>
+   <td>
+    <p>
+     Select how NVTX should be used for renaming:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       none
+       Donât use NVTX for renaming.
+      </p>
+     </li>
+     <li>
+      <p>
+       kernel
+       Rename kernels with the most recent enclosing NVTX push/pop range.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     none
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     print-rule-details
+    </p>
+   </td>
+   <td>
+    <p>
+     Print additional details for rule results, such as the triggering metrics. Currently has no effect in CSV mode.
+    </p>
+   </td>
+   <td>
+    <p>
+     false
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     print-summary
+    </p>
+   </td>
+   <td>
+    <p>
+     Select the summary output mode. Available modes are:
+    </p>
+    <ul class="simple">
+     <li>
+      <p>
+       none
+       No summary.
+      </p>
+     </li>
+     <li>
+      <p>
+       per-gpu
+       Summary for each GPU.
+      </p>
+     </li>
+     <li>
+      <p>
+       per-kernel
+       Summary for each kernel type.
+      </p>
+     </li>
+     <li>
+      <p>
+       per-nvtx
+       Summary for each NVTX context.
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     none
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.4.9.
+  </span>
+  Response File
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#response-file" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Response files can be specified by adding
+  <span class="pre">
+   @FileName
+  </span>
+  to the command line. The file name must immediately follow the
+  <span class="pre">
+   @
+  </span>
+  character. The content of each response file is inserted in place of the corresponding response file option.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.4.10.
+  </span>
+  File Macros
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#file-macros" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The file name specified with option
+  <span class="pre">
+   -o
+  </span>
+  or
+  <span class="pre">
+   --export
+  </span>
+  supports the following macro expansions. Occurrences of these macros in the report file name are replaced by the corresponding character sequence. If not specified otherwise, the macros cannot be used as part of the file path.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id27">
+  <span class="caption-text">
+   Table 9. Macro Expansions
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id27" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Macro
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     %h
+    </p>
+   </td>
+   <td>
+    <p>
+     Expands to the host name of the machine on which the command line profiler is running.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     %q{ENV_NAME}
+    </p>
+   </td>
+   <td>
+    <p>
+     Expands to the content of the variable with the given name
+     <span class="pre">
+      ENV_NAME
+     </span>
+     from the environment of the command line profiler.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     %p
+    </p>
+   </td>
+   <td>
+    <p>
+     Expands to the process ID of the command line profiler.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     %i
+    </p>
+   </td>
+   <td>
+    <p>
+     Expands to the lowest unused positive integer number that guarantees the resulting file name is not yet used. This macro can only be used once in the output file name.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     %%
+    </p>
+   </td>
+   <td>
+    <p>
+     Expands to a single
+     <span class="pre">
+      %
+     </span>
+     character in the output file name. This macro can be used in the file path and the file name.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2>
+  <span class="section-number">
+   4.5.
+  </span>
+  Environment Variables
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#environment-variables" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The following environment variables can be set before launching NVIDIA Nsight Compute CLI, or the UI, respectively.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id28">
+  <span class="caption-text">
+   Table 10. Environment Variables
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id28" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Name
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Description
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Default/Values
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     NV_COMPUTE_PROFILER_DISABLE_STOCK_FILE_DEPLOYMENT
+    </p>
+   </td>
+   <td>
+    <p>
+     Disable file deployment to the versioned
+     <span class="pre">
+      Sections
+     </span>
+     directory, using section and rule files from the stock directory within the installation instead.
+    </p>
+    <p>
+     By default, the versioned directory from the userâs documents folder is used to ensure that any potential user updates are taken into account.
+    </p>
+    <p>
+     Only supported in the NVIDIA Nsight Compute CLI.
+    </p>
+   </td>
+   <td>
+    <p>
+     Default: unset
+    </p>
+    <p>
+     Set to â1â to disable deployment.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     NV_COMPUTE_PROFILER_LOCAL_CONNECTION_OVERRIDE
+    </p>
+   </td>
+   <td>
+    <p>
+     Override the default local connection mechanism between frontend and profiled target processes. The default mechanism is platform-dependent. This should only be used if there are connection problems between frontend and target processes in a local launch.
+    </p>
+   </td>
+   <td>
+    <p>
+     Default: unset (use default mechanism)
+    </p>
+    <p>
+     Set to âudsâ to use Unix Domain Socket connections (available on Posix platforms, only). Set to âtcpâ to use TCP (available on all platforms). Set to ânamed-pipesâ to use Windows Named Pipes (available on Windows, only).
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     NV_COMPUTE_PROFILER_DISABLE_SW_PRE_PASS
+    </p>
+   </td>
+   <td>
+    <p>
+     Disable the instruction-level software (SW) metric pre-pass. When collecting SW-patched metrics, such as
+     <span class="pre">
+      inst_executed
+     </span>
+     , the pre-pass is used to determine which functions are executed as part of the kernel and should be patched. This requires a separate replay pass, and if only instruction-level SW metrics are to be collected, prevents single-pass data collection. Disabling the pre-pass can improve performance if memory save-and-restore is undesirable and application replay is not possible.
+    </p>
+   </td>
+   <td>
+    <p>
+     Default: unset (use pre-pass when applicable)
+    </p>
+    <p>
+     Set to â1â to disable pre-pass.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2>
+  <span class="section-number">
+   4.6.
+  </span>
+  Nvprof Transition Guide
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvprof-transition-guide" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  This guide provides tips for moving from nvprof to NVIDIA Nsight Compute CLI. NVIDIA Nsight Compute CLI tries to provide as much feature and usage parity as possible with nvprof, but some features are now covered by different tools and some command line options have changed their name or meaning.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.6.1.
+  </span>
+  Trace
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#trace" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul>
+  <li>
+   <p>
+    GPU and API trace
+   </p>
+   <p>
+    NVIDIA Nsight Compute CLI does not support any form of tracing GPU or API activities. This functionality is covered by
+    <a class="reference external" href="https://developer.nvidia.com/nsight-systems">
+     NVIDIA Nsight Systems
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.6.2.
+  </span>
+  Metric Collection
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#metric-collection" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul>
+  <li>
+   <p>
+    Finding available metrics
+   </p>
+   <p>
+    For nvprof, you can use
+    <span class="pre">
+     --query-metrics
+    </span>
+    to see the list of metrics available for the current devices on your machine. You can also use
+    <span class="pre">
+     --devices
+    </span>
+    to filter which local devices to query. For NVIDIA Nsight Compute CLI, this functionality is the same. However, in addition, you can combine
+    <span class="pre">
+     --query-metrics
+    </span>
+    with
+    <span class="pre">
+     --chip
+    </span>
+    <span class="pre">
+     [chipname]
+    </span>
+    to query the available metrics for any chip, not only the ones in your present CUDA devices.
+   </p>
+   <p>
+    Note that metric names have changed between nvprof and NVIDIA Nsight Compute CLI and metric names also differ between chips after (and including) GV100 and those before. See
+    <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#nvprof-metric-comparison">
+     Metric Comparison
+    </a>
+    for a comparison of nvprof and NVIDIA Nsight Compute metric names.
+   </p>
+   <p>
+    On Volta and newer GPUs, most metrics are named using a base name and various suffixes, e.g.
+    sm__throughput.avg.pct_of_peak_sustained_elapsed
+    . The base name is
+    sm__throughput
+    and the suffix is
+    avg.pct_of_peak_sustained_elapsed
+    . This is because most metrics follow the same structure and have the same set of suffixes. You need to pass the full name to NVIDIA Nsight Compute when selecting a metric for profiling.
+   </p>
+   <p>
+    To reduce the number of metrics shown for Volta and newer GPUs when using
+    <span class="pre">
+     --query-metrics
+    </span>
+    , by default only the base names are shown. Use
+    <span class="pre">
+     --query-metrics-mode
+    </span>
+    <span class="pre">
+     suffix
+    </span>
+    <span class="pre">
+     --metrics
+    </span>
+    <span class="pre">
+     &lt;metrics
+    </span>
+    <span class="pre">
+     list&gt;
+    </span>
+    to see the full names for the chosen metrics. Use
+    <span class="pre">
+     --query-metrics-mode
+    </span>
+    <span class="pre">
+     all
+    </span>
+    to see all metrics with their full name directly.
+   </p>
+  </li>
+  <li>
+   <p>
+    Selecting which metrics to collect
+   </p>
+   <p>
+    In both nvprof and NVIDIA Nsight Compute CLI, you can specify a comma-separated list of metric names to the
+    <span class="pre">
+     --metrics
+    </span>
+    option. While nvprof would allow you to collect either a list or all metrics, in NVIDIA Nsight Compute CLI you can use regular expressions to select a more fine-granular subset of all available metrics. For example, you can use
+    <span class="pre">
+     --metrics
+    </span>
+    <span class="pre">
+     "regex:.*"
+    </span>
+    to collect all metrics, or
+    <span class="pre">
+     --metrics
+    </span>
+    <span class="pre">
+     "regex:smsp__cycles_elapsed"
+    </span>
+    to collect all âsmsp__cycles_elapsedâ metrics.
+   </p>
+  </li>
+  <li>
+   <p>
+    Selecting which events to collect
+   </p>
+   <p>
+    You cannot collect any events in NVIDIA Nsight Compute CLI.
+   </p>
+  </li>
+  <li>
+   <p>
+    Selecting which section to collect
+   </p>
+   <p>
+    In nvprof, you can either collect individual metrics or events, or a pre-configured set (all, analysis-metrics). NVIDIA Nsight Compute CLI adds the concept of a section. A section is a file that describes which metrics to collect for which GPU architecture, or architecture range. Furthermore, it defines how those metrics will be shown in both the command line output or the user interface. This includes structuring in tables, charts, histograms etc.
+   </p>
+   <p>
+    NVIDIA Nsight Compute CLI comes with a set of pre-defined sections, located in the
+    <span class="pre">
+     sections
+    </span>
+    directory. You can inspect, modify or extend those, as well as add new ones, e.g. to easily collect recurring metric sets. Each section specifies a unique
+    section identifier
+    , and there must not be two sections with the same identifier in the search path.
+   </p>
+   <p>
+    By default, the sections associated with the
+    <span class="pre">
+     basic
+    </span>
+    section set are collected. You can select one or more individual sections using the
+    <span class="pre">
+     --section
+    </span>
+    <span class="pre">
+     [section
+    </span>
+    <span class="pre">
+     identifier]
+    </span>
+    option one or more times. If no
+    <span class="pre">
+     --section
+    </span>
+    option is given, but
+    <span class="pre">
+     --metrics
+    </span>
+    is used, no sections will be collected.
+   </p>
+  </li>
+  <li>
+   <p>
+    Selecting which section set to collect
+   </p>
+   <p>
+    In nvprof, you can either collect individual metrics or events, or a pre-configured set (all, analysis-metrics). NVIDIA Nsight Compute CLI adds the concept of
+    section sets
+    . A section set defines a group of sections to collect together, in order to achieve different profiling overheads, depending on the required analysis level of detail.
+   </p>
+   <p>
+    If no other options are selected, the
+    <span class="pre">
+     basic
+    </span>
+    section set is collected. You can select one or more sets using the
+    <span class="pre">
+     --set
+    </span>
+    <span class="pre">
+     [set
+    </span>
+    <span class="pre">
+     identifier]
+    </span>
+    option one or more times. If no
+    <span class="pre">
+     --set
+    </span>
+    option is given, but
+    <span class="pre">
+     --section
+    </span>
+    or
+    <span class="pre">
+     --metrics
+    </span>
+    is used, no sets will be collected.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.6.3.
+  </span>
+  Metric Comparison
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#metric-comparison" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  NVIDIA Nsight Compute uses two groups of metrics, depending on which GPU architecture is profiled. For nvprof metrics, the following table lists the equivalent metrics in NVIDIA Nsight Compute, if available. For a detailed explanation of the structuring of PerfWorks metrics, see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-structure">
+   Metrics Structure
+  </a>
+  .
+ </p>
+ <p>
+  Metrics starting with
+  sm__&amp; are collected per-SM. Metrics starting with *smsp__
+  are collected per-SM subpartition. However, all corresponding nvprof events are collected per-SM, only. Check the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-guide">
+   Metrics Guide
+  </a>
+  for more details on these terms.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id29">
+  <span class="caption-text">
+   Table 11. Metrics Mapping Table from CUPTI to PerfWorks
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id29" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     nvprof Metric
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     PerfWorks Metric or Formula (&gt;= SM 7.0)
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     achieved_occupancy
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__warps_active.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     atomic_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_set_accesses_pipe_lsu_mem_global_op_atom.sum + l1tex__t_set_accesses_pipe_lsu_mem_global_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     atomic_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     (l1tex__t_sectors_pipe_lsu_mem_global_op_atom.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_red.sum) / (l1tex__t_requests_pipe_lsu_mem_global_op_atom.sum + l1tex__t_requests_pipe_lsu_mem_global_op_red.sum)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     branch_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_average_branch_targets_threads_uniform.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     cf_executed
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_cbu.sum + smsp__inst_executed_pipe_adu.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     cf_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     cf_issued
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     double_precision_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp64.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     dram_read_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__bytes_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     dram_read_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__bytes_read.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     dram_read_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__sectors_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     dram_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__throughput.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     dram_write_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__bytes_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     dram_write_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__bytes_write.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     dram_write_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__sectors_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     eligible_warps_per_cycle
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warps_eligible.sum.per_cycle_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_dp
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_dadd_pred_on.sum + smsp__sass_thread_inst_executed_op_dmul_pred_on.sum + smsp__sass_thread_inst_executed_op_dfma_pred_on.sum * 2
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_count_dp_add
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_dadd_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_dp_fma
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_dfma_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_count_dp_mul
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_dmul_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_hp
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_hadd_pred_on.sum + smsp__sass_thread_inst_executed_op_hmul_pred_on.sum + smsp__sass_thread_inst_executed_op_hfma_pred_on.sum * 2
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_count_hp_add
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_hadd_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_hp_fma
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_hfma_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_count_hp_mul
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_hmul_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_sp
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_fadd_pred_on.sum + smsp__sass_thread_inst_executed_op_fmul_pred_on.sum + smsp__sass_thread_inst_executed_op_ffma_pred_on.sum * 2
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_count_sp_add
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_fadd_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_sp_fma
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_ffma_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_count_sp_mul
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_fmul_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_count_sp_special
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_dp_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_ops_dadd_dmul_dfma_pred_on.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     flop_hp_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_ops_hadd_hmul_hfma_pred_on.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     flop_sp_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_ops_fadd_fmul_ffma_pred_on.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gld_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     gld_requested_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gld_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     gld_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gld_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.ratio
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     global_atomic_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_lsu_mem_global_op_atom.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     global_hit_rate
+    </p>
+   </td>
+   <td>
+    <p>
+     (l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_st_lookup_hit.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_red_lookup_hit.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_atom_lookup_hit.sum) / (l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_red.sum + l1tex__t_sectors_pipe_lsu_mem_global_op_atom.sum)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     global_load_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     global_reduction_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_lsu_mem_global_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     global_store_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_lsu_mem_global_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gst_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     gst_requested_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gst_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     gst_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gst_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.ratio
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     half_precision_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp16.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_bit_convert
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_conversion_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_compute_ld_st
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_memory_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_control
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_control_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_global_atomics
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_inst_executed_op_global_atom.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_global_loads
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_global_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_global_reductions
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_global_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_global_stores
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_global_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_local_loads
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_local_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_local_stores
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_local_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_shared_atomics
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_atom.sum + smsp__inst_executed_op_shared_atom_dot_alu.sum + smsp__inst_executed_op_shared_atom_dot_cas.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_shared_loads
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_shared_stores
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_surface_atomics
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_surface_atom.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_surface_loads
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_surface_ld.sum + smsp__inst_executed_op_shared_atom_dot_alu.sum + smsp__inst_executed_op_shared_atom_dot_cas.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_surface_reductions
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_surface_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_surface_stores
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_surface_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_tex_ops
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_texture.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_fp_16
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_fp16_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_fp_32
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_fp32_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_fp_64
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_fp64_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_integer
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_integer_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_inter_thread_communication
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_inter_thread_communication_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_issued
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_issued.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_misc
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_thread_inst_executed_op_misc_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_per_warp
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__average_inst_executed_per_warp.ratio
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_replay_overhead
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     ipc
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed.avg.per_cycle_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     issue_slot_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__issue_active.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     issue_slots
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_issued.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     issued_ipc
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_issued.avg.per_cycle_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_atomic_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     2 * ( lts__t_sectors_op_atom.sum.per_second + lts__t_sectors_op_red.sum.per_second )
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_atomic_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     2 * ( lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum )
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_global_atomic_store_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_bytes_equiv_l1sectormiss_pipe_lsu_mem_global_op_atom.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_global_load_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_bytes_equiv_l1sectormiss_pipe_lsu_mem_global_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_local_global_store_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_bytes_equiv_l1sectormiss_pipe_lsu_mem_local_op_st.sum + lts__t_bytes_equiv_l1sectormiss_pipe_lsu_mem_global_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_local_load_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_bytes_equiv_l1sectormiss_pipe_lsu_mem_local_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_read_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_read.sum.per_second + lts__t_sectors_op_atom.sum.per_second + lts__t_sectors_op_red.sum.per_second
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn2" id="id17">
+      2
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_read_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_read.sum + lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum
+     <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#fn2" id="id18">
+      2
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_surface_load_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_bytes_equiv_l1sectormiss_pipe_tex_mem_surface_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_surface_store_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_bytes_equiv_l1sectormiss_pipe_tex_mem_surface_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_tex_hit_rate
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sector_hit_rate.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_tex_read_hit_rate
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sector_op_read_hit_rate.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_tex_read_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_read.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_tex_read_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_tex_write_hit_rate
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sector_op_write_hit_rate.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_tex_write_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_write.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_tex_write_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_write_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_write.sum.per_second + lts__t_sectors_op_atom.sum.per_second + lts__t_sectors_op_red.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_write_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_write.sum + lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     ldst_executed
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     ldst_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_lsu.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     ldst_issued
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     local_hit_rate
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     local_load_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_lsu_mem_local_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     local_load_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_bytes_pipe_lsu_mem_local_op_ld.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     local_load_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     local_load_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__average_t_sectors_per_request_pipe_lsu_mem_local_op_ld.ratio
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     local_memory_overhead
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     local_store_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_lsu_mem_local_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     local_store_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     local_store_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     local_store_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__average_t_sectors_per_request_pipe_lsu_mem_local_op_st.ratio
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_data_receive_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_data_transmission_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_overhead_data_received
+    </p>
+   </td>
+   <td>
+    <p>
+     (nvlrx__bytes_data_protocol.sum / nvlrx__bytes.sum) * 100
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_overhead_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     (nvltx__bytes_data_protocol.sum / nvltx__bytes.sum) * 100
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_receive_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     nvlrx__bytes.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_total_data_received
+    </p>
+   </td>
+   <td>
+    <p>
+     nvlrx__bytes.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_total_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     nvltx__bytes.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_total_nratom_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_total_ratom_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_total_response_data_received
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_total_write_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_transmit_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     nvltx__bytes.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_user_data_received
+    </p>
+   </td>
+   <td>
+    <p>
+     nvlrx__bytes_data_user.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_user_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     nvltx__bytes_data_user.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_user_nratom_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_user_ratom_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     nvlink_user_response_data_received
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     nvlink_user_write_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     pcie_total_data_received
+    </p>
+   </td>
+   <td>
+    <p>
+     pcie__read_bytes.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     pcie_total_data_transmitted
+    </p>
+   </td>
+   <td>
+    <p>
+     pcie__write_bytes.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_load_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_load_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_load_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_store_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_store_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_store_transactions_per_request
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     single_precision_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__pipe_fma_cycles_active.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sm_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__cycles_active.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     sm_tex_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__texin_sm2tex_req_cycles_active.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     special_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_xu.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     stall_constant_memory_dependency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_imc_miss_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     stall_exec_dependency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_short_scoreboard_per_warp_active.pct + smsp__warp_issue_stalled_wait_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     stall_inst_fetch
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_no_instruction_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     stall_memory_dependency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_long_scoreboard_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     stall_memory_throttle
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_drain_per_warp_active.pct + smsp__warp_issue_stalled_lg_throttle_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     stall_not_selected
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_not_selected_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     stall_other
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_dispatch_stall_per_warp_active.pct + smsp__warp_issue_stalled_misc_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     stall_pipe_busy
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_math_pipe_throttle_per_warp_active.pct + smsp__warp_issue_stalled_mio_throttle_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     stall_sleeping
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_sleeping_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     stall_sync
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_barrier_per_warp_active.pct + smsp__warp_issue_stalled_membar_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     stall_texture
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warp_issue_stalled_tex_throttle_per_warp_active.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     surface_atomic_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_tex_mem_surface_op_atom.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     surface_load_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_tex_mem_surface_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     surface_reduction_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_tex_mem_surface_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     surface_store_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_tex_mem_surface_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sysmem_read_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_read * 32
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     sysmem_read_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_read.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sysmem_read_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     sysmem_read_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sysmem_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     sysmem_write_bytes
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_write * 32
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sysmem_write_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_write.sum.per_second
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     sysmem_write_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sysmem_write_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tensor_precision_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__pipe_tensor_op_hmma_cycles_active.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     tensor_precision_int_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__pipe_tensor_op_imma_cycles_active.avg.pct_of_peak_sustained_active (SM 7.2+)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tex_cache_hit_rate
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_sector_hit_rate.pct
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     tex_cache_throughput
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tex_cache_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__lsu_writeback_active.avg.pct_of_peak_sustained_active + l1tex__tex_writeback_active.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     tex_fu_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_tex.avg.pct_of_peak_sustained_active
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tex_sm_tex_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__f_tex2sm_cycles_active.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     tex_sm_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__mio2rf_writeback_active.avg.pct_of_peak_sustained_elapsed
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tex_utilization
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     texture_load_requests
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__t_requests_pipe_tex_mem_texture.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     warp_execution_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__thread_inst_executed_per_inst_executed.ratio
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     warp_nonpred_execution_efficiency
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__thread_inst_executed_per_inst_executed.pct
+    </p>
+   </td>
+  </tr>
+ </table>
+ <span class="brackets">
+  2
+ </span>
+ <span class="fn-backref">
+  (
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id17">
+   1
+  </a>
+  ,
+  <a href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id18">
+   2
+  </a>
+  )
+ </span>
+ <p>
+  Sector reads from reductions are added here only for compatibility to the current definition of the metric in nvprof. Reductions do not cause data to be communicated from L2 back to L1.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.6.4.
+  </span>
+  Event Comparison
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#event-comparison" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  For nvprof events, the following table lists the equivalent metrics in NVIDIA Nsight Compute, if available. For a detailed explanation of the structuring of PerfWorks metrics, see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-structure">
+   Metrics Structure
+  </a>
+  .
+ </p>
+ <p>
+  Metrics starting with
+  sm__
+  are collected per-SM. Metrics starting with
+  smsp__
+  are collected per-SM subpartition. However, all corresponding nvprof events are collected per-SM, only. Check the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-guide">
+   Metrics Guide
+  </a>
+  for more details on these terms.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id30">
+  <span class="caption-text">
+   Table 12. Events Mapping Table from CUPTI Events to PerfWorks Metrics for Compute Capability &gt;= 7.0
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#id30" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     nvprof Event
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     PerfWorks Metric or Formula (&gt;= SM 7.0)
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     active_cycles
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     active_cycles_pm
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     active_cycles_sys
+    </p>
+   </td>
+   <td>
+    <p>
+     sys__cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     active_warps
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__warps_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     active_warps_pm
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__warps_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     atom_count
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_generic_atom_dot_alu.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     elapsed_cycles_pm
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__cycles_elapsed.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     elapsed_cycles_sm
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__cycles_elapsed.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     elapsed_cycles_sys
+    </p>
+   </td>
+   <td>
+    <p>
+     sys__cycles_elapsed.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     fb_subp0_read_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__sectors_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     fb_subp1_read_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__sectors_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     fb_subp0_write_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__sectors_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     fb_subp1_write_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     dram__sectors_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     global_atom_cas
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_generic_atom_dot_cas.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gred_count
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_global_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__inst_executed.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_fma_pipe_s0
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fma.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_fma_pipe_s1
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fma.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_fma_pipe_s2
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fma.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_fma_pipe_s3
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fma.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_fp16_pipe_s0
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp16.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_fp16_pipe_s1
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp16.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_fp16_pipe_s2
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp16.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_fp16_pipe_s3
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp16.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_fp64_pipe_s0
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp64.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_fp64_pipe_s1
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp64.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_executed_fp64_pipe_s2
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp64.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     inst_executed_fp64_pipe_s3
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_pipe_fp64.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_issued1
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__inst_issued.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_read_sector_misses
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_read_lookup_miss.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_read_sector_misses
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_read_lookup_miss.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_read_sysmem_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_read_sysmem_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_read_tex_hit_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_read_lookup_hit.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_read_tex_hit_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_read_lookup_hit.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_read_tex_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_read_tex_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_read.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_total_read_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_read.sum + lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_total_read_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_read.sum + lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_total_write_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_write.sum + lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_total_write_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_write.sum + lts__t_sectors_op_atom.sum + lts__t_sectors_op_red.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_write_sector_misses
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_write_lookup_miss.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_write_sector_misses
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_op_write_lookup_miss.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_write_sysmem_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_write_sysmem_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_aperture_sysmem_op_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_write_tex_hit_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_write_lookup_hit.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_write_tex_hit_sectors
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_write_lookup_hit.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     l2_subp0_write_tex_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     l2_subp1_write_tex_sector_queries
+    </p>
+   </td>
+   <td>
+    <p>
+     lts__t_sectors_srcunit_tex_op_write.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     not_predicated_off_thread_inst_executed
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__thread_inst_executed_pred_on.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     pcie_rx_active_pulse
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     pcie_tx_active_pulse
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     prof_trigger_00
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     prof_trigger_01
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     prof_trigger_02
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     prof_trigger_03
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     prof_trigger_04
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     prof_trigger_05
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     prof_trigger_06
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     prof_trigger_07
+    </p>
+   </td>
+   <td>
+    <p>
+     n/a
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     inst_issued0
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__issue_inst0.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     sm_cta_launched
+    </p>
+   </td>
+   <td>
+    <p>
+     sm__ctas_launched.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_load
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_store
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     generic_load
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_generic_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     generic_store
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_generic_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     global_load
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_global_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     global_store
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_global_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     local_load
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_local_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     local_store
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_local_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_atom
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_atom.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_atom_cas
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__inst_executed_op_shared_atom_dot_cas.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_ld_bank_conflict
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_bank_conflicts_pipe_lsu_mem_shared_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_st_bank_conflict
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_bank_conflicts_pipe_lsu_mem_shared_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     shared_ld_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     shared_st_transactions
+    </p>
+   </td>
+   <td>
+    <p>
+     l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tensor_pipe_active_cycles_s0
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__pipe_tensor_cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     tensor_pipe_active_cycles_s1
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__pipe_tensor_cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     tensor_pipe_active_cycles_s2
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__pipe_tensor_cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     tensor_pipe_active_cycles_s3
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__pipe_tensor_cycles_active.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     thread_inst_executed
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__thread_inst_executed.sum
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     warps_launched
+    </p>
+   </td>
+   <td>
+    <p>
+     smsp__warps_launched.sum
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  <span class="section-number">
+   4.6.5.
+  </span>
+  Filtering
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#filtering" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul>
+  <li>
+   <p>
+    Filtering by kernel name
+   </p>
+   <p>
+    Both nvprof and NVIDIA Nsight Compute CLI support filtering which kernelsâ data should be collected. In nvprof, the option is
+    <span class="pre">
+     --kernels
+    </span>
+    and applies to following metric collection options. In NVIDIA Nsight Compute CLI, the option is named
+    <span class="pre">
+     --kernel-name
+    </span>
+    and applies to the complete application execution. In other words, NVIDIA Nsight Compute CLI does not currently support collecting different metrics for different kernels, unless they execute on different GPU architectures.
+   </p>
+  </li>
+  <li>
+   <p>
+    Filtering by kernel ID
+   </p>
+   <p>
+    Nvprof allows users to specify which kernels to profile using a kernel ID description, using the same
+    <span class="pre">
+     --kernels
+    </span>
+    option. In NVIDIA Nsight Compute CLI, the syntax for this kernel ID is identical, but the option is named
+    <span class="pre">
+     --kernel-id
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Filtering by device
+   </p>
+   <p>
+    Both nvprof and NVIDIA Nsight Compute CLI use
+    <span class="pre">
+     --devices
+    </span>
+    to filter the devices which to profile. In contrast to nvprof, in NVIDIA Nsight Compute CLI the option applies globally, not only to following options.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.6.6.
+  </span>
+  Output
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#output" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul>
+  <li>
+   <p>
+    API trace and summary
+   </p>
+   <p>
+    NVIDIA Nsight Compute CLI does not support any form of API-usage related output. No API data is captured during profiling.
+   </p>
+  </li>
+  <li>
+   <p>
+    Dependency analysis
+   </p>
+   <p>
+    NVIDIA Nsight Compute CLI does not support any dependency analysis. No API data is captured during profiling.
+   </p>
+  </li>
+  <li>
+   <p>
+    GPU trace
+   </p>
+   <p>
+    NVIDIA Nsight Compute CLI does not support any GPU trace output. Due to kernel replay during profiling, kernel executions are serialized, and start and end timestamps do not necessarily match those during application execution. In addition, no records for memory activities are recorded.
+   </p>
+  </li>
+  <li>
+   <p>
+    Print summary
+   </p>
+   <p>
+    While nvprof has several command line options to specify which summary information to print, NVIDIA Nsight Compute CLI uses further arguments to the
+    <span class="pre">
+     --print-summary
+    </span>
+    options. Profiling data can be summarized
+    <span class="pre">
+     per-gpu
+    </span>
+    ,
+    <span class="pre">
+     per-kernel
+    </span>
+    or
+    <span class="pre">
+     per-nvtx
+    </span>
+    context.
+   </p>
+  </li>
+  <li>
+   <p>
+    Kernel name demangling
+   </p>
+   <p>
+    Nvprof allows users to decide between name demangling on or off using the
+    <span class="pre">
+     --demangling
+    </span>
+    options. NVIDIA Nsight Compute CLI currently always demangles kernel names in the output. In addition, the option
+    <span class="pre">
+     --kernel-regex-base
+    </span>
+    can be used to decide which name format should be used when matching kernel names during filtering.
+   </p>
+  </li>
+  <li>
+   <p>
+    Pages
+   </p>
+   <p>
+    Nvprof has no concept of output pages, all data is shown as a list or summarized. NVIDIA Nsight Compute CLI uses
+    pages
+    to define how data should be structured and printed. Those correspond to the report pages used in the GUI variant. The option
+    <span class="pre">
+     --page
+    </span>
+    can be used to select which page to show, and
+    <span class="pre">
+     details
+    </span>
+    is selected by default. All pages also support printing in CSV format for easier post-processing, using the
+    <span class="pre">
+     --csv
+    </span>
+    option.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.6.7.
+  </span>
+  Launch and Attach
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#launch-and-attach" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul>
+  <li>
+   <p>
+    Launching a process for profiling
+   </p>
+   <p>
+    In nvprof, the application to profile is passed to the tool as a command line argument. The application must be a local executable. Alternatively, you can choose to use the tool in a
+    daemon mode
+    and profile all applicable processes on the local machine (nvprof option
+    <span class="pre">
+     --profile-all-processes
+    </span>
+    ). In nvprof, the decision to profile the complete process tree or only the root process is done via the
+    <span class="pre">
+     --profile-child-processes
+    </span>
+    flag. In NVIDIA Nsight Compute CLI, the
+    <span class="pre">
+     --target-processes
+    </span>
+    option is used for this.
+   </p>
+   <p>
+    NVIDIA Nsight Compute CLI has several modes to determine which application to collect data for. By default, the executable passed via the command line to the tool is started, connected to, and profiled. This mode is called
+    <span class="pre">
+     launch-and-attach
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Launching a process for attach
+   </p>
+   <p>
+    In contrast to nvprof, you can choose to only launch a local executable. In this mode (
+    <span class="pre">
+     --mode
+    </span>
+    <span class="pre">
+     launch
+    </span>
+    ), the process is started, connected to, but then suspended at the first CUDA API call. Subsequently, there is a third mode (
+    <span class="pre">
+     --mode
+    </span>
+    <span class="pre">
+     attach
+    </span>
+    ) to attach to any process launched using the aforementioned mode. In this case, all profiling and output options would be passed to the attaching instance of NVIDIA Nsight Compute CLI.
+   </p>
+  </li>
+  <li>
+   <p>
+    Remote profiling
+   </p>
+   <p>
+    Finally, using
+    <span class="pre">
+     launch
+    </span>
+    and
+    <span class="pre">
+     attach
+    </span>
+    , you can connect to a launched process on a remote machine, which could even run a different operating system than the local host. Use
+    <span class="pre">
+     --hostname
+    </span>
+    to select which remote host to connect to.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric-h1 rubric">
+  Notices
+ </p>
+ <p class="rubric-h2 rubric">
+  Notices
+ </p>
+ <p>
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+ </p>
+ <p>
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems without express written approval of NVIDIA Corporation.
+ </p>
+ <p class="rubric-h2 rubric">
+  Trademarks
+ </p>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jun 03, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

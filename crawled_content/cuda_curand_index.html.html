@@ -1,0 +1,450 @@
+<html><head><title>cuRAND :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" shape="rect" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/curand/index.html" shape="rect" title="cuRAND">
+  cuRAND
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/introduction.html#introduction" shape="rect">
+    Introduction
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/compatibility-and-versioning.html#compatibility-and-versioning" shape="rect">
+    1.Â Compatibility and Versioning
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#host-api-overview" shape="rect">
+    2.Â Host API Overview
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-types" shape="rect">
+      2.1.Â Generator Types
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-options" shape="rect">
+      2.2.Â Generator Options
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#seed" shape="rect">
+        2.2.1.Â Seed
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#offset" shape="rect">
+        2.2.2.Â Offset
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#order" shape="rect">
+        2.2.3.Â Order
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#return-values" shape="rect">
+      2.3.Â Return Values
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generation-functions" shape="rect">
+      2.4.Â Generation Functions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#host-api-example" shape="rect">
+      2.5.Â Host API Example
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#static-library" shape="rect">
+      2.6.Â Static Library support
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#performance-notes2" shape="rect">
+      2.7.Â Performance Notes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#thread-safety" shape="rect">
+      2.8.Â Thread Safety
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-overview" shape="rect">
+    3.Â Device API Overview
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#pseudorandom-sequences" shape="rect">
+      3.1.Â Pseudorandom Sequences
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-1" shape="rect">
+        3.1.1.Â Bit Generation with XORWOW and MRG32k3a generators
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-2" shape="rect">
+        3.1.2.Â Bit Generation with the MTGP32 generator
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-3" shape="rect">
+        3.1.3.Â Bit Generation with Philox_4x32_10 generator
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#distributions" shape="rect">
+        3.1.4.Â Distributions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#quasirandom-sequences" shape="rect">
+      3.2.Â Quasirandom Sequences
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#skip-ahead" shape="rect">
+      3.3.Â Skip-Ahead
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-for-discrete-distributions" shape="rect">
+      3.4.Â Device API for discrete distributions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#performance-notes" shape="rect">
+      3.5.Â Performance Notes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-example" shape="rect">
+      3.6.Â Device API Examples
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#thrust-and-curand-example" shape="rect">
+      3.7.Â Thrust and cuRAND Example
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#poisson-api-example" shape="rect">
+      3.8.Â Poisson API Example
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/testing.html#testing" shape="rect">
+    4.Â Testing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/modules.html#modules" shape="rect">
+    5.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/group__HOST.html#group__HOST" shape="rect">
+      5.1.Â Host API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/group__DEVICE.html#group__DEVICE" shape="rect">
+      5.2.Â Device API
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/bibliography.html#bibliography" shape="rect">
+    A.Â Bibliography
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/acknowledgements.html#acknowledgements" shape="rect">
+    B.Â Acknowledgements
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ &lt; Previous |
+ <a href="https://docs.nvidia.com/cuda/curand/introduction.html" shape="rect">
+  Next &gt;
+ </a>
+ cuRAND
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CURAND_Library.pdf" shape="rect">
+  PDF
+ </a>
+ )
+                  -
+                  
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive" shape="rect">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20cuRAND" shape="rect">
+  Send Feedback
+ </a>
+ <a name="abstract" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="topictitle2">
+  cuRAND
+ </h2>
+ <p class="shortdesc">
+  The API reference guide for cuRAND, the CUDA random number generation library.
+ </p>
+ <h1 class="title topictitle1">
+  Table of Contents
+ </h1>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/introduction.html#introduction" shape="rect">
+    Introduction
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/compatibility-and-versioning.html#compatibility-and-versioning" shape="rect">
+    1.Â Compatibility and Versioning
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#host-api-overview" shape="rect">
+    2.Â Host API Overview
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-types" shape="rect">
+      2.1.Â Generator Types
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-options" shape="rect">
+      2.2.Â Generator Options
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#seed" shape="rect">
+        2.2.1.Â Seed
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#offset" shape="rect">
+        2.2.2.Â Offset
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#order" shape="rect">
+        2.2.3.Â Order
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#return-values" shape="rect">
+      2.3.Â Return Values
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generation-functions" shape="rect">
+      2.4.Â Generation Functions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#host-api-example" shape="rect">
+      2.5.Â Host API Example
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#static-library" shape="rect">
+      2.6.Â Static Library support
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#performance-notes2" shape="rect">
+      2.7.Â Performance Notes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#thread-safety" shape="rect">
+      2.8.Â Thread Safety
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-overview" shape="rect">
+    3.Â Device API Overview
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#pseudorandom-sequences" shape="rect">
+      3.1.Â Pseudorandom Sequences
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-1" shape="rect">
+        3.1.1.Â Bit Generation with XORWOW and MRG32k3a generators
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-2" shape="rect">
+        3.1.2.Â Bit Generation with the MTGP32 generator
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-3" shape="rect">
+        3.1.3.Â Bit Generation with Philox_4x32_10 generator
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#distributions" shape="rect">
+        3.1.4.Â Distributions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#quasirandom-sequences" shape="rect">
+      3.2.Â Quasirandom Sequences
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#skip-ahead" shape="rect">
+      3.3.Â Skip-Ahead
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-for-discrete-distributions" shape="rect">
+      3.4.Â Device API for discrete distributions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#performance-notes" shape="rect">
+      3.5.Â Performance Notes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-example" shape="rect">
+      3.6.Â Device API Examples
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#thrust-and-curand-example" shape="rect">
+      3.7.Â Thrust and cuRAND Example
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#poisson-api-example" shape="rect">
+      3.8.Â Poisson API Example
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/testing.html#testing" shape="rect">
+    4.Â Testing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/modules.html#modules" shape="rect">
+    5.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/group__HOST.html#group__HOST" shape="rect">
+      5.1.Â Host API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/group__DEVICE.html#group__DEVICE" shape="rect">
+      5.2.Â Device API
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/bibliography.html#bibliography" shape="rect">
+    A.Â Bibliography
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/acknowledgements.html#acknowledgements" shape="rect">
+    B.Â Acknowledgements
+   </a>
+  </li>
+ </ul>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" shape="rect" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" shape="rect" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" shape="rect" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" shape="rect" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" shape="rect" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" shape="rect" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" shape="rect" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" shape="rect" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

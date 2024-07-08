@@ -1,0 +1,1289 @@
+<html><head><title>cuRAND :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/curand/index.html" title="cuRAND">
+  cuRAND
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/introduction.html#introduction">
+    Introduction
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/compatibility-and-versioning.html#compatibility-and-versioning">
+    1.Â Compatibility and Versioning
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#host-api-overview">
+    2.Â Host API Overview
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-types">
+      2.1.Â Generator Types
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-options">
+      2.2.Â Generator Options
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#seed">
+        2.2.1.Â Seed
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#offset">
+        2.2.2.Â Offset
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#order">
+        2.2.3.Â Order
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#return-values">
+      2.3.Â Return Values
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generation-functions">
+      2.4.Â Generation Functions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#host-api-example">
+      2.5.Â Host API Example
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#static-library">
+      2.6.Â Static Library support
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#performance-notes2">
+      2.7.Â Performance Notes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#thread-safety">
+      2.8.Â Thread Safety
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-overview">
+    3.Â Device API Overview
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#pseudorandom-sequences">
+      3.1.Â Pseudorandom Sequences
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-1">
+        3.1.1.Â Bit Generation with XORWOW and MRG32k3a generators
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-2">
+        3.1.2.Â Bit Generation with the MTGP32 generator
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#bit-generation-3">
+        3.1.3.Â Bit Generation with Philox_4x32_10 generator
+       </a>
+      </li>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#distributions">
+        3.1.4.Â Distributions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#quasirandom-sequences">
+      3.2.Â Quasirandom Sequences
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#skip-ahead">
+      3.3.Â Skip-Ahead
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-for-discrete-distributions">
+      3.4.Â Device API for discrete distributions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#performance-notes">
+      3.5.Â Performance Notes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#device-api-example">
+      3.6.Â Device API Examples
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#thrust-and-curand-example">
+      3.7.Â Thrust and cuRAND Example
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html#poisson-api-example">
+      3.8.Â Poisson API Example
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/testing.html#testing">
+    4.Â Testing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/modules.html#modules">
+    5.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/group__HOST.html#group__HOST">
+      5.1.Â Host API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/curand/group__DEVICE.html#group__DEVICE">
+      5.2.Â Device API
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/bibliography.html#bibliography">
+    A.Â Bibliography
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/curand/acknowledgements.html#acknowledgements">
+    B.Â Acknowledgements
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ <a href="https://docs.nvidia.com/cuda/curand/compatibility-and-versioning.html" shape="rect">
+  &lt; Previous
+ </a>
+ |
+ <a href="https://docs.nvidia.com/cuda/curand/device-api-overview.html" shape="rect">
+  Next &gt;
+ </a>
+ cuRAND
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CURAND_Library.pdf">
+  PDF
+ </a>
+ )
+                  -
+                   
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20cuRAND">
+  Send Feedback
+ </a>
+ <a name="host-api-overview" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="topictitle2">
+  2.Â Host API Overview
+ </h2>
+ <p class="p">
+  To use the host API, user code should include the library header file
+  curand.h
+  and dynamically link against the cuRAND library. The library uses the CUDA runtime, thus when using the static cuRAND library
+                        user needs to link against CUDA Runtime too.
+ </p>
+ <p class="p">
+  Random numbers are produced by generators. A generator in cuRAND encapsulates all the internal state necessary to produce
+                        a sequence of pseudorandom or quasirandom numbers. The normal sequence of operations is as follows:
+ </p>
+ <p class="p">
+  1. Create a new generator of the desired type (see
+  <a class="xref" href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-types" shape="rect">
+   Generator Types
+  </a>
+  ) with
+  curandCreateGenerator()
+  .
+ </p>
+ <p class="p">
+  2. Set the generator options (see
+  <a class="xref" href="https://docs.nvidia.com/cuda/curand/host-api-overview.html#generator-options" shape="rect">
+   Generator Options
+  </a>
+  ); for example, use
+  curandSetPseudoRandomGeneratorSeed()
+  to set the seed.
+ </p>
+ <p class="p">
+  3. Allocate memory on the device with
+  cudaMalloc()
+  .
+ </p>
+ <p class="p">
+  4. Generate random numbers with
+  curandGenerate()
+  or another generation function.
+ </p>
+ <p class="p">
+  5. Use the results.
+ </p>
+ <p class="p">
+  6. If desired, generate more random numbers with more calls to
+  curandGenerate()
+  .
+ </p>
+ <p class="p">
+  7. Clean up with
+  curandDestroyGenerator()
+  .
+ </p>
+ <p class="p">
+  To generate random numbers on the host CPU, in step one above call
+  curandCreateGeneratorHost()
+  , and in step three, allocate a host memory buffer to receive the results. All other calls work identically whether you are
+                        generating random numbers on the device or on the host CPU.
+ </p>
+ <p class="p">
+  It is legal to create several generators at the same time. Each generator encapsulates a separate state and is independent
+                        of all other generators. The sequence of numbers produced by each generator is deterministic. Given the same set-up parameters,
+                        the same sequence will be generated with every run of the program. Generating random numbers on the device will result in
+                        the same sequence as generating them on the host CPU.
+ </p>
+ <p class="p">
+  Note that
+  curandGenerate()
+  in step 4 above launches a kernel and returns asynchronously. If you launch another kernel in a different stream, and that
+                        kernel needs to use the results of curandGenerate(), you must either call
+  cudaThreadSynchronize()
+  or use the stream management/event management routines, to ensure that the random generation kernel has finished execution
+                        before the new kernel is launched.
+ </p>
+ <p class="p">
+  Note that it is not valid to pass a host memory pointer to a generator that is running on the device, and it is not valid
+                        to pass a device memory pointer to a generator that is running on the CPU. Behavior in these cases is undefined.
+ </p>
+ <a name="generator-types" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.1.Â Generator Types
+ </h3>
+ <p class="p">
+  Random number generators are created by passing a type to
+  curandCreateGenerator()
+  . There are nine types of random number generators in cuRAND, that fall into two categories.
+  CURAND_RNG_PSEUDO_XORWOW
+  ,
+  CURAND_RNG_PSEUDO_MRG32K3A
+  ,
+  CURAND_RNG_PSEUDO_MTGP32
+  ,
+  CURAND_RNG_PSEUDO_PHILOX4_32_10
+  and
+  CURAND_RNG_PSEUDO_MT19937
+  are pseudorandom number generators.
+  CURAND_RNG_PSEUDO_XORWOW
+  is implemented using the XORWOW algorithm, a member of the xor-shift family of pseudorandom number generators.
+  CURAND_RNG_PSEUDO_MRG32K3A
+  is a member of the Combined Multiple Recursive family of pseudorandom number generators.
+  CURAND_RNG_PSEUDO_MT19937
+  and
+  CURAND_RNG_PSEUDO_MTGP32
+  are members of the Mersenne Twister family of pseudorandom number generators.
+  CURAND_RNG_PSEUDO_MTGP32
+  has parameters customized for operation on the GPU.
+  CURAND_RNG_PSEUDO_MT19937
+  has the same parameters as CPU version, but ordering is different.
+  CURAND_RNG_PSEUDO_MT19937
+  supports only HOST API and can be used only on architecture sm_35 or higher.
+  CURAND_RNG_PHILOX4_32_10
+  is a member of Philox family, which is one of the three non-cryptographic Counter Based Random Number Generators presented
+                           on SC11 conference by D E Shaw Research. There are 4 variants of the basic SOBOLâ quasi random number generator. All of the
+                           variants generate sequences in up to 20,000 dimensions.
+  CURAND_RNG_QUASI_SOBOL32
+  ,
+  CURAND_RNG_QUASI_SCRAMBLED_SOBOL32
+  ,
+  CURAND_RNG_QUASI_SOBOL64
+  , and
+  CURAND_RNG_QUASI_SCRAMBLED_SOBOL64
+  are quasirandom number generator types.
+  CURAND_RNG_QUASI_SOBOL32
+  is a Sobolâ generator of 32-bit sequences.
+  CURAND_RNG_QUASI_SCRAMBLED_SOBOL32
+  is a scrambled Sobolâ generator of 32-bit sequences.
+  CURAND_RNG_QUASI_SOBOL64
+  is a Sobolâ generator of 64-bit sequences.
+  CURAND_RNG_QUASI_SCRAMBLED_SOBOL64
+  is a scrambled Sobolâ generator of 64-bit sequences.
+ </p>
+ <a name="generator-options" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.2.Â Generator Options
+ </h3>
+ <p class="p">
+  Once created, random number generators can be defined using the general options seed, offset, and order.
+ </p>
+ <a name="seed" shape="rect">
+  <!-- -->
+ </a>
+ <h4 class="topictitle4">
+  2.2.1.Â Seed
+ </h4>
+ <p class="p">
+  The seed parameter is a 64-bit integer that initializes the starting state of a pseudorandom number generator. The same seed
+                              always produces the same sequence of results.
+ </p>
+ <a name="offset" shape="rect">
+  <!-- -->
+ </a>
+ <h4 class="topictitle4">
+  2.2.2.Â Offset
+ </h4>
+ <p class="p">
+  The offset parameter is used to skip ahead in the sequence. If offset = 100, the first random number generated will be the
+                              100th in the sequence. This allows multiple runs of the same program to continue generating results from the same sequence
+                              without overlap. Note that the skip ahead function is not available for the
+  CURAND_RNG_PSEUDO_MTGP32
+  and
+  CURAND_RNG_PSEUDO_MT19937
+  generators.
+ </p>
+ <a name="order" shape="rect">
+  <!-- -->
+ </a>
+ <h4 class="topictitle4">
+  2.2.3.Â Order
+ </h4>
+ <p class="p">
+  The order parameter is used to choose how the results are ordered in global memory. It also has direct influcence on performance
+                              of cuRAND generation functions.
+ </p>
+ <p class="p">
+  There are five ordering choices for pseudorandom sequences:
+  CURAND_ORDERING_PSEUDO_DEFAULT
+  ,
+  CURAND_ORDERING_PSEUDO_LEGACY
+  ,
+  CURAND_ORDERING_PSEUDO_BEST
+  ,
+  CURAND_ORDERING_PSEUDO_SEEDED
+  , and
+  CURAND_ORDERING_PSEUDO_DYNAMIC
+  . There is one ordering choice for quasirandom numbers,
+  CURAND_ORDERING_QUASI_DEFAULT
+  . The default ordering for pseudorandom number generators is
+  CURAND_ORDERING_PSEUDO_DEFAULT
+  , while the default ordering for quasirandom number generators is
+  CURAND_ORDERING_QUASI_DEFAULT
+  .
+ </p>
+ <p class="p">
+  The two pseudorandom orderings
+  CURAND_ORDERING_PSEUDO_DEFAULT
+  and
+  CURAND_ORDERING_PSEUDO_BEST
+  produce the same output ordering for all pseudo-random generators, except MT19937 for which
+  CURAND_ORDERING_PSEUDO_DEFAULT
+  is the same as
+  CURAND_ORDERING_PSEUDO_LEGACY
+  . For MT19937
+  CURAND_ORDERING_PSEUDO_BEST
+  may generate different output on different models of GPUs, and it can't be used with a host generator created using
+  curandCreateGeneratorHost()
+  . Future releases of cuRAND may change the ordering associated with
+  CURAND_ORDERING_PSEUDO_BEST
+  to improve either performance or the quality of the results. It will always be the case that the ordering obtained with
+  CURAND_ORDERING_PSEUDO_BEST
+  is deterministic and is the same for each run of the program. The ordering obtained with
+  CURAND_ORDERING_PSEUDO_LEGACY
+  is guaranteed to remain the same for all cuRAND releases.
+ </p>
+ <p class="p">
+  The
+  CURAND_ORDERING_PSEUDO_DYNAMIC
+  ordering can't be used with a host generator created using
+  curandCreateGeneratorHost()
+  , and it is currently only supported with the following pseudo-random generators:
+  CURAND_RNG_PSEUDO_XORWOW
+  ,
+  CURAND_RNG_PSEUDO_PHILOX4_32_10
+  ,
+  CURAND_RNG_PSEUDO_MRG32K3A
+  , and
+  CURAND_RNG_PSEUDO_MTGP32
+  . When
+  CURAND_ORDERING_PSEUDO_DYNAMIC
+  ordering is selected cuRAND tries to maximize GPU utilization to deliver the best performance. The ordering obtained with
+  CURAND_ORDERING_PSEUDO_DYNAMIC
+  can be different on different GPUs. It is not guaranteed to: remain the same for all cuRAND releases, and be the same for
+                              all distributions. It is guaranteed to be deterministic.
+ </p>
+ <p class="p">
+  The differences in behavior of the ordering parameters for each generator type are outlined below:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    XORWOW pseudorandom generator
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DEFAULT
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DEFAULT
+      is the same as
+      CURAND_ORDERING_PSEUDO_BEST
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_BEST
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_BEST
+      is the same as
+      CURAND_ORDERING_PSEUDO_LEGACY
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_LEGACY
+     </p>
+     <p class="p">
+      The result at offset
+      n
+      in global memory is from position
+     </p>
+     (
+     n
+     mod
+     4096
+     )
+     â
+     2
+     67
+     +
+     â
+     n
+     /
+     4096
+     â
+     <p class="p">
+      in the original XORWOW sequence.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+      can be different on different GPUs.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_SEEDED
+     </p>
+     <p class="p">
+      The result at offset
+      n
+      in global memory is from position
+      n
+      /
+      4096
+      â
+      in the XORWOW sequence seeded with a combination of the user seed and the number
+      n
+      mod
+      4096
+      . In other words, each of 4096 threads uses a different seed. This seeding method reduces state setup time but may result
+                                          in statistical weaknesses of the pseudorandom output for some user seed values.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    MRG32k3a pseudorandom generator
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DEFAULT
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DEFAULT
+      is the same as
+      CURAND_ORDERING_PSEUDO_BEST
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_BEST
+     </p>
+     <p class="p">
+      The result at offset
+      n
+      in global memory is from position
+     </p>
+     (
+     n
+     mod
+     81920
+     )
+     â
+     2
+     76
+     +
+     â
+     n
+     /
+     81920
+     â
+     <p class="p">
+      in the original MRG32k3a sequence. (Note that the stride between subsequent samples for MRG32k3a is not the same as for XORWOW)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_LEGACY
+     </p>
+     <p class="p">
+      The result at offset
+      n
+      in global memory is from position
+     </p>
+     (
+     n
+     mod
+     4096
+     )
+     â
+     2
+     76
+     +
+     â
+     n
+     /
+     4096
+     â
+     <p class="p">
+      in the original MRG32k3a sequence. (Note that the stride between subsequent samples for MRG32k3a is not the same as for XORWOW)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+      can be different on different GPUs.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    MTGP32 pseudorandom generator
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DEFAULT
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DEFAULT
+      is the same as
+      CURAND_ORDERING_PSEUDO_BEST
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_BEST
+     </p>
+     <p class="p">
+      The MTGP32 generator actually generates 192 distinct sequences based on different parameter sets for the basic algorithm.
+                                          Let
+      S
+      (
+      p
+      )
+      be the sequence for parameter set
+      p
+      .
+     </p>
+     <p class="p">
+      The result at offset
+      n
+      in global memory is from position
+      n
+      mod
+      256
+      from the sequence
+     </p>
+     S
+     (
+     â
+     n
+     /
+     256
+     â
+     mod
+     192
+     )
+     <p class="p">
+      In other words 256 samples from
+      S
+      (
+      0
+      )
+      are followed by 256 samples from
+      S
+      (
+      1
+      )
+      and so-on, up to
+      S
+      (
+      191
+      )
+      . This pattern repeats, so the subsequent 256 samples are from
+      S
+      (
+      0
+      )
+      , followed by 256 samples from
+      S
+      (
+      1
+      )
+      , ands so on.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_LEGACY
+     </p>
+     <p class="p">
+      The MTGP32 generator actually generates 64 distinct sequences based on different parameter sets for the basic algorithm. Let
+      S
+      (
+      p
+      )
+      be the sequence for parameter set
+      p
+      .
+     </p>
+     <p class="p">
+      The result at offset
+      n
+      in global memory is from position
+      n
+      mod
+      256
+      from the sequence
+     </p>
+     S
+     (
+     â
+     n
+     /
+     256
+     â
+     mod
+     64
+     )
+     <p class="p">
+      In other words 256 samples from
+      S
+      (
+      0
+      )
+      are followed by 256 samples from
+      S
+      (
+      1
+      )
+      and so-on, up to
+      S
+      (
+      63
+      )
+      . This pattern repeats, so the subsequent 256 samples are from
+      S
+      (
+      0
+      )
+      , followed by 256 samples from
+      S
+      (
+      1
+      )
+      , ands so on.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+      can be different on different GPUs. In this ordering MTGP32 can use different precalculated parameters than original MTGP32
+                                          implementation.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    MT19937 pseudorandom generator
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DEFAULT
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DEFAULT
+      is the same as
+      CURAND_ORDERING_PSEUDO_LEGACY
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_LEGACY
+     </p>
+     <p class="p">
+      Ordering is based heavily on the standard MT19937 CPU implementation. Output is generated by 8192 independent generators.
+                                          Each generator generates consecutive subsequence of the original sequence. Length of each subsequence is
+      2
+      1000
+      . Random numbers are generated by eights thus first 8 elements come from first subsequence, next 8 elements come form second
+                                          subsequence and so on.
+                                          Results are permuted differently than originally to achieve higher performance. Ordering is independent of the hardware that
+                                          you are using. For more information please see
+      <a class="xref" href="https://docs.nvidia.com/cuda/curand/bibliography.html#bibliography__tredak" shape="rect">
+       [18]
+      </a>
+      .
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_BEST
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_BEST
+      to achieve better performance depends on number of SMs that composed your GPU. Random numbers are generated in the same way
+                                          as with
+      CURAND_ORDERING_PSEUDO_LEGACY
+      but the number of generators may be different to achieve better performance. Generating seeds is much faster using this ordering.
+     </p>
+     <p class="p">
+      The ordering
+      CURAND_ORDERING_PSEUDO_BEST
+      is only supported with GPU cuRAND random number generators and can't be used with a host generator created using
+      curandCreateGeneratorHost()
+      .
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Philox_4x32_10 pseudorandom generator
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DEFAULT
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DEFAULT
+      is the same as
+      CURAND_ORDERING_PSEUDO_BEST
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_BEST
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_BEST
+      is the same as
+      CURAND_ORDERING_PSEUDO_LEGACY
+      in the current release.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_LEGACY
+     </p>
+     <p class="p">
+      Each thread in Philox_4x32_10 generator generates distinct sequences based on different parameter sets for the basic algorithm.
+                                          In host API there are 65536 different sequences. Each four values from one sequence are followed by four values from next
+                                          sequence.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+     </p>
+     <p class="p">
+      The output ordering of
+      CURAND_ORDERING_PSEUDO_DYNAMIC
+      can be different on different GPUs.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    32 and 64 bit SOBOL and Scrambled SOBOL quasirandom generators
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      CURAND_ORDERING_QUASI_DEFAULT
+     </p>
+     <p class="p">
+      When generating
+      n
+      results in
+      d
+      dimensions, the output will consist of
+      n
+      /
+      d
+      results from dimension 1, followed by
+      n
+      /
+      d
+      results from dimension 2, and so on up to dimension
+      d
+      . Only exact multiples of the dimension size may be generated. The dimension parameter
+      d
+      is set with
+      curandSetQuasiRandomGeneratorDimensions()
+      and defaults to 1.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="return-values" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.3.Â Return Values
+ </h3>
+ <p class="p">
+  All cuRAND host library calls have a return value of
+  curandStatus_t
+  . Calls that succeed without errors return
+  CURAND_STATUS_SUCCESS
+  . If errors occur, other values are returned depending on the error. Because CUDA allows kernels to execute asynchronously
+                           from CPU code, it is possible that errors in a non-cuRAND kernel will be detected during a call to a library function. In
+                           this case,
+  CURAND_STATUS_PREEXISTING_ERROR
+  is returned.
+ </p>
+ <a name="generation-functions" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.4.Â Generation Functions
+ </h3>
+ <pre xml:space="preserve">
+curandStatus_t 
+curandGenerate(
+    curandGenerator_t generator, 
+    unsigned int *outputPtr, size_t num)
+    
+curandStatus_t 
+curandGenerateLongLong(
+    curandGenerator_t generator, 
+    unsigned long long *outputPtr, size_t num)
+</pre>
+ <p class="p">
+  The
+  curandGenerate()
+  function is used to generate pseudo- or quasirandom bits of output for XORWOW, MRG32k3a, MTGP32, MT19937, Philox_4x32_10
+                           and SOBOL32 generators. Each output element is a 32-bit unsigned int where all bits are random. For SOBOL64 generators, each
+                           output element is a 64-bit unsigned long long where all bits are random.
+  curandGenerate()
+  returns an error for SOBOL64 generators. Use
+  curandGenerateLongLong()
+  to generate 64 bit integers with the SOBOL64 generators.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t 
+curandGenerateUniform(
+    curandGenerator_t generator, 
+    float *outputPtr, size_t num)
+</pre>
+ <p class="p">
+  The
+  curandGenerateUniform()
+  function is used to generate uniformly distributed floating point values between 0.0 and 1.0, where 0.0 is excluded and 1.0
+                           is included.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t 
+curandGenerateNormal(
+    curandGenerator_t generator, 
+    float *outputPtr, size_t n, 
+    float mean, float stddev)
+</pre>
+ <p class="p">
+  The
+  curandGenerateNormal()
+  function is used to generate normally distributed floating point values with the given mean and standard deviation.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t 
+curandGenerateLogNormal(
+    curandGenerator_t generator, 
+    float *outputPtr, size_t n, 
+    float mean, float stddev)
+</pre>
+ <p class="p">
+  The
+  curandGenerateLogNormal()
+  function is used to generate log-normally distributed floating point values based on a normal distribution with the given
+                           mean and standard deviation.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t 
+curandGeneratePoisson(
+    curandGenerator_t generator, 
+    unsigned int *outputPtr, size_t n, 
+    double lambda)
+</pre>
+ <p class="p">
+  The
+  curandGeneratePoisson()
+  function is used to generate Poisson-distributed integer values based on a Poisson distribution with the given lambda.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t
+curandGenerateUniformDouble(
+    curandGenerator_t generator, 
+    double *outputPtr, size_t num)
+</pre>
+ <p class="p">
+  The
+  curandGenerateUniformDouble()
+  function generates uniformly distributed random numbers in double precision.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t
+curandGenerateNormalDouble(
+    curandGenerator_t generator,
+    double *outputPtr, size_t n, 
+    double mean, double stddev)
+</pre>
+ <p class="p">
+  curandGenerateNormalDouble()
+  generates normally distributed results in double precision with the given mean and standard deviation. Double precision results
+                           can only be generated on devices of compute capability 1.3 or above, and the host.
+ </p>
+ <pre xml:space="preserve">
+curandStatus_t
+curandGenerateLogNormalDouble(
+    curandGenerator_t generator,
+    double *outputPtr, size_t n, 
+    double mean, double stddev)
+</pre>
+ <p class="p">
+  curandGenerateLogNormalDouble()
+  generates log-normally distributed results in double precision, based on a normal distribution with the given mean and standard
+                           deviation.
+ </p>
+ <p class="p">
+  For quasirandom generation, the number of results returned must be a multiple of the dimension of the generator.
+ </p>
+ <p class="p">
+  Generation functions can be called multiple times on the same generator to generate successive blocks of results. For pseudorandom
+                           generators, multiple calls to generation functions will yield the same result as a single call with a large size. For quasirandom
+                           generators, because of the ordering of dimensions in memory, many shorter calls will not produce the same results in memory
+                           as one larger call; however the generated
+  n
+  -dimensional vectors will be the same.
+ </p>
+ <p class="p">
+  Double precision results can only be generated on devices of compute capability 1.3 or above, and the host.
+ </p>
+ <a name="host-api-example" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.5.Â Host API Example
+ </h3>
+ <pre xml:space="preserve">
+
+/*
+ * This program uses the host CURAND API to generate 100
+ * pseudorandom floats.
+ */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;cuda_runtime.h&gt;
+#include &lt;curand.h&gt;
+
+#define CUDA_CALL(x) do { if((x)!=cudaSuccess) { \
+    printf("Error at %s:%d\n",__FILE__,__LINE__);\
+    return EXIT_FAILURE;}} while(0)
+#define CURAND_CALL(x) do { if((x)!=CURAND_STATUS_SUCCESS) { \
+    printf("Error at %s:%d\n",__FILE__,__LINE__);\
+    return EXIT_FAILURE;}} while(0)
+
+int main(int argc, char *argv[])
+{
+    size_t n = 100;
+    size_t i;
+    curandGenerator_t gen;
+    float *devData, *hostData;
+
+    /* Allocate n floats on host */
+    hostData = (float *)calloc(n, sizeof(float));
+
+    /* Allocate n floats on device */
+    CUDA_CALL(cudaMalloc((void **)&amp;devData, n*sizeof(float)));
+
+    /* Create pseudo-random number generator */
+    CURAND_CALL(curandCreateGenerator(&amp;gen,
+                CURAND_RNG_PSEUDO_DEFAULT));
+
+    /* Set seed */
+    CURAND_CALL(curandSetPseudoRandomGeneratorSeed(gen,
+                1234ULL));
+
+    /* Generate n floats on device */
+    CURAND_CALL(curandGenerateUniform(gen, devData, n));
+
+    /* Copy device memory to host */
+    CUDA_CALL(cudaMemcpy(hostData, devData, n * sizeof(float),
+        cudaMemcpyDeviceToHost));
+
+    /* Show result */
+    for(i = 0; i &lt; n; i++) {
+        printf("%1.4f ", hostData[i]);
+    }
+    printf("\n");
+
+    /* Cleanup */
+    CURAND_CALL(curandDestroyGenerator(gen));
+    CUDA_CALL(cudaFree(devData));
+    free(hostData);
+    return EXIT_SUCCESS;
+}
+
+</pre>
+ <a name="static-library" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.6.Â Static Library support
+ </h3>
+ <p class="p">
+  Starting with release 6.5, the cuRAND Library is also delivered in a static form as libcurand_static.a on Linux and Mac. Static
+                           libraries are not supported on Windows.
+                           The static cuRAND library depends on a common thread abstraction layer library called libcuos.a on Linux and Mac and cuos.lib
+                           on Windows.
+ </p>
+ <p class="p">
+  For example, on linux, to compile a small application using cuRAND against the dynamic library, the following command can
+                           be used:
+ </p>
+ <pre xml:space="preserve">
+nvcc myCurandApp.c  -lcurand  -o myCurandApp
+</pre>
+ <p class="p">
+  Whereas to compile against the static cuRAND library, the following command has to be used:
+ </p>
+ <pre xml:space="preserve">     
+nvcc myCurandApp.c  -lcurand_static   -lculibos -o myCurandApp
+</pre>
+ <p class="p">
+  It is also possible to use the native Host C++ compiler.
+                           Depending on the Host Operating system, some additional libraries like
+  pthread
+  or
+  dl
+  might be needed on the linking line.
+                           The following command on Linux is suggested :
+ </p>
+ <pre xml:space="preserve">        
+g++ myCurandApp.c  -lcurand_static   -lculibos -lcudart_static -lpthread -ldl -I &lt;cuda-toolkit-path&gt;/include -L &lt;cuda-toolkit-path&gt;/lib64 -o myCurandApp
+ </pre>
+ <p class="p">
+  Note that in the latter case, the library
+  cuda
+  is not needed. The CUDA Runtime will try to open explicitly the
+  cuda
+  library if needed. 
+                           In the case of a system which does not have the CUDA driver installed, this allows the application to gracefully manage this
+                           issue and potentially run if a CPU-only path is available.
+ </p>
+ <a name="performance-notes2" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.7.Â Performance Notes
+ </h3>
+ <p class="p">
+  In general you will get the best performance from the cuRAND library by generating blocks of random numbers that are as large
+                           as possible. Fewer calls to generate many random numbers is more efficient than many calls generating only a few random numbers.
+                           The default pseudorandom generator, XORWOW, with the default ordering takes some time to setup the first time it is called.
+                           Subsequent generation calls do not require this setup. To avoid this setup time, use the
+  CURAND_ORDERING_PSEUDO_SEEDED
+  ordering.
+ </p>
+ <p class="p">
+  The MTGP32 Mersenne Twister algorithm is closely tied to the thread and block count. The state structure for MTGP32 actually
+                           contains the state for 256 consecutive samples from a given sequence, as determined by a specific parameter set. Each of 64
+                           blocks uses a different parameter set and each of 256 threads generates one sample from the state, and updates the state.
+                           Hence the most efficient use of MTGP32 is to generate a multiple of 16384 samples.
+ </p>
+ <p class="p">
+  The MT19937 algorithm performance depends on number of samples generated during the single call. Peak performance can be achieved
+                           while generating more than 2GB of data, but 80% of peak performance can be achieved while generating only 80MB. Please see
+  <a class="xref" href="https://docs.nvidia.com/cuda/curand/bibliography.html#bibliography__tredak" shape="rect">
+   [18]
+  </a>
+  for reference.
+ </p>
+ <p class="p">
+  The Philox_4x32_10 algorithm is closely tied to the thread and block count. Each thread computes 4 random numbers in the same
+                           time thus the most efficient use of Philox_4x32_10 is to generate a multiple of 4 times number of threads.
+ </p>
+ <p class="p">
+  To get the best performance for cuRAND host APIs users are encouraged to use
+  CURAND_ORDERING_PSEUDO_BEST
+  or
+  CURAND_ORDERING_PSEUDO_DYNAMIC
+  orderings.
+ </p>
+ <a name="thread-safety" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="topictitle3">
+  2.8.Â Thread Safety
+ </h3>
+ <p class="p">
+  cuRAND host APIs are thread safe as long as different host threads use different generators, generators are not MT19937
+                           (
+  CURAND_RNG_PSEUDO_MT19937
+  ), and the outputs are disjoint.
+ </p>
+ <p class="p">
+  Please note that cuRAND host APIs are not thread safe when used with MT19937 generators (
+  CURAND_RNG_PSEUDO_MT19937
+  ).
+ </p>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

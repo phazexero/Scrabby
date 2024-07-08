@@ -1,0 +1,241 @@
+<html><head><title>Contents â PTX Compiler API 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/ptx-compiler-api/contents.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html">
+    1. Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#getting-started">
+    2. Getting Started
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#thread-safety">
+    3. Thread Safety
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#user-interface">
+    4. User Interface
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#compilation-options">
+    5. Compilation Options
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#basic-usage">
+    6. Basic Usage
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#example-simple-vector-addition">
+    7. Example: Simple Vector Addition
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/ptx-compiler-api/contents.html">
+  PTX Compiler API
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Contents
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Contents
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/ptx-compiler-api/contents.html#contents" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html">
+    1. Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#getting-started">
+    2. Getting Started
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#system-requirements">
+      2.1. System Requirements
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#installation">
+      2.2. Installation
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#thread-safety">
+    3. Thread Safety
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#user-interface">
+    4. User Interface
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#ptx-compiler-handle">
+      4.1. PTX-Compiler Handle
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#typedefs">
+        4.1.1. Typedefs
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#error-codes">
+      4.2. Error codes
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#enumerations">
+        4.2.1. Enumerations
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#api-versioning">
+      4.3. API Versioning
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#functions">
+        4.3.1. Functions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#compilation-apis">
+      4.4. Compilation APIs
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#id1">
+        4.4.1. Functions
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#compilation-options">
+    5. Compilation Options
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#basic-usage">
+    6. Basic Usage
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#example-simple-vector-addition">
+    7. Example: Simple Vector Addition
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#build-instruction">
+      7.1. Build Instruction
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#notices">
+      7.2. Notices
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#notice">
+        7.2.1. Notice
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#opencl">
+        7.2.2. OpenCL
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/ptx-compiler-api/index.html#trademarks">
+        7.2.3. Trademarks
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2020-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jun 20, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

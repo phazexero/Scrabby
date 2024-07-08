@@ -1,0 +1,1351 @@
+<html><head><title>CUDA Driver API :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" shape="rect" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/cuda-driver-api/index.html" shape="rect" title="CUDA Driver API">
+  CUDA Driver API
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/driver-vs-runtime-api.html#driver-vs-runtime-api" shape="rect">
+    1.Â Difference between the driver and runtime APIs
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/api-sync-behavior.html#api-sync-behavior" shape="rect">
+    2.Â API synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/stream-sync-behavior.html#stream-sync-behavior" shape="rect">
+    3.Â Stream synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/graphs-thread-safety.html#graphs-thread-safety" shape="rect">
+    4.Â Graph object thread safety
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/version-mixing-rules.html#version-mixing-rules" shape="rect">
+    5.Â Rules for version mixing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/modules.html#modules" shape="rect">
+    6.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES" shape="rect">
+      6.1.Â Data types used by CUDA driver
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__ERROR.html#group__CUDA__ERROR" shape="rect">
+      6.2.Â Error Handling
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__INITIALIZE.html#group__CUDA__INITIALIZE" shape="rect">
+      6.3.Â Initialization
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__VERSION.html#group__CUDA__VERSION" shape="rect">
+      6.4.Â Version Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DEVICE.html#group__CUDA__DEVICE" shape="rect">
+      6.5.Â Device Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DEVICE__DEPRECATED.html#group__CUDA__DEVICE__DEPRECATED" shape="rect">
+      6.6.Â Device Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PRIMARY__CTX.html#group__CUDA__PRIMARY__CTX" shape="rect">
+      6.7.Â Primary Context Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__CTX.html#group__CUDA__CTX" shape="rect">
+      6.8.Â Context Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__CTX__DEPRECATED.html#group__CUDA__CTX__DEPRECATED" shape="rect">
+      6.9.Â Context Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MODULE.html#group__CUDA__MODULE" shape="rect">
+      6.10.Â Module Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MODULE__DEPRECATED.html#group__CUDA__MODULE__DEPRECATED" shape="rect">
+      6.11.Â Module Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__LIBRARY.html#group__CUDA__LIBRARY" shape="rect">
+      6.12.Â Library Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MEM.html#group__CUDA__MEM" shape="rect">
+      6.13.Â Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__VA.html#group__CUDA__VA" shape="rect">
+      6.14.Â Virtual Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MALLOC__ASYNC.html#group__CUDA__MALLOC__ASYNC" shape="rect">
+      6.15.Â Stream Ordered Memory Allocator
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MULTICAST.html#group__CUDA__MULTICAST" shape="rect">
+      6.16.Â Multicast Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__UNIFIED.html#group__CUDA__UNIFIED" shape="rect">
+      6.17.Â Unified Addressing
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__STREAM.html#group__CUDA__STREAM" shape="rect">
+      6.18.Â Stream Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EVENT.html#group__CUDA__EVENT" shape="rect">
+      6.19.Â Event Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EXTRES__INTEROP.html#group__CUDA__EXTRES__INTEROP" shape="rect">
+      6.20.Â External Resource Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MEMOP.html#group__CUDA__MEMOP" shape="rect">
+      6.21.Â Stream Memory Operations
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EXEC.html#group__CUDA__EXEC" shape="rect">
+      6.22.Â Execution Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EXEC__DEPRECATED.html#group__CUDA__EXEC__DEPRECATED" shape="rect">
+      6.23.Â Execution Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GRAPH.html#group__CUDA__GRAPH" shape="rect">
+      6.24.Â Graph Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__OCCUPANCY.html#group__CUDA__OCCUPANCY" shape="rect">
+      6.25.Â Occupancy
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TEXREF__DEPRECATED.html#group__CUDA__TEXREF__DEPRECATED" shape="rect">
+      6.26.Â Texture Reference Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__SURFREF__DEPRECATED.html#group__CUDA__SURFREF__DEPRECATED" shape="rect">
+      6.27.Â Surface Reference Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TEXOBJECT.html#group__CUDA__TEXOBJECT" shape="rect">
+      6.28.Â Texture Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__SURFOBJECT.html#group__CUDA__SURFOBJECT" shape="rect">
+      6.29.Â Surface Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TENSOR__MEMORY.html#group__CUDA__TENSOR__MEMORY" shape="rect">
+      6.30.Â Tensor Map Object Managment
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PEER__ACCESS.html#group__CUDA__PEER__ACCESS" shape="rect">
+      6.31.Â Peer Context Memory Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GRAPHICS.html#group__CUDA__GRAPHICS" shape="rect">
+      6.32.Â Graphics Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DRIVER__ENTRY__POINT.html#group__CUDA__DRIVER__ENTRY__POINT" shape="rect">
+      6.33.Â Driver Entry Point Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__COREDUMP.html#group__CUDA__COREDUMP" shape="rect">
+      6.34.Â Coredump Attributes Control API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GREEN__CONTEXTS.html#group__CUDA__GREEN__CONTEXTS" shape="rect">
+      6.35.Â Green Contexts
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PROFILER__DEPRECATED.html#group__CUDA__PROFILER__DEPRECATED" shape="rect">
+      6.36.Â Profiler Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PROFILER.html#group__CUDA__PROFILER" shape="rect">
+      6.37.Â Profiler Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GL.html#group__CUDA__GL" shape="rect">
+      6.38.Â OpenGL Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GL__DEPRECATED.html#group__CUDA__GL__DEPRECATED" shape="rect">
+        6.38.1.Â OpenGL Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D9.html#group__CUDA__D3D9" shape="rect">
+      6.39.Â Direct3D 9 Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D9__DEPRECATED.html#group__CUDA__D3D9__DEPRECATED" shape="rect">
+        6.39.1.Â Direct3D 9 Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D10.html#group__CUDA__D3D10" shape="rect">
+      6.40.Â Direct3D 10 Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D10__DEPRECATED.html#group__CUDA__D3D10__DEPRECATED" shape="rect">
+        6.40.1.Â Direct3D 10 Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D11.html#group__CUDA__D3D11" shape="rect">
+      6.41.Â Direct3D 11 Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D11__DEPRECATED.html#group__CUDA__D3D11__DEPRECATED" shape="rect">
+        6.41.1.Â Direct3D 11 Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__VDPAU.html#group__CUDA__VDPAU" shape="rect">
+      6.42.Â VDPAU Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL" shape="rect">
+      6.43.Â EGL Interoperability
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/annotated.html#annotated" shape="rect">
+    7.Â Data Structures
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUaccessPolicyWindow__v1.html#structCUaccessPolicyWindow__v1" shape="rect">
+      7.1.Â CUaccessPolicyWindow_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUarrayMapInfo__v1.html#structCUarrayMapInfo__v1" shape="rect">
+      7.2.Â CUarrayMapInfo_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUasyncNotificationInfo.html#structCUasyncNotificationInfo" shape="rect">
+      7.3.Â CUasyncNotificationInfo
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUctxCigParam.html#structCUctxCigParam" shape="rect">
+      7.4.Â CUctxCigParam
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUctxCreateParams.html#structCUctxCreateParams" shape="rect">
+      7.5.Â CUctxCreateParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY3D__DESCRIPTOR__v2.html#structCUDA__ARRAY3D__DESCRIPTOR__v2" shape="rect">
+      7.6.Â CUDA_ARRAY3D_DESCRIPTOR_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY__DESCRIPTOR__v2.html#structCUDA__ARRAY__DESCRIPTOR__v2" shape="rect">
+      7.7.Â CUDA_ARRAY_DESCRIPTOR_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY__MEMORY__REQUIREMENTS__v1.html#structCUDA__ARRAY__MEMORY__REQUIREMENTS__v1" shape="rect">
+      7.8.Â CUDA_ARRAY_MEMORY_REQUIREMENTS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY__SPARSE__PROPERTIES__v1.html#structCUDA__ARRAY__SPARSE__PROPERTIES__v1" shape="rect">
+      7.9.Â CUDA_ARRAY_SPARSE_PROPERTIES_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__BATCH__MEM__OP__NODE__PARAMS__v2.html" shape="rect">
+      7.10.Â
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__CHILD__GRAPH__NODE__PARAMS.html#structCUDA__CHILD__GRAPH__NODE__PARAMS" shape="rect">
+      7.11.Â CUDA_CHILD_GRAPH_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__CONDITIONAL__NODE__PARAMS.html#structCUDA__CONDITIONAL__NODE__PARAMS" shape="rect">
+      7.12.Â CUDA_CONDITIONAL_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EVENT__RECORD__NODE__PARAMS.html#structCUDA__EVENT__RECORD__NODE__PARAMS" shape="rect">
+      7.13.Â CUDA_EVENT_RECORD_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EVENT__WAIT__NODE__PARAMS.html#structCUDA__EVENT__WAIT__NODE__PARAMS" shape="rect">
+      7.14.Â CUDA_EVENT_WAIT_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v1.html#structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v1" shape="rect">
+      7.15.Â CUDA_EXT_SEM_SIGNAL_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v2.html#structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v2" shape="rect">
+      7.16.Â CUDA_EXT_SEM_SIGNAL_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v1.html#structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v1" shape="rect">
+      7.17.Â CUDA_EXT_SEM_WAIT_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v2.html#structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v2" shape="rect">
+      7.18.Â CUDA_EXT_SEM_WAIT_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__MEMORY__BUFFER__DESC__v1.html#structCUDA__EXTERNAL__MEMORY__BUFFER__DESC__v1" shape="rect">
+      7.19.Â CUDA_EXTERNAL_MEMORY_BUFFER_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__MEMORY__HANDLE__DESC__v1.html#structCUDA__EXTERNAL__MEMORY__HANDLE__DESC__v1" shape="rect">
+      7.20.Â CUDA_EXTERNAL_MEMORY_HANDLE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__MEMORY__MIPMAPPED__ARRAY__DESC__v1.html#structCUDA__EXTERNAL__MEMORY__MIPMAPPED__ARRAY__DESC__v1" shape="rect">
+      7.21.Â CUDA_EXTERNAL_MEMORY_MIPMAPPED_ARRAY_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__SEMAPHORE__HANDLE__DESC__v1.html#structCUDA__EXTERNAL__SEMAPHORE__HANDLE__DESC__v1" shape="rect">
+      7.22.Â CUDA_EXTERNAL_SEMAPHORE_HANDLE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__SEMAPHORE__SIGNAL__PARAMS__v1.html#structCUDA__EXTERNAL__SEMAPHORE__SIGNAL__PARAMS__v1" shape="rect">
+      7.23.Â CUDA_EXTERNAL_SEMAPHORE_SIGNAL_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__SEMAPHORE__WAIT__PARAMS__v1.html#structCUDA__EXTERNAL__SEMAPHORE__WAIT__PARAMS__v1" shape="rect">
+      7.24.Â CUDA_EXTERNAL_SEMAPHORE_WAIT_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__GRAPH__INSTANTIATE__PARAMS.html#structCUDA__GRAPH__INSTANTIATE__PARAMS" shape="rect">
+      7.25.Â CUDA_GRAPH_INSTANTIATE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__HOST__NODE__PARAMS__v1.html#structCUDA__HOST__NODE__PARAMS__v1" shape="rect">
+      7.26.Â CUDA_HOST_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__HOST__NODE__PARAMS__v2.html#structCUDA__HOST__NODE__PARAMS__v2" shape="rect">
+      7.27.Â CUDA_HOST_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__KERNEL__NODE__PARAMS__v1.html#structCUDA__KERNEL__NODE__PARAMS__v1" shape="rect">
+      7.28.Â CUDA_KERNEL_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__KERNEL__NODE__PARAMS__v2.html#structCUDA__KERNEL__NODE__PARAMS__v2" shape="rect">
+      7.29.Â CUDA_KERNEL_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__KERNEL__NODE__PARAMS__v3.html#structCUDA__KERNEL__NODE__PARAMS__v3" shape="rect">
+      7.30.Â CUDA_KERNEL_NODE_PARAMS_v3
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__LAUNCH__PARAMS__v1.html#structCUDA__LAUNCH__PARAMS__v1" shape="rect">
+      7.31.Â CUDA_LAUNCH_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEM__ALLOC__NODE__PARAMS__v1.html#structCUDA__MEM__ALLOC__NODE__PARAMS__v1" shape="rect">
+      7.32.Â CUDA_MEM_ALLOC_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEM__ALLOC__NODE__PARAMS__v2.html#structCUDA__MEM__ALLOC__NODE__PARAMS__v2" shape="rect">
+      7.33.Â CUDA_MEM_ALLOC_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEM__FREE__NODE__PARAMS.html#structCUDA__MEM__FREE__NODE__PARAMS" shape="rect">
+      7.34.Â CUDA_MEM_FREE_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY2D__v2.html#structCUDA__MEMCPY2D__v2" shape="rect">
+      7.35.Â CUDA_MEMCPY2D_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY3D__PEER__v1.html#structCUDA__MEMCPY3D__PEER__v1" shape="rect">
+      7.36.Â CUDA_MEMCPY3D_PEER_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY3D__v2.html#structCUDA__MEMCPY3D__v2" shape="rect">
+      7.37.Â CUDA_MEMCPY3D_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY__NODE__PARAMS.html#structCUDA__MEMCPY__NODE__PARAMS" shape="rect">
+      7.38.Â CUDA_MEMCPY_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMSET__NODE__PARAMS__v1.html#structCUDA__MEMSET__NODE__PARAMS__v1" shape="rect">
+      7.39.Â CUDA_MEMSET_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMSET__NODE__PARAMS__v2.html#structCUDA__MEMSET__NODE__PARAMS__v2" shape="rect">
+      7.40.Â CUDA_MEMSET_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__POINTER__ATTRIBUTE__P2P__TOKENS__v1.html#structCUDA__POINTER__ATTRIBUTE__P2P__TOKENS__v1" shape="rect">
+      7.41.Â CUDA_POINTER_ATTRIBUTE_P2P_TOKENS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__RESOURCE__DESC__v1.html#structCUDA__RESOURCE__DESC__v1" shape="rect">
+      7.42.Â CUDA_RESOURCE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__RESOURCE__VIEW__DESC__v1.html#structCUDA__RESOURCE__VIEW__DESC__v1" shape="rect">
+      7.43.Â CUDA_RESOURCE_VIEW_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__TEXTURE__DESC__v1.html#structCUDA__TEXTURE__DESC__v1" shape="rect">
+      7.44.Â CUDA_TEXTURE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUdevprop__v1.html#structCUdevprop__v1" shape="rect">
+      7.45.Â CUdevprop_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUdevResource.html#structCUdevResource" shape="rect">
+      7.46.Â CUdevResource
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUdevSmResource.html#structCUdevSmResource" shape="rect">
+      7.47.Â CUdevSmResource
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUeglFrame__v1.html#structCUeglFrame__v1" shape="rect">
+      7.48.Â CUeglFrame_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUexecAffinityParam__v1.html#structCUexecAffinityParam__v1" shape="rect">
+      7.49.Â CUexecAffinityParam_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUexecAffinitySmCount__v1.html#structCUexecAffinitySmCount__v1" shape="rect">
+      7.50.Â CUexecAffinitySmCount_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUgraphEdgeData.html#structCUgraphEdgeData" shape="rect">
+      7.51.Â CUgraphEdgeData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUgraphExecUpdateResultInfo__v1.html#structCUgraphExecUpdateResultInfo__v1" shape="rect">
+      7.52.Â CUgraphExecUpdateResultInfo_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUgraphNodeParams.html#structCUgraphNodeParams" shape="rect">
+      7.53.Â CUgraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUipcEventHandle__v1.html#structCUipcEventHandle__v1" shape="rect">
+      7.54.Â CUipcEventHandle_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUipcMemHandle__v1.html#structCUipcMemHandle__v1" shape="rect">
+      7.55.Â CUipcMemHandle_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUlaunchAttribute.html#structCUlaunchAttribute" shape="rect">
+      7.56.Â CUlaunchAttribute
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/unionCUlaunchAttributeValue.html#unionCUlaunchAttributeValue" shape="rect">
+      7.57.Â CUlaunchAttributeValue
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUlaunchConfig.html#structCUlaunchConfig" shape="rect">
+      7.58.Â CUlaunchConfig
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUlaunchMemSyncDomainMap.html#structCUlaunchMemSyncDomainMap" shape="rect">
+      7.59.Â CUlaunchMemSyncDomainMap
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemAccessDesc__v1.html#structCUmemAccessDesc__v1" shape="rect">
+      7.60.Â CUmemAccessDesc_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemAllocationProp__v1.html#structCUmemAllocationProp__v1" shape="rect">
+      7.61.Â CUmemAllocationProp_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemFabricHandle__v1.html#structCUmemFabricHandle__v1" shape="rect">
+      7.62.Â CUmemFabricHandle_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemLocation__v1.html#structCUmemLocation__v1" shape="rect">
+      7.63.Â CUmemLocation_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemPoolProps__v1.html#structCUmemPoolProps__v1" shape="rect">
+      7.64.Â CUmemPoolProps_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemPoolPtrExportData__v1.html#structCUmemPoolPtrExportData__v1" shape="rect">
+      7.65.Â CUmemPoolPtrExportData_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmulticastObjectProp__v1.html#structCUmulticastObjectProp__v1" shape="rect">
+      7.66.Â CUmulticastObjectProp_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/unionCUstreamBatchMemOpParams__v1.html#unionCUstreamBatchMemOpParams__v1" shape="rect">
+      7.67.Â CUstreamBatchMemOpParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUtensorMap.html#structCUtensorMap" shape="rect">
+      7.68.Â CUtensorMap
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/functions.html#functions" shape="rect">
+    8.Â Data Fields
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/deprecated.html#deprecated" shape="rect">
+    9.Â Deprecated List
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ CUDA Driver API
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CUDA_Driver_API.pdf" shape="rect">
+  PDF
+ </a>
+ )
+                  -
+                  
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive" shape="rect">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20CUDA%20Driver%20API" shape="rect">
+  Send Feedback
+ </a>
+ <h1 class="title topictitle1">
+  Table of Contents
+ </h1>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/driver-vs-runtime-api.html#driver-vs-runtime-api" shape="rect">
+    1.Â Difference between the driver and runtime APIs
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/api-sync-behavior.html#api-sync-behavior" shape="rect">
+    2.Â API synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/stream-sync-behavior.html#stream-sync-behavior" shape="rect">
+    3.Â Stream synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/graphs-thread-safety.html#graphs-thread-safety" shape="rect">
+    4.Â Graph object thread safety
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/version-mixing-rules.html#version-mixing-rules" shape="rect">
+    5.Â Rules for version mixing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/modules.html#modules" shape="rect">
+    6.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES" shape="rect">
+      6.1.Â Data types used by CUDA driver
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__ERROR.html#group__CUDA__ERROR" shape="rect">
+      6.2.Â Error Handling
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__INITIALIZE.html#group__CUDA__INITIALIZE" shape="rect">
+      6.3.Â Initialization
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__VERSION.html#group__CUDA__VERSION" shape="rect">
+      6.4.Â Version Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DEVICE.html#group__CUDA__DEVICE" shape="rect">
+      6.5.Â Device Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DEVICE__DEPRECATED.html#group__CUDA__DEVICE__DEPRECATED" shape="rect">
+      6.6.Â Device Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PRIMARY__CTX.html#group__CUDA__PRIMARY__CTX" shape="rect">
+      6.7.Â Primary Context Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__CTX.html#group__CUDA__CTX" shape="rect">
+      6.8.Â Context Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__CTX__DEPRECATED.html#group__CUDA__CTX__DEPRECATED" shape="rect">
+      6.9.Â Context Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MODULE.html#group__CUDA__MODULE" shape="rect">
+      6.10.Â Module Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MODULE__DEPRECATED.html#group__CUDA__MODULE__DEPRECATED" shape="rect">
+      6.11.Â Module Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__LIBRARY.html#group__CUDA__LIBRARY" shape="rect">
+      6.12.Â Library Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MEM.html#group__CUDA__MEM" shape="rect">
+      6.13.Â Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__VA.html#group__CUDA__VA" shape="rect">
+      6.14.Â Virtual Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MALLOC__ASYNC.html#group__CUDA__MALLOC__ASYNC" shape="rect">
+      6.15.Â Stream Ordered Memory Allocator
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MULTICAST.html#group__CUDA__MULTICAST" shape="rect">
+      6.16.Â Multicast Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__UNIFIED.html#group__CUDA__UNIFIED" shape="rect">
+      6.17.Â Unified Addressing
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__STREAM.html#group__CUDA__STREAM" shape="rect">
+      6.18.Â Stream Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EVENT.html#group__CUDA__EVENT" shape="rect">
+      6.19.Â Event Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EXTRES__INTEROP.html#group__CUDA__EXTRES__INTEROP" shape="rect">
+      6.20.Â External Resource Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__MEMOP.html#group__CUDA__MEMOP" shape="rect">
+      6.21.Â Stream Memory Operations
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EXEC.html#group__CUDA__EXEC" shape="rect">
+      6.22.Â Execution Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EXEC__DEPRECATED.html#group__CUDA__EXEC__DEPRECATED" shape="rect">
+      6.23.Â Execution Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GRAPH.html#group__CUDA__GRAPH" shape="rect">
+      6.24.Â Graph Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__OCCUPANCY.html#group__CUDA__OCCUPANCY" shape="rect">
+      6.25.Â Occupancy
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TEXREF__DEPRECATED.html#group__CUDA__TEXREF__DEPRECATED" shape="rect">
+      6.26.Â Texture Reference Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__SURFREF__DEPRECATED.html#group__CUDA__SURFREF__DEPRECATED" shape="rect">
+      6.27.Â Surface Reference Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TEXOBJECT.html#group__CUDA__TEXOBJECT" shape="rect">
+      6.28.Â Texture Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__SURFOBJECT.html#group__CUDA__SURFOBJECT" shape="rect">
+      6.29.Â Surface Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TENSOR__MEMORY.html#group__CUDA__TENSOR__MEMORY" shape="rect">
+      6.30.Â Tensor Map Object Managment
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PEER__ACCESS.html#group__CUDA__PEER__ACCESS" shape="rect">
+      6.31.Â Peer Context Memory Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GRAPHICS.html#group__CUDA__GRAPHICS" shape="rect">
+      6.32.Â Graphics Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__DRIVER__ENTRY__POINT.html#group__CUDA__DRIVER__ENTRY__POINT" shape="rect">
+      6.33.Â Driver Entry Point Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__COREDUMP.html#group__CUDA__COREDUMP" shape="rect">
+      6.34.Â Coredump Attributes Control API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GREEN__CONTEXTS.html#group__CUDA__GREEN__CONTEXTS" shape="rect">
+      6.35.Â Green Contexts
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PROFILER__DEPRECATED.html#group__CUDA__PROFILER__DEPRECATED" shape="rect">
+      6.36.Â Profiler Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__PROFILER.html#group__CUDA__PROFILER" shape="rect">
+      6.37.Â Profiler Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GL.html#group__CUDA__GL" shape="rect">
+      6.38.Â OpenGL Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GL__DEPRECATED.html#group__CUDA__GL__DEPRECATED" shape="rect">
+        6.38.1.Â OpenGL Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D9.html#group__CUDA__D3D9" shape="rect">
+      6.39.Â Direct3D 9 Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D9__DEPRECATED.html#group__CUDA__D3D9__DEPRECATED" shape="rect">
+        6.39.1.Â Direct3D 9 Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D10.html#group__CUDA__D3D10" shape="rect">
+      6.40.Â Direct3D 10 Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D10__DEPRECATED.html#group__CUDA__D3D10__DEPRECATED" shape="rect">
+        6.40.1.Â Direct3D 10 Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D11.html#group__CUDA__D3D11" shape="rect">
+      6.41.Â Direct3D 11 Interoperability
+     </a>
+     <ul>
+      <li>
+       <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__D3D11__DEPRECATED.html#group__CUDA__D3D11__DEPRECATED" shape="rect">
+        6.41.1.Â Direct3D 11 Interoperability [DEPRECATED]
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__VDPAU.html#group__CUDA__VDPAU" shape="rect">
+      6.42.Â VDPAU Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL" shape="rect">
+      6.43.Â EGL Interoperability
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/annotated.html#annotated" shape="rect">
+    7.Â Data Structures
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUaccessPolicyWindow__v1.html#structCUaccessPolicyWindow__v1" shape="rect">
+      7.1.Â CUaccessPolicyWindow_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUarrayMapInfo__v1.html#structCUarrayMapInfo__v1" shape="rect">
+      7.2.Â CUarrayMapInfo_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUasyncNotificationInfo.html#structCUasyncNotificationInfo" shape="rect">
+      7.3.Â CUasyncNotificationInfo
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUctxCigParam.html#structCUctxCigParam" shape="rect">
+      7.4.Â CUctxCigParam
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUctxCreateParams.html#structCUctxCreateParams" shape="rect">
+      7.5.Â CUctxCreateParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY3D__DESCRIPTOR__v2.html#structCUDA__ARRAY3D__DESCRIPTOR__v2" shape="rect">
+      7.6.Â CUDA_ARRAY3D_DESCRIPTOR_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY__DESCRIPTOR__v2.html#structCUDA__ARRAY__DESCRIPTOR__v2" shape="rect">
+      7.7.Â CUDA_ARRAY_DESCRIPTOR_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY__MEMORY__REQUIREMENTS__v1.html#structCUDA__ARRAY__MEMORY__REQUIREMENTS__v1" shape="rect">
+      7.8.Â CUDA_ARRAY_MEMORY_REQUIREMENTS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__ARRAY__SPARSE__PROPERTIES__v1.html#structCUDA__ARRAY__SPARSE__PROPERTIES__v1" shape="rect">
+      7.9.Â CUDA_ARRAY_SPARSE_PROPERTIES_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__BATCH__MEM__OP__NODE__PARAMS__v2.html" shape="rect">
+      7.10.Â
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__CHILD__GRAPH__NODE__PARAMS.html#structCUDA__CHILD__GRAPH__NODE__PARAMS" shape="rect">
+      7.11.Â CUDA_CHILD_GRAPH_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__CONDITIONAL__NODE__PARAMS.html#structCUDA__CONDITIONAL__NODE__PARAMS" shape="rect">
+      7.12.Â CUDA_CONDITIONAL_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EVENT__RECORD__NODE__PARAMS.html#structCUDA__EVENT__RECORD__NODE__PARAMS" shape="rect">
+      7.13.Â CUDA_EVENT_RECORD_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EVENT__WAIT__NODE__PARAMS.html#structCUDA__EVENT__WAIT__NODE__PARAMS" shape="rect">
+      7.14.Â CUDA_EVENT_WAIT_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v1.html#structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v1" shape="rect">
+      7.15.Â CUDA_EXT_SEM_SIGNAL_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v2.html#structCUDA__EXT__SEM__SIGNAL__NODE__PARAMS__v2" shape="rect">
+      7.16.Â CUDA_EXT_SEM_SIGNAL_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v1.html#structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v1" shape="rect">
+      7.17.Â CUDA_EXT_SEM_WAIT_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v2.html#structCUDA__EXT__SEM__WAIT__NODE__PARAMS__v2" shape="rect">
+      7.18.Â CUDA_EXT_SEM_WAIT_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__MEMORY__BUFFER__DESC__v1.html#structCUDA__EXTERNAL__MEMORY__BUFFER__DESC__v1" shape="rect">
+      7.19.Â CUDA_EXTERNAL_MEMORY_BUFFER_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__MEMORY__HANDLE__DESC__v1.html#structCUDA__EXTERNAL__MEMORY__HANDLE__DESC__v1" shape="rect">
+      7.20.Â CUDA_EXTERNAL_MEMORY_HANDLE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__MEMORY__MIPMAPPED__ARRAY__DESC__v1.html#structCUDA__EXTERNAL__MEMORY__MIPMAPPED__ARRAY__DESC__v1" shape="rect">
+      7.21.Â CUDA_EXTERNAL_MEMORY_MIPMAPPED_ARRAY_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__SEMAPHORE__HANDLE__DESC__v1.html#structCUDA__EXTERNAL__SEMAPHORE__HANDLE__DESC__v1" shape="rect">
+      7.22.Â CUDA_EXTERNAL_SEMAPHORE_HANDLE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__SEMAPHORE__SIGNAL__PARAMS__v1.html#structCUDA__EXTERNAL__SEMAPHORE__SIGNAL__PARAMS__v1" shape="rect">
+      7.23.Â CUDA_EXTERNAL_SEMAPHORE_SIGNAL_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__EXTERNAL__SEMAPHORE__WAIT__PARAMS__v1.html#structCUDA__EXTERNAL__SEMAPHORE__WAIT__PARAMS__v1" shape="rect">
+      7.24.Â CUDA_EXTERNAL_SEMAPHORE_WAIT_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__GRAPH__INSTANTIATE__PARAMS.html#structCUDA__GRAPH__INSTANTIATE__PARAMS" shape="rect">
+      7.25.Â CUDA_GRAPH_INSTANTIATE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__HOST__NODE__PARAMS__v1.html#structCUDA__HOST__NODE__PARAMS__v1" shape="rect">
+      7.26.Â CUDA_HOST_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__HOST__NODE__PARAMS__v2.html#structCUDA__HOST__NODE__PARAMS__v2" shape="rect">
+      7.27.Â CUDA_HOST_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__KERNEL__NODE__PARAMS__v1.html#structCUDA__KERNEL__NODE__PARAMS__v1" shape="rect">
+      7.28.Â CUDA_KERNEL_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__KERNEL__NODE__PARAMS__v2.html#structCUDA__KERNEL__NODE__PARAMS__v2" shape="rect">
+      7.29.Â CUDA_KERNEL_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__KERNEL__NODE__PARAMS__v3.html#structCUDA__KERNEL__NODE__PARAMS__v3" shape="rect">
+      7.30.Â CUDA_KERNEL_NODE_PARAMS_v3
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__LAUNCH__PARAMS__v1.html#structCUDA__LAUNCH__PARAMS__v1" shape="rect">
+      7.31.Â CUDA_LAUNCH_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEM__ALLOC__NODE__PARAMS__v1.html#structCUDA__MEM__ALLOC__NODE__PARAMS__v1" shape="rect">
+      7.32.Â CUDA_MEM_ALLOC_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEM__ALLOC__NODE__PARAMS__v2.html#structCUDA__MEM__ALLOC__NODE__PARAMS__v2" shape="rect">
+      7.33.Â CUDA_MEM_ALLOC_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEM__FREE__NODE__PARAMS.html#structCUDA__MEM__FREE__NODE__PARAMS" shape="rect">
+      7.34.Â CUDA_MEM_FREE_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY2D__v2.html#structCUDA__MEMCPY2D__v2" shape="rect">
+      7.35.Â CUDA_MEMCPY2D_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY3D__PEER__v1.html#structCUDA__MEMCPY3D__PEER__v1" shape="rect">
+      7.36.Â CUDA_MEMCPY3D_PEER_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY3D__v2.html#structCUDA__MEMCPY3D__v2" shape="rect">
+      7.37.Â CUDA_MEMCPY3D_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMCPY__NODE__PARAMS.html#structCUDA__MEMCPY__NODE__PARAMS" shape="rect">
+      7.38.Â CUDA_MEMCPY_NODE_PARAMS
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMSET__NODE__PARAMS__v1.html#structCUDA__MEMSET__NODE__PARAMS__v1" shape="rect">
+      7.39.Â CUDA_MEMSET_NODE_PARAMS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__MEMSET__NODE__PARAMS__v2.html#structCUDA__MEMSET__NODE__PARAMS__v2" shape="rect">
+      7.40.Â CUDA_MEMSET_NODE_PARAMS_v2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__POINTER__ATTRIBUTE__P2P__TOKENS__v1.html#structCUDA__POINTER__ATTRIBUTE__P2P__TOKENS__v1" shape="rect">
+      7.41.Â CUDA_POINTER_ATTRIBUTE_P2P_TOKENS_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__RESOURCE__DESC__v1.html#structCUDA__RESOURCE__DESC__v1" shape="rect">
+      7.42.Â CUDA_RESOURCE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__RESOURCE__VIEW__DESC__v1.html#structCUDA__RESOURCE__VIEW__DESC__v1" shape="rect">
+      7.43.Â CUDA_RESOURCE_VIEW_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUDA__TEXTURE__DESC__v1.html#structCUDA__TEXTURE__DESC__v1" shape="rect">
+      7.44.Â CUDA_TEXTURE_DESC_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUdevprop__v1.html#structCUdevprop__v1" shape="rect">
+      7.45.Â CUdevprop_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUdevResource.html#structCUdevResource" shape="rect">
+      7.46.Â CUdevResource
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUdevSmResource.html#structCUdevSmResource" shape="rect">
+      7.47.Â CUdevSmResource
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUeglFrame__v1.html#structCUeglFrame__v1" shape="rect">
+      7.48.Â CUeglFrame_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUexecAffinityParam__v1.html#structCUexecAffinityParam__v1" shape="rect">
+      7.49.Â CUexecAffinityParam_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUexecAffinitySmCount__v1.html#structCUexecAffinitySmCount__v1" shape="rect">
+      7.50.Â CUexecAffinitySmCount_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUgraphEdgeData.html#structCUgraphEdgeData" shape="rect">
+      7.51.Â CUgraphEdgeData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUgraphExecUpdateResultInfo__v1.html#structCUgraphExecUpdateResultInfo__v1" shape="rect">
+      7.52.Â CUgraphExecUpdateResultInfo_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUgraphNodeParams.html#structCUgraphNodeParams" shape="rect">
+      7.53.Â CUgraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUipcEventHandle__v1.html#structCUipcEventHandle__v1" shape="rect">
+      7.54.Â CUipcEventHandle_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUipcMemHandle__v1.html#structCUipcMemHandle__v1" shape="rect">
+      7.55.Â CUipcMemHandle_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUlaunchAttribute.html#structCUlaunchAttribute" shape="rect">
+      7.56.Â CUlaunchAttribute
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/unionCUlaunchAttributeValue.html#unionCUlaunchAttributeValue" shape="rect">
+      7.57.Â CUlaunchAttributeValue
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUlaunchConfig.html#structCUlaunchConfig" shape="rect">
+      7.58.Â CUlaunchConfig
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUlaunchMemSyncDomainMap.html#structCUlaunchMemSyncDomainMap" shape="rect">
+      7.59.Â CUlaunchMemSyncDomainMap
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemAccessDesc__v1.html#structCUmemAccessDesc__v1" shape="rect">
+      7.60.Â CUmemAccessDesc_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemAllocationProp__v1.html#structCUmemAllocationProp__v1" shape="rect">
+      7.61.Â CUmemAllocationProp_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemFabricHandle__v1.html#structCUmemFabricHandle__v1" shape="rect">
+      7.62.Â CUmemFabricHandle_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemLocation__v1.html#structCUmemLocation__v1" shape="rect">
+      7.63.Â CUmemLocation_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemPoolProps__v1.html#structCUmemPoolProps__v1" shape="rect">
+      7.64.Â CUmemPoolProps_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmemPoolPtrExportData__v1.html#structCUmemPoolPtrExportData__v1" shape="rect">
+      7.65.Â CUmemPoolPtrExportData_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUmulticastObjectProp__v1.html#structCUmulticastObjectProp__v1" shape="rect">
+      7.66.Â CUmulticastObjectProp_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/unionCUstreamBatchMemOpParams__v1.html#unionCUstreamBatchMemOpParams__v1" shape="rect">
+      7.67.Â CUstreamBatchMemOpParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-driver-api/structCUtensorMap.html#structCUtensorMap" shape="rect">
+      7.68.Â CUtensorMap
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/functions.html#functions" shape="rect">
+    8.Â Data Fields
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-driver-api/deprecated.html#deprecated" shape="rect">
+    9.Â Deprecated List
+   </a>
+  </li>
+ </ul>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" shape="rect" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" shape="rect" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" shape="rect" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" shape="rect" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" shape="rect" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" shape="rect" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" shape="rect" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" shape="rect" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

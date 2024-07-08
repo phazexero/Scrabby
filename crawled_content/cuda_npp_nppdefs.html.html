@@ -1,0 +1,7912 @@
+<html><head><title>Data Types, Structs, Enums, and Constants â npp 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+ </a>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Contents:
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html">
+    What is NPP ?
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#general-conventions">
+    General Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#image-processing-conventions">
+    Image Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#signal-processing-conventions">
+    Signal Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html">
+    Data Types, Structs, Enums, and Constants
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_arithmetic_and_logical_operations.html">
+    Image Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_color_conversion.html">
+    Image Color Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_data_exchange_and_initialization.html">
+    Image Data Exchange And Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_filtering_functions.html">
+    Image Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_geometry_transforms.html">
+    Image Geometry Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_linear_transforms.html">
+    Image Linear Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_morphological_operations.html">
+    Image Morphological Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_statistics_functions.html">
+    Image Statistics Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_threshold_and_compare_operations.html">
+    Image Threshold And Compare Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html">
+    Image Memory Management Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_arithmetic_and_logical_operations.html">
+    Signal Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_conversion_functions.html">
+    Signal Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html">
+    Signal Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_initialization.html">
+    Signal Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_statistical_functions.html">
+    Signal Statistical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html">
+    Signal Memory Management Functions
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+  npp
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Data Types, Structs, Enums, and Constants
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v23.05 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/NPP_Library.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Data Types, Structs, Enums, and Constants
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#data-types-structs-enums-and-constants" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp16f
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Workarounds for cuda_fp16.h C incompatibility
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnpp16f">
+   <span class="std std-ref">
+    Npp16f
+   </span>
+  </a>
+  .
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   short
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    fp16
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16f.fp16" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Original Cuda fp16 data size and format.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp16f_2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16f_2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnpp16f__2">
+   <span class="std std-ref">
+    Npp16f_2
+   </span>
+  </a>
+  .
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   short
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    fp16_0
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16f_2.fp16_0" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Original Cuda fp16 data size and format.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   short
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    fp16_1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16f_2.fp16_1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Original Cuda fp16 data size and format.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiInterpolationMode
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Filtering methods.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_UNDEFINED
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_UNDEFINED" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Undefined filtering interpolation mode.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_NN
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_NN" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Nearest neighbor filtering.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_LINEAR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_LINEAR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Linear interpolation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_CUBIC
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_CUBIC" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Cubic interpolation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_CUBIC2P_BSPLINE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_CUBIC2P_BSPLINE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Two-parameter cubic filter (B=1, C=0)
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_CUBIC2P_CATMULLROM
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_CUBIC2P_CATMULLROM" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Two-parameter cubic filter (B=0, C=1/2)
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_CUBIC2P_B05C03
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_CUBIC2P_B05C03" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Two-parameter cubic filter (B=1/2, C=3/10)
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_SUPER
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_SUPER" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Super sampling.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_LANCZOS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_LANCZOS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Lanczos filtering.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_INTER_LANCZOS3_ADVANCED
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_INTER_LANCZOS3_ADVANCED" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Generic Lanczos filtering with order 3.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_SMOOTH_EDGE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiInterpolationMode.NPPI_SMOOTH_EDGE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Smooth edge filtering.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiBayerGridPosition
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBayerGridPosition" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Bayer Grid Position Registration.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_BAYER_BGGR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBayerGridPosition.NPPI_BAYER_BGGR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Default registration position BGGR.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_BAYER_RGGB
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBayerGridPosition.NPPI_BAYER_RGGB" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Registration position RGGB.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_BAYER_GBRG
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBayerGridPosition.NPPI_BAYER_GBRG" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Registration position GBRG.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_BAYER_GRBG
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBayerGridPosition.NPPI_BAYER_GRBG" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Registration position GRBG.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiMaskSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Fixed filter-kernel sizes.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_1_X_3
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_1_X_3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  1 X 3 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_1_X_5
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_1_X_5" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  1 X 5 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_3_X_1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_3_X_1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 X 1 filter mask size, leaving space for more 1 X N type enum values.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_5_X_1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_5_X_1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  5 X 1 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_3_X_3
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_3_X_3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  3 X 3 filter mask size, leaving space for more N X 1 type enum values.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_5_X_5
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_5_X_5" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  5 X 5 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_7_X_7
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_7_X_7" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  7 X 7 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_9_X_9
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_9_X_9" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  9 X 9 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_11_X_11
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_11_X_11" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  11 X 11 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_13_X_13
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_13_X_13" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  13 X 13 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_15_X_15
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMaskSize.NPP_MASK_SIZE_15_X_15" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  15 X 15 filter mask size.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiDifferentialKernel
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiDifferentialKernel" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Differential Filter types.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_FILTER_SOBEL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiDifferentialKernel.NPP_FILTER_SOBEL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Differential kernel filter type sobel.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_FILTER_SCHARR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiDifferentialKernel.NPP_FILTER_SCHARR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Differential kernel filter type scharr.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppStatus
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Error Status Codes.
+ </p>
+ <p>
+  Almost all NPP function return error-status information using these return codes. Negative return codes indicate errors, positive return codes indicate warnings, a return code of 0 indicates success.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NOT_SUPPORTED_MODE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NOT_SUPPORTED_MODE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Not supported mode error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_INVALID_HOST_POINTER_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_INVALID_HOST_POINTER_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Invalid host memory pointer error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_INVALID_DEVICE_POINTER_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_INVALID_DEVICE_POINTER_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Invalid device memory pointer error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_LUT_PALETTE_BITSIZE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_LUT_PALETTE_BITSIZE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Color look up table bitsize error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ZC_MODE_NOT_SUPPORTED_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ZC_MODE_NOT_SUPPORTED_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  ZeroCrossing mode not supported error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NOT_SUFFICIENT_COMPUTE_CAPABILITY
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NOT_SUFFICIENT_COMPUTE_CAPABILITY" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Not sufficient Cuda compute capability error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_TEXTURE_BIND_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_TEXTURE_BIND_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Texture bind error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WRONG_INTERSECTION_ROI_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_WRONG_INTERSECTION_ROI_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Wrong intersection region of interest error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HAAR_CLASSIFIER_PIXEL_MATCH_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_HAAR_CLASSIFIER_PIXEL_MATCH_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Haar classifier pixel match error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MEMFREE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MEMFREE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Memory free request error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MEMSET_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MEMSET_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Memory set request error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MEMCPY_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MEMCPY_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Memory copy request error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ALIGNMENT_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ALIGNMENT_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Memory alignment error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CUDA_KERNEL_EXECUTION_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_CUDA_KERNEL_EXECUTION_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Cuda kernel execution error, most commonly Cuda kernel launch error.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ROUND_MODE_NOT_SUPPORTED_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ROUND_MODE_NOT_SUPPORTED_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Unsupported round mode.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_QUALITY_INDEX_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_QUALITY_INDEX_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image pixels are constant for quality index.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RESIZE_NO_OPERATION_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_RESIZE_NO_OPERATION_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  One of the output image dimensions is less than 1 pixel.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_OVERFLOW_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_OVERFLOW_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Number overflows the upper or lower limit of the data type.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NOT_EVEN_STEP_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NOT_EVEN_STEP_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Step value is not pixel multiple.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HISTOGRAM_NUMBER_OF_LEVELS_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_HISTOGRAM_NUMBER_OF_LEVELS_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Number of levels for histogram is less than 2.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_LUT_NUMBER_OF_LEVELS_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_LUT_NUMBER_OF_LEVELS_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Number of levels for LUT is less than 2.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CORRUPTED_DATA_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_CORRUPTED_DATA_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Processed data is corrupted,.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CHANNEL_ORDER_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_CHANNEL_ORDER_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Wrong order of the destination channels,.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ZERO_MASK_VALUE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ZERO_MASK_VALUE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  All values of the mask are zero,.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_QUADRANGLE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_QUADRANGLE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  The quadrangle is nonconvex or degenerates into triangle, line or point.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RECTANGLE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_RECTANGLE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Size of the rectangle region is less than or equal to 1.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_COEFFICIENT_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_COEFFICIENT_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Unallowable values of the transformation coefficients.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NUMBER_OF_CHANNELS_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NUMBER_OF_CHANNELS_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Bad or unsupported number of channels.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_COI_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_COI_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Channel of interest is not 1, 2, or 3.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_DIVISOR_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_DIVISOR_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Divisor is equal to zero.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CHANNEL_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_CHANNEL_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Illegal channel index.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_STRIDE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_STRIDE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Stride is less than the row length.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ANCHOR_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ANCHOR_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Anchor point is outside mask.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MASK_SIZE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MASK_SIZE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Lower bound is larger than upper bound.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RESIZE_FACTOR_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_RESIZE_FACTOR_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_INTERPOLATION_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_INTERPOLATION_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIRROR_FLIP_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MIRROR_FLIP_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MOMENT_00_ZERO_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MOMENT_00_ZERO_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_THRESHOLD_NEGATIVE_LEVEL_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_THRESHOLD_NEGATIVE_LEVEL_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_THRESHOLD_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_THRESHOLD_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTEXT_MATCH_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_CONTEXT_MATCH_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_FFT_FLAG_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_FFT_FLAG_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_FFT_ORDER_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_FFT_ORDER_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_STEP_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_STEP_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Step is less or equal zero.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_SCALE_RANGE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_SCALE_RANGE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_DATA_TYPE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_DATA_TYPE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_OUT_OFF_RANGE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_OUT_OFF_RANGE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_DIVIDE_BY_ZERO_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_DIVIDE_BY_ZERO_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MEMORY_ALLOCATION_ERR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MEMORY_ALLOCATION_ERR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NULL_POINTER_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NULL_POINTER_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RANGE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_RANGE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_SIZE_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_SIZE_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BAD_ARGUMENT_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_BAD_ARGUMENT_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NO_MEMORY_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NO_MEMORY_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NOT_IMPLEMENTED_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NOT_IMPLEMENTED_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ERROR_RESERVED
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_ERROR_RESERVED" title="Permalink to this definition">
+  ï
+ </a>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NO_ERROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NO_ERROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Error free operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_SUCCESS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_SUCCESS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Successful operation (same as NPP_NO_ERROR)
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_NO_OPERATION_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_NO_OPERATION_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Indicates that no operation was performed.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_DIVIDE_BY_ZERO_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_DIVIDE_BY_ZERO_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Divisor is zero however does not terminate the execution.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_AFFINE_QUAD_INCORRECT_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_AFFINE_QUAD_INCORRECT_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Indicates that the quadrangle passed to one of affine warping functions doesnât have necessary properties.
+ </p>
+ <p>
+  First 3 vertices are used, the fourth vertex discarded.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WRONG_INTERSECTION_ROI_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_WRONG_INTERSECTION_ROI_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  The given ROI has no interestion with either the source or destination ROI.
+ </p>
+ <p>
+  Thus no operation was performed.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WRONG_INTERSECTION_QUAD_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_WRONG_INTERSECTION_QUAD_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  The given quadrangle has no intersection with either the source or destination ROI.
+ </p>
+ <p>
+  Thus no operation was performed.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_DOUBLE_SIZE_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_DOUBLE_SIZE_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image size isnât multiple of two.
+ </p>
+ <p>
+  Indicates that in case of 422/411/420 sampling the ROI width/height was modified for proper processing.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MISALIGNED_DST_ROI_WARNING
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus.NPP_MISALIGNED_DST_ROI_WARNING" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Speed reduction due to uncoalesced memory accesses warning.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppLibraryVersion
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppLibraryVersion" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  NPPLibraryVersion This struct contains the NPP Library Version information.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    major
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppLibraryVersion.major" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Major version number.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    minor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppLibraryVersion.minor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minor version number.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    build
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppLibraryVersion.build" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Build number.
+ </p>
+ <p>
+  This reflects the nightly build this release was made from.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   char
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit unsigned chars
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   signed
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   char
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp8s
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit signed chars
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   short
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit unsigned integers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   short
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit signed integers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit unsigned integers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit signed integers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp64u
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit unsigned integers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp64s
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit signed integers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit (IEEE) floating-point numbers
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit floating-point numbers
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp8uc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8uc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents an unsigned char complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8uc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8uc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp16uc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16uc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents an unsigned short complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16uc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16uc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp16sc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents a short complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Npp16s">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Npp16s">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp32uc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32uc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents an unsigned int complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32uc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32uc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp32sc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents a signed int complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp32fc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents a single floating-point complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp64sc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64sc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents a long long complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64s" title="Npp64s">
+  <span class="n">
+   <span class="pre">
+    Npp64s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64sc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64s" title="Npp64s">
+  <span class="n">
+   <span class="pre">
+    Npp64s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64sc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    Npp64fc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64fc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Complex Number This struct represents a double floating-point complex number.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    re
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64fc.re" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Real part.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    im
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64fc.im" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Imaginary part.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppDataType
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data types for nppiPlus functions.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_8U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_8U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit unsigned integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_8S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_8S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit signed integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_16U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_16U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit unsigned integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_16S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_16S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit signed integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_32U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_32U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit unsigned integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_32S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_32S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit signed integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_64U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_64U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit unsigned integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_64S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_64S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit signed integer data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_16F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_16F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit original Cuda floating point data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_32F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_32F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit floating point data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_64F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppDataType.NPP_64F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit double precision floating point data type
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiChannels
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image channel counts for nppiPlus functions.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Single channel per pixel data.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Two channel per pixel data.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_3
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Three channel per pixel data.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_4
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Four channel per pixel data.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_A4
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_A4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Four channel per pixel data with alpha.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_P2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_P2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Two channel single channel per plane pixel data.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_P3
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_P3" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Three channel single channel per plane pixel data.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CH_P4
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiChannels.NPP_CH_P4" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Four channel single channel per plane pixel data.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_8U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_8U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 8-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_8U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_8U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 8-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_16U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_16U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 16-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_16U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_16U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 16-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_32U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_32U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 32-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_32U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_32U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 32-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_64U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_64U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 64-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_64U
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_64U" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 64-bit unsigned integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_8S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_8S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 8-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_8S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_8S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 8-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_16S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_16S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 16-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_16S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_16S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 16-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_32S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_32S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 32-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_32S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_32S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Maximum 32-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MIN_64S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MIN_64S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 64-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAX_64S
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAX_64S" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Minimum 64-bit signed integer.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MINABS_32F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MINABS_32F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Smallest positive 32-bit floating point value.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAXABS_32F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAXABS_32F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Largest positive 32-bit floating point value.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MINABS_64F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MINABS_64F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Smallest positive 64-bit floating point value.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_MAXABS_64F
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_MAXABS_64F" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Largest positive 64-bit floating point value.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2D Point
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    x
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint.x" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  x-coordinate.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    y
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint.y" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  y-coordinate.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiPoint32f
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint32f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2D Npp32f Point
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    x
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint32f.x" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  x-coordinate.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    y
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint32f.y" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  y-coordinate.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiPoint64f
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint64f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2D Npp64f Point
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    x
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint64f.x" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  x-coordinate.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    y
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint64f.y" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  y-coordinate.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppPointPolar
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppPointPolar" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2D Polar Point
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    rho
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppPointPolar.rho" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Polar rho value.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    theta
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppPointPolar.theta" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Polar theta value.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2D Size This struct typically represents the size of a a rectangular region in two space.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    width
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiSize.width" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Rectangle width.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    height
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiSize.height" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Rectangle height.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiRect
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  2D Rectangle This struct contains position and size information of a rectangle in two space.
+ </p>
+ <p>
+  The rectangleâs position is usually signified by the coordinate of its upper-left corner.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    x
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect.x" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  x-coordinate of upper left corner (lowest memory address).
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    y
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect.y" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  y-coordinate of upper left corner (lowest memory address).
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    width
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect.width" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Rectangle width.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    height
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect.height" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Rectangle height.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiAxis
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAxis" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  nppiMirror direction controls
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HORIZONTAL_AXIS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAxis.NPP_HORIZONTAL_AXIS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Flip around horizontal axis in mirror function.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_VERTICAL_AXIS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAxis.NPP_VERTICAL_AXIS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Flip around vertical axis in mirror function.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BOTH_AXIS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAxis.NPP_BOTH_AXIS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Flip around both axes in mirror function.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppCmpOp
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppCmpOp" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel comparison control values.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CMP_LESS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppCmpOp.NPP_CMP_LESS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Threshold test for less than.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CMP_LESS_EQ
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppCmpOp.NPP_CMP_LESS_EQ" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Threshold test for less than or equal.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CMP_EQ
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppCmpOp.NPP_CMP_EQ" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Threshold test for equal.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CMP_GREATER_EQ
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppCmpOp.NPP_CMP_GREATER_EQ" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Threshold test for greater than or equal.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CMP_GREATER
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppCmpOp.NPP_CMP_GREATER" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Threshold test for greater than.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppRoundMode
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Rounding Modes.
+ </p>
+ <p>
+  The enumerated rounding modes are used by a large number of NPP primitives to allow the user to specify the method by which fractional values are converted to integer values. Also see
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#general_conventions_lb_1rounding_modes">
+   <span class="std std-ref">
+    Rounding Modes
+   </span>
+  </a>
+  .
+ </p>
+ <p>
+  For NPP release 5.5 new names for the three rounding modes are introduced that are based on the naming conventions for rounding modes set forth in the IEEE-754 floating-point standard. Developers are encouraged to use the new, longer names to be future proof as the legacy names will be deprecated in subsequent NPP releases.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RND_NEAR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode.NPP_RND_NEAR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Round to the nearest even integer.
+ </p>
+ <p>
+  All fractional numbers are rounded to their nearest integer. The ambiguous cases (i.e. &lt;integer&gt;.5) are rounded to the closest even integer. E.g.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    roundNear(0.5) = 0
+   </p>
+  </li>
+  <li>
+   <p>
+    roundNear(0.6) = 1
+   </p>
+  </li>
+  <li>
+   <p>
+    roundNear(1.5) = 2
+   </p>
+  </li>
+  <li>
+   <p>
+    roundNear(-1.5) = -2
+   </p>
+  </li>
+ </ul>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ROUND_NEAREST_TIES_TO_EVEN
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode.NPP_ROUND_NEAREST_TIES_TO_EVEN" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alias name for NPP_RND_NEAR.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RND_FINANCIAL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode.NPP_RND_FINANCIAL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Round according to financial rule.
+ </p>
+ <p>
+  All fractional numbers are rounded to their nearest integer. The ambiguous cases (i.e. &lt;integer&gt;.5) are rounded away from zero. E.g.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    roundFinancial(0.4) = 0
+   </p>
+  </li>
+  <li>
+   <p>
+    roundFinancial(0.5) = 1
+   </p>
+  </li>
+  <li>
+   <p>
+    roundFinancial(-1.5) = -2
+   </p>
+  </li>
+ </ul>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ROUND_NEAREST_TIES_AWAY_FROM_ZERO
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode.NPP_ROUND_NEAREST_TIES_AWAY_FROM_ZERO" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alias name for NPP_RND_FINANCIAL.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_RND_ZERO
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode.NPP_RND_ZERO" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Round towards zero (truncation).
+ </p>
+ <p>
+  All fractional numbers of the form &lt;integer&gt;.&lt;decimals&gt; are truncated to &lt;integer&gt;.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    roundZero(1.5) = 1
+   </p>
+  </li>
+  <li>
+   <p>
+    roundZero(1.9) = 1
+   </p>
+  </li>
+  <li>
+   <p>
+    roundZero(-2.5) = -2
+   </p>
+  </li>
+ </ul>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ROUND_TOWARD_ZERO
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppRoundMode.NPP_ROUND_TOWARD_ZERO" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alias name for NPP_RND_ZERO.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiBorderType
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Supported image border modes.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BORDER_UNDEFINED
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType.NPP_BORDER_UNDEFINED" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image border type undefined.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BORDER_NONE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType.NPP_BORDER_NONE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image border type none.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BORDER_CONSTANT
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType.NPP_BORDER_CONSTANT" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image border type constant value.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BORDER_REPLICATE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType.NPP_BORDER_REPLICATE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image border type replicate border pixels.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BORDER_WRAP
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType.NPP_BORDER_WRAP" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image border type wrap border pixels.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_BORDER_MIRROR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBorderType.NPP_BORDER_MIRROR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image border type mirror border pixels.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppHintAlgorithm
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppHintAlgorithm" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Hints.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ALG_HINT_NONE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppHintAlgorithm.NPP_ALG_HINT_NONE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Hint none, currently these are all ignored.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ALG_HINT_FAST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppHintAlgorithm.NPP_ALG_HINT_FAST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Hint fast, currently these are all ignored.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_ALG_HINT_ACCURATE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppHintAlgorithm.NPP_ALG_HINT_ACCURATE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Hint accurate, currently these are all ignored.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiAlphaOp
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition mode controls.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_OVER
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_OVER" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition over operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_IN
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_IN" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition in operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_OUT
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_OUT" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition out operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_ATOP
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_ATOP" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition atop operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_XOR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_XOR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition xor operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_PLUS
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_PLUS" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition plus operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_OVER_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_OVER_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition over premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_IN_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_IN_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition in premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_OUT_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_OUT_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition out premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_ATOP_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_ATOP_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition atop premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_XOR_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_XOR_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition xor premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_PLUS_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_PLUS_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition plus premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPPI_OP_ALPHA_PREMUL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiAlphaOp.NPPI_OP_ALPHA_PREMUL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Alpha composition premultiply operation.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiHOGConfig
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHOGConfig" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  The
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnppihogconfig">
+   <span class="std std-ref">
+    NppiHOGConfig
+   </span>
+  </a>
+  structure defines the configuration parameters for the HOG descriptor:
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    cellSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHOGConfig.cellSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  square cell size (pixels).
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    histogramBlockSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHOGConfig.histogramBlockSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  square histogram block size (pixels).
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nHistogramBins
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHOGConfig.nHistogramBins" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  required number of histogram bins.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiSize" title="NppiSize">
+  <span class="n">
+   <span class="pre">
+    NppiSize
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    detectionWindowSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHOGConfig.detectionWindowSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  detection window size (pixels).
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HOG_MAX_CELL_SIZE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_HOG_MAX_CELL_SIZE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  HOG Cell controls.
+ </p>
+ <p>
+  max horizontal/vertical pixel size of cell.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HOG_MAX_BLOCK_SIZE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_HOG_MAX_BLOCK_SIZE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  max horizontal/vertical pixel size of block.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HOG_MAX_BINS_PER_CELL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_HOG_MAX_BINS_PER_CELL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  max number of histogram bins.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HOG_MAX_CELLS_PER_DESCRIPTOR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_HOG_MAX_CELLS_PER_DESCRIPTOR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  max number of cells in a descriptor window.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HOG_MAX_OVERLAPPING_BLOCKS_PER_DESCRIPTOR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_HOG_MAX_OVERLAPPING_BLOCKS_PER_DESCRIPTOR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  max number of overlapping blocks in a descriptor window.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_HOG_MAX_DESCRIPTOR_LOCATIONS_PER_CALL
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_HOG_MAX_DESCRIPTOR_LOCATIONS_PER_CALL" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  max number of descriptor window locations per function call.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiHaarClassifier_32f
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarClassifier_32f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for HaarClassifier_32f.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    numClassifiers
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarClassifier_32f.numClassifiers" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  number of classifiers.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    classifiers
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarClassifier_32f.classifiers" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  packed classifier data 40 bytes each.
+ </p>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    classifierStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarClassifier_32f.classifierStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  packed classifier byte step.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiSize" title="NppiSize">
+  <span class="n">
+   <span class="pre">
+    NppiSize
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    classifierSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarClassifier_32f.classifierSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  packed classifier size.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    counterDevice
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarClassifier_32f.counterDevice" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  counter device.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiHaarBuffer
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarBuffer" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for Haar buffer.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    haarBufferSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarBuffer.haarBufferSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  size of the buffer
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    haarBuffer
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHaarBuffer.haarBuffer" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  buffer
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppsZCType
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppsZCType" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Signal sign operations.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppZCR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppsZCType.nppZCR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  sign change
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppZCXor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppsZCType.nppZCXor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  sign change XOR
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppZCC
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppsZCType.nppZCC" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  sign change count_0
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiHuffmanTableType
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHuffmanTableType" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  HuffMan Table controls.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiDCTable
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHuffmanTableType.nppiDCTable" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  DC Table.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiACTable
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiHuffmanTableType.nppiACTable" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  AC Table.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiNorm
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiNorm" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Norm controls.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiNormInf
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiNorm.nppiNormInf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  maximum
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiNormL1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiNorm.nppiNormL1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  sum
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppiNormL2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiNorm.nppiNormL2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  square root of sum of squares
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiConnectedRegion
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiConnectedRegion" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure of connected pixel region information.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect" title="NppiRect">
+  <span class="n">
+   <span class="pre">
+    NppiRect
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oBoundingBox
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiConnectedRegion.oBoundingBox" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  x, y, width, height == left, top, right, and bottom pixel coordinates
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nConnectedPixelCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiConnectedRegion.nConnectedPixelCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  total number of pixels in connected region
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    aSeedPixelValue
+   </span>
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   [
+  </span>
+ </span>
+ <span class="m">
+  <span class="pre">
+   3
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   ]
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiConnectedRegion.aSeedPixelValue" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  original pixel value of seed pixel, 1 or 3 channel
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiImageDescriptor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiImageDescriptor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  General image descriptor.
+ </p>
+ <p>
+  Defines the basic parameters of an image, including data pointer, step, and image size. This can be used by both source and destination images.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pData
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiImageDescriptor.pData" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device memory pointer to the image
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiImageDescriptor.nStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  step size
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiSize" title="NppiSize">
+  <span class="n">
+   <span class="pre">
+    NppiSize
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiImageDescriptor.oSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  width and height of the image
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiBufferDescriptor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBufferDescriptor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  struct
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnppibufferdescriptor">
+   <span class="std std-ref">
+    NppiBufferDescriptor
+   </span>
+  </a>
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pData
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBufferDescriptor.pData" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  per image device memory pointer to the corresponding buffer
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nBufferSize
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiBufferDescriptor.nBufferSize" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  allocated buffer size
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiCompressedMarkerLabelsInfo
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiCompressedMarkerLabelsInfo" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Provides details of uniquely labeled pixel regions of interest returned by CompressedLabelMarkersUF function.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nMarkerLabelPixelCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiCompressedMarkerLabelsInfo.nMarkerLabelPixelCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  total number of pixels in this connected pixel region
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourPixelCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiCompressedMarkerLabelsInfo.nContourPixelCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  total number of pixels in this connected pixel region contour
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourPixelsFound
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiCompressedMarkerLabelsInfo.nContourPixelsFound" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  total number of pixels in this connected pixel region contour found during geometry search
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oContourFirstPixelLocation
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiCompressedMarkerLabelsInfo.oContourFirstPixelLocation" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  image geometric x and y location of the first pixel in the contour
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect" title="NppiRect">
+  <span class="n">
+   <span class="pre">
+    NppiRect
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oMarkerLabelBoundingBox
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiCompressedMarkerLabelsInfo.oMarkerLabelBoundingBox" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  bounding box of this connected pixel region expressed as leftmostX, topmostY, rightmostX, and bottommostY
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiContourBlockSegment
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourBlockSegment" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Provides details of contour pixel grid map location and association.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nMarkerLabelID
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourBlockSegment.nMarkerLabelID" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  this connected pixel region contour ID
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourPixelCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourBlockSegment.nContourPixelCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  total number of pixels in this connected pixel region contour
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourStartingPixelOffset
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourBlockSegment.nContourStartingPixelOffset" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  base offset of starting pixel in the overall contour pixel list
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSegmentNum
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourBlockSegment.nSegmentNum" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  relative block segment number within this particular contour ID
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiContourPixelGeometryInfo
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Provides contour (boundary) geometry info of uniquely labeled pixel regions returned by nppiCompressedMarkerLabelsUFInfo function in host memory in counterclockwise order relative to contour interiors.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oContourOrderedGeometryLocation
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.oContourOrderedGeometryLocation" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  image geometry X and Y location in requested output order
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oContourPrevPixelLocation
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.oContourPrevPixelLocation" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  image geometry X and Y location of previous contour pixel
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oContourCenterPixelLocation
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.oContourCenterPixelLocation" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  image geometry X and Y location of center contour pixel
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oContourNextPixelLocation
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.oContourNextPixelLocation" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  image geometry X and Y location of next contour pixel
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nOrderIndex
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nOrderIndex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  contour pixel counterclockwise order index in geometry list
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nReverseOrderIndex
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nReverseOrderIndex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  contour pixel clockwise order index in geometry list
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nFirstIndex
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nFirstIndex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  index of first ordered contour pixel in this subgroup
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nLastIndex
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nLastIndex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  index of last ordered contour pixel in this subgroup
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nNextContourPixelIndex
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nNextContourPixelIndex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  index of next ordered contour pixel in
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnppicontourpixelgeometryinfo">
+   <span class="std std-ref">
+    NppiContourPixelGeometryInfo
+   </span>
+  </a>
+  list
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nPrevContourPixelIndex
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nPrevContourPixelIndex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  index of previous ordered contour pixel in
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnppicontourpixelgeometryinfo">
+   <span class="std std-ref">
+    NppiContourPixelGeometryInfo
+   </span>
+  </a>
+  list
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nPixelAlreadyUsed
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nPixelAlreadyUsed" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  this test pixel is has already been used
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nAlreadyLinked
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nAlreadyLinked" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  this test pixel is already linked to center pixel
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nAlreadyOutput
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nAlreadyOutput" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  this pixel has already been output in geometry list
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourInteriorDirection
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo.nContourInteriorDirection" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  direction of contour region interior
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_SOUTH_EAST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_SOUTH_EAST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Provides contour (boundary) direction info of uniquely labeled pixel regions returned by CompressedLabelMarkersUF function.
+ </p>
+ <p>
+  Contour direction south east
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_SOUTH
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_SOUTH" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction south.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_SOUTH_WEST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_SOUTH_WEST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction south west.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_WEST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_WEST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction west.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_EAST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_EAST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction east.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_NORTH_EAST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_NORTH_EAST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction north east.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_NORTH
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_NORTH" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction north.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_NORTH_WEST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_NORTH_WEST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction north west.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_ANY_NORTH
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_ANY_NORTH" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Provides contour (boundary) diagonal direction info of uniquely labeled pixel regions returned by CompressedLabelMarkersUF function.
+ </p>
+ <p>
+  Contour direction any north
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_ANY_WEST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_ANY_WEST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction any west.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_ANY_SOUTH
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_ANY_SOUTH" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction any south.
+ </p>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_CONTOUR_DIRECTION_ANY_EAST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NPP_CONTOUR_DIRECTION_ANY_EAST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Contour direction any east.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiContourPixelDirectionInfo
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for contour pixel direction information.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nMarkerLabelID
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nMarkerLabelID" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  MarkerLabelID of contour interior connected region.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourDirectionCenterPixel
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nContourDirectionCenterPixel" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  provides current center contour pixel input and output direction info
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nContourInteriorDirectionCenterPixel
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nContourInteriorDirectionCenterPixel" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  provides current center contour pixel region interior direction info
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  direction to directly connected contour pixels, 0 if not connected
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nGeometryInfoIsValid
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nGeometryInfoIsValid" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  direction to directly connected contour pixels, 0 if not connected
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelGeometryInfo" title="NppiContourPixelGeometryInfo">
+  <span class="n">
+   <span class="pre">
+    NppiContourPixelGeometryInfo
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oContourPixelGeometryInfo
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.oContourPixelGeometryInfo" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel geometry info structure.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nEast1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nEast1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nNorthEast1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nNorthEast1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nNorth1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nNorth1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nNorthWest1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nNorthWest1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nWest1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nWest1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSouthWest1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nSouthWest1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSouth1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nSouth1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiPoint" title="NppiPoint">
+  <span class="n">
+   <span class="pre">
+    NppiPoint
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSouthEast1
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nSouthEast1" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Pixel coordinate values in each direction.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1EastConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1EastConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  East connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1NorthEastConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1NorthEastConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  North east connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1NorthConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1NorthConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  North connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1NorthWestConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1NorthWestConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  North west connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1WestConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1WestConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  West connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1SouthWestConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1SouthWestConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  South west connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1SouthConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1SouthConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  South connected flag.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTest1SouthEastConnected
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourPixelDirectionInfo.nTest1SouthEastConnected" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  South east connected flag.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiContourTotalsInfo
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourTotalsInfo" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for contour total counts.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nTotalImagePixelContourCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourTotalsInfo.nTotalImagePixelContourCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  total number of contour pixels in image
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nLongestImageContourPixelCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiContourTotalsInfo.nLongestImageContourPixelCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  longest per contour pixel count in image
+ </p>
+ <span class="k">
+  <span class="pre">
+   enum
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiWatershedSegmentBoundaryType
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWatershedSegmentBoundaryType" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Provides control of the type of segment boundaries, if any, added to the image generated by the watershed segmentation function.
+ </p>
+ <p>
+  Values:
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WATERSHED_SEGMENT_BOUNDARIES_NONE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWatershedSegmentBoundaryType.NPP_WATERSHED_SEGMENT_BOUNDARIES_NONE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image watershed segment boundary type none.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WATERSHED_SEGMENT_BOUNDARIES_BLACK
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWatershedSegmentBoundaryType.NPP_WATERSHED_SEGMENT_BOUNDARIES_BLACK" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image watershed segment boundary type black.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WATERSHED_SEGMENT_BOUNDARIES_WHITE
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWatershedSegmentBoundaryType.NPP_WATERSHED_SEGMENT_BOUNDARIES_WHITE" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image watershed segment boundary type white.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WATERSHED_SEGMENT_BOUNDARIES_CONTRAST
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWatershedSegmentBoundaryType.NPP_WATERSHED_SEGMENT_BOUNDARIES_CONTRAST" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image watershed segment boundary type contrasting intensiity.
+ </p>
+ <span class="k">
+  <span class="pre">
+   enumerator
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NPP_WATERSHED_SEGMENT_BOUNDARIES_ONLY
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWatershedSegmentBoundaryType.NPP_WATERSHED_SEGMENT_BOUNDARIES_ONLY" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Image watershed segment boundary type render boundaries only.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppStreamContext
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext" title="Permalink to this definition">
+  ï
+ </a>
+ <h2>
+  Application Managed Stream Context
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structNppStreamContext_1application_managed_stream_context" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p id="structnppstreamcontext_1application_managed_stream_context">
+  NPP stream context structure must be filled in by application. Application should not initialize or alter reserved fields.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="n">
+  <span class="pre">
+   cudaStream_t
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    hStream
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.hStream" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From current Cuda stream ID.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nCudaDeviceId
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nCudaDeviceId" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDevice().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nMultiProcessorCount
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nMultiProcessorCount" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDeviceProperties().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nMaxThreadsPerMultiProcessor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nMaxThreadsPerMultiProcessor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDeviceProperties().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nMaxThreadsPerBlock
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nMaxThreadsPerBlock" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDeviceProperties().
+ </p>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSharedMemPerBlock
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nSharedMemPerBlock" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDeviceProperties().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nCudaDevAttrComputeCapabilityMajor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nCudaDevAttrComputeCapabilityMajor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDeviceAttribute().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nCudaDevAttrComputeCapabilityMinor
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nCudaDevAttrComputeCapabilityMinor" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaGetDeviceAttribute().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nStreamFlags
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nStreamFlags" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  From cudaStreamGetFlags().
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nReserved0
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext.nReserved0" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  reserved, do not alter.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiResizeBatchCXR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchCXR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  NPP Batch Geometry Structure Definitions.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pSrc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchCXR.pSrc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSrcStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchCXR.nSrcStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image byte count per row.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pDst
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchCXR.pDst" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  destination image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nDstStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchCXR.nDstStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device image byte count per row.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiResizeBatchROI_Advanced
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchROI_Advanced" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for variable ROI image batch resizing.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect" title="NppiRect">
+  <span class="n">
+   <span class="pre">
+    NppiRect
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oSrcRectROI
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchROI_Advanced.oSrcRectROI" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  per source image rectangle parameters.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiRect" title="NppiRect">
+  <span class="n">
+   <span class="pre">
+    NppiRect
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    oDstRectROI
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiResizeBatchROI_Advanced.oDstRectROI" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  per destination image rectangle parameters.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiMirrorBatchCXR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMirrorBatchCXR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for batched nppiMirrorBatch.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pSrc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMirrorBatchCXR.pSrc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image device memory pointer, ignored for in-place versions.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSrcStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMirrorBatchCXR.nSrcStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image byte count per row.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pDst
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMirrorBatchCXR.pDst" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  destination image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nDstStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiMirrorBatchCXR.nDstStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device image byte count per row.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiWarpAffineBatchCXR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for batched nppiWarpAffineBatch.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pSrc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR.pSrc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSrcStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR.nSrcStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image byte count per row.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pDst
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR.pDst" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  destination image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nDstStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR.nDstStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device image byte count per row.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pCoeffs
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR.pCoeffs" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device memory pointer to the tranformation matrix with double precision floating-point coefficient values to be used for this image.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    aTransformedCoeffs
+   </span>
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   [
+  </span>
+ </span>
+ <span class="m">
+  <span class="pre">
+   2
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   ]
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   [
+  </span>
+ </span>
+ <span class="m">
+  <span class="pre">
+   3
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   ]
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpAffineBatchCXR.aTransformedCoeffs" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  FOR INTERNAL USE, DO NOT INITIALIZE.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiWarpPerspectiveBatchCXR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for batched nppiWarpPerspectiveBatch.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pSrc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR.pSrc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSrcStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR.nSrcStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image byte count per row.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pDst
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR.pDst" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  destination image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nDstStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR.nDstStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device image byte count per row.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pCoeffs
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR.pCoeffs" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device memory pointer to the tranformation matrix with double precision floating-point coefficient values to be used for this image.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    aTransformedCoeffs
+   </span>
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   [
+  </span>
+ </span>
+ <span class="m">
+  <span class="pre">
+   3
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   ]
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   [
+  </span>
+ </span>
+ <span class="m">
+  <span class="pre">
+   3
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   ]
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiWarpPerspectiveBatchCXR.aTransformedCoeffs" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  FOR INTERNAL USE, DO NOT INITIALIZE.
+ </p>
+ <span class="k">
+  <span class="pre">
+   struct
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    NppiColorTwistBatchCXR
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiColorTwistBatchCXR" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Data structure for batched nppiColorTwistBatch.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-public-members">
+  Public Members
+ </p>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pSrc
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiColorTwistBatchCXR.pSrc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nSrcStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiColorTwistBatchCXR.nSrcStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  source image byte count per row.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pDst
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiColorTwistBatchCXR.pDst" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  destination image device memory pointer.
+ </p>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nDstStep
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiColorTwistBatchCXR.nDstStep" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device image byte count per row.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    pTwist
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppiColorTwistBatchCXR.pTwist" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  device memory pointer to the color twist matrix with floating-point coefficient values to be used for this image.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2009-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

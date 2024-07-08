@@ -1,0 +1,358 @@
+<html><head><title>Nsight Eclipse Plugins Installation Guide</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/contents.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html">
+    1. Introduction
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#install-plugins-using-eclipse-ide">
+      1.1. Install plugins using Eclipse IDE
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#uninstall-plugins-using-eclipse-ide">
+      1.2. Uninstall plugins using Eclipse IDE
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#install-using-script">
+      1.3. Install Using Script
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#notices">
+    2. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#notice">
+      2.1. Notice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#opencl">
+      2.2. OpenCL
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#trademarks">
+      2.3. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/contents.html">
+  Nsight Eclipse Plugins Installation Guide
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   <span class="section-number">
+    1.
+   </span>
+   Introduction
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/Nsight_Eclipse_Plugins_Installation_Guide.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <p class="rubric-h1 rubric">
+  Nsight Eclipse Plugins Installation Guide
+ </p>
+ <p>
+  The user guide for installing Nsight Eclipse Plugins.
+ </p>
+ <h1>
+  <span class="section-number">
+   1.
+  </span>
+  Introduction
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#introduction" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  This guide provides the procedures to install the Nsight Eclipse Edition Plugins in users own eclipse environment.
+ </p>
+ <p>
+  Nsight Eclipse Plugins offers full-featured IDE that provides an all-in-one integrated environment to edit, build, debug and profile CUDA-C applications.
+ </p>
+ <h2>
+  <span class="section-number">
+   1.1.
+  </span>
+  Install plugins using Eclipse IDE
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#install-plugins-using-eclipse-ide" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <ol class="arabic">
+  <li>
+   <p>
+    You can install Nsight Eclipse plugins in your own Eclipse environment or download and install
+    <a class="reference external" href="https://eclipse.org/downloads/eclipse-packages">
+     Eclipse IDE for C/C++ developers
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Launch Eclipse and go to Help &gt; Install New Software.. menu.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click on the Add Button
+   </p>
+  </li>
+  <li>
+   <p>
+    Enter name (ex: NsightEE) in the Name field. Choose the the zip file(com.nvidia.cuda.repo.zip) that contains the plugins using Archive button or Enter the full path of zip file. Nsight EE plugns zip file can be found in /usr/local/cuda-11.8/nsightee_plugins directory.
+   </p>
+   <a class="image imagecenter reference internal image-reference" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/_images/add_repository.png">
+   </a>
+  </li>
+  <li>
+   <p>
+    Click OK button
+   </p>
+  </li>
+  <li>
+   <p>
+    Select âCuda Main Featuresâ option and go to next page.
+   </p>
+   <a class="image imagecenter reference internal image-reference" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/_images/nsight-eclipse-install-cuda-main-features.png">
+   </a>
+  </li>
+  <li>
+   <p>
+    Accept the license agreement and click on Finish button to install the plugins.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click OK on the âSecurity Warningâ dialog to ignore the warning message about unsigned content (This warning message is displayed for all the plugins that are not signed by Eclipse.org).
+   </p>
+  </li>
+  <li>
+   <p>
+    Restart eclipse when prompted.
+   </p>
+  </li>
+ </ol>
+ <p>
+  Nsight Eclipse plugins installation is now complete.Go to Help &gt; Installation Details.. Menu to verify the âCuda Developer Toolsâ and âCuda Remote Launchâ plugins are installed
+ </p>
+ <h2>
+  <span class="section-number">
+   1.2.
+  </span>
+  Uninstall plugins using Eclipse IDE
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#uninstall-plugins-using-eclipse-ide" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <ol class="arabic">
+  <li>
+   <p>
+    Launch Eclipse and go to Help &gt; Installation Details menu.
+   </p>
+  </li>
+  <li>
+   <p>
+    Select âCuda Developer Toolsâ and âCuda Remote Launchâ options from the dialog
+   </p>
+   <a class="image imagecenter reference internal image-reference" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/_images/NsightEE_plugins_uninstall.png">
+   </a>
+  </li>
+  <li>
+   <p>
+    Click on the Uninstall button.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click Finish button when asked to review and confirm.
+   </p>
+  </li>
+  <li>
+   <p>
+    Restart eclipse when prompted.
+   </p>
+  </li>
+ </ol>
+ <p>
+  Nsight Eclipse plugins will be uninstalled after restarting eclipse. Go to Help &gt; Installation Details.. menu to verify.
+ </p>
+ <h2>
+  <span class="section-number">
+   1.3.
+  </span>
+  Install Using Script
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#install-using-script" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  To install or uninstall the Nsight Eclipse Plugins using the script, run the installation script provided in the bin directory of the toolkit. By default, it is located in
+  <span class="pre">
+   /usr/local/cuda-11.8/bin
+  </span>
+  :
+ </p>
+ <p>
+  The usage of the script is as follows:
+ </p>
+ <pre>Usage: ./nsight_ee_plugins_manage.sh  &lt;action&gt;  &lt;eclipse_dir&gt;
+
+     &lt;action&gt; : 'install' or 'uninstall'
+
+     &lt;eclipse_dir&gt; : eclipse installation directory
+</pre>
+ <p>
+  To install the Nsight Eclipse Plugins, run the following command:
+ </p>
+ <pre>$ /usr/local/cuda-11.8/bin/nsight_ee_plugins_manage.sh install &lt;eclipse_dir&gt;
+</pre>
+ <p>
+  To uninstall the Nsight Eclipse Plugins, run the following command:
+ </p>
+ <pre>$ /usr/local/cuda-11.8/bin/nsight_ee_plugins_manage.sh uninstall &lt;eclipse_dir&gt;
+</pre>
+ <h1>
+  <span class="section-number">
+   2.
+  </span>
+  Notices
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#notices" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   2.1.
+  </span>
+  Notice
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#notice" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  This document is provided for information purposes only and shall not be regarded as a warranty of a certain functionality, condition, or quality of a product. NVIDIA Corporation (âNVIDIAâ) makes no representations or warranties, expressed or implied, as to the accuracy or completeness of the information contained in this document and assumes no responsibility for any errors contained herein. NVIDIA shall have no liability for the consequences or use of such information or for any infringement of patents or other rights of third parties that may result from its use. This document is not a commitment to develop, release, or deliver any Material (defined below), code, or functionality.
+ </p>
+ <p>
+  NVIDIA reserves the right to make corrections, modifications, enhancements, improvements, and any other changes to this document, at any time without notice.
+ </p>
+ <p>
+  Customer should obtain the latest relevant information before placing orders and should verify that such information is current and complete.
+ </p>
+ <p>
+  NVIDIA products are sold subject to the NVIDIA standard terms and conditions of sale supplied at the time of order acknowledgement, unless otherwise agreed in an individual sales agreement signed by authorized representatives of NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby expressly objects to applying any customer general terms and conditions with regards to the purchase of the NVIDIA product referenced in this document. No contractual obligations are formed either directly or indirectly by this document.
+ </p>
+ <p>
+  NVIDIA products are not designed, authorized, or warranted to be suitable for use in medical, military, aircraft, space, or life support equipment, nor in applications where failure or malfunction of the NVIDIA product can reasonably be expected to result in personal injury, death, or property or environmental damage. NVIDIA accepts no liability for inclusion and/or use of NVIDIA products in such equipment or applications and therefore such inclusion and/or use is at customerâs own risk.
+ </p>
+ <p>
+  NVIDIA makes no representation or warranty that products based on this document will be suitable for any specified use. Testing of all parameters of each product is not necessarily performed by NVIDIA. It is customerâs sole responsibility to evaluate and determine the applicability of any information contained in this document, ensure the product is suitable and fit for the application planned by customer, and perform the necessary testing for the application in order to avoid a default of the application or the product. Weaknesses in customerâs product designs may affect the quality and reliability of the NVIDIA product and may result in additional or different conditions and/or requirements beyond those contained in this document. NVIDIA accepts no liability related to any default, damage, costs, or problem which may be based on or attributable to: (i) the use of the NVIDIA product in any manner that is contrary to this document or (ii) customer product designs.
+ </p>
+ <p>
+  No license, either expressed or implied, is granted under any NVIDIA patent right, copyright, or other NVIDIA intellectual property right under this document. Information published by NVIDIA regarding third-party products or services does not constitute a license from NVIDIA to use such products or services or a warranty or endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property rights of the third party, or a license from NVIDIA under the patents or other intellectual property rights of NVIDIA.
+ </p>
+ <p>
+  Reproduction of information in this document is permissible only if approved in advance by NVIDIA in writing, reproduced without alteration and in full compliance with all applicable export laws and regulations, and accompanied by all associated conditions, limitations, and notices.
+ </p>
+ <p>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding any damages that customer might incur for any reason whatsoever, NVIDIAâs aggregate and cumulative liability towards customer for the products described herein shall be limited in accordance with the Terms of Sale for the product.
+ </p>
+ <h2>
+  <span class="section-number">
+   2.2.
+  </span>
+  OpenCL
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#opencl" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  OpenCL is a trademark of Apple Inc. used under license to the Khronos Group Inc.
+ </p>
+ <h2>
+  <span class="section-number">
+   2.3.
+  </span>
+  Trademarks
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html#trademarks" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2017-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

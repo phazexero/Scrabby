@@ -1,0 +1,399 @@
+<html><head><title>12. Structs â CUDA Math API Reference Manual 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__FP8.html">
+    1. FP8 Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html">
+    2. Half Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__BFLOAT16.html">
+    3. Bfloat16 Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__SINGLE.html">
+    4. Single Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SINGLE.html">
+    5. Single Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__DOUBLE.html">
+    6. Double Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html">
+    7. Double Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html">
+    8. Type Casting Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INT.html">
+    9. Integer Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__INT.html">
+    10. Integer Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SIMD.html">
+    11. SIMD Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/structs.html">
+    12. Structs
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html">
+      12.1. __half
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html">
+      12.2. __half2
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2__raw.html">
+      12.3. __half2_raw
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half__raw.html">
+      12.4. __half_raw
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat16.html">
+      12.5. __nv_bfloat16
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat162.html">
+      12.6. __nv_bfloat162
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat162__raw.html">
+      12.7. __nv_bfloat162_raw
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat16__raw.html">
+      12.8. __nv_bfloat16_raw
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8__e4m3.html">
+      12.9. __nv_fp8_e4m3
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8__e5m2.html">
+      12.10. __nv_fp8_e5m2
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x2__e4m3.html">
+      12.11. __nv_fp8x2_e4m3
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x2__e5m2.html">
+      12.12. __nv_fp8x2_e5m2
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x4__e4m3.html">
+      12.13. __nv_fp8x4_e4m3
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x4__e5m2.html">
+      12.14. __nv_fp8x4_e5m2
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/notices.html">
+    13. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+  CUDA Math API Reference Manual
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   <span class="section-number">
+    12.
+   </span>
+   Structs
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/CUDA_Math_API.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   12.
+  </span>
+  Structs
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/structs.html#structs" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#struct____half">
+  <span class="std std-ref">
+   __half
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#struct____half">
+   <span class="std std-ref">
+    __half
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#struct____half2">
+  <span class="std std-ref">
+   __half2
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#struct____half2">
+   <span class="std std-ref">
+    __half2
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2__raw.html#struct____half2__raw">
+  <span class="std std-ref">
+   __half2_raw
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2__raw.html#struct____half2__raw">
+   <span class="std std-ref">
+    __half2_raw
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half__raw.html#struct____half__raw">
+  <span class="std std-ref">
+   __half_raw
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half__raw.html#struct____half__raw">
+   <span class="std std-ref">
+    __half_raw
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat16.html#struct____nv__bfloat16">
+  <span class="std std-ref">
+   __nv_bfloat16
+  </span>
+ </a>
+ <p>
+  nv_bfloat16 datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat162.html#struct____nv__bfloat162">
+  <span class="std std-ref">
+   __nv_bfloat162
+  </span>
+ </a>
+ <p>
+  nv_bfloat162 datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat162__raw.html#struct____nv__bfloat162__raw">
+  <span class="std std-ref">
+   __nv_bfloat162_raw
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat162__raw.html#struct____nv__bfloat162__raw">
+   <span class="std std-ref">
+    __nv_bfloat162_raw
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat16__raw.html#struct____nv__bfloat16__raw">
+  <span class="std std-ref">
+   __nv_bfloat16_raw
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__bfloat16__raw.html#struct____nv__bfloat16__raw">
+   <span class="std std-ref">
+    __nv_bfloat16_raw
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8__e4m3.html#struct____nv__fp8__e4m3">
+  <span class="std std-ref">
+   __nv_fp8_e4m3
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8__e4m3.html#struct____nv__fp8__e4m3">
+   <span class="std std-ref">
+    __nv_fp8_e4m3
+   </span>
+  </a>
+  datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8__e5m2.html#struct____nv__fp8__e5m2">
+  <span class="std std-ref">
+   __nv_fp8_e5m2
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8__e5m2.html#struct____nv__fp8__e5m2">
+   <span class="std std-ref">
+    __nv_fp8_e5m2
+   </span>
+  </a>
+  datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x2__e4m3.html#struct____nv__fp8x2__e4m3">
+  <span class="std std-ref">
+   __nv_fp8x2_e4m3
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x2__e4m3.html#struct____nv__fp8x2__e4m3">
+   <span class="std std-ref">
+    __nv_fp8x2_e4m3
+   </span>
+  </a>
+  datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x2__e5m2.html#struct____nv__fp8x2__e5m2">
+  <span class="std std-ref">
+   __nv_fp8x2_e5m2
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x2__e5m2.html#struct____nv__fp8x2__e5m2">
+   <span class="std std-ref">
+    __nv_fp8x2_e5m2
+   </span>
+  </a>
+  datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x4__e4m3.html#struct____nv__fp8x4__e4m3">
+  <span class="std std-ref">
+   __nv_fp8x4_e4m3
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x4__e4m3.html#struct____nv__fp8x4__e4m3">
+   <span class="std std-ref">
+    __nv_fp8x4_e4m3
+   </span>
+  </a>
+  datatype
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x4__e5m2.html#struct____nv__fp8x4__e5m2">
+  <span class="std std-ref">
+   __nv_fp8x4_e5m2
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__fp8x4__e5m2.html#struct____nv__fp8x4__e5m2">
+   <span class="std std-ref">
+    __nv_fp8x4_e5m2
+   </span>
+  </a>
+  datatype
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2007-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

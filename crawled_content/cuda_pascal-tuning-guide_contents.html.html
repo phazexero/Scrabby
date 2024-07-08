@@ -1,0 +1,260 @@
+<html><head><title>Contents â Pascal Tuning Guide 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/pascal-tuning-guide/contents.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html">
+    1. Pascal Tuning Guide
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#revision-history">
+    2. Revision History
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#notices">
+    3. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/pascal-tuning-guide/contents.html">
+  Pascal Tuning Guide
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Contents
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/Pascal_Tuning_Guide.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Contents
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/contents.html#contents" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  White paper covering the most common issues related to NVIDIA GPUs.
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html">
+    1. Pascal Tuning Guide
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#nvidia-pascal-compute-architecture">
+      1.1. NVIDIA Pascal Compute Architecture
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#cuda-best-practices">
+      1.2. CUDA Best Practices
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#application-compatibility">
+      1.3. Application Compatibility
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#pascal-tuning">
+      1.4. Pascal Tuning
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#streaming-multiprocessor">
+        1.4.1. Streaming Multiprocessor
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#instruction-scheduling">
+          1.4.1.1. Instruction Scheduling
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#occupancy">
+          1.4.1.2. Occupancy
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#new-arithmetic-primitives">
+        1.4.2. New Arithmetic Primitives
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#fp16-arithmetic-support">
+          1.4.2.1. FP16 Arithmetic Support
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#int8-dot-product">
+          1.4.2.2. INT8 Dot Product
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#memory-throughput">
+        1.4.3. Memory Throughput
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#high-bandwidth-memory-2-dram">
+          1.4.3.1. High Bandwidth Memory 2 DRAM
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#unified-l1-texture-cache">
+          1.4.3.2. Unified L1/Texture Cache
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#atomic-memory-operations">
+        1.4.4. Atomic Memory Operations
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#shared-memory">
+        1.4.5. Shared Memory
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#shared-memory-capacity">
+          1.4.5.1. Shared Memory Capacity
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#shared-memory-bandwidth">
+          1.4.5.2. Shared Memory Bandwidth
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#inter-gpu-communication">
+        1.4.6. Inter-GPU Communication
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#nvlink-interconnect">
+          1.4.6.1. NVLink Interconnect
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#gpudirect-rdma-bandwidth">
+          1.4.6.2. GPUDirect RDMA Bandwidth
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#compute-preemption">
+        1.4.7. Compute Preemption
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#unified-memory-improvements">
+        1.4.8. Unified Memory Improvements
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#revision-history">
+    2. Revision History
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#notices">
+    3. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#notice">
+      3.1. Notice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#opencl">
+      3.2. OpenCL
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/pascal-tuning-guide/index.html#trademarks">
+      3.3. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2016-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jun 20, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

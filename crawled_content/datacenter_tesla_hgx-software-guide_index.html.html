@@ -1,0 +1,1335 @@
+<html><head><title>NVIDIA HGX A100 Software User Guide :: NVIDIA Data Center GPU Driver Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  NVIDIA Data Center GPU Driver Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/datacenter/tesla/index.html" title="The root of the site.">
+  NVIDIA Data Center GPU
+ </a>
+ <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html" title="NVIDIA HGX A100 Software User Guide">
+  NVIDIA HGX A100 Software User Guide
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#changelog">
+    1. Changelog
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#introduction">
+    2. Introduction
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#software-configuration">
+    3. Software Configuration
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#nvidia-drivers">
+      3.1. NVIDIA Datacenter Drivers
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#nvidia-fm">
+      3.2. NVIDIA Fabric Manager
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#nscq">
+      3.3. NVSwitch Configuration and Query Library (NSCQ)
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#cuda-toolkit">
+      3.4. CUDA Toolkit
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#dcgm">
+      3.5. NVIDIA DCGM
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#support">
+    4. Supported Software Versions
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ NVIDIA HGX A100 Software User Guide
+                  
+                  
+                  
+                  
+                  (
+ <a href="https://docs.nvidia.com/datacenter/tesla/pdf/NVIDIA_HGX_Software_Guide.pdf">
+  PDF
+ </a>
+ )
+                  -
+                  
+                  
+                  
+                  Last updated October 23, 2020
+                  -
+ <a name="abstract" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#abstract" name="abstract" shape="rect">
+   NVIDIA HGX A100 Software User Guide
+  </a>
+ </h2>
+ <p class="shortdesc">
+  User guide for setting up software on NVIDIAÂ® HGX A100.
+ </p>
+ <p class="p">
+  This edition of the user guide describes how to get started with the NVIDIAÂ® HGX A100.
+ </p>
+ <a name="changelog" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#changelog" name="changelog" shape="rect">
+   Changelog
+  </a>
+ </h2>
+ <a name="changelog__ul_pfg_czt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="changelog__ul_pfg_czt_4fb">
+  <li class="li">
+   <p class="p">
+    10/23/2020: Initial Version
+   </p>
+  </li>
+ </ul>
+ <a name="introduction" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#introduction" name="introduction" shape="rect">
+   Introduction
+  </a>
+ </h2>
+ <p class="p">
+  NVIDIA HGX A100 combines NVIDIA A100 Tensor Core GPUs with next generation 
+                        NVIDIAÂ® NVLinkÂ® and NVSwitchâ¢ high-speed interconnects to create the worldâs 
+                        most powerful servers. HGX A100 is available in single baseboards with four 
+                        or eight A100 GPUs. The four-GPU configuration (HGX A100 4-GPU) is fully 
+                        interconnected with NVIDIA NVLink, and the eight-GPU configuration (HGX A100 8-GPU) 
+                        is interconnected with NVSwitch. Two NVIDIA HGX A100 8-GPU baseboards 
+                        can also be combined using an NVSwitch interconnect to create a powerful 16-GPU single node.
+ </p>
+ <p class="p">
+  More information is available on the product
+  <a class="xref" href="https://www.nvidia.com/en-us/data-center/hgx" shape="rect" target="_blank">
+   website
+  </a>
+  .
+ </p>
+ <p class="p">
+  This document provides an overview of the base software that NVIDIA provides 
+                        to get started with using a system with NVIDIA HGX A100.
+ </p>
+ <a name="software-configuration" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#software-configuration" name="software-configuration" shape="rect">
+   Software Configuration
+  </a>
+ </h2>
+ The diagram below shows an architecture overview of the software components of the NVIDIA HGX A100. 
+                        To ensure that you have a functional HGX A100 8-GPU system ready to run CUDA applications, these 
+                        software components should be installed (from the lowest part of the software stack):
+ <a name="software-configuration__ol_pfg_czt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ol class="ol" id="software-configuration__ol_pfg_czt_4fb">
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/index.html" shape="rect" target="_blank">
+     NVIDIA datacenter drivers
+    </a>
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html" shape="rect" target="_blank">
+     NVIDIA Fabric Manager (FM)
+    </a>
+   </p>
+  </li>
+ </ol>
+ <p class="p">
+  Note that the HGX A100 4-GPU system does not include NVSwitch, so FM is not a required component on this system configuration.
+ </p>
+ The following components are optional and not required for a fully functional HGX system. 
+                        However it is strongly recommended that these be installed:
+ <a name="software-configuration__ol_pfg_czt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ol class="ol" id="software-configuration__ol_pfg_czt_4fb">
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/index.html" shape="rect" target="_blank">
+     NVIDIA NVSwitch Configuration and Query Library (NSCQ)
+    </a>
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://developer.nvidia.com/dcgm" shape="rect" target="_blank">
+     NVIDIA DCGM
+    </a>
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://developer.nvidia.com/cuda-toolkit" shape="rect" target="_blank">
+     CUDA Toolkit
+    </a>
+   </p>
+  </li>
+ </ol>
+ <p class="p">
+  For convenience, NVIDIA provides packages on a network repository for installation using Linux package managers 
+                        (
+  apt
+  /
+  dnf
+  /
+  zypper
+  ) and uses package dependencies to install these software components in order.
+ </p>
+ <a name="software-configuration__hgx-software-arch" shape="rect">
+  <!-- -->
+ </a>
+ <span class="figcap">
+  Figure 1. NVIDIA GPU Management Software on HGX A100
+ </span>
+ <a name="nvidia-drivers" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#nvidia-drivers" name="nvidia-drivers" shape="rect">
+   NVIDIA Datacenter Drivers
+  </a>
+ </h3>
+ <p class="p">
+  NVIDIA releases drivers that are qualified for enterprise and datacenter GPUs. The 
+                           documentation
+  <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/index.html" shape="rect" target="_blank">
+   portal
+  </a>
+  includes release notes, software lifecycle (including active drivers branches), installation and user guides.
+ </p>
+ <p class="p">
+  According to the software lifecycle, the minimum recommended driver for production use with NVIDIA HGX A100 is R450. 
+                           Refer to the
+  <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/tesla-software-lifecycle/index.html" shape="rect" target="_blank">
+   lifecyle
+  </a>
+  for active and supported driver branches.
+ </p>
+ <p class="p">
+  The table lists the current actively supported datacenter drivers.
+ </p>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <span class="tablecap">
+   Table 1.
+  </span>
+  <tr class="row">
+   <th align="center" class="entry" colspan="1" id="d54e209" rowspan="1" valign="middle" width="NaN%">
+    R418
+   </th>
+   <th align="center" class="entry" colspan="1" id="d54e212" rowspan="1" valign="middle" width="NaN%">
+    R440
+   </th>
+   <th align="center" class="entry" colspan="1" id="d54e215" rowspan="1" valign="middle" width="NaN%">
+    R450
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e207" rowspan="1" valign="top" width="NaN%">
+    Branch Designation
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e209" rowspan="1" valign="middle" width="NaN%">
+    Long Term Service Branch
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e212" rowspan="1" valign="middle" width="NaN%">
+    New Feature Branch
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e215" rowspan="1" valign="middle" width="NaN%">
+    Long Term Service Branch
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e207" rowspan="1" valign="top" width="NaN%">
+    End of Life
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e209" rowspan="1" valign="middle" width="NaN%">
+    March 2022
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e212" rowspan="1" valign="middle" width="NaN%">
+    November 2020
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e215" rowspan="1" valign="middle" width="NaN%">
+    July 2023
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e207" rowspan="1" valign="top" width="NaN%">
+    Maximum CUDA Version Supported
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e209" rowspan="1" valign="middle" width="NaN%">
+    CUDA 10.1.
+    <p class="p">
+     This driver branch supports CUDA 10.2 and CUDA 11.0 (through CUDA compatibility platform).
+    </p>
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e212" rowspan="1" valign="middle" width="NaN%">
+    CUDA 10.2.
+    <p class="p">
+     This driver branch supports CUDA 11.0 through CUDA compatibility platform.
+    </p>
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e215" rowspan="1" valign="middle" width="NaN%">
+    CUDA 11.0
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e207" rowspan="1" valign="top" width="NaN%">
+    Architectures Supported
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e209" rowspan="1" valign="middle" width="NaN%">
+    Turing and below.
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e212" rowspan="1" valign="middle" width="NaN%">
+    Turing and below.
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e215" rowspan="1" valign="middle" width="NaN%">
+    NVIDIA Ampere and below.
+   </td>
+  </tr>
+ </table>
+ <span class="notetitle">
+  Note:
+ </span>
+ All other previous driver branches not listed in the table above (e.g. R410, R396, R390) are end of life.
+ <p class="p">
+  For A100 (NVIDIA Ampere architecture) based systems such as HGX A100, the R450 driver is a minimum requirement. 
+                           Before setting up the HGX A100 system, ensure that you have completed the pre-requisites - specifically, 
+                           youâre running a supported Linux distribution, the system has build tools (e.g. gcc/make) and kernel headers. 
+                           More information is available
+  <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html#pre-install" shape="rect" target="_blank">
+   here
+  </a>
+  .
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ Note that these steps are for Ubuntu LTS distributions - such as 18.04 LTS and 20.04 LTS. The instructions can be customized
+                           easily for RHEL.
+ <p class="p">
+  To get started with installing drivers and the NVIDIA Fabric Manager (FM), first set up the CUDA network repository and the
+                           repository priority:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g') \
+&amp;&amp; wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin \
+&amp;&amp; sudo mv cuda-$distribution.pin /etc/apt/preferences.d/cuda-repository-pin-600
+
+            </pre>
+ <p class="p">
+  Setup the GPG keys:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/7fa2af80.pub \
+&amp;&amp; echo "deb http://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64 /" | sudo tee /etc/apt/sources.list.d/cuda.list \
+&amp;&amp; sudo apt-get update
+
+            </pre>
+ <p class="p">
+  Since FM and NSCQ are revlocked to the driver, NVIDIA provides a meta-package called
+  cuda-drivers-fabricmanager-&lt;branch-number&gt;
+  to ensure that FM and drivers are installed together using dependencies.
+ </p>
+ <p class="p">
+  Since weâre on HGX A100, we will pick the R450 driver branch. For example, the dependency tree is for this package is shown
+                           below:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+            
+             ââ cuda-drivers-fabricmanager-450
+             â    ââ cuda-drivers-450 (= 450.80.02-1)
+             â    ââ nvidia-fabricmanager-450 (= 450.80.02-1) 
+            
+            </pre>
+ <p class="p">
+  The available package versions can be seen using
+  apt-cache
+  :
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-cache madison cuda-drivers-fabricmanager-450
+
+cuda-drivers-fabricmanager-450 | 450.80.02-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+cuda-drivers-fabricmanager-450 | 450.51.06-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+cuda-drivers-fabricmanager-450 | 450.51.06-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+
+            </pre>
+ <p class="p">
+  Now install the drivers using the
+  cuda-drivers-fabricmanager-450
+  :
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-get -y cuda-drivers-fabricmanager-450
+
+            </pre>
+ <p class="p">
+  Once the driver install is complete, you may need to reboot the system. Once the system is available, 
+                           run the
+  nvidia-smi
+  command to observe all 8-GPUs and 6 NVSwitches in the system:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+nvidia-smi
+
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  A100-SXM4-40GB      On   | 00000000:07:00.0 Off |                  Off |
+| N/A   22C    P0    52W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   1  A100-SXM4-40GB      On   | 00000000:0F:00.0 Off |                  Off |
+| N/A   22C    P0    49W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   2  A100-SXM4-40GB      On   | 00000000:47:00.0 Off |                  Off |
+| N/A   21C    P0    49W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   3  A100-SXM4-40GB      On   | 00000000:4E:00.0 Off |                  Off |
+| N/A   23C    P0    53W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   4  A100-SXM4-40GB      On   | 00000000:87:00.0 Off |                  Off |
+| N/A   24C    P0    51W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   5  A100-SXM4-40GB      On   | 00000000:90:00.0 Off |                  Off |
+| N/A   23C    P0    49W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   6  A100-SXM4-40GB      On   | 00000000:B7:00.0 Off |                  Off |
+| N/A   23C    P0    51W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+|   7  A100-SXM4-40GB      On   | 00000000:BD:00.0 Off |                  Off |
+| N/A   25C    P0    52W / 400W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+            </pre>
+ <a name="nvidia-fm" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#nvidia-fm" name="nvidia-fm" shape="rect">
+   NVIDIA Fabric Manager
+  </a>
+ </h3>
+ <p class="p">
+  Fabric Manager is an agent that configures the NVSwitches to form a single memory fabric among all participating GPUs 
+                           and monitors NVLinks that support the memory fabric. For more information on using and configuring 
+                           (including advanced options), refer to the
+  <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html" shape="rect" target="_blank">
+   Fabric Manager User Guide
+  </a>
+  .
+ </p>
+ <p class="p">
+  After installing the package in the previous section, check the version of FM installed:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+/usr/bin/nv-fabricmanager --version
+
+Fabric Manager version is : 450.80.02
+        </pre>
+ <p class="p">
+  Start the FM service using the provided systemd service file:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo systemctl status nvidia-fabricmanager.service
+
+â nvidia-fabricmanager.service - NVIDIA fabric manager service
+   Loaded: loaded (/lib/systemd/system/nvidia-fabricmanager.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-12 11:23:25 PDT; 11min ago
+  Process: 10981 ExecStart=/usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg (code=exited, status=0/SUCCESS)
+ Main PID: 10992 (nv-fabricmanage)
+    Tasks: 18 (limit: 39321)
+   CGroup: /system.slice/nvidia-fabricmanager.service
+           ââ10992 /usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg
+
+Oct 12 11:23:09 ubuntu1804 systemd[1]: Starting NVIDIA fabric manager service...
+Oct 12 11:23:25 ubuntu1804 nv-fabricmanager[10992]: Successfully configured all the available GPUs and NVSwitches.
+Oct 12 11:23:25 ubuntu1804 systemd[1]: Started NVIDIA fabric manager service.
+        </pre>
+ <p class="p">
+  Check the status of the service:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo systemctl start nvidia-fabricmanager.service
+        </pre>
+ <p class="p">
+  Ensure Fabric Manager logs (under
+  /var/log/fabricmanager.log
+  ) do not include any errors.
+ </p>
+ <p class="p">
+  Now review the topology to ensure that âNV12â appears between peer GPUs. This indicates that all 
+                           12 NVLinks are trained and available for full bi-directional bandwidth. This can be done with the
+  nvidia-smi topo -m
+  command.
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+nvidia-smi topo -m
+
+        GPU0    GPU1    GPU2    GPU3    GPU4    GPU5    GPU6    GPU7    mlx5_0  mlx5_1  mlx5_2  mlx5_3  mlx5_4  mlx5_5  mlx5_6  mlx5_7  mlx5_8  mlx5_9  CPU Affinity    NUMA Affinity
+GPU0     X      NV12    NV12    NV12    NV12    NV12    NV12    NV12    PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     48-63,176-191   3
+GPU1    NV12     X      NV12    NV12    NV12    NV12    NV12    NV12    PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     48-63,176-191   3
+GPU2    NV12    NV12     X      NV12    NV12    NV12    NV12    NV12    SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     16-31,144-159   1
+GPU3    NV12    NV12    NV12     X      NV12    NV12    NV12    NV12    SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     16-31,144-159   1
+GPU4    NV12    NV12    NV12    NV12     X      NV12    NV12    NV12    SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     112-127,240-255 7
+GPU5    NV12    NV12    NV12    NV12    NV12     X      NV12    NV12    SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     112-127,240-255 7
+GPU6    NV12    NV12    NV12    NV12    NV12    NV12     X      NV12    SYS     SYS     SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     80-95,208-223   5
+GPU7    NV12    NV12    NV12    NV12    NV12    NV12    NV12     X      SYS     SYS     SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     80-95,208-223   5
+mlx5_0  PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS      X      PXB     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS
+mlx5_1  PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     PXB      X      SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS
+mlx5_2  SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS      X      PXB     SYS     SYS     SYS     SYS     SYS     SYS
+mlx5_3  SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     PXB      X      SYS     SYS     SYS     SYS     SYS     SYS
+mlx5_4  SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS      X      PXB     SYS     SYS     SYS     SYS
+mlx5_5  SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     PXB      X      SYS     SYS     SYS     SYS
+mlx5_6  SYS     SYS     SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS      X      PXB     SYS     SYS
+mlx5_7  SYS     SYS     SYS     SYS     SYS     SYS     PXB     PXB     SYS     SYS     SYS     SYS     SYS     SYS     PXB      X      SYS     SYS
+mlx5_8  SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS      X      PIX
+mlx5_9  SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     SYS     PIX      X
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+        </pre>
+ <a name="nscq" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#nscq" name="nscq" shape="rect">
+   NVSwitch Configuration and Query Library (NSCQ)
+  </a>
+ </h3>
+ <p class="p">
+  The NSCQ library currently provides topology information of the NVSwitches 
+                           and GPUs to clients of the library such as DCGM.
+ </p>
+ <p class="p">
+  Note that currently, DCGM is the only client of NSCQ. In the future, NSCQ will 
+                           include a public API for gathering NVSwitch information. To allow clients such 
+                           as DCGM to access NSCQ, the library should be installed on the system - note 
+                           that in the near future, the library package will be installed as part of the 
+                           driver similar to FM.
+ </p>
+ <p class="p">
+  Setup the library using the
+  libnvidia-nscq-450
+  package.
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-get install -y libnvidia-nscq-450
+        </pre>
+ <p class="p">
+  Once the package is installed, you should be able to verify the libraries in the standard installation path on your system:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+ls -ol /usr/lib/x86_64-linux-gnu/libnvidia-nscq*
+
+lrwxrwxrwx 1 root      24 Sep 29 13:01 /usr/lib/x86_64-linux-gnu/libnvidia-nscq-dcgm.so -&gt; libnvidia-nscq-dcgm.so.1
+lrwxrwxrwx 1 root      26 Sep 29 13:01 /usr/lib/x86_64-linux-gnu/libnvidia-nscq-dcgm.so.1 -&gt; libnvidia-nscq-dcgm.so.1.0
+lrwxrwxrwx 1 root      32 Sep 29 13:01 /usr/lib/x86_64-linux-gnu/libnvidia-nscq-dcgm.so.1.0 -&gt; libnvidia-nscq-dcgm.so.450.51.06
+-rwxr-xr-x 1 root 1041416 Sep 29 12:56 /usr/lib/x86_64-linux-gnu/libnvidia-nscq-dcgm.so.450.51.06
+lrwxrwxrwx 1 root      19 Sep 22 21:48 /usr/lib/x86_64-linux-gnu/libnvidia-nscq.so -&gt; libnvidia-nscq.so.1
+lrwxrwxrwx 1 root      21 Sep 22 21:48 /usr/lib/x86_64-linux-gnu/libnvidia-nscq.so.1 -&gt; libnvidia-nscq.so.1.0
+lrwxrwxrwx 1 root      27 Sep 22 21:48 /usr/lib/x86_64-linux-gnu/libnvidia-nscq.so.1.0 -&gt; libnvidia-nscq.so.450.80.02
+-rw-r--r-- 1 root 1041416 Sep 22 21:48 /usr/lib/x86_64-linux-gnu/libnvidia-nscq.so.450.80.02
+        </pre>
+ <a name="cuda-toolkit" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#cuda-toolkit" name="cuda-toolkit" shape="rect">
+   CUDA Toolkit
+  </a>
+ </h3>
+ <p class="p">
+  After installing the NVIDIA driver, Fabric Manager and NSCQ, you can proceed to 
+                           install the CUDA Toolkit on the system to build CUDA applications. Note that if you 
+                           are deploying CUDA applications only, then the CUDA Toolkit is not necessary as 
+                           the CUDA application should include the dependencies it needs.
+ </p>
+ <p class="p">
+  To install CUDA Toolkit, letâs use the
+  cuda-toolkit-11-0
+  meta-package. For other meta-packages, 
+                           review this
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-metas" shape="rect" target="_blank">
+   table
+  </a>
+  in the documentation. This meta-package installs only the CUDA Toolkit (and does not install the NVIDIA driver).
+ </p>
+ <p class="p">
+  Check the meta-packages available using the following command:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-cache madison cuda-toolkit-11-
+
+cuda-toolkit-11-0  cuda-toolkit-11-1
+        </pre>
+ <p class="p">
+  APT shows that two CUDA versions are available. Letâs choose CUDA 11.0 for the purposes of this document:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-cache madison cuda-toolkit-11-0
+
+cuda-toolkit-11-0 |   11.0.3-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+cuda-toolkit-11-0 |   11.0.3-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+cuda-toolkit-11-0 |   11.0.3-1 | http://international.download.nvidia.com/dgx/repos/bionic bionic-4.99/multiverse amd64 Packages
+cuda-toolkit-11-0 |   11.0.2-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+cuda-toolkit-11-0 |   11.0.2-1 | http://international.download.nvidia.com/dgx/repos/bionic bionic-4.99/multiverse amd64 Packages
+cuda-toolkit-11-0 |   11.0.1-1 | http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64  Packages
+cuda-toolkit-11-0 |   11.0.1-1 | http://international.download.nvidia.com/dgx/repos/bionic bionic-4.99/multiverse amd64 Packages
+cuda-toolkit-11-0 |   11.0.0-1 | http://international.download.nvidia.com/dgx/repos/bionic bionic-4.99/multiverse amd64 Packages
+        </pre>
+ <p class="p">
+  You can now proceed to install CUDA Toolkit::
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo apt-get install -y cuda-toolkit-11-0
+        </pre>
+ <p class="p">
+  Once CUDA is installed, letâs build the included CUDA
+  p2pBandwidthLatencyTest
+  sample. 
+                           Once the binary is available, we can run it to check the unidirectional and bidirectional bandwidth.
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+./bin/x86_64/linux/release/p2pBandwidthLatencyTest
+
+[P2P (Peer-to-Peer) GPU Bandwidth Latency Test]
+Device: 0, A100-SXM4-40GB, pciBusID: 7, pciDeviceID: 0, pciDomainID:0
+Device: 1, A100-SXM4-40GB, pciBusID: f, pciDeviceID: 0, pciDomainID:0
+Device: 2, A100-SXM4-40GB, pciBusID: 47, pciDeviceID: 0, pciDomainID:0
+Device: 3, A100-SXM4-40GB, pciBusID: 4e, pciDeviceID: 0, pciDomainID:0
+Device: 4, A100-SXM4-40GB, pciBusID: 87, pciDeviceID: 0, pciDomainID:0
+Device: 5, A100-SXM4-40GB, pciBusID: 90, pciDeviceID: 0, pciDomainID:0
+Device: 6, A100-SXM4-40GB, pciBusID: b7, pciDeviceID: 0, pciDomainID:0
+Device: 7, A100-SXM4-40GB, pciBusID: bd, pciDeviceID: 0, pciDomainID:0
+Device=0 CAN Access Peer Device=1
+Device=0 CAN Access Peer Device=2
+Device=0 CAN Access Peer Device=3
+Device=0 CAN Access Peer Device=4
+Device=0 CAN Access Peer Device=5
+Device=0 CAN Access Peer Device=6
+Device=0 CAN Access Peer Device=7
+Device=1 CAN Access Peer Device=0
+Device=1 CAN Access Peer Device=2
+Device=1 CAN Access Peer Device=3
+Device=1 CAN Access Peer Device=4
+Device=1 CAN Access Peer Device=5
+Device=1 CAN Access Peer Device=6
+Device=1 CAN Access Peer Device=7
+Device=2 CAN Access Peer Device=0
+Device=2 CAN Access Peer Device=1
+Device=2 CAN Access Peer Device=3
+Device=2 CAN Access Peer Device=4
+Device=2 CAN Access Peer Device=5
+Device=2 CAN Access Peer Device=6
+Device=2 CAN Access Peer Device=7
+Device=3 CAN Access Peer Device=0
+Device=3 CAN Access Peer Device=1
+Device=3 CAN Access Peer Device=2
+Device=3 CAN Access Peer Device=4
+Device=3 CAN Access Peer Device=5
+Device=3 CAN Access Peer Device=6
+Device=3 CAN Access Peer Device=7
+Device=4 CAN Access Peer Device=0
+Device=4 CAN Access Peer Device=1
+Device=4 CAN Access Peer Device=2
+Device=4 CAN Access Peer Device=3
+Device=4 CAN Access Peer Device=5
+Device=4 CAN Access Peer Device=6
+Device=4 CAN Access Peer Device=7
+Device=5 CAN Access Peer Device=0
+Device=5 CAN Access Peer Device=1
+Device=5 CAN Access Peer Device=2
+Device=5 CAN Access Peer Device=3
+Device=5 CAN Access Peer Device=4
+Device=5 CAN Access Peer Device=6
+Device=5 CAN Access Peer Device=7
+Device=6 CAN Access Peer Device=0
+Device=6 CAN Access Peer Device=1
+Device=6 CAN Access Peer Device=2
+Device=6 CAN Access Peer Device=3
+Device=6 CAN Access Peer Device=4
+Device=6 CAN Access Peer Device=5
+Device=6 CAN Access Peer Device=7
+Device=7 CAN Access Peer Device=0
+Device=7 CAN Access Peer Device=1
+Device=7 CAN Access Peer Device=2
+Device=7 CAN Access Peer Device=3
+Device=7 CAN Access Peer Device=4
+Device=7 CAN Access Peer Device=5
+Device=7 CAN Access Peer Device=6
+
+***NOTE: In case a device doesn't have P2P access to other one, it falls back to normal memcopy procedure.
+So you can see lesser Bandwidth (GB/s) and unstable Latency (us) in those cases.
+
+P2P Connectivity Matrix
+     D\D     0     1     2     3     4     5     6     7
+     0       1     1     1     1     1     1     1     1
+     1       1     1     1     1     1     1     1     1
+     2       1     1     1     1     1     1     1     1
+     3       1     1     1     1     1     1     1     1
+     4       1     1     1     1     1     1     1     1
+     5       1     1     1     1     1     1     1     1
+     6       1     1     1     1     1     1     1     1
+     7       1     1     1     1     1     1     1     1
+Unidirectional P2P=Disabled Bandwidth Matrix (GB/s)
+   D\D     0      1      2      3      4      5      6      7
+     0 1277.60  14.69  17.62  17.69  18.52  18.14  18.66  17.72
+     1  14.96 1276.55  17.66  17.72  18.23  18.23  18.66  17.65
+     2  17.58  17.59 1277.60  14.61  18.18  18.61  17.80  17.97
+     3  17.53  17.73  14.68 1275.51  18.20  17.74  18.63  17.42
+     4  17.79  17.62  17.84  17.93 1291.32  15.95  17.77  17.97
+     5  17.46  17.85  17.79  17.93  16.51 1290.26  18.63  17.24
+     6  17.35  17.78  17.65  17.81  18.51  18.85 1289.19  15.43
+     7  17.44  17.82  17.87  18.11  17.49  18.74  15.90 1290.26
+Unidirectional P2P=Enabled Bandwidth (P2P Writes) Matrix (GB/s)
+   D\D     0      1      2      3      4      5      6      7
+     0 1275.51 263.60 267.07 273.62 273.73 273.54 272.89 273.45
+     1 263.77 1288.13 265.92 273.83 274.13 273.33 273.76 274.06
+     2 263.38 265.44 1284.95 273.68 274.70 273.48 274.19 274.15
+     3 265.34 266.87 266.85 1299.92 272.81 273.92 273.38 274.47
+     4 266.56 266.66 268.40 275.25 1305.35 273.76 275.42 275.17
+     5 266.49 266.64 266.40 275.85 273.77 1305.35 272.82 274.67
+     6 265.32 267.78 269.32 266.30 274.32 275.12 1298.84 274.21
+     7 267.13 266.07 269.01 266.72 275.14 274.46 274.83 1304.26
+Bidirectional P2P=Disabled Bandwidth Matrix (GB/s)
+   D\D     0      1      2      3      4      5      6      7
+     0 1290.79  15.65  19.52  19.53  20.00  20.39  20.34  20.03
+     1  15.97 1304.80  19.37  19.42  19.93  19.92  20.04  19.91
+     2  19.09  19.21 1302.08  15.54  19.92  19.93  20.01  19.77
+     3  19.17  19.28  15.65 1304.80  20.04  20.06  20.03  19.85
+     4  19.48  19.63  19.71  19.85 1304.80  17.55  19.91  19.69
+     5  19.45  19.65  19.76  19.94  18.19 1306.44  20.11  19.84
+     6  19.49  19.73  19.73  19.95  19.59  20.09 1303.17  17.84
+     7  19.29  19.48  19.56  19.60  19.88  19.62  18.31 1304.80
+Bidirectional P2P=Enabled Bandwidth Matrix (GB/s)
+   D\D     0      1      2      3      4      5      6      7
+     0 1289.72 411.91 414.96 413.53 415.59 417.36 417.43 415.88
+     1 410.46 1290.26 411.43 410.63 411.75 412.08 412.41 411.97
+     2 414.04 412.75 1288.66 413.25 415.37 416.25 414.85 415.15
+     3 409.55 410.13 411.32 1287.60 412.18 412.30 412.62 411.75
+     4 414.31 414.14 417.84 413.87 1304.26 436.86 436.86 437.60
+     5 413.65 414.87 417.28 414.35 437.48 1310.27 517.97 518.83
+     6 413.25 414.44 418.48 415.52 437.24 521.41 1301.54 519.75
+     7 414.79 414.89 418.19 413.95 438.69 517.46 517.80 1301.54
+P2P=Disabled Latency Matrix (us)
+   GPU     0      1      2      3      4      5      6      7
+     0   3.09  24.91  25.81  25.55  24.70  24.73  24.68  24.75
+     1  25.33   3.07  25.70  25.59  24.82  24.67  24.48  24.70
+     2  25.60  25.69   3.17  25.60  24.95  24.64  24.86  24.63
+     3  25.68  25.52  25.35   3.30  24.68  24.69  24.66  24.67
+     4  25.58  25.27  25.58  25.59   2.91  24.60  24.60  24.59
+     5  25.68  25.54  25.59  25.42  24.57   3.01  24.60  24.60
+     6  25.68  25.59  25.60  25.59  24.59  24.56   2.47  24.65
+     7  25.59  25.33  25.62  25.61  24.59  24.59  24.65   2.66
+
+   CPU     0      1      2      3      4      5      6      7
+     0   4.40  13.76  13.47  13.62  12.74  12.75  12.67  12.86
+     1  13.81   4.82  13.60  13.53  12.57  12.70  12.89  13.02
+     2  13.69  13.43   4.40  13.41  12.62  12.70  12.62  12.82
+     3  13.66  13.36  13.76   4.42  12.87  12.64  12.59  12.56
+     4  12.80  12.78  12.91  12.88   4.13  12.17  12.04  12.06
+     5  12.93  12.78  12.86  12.86  12.18   4.15  12.14  12.01
+     6  12.74  12.81  12.91  12.87  12.06  12.02   4.41  12.01
+     7  12.90  12.83  12.99  13.07  11.97  12.16  12.20   4.12
+P2P=Enabled Latency (P2P Writes) Matrix (us)
+   GPU     0      1      2      3      4      5      6      7
+     0   3.19   3.63   3.57   3.55   3.60   3.56   3.56   3.58
+     1   3.63   3.06   3.62   3.59   3.56   3.57   3.55   3.62
+     2   3.62   3.58   3.16   3.56   3.57   3.65   3.56   3.63
+     3   3.58   3.60   3.62   3.30   3.64   3.56   3.59   3.61
+     4   3.49   3.46   3.53   3.46   2.93   3.47   3.53   3.53
+     5   3.47   3.54   3.56   3.53   3.53   3.00   3.53   3.46
+     6   2.91   2.96   2.92   2.93   2.94   2.98   2.46   2.98
+     7   3.03   3.04   3.06   3.03   3.06   3.09   3.14   2.66
+
+   CPU     0      1      2      3      4      5      6      7
+     0   4.46   3.81   3.92   3.87   3.85   3.88   3.88   3.92
+     1   3.96   4.49   3.93   3.93   3.96   3.97   3.91   3.87
+     2   4.00   4.03   4.52   3.93   3.93   3.93   4.12   4.23
+     3   4.01   3.95   4.11   4.50   4.23   4.20   3.95   3.93
+     4   4.09   3.96   3.71   3.70   4.41   3.70   3.68   3.66
+     5   3.76   3.69   3.72   3.71   3.72   4.23   3.68   3.65
+     6   3.77   3.63   3.65   3.94   3.64   3.71   4.20   3.60
+     7   3.94   4.00   3.69   3.70   3.72   3.74   3.73   4.21
+
+NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
+        </pre>
+ <p class="p">
+  The above values show GPU-to-GPU unidirectional transfer bandwidth ranging from 263GB/s to 275GB/s. Bidirectional bandwidth
+                           
+                           ranges from 413GB/s to 521GB/s. Within the same GPU (diagonal output), shows a bandwidth within the same GPU of around 1,300GB/s.
+                           
+                           These numbers are close to the theoretical full 600GB/s bidirectional NVLink bandwidth that can be achieved between pairs
+                           of GPUs.
+ </p>
+ <p class="p">
+  NVIDIA A100 supports PCIe Gen 4.0 and we can observe the bus speed between the CPU and GPU by using the
+  bandwidthTest
+  available in the CUDA installation directory (
+  /usr/local/cuda/extras/demo_suite
+  ).
+ </p>
+ <p class="p">
+  The test shows a bandwidth between device and host around 23GB/s:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+./bandwidthTest
+
+[CUDA Bandwidth Test] - Starting...
+Running on...
+
+ Device 0: A100-SXM4-40GB
+ Quick Mode
+
+ Host to Device Bandwidth, 1 Device(s)
+ PINNED Memory Transfers
+   Transfer Size (Bytes)        Bandwidth(MB/s)
+   33554432                     22865.7
+
+ Device to Host Bandwidth, 1 Device(s)
+ PINNED Memory Transfers
+   Transfer Size (Bytes)        Bandwidth(MB/s)
+   33554432                     22554.8
+
+ Device to Device Bandwidth, 1 Device(s)
+ PINNED Memory Transfers
+   Transfer Size (Bytes)        Bandwidth(MB/s)
+   33554432                     1173168.2
+
+Result = PASS
+
+NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
+        </pre>
+ <a name="dcgm" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#dcgm" name="dcgm" shape="rect">
+   NVIDIA DCGM
+  </a>
+ </h3>
+ <p class="p">
+  NVIDIA DCGM is a suite of tools for managing and monitoring datacenter GPUs in cluster environments. 
+                           For more information, review the product
+  <a class="xref" href="https://developer.nvidia.com/dcgm" shape="rect" target="_blank">
+   page
+  </a>
+  .
+ </p>
+ <p class="p">
+  To install DCGM for your Linux distribution, download the installer packages.
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+wget --no-check-certificate https://developer.download.nvidia.com/compute/redist/dcgm/2.0.13/DEBS/datacenter-gpu-manager_2.0.13_amd64.deb
+
+--2020-10-12 12:12:21--  https://developer.download.nvidia.com/compute/redist/dcgm/2.0.13/DEBS/datacenter-gpu-manager_2.0.13_amd64.deb
+Resolving developer.download.nvidia.com (developer.download.nvidia.com)... 152.195.19.142
+Connecting to developer.download.nvidia.com (developer.download.nvidia.com)|152.195.19.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 184133216 (176M) [application/x-deb]
+Saving to: âdatacenter-gpu-manager_2.0.13_amd64.debâ
+
+datacenter-gpu-manager_2.0.13_amd64.deb            100%[==============================================================================================================&gt;] 175.60M   105MB/s    in 1.7s
+
+2020-10-12 12:12:22 (105 MB/s) - âdatacenter-gpu-manager_2.0.13_amd64.debâ saved [184133216/184133216]
+        </pre>
+ <p class="p">
+  Then proceed to install and start the DCGM service with
+  systemd
+  :
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo dpkg -i datacenter-gpu-manager_2.0.13_amd64.deb
+
+(Reading database ... 174123 files and directories currently installed.)
+Preparing to unpack datacenter-gpu-manager_2.0.13_amd64.deb ...
+Unpacking datacenter-gpu-manager (1:2.0.13) over (1:2.0.10) ...
+Setting up datacenter-gpu-manager (1:2.0.13) ...
+
+$ nv-hostengine --version
+Version : 2.0.13
+Build ID : 18
+Build Date : 2020-09-29
+Build Type : Release
+Commit ID : v2.0.12-6-gbf6e6238
+Branch Name : rel_dcgm_2_0
+CPU Arch : x86_64
+Build Platform : Linux 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64
+        </pre>
+ <p class="p">
+  Check the status of the DCGM service to ensure that the nv-hostengine agent has started successfully without errors:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+sudo systemctl start dcgm.service
+
+â dcgm.service - DCGM service
+   Loaded: loaded (/usr/lib/systemd/system/dcgm.service; disabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-12 12:18:57 PDT; 14s ago
+ Main PID: 32847 (nv-hostengine)
+    Tasks: 7 (limit: 39321)
+   CGroup: /system.slice/dcgm.service
+           ââ32847 /usr/bin/nv-hostengine -n
+
+Oct 12 12:18:57 ubuntu1804 systemd[1]: Started DCGM service.
+Oct 12 12:18:58 ubuntu1804 nv-hostengine[32847]: DCGM initialized
+Oct 12 12:18:58 ubuntu1804 nv-hostengine[32847]: Host Engine Listener Started
+        </pre>
+ <p class="p">
+  Now check that DCGM can enumerate the topology of the system:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+
+dcgmi discovery -l
+
+8 GPUs found.
++--------+----------------------------------------------------------------------+
+| GPU ID | Device Information                                                   |
++--------+----------------------------------------------------------------------+
+| 0      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:07:00.0                                         |
+|        | Device UUID: GPU-1d82f4df-3cf9-150d-088b-52f18f8654e1                |
++--------+----------------------------------------------------------------------+
+| 1      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:0F:00.0                                         |
+|        | Device UUID: GPU-94168100-c5d5-1c05-9005-26953dd598e7                |
++--------+----------------------------------------------------------------------+
+| 2      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:47:00.0                                         |
+|        | Device UUID: GPU-9387e4b3-3640-0064-6b80-5ace1ee535f6                |
++--------+----------------------------------------------------------------------+
+| 3      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:4E:00.0                                         |
+|        | Device UUID: GPU-cefd0e59-c486-c12f-418c-84ccd7a12bb2                |
++--------+----------------------------------------------------------------------+
+| 4      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:87:00.0                                         |
+|        | Device UUID: GPU-1501b26d-f3e4-8501-421d-5a444b17eda8                |
++--------+----------------------------------------------------------------------+
+| 5      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:90:00.0                                         |
+|        | Device UUID: GPU-f4180a63-1978-6c56-9903-ca5aac8af020                |
++--------+----------------------------------------------------------------------+
+| 6      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:B7:00.0                                         |
+|        | Device UUID: GPU-8b354e3e-0145-6cfc-aec6-db2c28dae134                |
++--------+----------------------------------------------------------------------+
+| 7      | Name: A100-SXM4-40GB                                                 |
+|        | PCI Bus ID: 00000000:BD:00.0                                         |
+|        | Device UUID: GPU-a16e3b98-8be2-6a0c-7fac-9cb024dbc2df                |
++--------+----------------------------------------------------------------------+
+6 NvSwitches found.
++-----------+
+| Switch ID |
++-----------+
+| 11        |
+| 10        |
+| 13        |
+| 9         |
+| 12        |
+| 8         |
++-----------+
+        </pre>
+ <p class="p">
+  Now check that DCGM can enumerate the NVLinks present in the system:
+ </p>
+ <pre class="pre screen" xml:space="preserve">
+
+
+dcgmi nvlink -s
+
++----------------------+
+|  NvLink Link Status  |
++----------------------+
+GPUs:
+    gpuId 0:
+        U U U U U U U U U U U U
+    gpuId 1:
+        U U U U U U U U U U U U
+    gpuId 2:
+        U U U U U U U U U U U U
+    gpuId 3:
+        U U U U U U U U U U U U
+    gpuId 4:
+        U U U U U U U U U U U U
+    gpuId 5:
+        U U U U U U U U U U U U
+    gpuId 6:
+        U U U U U U U U U U U U
+    gpuId 7:
+        U U U U U U U U U U U U
+NvSwitches:
+    physicalId 11:
+        X X X X X X X X U U U U X X X X X X X X X X X X U U U U U U U U U U U U
+    physicalId 10:
+        X X X X X X X X U U U U U U U U X X X X X X X X X X U U U U U U X X U U
+    physicalId 13:
+        X X X X X X X X X X U U U U U U X X X X X X X X U U U U U U U U X X U U
+    physicalId 9:
+        X X X X X X X X U U U U U U U U X X X X X X X X U U U U X X X X U U U U
+    physicalId 12:
+        X X X X X X X X X X U U U U U U X X X X X X X X U U U U U U U U X X U U
+    physicalId 8:
+        X X X X X X X X U U U U X X X X X X X X X X X X U U U U U U U U U U U U
+
+Key: Up=U, Down=D, Disabled=X, Not Supported=_
+        </pre>
+ <a name="support" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#support" name="support" shape="rect">
+   Supported Software Versions
+  </a>
+ </h2>
+ <p class="p">
+  The following software versions are supported for HGX A100:
+ </p>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <span class="tablecap">
+   Table 2.
+  </span>
+  <tr class="row">
+   <th align="center" class="entry" colspan="1" id="d54e671" rowspan="1" valign="middle" width="NaN%">
+    Software
+   </th>
+   <th align="center" class="entry" colspan="1" id="d54e674" rowspan="1" valign="middle" width="NaN%">
+    Version
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e671" rowspan="1" valign="top" width="NaN%">
+    R450
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e674" rowspan="1" valign="middle" width="NaN%">
+    450.80.02
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e671" rowspan="1" valign="top" width="NaN%">
+    Fabric Manager
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e674" rowspan="1" valign="middle" width="NaN%">
+    450.80.02
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e671" rowspan="1" valign="top" width="NaN%">
+    NSCQ
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e674" rowspan="1" valign="middle" width="NaN%">
+    450.80.02
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e671" rowspan="1" valign="top" width="NaN%">
+    DCGM
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e674" rowspan="1" valign="middle" width="NaN%">
+    2.0.13
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e671" rowspan="1" valign="top" width="NaN%">
+    CUDA Toolkit
+   </td>
+   <td align="center" class="entry" colspan="1" headers="d54e674" rowspan="1" valign="middle" width="NaN%">
+    11.0+
+   </td>
+  </tr>
+ </table>
+ <a name="notices-header" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html#notices-header" name="notices-header" shape="rect">
+   Notices
+  </a>
+ </h2>
+ <a name="notice" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Notice
+ </h3>
+ <p class="p" id="notice__notice-para-1">
+  <a name="notice__notice-para-1" shape="rect">
+   <!-- -->
+  </a>
+  This document is provided for information
+                                 purposes only and shall not be regarded as a warranty of a
+                                 certain functionality, condition, or quality of a product.
+                                 NVIDIA Corporation (âNVIDIAâ) makes no representations or
+                                 warranties, expressed or implied, as to the accuracy or
+                                 completeness of the information contained in this document
+                                 and assumes no responsibility for any errors contained
+                                 herein. NVIDIA shall have no liability for the consequences
+                                 or use of such information or for any infringement of
+                                 patents or other rights of third parties that may result
+                                 from its use. This document is not a commitment to develop,
+                                 release, or deliver any Material (defined below), code, or
+                                 functionality.
+ </p>
+ <p class="p" id="notice__notice-para-2">
+  <a name="notice__notice-para-2" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA reserves the right to make corrections, modifications,
+                                 enhancements, improvements, and any other changes to this
+                                 document, at any time without notice.
+ </p>
+ <p class="p" id="notice__notice-para-3">
+  <a name="notice__notice-para-3" shape="rect">
+   <!-- -->
+  </a>
+  Customer should obtain the latest relevant information before
+                                 placing orders and should verify that such information is
+                                 current and complete.
+ </p>
+ <p class="p" id="notice__notice-para-4">
+  <a name="notice__notice-para-4" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are sold subject to the NVIDIA standard terms and
+                                 conditions of sale supplied at the time of order
+                                 acknowledgement, unless otherwise agreed in an individual
+                                 sales agreement signed by authorized representatives of
+                                 NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby
+                                 expressly objects to applying any customer general terms and
+                                 conditions with regards to the purchase of the NVIDIA
+                                 product referenced in this document. No contractual
+                                 obligations are formed either directly or indirectly by this
+                                 document.
+ </p>
+ <p class="p" id="notice__notice-para-5">
+  <a name="notice__notice-para-5" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are not designed, authorized, or warranted to be
+                                 suitable for use in medical, military, aircraft, space, or
+                                 life support equipment, nor in applications where failure or
+                                 malfunction of the NVIDIA product can reasonably be expected
+                                 to result in personal injury, death, or property or
+                                 environmental damage. NVIDIA accepts no liability for
+                                 inclusion and/or use of NVIDIA products in such equipment or
+                                 applications and therefore such inclusion and/or use is at
+                                 customerâs own risk.
+ </p>
+ <p class="p" id="notice__notice-para-6">
+  <a name="notice__notice-para-6" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA makes no representation or warranty that products based on
+                                 this document will be suitable for any specified use.
+                                 Testing of all parameters of each product is not necessarily
+                                 performed by NVIDIA. It is customerâs sole responsibility to
+                                 evaluate and determine the applicability of any information
+                                 contained in this document, ensure the product is suitable
+                                 and fit for the application planned by customer, and perform
+                                 the necessary testing for the application in order to avoid
+                                 a default of the application or the product. Weaknesses in
+                                 customerâs product designs may affect the quality and
+                                 reliability of the NVIDIA product and may result in
+                                 additional or different conditions and/or requirements
+                                 beyond those contained in this document. NVIDIA accepts no
+                                 liability related to any default, damage, costs, or problem
+                                 which may be based on or attributable to: (i) the use of the
+                                 NVIDIA product in any manner that is contrary to this
+                                 document or (ii) customer product designs.
+ </p>
+ <p class="p" id="notice__notice-para-7">
+  <a name="notice__notice-para-7" shape="rect">
+   <!-- -->
+  </a>
+  No license, either expressed or implied, is granted under any NVIDIA
+                                 patent right, copyright, or other NVIDIA intellectual
+                                 property right under this document. Information published by
+                                 NVIDIA regarding third-party products or services does not
+                                 constitute a license from NVIDIA to use such products or
+                                 services or a warranty or endorsement thereof. Use of such
+                                 information may require a license from a third party under
+                                 the patents or other intellectual property rights of the
+                                 third party, or a license from NVIDIA under the patents or
+                                 other intellectual property rights of NVIDIA.
+ </p>
+ <p class="p" id="notice__notice-para-8">
+  <a name="notice__notice-para-8" shape="rect">
+   <!-- -->
+  </a>
+  Reproduction of information in this document is permissible only if
+                                 approved in advance by NVIDIA in writing, reproduced without
+                                 alteration and in full compliance with all applicable export
+                                 laws and regulations, and accompanied by all associated
+                                 conditions, limitations, and notices.
+ </p>
+ <p class="p" id="notice__notice-para-9">
+  <a name="notice__notice-para-9" shape="rect">
+   <!-- -->
+  </a>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE
+                                 BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER
+                                 DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING
+                                 PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED,
+                                 IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE
+                                 MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF
+                                 NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+                                 PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN
+                                 NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING
+                                 WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL,
+                                 INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER
+                                 CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING
+                                 OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN
+                                 ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding
+                                 any damages that customer might incur for any reason
+                                 whatsoever, NVIDIAâs aggregate and cumulative liability
+                                 towards customer for the products described herein shall be
+                                 limited in accordance with the Terms of Sale for the
+                                 product.
+ </p>
+ <a name="trademarks" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Trademarks
+ </h3>
+ <p class="p">
+  NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA
+                                 Corporation in the Unites States and other countries. Other company and product
+                                 names may be trademarks of the respective companies with which they are
+                                 associated.
+ </p>
+ <a name="copyright-present" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle">
+  Copyright
+ </h3>
+ <p class="p">
+  Â©
+  <span class="ph">
+   2020
+  </span>
+  NVIDIA Corporation &amp; affiliates. All rights
+                                 reserved.
+ </p>
+ <p>
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+</body>
+</body></html>

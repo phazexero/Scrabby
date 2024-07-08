@@ -1,0 +1,1266 @@
+<html><head><title>CUDA Runtime API :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/index.html" title="CUDA Runtime API">
+  CUDA Runtime API
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/driver-vs-runtime-api.html#driver-vs-runtime-api">
+    1.Â Difference between the driver and runtime APIs
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/api-sync-behavior.html#api-sync-behavior">
+    2.Â API synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/stream-sync-behavior.html#stream-sync-behavior">
+    3.Â Stream synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/graphs-thread-safety.html#graphs-thread-safety">
+    4.Â Graph object thread safety
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/version-mixing-rules.html#version-mixing-rules">
+    5.Â Rules for version mixing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/modules.html#modules">
+    6.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE">
+      6.1.Â Device Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE__DEPRECATED.html#group__CUDART__DEVICE__DEPRECATED">
+      6.2.Â Device Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__THREAD__DEPRECATED.html#group__CUDART__THREAD__DEPRECATED">
+      6.3.Â Thread Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__ERROR.html#group__CUDART__ERROR">
+      6.4.Â Error Handling
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__STREAM.html#group__CUDART__STREAM">
+      6.5.Â Stream Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT">
+      6.6.Â Event Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXTRES__INTEROP.html#group__CUDART__EXTRES__INTEROP">
+      6.7.Â External Resource Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION.html#group__CUDART__EXECUTION">
+      6.8.Â Execution Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION__DEPRECATED.html#group__CUDART__EXECUTION__DEPRECATED">
+      6.9.Â Execution Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OCCUPANCY.html#group__CUDART__OCCUPANCY">
+      6.10.Â Occupancy
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html#group__CUDART__MEMORY">
+      6.11.Â Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__DEPRECATED.html#group__CUDART__MEMORY__DEPRECATED">
+      6.12.Â Memory Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__POOLS.html#group__CUDART__MEMORY__POOLS">
+      6.13.Â Stream Ordered Memory Allocator
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__UNIFIED.html#group__CUDART__UNIFIED">
+      6.14.Â Unified Addressing
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PEER.html#group__CUDART__PEER">
+      6.15.Â Peer Device Memory Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL.html#group__CUDART__OPENGL">
+      6.16.Â OpenGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL__DEPRECATED.html#group__CUDART__OPENGL__DEPRECATED">
+      6.17.Â OpenGL Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html#group__CUDART__D3D9">
+      6.18.Â Direct3D 9 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED">
+      6.19.Â Direct3D 9 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10.html#group__CUDART__D3D10">
+      6.20.Â Direct3D 10 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10__DEPRECATED.html#group__CUDART__D3D10__DEPRECATED">
+      6.21.Â Direct3D 10 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11.html#group__CUDART__D3D11">
+      6.22.Â Direct3D 11 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11__DEPRECATED.html#group__CUDART__D3D11__DEPRECATED">
+      6.23.Â Direct3D 11 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__VDPAU.html#group__CUDART__VDPAU">
+      6.24.Â VDPAU Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL">
+      6.25.Â EGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP">
+      6.26.Â Graphics Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TEXTURE__OBJECT.html#group__CUDART__TEXTURE__OBJECT">
+      6.27.Â Texture Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__SURFACE__OBJECT.html#group__CUDART__SURFACE__OBJECT">
+      6.28.Â Surface Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART____VERSION.html#group__CUDART____VERSION">
+      6.29.Â Version Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__GRAPH.html#group__CUDART__GRAPH">
+      6.30.Â Graph Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER__ENTRY__POINT.html#group__CUDART__DRIVER__ENTRY__POINT">
+      6.31.Â Driver Entry Point Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL">
+      6.32.Â C++ API Routines
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER">
+      6.33.Â Interactions with the CUDA Driver API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PROFILER.html#group__CUDART__PROFILER">
+      6.34.Â Profiler Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES">
+      6.35.Â Data types used by CUDA Runtime
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/annotated.html#annotated">
+    7.Â Data Structures
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/class____cudaOccupancyB2DHelper.html#class____cudaOccupancyB2DHelper">
+      7.1.Â __cudaOccupancyB2DHelper
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAccessPolicyWindow.html#structcudaAccessPolicyWindow">
+      7.2.Â cudaAccessPolicyWindow
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArrayMemoryRequirements.html#structcudaArrayMemoryRequirements">
+      7.3.Â cudaArrayMemoryRequirements
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArraySparseProperties.html#structcudaArraySparseProperties">
+      7.4.Â cudaArraySparseProperties
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAsyncNotificationInfo__t.html#structcudaAsyncNotificationInfo__t">
+      7.5.Â cudaAsyncNotificationInfo_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChannelFormatDesc.html#structcudaChannelFormatDesc">
+      7.6.Â cudaChannelFormatDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChildGraphNodeParams.html#structcudaChildGraphNodeParams">
+      7.7.Â cudaChildGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaConditionalNodeParams.html#structcudaConditionalNodeParams">
+      7.8.Â cudaConditionalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp">
+      7.9.Â cudaDeviceProp
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame">
+      7.10.Â cudaEglFrame
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc">
+      7.11.Â cudaEglPlaneDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventRecordNodeParams.html#structcudaEventRecordNodeParams">
+      7.12.Â cudaEventRecordNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventWaitNodeParams.html#structcudaEventWaitNodeParams">
+      7.13.Â cudaEventWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExtent.html#structcudaExtent">
+      7.14.Â cudaExtent
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryBufferDesc.html#structcudaExternalMemoryBufferDesc">
+      7.15.Â cudaExternalMemoryBufferDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryHandleDesc.html#structcudaExternalMemoryHandleDesc">
+      7.16.Â cudaExternalMemoryHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryMipmappedArrayDesc.html#structcudaExternalMemoryMipmappedArrayDesc">
+      7.17.Â cudaExternalMemoryMipmappedArrayDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreHandleDesc.html#structcudaExternalSemaphoreHandleDesc">
+      7.18.Â cudaExternalSemaphoreHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParams.html#structcudaExternalSemaphoreSignalNodeParams">
+      7.19.Â cudaExternalSemaphoreSignalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParamsV2.html#structcudaExternalSemaphoreSignalNodeParamsV2">
+      7.20.Â cudaExternalSemaphoreSignalNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams.html#structcudaExternalSemaphoreSignalParams">
+      7.21.Â cudaExternalSemaphoreSignalParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams__v1.html#structcudaExternalSemaphoreSignalParams__v1">
+      7.22.Â cudaExternalSemaphoreSignalParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParams.html#structcudaExternalSemaphoreWaitNodeParams">
+      7.23.Â cudaExternalSemaphoreWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParamsV2.html#structcudaExternalSemaphoreWaitNodeParamsV2">
+      7.24.Â cudaExternalSemaphoreWaitNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams.html#structcudaExternalSemaphoreWaitParams">
+      7.25.Â cudaExternalSemaphoreWaitParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams__v1.html#structcudaExternalSemaphoreWaitParams__v1">
+      7.26.Â cudaExternalSemaphoreWaitParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaFuncAttributes.html#structcudaFuncAttributes">
+      7.27.Â cudaFuncAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphEdgeData.html#structcudaGraphEdgeData">
+      7.28.Â cudaGraphEdgeData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphExecUpdateResultInfo.html#structcudaGraphExecUpdateResultInfo">
+      7.29.Â cudaGraphExecUpdateResultInfo
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphInstantiateParams.html#structcudaGraphInstantiateParams">
+      7.30.Â cudaGraphInstantiateParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphKernelNodeUpdate.html#structcudaGraphKernelNodeUpdate">
+      7.31.Â cudaGraphKernelNodeUpdate
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphNodeParams.html#structcudaGraphNodeParams">
+      7.32.Â cudaGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParams.html#structcudaHostNodeParams">
+      7.33.Â cudaHostNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParamsV2.html#structcudaHostNodeParamsV2">
+      7.34.Â cudaHostNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcEventHandle__t.html#structcudaIpcEventHandle__t">
+      7.35.Â cudaIpcEventHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcMemHandle__t.html#structcudaIpcMemHandle__t">
+      7.36.Â cudaIpcMemHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParams.html#structcudaKernelNodeParams">
+      7.37.Â cudaKernelNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParamsV2.html#structcudaKernelNodeParamsV2">
+      7.38.Â cudaKernelNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchAttribute.html#structcudaLaunchAttribute">
+      7.39.Â cudaLaunchAttribute
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/unioncudaLaunchAttributeValue.html#unioncudaLaunchAttributeValue">
+      7.40.Â cudaLaunchAttributeValue
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchConfig__t.html#structcudaLaunchConfig__t">
+      7.41.Â cudaLaunchConfig_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchMemSyncDomainMap.html#structcudaLaunchMemSyncDomainMap">
+      7.42.Â cudaLaunchMemSyncDomainMap
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchParams.html#structcudaLaunchParams">
+      7.43.Â cudaLaunchParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAccessDesc.html#structcudaMemAccessDesc">
+      7.44.Â cudaMemAccessDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParams.html#structcudaMemAllocNodeParams">
+      7.45.Â cudaMemAllocNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParamsV2.html#structcudaMemAllocNodeParamsV2">
+      7.46.Â cudaMemAllocNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DParms.html#structcudaMemcpy3DParms">
+      7.47.Â cudaMemcpy3DParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DPeerParms.html#structcudaMemcpy3DPeerParms">
+      7.48.Â cudaMemcpy3DPeerParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpyNodeParams.html#structcudaMemcpyNodeParams">
+      7.49.Â cudaMemcpyNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemFreeNodeParams.html#structcudaMemFreeNodeParams">
+      7.50.Â cudaMemFreeNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemLocation.html#structcudaMemLocation">
+      7.51.Â cudaMemLocation
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolProps.html#structcudaMemPoolProps">
+      7.52.Â cudaMemPoolProps
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolPtrExportData.html#structcudaMemPoolPtrExportData">
+      7.53.Â cudaMemPoolPtrExportData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParams.html#structcudaMemsetParams">
+      7.54.Â cudaMemsetParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParamsV2.html#structcudaMemsetParamsV2">
+      7.55.Â cudaMemsetParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr">
+      7.56.Â cudaPitchedPtr
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPointerAttributes.html#structcudaPointerAttributes">
+      7.57.Â cudaPointerAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPos.html#structcudaPos">
+      7.58.Â cudaPos
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceDesc.html#structcudaResourceDesc">
+      7.59.Â cudaResourceDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceViewDesc.html#structcudaResourceViewDesc">
+      7.60.Â cudaResourceViewDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaTextureDesc.html#structcudaTextureDesc">
+      7.61.Â cudaTextureDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structCUuuid__st.html#structCUuuid__st">
+      7.62.Â CUuuid_st
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/functions.html#functions">
+    8.Â Data Fields
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated">
+    9.Â Deprecated List
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html" shape="rect">
+  &lt; Previous
+ </a>
+ |
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PROFILER.html" shape="rect">
+  Next &gt;
+ </a>
+ CUDA Runtime API
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CUDA_Runtime_API.pdf">
+  PDF
+ </a>
+ )
+                  -
+                   
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20CUDA%20Runtime%20API">
+  Send Feedback
+ </a>
+ <a name="group__CUDART__DRIVER" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="topictitle2 cppModule">
+  6.33.Â Interactions with the CUDA Driver API
+ </h2>
+ <p>
+  This section describes the interactions between the CUDA Driver API and the CUDA Runtime API
+ </p>
+ <p class="p apiDesc_subtitle">
+  Primary Contexts
+ </p>
+ <p class="p">
+  There exists a one to one relationship between CUDA devices in the CUDA Runtime API and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  s in the CUDA Driver API within a process. The specific context which the CUDA Runtime API uses for a device is called the
+                        device's primary context. From the perspective of the CUDA Runtime API, a device and its primary context are synonymous.
+ </p>
+ <p class="p apiDesc_subtitle">
+  Initialization and Tear-Down
+ </p>
+ <p class="p">
+  CUDA Runtime API calls operate on the CUDA Driver API
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  which is current to to the calling host thread.
+ </p>
+ <p class="p">
+  The function
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1gac04a5d82168676b20121ca870919419" shape="rect" title="Initialize device to be used for GPU executions.">
+   cudaInitDevice()
+  </a>
+  ensures that the primary context is initialized for the requested device but does not make it current to the calling thread.
+ </p>
+ <p class="p">
+  The function
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1g159587909ffa0791bbe4b40187a4c6bb" shape="rect" title="Set device to be used for GPU executions.">
+   cudaSetDevice()
+  </a>
+  initializes the primary context for the specified device and makes it current to the calling thread by calling
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__CTX.html#group__CUDA__CTX_1gbe562ee6258b4fcc272ca6478ca2a2f7" shape="rect" target="_blank">
+   cuCtxSetCurrent()
+  </a>
+  .
+ </p>
+ <p class="p">
+  The CUDA Runtime API will automatically initialize the primary context for a device at the first CUDA Runtime API call which
+                        requires an active context. If no
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  is current to the calling thread when a CUDA Runtime API call which requires an active context is made, then the primary
+                        context for a device will be selected, made current to the calling thread, and initialized.
+ </p>
+ <p class="p">
+  The context which the CUDA Runtime API initializes will be initialized using the parameters specified by the CUDA Runtime
+                        API functions
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1g69e73c7dda3fc05306ae7c811a690fac" shape="rect" title="Sets flags to be used for device executions.">
+   cudaSetDeviceFlags()
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html#group__CUDART__D3D9_1g0733a6f0bdc8aca6c6812da66c6d814a" shape="rect" title="Sets the Direct3D 9 device to use for interoperability with a CUDA device.">
+   cudaD3D9SetDirect3DDevice()
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10__DEPRECATED.html#group__CUDART__D3D10__DEPRECATED_1g7c942225222284fbfc3794a4ed6edf98" shape="rect" title="Sets the Direct3D 10 device to use for interoperability with a CUDA device.">
+   cudaD3D10SetDirect3DDevice()
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11__DEPRECATED.html#group__CUDART__D3D11__DEPRECATED_1g533524c773e7ca4ef57c0698b157d670" shape="rect" title="Sets the Direct3D 11 device to use for interoperability with a CUDA device.">
+   cudaD3D11SetDirect3DDevice()
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL__DEPRECATED.html#group__CUDART__OPENGL__DEPRECATED_1g88fddf479c2b597af49fd839bb42345e" shape="rect" title="Sets a CUDA device to use OpenGL interoperability.">
+   cudaGLSetGLDevice()
+  </a>
+  , and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__VDPAU.html#group__CUDART__VDPAU_1g2a9ccfe8e6c87fe694bafd8cfcc67586" shape="rect" title="Sets a CUDA device to use VDPAU interoperability.">
+   cudaVDPAUSetVDPAUDevice()
+  </a>
+  . Note that these functions will fail with
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038a906ddf08d574274bf7334adb1497550" shape="rect">
+   cudaErrorSetOnActiveProcess
+  </a>
+  if they are called when the primary context for the specified device has already been initialized. (or if the current device
+                        has already been initialized, in the case of
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1g69e73c7dda3fc05306ae7c811a690fac" shape="rect" title="Sets flags to be used for device executions.">
+   cudaSetDeviceFlags()
+  </a>
+  ).
+ </p>
+ <p class="p">
+  Primary contexts will remain active until they are explicitly deinitialized using
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1gef69dd5c6d0206c2b8d099abac61f217" shape="rect" title="Destroy all allocations and reset all state on the current device in the current process.">
+   cudaDeviceReset()
+  </a>
+  . The function
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE_1gef69dd5c6d0206c2b8d099abac61f217" shape="rect" title="Destroy all allocations and reset all state on the current device in the current process.">
+   cudaDeviceReset()
+  </a>
+  will deinitialize the primary context for the calling thread's current device immediately. The context will remain current
+                        to all of the threads that it was current to. The next CUDA Runtime API call on any thread which requires an active context
+                        will trigger the reinitialization of that device's primary context.
+ </p>
+ <p class="p">
+  Note that primary contexts are shared resources. It is recommended that the primary context not be reset except just before
+                        exit or to recover from an unspecified launch failure.
+ </p>
+ <p class="p apiDesc_subtitle">
+  Context Interoperability
+ </p>
+ <p class="p">
+  Note that the use of multiple
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  s per device within a single process will substantially degrade performance and is strongly discouraged. Instead, it is highly
+                        recommended that the implicit one-to-one device-to-context mapping for the process provided by the CUDA Runtime API be used.
+ </p>
+ <p class="p">
+  If a non-primary
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  created by the CUDA Driver API is current to a thread then the CUDA Runtime API calls to that thread will operate on that
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  , with some exceptions listed below. Interoperability between data types is discussed in the following sections.
+ </p>
+ <p class="p">
+  The function
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__UNIFIED.html#group__CUDART__UNIFIED_1gd89830e17d399c064a2f3c3fa8bb4390" shape="rect" title="Returns attributes about a specified pointer.">
+   cudaPointerGetAttributes()
+  </a>
+  will return the error
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038bfc1b14096f31fc7b43c08397af90856" shape="rect">
+   cudaErrorIncompatibleDriverContext
+  </a>
+  if the pointer being queried was allocated by a non-primary context. The function
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PEER.html#group__CUDART__PEER_1g2b0adabf90db37e5cfddc92cbb2589f3" shape="rect" title="Enables direct access to memory allocations on a peer device.">
+   cudaDeviceEnablePeerAccess()
+  </a>
+  and the rest of the peer access API may not be called when a non-primary
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  is current. To use the pointer query and peer access APIs with a context created using the CUDA Driver API, it is necessary
+                        that the CUDA Driver API be used to access these features.
+ </p>
+ <p class="p">
+  All CUDA Runtime API state (e.g, global variables' addresses and values) travels with its underlying
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  . In particular, if a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gf9f5bd81658f866613785b3a0bb7d7d9" shape="rect" target="_blank">
+   CUcontext
+  </a>
+  is moved from one thread to another then all CUDA Runtime API state will move to that thread as well.
+ </p>
+ <p class="p">
+  Please note that attaching to legacy contexts (those with a version of 3010 as returned by
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__CTX.html#group__CUDA__CTX_1g088a90490dafca5893ef6fbebc8de8fb" shape="rect" target="_blank">
+   cuCtxGetApiVersion()
+  </a>
+  ) is not possible. The CUDA Runtime will return
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038bfc1b14096f31fc7b43c08397af90856" shape="rect">
+   cudaErrorIncompatibleDriverContext
+  </a>
+  in such cases.
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUstream and cudaStream_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gb946c7f02e09efd788a204718015d88a" shape="rect" target="_blank">
+   CUstream
+  </a>
+  and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect">
+   cudaStream_t
+  </a>
+  are identical and may be used interchangeably.
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUevent and cudaEvent_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g6d740185cf0953636d4ae37f68d7559b" shape="rect" target="_blank">
+   CUevent
+  </a>
+  and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gea2f543a9fc0e52fe4ae712920fd1247" shape="rect">
+   cudaEvent_t
+  </a>
+  are identical and may be used interchangeably.
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUarray and cudaArray_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gd550651524a56766b60f10f0e7628042" shape="rect" target="_blank">
+   CUarray
+  </a>
+  and struct cudaArray * represent the same data type and may be used interchangeably by casting the two types between each
+                        other.
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gd550651524a56766b60f10f0e7628042" shape="rect" target="_blank">
+   CUarray
+  </a>
+  in a CUDA Runtime API function which takes a struct cudaArray *, it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gd550651524a56766b60f10f0e7628042" shape="rect" target="_blank">
+   CUarray
+  </a>
+  to a struct cudaArray *.
+ </p>
+ <p class="p">
+  In order to use a struct cudaArray * in a CUDA Driver API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gd550651524a56766b60f10f0e7628042" shape="rect" target="_blank">
+   CUarray
+  </a>
+  , it is necessary to explicitly cast the struct cudaArray * to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gd550651524a56766b60f10f0e7628042" shape="rect" target="_blank">
+   CUarray
+  </a>
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUgraphicsResource and cudaGraphicsResource_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gc0c4e1704647178d9c5ba3be46517dcd" shape="rect" target="_blank">
+   CUgraphicsResource
+  </a>
+  and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect">
+   cudaGraphicsResource_t
+  </a>
+  represent the same data type and may be used interchangeably by casting the two types between each other.
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gc0c4e1704647178d9c5ba3be46517dcd" shape="rect" target="_blank">
+   CUgraphicsResource
+  </a>
+  in a CUDA Runtime API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect">
+   cudaGraphicsResource_t
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gc0c4e1704647178d9c5ba3be46517dcd" shape="rect" target="_blank">
+   CUgraphicsResource
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect">
+   cudaGraphicsResource_t
+  </a>
+  .
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect">
+   cudaGraphicsResource_t
+  </a>
+  in a CUDA Driver API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gc0c4e1704647178d9c5ba3be46517dcd" shape="rect" target="_blank">
+   CUgraphicsResource
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect">
+   cudaGraphicsResource_t
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gc0c4e1704647178d9c5ba3be46517dcd" shape="rect" target="_blank">
+   CUgraphicsResource
+  </a>
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUtexObject and cudaTextureObject_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g65fb6720dea73d56db0b4d4974be052d" shape="rect" target="_blank">
+   CUtexObject
+  </a>
+  and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g83eb271ebc4cb2817e66d7c752f0c29b" shape="rect">
+   cudaTextureObject_t
+  </a>
+  represent the same data type and may be used interchangeably by casting the two types between each other.
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g65fb6720dea73d56db0b4d4974be052d" shape="rect" target="_blank">
+   CUtexObject
+  </a>
+  in a CUDA Runtime API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g83eb271ebc4cb2817e66d7c752f0c29b" shape="rect">
+   cudaTextureObject_t
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g65fb6720dea73d56db0b4d4974be052d" shape="rect" target="_blank">
+   CUtexObject
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g83eb271ebc4cb2817e66d7c752f0c29b" shape="rect">
+   cudaTextureObject_t
+  </a>
+  .
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g83eb271ebc4cb2817e66d7c752f0c29b" shape="rect">
+   cudaTextureObject_t
+  </a>
+  in a CUDA Driver API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g65fb6720dea73d56db0b4d4974be052d" shape="rect" target="_blank">
+   CUtexObject
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g83eb271ebc4cb2817e66d7c752f0c29b" shape="rect">
+   cudaTextureObject_t
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g65fb6720dea73d56db0b4d4974be052d" shape="rect" target="_blank">
+   CUtexObject
+  </a>
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUsurfObject and cudaSurfaceObject_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g4acc685a8412637d05668e30e984e220" shape="rect" target="_blank">
+   CUsurfObject
+  </a>
+  and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe57cf2ccbe7f9d696f18808dd634c0a" shape="rect">
+   cudaSurfaceObject_t
+  </a>
+  represent the same data type and may be used interchangeably by casting the two types between each other.
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g4acc685a8412637d05668e30e984e220" shape="rect" target="_blank">
+   CUsurfObject
+  </a>
+  in a CUDA Runtime API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe57cf2ccbe7f9d696f18808dd634c0a" shape="rect">
+   cudaSurfaceObject_t
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g4acc685a8412637d05668e30e984e220" shape="rect" target="_blank">
+   CUsurfObject
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe57cf2ccbe7f9d696f18808dd634c0a" shape="rect">
+   cudaSurfaceObject_t
+  </a>
+  .
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe57cf2ccbe7f9d696f18808dd634c0a" shape="rect">
+   cudaSurfaceObject_t
+  </a>
+  in a CUDA Driver API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g4acc685a8412637d05668e30e984e220" shape="rect" target="_blank">
+   CUsurfObject
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe57cf2ccbe7f9d696f18808dd634c0a" shape="rect">
+   cudaSurfaceObject_t
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1g4acc685a8412637d05668e30e984e220" shape="rect" target="_blank">
+   CUsurfObject
+  </a>
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  Interactions between CUfunction and cudaFunction_t
+ </p>
+ <p class="p">
+  The types
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gba6128b948022f495706d93bc2cea9c8" shape="rect" target="_blank">
+   CUfunction
+  </a>
+  and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g6ac3a22cc596d09ac07cdafb8a4638cf" shape="rect">
+   cudaFunction_t
+  </a>
+  represent the same data type and may be used interchangeably by casting the two types between each other.
+ </p>
+ <p class="p">
+  In order to use a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g6ac3a22cc596d09ac07cdafb8a4638cf" shape="rect">
+   cudaFunction_t
+  </a>
+  in a CUDA Driver API function which takes a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gba6128b948022f495706d93bc2cea9c8" shape="rect" target="_blank">
+   CUfunction
+  </a>
+  , it is necessary to explicitly cast the
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g6ac3a22cc596d09ac07cdafb8a4638cf" shape="rect">
+   cudaFunction_t
+  </a>
+  to a
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__TYPES.html#group__CUDA__TYPES_1gba6128b948022f495706d93bc2cea9c8" shape="rect" target="_blank">
+   CUfunction
+  </a>
+  .
+ </p>
+ <h3 class="fake_sectiontitle member_header">
+  Functions
+ </h3>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER_1gaba6f8d01e745f0c8d8776ceb18be617" shape="rect">
+   cudaGetFuncBySymbol
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g6ac3a22cc596d09ac07cdafb8a4638cf" shape="rect" title="">
+   cudaFunction_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   functionPtr
+  </span>
+  , const void*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   symbolPtr
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get pointer to device entry function that matches entry function
+  symbolPtr
+  .
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER_1g92869fba057be2ba635a75f728f48ccb" shape="rect">
+   cudaGetKernel
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g0b33f204b307b3154aa4f005a3c8a46a" shape="rect" title="">
+   cudaKernel_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   kernelPtr
+  </span>
+  , const void*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   entryFuncAddr
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get pointer to device kernel that matches entry function
+  entryFuncAddr
+  .
+ </span>
+ <h3 class="sectiontitle">
+  Functions
+ </h3>
+ <a id="group__CUDART__DRIVER_1gaba6f8d01e745f0c8d8776ceb18be617" name="group__CUDART__DRIVER_1gaba6f8d01e745f0c8d8776ceb18be617" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaGetFuncBySymbol (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g6ac3a22cc596d09ac07cdafb8a4638cf" shape="rect" title="">
+   cudaFunction_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   functionPtr
+  </span>
+  , const void*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   symbolPtr
+  </span>
+  )
+ </span>
+ Get pointer to device entry function that matches entry function
+ symbolPtr
+ .
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  functionPtr
+ </span>
+ - Returns the device entry function
+ <span class="keyword keyword apiItemName">
+  symbolPtr
+ </span>
+ - Pointer to device entry function to search for
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  functionPtr
+  the device entry function corresponding to the symbol
+  symbolPtr
+  .
+ </p>
+ <a id="group__CUDART__DRIVER_1g92869fba057be2ba635a75f728f48ccb" name="group__CUDART__DRIVER_1g92869fba057be2ba635a75f728f48ccb" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaGetKernel (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g0b33f204b307b3154aa4f005a3c8a46a" shape="rect" title="">
+   cudaKernel_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   kernelPtr
+  </span>
+  , const void*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   entryFuncAddr
+  </span>
+  )
+ </span>
+ Get pointer to device kernel that matches entry function
+ entryFuncAddr
+ .
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  kernelPtr
+ </span>
+ - Returns the device kernel
+ <span class="keyword keyword apiItemName">
+  entryFuncAddr
+ </span>
+ - Address of device entry function to search kernel for
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  kernelPtr
+  the device kernel corresponding to the entry function
+  entryFuncAddr
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL_1g1c67a5d82a010c4019cebf56660583a6" shape="rect" title="Get pointer to device kernel that matches entry function entryFuncAddr.">
+   cudaGetKernel ( C++ API)
+  </a>
+ </p>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

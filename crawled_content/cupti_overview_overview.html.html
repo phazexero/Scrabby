@@ -1,0 +1,309 @@
+<html><head><title>Overview — Cupti 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cupti/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/index.html">
+    CUPTI
+   </a>
+  </li>
+ </ul>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cupti/overview/overview.html">
+    Overview
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/release-notes/release-notes.html">
+    1. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/main/main.html">
+    2. Usage
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/library-support/library-support.html">
+    3. Library support
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html">
+    4. Special Configurations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/modules.html">
+    5. Modules
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/data-structures.html">
+    6. Data Structures
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/namespaces.html">
+    7. Namespaces
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/copyright-and-licenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/notices-header/notices-header.html">
+    Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cupti/index.html">
+  Cupti
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cupti/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   Overview
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.2.0 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cupti">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  Overview
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/overview/overview.html#id1" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The
+  CUDA Profiling Tools Interface
+  (CUPTI) enables the creation of profiling and tracing tools that target CUDA applications. CUPTI provides the following APIs: the
+  Activity API
+  , the
+  Callback API
+  , the
+  Event API
+  , the
+  Metric API
+  , the
+  Profiling API
+  , the
+  PC Sampling API
+  , the
+  SASS Metric API
+  and the
+  Checkpoint API
+  . Using these APIs, you can develop profiling tools that give insight into the CPU and GPU behavior of CUDA applications. CUPTI is delivered as a dynamic library on all platforms supported by CUDA.
+ </p>
+ <p>
+  In this CUPTI document,
+  Tracing
+  refers to the collection of timestamps and additional information for CUDA activities such as CUDA APIs, kernel launches and memory copies during the execution of a CUDA application. Tracing helps in identifying performance issues for the CUDA code by telling you which parts of a program require the most time. Tracing information can be collected using the
+  Activity
+  and
+  Callback
+  APIs.
+ </p>
+ <p>
+  In this CUPTI document,
+  Profiling
+  refers to the collection of GPU performance metrics for a single kernel or a set of kernels in isolation. Profiling might involve multiple replays of the kernel/s or the entire application to collect GPU performance metrics. For Volta and earlier GPU architectures, these metrics can be collected using CUPTI
+  Event
+  and
+  Metric
+  APIs. For Volta and later GPU architectures, the low overhead CUPTI
+  Profiling
+  and
+  Perfworks Metric
+  APIs replace this functionality, and a new CUPTI
+  PC Sampling
+  API is supported.
+ </p>
+ <table class="colwidths-given docutils align-default" id="id2">
+  <span class="caption-text">
+   Table 1. Description of CUPTI APIs
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/overview/overview.html#id2" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     CUPTI API
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Feature Description
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     Activity
+    </p>
+   </td>
+   <td>
+    <p>
+     Asynchronously record CUDA activities, e.g. CUDA API, Kernel, memory copy
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     Callback
+    </p>
+   </td>
+   <td>
+    <p>
+     CUDA event callback mechanism to notify subscriber that a specific CUDA event executed e.g. âEntering CUDA runtime memory copyâ
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     Event
+    </p>
+   </td>
+   <td>
+    <p>
+     Collect kernel performance counters for a kernel execution
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     Metric
+    </p>
+   </td>
+   <td>
+    <p>
+     Collect kernel performance metrics for a kernel execution
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     Profiling
+    </p>
+   </td>
+   <td>
+    <p>
+     Collect performance metrics for a range of execution
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     PC Sampling
+    </p>
+   </td>
+   <td>
+    <p>
+     Collect continuous mode PC Sampling data without serializing kernel execution
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     SASS Metrics
+    </p>
+   </td>
+   <td>
+    <p>
+     Collect kernel performance metrics at the source level using SASS patching
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     Checkpoint
+    </p>
+   </td>
+   <td>
+    <p>
+     Provides support for automatically saving and restoring the functional state of the CUDA device
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p class="rubric-h2 rubric">
+  CUPTI Profiling API vs. NVIDIA Nsight Perf SDK
+ </p>
+ <p>
+  CUPTI
+  <a class="reference external" href="https://docs.nvidia.com/cupti/main/main.html#cupti-profiling-api">
+   Profiling API
+  </a>
+  supports profiling of CUDA kernels and it allows collection of GPU performance metrics for a particular kernel or range of kernels at the CUDA context level.
+  <a class="reference external" href="https://developer.nvidia.com/nsight-perf-sdk">
+   NVIDIA Nsight Perf SDK
+  </a>
+  supports graphics APIs (i.e. DirectX, Vulkan, OpenGL) allowing collection of GPU performance metrics at graphics device, context and queue levels. Both NVIDIA Nsight PerfSDK and CUPTI Profiling API share the host APIs (i.e. metrics enumeration, configuration and evaluation) but differ in which GPU APIs they target on the device.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

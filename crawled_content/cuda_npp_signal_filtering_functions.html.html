@@ -1,0 +1,625 @@
+<html><head><title>Signal Filtering Functions â npp 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+ </a>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Contents:
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html">
+    What is NPP ?
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#general-conventions">
+    General Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#image-processing-conventions">
+    Image Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#signal-processing-conventions">
+    Signal Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html">
+    Data Types, Structs, Enums, and Constants
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_arithmetic_and_logical_operations.html">
+    Image Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_color_conversion.html">
+    Image Color Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_data_exchange_and_initialization.html">
+    Image Data Exchange And Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_filtering_functions.html">
+    Image Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_geometry_transforms.html">
+    Image Geometry Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_linear_transforms.html">
+    Image Linear Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_morphological_operations.html">
+    Image Morphological Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_statistics_functions.html">
+    Image Statistics Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_threshold_and_compare_operations.html">
+    Image Threshold And Compare Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html">
+    Image Memory Management Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_arithmetic_and_logical_operations.html">
+    Signal Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_conversion_functions.html">
+    Signal Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html">
+    Signal Filtering Functions
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html#group__signal__integral_1signal_integral">
+      Integral
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_initialization.html">
+    Signal Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_statistical_functions.html">
+    Signal Statistical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html">
+    Signal Memory Management Functions
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+  npp
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Signal Filtering Functions
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v23.05 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/NPP_Library.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Signal Filtering Functions
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html#signal-filtering-functions" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p id="group__signal__filtering__functions">
+  Functions that provide functionality of generating output signal based on the input signal like signal integral, etc.
+ </p>
+ <h2>
+  Integral
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html#group__signal__integral_1signal_integral" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p id="group__signal__integral_1signal_integral">
+  Compute the indefinite integral of a given signal. The i-th element is computed to be
+ </p>
+ \[
+     s'_i = \sum_0^i s_j
+\]
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-functions">
+  Functions
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus" title="NppStatus">
+  <span class="n">
+   <span class="pre">
+    NppStatus
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsIntegralGetBufferSize_32s
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nLength
+  </span>
+ </span>
+ ,
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   hpBufferSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html#c.nppsIntegralGetBufferSize_32s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Device scratch buffer size (in bytes) for 32s nppsIntegral.
+ </p>
+ <p>
+  This primitive provides the correct buffer size for nppsIntegral_32s.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nLength
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1length_specification">
+     <span class="std std-ref">
+      Signal Length
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    hpBufferSize
+    â Required buffer size. Important: hpBufferSize is a
+    host pointer.
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#general_conventions_lb_1general_scratch_buffer">
+     <span class="std std-ref">
+      Scratch Buffer and Host Pointer
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus" title="NppStatus">
+  <span class="n">
+   <span class="pre">
+    NppStatus
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsIntegral_32s_Ctx
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pSrc
+  </span>
+ </span>
+ ,
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pDst
+  </span>
+ </span>
+ ,
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nLength
+  </span>
+ </span>
+ ,
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pDeviceBuffer
+  </span>
+ </span>
+ ,
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStreamContext" title="NppStreamContext">
+  <span class="n">
+   <span class="pre">
+    NppStreamContext
+   </span>
+  </span>
+ </a>
+ <span class="n">
+  <span class="pre">
+   nppStreamCtx
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html#c.nppsIntegral_32s_Ctx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute cumulative sum of 32-bit signed integer signal.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    pSrc
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1source_signal_pointer">
+     <span class="std std-ref">
+      Source Signal Pointer
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    pDst
+    â Pointer to the output result.
+   </p>
+  </li>
+  <li>
+   <p>
+    nLength
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1length_specification">
+     <span class="std std-ref">
+      Signal Length
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    pDeviceBuffer
+    â Pointer to the required device memory allocation.
+   </p>
+  </li>
+  <li>
+   <p>
+    nppStreamCtx
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#structnppstreamcontext_1application_managed_stream_context">
+     <span class="std std-ref">
+      Application Managed Stream Context
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1signal_data_error_codes">
+   <span class="std std-ref">
+    Signal Data Related Error Codes
+   </span>
+  </a>
+  ,
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1length_error_codes">
+   <span class="std std-ref">
+    Length Related Error Codes
+   </span>
+  </a>
+  .
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.NppStatus" title="NppStatus">
+  <span class="n">
+   <span class="pre">
+    NppStatus
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsIntegral_32s
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="k">
+  <span class="pre">
+   const
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pSrc
+  </span>
+ </span>
+ ,
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pDst
+  </span>
+ </span>
+ ,
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nLength
+  </span>
+ </span>
+ ,
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pDeviceBuffer
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html#c.nppsIntegral_32s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute cumulative sum of 32-bit signed integer signal.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    pSrc
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1source_signal_pointer">
+     <span class="std std-ref">
+      Source Signal Pointer
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    pDst
+    â Pointer to the output result.
+   </p>
+  </li>
+  <li>
+   <p>
+    nLength
+    â
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1length_specification">
+     <span class="std std-ref">
+      Signal Length
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    pDeviceBuffer
+    â Pointer to the required device memory allocation.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1signal_data_error_codes">
+   <span class="std std-ref">
+    Signal Data Related Error Codes
+   </span>
+  </a>
+  ,
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#npps_conventions_lb_1length_error_codes">
+   <span class="std std-ref">
+    Length Related Error Codes
+   </span>
+  </a>
+  .
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2009-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

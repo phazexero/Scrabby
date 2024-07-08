@@ -1,0 +1,379 @@
+<html><head><title>Requirements — cuFFT LTO EA 11.1.3 documentation</title></head><body><body class="wy-body-for-nav">
+ <a class="icon icon-home" href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html">
+  cuFFT LTO EA
+ </a>
+ 11.1.3
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html">
+    Documentation home
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   User guide
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/getting_started/index.html">
+    Quick start
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/index.html">
+    How to use cuFFT LTO EA
+   </a>
+   <ul class="current">
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html">
+      Just-In-Time Link-Time Optimizations
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html#what-is-jit-lto">
+        What is JIT LTO?
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html#jit-lto-in-cufft-lto-ea">
+        JIT LTO in cuFFT LTO EA
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html#the-cost-of-jit-lto">
+        The cost of JIT LTO
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2 current">
+     <a class="current reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/requirements.html">
+      Requirements
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/requirements.html#software-requirements">
+        Software requirements
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html">
+      API usage
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#generating-the-lto-callback">
+        Generating the LTO callback
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#offline-compilation">
+          Offline compilation
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#using-nvrtc">
+          Using NVRTC
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#associating-the-lto-callback-with-the-cufft-plan">
+        Associating the LTO callback with the cuFFT plan
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/supported_functionalities.html">
+      Supported functionalities
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html">
+      Frequently asked questions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html#i-am-getting-an-error-with-the-message-error-cufftxtsetjitcallback-was-not-declared-in-this-scope">
+        I am getting an error with the message: âerror: âcufftXtSetJITCallbackâ was not declared in this scopeâ
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html#i-am-getting-an-error-with-the-message-undefined-reference-to-cufftxtsetjitcallback">
+        I am getting an error with the message: âundefined reference to âcufftXtSetJITCallbackââ
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html#my-existing-callback-works-fine-without-lto-using-cufftxtsetcallback-but-planning-fails-when-attempting-to-use-lto-callbacks-cufftxtsetjitcallback">
+        My existing callback works fine without LTO (using cufftXtSetCallback) but planning fails when attempting to use LTO callbacks (
+        <span class="xref std std-ref">
+         cufftXtSetJITCallback
+        </span>
+        )
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html">
+    API reference
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#associating-lto-callbacks-with-cufft-plan">
+      Associating LTO callbacks with cuFFT Plan
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#cufftxtsetjitcallback">
+        cufftXtSetJITCallback
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#lto-callback-signatures">
+      LTO callback signatures
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-single-precision-complex">
+        Load Single-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-double-precision-complex">
+        Load Double-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-single-precision-real">
+        Load Single-Precision Real
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-double-precision-real">
+        Load Double-Precision Real
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-single-precision-complex">
+        Store Single-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-double-precision-complex">
+        Store Double-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-single-precision-real">
+        Store Single-Precision Real
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-double-precision-real">
+        Store Double-Precision Real
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html">
+    Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#cufft-lto-ea-preview-11-1-3-0">
+      cuFFT LTO EA preview 11.1.3.0
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#new-features">
+        New features
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#known-issues">
+        Known issues
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#cufft-lto-ea-preview-11-1-0-0">
+      cuFFT LTO EA preview 11.1.0.0
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#id1">
+        New features
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#id2">
+        Known issues
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/contact_us/index.html">
+    Contact us
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/contact_us/index.html#questions-suggestions">
+      Questions? Suggestions?
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html">
+  cuFFT LTO EA
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li class="breadcrumb-item">
+   <a href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/index.html">
+    How to use cuFFT LTO EA
+   </a>
+  </li>
+  <li class="breadcrumb-item active">
+   Requirements
+  </li>
+ </ul>
+ <h1>
+  Requirements
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/requirements.html#requirements" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h1>
+ <h2>
+  Software requirements
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/requirements.html#software-requirements" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h2>
+ <ul class="simple">
+  <li>
+   <p>
+    CUDA Toolkit 12.2 or newer (including nvcc and
+    <a class="reference external" href="https://docs.nvidia.com/cuda/nvjitlink/index.html">
+     nvJitLink
+    </a>
+    )
+   </p>
+  </li>
+ </ul>
+ <p>
+  cuFFT LTO EA requires
+  <a class="reference external" href="https://docs.nvidia.com/cuda/nvjitlink/index.html">
+   nvJitLink
+  </a>
+  to do runtime linking of LTO-callbacks with cuFFT kernels.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  LTO-callbacks must be compiled with the nvcc compiler distributed as part of the same CUDA Toolkit as the
+nvJitLink used; or an older compiler, i.e. :
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     nvJitLink
+    </span>
+    <span class="pre">
+     12.X
+    </span>
+    ,
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     nvcc
+    </span>
+    <span class="pre">
+     12.Y
+    </span>
+    ,
+   </p>
+  </li>
+  <li>
+   <p>
+    with
+    <span class="pre">
+     X
+    </span>
+    <span class="pre">
+     &gt;=
+    </span>
+    <span class="pre">
+     Y
+    </span>
+   </p>
+  </li>
+ </ul>
+ <p>
+  Otherwise compatibility is not guaranteed and cuFFT LTO EA behavior is undefined for LTO-callbacks.
+ </p>
+ <a accesskey="p" class="btn btn-neutral float-left" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html" rel="prev" title="Just-In-Time Link-Time Optimizations">
+  Previous
+ </a>
+ <a accesskey="n" class="btn btn-neutral float-right" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html" rel="next" title="API usage">
+  Next
+ </a>
+ <p style="color: gray;">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" style="color: inherit;" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" style="color: inherit;" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" style="color: inherit;" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" style="color: inherit;" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" style="color: inherit;" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" style="color: inherit;" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" style="color: inherit;" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" style="color: inherit;" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2023, NVIDIA Corporation and affiliates.
+ </p>
+</body>
+</body></html>

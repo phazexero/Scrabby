@@ -1,0 +1,3024 @@
+<html><head><title>Version 535.154.05(Linux)/538.15(Windows) :: NVIDIA Data Center GPU Driver Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  NVIDIA Data Center GPU Driver Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/datacenter/tesla/index.html" title="The root of the site.">
+  NVIDIA Data Center GPU
+ </a>
+ <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html" title="Version 535.154.05(Linux)/538.15(Windows)">
+  Version 535.154.05(Linux)/538.15(Windows)
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#driver-highlights">
+    1. Version Highlights
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#versions">
+      1.1. Software Versions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#fixed-issues">
+      1.2. Fixed Issues
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#known-issues">
+      1.3. Known Issues
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#virtualization">
+    2. Virtualization
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#hardware-software-support">
+    3. Hardware and Software Support
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ Version 535.154.05(Linux)/538.15(Windows)
+                  
+                  
+                  
+                  
+                  (
+ <a href="https://docs.nvidia.com/datacenter/tesla/pdf/NVIDIA_Data_Center_GPU_Driver_Release_Notes_535_v6.0.pdf">
+  PDF
+ </a>
+ )
+                  -
+                  
+                  
+                  
+                  Last updated February 9, 2024
+                  -
+ <a name="abstract" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#abstract" name="abstract" shape="rect">
+   Version 535.154.05(Linux)/538.15(Windows)
+  </a>
+ </h2>
+ <p class="shortdesc">
+  Release notes for the Release 535 family of NVIDIAÂ® Data Center GPU Drivers for
+                        Linux and Windows.
+ </p>
+ <p class="p">
+  This edition of Release Notes describes the Release 535 family of NVIDIAÂ® Data Center GPU
+                        Drivers for Linux and Windows. NVIDIA provides these notes to describe
+                        performance improvements, bug fixes and limitations in each documented version of the
+                        driver.
+ </p>
+ <a name="driver-highlights" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#driver-highlights" name="driver-highlights" shape="rect">
+   1. Version Highlights
+  </a>
+ </h2>
+ <p class="p">
+  This section provides highlights of the NVIDIA Data Center GPU R
+  <span class="keyword">
+   535
+  </span>
+  Driver (version 535.154.05 Linux and 538.15
+                        Windows).
+ </p>
+ <p class="p">
+  For changes related to the
+  <span class="keyword">
+   535
+  </span>
+  release of the NVIDIA display 
+                        driver, review the file "NVIDIA_Changelog" available in the .run installer packages.
+ </p>
+ <ul class="ul">
+  <li class="li">
+   Linux driver release date: 01/16/2024
+  </li>
+  <li class="li">
+   Windows driver release date: 01/16/2024
+  </li>
+ </ul>
+ <a name="versions" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#versions" name="versions" shape="rect">
+   1.1. Software Versions
+  </a>
+ </h3>
+ <p class="p">
+  For this release, the software versions are as follows:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    CUDA Toolkit 12: 12.2.2
+   </p>
+   <p class="p">
+    Note that starting with CUDA 11, individual components of the toolkit are
+                                 versioned independently. For a full list of the individual versioned components
+                                 (for example, nvcc, CUDA libraries, and so on), see the
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions" shape="rect" target="_blank">
+     CUDA Toolkit Release Notes
+    </a>
+    .
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    NVIDIA Data Center GPU Driver: 535.154.05 (Linux) / 538.15 (Windows)
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Fabric Manager: 535.154.05 (Use
+    nv-fabricmanager -v
+    )
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    NVFlash: 5.791
+   </p>
+  </li>
+ </ul>
+ <p class="p" dir="ltr">
+  For more information on getting started with the NVIDIA Fabric Manager on
+                           NVSwitch-based systems (for example, NVIDIA HGX A100), refer to the
+  <a class="xref" href="https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html" shape="rect" target="_blank">
+   Fabric Manager User Guide
+  </a>
+  .
+ </p>
+ <a name="fixed-issues" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#fixed-issues" name="fixed-issues" shape="rect">
+   1.2. Fixed Issues
+  </a>
+ </h3>
+ <ul class="ul">
+  <li class="li">
+   Fixed an issue in driver initialization in certain configurations. 4339817
+  </li>
+  <li class="li">
+   Increased internal array size to cover max possible amount of offlined/blacklisted
+                              pages. 4344238
+  </li>
+  <li class="li">
+   Addressed an issue in the Fabric Manager service that led to the failure in
+                              identifying variants of HGX H800 8-GPU systems, such as partner-cooled systems. This
+                              problem resulted in incorrect programming of NVSwitch routing, leading to NVSwitch
+                              SXid errors and subsequent CUDA job failures. 4264031
+  </li>
+  <li class="li">
+   An issue that caused "Row Remapper Error: internal pointer error" is resolved.
+                              4255827
+  </li>
+  <li class="li">
+   Added an interface that performs a memory allocation, and it can return error/NULL
+                              in case it runs out of memory. 4327476
+  </li>
+ </ul>
+ <a name="known-issues" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#known-issues" name="known-issues" shape="rect">
+   1.3. Known Issues
+  </a>
+ </h3>
+ <h3 class="title sectiontitle">
+  General
+ </h3>
+ <ul class="ul">
+  <li class="li">
+   "Change ECC State" and "Enable Error Correction Code" do
+                                 not change synchronously when ECC state changes. 3838953
+  </li>
+  <li class="li">
+   CUDA kernels that use the sparsity feature of tensor cores through the
+   <a class="xref" href="https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#warp-level-matrix-instructions-for-sparse-mma" shape="rect" target="_blank">
+    mma.sp
+   </a>
+   PTX
+                                 instruction on Hopper architecture GPUs may intermittently experience silent
+                                 data corruption resulting in incorrect results. NVIDIA libraries currently do
+                                 not provide access to tensor cores with sparsity so only kernels directly
+                                 developed using the
+   mma.sp
+   PTX instruction are impacted. This
+                                 issue will be fixed in an upcoming release. 4254491
+  </li>
+  <li class="li">
+   <p class="p">
+    MPAM Support
+   </p>
+   <p class="p">
+    MPAM is
+    not
+    supported in this release. To enable MPAM
+                                    support in the future, changes to the SBIOS are in progress. To use the MPAM
+                                    capabilities at that time, you need an MPAM-enabled kernel.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    cpufreq-info
+    is not reporting correct core
+                                       frequency on Grace. 4253549
+   </p>
+   <p class="p">
+    The CPU frequency reported by the Linux kernel might vary significantly from
+                                    the actual value.
+   </p>
+   <p class="p">
+    Workaround
+    There is currently no workaround, and this issue will be
+                                    resolved in a future kernel version.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Unable to allocate full GPU memory. 4278263
+   </p>
+   <p class="p">
+    On CPU+GPU coherent memory platforms, such as Grace Hopper, GPU
+                                    memory is added to the Linux kernel as an NUMA node and is managed by the
+                                    kernel. The kernel minimum watermark threshold might prevent GPU
+                                    applications from allocating the full GPU memory.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    To allocate full GPU memory, users can manually tune
+                                    /proc/sys/vm/min_free_kbytes.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    CPU TempAvg Low event log Threshold message is wrong.
+                                       4299244
+   </p>
+   <p class="p">
+    When the temperature goes below the low warning/critical threshold,
+                                    there is a Redfish event log with the threshold value. The expected
+                                    threshold value should be the low warning/critical threshold, but the high
+                                    warning/critical threshold value is selected instead.
+   </p>
+   <p class="p">
+    As a result, users cannot get the correct threshold value from the
+                                    Redfish low warning/critical Redfish event.
+   </p>
+   <p class="p">
+    Workaround
+    When you inspect a low warning/critical Redfish event, get
+                                    the correct low threshold value from the sensor URI
+                                    (
+    /redfish/v1/Chassis/CPU_0/Sensors/ProcessorModule_0_CPU_0_TempAvg_0
+    ).
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    [IPMI] Duplicate sensor name. 3999921
+   </p>
+   <p class="p">
+    Sensor names are unique but, as per the current specification, IPMI
+                                    has a 16-character for the name field. Sensors that have the same initial
+                                    16-characters appear as duplicate sensors in the SDR.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    There is currently no workaround, and this issue will be resolved in a future
+                                    release of the BMC. Until then, you can safely ignore the duplicate
+                                    sensor.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    A driver library mismatch error after a successful
+                                       installation and subsequent reboot causes GPU programs to not
+                                       start. 4302438
+   </p>
+   <p class="p">
+    GPU programs work immediately after installing the driver, but fail
+                                    to load after rebooting, and messages like the following appear in the
+                                    kernel log:
+   </p>
+   <p class="p">
+    API mismatch: the client has the version xxx.xx but this kernel
+                                       module has the version yyy.yy. Please make sure that this kernel module
+                                       and all NVIDIA driver components have the same version.
+   </p>
+   <p class="p">
+    This is most likely because kernel modules from a previous driver
+                                    version are in the initramfs.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    Rebuild the initramfs and reboot the system. If a reboot is not immediately
+                                    possible, you can temporarily work around the issue by unloading and
+                                    reloading the NVIDIA kernel modules.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Grace is doing a seemingly unnecessary munmap of the
+                                       untouched host memory when CUDA context is active.
+                                       4052424
+   </p>
+   <p class="p">
+    Customers who use older stable/longterm trees should update to the
+                                    latest upstream subversion, and customers who are using another tree should
+                                    cherry-pick the subversion from one of the trees (versions linux-6.5.y,
+                                    linux-6.1.y, or linux-5.15.y).
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    There is currently no workaround.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On GH200, a pyt_bart inference perf regression occurs
+                                       after a driver update. 4308011
+   </p>
+   <p class="p">
+    On GH200 systems, copies between pageable memory and the device can
+                                    be offloaded to copy engines. While this provides many performance and
+                                    functional benefits, a subset of copies that involve addresses that are not
+                                    resident in the main memory were observed to be slow. To mitigate this
+                                    performance bottleneck, a performance optimization that actively fetches the
+                                    non-resident pages into memory before the copy operation starts has been
+                                    introduced.
+   </p>
+   <p class="p">
+    The pre-fetching operation involves some overhead, so users can
+                                    tweak the page read latency, and then the paging operation starts. Users can
+                                    set the threshold value for page read operations beyond which CUDA will
+                                    actively try to page in non-resident pages. The default value is 0.008
+                                    milliseconds.
+   </p>
+   <p class="p">
+    To reduce the number of page-in ops, users can set the value to
+                                    0.01 or 0.02 milliseconds in the CUDA_BUFFER_PAGE_IN_THRESHOLD_MS=
+                                    environment variable.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    ipmitool mc information does not show the firmware
+                                       versions. 4299371
+   </p>
+   <p class="p">
+    The NVIDIA OpenBMC Reference solution does not provide firmware
+                                    inventory versions through IPMI.
+   </p>
+   <p class="p">
+    You can find the firmware inventory versions in the Redfish
+                                    interface.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    System not powering back on when performing power cycle
+                                       from BMC. 4305610
+   </p>
+   <p class="p">
+    When performing a power cycle command from the BMC, such as IPMI
+                                    Chassis Power Cycle, the system will shut down correctly, but it might not
+                                    automatically restart.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    Manually restart the system after the shutdown. This issue will be addressed
+                                    in a future NVIDIA OpenBMC Reference Firmware release.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Some errors are set after a clean boot.
+    4312911
+   </p>
+   <p class="p">
+    The Correctable Error (the CorrErr bit) and Unsupported Request
+                                    (the UnsupReq bit) in the Device Status register (part of the PCI Express
+                                    Capabilities set of registers) and the Advisory Non-Fatal Error (the
+                                    AdvNonFatalErr bit) in the Correctable Error Status register of the Advanced
+                                    Error Status (AER) set of registers are getting set because the enumeration
+                                    process occurs in the Linux kernel. During this process, when there is a
+                                    read for a non-existent device downstream of the root port, the kernel
+                                    receives a response as an Unsupported Request, so the UnsuppReq bit is set.
+   </p>
+   <p class="p">
+    Since Grace is configured to treat UnsuppReq responses as Advisory
+                                    Non-Fatal Error, and the AdvNonFatalErr bit is set, there will not be an
+                                    Uncorrectable Error. Instead, a Correctable Error is raised, and the orrErr
+                                    bit is set. Grace is configured to have a software leaky bucket for all the
+                                    correctable errors, so unless the number of correctable errors observed is
+                                    greater than 32 in one minute, the errors are not reported to the OS. As a
+                                    result, these errors are set after a clean boot.
+   </p>
+   <p class="p">
+    Workaround
+    Currently, there is no workaround available.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    GPU firmware update fails with an
+                                       "Update.1.0.VerificationFailed" message during upgrade-downgrade
+                                       testing. 4332232
+   </p>
+   <p class="p">
+    If the GPU accesses its SPI flash at approximately the same time
+                                    the ERoT attempts to verify the GPU firmware image, the ERoT might time out.
+                                    The PLDM firmware update might fail with VerifyResult equal to 0x99, which
+                                    is reported in the Redfish task status as Update.1.0.VerificationFailed.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <ol class="ol">
+    <li class="li">
+     <p class="p">
+      Ensure a proper firmware update sequence and status
+                                          checking is implemented for each iteration of upgrade-downgrade
+                                          testing.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      After each firmware update, issue A/C power cycle for the
+                                          firmware update to take effect
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      After the A/C power cycle, wait for the host to be ready
+                                          before verifying the firmware inventory.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      After the A/C power cycle, wait for background copy
+                                          completion before initiating the next firmware update.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li class="li">
+   <p class="p">
+    Support for 4k page size in nv-p2p.
+   </p>
+   <p class="p">
+    The NVIDIA driver's kernel mode
+    <a class="xref" href="https://docs.nvidia.com/cuda/gpudirect-rdma" shape="rect" target="_blank">
+     GPUDirect RDMA APIs
+    </a>
+    that are used for
+                                    Peer-direct support in
+    <a class="xref" href="https://enterprise-support.nvidia.com/s/article/howto-implement-peerdirect-client-using-mlnx-ofed" shape="rect" target="_blank">
+     MLNX_OFED
+    </a>
+    and
+    <a class="xref" href="https://developer.nvidia.com/gpudirect-storage" shape="rect" target="_blank">
+     GPUDirect Storage
+    </a>
+    are not supported on
+                                    GH200 platforms when used with Linux kernels that are configured with the 4K
+                                    page size. These APIs are not functional and might lead to a kernel memory
+                                    corruption.
+   </p>
+   <p class="p">
+    Users are strongly encouraged to move their software stack to the
+    <a class="xref" href="https://docs.kernel.org/driver-api/dma-buf.html" shape="rect" target="_blank">
+     dma-buf
+     APIs
+    </a>
+    , which
+                                    require the
+    <a class="xref" href="https://developer.nvidia.com/blog/nvidia-releases-open-source-gpu-kernel-modules/" shape="rect" target="_blank">
+     open-source GPU driver
+    </a>
+    ,
+                                    Linux kernel 5.12 or later (if upstream kernel GPUDirect RDMA support for
+                                    RDMA networking is required), and NVIDIA Turingâ¢ + GPU. Since the dma-buf
+                                    APIs work correctly on 4K page kernels, using those APIs is the ideal
+                                    mitigation for this issue.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Reduced fan speed does not display with correct severity
+                                       in the event log. 4241946
+   </p>
+   <p class="p">
+    When running the NVIDIA BMC reference code, the severity of a fan
+                                    under the critical threshold is not correct. It should be
+    Critical
+    ,
+                                    but it is reported as
+    OK
+    in Redfish.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    There is no workaround unless you modify the BMC reference source code.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Graphics functionalities, such as EGL, GLX, and Vulcan,
+                                       are currently not supported under the 4K OS page size.
+                                       4333780
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    We recommend that you use a 64K page size.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    The peak message rate varies greatly. 4329895
+   </p>
+   <p class="p">
+    In some circumstances, PCIe strict ordering might not work well in
+                                    Grace Hopper. Users might experience low message rates when the PCIe write
+                                    traffic targeting GPU memory is high.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    You can use PCIe relaxed ordering, for example, by using ibv_reg_mr with the
+                                    IBV_ACCESS_RELAXED_ORDERING flag.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    NaNs reported in longevity tests when ECC error injection and video error
+                                       injection are enabled. â 4051897
+   </p>
+   <p class="p">
+    Although rare, during longevity and stress testing, some sensors
+                                    might randomly display NaN readings. However, this issue typically occurs
+                                    only once for a few readings, and subsequent readings during the sensor
+                                    polling loop return to normal. So far, we have not encountered any cases
+                                    where a sensor displayed consecutive NaN readings.
+   </p>
+   <p class="p">
+    To handle occasional NaN readings, the host BMC or any client
+                                    software that consumes sensor information should implement a retry mechanism
+                                    so that it is resilient.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Set_declare SMBPBI Master caps will return success. â 3977576
+   </p>
+   <p class="p">
+    The undocumented SMBPBI opcode 0x8 does not return
+    ERR_OPCODE
+    in conformance with the SMBPBI
+                                    specification. This opcode is not supported on the Hopper HGX 8-GPU
+                                    baseboard and should not be used.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Fail to pass Redfish Protocol Validator (1.1.6). â
+                                       4109466
+   </p>
+   <p class="p">
+    The Redfish validator test case POST
+    /redfish/v1/AccountService/Accounts
+    fails because of a
+                                    Redfish validator error, but there is no impact on the system
+                                    functionality.
+   </p>
+   <p class="p">
+    Work around
+   </p>
+   <p class="p">
+    No workaround is required.
+   </p>
+   <p class="p">
+    Refer to the
+    <a class="xref" href="https://github.com/DMTF/Redfish-Protocol-Validator/issues/57" shape="rect" target="_blank">
+     https://github.com/DMTF/Redfish-Protocol-Validator/issues/57
+    </a>
+    validator issue for more information.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Instead of a failed action, a success action is displayed when a
+    AccountLockoutDuration
+    PATCH request
+                                       is sent in
+    AccountService
+    . â
+                                       4109596
+   </p>
+   <p class="p">
+    When a PATCH request is sent with a value less than
+    ACCOUNT_UNLOCK_TIMEOUT = 60
+    0 seconds (default),
+    200
+                                       OK
+    is returned instead of throwing an error.
+   </p>
+   <p class="p">
+    Here is an example:
+   </p>
+   <pre xml:space="preserve"># curl -s -k -H "X-Auth-Token: $token" -X PATCH
+https://192.168.31.1/redfish/v1/AccountService -d '{"AccountLockoutDuration": 300}'
+200 Ok
+{
+   "@Message.ExtendedInfo": [ 
+      {
+          "@odata.type": "#Message.v1_1_1.Message",
+          "Message": "The request completed successfully.",
+          "MessageArgs": [],
+          "MessageId": "Base.1.15.0.Success",
+          "MessageSeverity": "OK",
+          "Resolution": "None"
+       }
+   ]
+# curl -k -H "X-Auth-Token: $token" -X GET https://192.168.31.1/redfish/v1/AccountService
+| grep AccountLockout
+    "AccountLockoutDuration": 600,
+    "AccountLockoutThreshold": 3,
+                            </pre>
+   <p class="p">
+    600
+    seconds is the default waiting time before trying to log in again when the
+                                    account is locked due to multiple login failures. This value cannot be
+                                    changed to a value that is less than 600 seconds using PATCH
+                                    request.
+   </p>
+   <p class="p">
+    In the current implementation, the issue is happening because
+                                    of the inability to handle values less than the compile time limit (for
+                                    example,
+    ACCOUNT_UNLOCK_TIMEOUT = 600
+    seconds). When a
+    200 OK
+    response is returned, users think that they have
+                                    updated the account timeout value, but the original behavior does not
+                                    change.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    There is no workaround at this
+                                    time.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    During a stress test, the HMC ERoT failed to get the SPDM
+                                       measurements. â 4130662
+   </p>
+   <p class="p">
+    During a stress test, where the firmware update and the SPDM attestation
+                                    data are being completed simultaneously, the SPDM attestation API sometimes
+                                    fails to get the SPDM Attestation
+                                    data.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    Retrying the operation might result in a
+                                    successful outcome. The fix will be included in the v1.3.0 GA release.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Redfish Service Validator reports the following errors: â
+                                       4099508
+   </p>
+   <ul class="ul">
+    <li class="li">
+     ERROR - 1 err.SessionCollection.SessionCollection
+                                       errors in
+     /redfish/v1/
+    </li>
+    <li class="li">
+     ERROR - 1 failMandatoryExist errors in
+     /redfish/v1/
+    </li>
+    <li class="li">
+     ERROR - 1 failRedfishUriStrict errors in
+     /redfish/v1/Managers/HGX_BMC_0
+    </li>
+    <li class="li">
+     ERROR - 1  failRedfishUriStrict errors in
+     /redfish/v1/Managers/HGX_BMC_0/LogServices/Journal
+    </li>
+    <li class="li">
+     ERROR - 1 err.PCIeDevice.PCIeTypes errors in
+     /redfish/v1/Systems/HGX_Baseboard_0/Processors/FPGA_0
+    </li>
+    <li class="li">
+     ERROR - 1 failProp errors in
+     /redfish/v1/Systems/HGX_Baseboard_0/Processors/FPGA_0
+    </li>
+    <li class="li">
+     ERROR - 1 failRedfishUriStrict errors in
+     /redfish/v1/Systems/HGX_Baseboard_0/LogServices/DebugTokenService
+    </li>
+    <li class="li">
+     ERROR - Validation has failed: 5 problems found
+    </li>
+   </ul>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      The Id property does not match the last segment of the URI:
+     </p>
+     <ul class="ul">
+      <li class="li">
+       <p class="p">
+        ERROR - 1 failRedfishUriStrict errors in
+        /redfish/v1/Managers/HGX_BMC_0
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        ERROR - 1 failRedfishUriStrict errors in
+        /redfish/v1/Managers/HGX_BMC_0/LogServices/Journal
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        ERROR - 1 failRedfishUriStrict errors in
+        /redfish/v1/Systems/HGX_Baseboard_0/LogServices/DebugTokenService
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <p class="p">
+    Workaround
+    There is no functional impact and no workaround at this
+                                    moment.
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      ERROR - PCIeType shows "empty string": Value Enum not found in
+                                          ['Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5']
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      ERROR - 1 err.PCIeDevice.PCIeTypes errors in
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/FPGA_0
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      ERROR - 1 failProp errors in
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/FPGA_0
+     </p>
+    </li>
+   </ul>
+   <p class="p">
+    Workaround
+    Check the
+    CurrentSpeedGbps
+    property on
+                                    the Port resource of the FPGA:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/FPGA_0/Ports/PCIeToHost_0
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/FPGA_0/Ports/PCIeToHMC_0
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    The PCIeSwitch ERoT Recovery event does not generate a
+                                       corresponding event on the PCIeSwitch AP Chassis URI. â 4325634
+   </p>
+   <p class="p">
+    When the PCIeSwitch ERoT Recovery event is generated, there is no
+                                    corresponding event in the Conditions array of the
+    /redfish/v1/Chassis/HGX_PCIeSwitch_0
+    URI.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    If the PCIeSwitch Health or
+                                    HealthRollup shows
+    Critical
+    , customers can check the ERoT
+                                    Chassis URI (
+    /redfish/v1/Chassis/HGX_ERoT_PCIeSwitch_0
+    ) for
+                                    Conditions.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    4333486 CUDA initialization failure on MIG and forward
+                                       compatibility setups. â 4333486
+   </p>
+   <p class="p">
+    CUDA will not work in Multi Instance GPU (MIG) mode on CUDA forward
+                                    compatibility setups with display driver major version 470 or earlier.
+   </p>
+   <p class="p">
+    CUDA will not initialize correctly when run in forward compatibility
+                                    mode with display driver from major version 470 and earlier when MIG is
+                                    enabled. The CUDA APIs will return
+    cudaErrorNoDevice/CUDA_ERROR_NO_DEVICE
+    errors when run
+                                    on such a setup.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    Update the display driver to
+                                    a major version, which is supported in CUDA forward compatibility and that
+                                    is later than 470 (for example, version 510 or later).
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    AutoClearResolvedLogEnabled
+    is not defined
+                                       in the Complex NVIDIA
+    NvidiaLogService.v1_0_0.NvidiaLogService
+    .
+                                       4313643
+   </p>
+   <p class="p">
+    The following message is displayed in the Redfish service
+                                    validator:
+   </p>
+   <p class="p">
+    ERROR - 1 failAdditional.complex errors
+                                          in
+                                          /redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog
+   </p>
+   <p class="p">
+    This
+                                    issue occurs on the
+    /redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog
+    URI because the
+    Oem.Nvidia @odata.type
+    property has the
+    NvidiaLogService.
+    v1_0_0
+    .NvidiaLogService
+    value instead of the
+    NvidiaLogService.
+    v1_1_0
+    .NvidiaLogService
+    value.
+   </p>
+   <p class="p">
+    Here is the sample output of the
+    /redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog
+    URI:
+   </p>
+   <p class="p">
+    {
+   </p>
+   <pre xml:space="preserve">    "@odata.id":
+      "/redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog",</pre>
+   <p class="p">
+    "@odata.type":
+                                       "#LogService.v1_1_0.LogService",
+   </p>
+   <p class="p">
+    "Actions":
+                                       {
+   </p>
+   <p class="p">
+    "#LogService.ClearLog": {
+   </p>
+   <pre xml:space="preserve">            "target":
+        "/redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog/Actions/LogService.ClearLog"</pre>
+   <p class="p">
+    }
+   </p>
+   <p class="p">
+    },
+   </p>
+   <p class="p">
+    "DateTime":
+                                       "2020-08-23T23:51:08+00:00",
+   </p>
+   <p class="p">
+    "DateTimeLocalOffset": "+00:00",
+   </p>
+   <p class="p">
+    "Description":
+                                       "System Event Log Service",
+   </p>
+   <p class="p">
+    "Entries":
+                                       {
+   </p>
+   <pre xml:space="preserve">        "@odata.id":
+        "/redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog/Entries"</pre>
+   <p class="p">
+    },
+   </p>
+   <p class="p">
+    "Id":
+                                       "EventLog",
+   </p>
+   <p class="p">
+    "Name": "Event Log
+                                       Service",
+   </p>
+   <p class="p">
+    "Oem": {
+   </p>
+   <p class="p">
+    "Nvidia": {
+   </p>
+   <pre xml:space="preserve">            "@odata.type":
+        "#NvidiaLogService.v1_0_0.NvidiaLogService",</pre>
+   <p class="p">
+    "AutoClearResolvedLogEnabled": false,
+   </p>
+   <p class="p">
+    "LatestEntryID": "443",
+   </p>
+   <pre xml:space="preserve">            "LatestEntryTimeStamp":
+      "2020-08-23T23:51:06+00:00"</pre>
+   <p class="p">
+    }
+   </p>
+   <p class="p">
+    },
+   </p>
+   <p class="p">
+    "OverWritePolicy":
+                                       "WrapsWhenFull"
+   </p>
+   <p class="p">
+    }
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    There
+                                    is no functional impact and no workaround at this time.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    No Secure boot failure event is generated. â 4299429
+   </p>
+   <p class="p">
+    The HMC supports secure boot failure, SPI flash error, boot complete
+                                    failure, heartbeat failure, ERoT fatal, ERoT recovery, and MCTP runtime
+                                    error ERoT-related events at bootup and runtime. Issues with incoming
+                                    firmware packages during the firmware update process are also reported by
+                                    the HMC. A secure boot failure as the result of a key revocation will be
+                                    detected when users attempt to flash a firmware update package with a
+                                    revoked key. When this occurs, the following message is displayed in the
+                                    firmware update task log:
+   </p>
+   <p class="p">
+    {
+   </p>
+   <p class="p">
+    "@odata.type":
+                                       "#MessageRegistry.v1_4_1.MessageRegistry",
+   </p>
+   <pre xml:space="preserve">      "Message": "The resource property 'HGX_FW_BMC_0' has detected errors of type
+        'Security keys revoked'.",</pre>
+   <p class="p">
+    "MessageArgs": [
+   </p>
+   <p class="p">
+    "HGX_FW_BMC_0",
+   </p>
+   <p class="p">
+    "Security keys
+                                       revoked"
+   </p>
+   <p class="p">
+    ],
+   </p>
+   <p class="p">
+    "MessageId":
+                                       "ResourceEvent.1.0.ResourceErrorsDetected",
+   </p>
+   <p class="p">
+    "Resolution": "Verify the contents of the FW
+                                       package",
+   </p>
+   <p class="p">
+    "Severity":
+                                       "Critical"
+   </p>
+   <p class="p">
+    }
+   </p>
+   <p class="p">
+    However, when the
+                                    image already on the AP flash is signed with a key that is revoked, no
+                                    Secure boot failure event is generated. In this case the device
+                                    Health/HealthRollup becomes Critical.
+   </p>
+   <p class="p">
+    If the AP fails to boot because
+                                    both images are signed with a revoked key, the ERoT fatal event is raised on
+                                    the associated ERoT Chassis URI, and for GPU/NVSwitch a NACK From Device
+                                    event on the AP Chassis URI is also seen. A secure boot failure as the
+                                    result of a signature authentication failure is still reported during the
+                                    firmware update and at boot or runtime. This scenario triggers the following
+                                    Redfish event, which shows in the Conditions of the AP Chassis
+                                    URI:
+   </p>
+   <p class="p">
+    {
+   </p>
+   <pre xml:space="preserve">      "@odata.id":
+        "/redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog/Entries/2",</pre>
+   <p class="p">
+    "@odata.type": "#LogEntry.v1_9_0.LogEntry",
+   </p>
+   <pre xml:space="preserve">      "AdditionalDataURI":
+        "/redfish/v1/Systems/HGX_Baseboard_0/LogServices/EventLog/Entries/2/attachment",</pre>
+   <p class="p">
+    "Created": "2034-09-11T23:22:25+00:00",
+   </p>
+   <p class="p">
+    "EntryType": "Event",
+   </p>
+   <p class="p">
+    "Id":
+                                       "2",
+   </p>
+   <p class="p">
+    "Links": {
+   </p>
+   <p class="p">
+    "OriginOfCondition": {
+   </p>
+   <pre xml:space="preserve">          "@odata.id":
+        "/redfish/v1/UpdateService/FirmwareInventory/HGX_FW_NVSwitch_0"</pre>
+   <p class="p">
+    }
+   </p>
+   <p class="p">
+    },
+   </p>
+   <pre xml:space="preserve">      "Message": "The resource property NVSwitch_0 Firmware has detected errors of
+        type 'Secure Boot Failure'.",</pre>
+   <p class="p">
+    "MessageArgs": [
+   </p>
+   <p class="p">
+    "NVSwitch_0
+                                       Firmware",
+   </p>
+   <p class="p">
+    "Secure Boot
+                                       Failure"
+   </p>
+   <p class="p">
+    ],
+   </p>
+   <p class="p">
+    "MessageId":
+                                       "ResourceEvent.1.0.ResourceErrorsDetected",
+   </p>
+   <p class="p">
+    "Name": "System Event Log Entry",
+   </p>
+   <pre xml:space="preserve">      "Resolution": "ERoT will try to recover AP by a reset/reboot. If there is
+        still a problem, collect ERoT logs and reflash AP firmware with recovery
+      flow.",</pre>
+   <p class="p">
+    "Resolved": false,
+   </p>
+   <p class="p">
+    "Severity":
+                                       "Critical"
+   </p>
+   <p class="p">
+    },
+   </p>
+  </li>
+  <li class="li">
+   OpenCL is not supported in the confidential compute mode available with Hopper
+                                 (
+   <a class="xref" href="https://www.nvidia.com/en-in/data-center/solutions/confidential-computing/" shape="rect" target="_blank">
+    https://www.nvidia.com/en-in/data-center/solutions/confidential-computing/
+   </a>
+   )
+                                 . Any attempt to run OpenCL apps in this mode will result in clGetPlatformIDs
+                                 returning an error
+   CL_INVALID_DEVICE
+   .
+  </li>
+  <li class="li">
+   All Mellanox ports are shown by command "
+   nvidia-smi topo -m
+   "
+                                 after dual-port NICs are bonded.
+  </li>
+  <li class="li">
+   When polling the H100 GPU via SMBPBI using GPU Performance Monitoring metrics,
+                                 driver reloads or GPU resets can result in driver errors that manifest as PID
+                                 (X62) errors on Linux. NVIDIA is investigating this issue.
+  </li>
+  <li class="li">
+   On NVIDIA H800, monitoring software such as DCGM or NVML might report lower
+                                 double-precision (FP64) utilization metrics. This is expected as per the NVIDIA
+                                 H800 product configuration. Refer to the NVIDIA H800 product brief for more
+                                 details.
+  </li>
+  <li class="li">
+   The GPU driver build system might not pick the
+   Module.symvers
+   file, produced when building the
+   ofa_kernel
+   module from
+                                 MLNX_OFED, from the right subdirectory. Because of that,
+   nvidia_peermem.ko
+   does not have the right kernel symbol
+                                 versions for the APIs exported by the IB core driver, and therefore it does not
+                                 load correctly. That happens when using MLNX_OFED 5.5 or newer on a Linux Arm64
+                                 or ppc64le platform.
+   To work around this issue, perform the following:
+   <ol class="ol">
+    <li class="li">
+     Verify that nvidia_peermem.ko does not load correctly.
+    </li>
+    <li class="li">
+     Uninstall old MLNX_OFED if one was installed.
+    </li>
+    <li class="li">
+     Manually remove
+     /usr/src/ofa_kernel/default
+     if one
+                                          exists.
+    </li>
+    <li class="li">
+     Install MLNX_OFED 5.5 or newer.
+    </li>
+    <li class="li">
+     Manually create a soft
+                                          link:
+     <pre xml:space="preserve"> /usr/src/ofa_kernel/default -&gt; /usr/src/ofa_kernel/$(uname -m)/$(uname -r)</pre>
+    </li>
+    <li class="li">
+     Reinstall the GPU driver.
+    </li>
+   </ol>
+  </li>
+  <li class="li">
+   If you encounter an error on RHEL7 when installing with
+   cuda-drivers-fabricmanager
+   packages, use the following
+                                 alternate instructions. For example:
+   <p class="p">
+    If you are upgrading from a
+                                    different branch, for example to driver 515.65.01:
+   </p>
+   <pre class="pre screen" xml:space="preserve">new_version=515.65.01
+sudo yum swap nvidia-driver-latest-dkms nvidia-driver-latest-dkms-${new_version}
+sudo yum install nvidia-fabric-manager-${new_version}</pre>
+  </li>
+  <li class="li">
+   <p class="p">
+    When installing a driver on SLES15 or openSUSE15 that previously had an R515 driver installed,
+                                    users need to run the following command afterwards to finalize the
+                                    installation:
+   </p>
+   <pre class="pre" xml:space="preserve">sudo zypper install --force nvidia-gfxG05-kmp-default </pre>
+   <p class="p">
+    Without doing this, users may see the kernel objects as missing.
+   </p>
+  </li>
+  <li class="li">
+   <pre class="pre screen" xml:space="preserve">nvidia-release-upgrade</pre>
+   may report that not all updates have been
+                                 installed and exit.
+   When running the
+   <pre class="pre screen" xml:space="preserve">nvidia-release-upgrade</pre>
+   command on DGX systems running DGX OS
+                                    4.99.x, it may exit and tell users: "Please install all available updates
+                                    for your release before upgrading" even though all upgrades have been
+                                    installed.
+   Users who see this can run the following
+                                 command:
+   <pre class="pre" xml:space="preserve">sudo apt install -y nvidia-fabricmanager-450/bionic-updates --allow-downgrades</pre>
+   After
+                                 running this, proceed with the regular upgrade
+                                 steps:
+   <pre class="pre" xml:space="preserve">sudo apt update
+sudo apt full-upgrade -y 
+sudo apt install -y nvidia-release-upgrade 
+sudo nvidia-release-upgrade</pre>
+  </li>
+  <li class="li">
+   By default, Fabric Manager runs as a
+   systemd
+   service. If using
+   <pre class="pre screen" xml:space="preserve">DAEMONIZE=0</pre>
+   in the Fabric Manager configuration file, then the
+                                 following steps may be required.
+   <ol class="ol">
+    <li class="li">
+     Disable FM service from auto
+                                          starting.
+     <pre class="pre screen" xml:space="preserve">systemctl disable nvidia-fabricmanager</pre>
+    </li>
+    <li class="li">
+     Once the system is booted, manually start FM process.
+     <pre class="pre screen" xml:space="preserve">/usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg</pre>
+     Note,
+                                          since the process is not a daemon, the SSH/Shell prompt will not be
+                                          returned (use another SSH shell for other activities or run FM as a
+                                          background task).
+    </li>
+   </ol>
+  </li>
+  <li class="li">
+   Important correctness fix for H100 GPU instructions used by cuBLAS, other
+                                    CUDA libraries, and user CUDA code
+   <p class="p">
+    An issue was discovered recently
+                                    with H100 GPUs (H100 PCIe and HGX H100) where certain operations put the GPU
+                                    in an invalid state that allowed some GPU instructions to operate at
+                                    unsupported frequency that can result in incorrect computation results and
+                                    faster than expected performance. The affected GPU instructions are used by
+                                    cuBLAS, other CUDA libraries, and can also be used for user CUDA
+                                    code.
+   </p>
+   The operations that allow the GPU to enter an invalid state are
+                                    the following:
+   <ul class="ul">
+    <li class="li">
+     Enabling MIG
+    </li>
+    <li class="li">
+     Deinitialize and reinitialize the GPU (for example, turn off
+                                          persistence mode and turn it back on or reload the nvidia.ko
+                                          driver)
+    </li>
+    <li class="li">
+     Any Compute Engine error (for example, MMU fault, Out of Range warp
+                                          error, and so on)
+    </li>
+   </ul>
+   Once the GPU enters the invalid state, the performance for some GPU
+                                 instructions is increased by 7-10%, but the
+   computation results may be
+                                    incorrect
+   .
+   <p class="p">
+    The current release fixes this issue, and it is no longer
+                                    possible to enter the invalid GPU state. This issue has been present in all
+                                    drivers since the H100 launch, and we recommend that you upgrade to the
+                                    current release as soon as possible. If upgrading is not immediately
+                                    possible, a GPU reset can restore the GPU back to the correct operational
+                                    state, except for when MIG is being used. For MIG, the new driver is
+                                    required, and there is no workaround available.
+   </p>
+  </li>
+  <li class="li">
+   Uninstalling the driver fails, and the system reboots automatically.
+   On
+                                    Windows 2019 and 2022 servers, uninstalling the driver causes the system to
+                                    restart automatically before the uninstallation is completed. The issue also
+                                    occurs when you upgrade the driver from an older version to a new version,
+                                    even after selecting the
+   Perform Clean Installation
+   option in the
+                                    installer UI.
+   <span class="notetitle">
+    Note:
+   </span>
+   This issue does not occur in
+                                       Linux.
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    We strongly recommend that
+                                    you
+    always
+    install, uninstall, and upgrade drivers from Safe
+                                    mode.
+   </p>
+  </li>
+  <li class="li">
+   In Shared Switch virtualization mode, the guest VM GPU
+                                    driver load and unload stress test fails after certain
+                                    iteration
+   <p class="p">
+    In the Shared Switch virtualization mode, the stress test to
+                                    load and unload the GPU driver on Guest VM in every 30 second interval runs
+                                    into issues approximately after three hours of the test.
+   </p>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    Do not run the stress reload driver cycle at this
+                                    time.
+   </p>
+  </li>
+  <li class="li">
+   A few Async SMBPBI commands do not function as intended when the driver is
+                                    unloaded.
+   <p class="p">
+    When the driver is unloaded, the following Async SMBPBI
+                                    commands do not operate as specified:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     Arg1 0x00: Reads total GPU power limit control data.
+    </li>
+    <li class="li">
+     Arg1 0x01: Sets the total GPU power limit.
+    </li>
+    <li class="li">
+     Arg1 0x02: Reads the total GPU power limit policy information.
+    </li>
+   </ul>
+   Due to this issue, some properties of the following Redfish URIs are impacted:
+   <ul class="ul">
+    <li class="li">
+     PowerLimitWatts.SetPoint:
+     <p class="p">
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/GPU_SXM_[1-8]/EnvironmentMetrics
+     </p>
+    </li>
+    <li class="li">
+     SpeedLimitMHz,
+                                             SpeedLocked:
+     <p class="p">
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/GPU_SXM_[1-8]
+     </p>
+    </li>
+   </ul>
+   The Patch operation of the following URIs are impacted:
+   <ul class="ul">
+    <li class="li">
+     PowerLimitWatts.SetPoint:
+     <p class="p">
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/GPU_SXM_[1-8]/EnvironmentMetrics
+     </p>
+    </li>
+    <li class="li">
+     Oem.Nvidia.PowerMode "MaxP" or
+                                             "MaxQ":
+     <p class="p">
+      /redfish/v1/Chassis/HGX_Chassis_0/EnvironmentMetrics
+     </p>
+    </li>
+    <li class="li">
+     SpeedLimitMHz,
+                                             SpeedLocked:
+     <p class="p">
+      /redfish/v1/Systems/HGX_Baseboard_0/Processors/GPU_SXM_[1-8]
+     </p>
+    </li>
+   </ul>
+   <p class="p">
+    Workaround
+   </p>
+   <p class="p">
+    Load the driver for these URIs to work
+                                    properly.
+   </p>
+  </li>
+  <li class="li">
+   Fabric Manager state is not reported accurately on NVSwitch OOB
+                                    query
+   <p class="p">
+    The NVSwitch SMPBI query that reports Fabric Manager state
+                                    (Manager State) is not reporting the actual FM state.
+   </p>
+  </li>
+  <li class="li">
+   Instructions to reset all GPUs Using the
+   nvidia-smi
+                                       -r
+   Command
+   <p class="p">
+    When resetting all GPUs using the
+    nvidia-smi
+    command with the
+    -r
+    option
+                                    instead of a resetting specific GPU using the
+    -i
+                                       &lt;gpu_index&gt;
+    option, all the NVSwitches will also be reset.
+                                    This process wipes out the NVSwitch routing entries, and subsequent CUDA
+                                    application launches will fail. The Fabric Manager service will also show
+                                    interaction errors with the NVSwitch device via the switch
+                                    driver.
+   </p>
+   Workaround
+   <ol class="ol">
+    <li class="li">
+     Stop the Fabric Manager service.
+    </li>
+    <li class="li">
+     To reset all GPUs, run
+     nvidia-smi -r
+     .
+    </li>
+    <li class="li">
+     After the reset is finished, start the Fabric Manager service.
+    </li>
+   </ol>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  GPU Performance Counters
+ </h3>
+ <p class="p">
+  The use of developer tools from NVIDIA that access various performance counters
+                              requires administrator privileges. See this
+  <a class="xref" href="https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters" shape="rect" target="_blank">
+   note
+  </a>
+  for more details. For example,
+                              reading NVLink utilization metrics from
+  nvidia-smi (nvidia-smi nvlink -g
+                                 0)
+  would require administrator privileges.
+ </p>
+ <h3 class="title sectiontitle">
+  NoScanout Mode
+ </h3>
+ <p class="p">
+  NoScanout mode is no longer supported on NVIDIA Data Center GPU products. If
+                              NoScanout mode was previously used, then the following line in the âscreenâ section
+                              of /etc/X11/xorg.conf should be removed to ensure that X server starts on data
+                              center products:
+ </p>
+ <pre class="pre screen" xml:space="preserve">Option         "UseDisplayDevice" "None"</pre>
+ <p class="p">
+  NVIDIA Data Center GPU products now support one display of up to 2560x1600
+                              resolution.
+ </p>
+ <h3 class="title sectiontitle">
+  Unified Memory Support
+ </h3>
+ <p class="p">
+  CUDA and unified memory is not supported when used with Linux power management states
+                              S3/S4.
+ </p>
+ <h3 class="title sectiontitle">
+  IMPU FRU for Volta GPUs
+ </h3>
+ The driver does not support the IPMI FRU
+                           multi-record information structure for NVLink. See the Design Guide for Tesla P100 and
+                           Tesla V100-SXM2 for more information.
+ <h3 class="title sectiontitle">
+  OpenCL 3.0 Known Issues
+ </h3>
+ <p class="p">
+  Device side enqueue
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    Device-Side-Enqueue related queries may return 0 values, although
+                                    corresponding built-ins can be safely used by kernel. This is in accordance
+                                    with conformance requirements described at
+    <a class="xref" href="https://www.khronos.org/registry/OpenCL/specs/3.0-unified/html/OpenCL_API.html#opencl-3.0-backwardscompatibility" shape="rect" target="_blank">
+     https://www.khronos.org/registry/OpenCL/specs/3.0-unified/html/OpenCL_API.html#opencl-3.0-backwardscompatibility
+    </a>
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Shared virtual memory - the current implementation of shared virtual memory
+                                    is limited to 64-bit platforms only.
+   </p>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  Confidential Compute
+ </h3>
+ <ul class="ul">
+  <li class="li">
+   Confidential Compute applications will not work on this release. Please continue to use 535.104.05 for this use case.
+  </li>
+ </ul>
+ <a name="virtualization" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#virtualization" name="virtualization" shape="rect">
+   2. Virtualization
+  </a>
+ </h2>
+ <p class="p">
+  To make use of GPU passthrough with virtual machines running Windows and Linux,
+                        the hardware platform must support the following features:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    A CPU with hardware-assisted instruction set virtualization: Intel VT-x or
+                              AMD-V.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Platform support for I/O DMA remapping.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On Intel platforms, the DMA remapper technology is called Intel VT-d.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On AMD platforms, it is called AMD IOMMU.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Support for these features varies by processor family, product, and system, and should be
+                        verified at the manufacturer's website.
+ </p>
+ <p class="p">
+  The following hypervisors are supported  for virtualization:
+ </p>
+ <a name="virtualization__table" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="virtualization__table" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1514" rowspan="1" valign="top" width="56.52173913043478%">
+    Hypervisor
+   </th>
+   <th class="entry" colspan="1" id="d54e1517" rowspan="1" valign="top" width="43.47826086956522%">
+    Notes
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1514" rowspan="1" valign="top" width="56.52173913043478%">
+    Citrix XenServer
+   </td>
+   <td class="entry" colspan="1" headers="d54e1517" rowspan="1" valign="top" width="43.47826086956522%">
+    Version 6.0 and later
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1514" rowspan="1" valign="top" width="56.52173913043478%">
+    VMware vSphere (ESX / ESXi)
+   </td>
+   <td class="entry" colspan="1" headers="d54e1517" rowspan="1" valign="top" width="43.47826086956522%">
+    Version 5.1 and later.
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1514" rowspan="1" valign="top" width="56.52173913043478%">
+    Red Hat KVM
+   </td>
+   <td class="entry" colspan="1" headers="d54e1517" rowspan="1" valign="top" width="43.47826086956522%">
+    Red Hat Enterprise Linux 7 with KVM
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1514" rowspan="1" valign="top" width="56.52173913043478%">
+    Microsoft Hyper-V
+   </td>
+   <td class="entry" colspan="1" headers="d54e1517" rowspan="1" valign="top" width="43.47826086956522%">
+    Windows Server 2019 Hyper-V Generation 2
+   </td>
+  </tr>
+ </table>
+ Data Center products now support one display of up to 2560x1600
+                           resolution.
+ <p class="p">
+  The following GPUs are supported for device passthrough  for virtualization:
+ </p>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    GPU Family
+   </th>
+   <th class="entry" colspan="1" id="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    Boards Supported
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Ada Lovelace
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA L40, L4
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Grace Hopper
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA GH200
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Hopper
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA H100, NVIDIA H800
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Ampere GPU Architecture
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA A800, A100, A40, A30, A16, A10, A10G, A2, AX800
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Turing
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA T4, NVIDIA T4G
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Volta
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA V100
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Pascal
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Quadro: P2000, P4000, P5000, P6000, GP100
+    </p>
+    <p class="p">
+     Tesla: P100, P40, P4
+    </p>
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1582" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Maxwell
+   </td>
+   <td class="entry" colspan="1" headers="d54e1585" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Quadro: K2200, M2000, M4000, M5000, M6000, M6000 24GB
+    </p>
+    <p class="p">
+     Tesla: M60, M40, M6, M4
+    </p>
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#hardware-software-support" name="hardware-software-support" shape="rect">
+   3. Hardware and Software Support
+  </a>
+ </h2>
+ <p class="p">
+  Support for these features varies by processor family, product, and system, and should be
+                        verified at the manufacturer's website.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems for NVIDIA Data Center GPUs
+ </h2>
+ <p class="p">
+  The Release 535 driver is supported on the following operating systems:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    Windows x86_64 operating systems:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     Microsoft WindowsÂ® Server 2022
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® Server 2019
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Note
+      : R525TeslaRD was the last TRD to support Server
+                                          2016.
+     </p>
+    </li>
+    <li class="li">
+     Microsoft WindowsÂ® 11 21H2 - SV1
+    </li>
+    <li class="li">
+     Microsoft WindowsÂ® 11 22H2 - SV2
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® 10
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    The following table summarizes the supported Linux 64-bit distributions.
+                                    For a complete list of distributions, kernel versions supported, see the
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#system-requirements" shape="rect" target="_blank">
+     CUDA Linux System Requirements
+    </a>
+    documentation.
+   </p>
+   <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+    <tr class="row">
+     <th class="entry" colspan="1" id="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Distribution
+     </th>
+     <th class="entry" colspan="1" id="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      x86_64
+     </th>
+     <th class="entry" colspan="1" id="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      POWER
+     </th>
+     <th class="entry" colspan="1" id="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      Arm64 Server
+     </th>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Debian 11.x (where x &lt;= 8)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Debian 10. x (where x &lt;= 13)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      OpenSUSE Leap 15.x (where y &lt;= 5)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Fedora 37
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Red Hat Enterprise Linux 9.y (where y &lt;=
+                                                3)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Rocky Linux 9.y (where y &lt;= 3)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Red Hat Enterprise Linux 8.y (where y &lt;=
+                                                9)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Rocky Linux 8.y (where y &lt;= 9)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Red Hat Enterprise Linux / CentOS 7.y (where y &lt;=
+                                                9)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      SUSE Linux Enterprise Server 15.y (where y &lt;=
+                                                5)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Ubuntu 22.04.z LTS (where z &lt;= 3)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      Ubuntu 20.04.z LTS (where z &lt;= 6)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      KylinOS V10 SP2
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1768" rowspan="1" valign="top" width="26.829268292682933%">
+      CBL-Mariner 2.0*
+     </td>
+     <td class="entry" colspan="1" headers="d54e1771" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1774" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1777" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+   </table>
+   <p class="p">
+    * CBL-Mariner will be supported by TRD via runfile. CUDA Toolkit will not
+                                    support this OS as this is a deployment OS.
+   </p>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems and CPU Configurations for NVIDIA HGX GH200
+ </h2>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    Grace Hopper Linux distributions:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux 9.3
+     </p>
+    </li>
+    <li class="li">
+     SUSE Linux Enterprise Server 15 SP5 QU1
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 22.04 with NVIDIA HWE kernel
+     </p>
+     <p class="p">
+      RHEL and SLES feature parity with NVIDIA HWE Kernels. The latest
+                                          RHEL 9 and SLES 15 SP5 kernels support bare metal.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems and CPU Configurations for NVIDIA HGX
+                           H100/H800
+ </h2>
+ <p class="p">
+  The Release 535 driver is validated with NVIDIA HGX H100 on the following operating
+                           systems and CPU configurations:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    Linux 64-bit distributions:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux 8.9 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     Red Hat Enterprise Linux 9.3 (in 4/8/16-GPU configurations)
+    </li>
+    <li class="li">
+     SUSE Linux Enterprise Server 15.5 (in 4/8/16-GPU
+                                       configurations)
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 22.04.2 LTS (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ul class="ul">
+  <li class="li">
+   Windows 64-bit distributions:
+   <ul class="ul">
+    <li class="li">
+     Windows Server 2022
+    </li>
+    <li class="li">
+     <p class="p">
+      Windows Server 2019 (in 1/2/4/8-GPU configurations; 16-GPU
+                                             configurations are currently not supported)
+     </p>
+     <p class="p">
+      Windows is supported only in shared NVSwitch virtualization
+                                             configurations.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems and CPU Configurations for NVIDIA HGX
+                           A100/A800
+ </h2>
+ <p class="p">
+  The Release 535 driver is validated with NVIDIA HGX A100 on the following operating
+                           systems and CPU configurations:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    Linux 64-bit distributions:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     Debian 11.8
+    </li>
+    <li class="li">
+     Debian 10.13
+    </li>
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux 8.9 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux 7.9 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Rocky Linux 8.8 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     Red Hat Enterprise Linux 9.3 (in 4/8/16-GPU configurations)
+    </li>
+    <li class="li">
+     <p class="p">
+      CentOS Linux 7.9 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 22.04.3 LTS (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 20.04.6 LTS (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      SUSE SLES 15.5 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     KylinOS V10 SP2
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ul class="ul">
+  <li class="li">
+   Windows 64-bit distributions:
+   <ul class="ul">
+    <li class="li">
+     Windows Server 2022
+    </li>
+    <li class="li">
+     <p class="p">
+      Windows Server 2019 (in 1/2/4/8-GPU configurations; 16-GPU
+                                             configurations are currently not supported)
+     </p>
+     <p class="p">
+      Windows is
+                                             supported only in shared NVSwitch virtualization
+                                             configurations.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   CPU Configurations:
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      AMD Rome in PCIe Gen4 mode
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Intel Skylake/Cascade Lake (4-socket) in PCIe Gen3 mode
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  Supported Virtualization Configurations
+ </h2>
+ <p class="p">
+  The Release 535 driver is validated with NVIDIA HGX A100, HGX A800, H100, and H800
+                           on the following configurations:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    Passthrough (full visibility of GPUs and NVSwitches to guest VMs):
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      8-GPU configurations with Ubuntu 20.04.6 and 22.4.2
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Shared NVSwitch (guest VMs only have visibility of GPUs and full NVLink
+                                    bandwidth between GPUs in the same guest VM):
+   </p>
+   <ul class="ul">
+    <li class="li">
+     1/2/4/8/16-GPU configurations with Ubuntu 20.04.6 LTS
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  API Support
+ </h2>
+ <p class="p">
+  This release supports the following APIs:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    NVIDIAÂ® CUDAÂ® 12.2 for NVIDIAÂ® Maxwell
+    TM
+    , Pascal
+    TM
+    ,
+                                 Volta
+    TM
+    , Turing
+    TM
+    , Hopper
+    TM
+    , NVIDIA
+                                 Ampere architecture, and NVIDIA Ada Lovelace GPU architecture GPUs
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    OpenGLÂ® 4.6
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    VulkanÂ® 1.3
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    DirectX 11
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    DirectX 12 (Windows 10)
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Open Computing Language (OpenCL
+    TM
+    software) 3.0
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Note that for using graphics APIs on Windows (such as OpenGL, Vulkan, DirectX 11, and DirectX 12) or any WDDM 2.0+ based functionality
+                           on Data Center GPUs, vGPU is required. See the
+  <a class="xref" href="https://docs.nvidia.com/grid/index.html" shape="rect" target="_blank">
+   vGPU documentation
+  </a>
+  for more information.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported NVIDIA Data Center GPUs
+ </h2>
+ <p class="p">
+  The NVIDIA Data Center GPU driver package is designed for systems that have one or
+                           more Data Center GPU products installed. This release of the driver supports CUDA
+                           C/C++ applications and libraries that rely on the CUDA C Runtime and/or CUDA Driver
+                           API.
+ </p>
+ Attention:
+ Release 470 was the last driver branch to support Data Center GPUs
+                           based on the NVIDIA Kepler architecture. This includes discontinued support for the
+                           following compute capabilities:
+ <ul class="ul">
+  <li class="li">
+   sm_30 (NVIDIA Kepler)
+  </li>
+  <li class="li">
+   sm_32 (NVIDIA Kepler)
+  </li>
+  <li class="li">
+   sm_35 (NVIDIA Kepler)
+  </li>
+  <li class="li">
+   sm_37 (NVIDIA Kepler)
+  </li>
+ </ul>
+ For more information on GPU products and compute capability, see
+ <a class="xref" href="https://developer.nvidia.com/cuda-gpus" shape="rect" target="_blank">
+  https://developer.nvidia.com/cuda-gpus
+ </a>
+ .
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2395" rowspan="1" valign="top">
+    NVIDIA Server Platforms
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2401" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2404" rowspan="1" valign="top" width="52.38095238095239%">
+    Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2395 d54e2401" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX H100
+   </td>
+   <td class="entry" colspan="1" headers="d54e2395 d54e2404" rowspan="1" valign="top" width="52.38095238095239%">
+    H100 and NVSwitch
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2395 d54e2401" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX H800
+   </td>
+   <td class="entry" colspan="1" headers="d54e2395 d54e2404" rowspan="1" valign="top" width="52.38095238095239%">
+    H800 and NVSwitch
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2395 d54e2401" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX A800
+   </td>
+   <td class="entry" colspan="1" headers="d54e2395 d54e2404" rowspan="1" valign="top" width="52.38095238095239%">
+    A800 and NVSwitch
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2395 d54e2401" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX A100
+   </td>
+   <td class="entry" colspan="1" headers="d54e2395 d54e2404" rowspan="1" valign="top" width="52.38095238095239%">
+    A100 and NVSwitch
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2395 d54e2401" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX-2
+   </td>
+   <td class="entry" colspan="1" headers="d54e2395 d54e2404" rowspan="1" valign="top" width="52.38095238095239%">
+    V100 and NVSwitch
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2471" rowspan="1" valign="top">
+    Data Center L-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2477" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2480" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2471 d54e2477" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA L2
+   </td>
+   <td class="entry" colspan="1" headers="d54e2471 d54e2480" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2471 d54e2477" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA L20
+   </td>
+   <td class="entry" colspan="1" headers="d54e2471 d54e2480" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2471 d54e2477" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA L40
+   </td>
+   <td class="entry" colspan="1" headers="d54e2471 d54e2480" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2471 d54e2477" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA L40S
+   </td>
+   <td class="entry" colspan="1" headers="d54e2471 d54e2480" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2471 d54e2477" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA L4
+   </td>
+   <td class="entry" colspan="1" headers="d54e2471 d54e2480" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2548" rowspan="1" valign="top">
+    Data Center H-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2554" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2557" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2548 d54e2554" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA H100 PCIe
+   </td>
+   <td class="entry" colspan="1" headers="d54e2548 d54e2557" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Hopper
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2548 d54e2554" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA H100 NVL
+   </td>
+   <td class="entry" colspan="1" headers="d54e2548 d54e2557" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Hopper
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2548 d54e2554" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA H800 PCIe
+   </td>
+   <td class="entry" colspan="1" headers="d54e2548 d54e2557" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Hopper
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2548 d54e2554" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA H800 NVL
+   </td>
+   <td class="entry" colspan="1" headers="d54e2548 d54e2557" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Hopper
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2615" rowspan="1" valign="top">
+    RTX-Series / T-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA RTX 6000 Ada Generation
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA RTX 4000 SFF Ada Generation
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ada Lovelace
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA RTX A6000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA RTX A5000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA RTX A4000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    Quadro RTX 8000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    Quadro RTX 6000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    Quadro RTX 4000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA T1000
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA T600
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2615 d54e2621" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA T400
+   </td>
+   <td class="entry" colspan="1" headers="d54e2615 d54e2624" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2746" rowspan="1" valign="top">
+    Data Center A-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A2
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A800, AX800
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A100X
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A100
+    <p class="p">
+     NVIDIA A100 80 GB PCIe
+    </p>
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A40
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A30. A30X
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A16
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2746 d54e2752" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A10, A10M, A10G
+   </td>
+   <td class="entry" colspan="1" headers="d54e2746 d54e2755" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere architecture
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2852" rowspan="1" valign="top">
+    Data Center T-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2858" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2861" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2852 d54e2858" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA T4, T4G
+   </td>
+   <td class="entry" colspan="1" headers="d54e2852 d54e2861" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Turing
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2892" rowspan="1" valign="top">
+    Data Center V-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2898" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2901" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2892 d54e2898" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA V100
+   </td>
+   <td class="entry" colspan="1" headers="d54e2892 d54e2901" rowspan="1" valign="top" width="52.38095238095239%">
+    Volta
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2932" rowspan="1" valign="top">
+    Data Center P-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2938" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e2941" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2932 d54e2938" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P100
+   </td>
+   <td class="entry" colspan="1" headers="d54e2932 d54e2941" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Pascal
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2932 d54e2938" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P40
+   </td>
+   <td class="entry" colspan="1" headers="d54e2932 d54e2941" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Pascal
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2932 d54e2938" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P4
+   </td>
+   <td class="entry" colspan="1" headers="d54e2932 d54e2941" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Pascal
+   </td>
+  </tr>
+ </table>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e2991" rowspan="1" valign="top">
+    Data Center M-Class Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e2997" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e3000" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2991 d54e2997" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M60
+   </td>
+   <td class="entry" colspan="1" headers="d54e2991 d54e3000" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2991 d54e2997" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M40 24 GB
+   </td>
+   <td class="entry" colspan="1" headers="d54e2991 d54e3000" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2991 d54e2997" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M40
+   </td>
+   <td class="entry" colspan="1" headers="d54e2991 d54e3000" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2991 d54e2997" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M6
+   </td>
+   <td class="entry" colspan="1" headers="d54e2991 d54e3000" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e2991 d54e2997" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M4
+   </td>
+   <td class="entry" colspan="1" headers="d54e2991 d54e3000" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+ </table>
+ <a name="notices-header" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-154-05/index.html#notices-header" name="notices-header" shape="rect">
+   Notices
+  </a>
+ </h2>
+ <a name="notice" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Notice
+ </h3>
+ <p class="p" id="notice__notice-para-1">
+  <a name="notice__notice-para-1" shape="rect">
+   <!-- -->
+  </a>
+  This document is provided for information
+                                 purposes only and shall not be regarded as a warranty of a
+                                 certain functionality, condition, or quality of a product.
+                                 NVIDIA Corporation (âNVIDIAâ) makes no representations or
+                                 warranties, expressed or implied, as to the accuracy or
+                                 completeness of the information contained in this document
+                                 and assumes no responsibility for any errors contained
+                                 herein. NVIDIA shall have no liability for the consequences
+                                 or use of such information or for any infringement of
+                                 patents or other rights of third parties that may result
+                                 from its use. This document is not a commitment to develop,
+                                 release, or deliver any Material (defined below), code, or
+                                 functionality.
+ </p>
+ <p class="p" id="notice__notice-para-2">
+  <a name="notice__notice-para-2" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA reserves the right to make corrections, modifications,
+                                 enhancements, improvements, and any other changes to this
+                                 document, at any time without notice.
+ </p>
+ <p class="p" id="notice__notice-para-3">
+  <a name="notice__notice-para-3" shape="rect">
+   <!-- -->
+  </a>
+  Customer should obtain the latest relevant information before
+                                 placing orders and should verify that such information is
+                                 current and complete.
+ </p>
+ <p class="p" id="notice__notice-para-4">
+  <a name="notice__notice-para-4" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are sold subject to the NVIDIA standard terms and
+                                 conditions of sale supplied at the time of order
+                                 acknowledgement, unless otherwise agreed in an individual
+                                 sales agreement signed by authorized representatives of
+                                 NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby
+                                 expressly objects to applying any customer general terms and
+                                 conditions with regards to the purchase of the NVIDIA
+                                 product referenced in this document. No contractual
+                                 obligations are formed either directly or indirectly by this
+                                 document.
+ </p>
+ <p class="p" id="notice__notice-para-5">
+  <a name="notice__notice-para-5" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are not designed, authorized, or warranted to be
+                                 suitable for use in medical, military, aircraft, space, or
+                                 life support equipment, nor in applications where failure or
+                                 malfunction of the NVIDIA product can reasonably be expected
+                                 to result in personal injury, death, or property or
+                                 environmental damage. NVIDIA accepts no liability for
+                                 inclusion and/or use of NVIDIA products in such equipment or
+                                 applications and therefore such inclusion and/or use is at
+                                 customerâs own risk.
+ </p>
+ <p class="p" id="notice__notice-para-6">
+  <a name="notice__notice-para-6" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA makes no representation or warranty that products based on
+                                 this document will be suitable for any specified use.
+                                 Testing of all parameters of each product is not necessarily
+                                 performed by NVIDIA. It is customerâs sole responsibility to
+                                 evaluate and determine the applicability of any information
+                                 contained in this document, ensure the product is suitable
+                                 and fit for the application planned by customer, and perform
+                                 the necessary testing for the application in order to avoid
+                                 a default of the application or the product. Weaknesses in
+                                 customerâs product designs may affect the quality and
+                                 reliability of the NVIDIA product and may result in
+                                 additional or different conditions and/or requirements
+                                 beyond those contained in this document. NVIDIA accepts no
+                                 liability related to any default, damage, costs, or problem
+                                 which may be based on or attributable to: (i) the use of the
+                                 NVIDIA product in any manner that is contrary to this
+                                 document or (ii) customer product designs.
+ </p>
+ <p class="p" id="notice__notice-para-7">
+  <a name="notice__notice-para-7" shape="rect">
+   <!-- -->
+  </a>
+  No license, either expressed or implied, is granted under any NVIDIA
+                                 patent right, copyright, or other NVIDIA intellectual
+                                 property right under this document. Information published by
+                                 NVIDIA regarding third-party products or services does not
+                                 constitute a license from NVIDIA to use such products or
+                                 services or a warranty or endorsement thereof. Use of such
+                                 information may require a license from a third party under
+                                 the patents or other intellectual property rights of the
+                                 third party, or a license from NVIDIA under the patents or
+                                 other intellectual property rights of NVIDIA.
+ </p>
+ <p class="p" id="notice__notice-para-8">
+  <a name="notice__notice-para-8" shape="rect">
+   <!-- -->
+  </a>
+  Reproduction of information in this document is permissible only if
+                                 approved in advance by NVIDIA in writing, reproduced without
+                                 alteration and in full compliance with all applicable export
+                                 laws and regulations, and accompanied by all associated
+                                 conditions, limitations, and notices.
+ </p>
+ <p class="p" id="notice__notice-para-9">
+  <a name="notice__notice-para-9" shape="rect">
+   <!-- -->
+  </a>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE
+                                 BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER
+                                 DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING
+                                 PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED,
+                                 IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE
+                                 MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF
+                                 NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+                                 PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN
+                                 NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING
+                                 WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL,
+                                 INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER
+                                 CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING
+                                 OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN
+                                 ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding
+                                 any damages that customer might incur for any reason
+                                 whatsoever, NVIDIAâs aggregate and cumulative liability
+                                 towards customer for the products described herein shall be
+                                 limited in accordance with the Terms of Sale for the
+                                 product.
+ </p>
+ <a name="trademarks" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Trademarks
+ </h3>
+ <p class="p">
+  NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA
+                                 Corporation in the Unites States and other countries. Other company and product
+                                 names may be trademarks of the respective companies with which they are
+                                 associated.
+ </p>
+ <a name="copyright-present" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle">
+  Copyright
+ </h3>
+ <p class="p">
+  Â©
+  <span class="ph">
+   2024
+  </span>
+  NVIDIA Corporation &amp; affiliates. All rights
+                                 reserved.
+ </p>
+ <p>
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+</body>
+</body></html>

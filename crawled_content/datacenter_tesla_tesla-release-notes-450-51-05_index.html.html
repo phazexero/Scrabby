@@ -1,0 +1,1948 @@
+<html><head><title>Version 450.51.05(Linux)/451.48(Windows) :: NVIDIA Data Center GPU Driver Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  NVIDIA Data Center GPU Driver Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/datacenter/tesla/index.html" title="The root of the site.">
+  NVIDIA Data Center GPU
+ </a>
+ <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html" title="Version 450.51.05(Linux)/451.48(Windows)">
+  Version 450.51.05(Linux)/451.48(Windows)
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#driver-highlights">
+    1. Version Highlights
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#versions">
+      1.1. Software Versions
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#new-features">
+      1.2. New Features
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#fixed-issues">
+      1.3. Fixed Issues
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#known-issues">
+      1.4. Known Issues
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#virtualization">
+    2. Virtualization
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#hardware-software-support">
+    3. Hardware and Software Support
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ Version 450.51.05(Linux)/451.48(Windows)
+                  
+                  
+                  
+                  
+                  (
+ <a href="https://docs.nvidia.com/datacenter/tesla/pdf/NVIDIA_Data_Center_GPU_Driver_Release_Notes_450_v1.pdf">
+  PDF
+ </a>
+ )
+                  -
+                  
+                  
+                  
+                  Last updated September 29, 2020
+                  -
+ <a name="abstract" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#abstract" name="abstract" shape="rect">
+   Version 450.51.05(Linux)/451.48(Windows)
+  </a>
+ </h2>
+ <p class="shortdesc">
+  Release notes for the  Release 450 family of NVIDIAÂ® Data Center GPU Drivers for Linux and
+                        Windows.
+ </p>
+ <p class="p">
+  This edition of Release Notes describes the Release 450 family of NVIDIAÂ® Data Center GPU Drivers
+                        for Linux and Windows. NVIDIA provides these notes to describe performance improvements,
+                        bug fixes and limitations in each documented version of the driver.
+ </p>
+ <a name="driver-highlights" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#driver-highlights" name="driver-highlights" shape="rect">
+   1. Version Highlights
+  </a>
+ </h2>
+ <p class="p">
+  This section provides highlights of the NVIDIA Data Center GPU R
+  <span class="keyword">
+   450
+  </span>
+  Driver 
+                        (version 450.51.05 Linux and 451.48 Windows).
+ </p>
+ <p class="p">
+  For changes related to the
+  <span class="keyword">
+   450
+  </span>
+  release of the NVIDIA display 
+                        driver, review the file "NVIDIA_Changelog" available in the .run installer packages.
+ </p>
+ <p class="p">
+  Driver release date: 07/07/2020
+ </p>
+ <a name="versions" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#versions" name="versions" shape="rect">
+   1.1. Software Versions
+  </a>
+ </h3>
+ <p class="p">
+  07/14/2020: For this release, the software versions are listed below.
+ </p>
+ <a name="versions__ul_tyh_hys_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="versions__ul_tyh_hys_4fb">
+  <li class="li">
+   <p class="p">
+    CUDA Toolkit 11: 11.0.194 (
+    cudadrt
+    )
+   </p>
+   <p class="p">
+    Note that starting with CUDA 11, individual components 
+                                 of the toolkit are versioned indepdently. For a full list of the individual versioned components 
+                                 (e.g. nvcc, CUDA libraries etc.), see the
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions" shape="rect" target="_blank">
+     CUDA Toolkit Release Notes
+    </a>
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    NVIDIA Data Center GPU Driver: 450.51.05 (Linux) / 451.48 (Windows)
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    GPU VBIOS:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      92.00.19.00.10 (NVIDIA A100 SKU200 with heatsink for HGX A100 8-way and 4-way)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      92.00.19.00.13 (NVIDIA A100 SKU202 w/o heatsink for HGX A100 4-way)
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    The following software versions apply for HGX A100 systems.
+   </p>
+   <ul class="ul">
+    <li class="li">
+     <p class="p">
+      Fabric Manager: 450.51.05 (Use
+      nv-fabricmanager -v
+      )
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      NVSwitch VBIOS: 92.10.14.00.01
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      NVFlash: 5.648
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      PEX88000 Firmware: 0.Ff_0
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      FPGA Firmware: 2.94
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CEC: 3.5
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      PEX8725: 1.3
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      FRU EEPROM: 1.3
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="p">
+  Due to a revision lock between the VBIOS and driver, VBIOS versions &gt;=  92.00.18.00.00 must use corresponding drivers &gt;= 450.36.01.
+                           
+                           Older VBIOS versions will work with newer drivers.
+ </p>
+ <a name="new-features" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#new-features" name="new-features" shape="rect">
+   1.2. New Features
+  </a>
+ </h3>
+ <h3 class="title sectiontitle">
+  General
+ </h3>
+ <a name="new-features__ul_ags_sws_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="new-features__ul_ags_sws_4fb">
+  <li class="li">
+   <p class="p">
+    Added support for CUDA 11.0. For more information on CUDA 11.0, refer to the CUDA
+                                    Toolkit 11.0 Release
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html" shape="rect" target="_blank">
+     Notes
+    </a>
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for NVIDIA A100. The supported products are:
+   </p>
+   <ul class="ul">
+    <li class="li">
+     NVIDIA A100-SXM4-40GB
+    </li>
+    <li class="li">
+     NVIDIA A100-PG509-200
+    </li>
+    <li class="li">
+     NVIDIA A100-PCIE-40GB
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for Multi-Instance GPU (MIG) on A100. See the NVML API documentation and
+    nvidia-smi mig
+    command for 
+                                    more information on configuration and management of MIG instances. The following capabilities for MIG are supported for this
+                                    release.
+   </p>
+   <a name="new-features__ul_tyh_hys_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="new-features__ul_tyh_hys_4fb">
+    <li class="li">
+     <p class="p">
+      Support for running containers in MIG instances.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Support for nvJPEG.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Support for Video SDK (encode and decode).
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Support for assignment of JPEG decoders and NVENC hardware units to MIG instances based on supported profiles.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Support for CUDA developer tools - debug and trace is supported for this release.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  NVIDIA Management Library (NVML)
+ </h3>
+ <a name="new-features__ul_ags_sws_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="new-features__ul_ags_sws_4fb">
+  <li class="li">
+   <p class="p">
+    NVML Updates (Refer to the R450 NVML API Documentation for more information about these APIs)
+   </p>
+   <a name="new-features__ul_tyh_hys_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="new-features__ul_tyh_hys_4fb">
+    <li class="li">
+     <p class="p">
+      New error code
+      NVML_ERROR_INSUFFICIENT_RESOURCES
+      when the GPU runs out critical resources, other than memory.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Added new counters for NVLink, including flit error counters, CRC data errors, replay errors, bandwidth, speed, throughput
+                                          and row 
+                                          remapper. See the NVML API documentation for more information on these new counters.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Added support for MIG configuration and management. See the NVML APIs for setting up MIG mode, managing GPU and Compute instances.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Added
+      nvmlDeviceGetRemappedRows
+      to return the number of rows remapped by the A100 GPU.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      The following NVLink APIs are deprecated.
+     </p>
+     <a name="new-features__ul_tyh_hys_4fb" shape="rect">
+      <!-- -->
+     </a>
+     <ul class="ul" id="new-features__ul_tyh_hys_4fb">
+      <li class="li">
+       <p class="p">
+        nvmlDeviceSetNvLinkUtilizationControl()
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        nvmlDeviceGetNvLinkUtilizationControl()
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        nvmlDeviceGetNvLinkUtilizationCounter()
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        nvmlDeviceFreezeNvLinkUtilizationCounter()
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        nvmlDeviceResetNvLinkUtilizationCounter()
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li class="li">
+     <p class="p">
+      nvmlDeviceGetNvLinkUtilizationCounter()
+      is now replaced by
+      nvmlDeviceGetFieldValues()
+      . 
+                                          See the NVML API documentation for the new field parameters.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  Fabric Manager for NVSwitch Systems
+ </h3>
+ <a name="new-features__ul_ags_sws_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="new-features__ul_ags_sws_4fb">
+  <li class="li">
+   <p class="p">
+    Fabric Manager is now available as via standalone installer packages (
+    .deb/.rpm
+    ) for Linux distributions (
+    nvidia-fabricmanager-driver-version
+    )
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added the ability for CUDA workloads to continue running even when the Fabric Manager is stopped or terminated.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added a new API
+    fmGetUnsupportedFabricPartitions()
+    to list unsupported/degraded partitions. The API reports 
+                                    all the GPUs in each unsupported partition by physical ID.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for in-place package upgrades to the Fabric Manager (without updating the driver or) without affecting running
+                                    
+                                    workloads.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    APIs to query the number of NVLinks and the available bandwidth between these links.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added ability to support 4 GPUs per HGX baseboard (to create an 8x partition size).
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    FM has a default NVLink partition grouping information and provides options for 
+                                    overriding the defaults with custom partition information.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    The
+    nvswitch-audit
+    tool is now included in the Fabric Manager
+    .deb
+    and
+    .rpm
+    packages.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added configuration options for Fabric Manager to prevent termination due to a fatal NVLINK error, 
+                                    NVSwitch error, or other typical software events. 
+                                    In the case of a fatal error, CUDA application creation will be blocked and any running application will be terminated.
+   </p>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  Systems
+ </h3>
+ <a name="new-features__ul_ags_sws_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="new-features__ul_ags_sws_4fb">
+  <li class="li">
+   <p class="p">
+    Added the ability for NVLink to switch to single lane mode to save power at idle.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for multi-host configurations. Note that this is supported only in 16-GPU systems (with two HGX A100 baseboards).
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for GPU high availability mode - where failures of up to 1 GPU is supported on HGX A100. In the shared NVSwitch
+                                    scenario, Fabric 
+                                    Manager disables partitions with a failing GPU and reports availability of all other partitions. Refer to the FM User Guide
+                                    section on GPU Failure 
+                                    for more information.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for NVSwitch degraded mode - where the system remains functional but peer NVSwitch trunk links will operate
+                                    at reduced bandwidth. 
+                                    Fabric Manager is also configurable to abort on NVSwitch failure. Refer to the FM User Guide for more information.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    HGX A100 now automatically configures the droopy value for A100 SXM4 modules based on the input voltage. 
+                                    Note that there is no user facing API or knob for controlling this behavior.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On a GPU reset, the hardware now remaps rows that reported errors (single-bit or double-bit) to new memory locations to preserve
+                                    contiguous memory. 
+                                    See the application note "NVIDIA A100 GPU Memory Error Management Application Note" for more information on this capability.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added support for systems that include 2x 8 GPU baseboards (up to 16 GPUs)
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Resilient errors (in XIDs) are isolated to the process and failing CUDA applications 
+                                    are terminated but other processes on the GPU or partition 
+                                    can run to completion (or new processes can be launched) without requiring a GPU reset.
+   </p>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  SMBPBI for NVIDIA Data Center GPUs
+ </h3>
+ <a name="new-features__ul_ags_sws_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="new-features__ul_ags_sws_4fb">
+  <li class="li">
+   <p class="p">
+    The following SMBPBI APIs were added for out-of-band management of the GPU and NVSwitches.
+   </p>
+   <a name="new-features__ul_tyh_hys_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="new-features__ul_tyh_hys_4fb">
+    <li class="li">
+     <p class="p">
+      API to read the default value and range of possible max settings for the application and memory clocks.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API to read the current value of the application and memory clocks.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting GPU power cap values.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for changing power cap configurations.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting the state of NVSwitch state (active or degraded) along with the reason for the degraded state.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting current running state of Fabric Manager.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting inactive NVLinks.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting failures when performing row-remapping updates.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting row-remapping pending state.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting number of remapped rows.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting GPU XID errors.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting PCIe width and speed.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting PCIe link status.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting PCIe error count.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting Target temperature.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting Default TGP.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting Power Capping.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting NVSwitch NVLink reads and writes for both payload traffic and total traffic (including protocol overhead).
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API to read HBM temperature.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      APIs to query to report the NVLink error state even if the NVLink in error is set to 'OFF'.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting GPU NVLink reads and writes for both payload traffic and total traffic (including protocol overhead).
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      The following MIG related features are supported. 
+                                          Note that the other out-of-band APIs for reporting metrics or management are at the granularity 
+                                          of GPUs rather than instances when the GPU is in MIG mode.
+     </p>
+     <ul class="ul">
+      <li class="li">
+       <p class="p">
+        API to toggle MIG mode on GPUs.
+       </p>
+      </li>
+      <li class="li">
+       <p class="p">
+        API for reporting number of active GPU instances when the GPU is in MIG mode.
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li class="li">
+     <p class="p">
+      API for reporting XID errors via polling.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ability to disable a GPU from the system.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ability to set clock limits on the GPUs.
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ability to disable an entire tray even with the NVLINK bridge connected.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Added a number of performance improvements for out-of-band management using SMBPBI
+   </p>
+   <a name="new-features__ul_fgs_sws_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="new-features__ul_fgs_sws_4fb">
+    <li class="li">
+     <p class="p">
+      Merged SMBPBI status and data into one request with 3-bytes (24 bits) of data per read
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Bundled GPU telemetry using user selectable commands (such as GPU power, GPU temperature, HBM temperature) thereby reducing
+                                          the number of reads required
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Increased data rate over SMBUS from 100KHz to 400KHz
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="fixed-issues" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#fixed-issues" name="fixed-issues" shape="rect">
+   1.3. Fixed Issues
+  </a>
+ </h3>
+ <a name="fixed-issues__ul_tyh_hys_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="fixed-issues__ul_tyh_hys_4fb">
+  <li class="li">
+   <p class="p">
+    Various security issues were addressed, for additional details on the med-high 
+                                 severity issues please review
+    <a class="xref" href="http://www.nvidia.com/object/product-security.html" shape="rect" target="_blank">
+     NVIDIA Product Security
+    </a>
+    for more information.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Fixed an issue where
+    NVML/nvidia-smi
+    would report up to 25% utilization of the GPU when idle.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Fixed an issue in shared NVSwitch virtualization mode where SXid errors may not be generated when there is a PCIe reset to
+                                 GPUs in an activated partition.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Fixed an issue where the NVIDIA kernel driver may fail to query the GPU's UUID if the query is attempted right after GPU reset.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Fixed an issue where reseting a single GPU (with active NVLinks) in a multi-GPU NVSwitch system would result in the Fabric
+                                 Manager service to hang after a restart of the service
+   </p>
+  </li>
+ </ul>
+ <a name="known-issues" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#known-issues" name="known-issues" shape="rect">
+   1.4. Known Issues
+  </a>
+ </h3>
+ <h3 class="title sectiontitle">
+  General
+ </h3>
+ <a name="known-issues__ul_ags_sws_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="known-issues__ul_ags_sws_4fb">
+  <li class="li">
+   By default, Fabric Manager runs as a systemd service. If using
+   DAEMONIZE=0
+   in the Fabric Manager configuration file, then 
+                                    the following steps may be required.
+   <ol class="ol">
+    <li class="li">
+     <p class="p">
+      Disable FM service from auto starting. (
+      systemctl disable  nvidia-fabricmanager
+      )
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Once the system is booted, manually start FM process. (
+      /usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg
+      ). 
+                                             Note, since the process is not a daemon, the SSH/Shell prompt will not be returned (use another SSH shell for other activities
+                                             or run FM as a background task).
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li class="li">
+   <p class="p">
+    On A100-PCIE-40GB, when two GPUs are connected using NVlink Bridge, there is a less than 5% performance degradation on tested
+                                    workloads. 
+                                    This issue will be addressed in future driver release.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    When starting the Fabric Manager service, the following error may be reported:
+    detected NVSwitch non-fatal error 10003 on NVSwitch pci
+    . This error is not fatal and no functionality is affected. 
+                                    This issue will be resolved in a future driver release.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On NVSwitch systems with Windows Server 2019 in shared NVSwitch virtualization mode, the host may hang or crash when a GPU
+                                    is disabled in the guest VM. 
+                                    This issue is under investigation.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    In some cases, after a system reboot, the first run of
+    nvidia-smi
+    shows an
+    ERR!
+    for the power status of a GPU in a 
+                                    multi-GPU A100 system. This issue is not observed when running with peristence mode.
+   </p>
+  </li>
+ </ul>
+ <h3 class="title sectiontitle">
+  GPU Performance Counters
+ </h3>
+ <p class="p">
+  The use of developer tools from NVIDIA that access various performance counters 
+                              requires administrator privileges. See this
+  <a class="xref" href="https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters" shape="rect" target="_blank">
+   note
+  </a>
+  for more details.
+                              For example, reading NVLink utilization metrics from
+  nvidia-smi (nvidia-smi nvlink -g 0)
+  would require administrator privileges.
+ </p>
+ <h3 class="title sectiontitle">
+  NoScanout Mode
+ </h3>
+ <p class="p">
+  NoScanout mode is no longer supported on NVIDIA Tesla products. If NoScanout mode was
+                              previously used, then the following line in the âscreenâ section of
+                              /etc/X11/xorg.conf should be removed to ensure that X server starts on Tesla
+                              products:
+ </p>
+ <pre class="pre screen" xml:space="preserve">Option         "UseDisplayDevice" "None"</pre>
+ <p class="p">
+  Tesla products now support one display of up to 4K resolution.
+ </p>
+ <h3 class="title sectiontitle">
+  Unified Memory Support
+ </h3>
+ <p class="p">
+  Some Unified Memory APIs (for example, CPU page faults) are not supported on Windows
+                              in this version of the driver. Review the CUDA Programming Guide on the system
+                              requirements for Unified Memory
+ </p>
+ <p class="p">
+  CUDA and unified memory is not supported when used with Linux power management states
+                              S3/S4.
+ </p>
+ <h3 class="title sectiontitle">
+  IMPU FRU for Volta GPUs
+ </h3>
+ The driver does not support the IPMI FRU
+                           multi-record information structure for NVLink. See the Design Guide for Tesla P100 and
+                           Tesla V100-SXM2 for more information.
+ <h3 class="title sectiontitle">
+  Video Memory Support
+ </h3>
+ <p class="p">
+  For Windows 7 64-bit, this driver recognizes up to the total available video memory
+                              on Tesla cards for Direct3D and OpenGL applications.
+ </p>
+ <p class="p">
+  For Windows 7 32-bit, this driver recognizes only up to 4 GB of video memory on Tesla
+                              cards for DirectX, OpenGL, and CUDA applications.
+ </p>
+ <h3 class="title sectiontitle">
+  Experimental OpenCL Features
+ </h3>
+ <p class="p">
+  Select features in OpenCL 2.0 are available in the driver for evaluation purposes
+                              only.
+ </p>
+ <p class="p">
+  The following are the features as well as a description of known issues with these
+                              features in the driver:
+ </p>
+ <p class="p">
+  Device side enqueue
+ </p>
+ <a name="known-issues__ul_oq4_3zs_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="known-issues__ul_oq4_3zs_4fb">
+  <li class="li">
+   <p class="p">
+    The current implementation is limited to 64-bit platforms only.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    OpenCL 2.0 allows kernels to be enqueued with global_work_size larger than
+                                    the compute capability of the NVIDIA GPU. The current implementation
+                                    supports only combinations of global_work_size and local_work_size that are
+                                    within the compute capability of the NVIDIA GPU. The maximum supported CUDA
+                                    grid and block size of NVIDIA GPUs is available at
+    <a class="xref" href="http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#computecapabilities" shape="rect" target="_blank">
+     http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#computecapabilities
+    </a>
+    .
+                                    For a given grid dimension, the global_work_size can be determined by CUDA
+                                    grid size x CUDA block size.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    For executing kernels (whether from the host or the device), OpenCL 2.0
+                                    supports non-uniform ND-ranges where global_work_size does not need to be
+                                    divisible by the local_work_size. This capability is not yet supported in
+                                    the NVIDIA driver, and therefore not supported for device side kernel
+                                    enqueues.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Shared virtual memory
+ </p>
+ <a name="known-issues__ul_sq4_3zs_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="known-issues__ul_sq4_3zs_4fb">
+  <li class="li">
+   <p class="p">
+    The current implementation of shared virtual memory is limited to 64-bit
+                                    platforms only.
+   </p>
+  </li>
+ </ul>
+ <a name="virtualization" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#virtualization" name="virtualization" shape="rect">
+   2. Virtualization
+  </a>
+ </h2>
+ <p class="p">
+  To make use of GPU passthrough with virtual machines running Windows and Linux, the
+                        hardware platform must support the following features:
+ </p>
+ <a name="virtualization__ul_usn_ztt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="virtualization__ul_usn_ztt_4fb">
+  <li class="li">
+   <p class="p">
+    A CPU with hardware-assisted instruction set virtualization: Intel VT-x or
+                              AMD-V.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Platform support for I/O DMA remapping.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On Intel platforms the DMA remapper technology is called Intel VT-d.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On AMD platforms it is called AMD IOMMU.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Support for these feature varies by processor family, product, and system, and should be
+                        verified at the manufacturer's website.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported Hypervisors
+ </h2>
+ <p class="p">
+  The following hypervisors are supported:
+ </p>
+ <a name="virtualization__table" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="virtualization__table" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1042" rowspan="1" valign="top" width="59.56873315363881%">
+    Hypervisor
+   </th>
+   <th class="entry" colspan="1" id="d54e1045" rowspan="1" valign="top" width="40.43126684636118%">
+    Notes
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1042" rowspan="1" valign="top" width="59.56873315363881%">
+    Citrix XenServer
+   </td>
+   <td class="entry" colspan="1" headers="d54e1045" rowspan="1" valign="top" width="40.43126684636118%">
+    Version 6.0 and later
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1042" rowspan="1" valign="top" width="59.56873315363881%">
+    VMware vSphere (ESX / ESXi)
+   </td>
+   <td class="entry" colspan="1" headers="d54e1045" rowspan="1" valign="top" width="40.43126684636118%">
+    Version 5.1 and later.
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1042" rowspan="1" valign="top" width="59.56873315363881%">
+    Red Hat KVM
+   </td>
+   <td class="entry" colspan="1" headers="d54e1045" rowspan="1" valign="top" width="40.43126684636118%">
+    Red Hat Enterprise Linux 7 with KVM
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1042" rowspan="1" valign="top" width="59.56873315363881%">
+    Microsoft Hyper-V
+   </td>
+   <td class="entry" colspan="1" headers="d54e1045" rowspan="1" valign="top" width="40.43126684636118%">
+    <p class="p">
+     Windows Server 2016 Hyper-V Generation 2
+    </p>
+   </td>
+  </tr>
+ </table>
+ Tesla products now support one display of up to 4K resolution.
+ <h2 class="title sectiontitle">
+  Supported Graphics Cards
+ </h2>
+ <p class="p">
+  The following GPUs are supported for device passthrough:
+ </p>
+ <a name="virtualization__table_jnc_1wt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="virtualization__table_jnc_1wt_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    GPU Family
+   </th>
+   <th class="entry" colspan="1" id="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    Boards Supported
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    NVIDIA Ampere GPU Architecture
+   </td>
+   <td class="entry" colspan="1" headers="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA A100
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    Turing
+   </td>
+   <td class="entry" colspan="1" headers="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA T4
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    Volta
+   </td>
+   <td class="entry" colspan="1" headers="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    NVIDIA V100
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    Pascal
+   </td>
+   <td class="entry" colspan="1" headers="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Tesla: P100, P40, P4
+    </p>
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    Maxwell
+   </td>
+   <td class="entry" colspan="1" headers="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Tesla: M60, M40, M6, M4
+    </p>
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1116" rowspan="1" valign="top" width="43.47826086956522%">
+    Kepler
+   </td>
+   <td class="entry" colspan="1" headers="d54e1119" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Tesla: K520, K80
+    </p>
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#hardware-software-support" name="hardware-software-support" shape="rect">
+   3. Hardware and Software Support
+  </a>
+ </h2>
+ <p class="p">
+  Support for these feature varies by processor family, product, and system, and should be
+                        verified at the manufacturer's website.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems for NVIDIA Data Center GPUs
+ </h2>
+ <p class="p">
+  The Release 450 driver is supported on the following operating systems:
+ </p>
+ <a name="hardware-software-support__ul_qkn_kyt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_qkn_kyt_4fb">
+  <li class="li">
+   <p class="p">
+    Windows x86_64 operating systems:
+   </p>
+   <a name="hardware-software-support__ul_ac1_4yt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_ac1_4yt_4fb">
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® Server 2019
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® Server 2016
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® 10
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    The table below summarizes the supported Linux 64-bit distributions. 
+                                    For a complete list of distributions, kernel versions supported, see the
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#system-requirements" shape="rect" target="_blank">
+     CUDA Linux System Requirements
+    </a>
+    documentation.
+   </p>
+   <a name="hardware-software-support__table_q4y_525_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_q4y_525_4fb" rules="all" summary="">
+    <tr class="row">
+     <th class="entry" colspan="1" id="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      Distribution
+     </th>
+     <th class="entry" colspan="1" id="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      x86_64
+     </th>
+     <th class="entry" colspan="1" id="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      POWER
+     </th>
+     <th class="entry" colspan="1" id="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      Arm64 Server
+     </th>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      OpenSUSE Leap 15.1
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      Red Hat Enterprise Linux / CentOS 8.y (where y &lt;= 2)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      Red Hat Enterprise Linux / CentOS 7.y (where y &lt;= 8)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      SUSE Linux Enterprise Server 15.1
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes (see note)
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      Ubuntu 20.04 LTS
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      Ubuntu 18.04.z LTS (where z &lt;= 4)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+    </tr>
+    <tr class="row">
+     <td class="entry" colspan="1" headers="d54e1269" rowspan="1" valign="top" width="26.829268292682933%">
+      Ubuntu 16.04.z LTS (where z &lt;= 6)
+     </td>
+     <td class="entry" colspan="1" headers="d54e1272" rowspan="1" valign="top" width="24.39024390243903%">
+      Yes
+     </td>
+     <td class="entry" colspan="1" headers="d54e1275" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+     <td class="entry" colspan="1" headers="d54e1278" rowspan="1" valign="top" width="24.39024390243903%">
+      No
+     </td>
+    </tr>
+   </table>
+   <p class="p">
+    Note that SUSE Linux Enterprise Server (SLES) 15.1 is provided 
+                                    as a preview for Arm64 server since there are known issues when 
+                                    running some CUDA applications related to dependencies on
+    glibc 2.27
+    .
+   </p>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems and CPU Configurations for HGX A100
+ </h2>
+ <p class="p">
+  The Release 450 driver is validated with HGX A100 on the following operating systems and CPU configurations:
+ </p>
+ <a name="hardware-software-support__ul_qkn_kyt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_qkn_kyt_4fb">
+  <li class="li">
+   <p class="p">
+    Linux 64-bit distributions:
+   </p>
+   <a name="hardware-software-support__ul_mkm_tyt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_mkm_tyt_4fb">
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux 8.1 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      CentOS Linux 7.7 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 18.04.4 LTS (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      SUSE SLES 15.1 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Windows 64-bit distributions:
+   </p>
+   <a name="hardware-software-support__ul_mkm_tyt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_mkm_tyt_4fb">
+    <li class="li">
+     <p class="p">
+      Windows Server 2019 (in 4/8/16-GPU configurations)
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="hardware-software-support__ul_qkn_kyt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_qkn_kyt_4fb">
+  <li class="li">
+   <p class="p">
+    CPU Configurations:
+   </p>
+   <a name="hardware-software-support__ul_mkm_tyt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_mkm_tyt_4fb">
+    <li class="li">
+     <p class="p">
+      AMD Rome in PCIe Gen4 mode
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Intel Skylake/Cascade Lake (4-socket) in PCIe Gen3 mode
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  Supported Virtualization Configurations
+ </h2>
+ <p class="p">
+  The Release 450 driver is validated with HGX A100 on the following configurations:
+ </p>
+ <a name="hardware-software-support__ul_qkn_kyt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_qkn_kyt_4fb">
+  <li class="li">
+   <p class="p">
+    Passthrough (full visibility of GPUs and NVSwitches to guest VMs):
+   </p>
+   <a name="hardware-software-support__ul_mkm_tyt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_mkm_tyt_4fb">
+    <li class="li">
+     <p class="p">
+      8-GPU configurations with Ubuntu 18.04.4 LTS
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Shared NVSwitch (guest VMs only have visibility of GPUs and full NVLink bandwidth between GPUs in the same guest VM):
+   </p>
+   <a name="hardware-software-support__ul_mkm_tyt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_mkm_tyt_4fb">
+    <li class="li">
+     <p class="p">
+      16-GPU configurations with Ubuntu 18.04.4 LTS
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  API Support
+ </h2>
+ <p class="p">
+  This release supports the following APIs:
+ </p>
+ <a name="hardware-software-support__ul_pfg_czt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_pfg_czt_4fb">
+  <li class="li">
+   <p class="p">
+    NVIDIAÂ® CUDAÂ® 11.0 for NVIDIAÂ® Kepler
+    TM
+    , Maxwell
+    TM
+    ,
+                                 Pascal
+    TM
+    , Volta
+    TM
+    , Turing
+    TM
+    and NVIDIA Ampere architecture GPUs
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    OpenGLÂ® 4.5
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    VulkanÂ® 1.1
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    DirectX 11
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    DirectX 12 (Windows 10)
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Open Computing Language (OpenCL
+    TM
+    software) 1.2
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Note that for using graphics APIs on Windows (i.e. OpenGL, Vulkan, DirectX 11 and DirectX 12) or any WDDM 2.0+ based 
+                           functionality on Tesla GPUs, vGPU is required. See the
+  <a class="xref" href="https://docs.nvidia.com/grid/index.html" shape="rect" target="_blank">
+   vGPU documentation
+  </a>
+  for more information.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported NVIDIA Data Center GPUs
+ </h2>
+ <p class="p">
+  The NVIDIA Data Center GPU driver package is designed for systems that have one or more Tesla products
+                           installed. This release of the driver supports CUDA C/C++ applications and
+                           libraries that rely on the CUDA C Runtime and/or CUDA Driver API.
+ </p>
+ <a name="hardware-software-support__table_q4y_525_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_q4y_525_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1634" rowspan="1" valign="top">
+    NVIDIA Server Platforms
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1640" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1643" rowspan="1" valign="top" width="52.38095238095239%">
+    Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1634 d54e1640" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX A100
+   </td>
+   <td class="entry" colspan="1" headers="d54e1634 d54e1643" rowspan="1" valign="top" width="52.38095238095239%">
+    A100 and NVSwitch
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1634 d54e1640" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX-2
+   </td>
+   <td class="entry" colspan="1" headers="d54e1634 d54e1643" rowspan="1" valign="top" width="52.38095238095239%">
+    V100 and NVSwitch
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_q4y_525_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_q4y_525_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1683" rowspan="1" valign="top">
+    A-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1689" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1692" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1683 d54e1689" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA A100
+   </td>
+   <td class="entry" colspan="1" headers="d54e1683 d54e1692" rowspan="1" valign="top" width="52.38095238095239%">
+    NVIDIA Ampere
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_q4y_525_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_q4y_525_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1723" rowspan="1" valign="top">
+    T-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1729" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1732" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1723 d54e1729" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA T4
+   </td>
+   <td class="entry" colspan="1" headers="d54e1723 d54e1732" rowspan="1" valign="top" width="52.38095238095239%">
+    Turing
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_dfj_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_dfj_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1764" rowspan="1" valign="top">
+    V-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1770" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1773" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1764 d54e1770" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA V100
+   </td>
+   <td class="entry" colspan="1" headers="d54e1764 d54e1773" rowspan="1" valign="top" width="52.38095238095239%">
+    Volta
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_rrp_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_rrp_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1804" rowspan="1" valign="top">
+    Tesla P-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1810" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1813" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1804 d54e1810" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P100
+   </td>
+   <td class="entry" colspan="1" headers="d54e1804 d54e1813" rowspan="1" valign="top" width="52.38095238095239%">
+    Pascal
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1804 d54e1810" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P40
+   </td>
+   <td class="entry" colspan="1" headers="d54e1804 d54e1813" rowspan="1" valign="top" width="52.38095238095239%">
+    Pascal
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1804 d54e1810" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P4
+   </td>
+   <td class="entry" colspan="1" headers="d54e1804 d54e1813" rowspan="1" valign="top" width="52.38095238095239%">
+    Pascal
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_kct_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_kct_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1862" rowspan="1" valign="top">
+    Tesla K-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1868" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1871" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1862 d54e1868" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla K520
+   </td>
+   <td class="entry" colspan="1" headers="d54e1862 d54e1871" rowspan="1" valign="top" width="52.38095238095239%">
+    Kepler
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1862 d54e1868" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla K80
+   </td>
+   <td class="entry" colspan="1" headers="d54e1862 d54e1871" rowspan="1" valign="top" width="52.38095238095239%">
+    Kepler
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_npr_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_npr_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e1911" rowspan="1" valign="top">
+    Tesla M-Class Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e1917" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e1920" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1911 d54e1917" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M60
+   </td>
+   <td class="entry" colspan="1" headers="d54e1911 d54e1920" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1911 d54e1917" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M40 24 GB
+   </td>
+   <td class="entry" colspan="1" headers="d54e1911 d54e1920" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1911 d54e1917" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M40
+   </td>
+   <td class="entry" colspan="1" headers="d54e1911 d54e1920" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1911 d54e1917" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M6
+   </td>
+   <td class="entry" colspan="1" headers="d54e1911 d54e1920" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e1911 d54e1917" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M4
+   </td>
+   <td class="entry" colspan="1" headers="d54e1911 d54e1920" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+ </table>
+ <a name="notices-header" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-51-05/index.html#notices-header" name="notices-header" shape="rect">
+   Notices
+  </a>
+ </h2>
+ <a name="notice" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Notice
+ </h3>
+ <p class="p" id="notice__notice-para-1">
+  <a name="notice__notice-para-1" shape="rect">
+   <!-- -->
+  </a>
+  This document is provided for information
+                                 purposes only and shall not be regarded as a warranty of a
+                                 certain functionality, condition, or quality of a product.
+                                 NVIDIA Corporation (âNVIDIAâ) makes no representations or
+                                 warranties, expressed or implied, as to the accuracy or
+                                 completeness of the information contained in this document
+                                 and assumes no responsibility for any errors contained
+                                 herein. NVIDIA shall have no liability for the consequences
+                                 or use of such information or for any infringement of
+                                 patents or other rights of third parties that may result
+                                 from its use. This document is not a commitment to develop,
+                                 release, or deliver any Material (defined below), code, or
+                                 functionality.
+ </p>
+ <p class="p" id="notice__notice-para-2">
+  <a name="notice__notice-para-2" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA reserves the right to make corrections, modifications,
+                                 enhancements, improvements, and any other changes to this
+                                 document, at any time without notice.
+ </p>
+ <p class="p" id="notice__notice-para-3">
+  <a name="notice__notice-para-3" shape="rect">
+   <!-- -->
+  </a>
+  Customer should obtain the latest relevant information before
+                                 placing orders and should verify that such information is
+                                 current and complete.
+ </p>
+ <p class="p" id="notice__notice-para-4">
+  <a name="notice__notice-para-4" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are sold subject to the NVIDIA standard terms and
+                                 conditions of sale supplied at the time of order
+                                 acknowledgement, unless otherwise agreed in an individual
+                                 sales agreement signed by authorized representatives of
+                                 NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby
+                                 expressly objects to applying any customer general terms and
+                                 conditions with regards to the purchase of the NVIDIA
+                                 product referenced in this document. No contractual
+                                 obligations are formed either directly or indirectly by this
+                                 document.
+ </p>
+ <p class="p" id="notice__notice-para-5">
+  <a name="notice__notice-para-5" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are not designed, authorized, or warranted to be
+                                 suitable for use in medical, military, aircraft, space, or
+                                 life support equipment, nor in applications where failure or
+                                 malfunction of the NVIDIA product can reasonably be expected
+                                 to result in personal injury, death, or property or
+                                 environmental damage. NVIDIA accepts no liability for
+                                 inclusion and/or use of NVIDIA products in such equipment or
+                                 applications and therefore such inclusion and/or use is at
+                                 customerâs own risk.
+ </p>
+ <p class="p" id="notice__notice-para-6">
+  <a name="notice__notice-para-6" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA makes no representation or warranty that products based on
+                                 this document will be suitable for any specified use.
+                                 Testing of all parameters of each product is not necessarily
+                                 performed by NVIDIA. It is customerâs sole responsibility to
+                                 evaluate and determine the applicability of any information
+                                 contained in this document, ensure the product is suitable
+                                 and fit for the application planned by customer, and perform
+                                 the necessary testing for the application in order to avoid
+                                 a default of the application or the product. Weaknesses in
+                                 customerâs product designs may affect the quality and
+                                 reliability of the NVIDIA product and may result in
+                                 additional or different conditions and/or requirements
+                                 beyond those contained in this document. NVIDIA accepts no
+                                 liability related to any default, damage, costs, or problem
+                                 which may be based on or attributable to: (i) the use of the
+                                 NVIDIA product in any manner that is contrary to this
+                                 document or (ii) customer product designs.
+ </p>
+ <p class="p" id="notice__notice-para-7">
+  <a name="notice__notice-para-7" shape="rect">
+   <!-- -->
+  </a>
+  No license, either expressed or implied, is granted under any NVIDIA
+                                 patent right, copyright, or other NVIDIA intellectual
+                                 property right under this document. Information published by
+                                 NVIDIA regarding third-party products or services does not
+                                 constitute a license from NVIDIA to use such products or
+                                 services or a warranty or endorsement thereof. Use of such
+                                 information may require a license from a third party under
+                                 the patents or other intellectual property rights of the
+                                 third party, or a license from NVIDIA under the patents or
+                                 other intellectual property rights of NVIDIA.
+ </p>
+ <p class="p" id="notice__notice-para-8">
+  <a name="notice__notice-para-8" shape="rect">
+   <!-- -->
+  </a>
+  Reproduction of information in this document is permissible only if
+                                 approved in advance by NVIDIA in writing, reproduced without
+                                 alteration and in full compliance with all applicable export
+                                 laws and regulations, and accompanied by all associated
+                                 conditions, limitations, and notices.
+ </p>
+ <p class="p" id="notice__notice-para-9">
+  <a name="notice__notice-para-9" shape="rect">
+   <!-- -->
+  </a>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE
+                                 BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER
+                                 DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING
+                                 PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED,
+                                 IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE
+                                 MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF
+                                 NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+                                 PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN
+                                 NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING
+                                 WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL,
+                                 INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER
+                                 CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING
+                                 OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN
+                                 ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding
+                                 any damages that customer might incur for any reason
+                                 whatsoever, NVIDIAâs aggregate and cumulative liability
+                                 towards customer for the products described herein shall be
+                                 limited in accordance with the Terms of Sale for the
+                                 product.
+ </p>
+ <a name="trademarks" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Trademarks
+ </h3>
+ <p class="p">
+  NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA
+                                 Corporation in the Unites States and other countries. Other company and product
+                                 names may be trademarks of the respective companies with which they are
+                                 associated.
+ </p>
+ <a name="copyright-present" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle">
+  Copyright
+ </h3>
+ <p class="p">
+  Â©
+  <span class="ph">
+   2020
+  </span>
+  NVIDIA Corporation &amp; affiliates. All rights
+                                 reserved.
+ </p>
+ <p>
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+</body>
+</body></html>

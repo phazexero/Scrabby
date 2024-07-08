@@ -1,0 +1,1408 @@
+<html><head><title>Contents â cuSOLVER 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/cusolver/contents.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html">
+    1. Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#using-the-cusolver-api">
+    2. Using the CUSOLVER API
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#using-the-cusolvermg-api">
+    3. Using the CUSOLVERMG API
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#acknowledgements">
+    4. Acknowledgements
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#bibliography">
+    5. Bibliography
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#notices">
+    6. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cusolver/contents.html">
+  cuSOLVER
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Contents
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/CUSOLVER_Library.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Contents
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cusolver/contents.html#contents" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html">
+    1. Introduction
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-dense-lapack">
+      1.1. cuSolverDN: Dense LAPACK
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-sparse-lapack">
+      1.2. cuSolverSP: Sparse LAPACK
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrf-refactorization">
+      1.3. cuSolverRF: Refactorization
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#naming-conventions">
+      1.4. Naming Conventions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#asynchronous-execution">
+      1.5. Asynchronous Execution
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#library-property">
+      1.6. Library Property
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#high-precision-package">
+      1.7. High Precision Package
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#using-the-cusolver-api">
+    2. Using the CUSOLVER API
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#general-description">
+      2.1. General Description
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#thread-safety">
+        2.1.1. Thread Safety
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#scalar-parameters">
+        2.1.2. Scalar Parameters
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#parallelism-with-streams">
+        2.1.3. Parallelism with Streams
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#how-to-link-cusolver-library">
+        2.1.4. How to Link cusolver Library
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#link-third-party-lapack-library">
+        2.1.5. Link Third-party LAPACK Library
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#convention-of-info">
+        2.1.6. Convention of info
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#usage-of-buffersize">
+        2.1.7. Usage of _bufferSize
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-logging">
+        2.1.8. cuSOLVERDn Logging
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#deterministic-results">
+        2.1.9. Deterministic Results
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolver-types-reference">
+      2.2. cuSolver Types Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-types">
+        2.2.1. cuSolverDN Types
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnhandle-t">
+          2.2.1.1. cusolverDnHandle_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cublasfillmode-t">
+          2.2.1.2. cublasFillMode_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cublasoperation-t">
+          2.2.1.3. cublasOperation_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvereigtype-t">
+          2.2.1.4. cusolverEigType_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvereigmode-t">
+          2.2.1.5. cusolverEigMode_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverirsrefinement-t">
+          2.2.1.6. cusolverIRSRefinement_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparams-t">
+          2.2.1.7. cusolverDnIRSParams_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfos-t">
+          2.2.1.8. cusolverDnIRSInfos_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnfunction-t">
+          2.2.1.9. cusolverDnFunction_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolveralgmode-t">
+          2.2.1.10. cusolverAlgMode_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverstatus-t">
+          2.2.1.11. cusolverStatus_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggercallback-t">
+          2.2.1.12. cusolverDnLoggerCallback_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdeterministicmode-t">
+          2.2.1.13. cusolverDeterministicMode_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverstorevmode-t">
+          2.2.1.14. cusolverStorevMode_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdirectmode-t">
+          2.2.1.15. cusolverDirectMode_t
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-types">
+        2.2.2. cuSolverSP Types
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversphandle-t">
+          2.2.2.1. cusolverSpHandle_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusparsematdescr-t">
+          2.2.2.2. cusparseMatDescr_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#id5">
+          2.2.2.3. cusolverStatus_t
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrf-types">
+        2.2.3. cuSolverRF Types
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfhandle-t">
+          2.2.3.1. cusolverRfHandle_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfmatrixformat-t">
+          2.2.3.2. cusolverRfMatrixFormat_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfnumericboostreport-t">
+          2.2.3.3. cusolverRfNumericBoostReport_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfresetvaluesfastmode-t">
+          2.2.3.4. cusolverRfResetValuesFastMode_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrffactorization-t">
+          2.2.3.5. cusolverRfFactorization_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrftriangularsolve-t">
+          2.2.3.6. cusolverRfTriangularSolve_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfunitdiagonal-t">
+          2.2.3.7. cusolverRfUnitDiagonal_t
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#id7">
+          2.2.3.8. cusolverStatus_t
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolver-formats-reference">
+      2.3. cuSolver Formats Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#index-base-format">
+        2.3.1. Index Base Format
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#vector-dense-format">
+        2.3.2. Vector (Dense) Format
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#matrix-dense-format">
+        2.3.3. Matrix (Dense) Format
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#matrix-csr-format">
+        2.3.4. Matrix (CSR) Format
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#matrix-csc-format">
+        2.3.5. Matrix (CSC) Format
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-dense-lapack-function-reference">
+      2.4. cuSolverDN: dense LAPACK Function Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-helper-function-reference">
+        2.4.1. cuSolverDN Helper Function Reference
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdncreate">
+          2.4.1.1. cusolverDnCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdndestroy">
+          2.4.1.2. cusolverDnDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnsetstream">
+          2.4.1.3. cusolverDnSetStream()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdngetstream">
+          2.4.1.4. cusolverDnGetStream()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggersetcallback">
+          2.4.1.5. cusolverDnLoggerSetCallback()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggersetfile">
+          2.4.1.6. cusolverDnLoggerSetFile()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggeropenfile">
+          2.4.1.7. cusolverDnLoggerOpenFile()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggersetlevel">
+          2.4.1.8. cusolverDnLoggerSetLevel()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggersetmask">
+          2.4.1.9. cusolverDnLoggerSetMask()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnloggerforcedisable">
+          2.4.1.10. cusolverDnLoggerForceDisable()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnsetdeterministicmode">
+          2.4.1.11. cusolverDnSetDeterministicMode()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdngetdeterministicmode">
+          2.4.1.12. cusolverDnGetDeterministicMode()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdncreatesyevjinfo">
+          2.4.1.13. cusolverDnCreateSyevjInfo()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdndestroysyevjinfo">
+          2.4.1.14. cusolverDnDestroySyevjInfo()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevjsettolerance">
+          2.4.1.15. cusolverDnXsyevjSetTolerance()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevjsetmaxsweeps">
+          2.4.1.16. cusolverDnXsyevjSetMaxSweeps()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevjsetsorteig">
+          2.4.1.17. cusolverDnXsyevjSetSortEig()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevjgetresidual">
+          2.4.1.18. cusolverDnXsyevjGetResidual()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevjgetsweeps">
+          2.4.1.19. cusolverDnXsyevjGetSweeps()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdncreategesvdjinfo">
+          2.4.1.20. cusolverDnCreateGesvdjInfo()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdndestroygesvdjinfo">
+          2.4.1.21. cusolverDnDestroyGesvdjInfo()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdjsettolerance">
+          2.4.1.22. cusolverDnXgesvdjSetTolerance()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdjsetmaxsweeps">
+          2.4.1.23. cusolverDnXgesvdjSetMaxSweeps()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdjsetsorteig">
+          2.4.1.24. cusolverDnXgesvdjSetSortEig()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdjgetresidual">
+          2.4.1.25. cusolverDnXgesvdjGetResidual()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdjgetsweeps">
+          2.4.1.26. cusolverDnXgesvdjGetSweeps()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamscreate">
+          2.4.1.27. cusolverDnIRSParamsCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamsdestroy">
+          2.4.1.28. cusolverDnIRSParamsDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssetsolverprecisions">
+          2.4.1.29. cusolverDnIRSParamsSetSolverPrecisions()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssetsolvermainprecision">
+          2.4.1.30. cusolverDnIRSParamsSetSolverMainPrecision()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssetsolverlowestprecision">
+          2.4.1.31. cusolverDnIRSParamsSetSolverLowestPrecision()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssetrefinementsolver">
+          2.4.1.32. cusolverDnIRSParamsSetRefinementSolver()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssettol">
+          2.4.1.33. cusolverDnIRSParamsSetTol()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssettolinner">
+          2.4.1.34. cusolverDnIRSParamsSetTolInner()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssetmaxiters">
+          2.4.1.35. cusolverDnIRSParamsSetMaxIters()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamssetmaxitersinner">
+          2.4.1.36. cusolverDnIRSParamsSetMaxItersInner()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamsenablefallback">
+          2.4.1.37. cusolverDnIRSParamsEnableFallback()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamsdisablefallback">
+          2.4.1.38. cusolverDnIRSParamsDisableFallback()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsparamsgetmaxiters">
+          2.4.1.39. cusolverDnIRSParamsGetMaxIters()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfoscreate">
+          2.4.1.40. cusolverDnIRSInfosCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfosdestroy">
+          2.4.1.41. cusolverDnIRSInfosDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfosgetmaxiters">
+          2.4.1.42. cusolverDnIRSInfosGetMaxIters()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfosgetniters">
+          2.4.1.43. cusolverDnIRSInfosGetNiters()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfosgetouterniters">
+          2.4.1.44. cusolverDnIRSInfosGetOuterNiters()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfosrequestresidual">
+          2.4.1.45. cusolverDnIRSInfosRequestResidual()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsinfosgetresidualhistory">
+          2.4.1.46. cusolverDnIRSInfosGetResidualHistory()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdncreateparams">
+          2.4.1.47. cusolverDnCreateParams()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdndestroyparams">
+          2.4.1.48. cusolverDnDestroyParams()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnsetadvoptions">
+          2.4.1.49. cusolverDnSetAdvOptions()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#dense-linear-solver-reference-legacy">
+        2.4.2. Dense Linear Solver Reference (legacy)
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-potrf">
+          2.4.2.1. cusolverDn&lt;t&gt;potrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnpotrf-deprecated">
+          2.4.2.2. cusolverDnPotrf()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-potrs">
+          2.4.2.3. cusolverDn&lt;t&gt;potrs()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnpotrs-deprecated">
+          2.4.2.4. cusolverDnPotrs()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-potri">
+          2.4.2.5. cusolverDn&lt;t&gt;potri()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-getrf">
+          2.4.2.6. cusolverDn&lt;t&gt;getrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdngetrf-deprecated">
+          2.4.2.7. cusolverDnGetrf()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-getrs">
+          2.4.2.8. cusolverDn&lt;t&gt;getrs()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdngetrs-deprecated">
+          2.4.2.9. cusolverDnGetrs()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t1-t2-gesv">
+          2.4.2.10. cusolverDn&lt;t1&gt;&lt;t2&gt;gesv()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsxgesv">
+          2.4.2.11. cusolverDnIRSXgesv()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-geqrf">
+          2.4.2.12. cusolverDn&lt;t&gt;geqrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdngeqrf-deprecated">
+          2.4.2.13. cusolverDnGeqrf()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t1-t2-gels">
+          2.4.2.14. cusolverDn&lt;t1&gt;&lt;t2&gt;gels()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnirsxgels">
+          2.4.2.15. cusolverDnIRSXgels()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-ormqr">
+          2.4.2.16. cusolverDn&lt;t&gt;ormqr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-orgqr">
+          2.4.2.17. cusolverDn&lt;t&gt;orgqr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-sytrf">
+          2.4.2.18. cusolverDn&lt;t&gt;sytrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-potrfbatched">
+          2.4.2.19. cusolverDn&lt;t&gt;potrfBatched()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-potrsbatched">
+          2.4.2.20. cusolverDn&lt;t&gt;potrsBatched()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#dense-eigenvalue-solver-reference-legacy">
+        2.4.3. Dense Eigenvalue Solver Reference (legacy)
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-gebrd">
+          2.4.3.1. cusolverDn&lt;t&gt;gebrd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-orgbr">
+          2.4.3.2. cusolverDn&lt;t&gt;orgbr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-sytrd">
+          2.4.3.3. cusolverDn&lt;t&gt;sytrd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-ormtr">
+          2.4.3.4. cusolverDn&lt;t&gt;ormtr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-orgtr">
+          2.4.3.5. cusolverDn&lt;t&gt;orgtr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-gesvd">
+          2.4.3.6. cusolverDn&lt;t&gt;gesvd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdngesvd-deprecated">
+          2.4.3.7. cusolverDnGesvd()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-gesvdj">
+          2.4.3.8. cusolverDn&lt;t&gt;gesvdj()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-gesvdjbatched">
+          2.4.3.9. cusolverDn&lt;t&gt;gesvdjBatched()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-gesvdastridedbatched">
+          2.4.3.10. cusolverDn&lt;t&gt;gesvdaStridedBatched()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-syevd">
+          2.4.3.11. cusolverDn&lt;t&gt;syevd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnsyevd-deprecated">
+          2.4.3.12. cusolverDnSyevd()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-syevdx">
+          2.4.3.13. cusolverDn&lt;t&gt;syevdx()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnsyevdx-deprecated">
+          2.4.3.14. cusolverDnSyevdx()[DEPRECATED]
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-sygvd">
+          2.4.3.15. cusolverDn&lt;t&gt;sygvd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-sygvdx">
+          2.4.3.16. cusolverDn&lt;t&gt;sygvdx()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-syevj">
+          2.4.3.17. cusolverDn&lt;t&gt;syevj()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-sygvj">
+          2.4.3.18. cusolverDn&lt;t&gt;sygvj()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdn-t-syevjbatched">
+          2.4.3.19. cusolverDn&lt;t&gt;syevjBatched()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#dense-linear-solver-reference-64-bit-api">
+        2.4.4. Dense Linear Solver Reference (64-bit API)
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxpotrf">
+          2.4.4.1. cusolverDnXpotrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxpotrs">
+          2.4.4.2. cusolverDnXpotrs()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgetrf">
+          2.4.4.3. cusolverDnXgetrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgetrs">
+          2.4.4.4. cusolverDnXgetrs()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgeqrf">
+          2.4.4.5. cusolverDnXgeqrf()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsytrs">
+          2.4.4.6. cusolverDnXsytrs()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxtrtri">
+          2.4.4.7. cusolverDnXtrtri()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxlarft">
+          2.4.4.8. cusolverDnXlarft()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#dense-eigenvalue-solver-reference-64-bit-api">
+        2.4.5. Dense Eigenvalue Solver Reference (64-bit API)
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvd">
+          2.4.5.1. cusolverDnXgesvd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdp">
+          2.4.5.2. cusolverDnXgesvdp()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxgesvdr">
+          2.4.5.3. cusolverDnXgesvdr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevd">
+          2.4.5.4. cusolverDnXsyevd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverdnxsyevdx">
+          2.4.5.5. cusolverDnXsyevdx()
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-sparse-lapack-function-reference">
+      2.5. cuSolverSP: sparse LAPACK Function Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#helper-function-reference">
+        2.5.1. Helper Function Reference
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspcreate">
+          2.5.1.1. cusolverSpCreate()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspdestroy">
+          2.5.1.2. cusolverSpDestroy()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspsetstream">
+          2.5.1.3. cusolverSpSetStream()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrissym">
+          2.5.1.4. cusolverSpXcsrissym()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#high-level-function-reference">
+        2.5.2. High Level Function Reference
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-t-csrlsvlu">
+          2.5.2.1. cusolverSp&lt;t&gt;csrlsvlu()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-t-csrlsvqr">
+          2.5.2.2. cusolverSp&lt;t&gt;csrlsvqr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-t-csrlsvchol">
+          2.5.2.3. cusolverSp&lt;t&gt;csrlsvchol()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-t-csrlsqvqr">
+          2.5.2.4. cusolverSp&lt;t&gt;csrlsqvqr()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-t-csreigvsi">
+          2.5.2.5. cusolverSp&lt;t&gt;csreigvsi()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolversp-t-csreigs">
+          2.5.2.6. cusolverSp&lt;t&gt;csreigs()
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#low-level-function-reference">
+        2.5.3. Low Level Function Reference
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrsymrcm">
+          2.5.3.1. cusolverSpXcsrsymrcm()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrsymmdq">
+          2.5.3.2. cusolverSpXcsrsymmdq()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrsymamd">
+          2.5.3.3. cusolverSpXcsrsymamd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrmetisnd">
+          2.5.3.4. cusolverSpXcsrmetisnd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrzfd">
+          2.5.3.5. cusolverSpXcsrzfd()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrperm">
+          2.5.3.6. cusolverSpXcsrperm()
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverspxcsrqrbatched">
+          2.5.3.7. cusolverSpXcsrqrBatched()
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrf-refactorization-reference">
+      2.6. cuSolverRF: Refactorization Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfaccessbundledfactors">
+        2.6.1. cusolverRfAccessBundledFactors()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfanalyze">
+        2.6.2. cusolverRfAnalyze()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsetupdevice">
+        2.6.3. cusolverRfSetupDevice()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsetuphost">
+        2.6.4. cusolverRfSetupHost()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfcreate">
+        2.6.5. cusolverRfCreate()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfextractbundledfactorshost">
+        2.6.6. cusolverRfExtractBundledFactorsHost()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfextractsplitfactorshost">
+        2.6.7. cusolverRfExtractSplitFactorsHost()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfdestroy">
+        2.6.8. cusolverRfDestroy()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfgetmatrixformat">
+        2.6.9. cusolverRfGetMatrixFormat()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfgetnumericproperties">
+        2.6.10. cusolverRfGetNumericProperties()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfgetnumericboostreport">
+        2.6.11. cusolverRfGetNumericBoostReport()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfgetresetvaluesfastmode">
+        2.6.12. cusolverRfGetResetValuesFastMode()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfget-algs">
+        2.6.13. cusolverRfGet_Algs()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfrefactor">
+        2.6.14. cusolverRfRefactor()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfresetvalues">
+        2.6.15. cusolverRfResetValues()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsetmatrixformat">
+        2.6.16. cusolverRfSetMatrixFormat()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsetnumericproperties">
+        2.6.17. cusolverRfSetNumericProperties()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsetresetvaluesfastmode">
+        2.6.18. cusolverRfSetResetValuesFastMode()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsetalgs">
+        2.6.19. cusolverRfSetAlgs()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfsolve">
+        2.6.20. cusolverRfSolve()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfbatchsetuphost">
+        2.6.21. cusolverRfBatchSetupHost()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfbatchanalyze">
+        2.6.22. cusolverRfBatchAnalyze()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfbatchresetvalues">
+        2.6.23. cusolverRfBatchResetValues()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfbatchrefactor">
+        2.6.24. cusolverRfBatchRefactor()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfbatchsolve">
+        2.6.25. cusolverRfBatchSolve()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolverrfbatchzeropivot">
+        2.6.26. cusolverRfBatchZeroPivot()
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#using-the-cusolvermg-api">
+    3. Using the CUSOLVERMG API
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#id17">
+      3.1. General Description
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#id18">
+        3.1.1. Thread Safety
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#determinism">
+        3.1.2. Determinism
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#tile-strategy">
+        3.1.3. Tile Strategy
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#global-matrix-versus-local-matrix">
+        3.1.4. Global Matrix Versus Local Matrix
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#id19">
+        3.1.5. Usage of _bufferSize
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#synchronization">
+        3.1.6. Synchronization
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#context-switch">
+        3.1.7. Context Switch
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#nvlink">
+        3.1.8. NVLINK
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermg-types-reference">
+      3.2. cuSolverMG Types Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermg-types">
+        3.2.1. cuSolverMG Types
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermghandle-t">
+        3.2.2. cusolverMgHandle_t
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermggridmapping-t">
+        3.2.3. cusolverMgGridMapping_t
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cudalibmggrid-t">
+        3.2.4. cudaLibMgGrid_t
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cudalibmgmatrixdesc-t">
+        3.2.5. cudaLibMgMatrixDesc_t
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#id20">
+      3.3. Helper Function Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgcreate">
+        3.3.1. cusolverMgCreate()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgdestroy">
+        3.3.2. cusolverMgDestroy()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgdeviceselect">
+        3.3.3. cusolverMgDeviceSelect()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgcreatedevicegrid">
+        3.3.4. cusolverMgCreateDeviceGrid()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgdestroygrid">
+        3.3.5. cusolverMgDestroyGrid()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgcreatematdescr">
+        3.3.6. cusolverMgCreateMatDescr()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgdestroymatrixdesc">
+        3.3.7. cusolverMgDestroyMatrixDesc()
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#dense-linear-solver-reference">
+      3.4. Dense Linear Solver Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgpotrf">
+        3.4.1. cusolverMgPotrf()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgpotrs">
+        3.4.2. cusolverMgPotrs()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgpotri">
+        3.4.3. cusolverMgPotri()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermggetrf">
+        3.4.4. cusolverMgGetrf()
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermggetrs">
+        3.4.5. cusolverMgGetrs()
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#dense-eigenvalue-solver-reference">
+      3.5. Dense Eigenvalue Solver Reference
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#cusolvermgsyevd">
+        3.5.1. cusolverMgSyevd()
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#acknowledgements">
+    4. Acknowledgements
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#bibliography">
+    5. Bibliography
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#notices">
+    6. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#notice">
+      6.1. Notice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#opencl">
+      6.2. OpenCL
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusolver/index.html#trademarks">
+      6.3. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2014-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jun 20, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

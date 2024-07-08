@@ -1,0 +1,2707 @@
+<html><head><title>CUDA Runtime API :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/index.html" title="CUDA Runtime API">
+  CUDA Runtime API
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/driver-vs-runtime-api.html#driver-vs-runtime-api">
+    1.Â Difference between the driver and runtime APIs
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/api-sync-behavior.html#api-sync-behavior">
+    2.Â API synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/stream-sync-behavior.html#stream-sync-behavior">
+    3.Â Stream synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/graphs-thread-safety.html#graphs-thread-safety">
+    4.Â Graph object thread safety
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/version-mixing-rules.html#version-mixing-rules">
+    5.Â Rules for version mixing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/modules.html#modules">
+    6.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE">
+      6.1.Â Device Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE__DEPRECATED.html#group__CUDART__DEVICE__DEPRECATED">
+      6.2.Â Device Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__THREAD__DEPRECATED.html#group__CUDART__THREAD__DEPRECATED">
+      6.3.Â Thread Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__ERROR.html#group__CUDART__ERROR">
+      6.4.Â Error Handling
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__STREAM.html#group__CUDART__STREAM">
+      6.5.Â Stream Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT">
+      6.6.Â Event Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXTRES__INTEROP.html#group__CUDART__EXTRES__INTEROP">
+      6.7.Â External Resource Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION.html#group__CUDART__EXECUTION">
+      6.8.Â Execution Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION__DEPRECATED.html#group__CUDART__EXECUTION__DEPRECATED">
+      6.9.Â Execution Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OCCUPANCY.html#group__CUDART__OCCUPANCY">
+      6.10.Â Occupancy
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html#group__CUDART__MEMORY">
+      6.11.Â Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__DEPRECATED.html#group__CUDART__MEMORY__DEPRECATED">
+      6.12.Â Memory Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__POOLS.html#group__CUDART__MEMORY__POOLS">
+      6.13.Â Stream Ordered Memory Allocator
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__UNIFIED.html#group__CUDART__UNIFIED">
+      6.14.Â Unified Addressing
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PEER.html#group__CUDART__PEER">
+      6.15.Â Peer Device Memory Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL.html#group__CUDART__OPENGL">
+      6.16.Â OpenGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL__DEPRECATED.html#group__CUDART__OPENGL__DEPRECATED">
+      6.17.Â OpenGL Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html#group__CUDART__D3D9">
+      6.18.Â Direct3D 9 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED">
+      6.19.Â Direct3D 9 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10.html#group__CUDART__D3D10">
+      6.20.Â Direct3D 10 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10__DEPRECATED.html#group__CUDART__D3D10__DEPRECATED">
+      6.21.Â Direct3D 10 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11.html#group__CUDART__D3D11">
+      6.22.Â Direct3D 11 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11__DEPRECATED.html#group__CUDART__D3D11__DEPRECATED">
+      6.23.Â Direct3D 11 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__VDPAU.html#group__CUDART__VDPAU">
+      6.24.Â VDPAU Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL">
+      6.25.Â EGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP">
+      6.26.Â Graphics Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TEXTURE__OBJECT.html#group__CUDART__TEXTURE__OBJECT">
+      6.27.Â Texture Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__SURFACE__OBJECT.html#group__CUDART__SURFACE__OBJECT">
+      6.28.Â Surface Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART____VERSION.html#group__CUDART____VERSION">
+      6.29.Â Version Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__GRAPH.html#group__CUDART__GRAPH">
+      6.30.Â Graph Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER__ENTRY__POINT.html#group__CUDART__DRIVER__ENTRY__POINT">
+      6.31.Â Driver Entry Point Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL">
+      6.32.Â C++ API Routines
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER">
+      6.33.Â Interactions with the CUDA Driver API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PROFILER.html#group__CUDART__PROFILER">
+      6.34.Â Profiler Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES">
+      6.35.Â Data types used by CUDA Runtime
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/annotated.html#annotated">
+    7.Â Data Structures
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/class____cudaOccupancyB2DHelper.html#class____cudaOccupancyB2DHelper">
+      7.1.Â __cudaOccupancyB2DHelper
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAccessPolicyWindow.html#structcudaAccessPolicyWindow">
+      7.2.Â cudaAccessPolicyWindow
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArrayMemoryRequirements.html#structcudaArrayMemoryRequirements">
+      7.3.Â cudaArrayMemoryRequirements
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArraySparseProperties.html#structcudaArraySparseProperties">
+      7.4.Â cudaArraySparseProperties
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAsyncNotificationInfo__t.html#structcudaAsyncNotificationInfo__t">
+      7.5.Â cudaAsyncNotificationInfo_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChannelFormatDesc.html#structcudaChannelFormatDesc">
+      7.6.Â cudaChannelFormatDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChildGraphNodeParams.html#structcudaChildGraphNodeParams">
+      7.7.Â cudaChildGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaConditionalNodeParams.html#structcudaConditionalNodeParams">
+      7.8.Â cudaConditionalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp">
+      7.9.Â cudaDeviceProp
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame">
+      7.10.Â cudaEglFrame
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc">
+      7.11.Â cudaEglPlaneDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventRecordNodeParams.html#structcudaEventRecordNodeParams">
+      7.12.Â cudaEventRecordNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventWaitNodeParams.html#structcudaEventWaitNodeParams">
+      7.13.Â cudaEventWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExtent.html#structcudaExtent">
+      7.14.Â cudaExtent
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryBufferDesc.html#structcudaExternalMemoryBufferDesc">
+      7.15.Â cudaExternalMemoryBufferDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryHandleDesc.html#structcudaExternalMemoryHandleDesc">
+      7.16.Â cudaExternalMemoryHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryMipmappedArrayDesc.html#structcudaExternalMemoryMipmappedArrayDesc">
+      7.17.Â cudaExternalMemoryMipmappedArrayDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreHandleDesc.html#structcudaExternalSemaphoreHandleDesc">
+      7.18.Â cudaExternalSemaphoreHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParams.html#structcudaExternalSemaphoreSignalNodeParams">
+      7.19.Â cudaExternalSemaphoreSignalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParamsV2.html#structcudaExternalSemaphoreSignalNodeParamsV2">
+      7.20.Â cudaExternalSemaphoreSignalNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams.html#structcudaExternalSemaphoreSignalParams">
+      7.21.Â cudaExternalSemaphoreSignalParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams__v1.html#structcudaExternalSemaphoreSignalParams__v1">
+      7.22.Â cudaExternalSemaphoreSignalParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParams.html#structcudaExternalSemaphoreWaitNodeParams">
+      7.23.Â cudaExternalSemaphoreWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParamsV2.html#structcudaExternalSemaphoreWaitNodeParamsV2">
+      7.24.Â cudaExternalSemaphoreWaitNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams.html#structcudaExternalSemaphoreWaitParams">
+      7.25.Â cudaExternalSemaphoreWaitParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams__v1.html#structcudaExternalSemaphoreWaitParams__v1">
+      7.26.Â cudaExternalSemaphoreWaitParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaFuncAttributes.html#structcudaFuncAttributes">
+      7.27.Â cudaFuncAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphEdgeData.html#structcudaGraphEdgeData">
+      7.28.Â cudaGraphEdgeData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphExecUpdateResultInfo.html#structcudaGraphExecUpdateResultInfo">
+      7.29.Â cudaGraphExecUpdateResultInfo
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphInstantiateParams.html#structcudaGraphInstantiateParams">
+      7.30.Â cudaGraphInstantiateParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphKernelNodeUpdate.html#structcudaGraphKernelNodeUpdate">
+      7.31.Â cudaGraphKernelNodeUpdate
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphNodeParams.html#structcudaGraphNodeParams">
+      7.32.Â cudaGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParams.html#structcudaHostNodeParams">
+      7.33.Â cudaHostNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParamsV2.html#structcudaHostNodeParamsV2">
+      7.34.Â cudaHostNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcEventHandle__t.html#structcudaIpcEventHandle__t">
+      7.35.Â cudaIpcEventHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcMemHandle__t.html#structcudaIpcMemHandle__t">
+      7.36.Â cudaIpcMemHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParams.html#structcudaKernelNodeParams">
+      7.37.Â cudaKernelNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParamsV2.html#structcudaKernelNodeParamsV2">
+      7.38.Â cudaKernelNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchAttribute.html#structcudaLaunchAttribute">
+      7.39.Â cudaLaunchAttribute
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/unioncudaLaunchAttributeValue.html#unioncudaLaunchAttributeValue">
+      7.40.Â cudaLaunchAttributeValue
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchConfig__t.html#structcudaLaunchConfig__t">
+      7.41.Â cudaLaunchConfig_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchMemSyncDomainMap.html#structcudaLaunchMemSyncDomainMap">
+      7.42.Â cudaLaunchMemSyncDomainMap
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchParams.html#structcudaLaunchParams">
+      7.43.Â cudaLaunchParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAccessDesc.html#structcudaMemAccessDesc">
+      7.44.Â cudaMemAccessDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParams.html#structcudaMemAllocNodeParams">
+      7.45.Â cudaMemAllocNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParamsV2.html#structcudaMemAllocNodeParamsV2">
+      7.46.Â cudaMemAllocNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DParms.html#structcudaMemcpy3DParms">
+      7.47.Â cudaMemcpy3DParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DPeerParms.html#structcudaMemcpy3DPeerParms">
+      7.48.Â cudaMemcpy3DPeerParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpyNodeParams.html#structcudaMemcpyNodeParams">
+      7.49.Â cudaMemcpyNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemFreeNodeParams.html#structcudaMemFreeNodeParams">
+      7.50.Â cudaMemFreeNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemLocation.html#structcudaMemLocation">
+      7.51.Â cudaMemLocation
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolProps.html#structcudaMemPoolProps">
+      7.52.Â cudaMemPoolProps
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolPtrExportData.html#structcudaMemPoolPtrExportData">
+      7.53.Â cudaMemPoolPtrExportData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParams.html#structcudaMemsetParams">
+      7.54.Â cudaMemsetParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParamsV2.html#structcudaMemsetParamsV2">
+      7.55.Â cudaMemsetParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr">
+      7.56.Â cudaPitchedPtr
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPointerAttributes.html#structcudaPointerAttributes">
+      7.57.Â cudaPointerAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPos.html#structcudaPos">
+      7.58.Â cudaPos
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceDesc.html#structcudaResourceDesc">
+      7.59.Â cudaResourceDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceViewDesc.html#structcudaResourceViewDesc">
+      7.60.Â cudaResourceViewDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaTextureDesc.html#structcudaTextureDesc">
+      7.61.Â cudaTextureDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structCUuuid__st.html#structCUuuid__st">
+      7.62.Â CUuuid_st
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/functions.html#functions">
+    8.Â Data Fields
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated">
+    9.Â Deprecated List
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html" shape="rect">
+  &lt; Previous
+ </a>
+ |
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10.html" shape="rect">
+  Next &gt;
+ </a>
+ CUDA Runtime API
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CUDA_Runtime_API.pdf">
+  PDF
+ </a>
+ )
+                  -
+                   
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20CUDA%20Runtime%20API">
+  Send Feedback
+ </a>
+ <a name="group__CUDART__D3D9__DEPRECATED" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="topictitle2 cppModule">
+  6.19.Â Direct3D 9 Interoperability [DEPRECATED]
+ </h2>
+ <p>
+  This section describes deprecated Direct3D 9 interoperability functions.
+ </p>
+ <h3 class="fake_sectiontitle member_header">
+  Enumerations
+ </h3>
+ <span class="member_type">
+  enumÂ
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g77fb48ace0d2da465b6f4bcc00ef750b" shape="rect">
+   cudaD3D9MapFlags
+  </a>
+ </span>
+ <span class="member_type">
+  enumÂ
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1gcdebbc14eb83032da31bd75503cddfea" shape="rect">
+   cudaD3D9RegisterFlags
+  </a>
+ </span>
+ <h3 class="fake_sectiontitle member_header">
+  Functions
+ </h3>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g37e568318e2f937fe06020a675497b1e" shape="rect">
+   cudaD3D9MapResources
+  </a>
+  (  int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   count
+  </span>
+  , IDirect3DResource9**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   ppResources
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Map Direct3D resources for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g81b436ab21219ad7192f2d1d1331a365" shape="rect">
+   cudaD3D9RegisterResource
+  </a>
+  (  IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Registers a Direct3D resource for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1gbf66161e2462ff7ef17cbccef3d6b098" shape="rect">
+   cudaD3D9ResourceGetMappedArray
+  </a>
+  (  cudaArray**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   ppArray
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get an array through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g38876ed7e596f58ee0ec550dd168b4e8" shape="rect">
+   cudaD3D9ResourceGetMappedPitch
+  </a>
+  (  size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pPitch
+  </span>
+  , size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pPitchSlice
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get the pitch of a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect">
+   cudaD3D9ResourceGetMappedPointer
+  </a>
+  (  void**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pPointer
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g80531533ff24e1c3a5201edf2d05f89f" shape="rect">
+   cudaD3D9ResourceGetMappedSize
+  </a>
+  (  size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pSize
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get the size of a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g2963f7235b75594ca2947ff84d7000c1" shape="rect">
+   cudaD3D9ResourceGetSurfaceDimensions
+  </a>
+  (  size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pWidth
+  </span>
+  , size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pHeight
+  </span>
+  , size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pDepth
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get the dimensions of a registered Direct3D surface.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1ge9a5aef299347c403cd8f96855d61fb4" shape="rect">
+   cudaD3D9ResourceSetMapFlags
+  </a>
+  (  IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Set usage flags for mapping a Direct3D resource.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g4597fa217d5e7e3f735f233882292fe7" shape="rect">
+   cudaD3D9UnmapResources
+  </a>
+  (  int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   count
+  </span>
+  , IDirect3DResource9**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   ppResources
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Unmap Direct3D resources for access by CUDA.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g81dd5ad8f5ec63e31a3d32f67dc1ca4c" shape="rect">
+   cudaD3D9UnregisterResource
+  </a>
+  (  IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Unregisters a Direct3D resource for access by CUDA.
+ </span>
+ <h3 class="sectiontitle">
+  Enumerations
+ </h3>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g77fb48ace0d2da465b6f4bcc00ef750b" name="group__CUDART__D3D9__DEPRECATED_1g77fb48ace0d2da465b6f4bcc00ef750b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  enum cudaD3D9MapFlags
+ </span>
+ <p>
+  CUDA D3D9 Map Flags
+ </p>
+ <h6 class="enumerator_header">
+  Values
+ </h6>
+ <span class="enum-member-name-def">
+  cudaD3D9MapFlagsNone =
+  <span class="ph ph apiData">
+   0
+  </span>
+ </span>
+ Default; Assume resource can be read/written
+ <span class="enum-member-name-def">
+  cudaD3D9MapFlagsReadOnly =
+  <span class="ph ph apiData">
+   1
+  </span>
+ </span>
+ CUDA kernels will not write to this resource
+ <span class="enum-member-name-def">
+  cudaD3D9MapFlagsWriteDiscard =
+  <span class="ph ph apiData">
+   2
+  </span>
+ </span>
+ CUDA kernels will only write to and will not read from this resource
+ <a id="group__CUDART__D3D9__DEPRECATED_1gcdebbc14eb83032da31bd75503cddfea" name="group__CUDART__D3D9__DEPRECATED_1gcdebbc14eb83032da31bd75503cddfea" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  enum cudaD3D9RegisterFlags
+ </span>
+ <p>
+  CUDA D3D9 Register Flags
+ </p>
+ <h6 class="enumerator_header">
+  Values
+ </h6>
+ <span class="enum-member-name-def">
+  cudaD3D9RegisterFlagsNone =
+  <span class="ph ph apiData">
+   0
+  </span>
+ </span>
+ Default; Resource can be accessed througa void*
+ <span class="enum-member-name-def">
+  cudaD3D9RegisterFlagsArray =
+  <span class="ph ph apiData">
+   1
+  </span>
+ </span>
+ Resource can be accessed through a CUarray*
+ <h3 class="sectiontitle">
+  Functions
+ </h3>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g37e568318e2f937fe06020a675497b1e" name="group__CUDART__D3D9__DEPRECATED_1g37e568318e2f937fe06020a675497b1e" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9MapResources (  int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   count
+  </span>
+  , IDirect3DResource9**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   ppResources
+  </span>
+  )
+ </span>
+ Map Direct3D resources for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  count
+ </span>
+ - Number of resources to map for CUDA
+ <span class="keyword keyword apiItemName">
+  ppResources
+ </span>
+ - Resources to map for CUDA
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000020" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Maps the
+  count
+  Direct3D resources in
+  ppResources
+  for access by CUDA.
+ </p>
+ <p class="p">
+  The resources in
+  ppResources
+  may be accessed in CUDA kernels until they are unmapped. Direct3D should not access any resources while they are mapped by
+                                 CUDA. If an application does so, the results are undefined.
+ </p>
+ <p class="p">
+  This function provides the synchronization guarantee that any Direct3D calls issued before
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g37e568318e2f937fe06020a675497b1e" shape="rect" title="Map Direct3D resources for access by CUDA.">
+   cudaD3D9MapResources()
+  </a>
+  will complete before any CUDA kernels issued after
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g37e568318e2f937fe06020a675497b1e" shape="rect" title="Map Direct3D resources for access by CUDA.">
+   cudaD3D9MapResources()
+  </a>
+  begin.
+ </p>
+ <p class="p">
+  If any of
+  ppResources
+  have not been registered for use with CUDA or if
+  ppResources
+  contains any duplicate entries then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If any of
+  ppResources
+  are presently mapped for access by CUDA then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1gad8fbe74d02adefb8e7efb4971ee6322" shape="rect" title="Map graphics resources for access by CUDA.">
+   cudaGraphicsMapResources
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g81b436ab21219ad7192f2d1d1331a365" name="group__CUDART__D3D9__DEPRECATED_1g81b436ab21219ad7192f2d1d1331a365" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9RegisterResource (  IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ Registers a Direct3D resource for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Resource to register
+ <span class="keyword keyword apiItemName">
+  flags
+ </span>
+ - Parameters for resource registration
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000018" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Registers the Direct3D resource
+  pResource
+  for access by CUDA.
+ </p>
+ <p class="p">
+  If this call is successful, then the application will be able to map and unmap this resource until it is unregistered through
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g81dd5ad8f5ec63e31a3d32f67dc1ca4c" shape="rect" title="Unregisters a Direct3D resource for access by CUDA.">
+   cudaD3D9UnregisterResource()
+  </a>
+  . Also on success, this call will increase the internal reference count on
+  pResource
+  . This reference count will be decremented when this resource is unregistered through
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g81dd5ad8f5ec63e31a3d32f67dc1ca4c" shape="rect" title="Unregisters a Direct3D resource for access by CUDA.">
+   cudaD3D9UnregisterResource()
+  </a>
+  .
+ </p>
+ <p class="p">
+  This call potentially has a high-overhead and should not be called every frame in interactive applications.
+ </p>
+ <p class="p">
+  The type of
+  pResource
+  must be one of the following.
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    IDirect3DVertexBuffer9: No notes.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    IDirect3DIndexBuffer9: No notes.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    IDirect3DSurface9: Only stand-alone objects of type IDirect3DSurface9 may be explicitly shared. In particular, individual
+                                          mipmap levels and faces of cube maps may not be registered directly. To access individual surfaces associated with a texture,
+                                          one must register the base texture object.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    IDirect3DBaseTexture9: When a texture is registered, all surfaces associated with all mipmap levels of all faces of the texture
+                                          will be accessible to CUDA.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  The
+  flags
+  argument specifies the mechanism through which CUDA will access the Direct3D resource. The following value is allowed:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1ggcdebbc14eb83032da31bd75503cddfea10cd58f205c593368626b4ec54a54744" shape="rect">
+     cudaD3D9RegisterFlagsNone
+    </a>
+    : Specifies that CUDA will access this resource through a
+    void*
+    . The pointer, size, and pitch for each subresource of this resource may be queried through
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect" title="Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+     cudaD3D9ResourceGetMappedPointer()
+    </a>
+    ,
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g80531533ff24e1c3a5201edf2d05f89f" shape="rect" title="Get the size of a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+     cudaD3D9ResourceGetMappedSize()
+    </a>
+    , and
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g38876ed7e596f58ee0ec550dd168b4e8" shape="rect" title="Get the pitch of a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+     cudaD3D9ResourceGetMappedPitch()
+    </a>
+    respectively. This option is valid for all resource types.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Not all Direct3D resources of the above types may be used for interoperability with CUDA. The following are some limitations:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    The primary rendertarget may not be registered with CUDA.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Resources allocated as shared may not be registered with CUDA.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Any resources allocated in D3DPOOL_SYSTEMMEM or D3DPOOL_MANAGED may not be registered with CUDA.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Textures which are not of a format which is 1, 2, or 4 channels of 8, 16, or 32-bit integer or floating-point data cannot
+                                          be shared.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Surfaces of depth or stencil formats cannot be shared.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  If Direct3D interoperability is not initialized on this context, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038938c6e8b96ecde62e3ab5137156f739a" shape="rect">
+   cudaErrorInvalidDevice
+  </a>
+  is returned. If
+  pResource
+  is of incorrect type (e.g, is a non-stand-alone IDirect3DSurface9) or is already registered, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  cannot be registered then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html#group__CUDART__D3D9_1gab5efa8a8882a6e0ee99717a434730b0" shape="rect" title="Register a Direct3D 9 resource for access by CUDA.">
+   cudaGraphicsD3D9RegisterResource
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1gbf66161e2462ff7ef17cbccef3d6b098" name="group__CUDART__D3D9__DEPRECATED_1gbf66161e2462ff7ef17cbccef3d6b098" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9ResourceGetMappedArray (  cudaArray**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   ppArray
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ Get an array through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  ppArray
+ </span>
+ - Returned array corresponding to subresource
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Mapped resource to access
+ <span class="keyword keyword apiItemName">
+  face
+ </span>
+ - Face of resource to access
+ <span class="keyword keyword apiItemName">
+  level
+ </span>
+ - Level of resource to access
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000024" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  *pArray
+  an array through which the subresource of the mapped Direct3D resource
+  pResource
+  , which corresponds to
+  face
+  and
+  level
+  may be accessed. The value set in
+  pArray
+  may change every time that
+  pResource
+  is mapped.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is not registered then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  was not registered with usage flags
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1ggcdebbc14eb83032da31bd75503cddfeaa4c940a582866d5cf40ede9dbfa1f5e5" shape="rect">
+   cudaD3D9RegisterFlagsArray
+  </a>
+  , then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  is not mapped, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <p class="p">
+  For usage requirements of
+  face
+  and
+  level
+  parameters, see
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect" title="Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+   cudaD3D9ResourceGetMappedPointer()
+  </a>
+  .
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1g0dd6b5f024dfdcff5c28a08ef9958031" shape="rect" title="Get an array through which to access a subresource of a mapped graphics resource.">
+   cudaGraphicsSubResourceGetMappedArray
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g38876ed7e596f58ee0ec550dd168b4e8" name="group__CUDART__D3D9__DEPRECATED_1g38876ed7e596f58ee0ec550dd168b4e8" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9ResourceGetMappedPitch (  size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pPitch
+  </span>
+  , size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pPitchSlice
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ Get the pitch of a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pPitch
+ </span>
+ - Returned pitch of subresource
+ <span class="keyword keyword apiItemName">
+  pPitchSlice
+ </span>
+ - Returned Z-slice pitch of subresource
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Mapped resource to access
+ <span class="keyword keyword apiItemName">
+  face
+ </span>
+ - Face of resource to access
+ <span class="keyword keyword apiItemName">
+  level
+ </span>
+ - Level of resource to access
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000027" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  *pPitch
+  and
+  *pPitchSlice
+  the pitch and Z-slice pitch of the subresource of the mapped Direct3D resource
+  pResource
+  , which corresponds to
+  face
+  and
+  level
+  . The values set in
+  pPitch
+  and
+  pPitchSlice
+  may change every time that
+  pResource
+  is mapped.
+ </p>
+ <p class="p">
+  The pitch and Z-slice pitch values may be used to compute the location of a sample on a surface as follows.
+ </p>
+ <p class="p">
+  For a 2D surface, the byte offset of the sample at position
+  x
+  ,
+  y
+  from the base pointer of the surface is:
+ </p>
+ <p class="p">
+  y
+  *
+  pitch
+  + (
+  bytes per pixel
+  ) *
+  x
+ </p>
+ <p class="p">
+  For a 3D surface, the byte offset of the sample at position
+  x
+  ,
+  y
+  ,
+  z
+  from the base pointer of the surface is:
+ </p>
+ <p class="p">
+  z*
+  slicePitch
+  +
+  y
+  *
+  pitch
+  + (
+  bytes per pixel
+  ) *
+  x
+ </p>
+ <p class="p">
+  Both parameters
+  pPitch
+  and
+  pPitchSlice
+  are optional and may be set to NULL.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is not of type IDirect3DBaseTexture9 or one of its sub-types or if
+  pResource
+  has not been registered for use with CUDA, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  was not registered with usage flags
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1ggcdebbc14eb83032da31bd75503cddfea10cd58f205c593368626b4ec54a54744" shape="rect">
+   cudaD3D9RegisterFlagsNone
+  </a>
+  , then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  is not mapped for access by CUDA then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <p class="p">
+  For usage requirements of
+  face
+  and
+  level
+  parameters, see
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect" title="Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+   cudaD3D9ResourceGetMappedPointer()
+  </a>
+  .
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1ga36881081c8deb4df25c256158e1ac99" shape="rect" title="Get an device pointer through which to access a mapped graphics resource.">
+   cudaGraphicsResourceGetMappedPointer
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" name="group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9ResourceGetMappedPointer (  void**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pPointer
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pPointer
+ </span>
+ - Returned pointer corresponding to subresource
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Mapped resource to access
+ <span class="keyword keyword apiItemName">
+  face
+ </span>
+ - Face of resource to access
+ <span class="keyword keyword apiItemName">
+  level
+ </span>
+ - Level of resource to access
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000025" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  *pPointer
+  the base pointer of the subresource of the mapped Direct3D resource
+  pResource
+  , which corresponds to
+  face
+  and
+  level
+  . The value set in
+  pPointer
+  may change every time that
+  pResource
+  is mapped.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is not registered, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  was not registered with usage flags
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1ggcdebbc14eb83032da31bd75503cddfea10cd58f205c593368626b4ec54a54744" shape="rect">
+   cudaD3D9RegisterFlagsNone
+  </a>
+  , then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  is not mapped, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is of type IDirect3DCubeTexture9, then
+  face
+  must one of the values enumerated by type D3DCUBEMAP_FACES. For all other types,
+  face
+  must be 0. If
+  face
+  is invalid, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  is returned.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is of type IDirect3DBaseTexture9, then
+  level
+  must correspond to a valid mipmap level. Only mipmap level 0 is supported for now. For all other types
+  level
+  must be 0. If
+  level
+  is invalid, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  is returned.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1ga36881081c8deb4df25c256158e1ac99" shape="rect" title="Get an device pointer through which to access a mapped graphics resource.">
+   cudaGraphicsResourceGetMappedPointer
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g80531533ff24e1c3a5201edf2d05f89f" name="group__CUDART__D3D9__DEPRECATED_1g80531533ff24e1c3a5201edf2d05f89f" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9ResourceGetMappedSize (  size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pSize
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ Get the size of a subresource of a Direct3D resource which has been mapped for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pSize
+ </span>
+ - Returned size of subresource
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Mapped resource to access
+ <span class="keyword keyword apiItemName">
+  face
+ </span>
+ - Face of resource to access
+ <span class="keyword keyword apiItemName">
+  level
+ </span>
+ - Level of resource to access
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000026" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  *pSize
+  the size of the subresource of the mapped Direct3D resource
+  pResource
+  , which corresponds to
+  face
+  and
+  level
+  . The value set in
+  pSize
+  may change every time that
+  pResource
+  is mapped.
+ </p>
+ <p class="p">
+  If
+  pResource
+  has not been registered for use with CUDA then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  was not registered with usage flags
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1ggcdebbc14eb83032da31bd75503cddfea10cd58f205c593368626b4ec54a54744" shape="rect">
+   cudaD3D9RegisterFlagsNone
+  </a>
+  , then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  is not mapped for access by CUDA then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <p class="p">
+  For usage requirements of
+  face
+  and
+  level
+  parameters, see
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect" title="Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+   cudaD3D9ResourceGetMappedPointer()
+  </a>
+  .
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1ga36881081c8deb4df25c256158e1ac99" shape="rect" title="Get an device pointer through which to access a mapped graphics resource.">
+   cudaGraphicsResourceGetMappedPointer
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g2963f7235b75594ca2947ff84d7000c1" name="group__CUDART__D3D9__DEPRECATED_1g2963f7235b75594ca2947ff84d7000c1" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9ResourceGetSurfaceDimensions (  size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pWidth
+  </span>
+  , size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pHeight
+  </span>
+  , size_t*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pDepth
+  </span>
+  , IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   face
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   level
+  </span>
+  )
+ </span>
+ Get the dimensions of a registered Direct3D surface.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pWidth
+ </span>
+ - Returned width of surface
+ <span class="keyword keyword apiItemName">
+  pHeight
+ </span>
+ - Returned height of surface
+ <span class="keyword keyword apiItemName">
+  pDepth
+ </span>
+ - Returned depth of surface
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Registered resource to access
+ <span class="keyword keyword apiItemName">
+  face
+ </span>
+ - Face of resource to access
+ <span class="keyword keyword apiItemName">
+  level
+ </span>
+ - Level of resource to access
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000023" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  *pWidth
+  ,
+  *pHeight
+  , and
+  *pDepth
+  the dimensions of the subresource of the mapped Direct3D resource
+  pResource
+  which corresponds to
+  face
+  and
+  level
+  .
+ </p>
+ <p class="p">
+  Since anti-aliased surfaces may have multiple samples per pixel, it is possible that the dimensions of a resource will be
+                                 an integer factor larger than the dimensions reported by the Direct3D runtime.
+ </p>
+ <p class="p">
+  The parameters
+  pWidth
+  ,
+  pHeight
+  , and
+  pDepth
+  are optional. For 2D surfaces, the value returned in
+  *pDepth
+  will be 0.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is not of type IDirect3DBaseTexture9 or IDirect3DSurface9 or if
+  pResource
+  has not been registered for use with CUDA, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned.
+ </p>
+ <p class="p">
+  For usage requirements of
+  face
+  and
+  level
+  parameters, see
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g7d367e7ea6e0e3c8884ea2a473f75749" shape="rect" title="Get a pointer through which to access a subresource of a Direct3D resource which has been mapped for access by CUDA.">
+   cudaD3D9ResourceGetMappedPointer
+  </a>
+  .
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1g0dd6b5f024dfdcff5c28a08ef9958031" shape="rect" title="Get an array through which to access a subresource of a mapped graphics resource.">
+   cudaGraphicsSubResourceGetMappedArray
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1ge9a5aef299347c403cd8f96855d61fb4" name="group__CUDART__D3D9__DEPRECATED_1ge9a5aef299347c403cd8f96855d61fb4" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9ResourceSetMapFlags (  IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ Set usage flags for mapping a Direct3D resource.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Registered resource to set flags for
+ <span class="keyword keyword apiItemName">
+  flags
+ </span>
+ - Parameters for resource mapping
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000022" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Set flags for mapping the Direct3D resource
+  pResource
+  .
+ </p>
+ <p class="p">
+  Changes to flags will take effect the next time
+  pResource
+  is mapped. The
+  flags
+  argument may be any of the following:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1gg77fb48ace0d2da465b6f4bcc00ef750b231d4d21c0022f27e2bab622cdfce74f" shape="rect">
+     cudaD3D9MapFlagsNone
+    </a>
+    : Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and
+                                          written to by CUDA kernels. This is the default value.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1gg77fb48ace0d2da465b6f4bcc00ef750b60d7fc4cd3b30157833587d6703ed6eb" shape="rect">
+     cudaD3D9MapFlagsReadOnly
+    </a>
+    : Specifies that CUDA kernels which access this resource will not write to this resource.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1gg77fb48ace0d2da465b6f4bcc00ef750b85d551879a58618fa74b0783b0ff1f73" shape="rect">
+     cudaD3D9MapFlagsWriteDiscard
+    </a>
+    : Specifies that CUDA kernels which access this resource will not read from this resource and will write over the entire contents
+                                          of the resource, so none of the data previously stored in the resource will be preserved.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  If
+  pResource
+  has not been registered for use with CUDA, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If
+  pResource
+  is presently mapped for access by CUDA, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  cudaInteropResourceSetMapFlags
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g4597fa217d5e7e3f735f233882292fe7" name="group__CUDART__D3D9__DEPRECATED_1g4597fa217d5e7e3f735f233882292fe7" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9UnmapResources (  int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   count
+  </span>
+  , IDirect3DResource9**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   ppResources
+  </span>
+  )
+ </span>
+ Unmap Direct3D resources for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  count
+ </span>
+ - Number of resources to unmap for CUDA
+ <span class="keyword keyword apiItemName">
+  ppResources
+ </span>
+ - Resources to unmap for CUDA
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000021" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Unmaps the
+  count
+  Direct3D resources in
+  ppResources
+  .
+ </p>
+ <p class="p">
+  This function provides the synchronization guarantee that any CUDA kernels issued before
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g4597fa217d5e7e3f735f233882292fe7" shape="rect" title="Unmap Direct3D resources for access by CUDA.">
+   cudaD3D9UnmapResources()
+  </a>
+  will complete before any Direct3D calls issued after
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED_1g4597fa217d5e7e3f735f233882292fe7" shape="rect" title="Unmap Direct3D resources for access by CUDA.">
+   cudaD3D9UnmapResources()
+  </a>
+  begin.
+ </p>
+ <p class="p">
+  If any of
+  ppResources
+  have not been registered for use with CUDA or if
+  ppResources
+  contains any duplicate entries, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned. If any of
+  ppResources
+  are not presently mapped for access by CUDA then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  is returned.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1g11988ab4431b11ddb7cbde7aedb60491" shape="rect" title="Unmap graphics resources.">
+   cudaGraphicsUnmapResources
+  </a>
+ </p>
+ <a id="group__CUDART__D3D9__DEPRECATED_1g81dd5ad8f5ec63e31a3d32f67dc1ca4c" name="group__CUDART__D3D9__DEPRECATED_1g81dd5ad8f5ec63e31a3d32f67dc1ca4c" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaD3D9UnregisterResource (  IDirect3DResource9*
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pResource
+  </span>
+  )
+ </span>
+ Unregisters a Direct3D resource for access by CUDA.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pResource
+ </span>
+ - Resource to unregister
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="deprecated_header">
+  <a class="xref xrefsect-title" href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated__deprecated_1_deprecated000019" shape="rect">
+   Deprecated
+  </a>
+ </h6>
+ <p>
+  <span class="ph xrefsect-description">
+   This function is deprecated as of CUDA 3.0.
+  </span>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Unregisters the Direct3D resource
+  pResource
+  so it is not accessible by CUDA unless registered again.
+ </p>
+ <p class="p">
+  If
+  pResource
+  is not registered, then
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  is returned.
+ </p>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that this function may also return error codes from previous, asynchronous launches.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1gc65d1f2900086747de1e57301d709940" shape="rect" title="Unregisters a graphics resource for access by CUDA.">
+   cudaGraphicsUnregisterResource
+  </a>
+ </p>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

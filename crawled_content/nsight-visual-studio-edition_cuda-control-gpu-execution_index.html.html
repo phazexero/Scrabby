@@ -1,0 +1,1774 @@
+<html><head><title>Control GPU Execution — nsight-visual-studio-edition 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/introduction/index.html">
+    Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/release-notes/index.html">
+    Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html">
+    Installation and Setup
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   CUDA Debugger
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html">
+    Getting Started with the CUDA Debugger
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html">
+    Build and Run
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html">
+    Control GPU Execution
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#control-gpu-execution-1">
+      Control GPU Execution
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#control-execution">
+      Control Execution
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#prerequisites">
+        Prerequisites
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#stepping-behavior">
+        Stepping Behavior
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#best-practices">
+        Best Practices
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#single-stepping-your-program">
+        Single Stepping Your Program
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#running-to-the-cursor">
+        Running to the Cursor
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#stopping-the-cuda-debugger">
+        Stopping the CUDA Debugger
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#set-gpu-breakpoints">
+      Set GPU Breakpoints
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#id9">
+        Prerequisites
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#gpu-breakpoints">
+        GPU Breakpoints
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#creating-a-source-breakpoint">
+          Creating a Source Breakpoint
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#creating-a-data-breakpoint">
+          Creating a Data Breakpoint
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#managing-breakpoints">
+          Managing Breakpoints
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#conditional-breakpoints">
+        Conditional Breakpoints
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#function-breakpoints">
+        Function Breakpoints
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+      Global Freeze
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#barrier-stepping">
+      Barrier/Warp-Exit Run Control
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#how-barrier-warp-exit-run-control-helps">
+        How Barrier/Warp-Exit Run Control Helps
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#settings">
+        Settings
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#break-on-activity">
+      Break on Activity
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#break-on-launch">
+        Break on Launch
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#break-on-api-error">
+        Break on API Error
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html">
+    Inspect State
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html">
+    Advanced Topics
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Reference
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/reference/index.html">
+    Reference
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Information
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Copyright and License Notices
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/eula/index.html">
+    EULA
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+  nsight-visual-studio-edition
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   Control GPU Execution
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-2024_2-new-features">
+    v2024.2.1 |
+   </a>
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-archive">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  Control GPU Execution
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#control-gpu-execution" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Control GPU execution with the NVIDIA Nsight VSE CUDA Debugger
+ </p>
+ <h2>
+  Control GPU Execution
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#control-gpu-execution-1" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  In this section, learn more about how to control GPU execution, set GPU breakpoints, use global freeze, and work with barrier/warp-exit run control.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#control-execution">
+     Control Execution
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#breakpoints">
+     Set GPU Breakpoints
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+     Global Freeze
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#barrier-stepping">
+     Barrier/Warp-Exit Run Control
+    </a>
+   </p>
+  </li>
+ </ul>
+ <h2>
+  Control Execution
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#control-execution" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The CUDA Debugger allows you to control the execution of your CUDA program during the debugging session. The CUDA Debugger supports stepping into a line of code, and running the program to the cursor.
+ </p>
+ <p>
+  In order to use any of the below features, the debugged CUDA program must be halted as a result of stopping at a breakpoint or from a previous execution control statement.
+ </p>
+ <h3>
+  Prerequisites
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#prerequisites" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Source code should be compiled with
+  <span class="pre">
+   nvcc
+  </span>
+  using
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-altering-compiler-linker-behavior-device-debug">
+   the -G option
+  </a>
+  in order to provide non-optimized code with debug symbols and linetable information. It is also possible to compile with
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-altering-compiler-linker-behavior-generate-line-info">
+   -linetable
+  </a>
+  in order to debug with symbolics; however, this will optimize SASS and will result in erratic source stepping and source breakpoint behavior.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  OptiX applications are typically built with
+  <span class="pre">
+   -linetable
+  </span>
+  and may suffer from this behavior. See other
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+   OptiX restrictions
+  </a>
+  , especially as they affect GPU breakpoints.
+ </p>
+ <h3>
+  Stepping Behavior
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#stepping-behavior" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When stepping, all warps except the debugger focus warp are frozen. However, when stepping over
+  <span class="pre">
+   __syncthreads()
+  </span>
+  , all warps in the current block are allowed to make progress. This allows the focus warp to get past the
+  <span class="pre">
+   __syncthreads()
+  </span>
+  function.
+ </p>
+ <p>
+  Stepping out of a global function will resume the application (same result as pressing F5, or selecting the menu command Debug &gt; Continue).
+ </p>
+ <p>
+  Stepping over the last line of a kernel function will also resume application execution.
+ </p>
+ <p>
+  Stepping over the last line of an inline function has the same result as stepping out of the inline function.
+ </p>
+ <h3>
+  Best Practices
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#best-practices" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  To experience the best stepping behavior when debugging, we recommend using curly braces when possible in your code. Place the curly braces on their own line of source code. For example, because of the way that the compiler produces scope information, the following coding styles result in different stepping behavior.
+ </p>
+ <p>
+  These code snippets results in less than optimal stepping behavior:
+ </p>
+ <pre><span class="k">for</span><span class="p">()</span><span class="n">statement</span><span class="p">;</span>
+<span class="k">for</span><span class="p">()</span><span class="n">statement</span><span class="p">;</span>
+<span class="k">for</span><span class="p">()</span><span class="p">{</span><span class="n">statement</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+ <p>
+  This code snippet results in optimal stepping behavior:
+ </p>
+ <pre><span class="k">for</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="n">statement</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+ <p>
+  In general, breaking up computation by declaring temporary variables results in code that is easier to debug. The chances of a variable being âliveâ over a certain set of lines increases. This means that as you step through code, the values of variables will be easier to identify.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Avoid killing the Debug Monitor when it is in use. If the Debug Monitor process is killed while an application is stopped at a CUDA breakpoint, you will not be able to kill the target process.
+   </p>
+  </li>
+  <li>
+   <p>
+    Use a separate Visual Studio instance to debug the host portion of a target application. If you wish to debug the host portion of your CUDA application while the CUDA Debugger is attached, you must attach using a different Visual Studio instance. Attaching the same instance of Visual Studio as both host and GPU debugger will cause the debugger to hang.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  Single Stepping Your Program
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#single-stepping-your-program" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start a debugging session.
+   </p>
+  </li>
+  <li>
+   <p>
+    Select a thread you would like to single step using the Nsight CUDA Debug Location toolbar.
+   </p>
+   <p>
+    See
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#specify-debugger-context">
+     Specify Debugger Context
+    </a>
+    for more information.
+   </p>
+  </li>
+  <li>
+   <p>
+    From the Debug menu, choose Step Into.
+   </p>
+   <p>
+    As an alternative, press F11 on the keyboard.
+   </p>
+  </li>
+  <li>
+   <p>
+    The program counter for the current thread will advance one source line.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Using Step Into causes the debugger to execute the next instruction of the currently selected thread. Stepping occurs on the current focus thread.
+ </p>
+ <h3>
+  Running to the Cursor
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#running-to-the-cursor" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  To run the target application up to the cursor location:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    In the Document window containing the source, right-click on the desired line of source code.
+   </p>
+  </li>
+  <li>
+   <p>
+    From the Context menu, choose
+    Run To Cursorâ¦
+   </p>
+  </li>
+  <li>
+   <p>
+    The program counter will advance to the specified line of source code.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  Stopping the CUDA Debugger
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#stopping-the-cuda-debugger" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  From the Debug menu, choose
+  Stop Debugging
+  .
+ </p>
+ <p>
+  Alternatively, you can also press the
+  Stop
+  icon on the debugger toolbar, or type
+  SHIFT+F5.
+ </p>
+ <p>
+  The target application will now stop. Visual Studio stops the debugging session and returns to the edit layout.
+ </p>
+ <h2>
+  Set GPU Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#set-gpu-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA Nsight Visual Studio Editionâs Next-Gen Debugger and Legacy Debugger can control exectuion, based on GPU breakpoints.
+ </p>
+ <h3>
+  Prerequisites
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#id9" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Source code should be compiled with
+  <span class="pre">
+   nvcc
+  </span>
+  using
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-altering-compiler-linker-behavior-device-debug">
+   the â-G option
+  </a>
+  in order to provide non-optimized code with debug symbols and linetable information. It is also possible to compile with
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-altering-compiler-linker-behavior-generate-line-info">
+   -linetable
+  </a>
+  in order to debug with symbolics; however, this will optimize SASS and will result in erratic source stepping and source breakpoint behavior.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  OptiX applications are typically built with
+  <span class="pre">
+   -linetable
+  </span>
+  and may suffer from this behavior. See other
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+   OptiX restrictions
+  </a>
+  , especially as they affect GPU breakpoints.
+ </p>
+ <h3>
+  GPU Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#gpu-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  You can use NVIDIA Nsightâ¢ VSE to set breakpoints in CUDA code. The development tools support two types of breakpoints: source breakpoints and data breakpoints.
+ </p>
+ <p>
+  Source breakpoints allow you to halt your application at the specified line of CUDA source code. You can also constrain your breakpoints to break only when a particular block and thread are executing. Constraining breakpoints to specific blocks and threads is a critical capability in a massively parallel environment where you can have hundreds or thousands of threads running simultaneously.
+ </p>
+ <p>
+  Data breakpoints halt your applicationâs execution when the next executable line of code is going to write to a specified range of GPU memory.
+ </p>
+ <p>
+  You set and configure CUDA breakpoints with the same familiar dialog boxes, keyboard shortcuts, and tool windows used for other languages supported by Visual Studio.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  A breakpoint condition can be met multiple times by the same line of code when the line of code has an inline function call. For example, setting a breakpoint on:
+ </p>
+ <pre><span class="n">x</span><span class="o">=</span><span class="n">cos</span><span class="p">()</span><span class="o">+</span><span class="n">sin</span><span class="p">()</span>
+</pre>
+ <p>
+  will generate 3 breakpoints on that line: one for the evaluation of the expression, plus one for each function on the line.
+ </p>
+ <p>
+  Caution!
+  If you are performing local debugging, make sure to disable WPF hardware acceleration before using the CUDA Debug Focus Picker dialog box. For more information about disabling WPF hardware acceleration, see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#setup-local-debugging">
+   Setup Local Debugging
+  </a>
+  .
+ </p>
+ <h4>
+  Creating a Source Breakpoint
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#creating-a-source-breakpoint" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  You can set breakpoints on any line of executable CUDA source code.
+ </p>
+ <p>
+  To set a breakpoint on a line of source code:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    In a source code window, move the insertion point to the line where you want the application to break.
+   </p>
+   <p>
+    To set a breakpoint in a statement that spans two or more lines, move the insertion point to the last line of the statement.
+   </p>
+  </li>
+  <li>
+   <p>
+    From the
+    Debug
+    menu, choose
+    Toggle Breakpoint
+    .
+   </p>
+   <p>
+    Alternatively, press the
+    F9
+    key, or left-click in the left margin of the source code document.
+   </p>
+   <p>
+    A red breakpoint glyph appears in the left margin of the source code document.
+   </p>
+  </li>
+ </ol>
+ <p>
+  The color of the breakpoint glyph indicates the status of the breakpoint. A red filled glyph, for example, indicates a normal, enabled breakpoint. A white filled glyph indicates that the breakpoint is disabled. A + sign inside the breakpoint glyph indicates that the breakpoint has at least one advanced feature, such as condition, hit count, or filter, attached to it.
+ </p>
+ <p>
+  For more information on breakpoints, see the Visual Studio documentation from Microsoft:
+  <a class="reference external" href="http://msdn.microsoft.com/en-us/library/5557y8b4.aspx">
+   http://msdn.microsoft.com/en-us/library/5557y8b4.aspx
+  </a>
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  If you set a breakpoint on an invalid source location (such as a comment line), the breakpoint will âjumpâ to the next available valid line of source code within a 10 line range.
+ </p>
+ <h4>
+  Creating a Data Breakpoint
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#creating-a-data-breakpoint" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  You can also set data breakpoints at any GPU memory address, which will halt your program just prior to writing data to that address.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Data Breakpoints are currently only supported with the
+  Legacy Debugger
+  .
+ </p>
+ <p>
+  To set a data breakpoint at a memory address
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    In the
+    Breakpoints Window
+    , click on the
+    New
+    menu and select
+    New Data Breakpoint
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Enter the name of the pointer or the numerical address in GPU memory space at which the program should halt when that memory space is written.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click
+    OK
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    The application will halt just prior to the next application source line which writes to the specified area of memory.
+   </p>
+  </li>
+ </ol>
+ <h4>
+  Managing Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#managing-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Use the standard Visual Studio Breakpoints tool window to enable, disable, add and delete breakpoints.
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt; Breakpoints, or use the Ctrl+Alt+B keyboard shortcut.
+   </p>
+  </li>
+  <li>
+   <p>
+    Enable or disable a breakpoint by marking the checkbox next to a breakpoint.
+   </p>
+  </li>
+  <li>
+   <p>
+    Delete a breakpoint by selecting a breakpoint and then clicking the Delete button in the toolbar.
+   </p>
+  </li>
+  <li>
+   <p>
+    Delete all breakpoints by selecting a breakpoint and then clicking the Delete All button in the toolbar.
+   </p>
+  </li>
+  <li>
+   <p>
+    Navigate to the source code location of the breakpoint by choosing Go To Source button in the toolbar.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The debugger does not support the âGo To Assemblyâ Function in the Visual Studio
+  Breakpoints
+  tool window.
+ </p>
+ <h3>
+  Conditional Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#conditional-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  In a massively parallel environment with hundreds or thousands of threads, it is critical to be able to narrow your breakpoints to just the areas of interest. The CUDA Debugger supports setting conditional breakpoints for GPU threads with arbitrary expressions. Expressions may use program variables, the intrinsics
+  <span class="pre">
+   blockIdx
+  </span>
+  and
+  <span class="pre">
+   threadIdx
+  </span>
+  , and a few short-hand macros to make it easier to set conditions based on
+  <span class="pre">
+   blockIdx
+  </span>
+  and
+  <span class="pre">
+   threadIdx
+  </span>
+  .
+ </p>
+ <p>
+  As of NVIDIA Nsight Visual Studio Edition version 2020.3.0, Visual Studio breakpoint hit counts are supported (see âHit Countâ section of
+  <a class="reference external" href="http://msdn.microsoft.com/en-us/library/5557y8b4.aspx">
+   Microsoftâs Breakpoint documentation
+  </a>
+  ). Please be aware of these expected behaviors:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Both the Visual Studio debugger and the NVIDIA debuggers take an increasing amount of time to run as the number of threads and iterations evaluating the breakpoint condition and count increase. Noticeable delays should be expected when using this breakpoint feature in heavily utilized code. These delays can be exaggerated in CUDA kernels with thousands of threads.
+   </p>
+  </li>
+  <li>
+   <p>
+    Hit count comparisons are evaluated on the host as opposed to on the local GPU, increasing the evaluation time of conditional breakpoints in CUDA code.
+   </p>
+  </li>
+  <li>
+   <p>
+    During a suspend event (breakpoint hit), no matter how many threads are on the breakpoint, the hit count is only incremented once.
+   </p>
+  </li>
+ </ul>
+ <p>
+  To set a block or thread condition on a CUDA C breakpoint:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Set a breakpoint on a line of source code.
+   </p>
+  </li>
+  <li>
+   <p>
+    Right-click on the breakpoint.
+   </p>
+  </li>
+  <li>
+   <p>
+    From the drop-down menu, select Conditionâ¦
+   </p>
+  </li>
+  <li>
+   <p>
+    Type an expression you want evaluated by the debugger at this breakpoint. For example, to break only on a specific block or thread index, such as block index (0,1) and thread index (0,1,0), type:
+   </p>
+   <pre>@blockIdx(0,1,0) &amp;&amp; @threadIdx(0,1,0)
+</pre>
+  </li>
+  <li>
+   <p>
+    Click OK. The breakpoint glyph shows a plus sign.
+   </p>
+  </li>
+ </ol>
+ <p>
+  The debugger pauses execution of the target application when the
+  <span class="pre">
+   blockIdx
+  </span>
+  and
+  <span class="pre">
+   threadIdx
+  </span>
+  of the running code matches the
+  <span class="pre">
+   blockIdx
+  </span>
+  and
+  <span class="pre">
+   threadIdx
+  </span>
+  specified in the conditional breakpoint.
+ </p>
+ <p class="rubric" id="supported-debugger-macros">
+  Supported Debugger Macros
+ </p>
+ <p>
+  The CUDA Debugger has a basic macro expander that expands certain sub-expressions as follows:
+ </p>
+ <table class="table-no-stripes docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Macro
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Expansion
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Notes
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     <span class="pre">
+      @threadIdx(x,
+     </span>
+     <span class="pre">
+      y,
+     </span>
+     <span class="pre">
+      z)
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span class="pre">
+      (threadIdx.x
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (x)
+     </span>
+     <span class="pre">
+      &amp;&amp;
+     </span>
+     <span class="pre">
+      threadIdx.y
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (y)
+     </span>
+     <span class="pre">
+      &amp;&amp;
+     </span>
+     <span class="pre">
+      threadIdx.z
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (z))
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     x, y, and z must be decimal integers.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     <span class="pre">
+      @threadIdx(#N)
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span class="pre">
+      (
+     </span>
+     <span class="pre">
+      (((threadIdx.z
+     </span>
+     <span class="pre">
+      *
+     </span>
+     <span class="pre">
+      blockDim.y)
+     </span>
+     <span class="pre">
+      +
+     </span>
+     <span class="pre">
+      threadIdx.y)
+     </span>
+     <span class="pre">
+      *
+     </span>
+     <span class="pre">
+      blockDim.x
+     </span>
+     <span class="pre">
+      +
+     </span>
+     <span class="pre">
+      threadIdx.x)
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (N)
+     </span>
+     <span class="pre">
+      )
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     N must be a decimal integer.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     <span class="pre">
+      @blockIdx(x,
+     </span>
+     <span class="pre">
+      y,
+     </span>
+     <span class="pre">
+      z)
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span class="pre">
+      (blockIdx.x
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (x)
+     </span>
+     <span class="pre">
+      &amp;&amp;
+     </span>
+     <span class="pre">
+      blockIdx.y
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (y)
+     </span>
+     <span class="pre">
+      &amp;&amp;
+     </span>
+     <span class="pre">
+      blockIdx.z
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (z))
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     x, y, and z must be decimal integers.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     <span class="pre">
+      @blockIdx(#N)
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span class="pre">
+      (
+     </span>
+     <span class="pre">
+      (((blockIdx.z
+     </span>
+     <span class="pre">
+      *
+     </span>
+     <span class="pre">
+      gridDim.y)
+     </span>
+     <span class="pre">
+      +
+     </span>
+     <span class="pre">
+      blockIdx.y)
+     </span>
+     <span class="pre">
+      *
+     </span>
+     <span class="pre">
+      gridDim.x
+     </span>
+     <span class="pre">
+      +
+     </span>
+     <span class="pre">
+      blockIdx.x)
+     </span>
+     <span class="pre">
+      ==
+     </span>
+     <span class="pre">
+      (N)
+     </span>
+     <span class="pre">
+      )
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     N must be a decimal integer.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  At this time, thereâs no way for a user to add any extra macros.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  If an expression accesses a bad pointer, that expression will be evaluated as false, and the breakpoint will not be triggered. As a work-around, you may use expression short-circuiting with the
+  <span class="pre">
+   &amp;&amp;
+  </span>
+  and
+  <span class="pre">
+   ||
+  </span>
+  operators to conditionally evaluate sub-expressions. For example, if you use the following expression:
+ </p>
+ <pre>p &amp;&amp; (*p &gt; 5)
+</pre>
+ <p>
+  Then âpâ will not be de-referenced if it is set to NULL.
+ </p>
+ <h3>
+  Function Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#function-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  NVIDIA Nsightâ¢ VSE supports function breakpoints. To set a function breakpoint, use one of the following methods:
+ </p>
+ <ul>
+  <li>
+   <p>
+    From the Visual Studio
+    Breakpoints
+    window, select
+    New
+    &gt;
+    Break at Function
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    From the Visual Studio
+    Debug
+    menu, select
+    New Breakpoint
+    &gt;
+    Break at Function
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    From the
+    CUDA Info
+    window, select the
+    Functions
+    page from the drop-down menu. From here, you can right-click on a function row to set a breakpoint.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Function breakpoints will work even if the module is built without symbolics. However, only disassembly debugging will be available.
+ </p>
+ <p>
+  The user can enter either:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    The mangled name of the function.
+   </p>
+  </li>
+  <li>
+   <p>
+    The unmangled name of the function, without any function signature. For example,
+    <span class="pre">
+     matrixMul
+    </span>
+    would resolve for
+    <span class="pre">
+     matrixMul(int)
+    </span>
+    and
+    <span class="pre">
+     matrixMul(char)
+    </span>
+    .
+   </p>
+   <p>
+    If the signature is specified, the CUDA Debugger will not find the function(e.g.,
+    <span class="pre">
+     matrixMul(int)
+    </span>
+    or
+    <span class="pre">
+     matrixMul&lt;int&gt;()
+    </span>
+    ).
+   </p>
+  </li>
+ </ol>
+ <p>
+  Optionally, the user can specify a module name. The syntax for this is the following:
+ </p>
+ <pre><span class="p">[</span><span class="n">ModuleName</span><span class="o">!</span><span class="p">]</span><span class="n">FunctionName</span>
+</pre>
+ <p>
+  If the
+  <span class="pre">
+   ModuleName
+  </span>
+  is left unspecified, the breakpoint will be set in each and every function of that name in all loaded modules. The module name works best when used with CUDART, since it has the .cu name for the module. For example:
+  <span class="pre">
+   MyModule.cu!MyKernel
+  </span>
+ </p>
+ <p>
+  As a shortcut to this, the Functions page has the capability to enter the function name for the user. In this scenario the mangled function name is used, and it will set in each module that contains the specified function name.
+ </p>
+ <h2>
+  Global Freeze
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The NVIDIA Nsightâ¢ VSE main menu has a global freeze option. This allows you to control which warps will make progress when using any CUDA run control (such as stepping, resume, or run to cursor). For example, you can ensure that only one warp moves when stepping.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Note that a barrier in the code will prevent a warp from making any progress, if the other warps are frozen. This is because all warps in a block need to get past the barrier, and they would not be able to if others are frozen.
+ </p>
+ <p>
+  Please refer to
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#barrier-stepping">
+   Barrier Stepping
+  </a>
+  for more details on how to control execution when continuing or stepping at a barrier or past the end of a kernel.
+ </p>
+ <p>
+  This option must be set in each debug session. It does not persist between sessions.
+ </p>
+ <p class="rubric" id="to-use-global-freeze">
+  To Use Global Freeze:
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Launch the CUDA Debugger.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      Open a CUDA-based project.
+     </p>
+    </li>
+    <li>
+     <p>
+      Set a breakpoint in the project. (See
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#debugging-cuda-application">
+       Walkthrough: Debugging a CUDA Application
+      </a>
+      for information on how to set a breakpoint.)
+     </p>
+    </li>
+    <li>
+     <p>
+      Make sure that the Nsight Monitor is running on the target machine.
+     </p>
+    </li>
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , select Start CUDA Debugging.
+     </p>
+     <p>
+      As an alternate option, you can also right-click on the project in Solution Explorer and choose Start CUDA Debugging.
+     </p>
+    </li>
+    <li>
+     <p>
+      The CUDA Debugger starts and launches the target application.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    When the application is suspended at a breakpoint, go to the Nsight menu and choose Freeze. Select the freeze option that you wish to utilize.
+   </p>
+  </li>
+ </ol>
+ <p class="rubric" id="selecting-a-freeze-preference">
+  Selecting a Freeze Preference:
+ </p>
+ <table class="table-no-stripes docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Setting
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Action on a âRunâ command(Continue, F5, or Run to Cursor)
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Action on a âStepâ command (Step In, Step Out, or Step Over)
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     Scheduler Locking Resume All
+    </p>
+   </td>
+   <td>
+    <p>
+     Nothing is frozen.
+    </p>
+   </td>
+   <td>
+    <p>
+     Nothing is frozen.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     Scheduler Locking Resume Block
+    </p>
+   </td>
+   <td>
+    <p>
+     All warps outside of the current block are frozen.
+    </p>
+   </td>
+   <td>
+    <p>
+     All warps outside of the current block are frozen.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     Scheduler Locking Resume Warp
+    </p>
+   </td>
+   <td>
+    <p>
+     All warps except the current warp are frozen.
+    </p>
+   </td>
+   <td>
+    <p>
+     All warps except the current warp are frozen.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     Scheduler Locking Step Block
+    </p>
+   </td>
+   <td>
+    <p>
+     Nothing is frozen.
+    </p>
+   </td>
+   <td>
+    <p>
+     All warps outside of the current block are frozen.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     Scheduler Locking Step Warp
+     (default)
+    </p>
+   </td>
+   <td>
+    <p>
+     Nothing is frozen.
+    </p>
+   </td>
+   <td>
+    <p>
+     All warps except the current warp are frozen.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2>
+  Barrier/Warp-Exit Run Control
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#barrier-stepping" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  In NVIDIA Nsight Visual Studio EditionÂ 2019.3, the Next-Gen Debugger introduces options to control how run control behaves when the active warp attempts to move over a barrier or exit from a
+  <span class="pre">
+   __global__
+  </span>
+  kernel (completing its execution).
+ </p>
+ <h3>
+  How Barrier/Warp-Exit Run Control Helps
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#how-barrier-warp-exit-run-control-helps" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Prior to NVIDIA Nsight Visual Studio Edition Â  2019.3, the Next-Gen Debuggerâs
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+   Global Freeze
+  </a>
+  mode defaulted to Scheduler Locking Step Warp (only steps the active warp). When a barrier or end-of-global-kernel is hit, the active thread is stepped, then waits for the other warps in the block to hit the barrier, but they are all frozen, so no warps make progress and the kernel appears to be hung. To regain control of the execution, the user would have to use Debug &gt; Break (Pause), and switch to another warp and/or change the Freeze mode to resume per block.
+ </p>
+ <p>
+  For example, this Warp Info page shows the active warp and thread (yellow arrow indicators) are stepping or at a breakpoint (red color â see Warp Info in
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#next-gen-state-inspection-views">
+   Next-Gen Debugger State Inspection Views
+  </a>
+  ) and the remaining threads and warps in the block are active (green), but frozen and not making progress due to the
+  Freeze Mode
+  being set to
+  Scheduler Locking Step Warp
+  .
+ </p>
+ <p>
+  In NVIDIA Nsight Visual Studio EditionÂ 2019.2 and earlier, attempting to step over a barrier (SASS BAR command or SyncThreads CUDA command) would cause the apparent hang described above.
+ </p>
+ <p>
+  As of version 2019.3, with Barrier/Warp-Exit mode set to Suspend, when the focus thread attempts to make progress (via step, continue, etc), it attempts to move past the barrier, but cannot until the remaining threads and warps reach the barrier. Notice that:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    The instruction pointer has advanced past the
+    <span class="pre">
+     __syncthreads()
+    </span>
+    barrier (but will not advance further until the rest of the block catches up).
+   </p>
+  </li>
+  <li>
+   <p>
+    Warp (0,0,0) hit a barrier (teal color) and the remaining warps in the block are active (green) and still not making progress.
+   </p>
+  </li>
+ </ol>
+ <p>
+  At this point:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Stepping the active warp will not result in any further progress.
+   </p>
+  </li>
+  <li>
+   <p>
+    Continuing (F5) will allow all warps to run to completion or the next breakpoint.
+   </p>
+  </li>
+  <li>
+   <p>
+    Changing the
+    Freeze Mode
+    to
+    Scheduler Locking Step Block
+    and stepping will allow the rest of the block to arrive at the barrier (and step the source Program Counter).
+   </p>
+  </li>
+  <li>
+   <p>
+    Changing the
+    Freeze Mode
+    to
+    Scheduler Locking Resume All
+    will allow all blocks to make progress (and step the source Program Counter).
+   </p>
+  </li>
+ </ul>
+ <h3>
+  Settings
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#settings" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The settings to modify barrier and Warp-Exit run control behavior can be found under
+  Nsight
+  &gt;
+  Options
+  &gt;
+  CUDA
+  &gt;
+  CUDA Debugger RunControl (Next-Gen)
+  .
+ </p>
+ <ul>
+  <li>
+   <p>
+    The
+    Barrier/Warp-Exit Run Control
+    settings determine how the debugger behaves when focus stepping or resuming past a barrier, or when the focus warp exits.Â The options are:
+   </p>
+   <ol class="arabic">
+    <li>
+     <p>
+      None
+      â The active warp waits for the other warps in the block. However, the remaining warps are frozen and do not make progress. The kernel appears to hang.
+     </p>
+     <p>
+      The recommendation is to use Debug &gt; Break (Pause) to change the active warp and/or the Global Freeze mode. Note you may end up on a CPU thread. In this case, you have to change the thread back to your CUDA thread to continue GPU debugging.
+     </p>
+    </li>
+    <li>
+     <p>
+      Resume at Barrier / Warp-Exit
+     </p>
+     <ul>
+      <li>
+       <p>
+        Resume at a barrier
+        â A warning notification appears:
+       </p>
+       <pre>Warning: Scheduler Locking Warp has been temporarily
+changed to Scheduler Locking Block to step
+past a barrier.
+</pre>
+       <p>
+        Stepping allows the entire block (including active warp) to step over the barrier, then refreezes the non-active warps (if
+        Scheduler Locking Step Warp
+        ) or the other blocks (if
+        Scheduler Locking Step Block
+        ).
+       </p>
+       <p class="admonition-title">
+        Note
+       </p>
+       <p>
+        Other warps may make more progress than the focus warp.
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ol>
+   <ul>
+    <li>
+     <p>
+      Resume when exiting a
+      <span class="pre">
+       __global__
+      </span>
+      function
+      â The behavior matches the
+      Resume
+      mode. A warning notification appears:
+     </p>
+     <pre>Warning: Focus warp exited. Debugger automatically suspended.
+</pre>
+     <p>
+      The indicator falls into the next warp or block automatically, according to current
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+       Freeze Mode
+      </a>
+      . Stepping allows the remaining warps to make progress, running to completion or hitting other breakpoints or barriers.
+     </p>
+     <p>
+      You can modify the Barrier/Warp-Exit Run Control setting to
+      None
+      to manually control the step warp.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ol class="arabic">
+  <li>
+   <p>
+    Suspend at Barrier / Warp-Exit
+   </p>
+   <ul>
+    <li>
+     <p>
+      Suspend at a barrier
+      â The active warp remains suspended at the barrier, while the other warps remain frozen (if
+      Scheduler Locking Step Warp
+      ) or the other blocks remain frozen (if
+      Scheduler Locking Step Block
+      ). A warning notification appears:
+     </p>
+     <pre>Warning: Focus warp hit a barrier.
+Debugger automatically suspended.
+Modify the 'Barrier/Warp-Exit Run Control' setting to change
+this behavior.
+</pre>
+    </li>
+    <li>
+     <p>
+      Suspend when exiting a
+      <span class="pre">
+       __global__
+      </span>
+      function
+      â The behavior matches the
+      Resume
+      mode.
+     </p>
+     <pre>Warning: Focus warp exited.
+Debugger automatically suspended.
+</pre>
+     <p>
+      The indicator falls into the next warp or block automatically, according to current
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#global-freeze">
+       Freeze Mode
+      </a>
+      . Stepping allows the remaining warps to make progress, running to completion or hitting other breakpoints or barriers.
+     </p>
+     <p>
+      You can modify the Barrier/Warp-Exit Run Control setting to
+      None
+      to manually control the step warp.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ol>
+ <ul class="simple">
+  <li>
+   <p>
+    Skip User Breakpoints on Sympathetic Warps
+    can be set one of two ways:
+   </p>
+   <ol class="arabic simple">
+    <li>
+     <p>
+      True
+      â Sympathetic warps ignore barriers and non-conditional breakpoints. These warps only suspend when focus warp hits a breakpoint or barrier.
+     </p>
+    </li>
+    <li>
+     <p>
+      False
+      â This setting applies to stepping at a barrier and is not recommended for compute kernels with a high number of threads (e.g., graphics kernels). Performance may be severely impacted.
+     </p>
+    </li>
+   </ol>
+  </li>
+ </ul>
+ <h2>
+  Break on Activity
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#break-on-activity" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  In NVIDIA Nsight Visual Studio EditionÂ 2020.2.0, the Next-Gen Debugger introduces options to halt execution when certain runtime activities occur, such as the launch of a kernel, or when API errors occur.
+ </p>
+ <h3>
+  Break on Launch
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#break-on-launch" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Next-Gen Debugger can automatically insert an internal breakpoint on the launch function.
+ </p>
+ <p>
+  Enable the
+  Break on Launch
+  feature, by setting the option to âTrueâ.
+ </p>
+ <p>
+  You can easily toggle the
+  Break on Launch
+  behavior using the Nsight menu item:
+ </p>
+ <p>
+  When enabled, execution will be halted when any
+  [1]
+  __global__ kernel is launched. This is useful to when setting function breakpoints is tedious. As shown below, there is no user breakpoint shown, but execution is halted on the kernel entry point.
+ </p>
+ <p>
+  [1]
+  Note that this will not work on
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions-nextgen-cuda">
+   restricted Optix code
+  </a>
+  .
+ </p>
+ <h3>
+  Break on API Error
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#break-on-api-error" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The settings to control behavior when CUDA API errors are encountered can be found under
+  Nsight
+  &gt;
+  Options
+  &gt;
+  CUDA
+  &gt;
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Report CUDA API Errors
+    .
+   </p>
+   <ul>
+    <li>
+     <p>
+      When set to âTrueâ, the debugger will log all CUDA API errors that occur in the target application.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    Break on CUDA API Errors
+    .
+   </p>
+   <ul>
+    <li>
+     <p>
+      When set to âTrueâ, the debugger will cause a CPU DebuggerBreak whenever a CUDA API call fails.
+     </p>
+    </li>
+    <li>
+     <p>
+      Note that âReport CUDA API Errorsâ must also be enabled for CUDA API errors to trigger the DebuggerBreak.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  When
+  Break on CUDA API Errors
+  is enabled and an API error is encountered,
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    A notification will appear, alerting you to the CUDA API error.
+   </p>
+  </li>
+  <li>
+   <p>
+    Execution will be halted, allowing you switch to GPU threads and inspect the stack, variables, and GPU states.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Execution can be resumed (i.e. F5 to continue)
+ </p>
+ <p class="rubric-h1 rubric">
+  Notices
+ </p>
+ <p class="rubric-h2 rubric">
+  Notice
+ </p>
+ <p>
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+ </p>
+ <p>
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems without express written approval of NVIDIA Corporation.
+ </p>
+ <p class="rubric-h2 rubric">
+  Trademarks
+ </p>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jun 03, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

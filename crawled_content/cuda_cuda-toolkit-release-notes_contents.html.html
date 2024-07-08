@@ -1,0 +1,569 @@
+<html>
+
+<head>
+    <title>Contents â Release Notes 12.5 documentation</title>
+</head>
+
+<body>
+
+    <body class="wy-body-for-nav">
+        <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/contents.html">
+        </a>
+        <ul>
+            <li class="toctree-l1">
+                <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html">
+                    1. CUDA 12.5 Update 1 Release Notes
+                </a>
+            </li>
+            <li class="toctree-l1">
+                <a class="reference internal"
+                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-libraries">
+                    2. CUDA Libraries
+                </a>
+            </li>
+            <li class="toctree-l1">
+                <a class="reference internal"
+                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#notices">
+                    3. Notices
+                </a>
+            </li>
+        </ul>
+        <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/contents.html">
+            Release Notes
+        </a>
+        <ul class="wy-breadcrumbs">
+            <li>
+                <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+                </a>
+                Â»
+            </li>
+            <li>
+                Contents
+            </li>
+            <li class="wy-breadcrumbs-aside">
+                <span>
+                    v12.5 |
+                </span>
+                <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/CUDA_Toolkit_Release_Notes.pdf">
+                    PDF
+                </a>
+                <span>
+                    |
+                </span>
+                <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+                    Archive
+                </a>
+                <span>
+                    Â
+                </span>
+            </li>
+        </ul>
+        <h1>
+            Contents
+            <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/contents.html#contents"
+                title="Permalink to this headline">
+                ï
+            </a>
+        </h1>
+        <ul>
+            <li class="toctree-l1">
+                <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html">
+                    1. CUDA 12.5 Update 1 Release Notes
+                </a>
+                <ul>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-toolkit-major-component-versions">
+                            1.1. CUDA Toolkit Major Component Versions
+                        </a>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#new-features">
+                            1.2. New Features
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#general-cuda">
+                                    1.2.1. General CUDA
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-compilers">
+                                    1.2.2. CUDA Compilers
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-developer-tools">
+                                    1.2.3. CUDA Developer Tools
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#known-issues-and-limitations">
+                            1.3. Known Issues and Limitations
+                        </a>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#deprecated-or-dropped-features">
+                            1.4. Deprecated or Dropped Features
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#deprecated-or-dropped-architectures">
+                                    1.4.1. Deprecated or Dropped Architectures
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#deprecated-operating-systems">
+                                    1.4.2. Deprecated Operating Systems
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#deprecated-toolchains">
+                                    1.4.3. Deprecated Toolchains
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-tools">
+                                    1.4.4. CUDA Tools
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="toctree-l1">
+                <a class="reference internal"
+                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-libraries">
+                    2. CUDA Libraries
+                </a>
+                <ul>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-library">
+                            2.1. cuBLAS Library
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-5-update-1">
+                                    2.1.1. cuBLAS: Release 12.5 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-5">
+                                    2.1.2. cuBLAS: Release 12.5
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-4-update-1">
+                                    2.1.3. cuBLAS: Release 12.4 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-4">
+                                    2.1.4. cuBLAS: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-3-update-1">
+                                    2.1.5. cuBLAS: Release 12.3 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-3">
+                                    2.1.6. cuBLAS: Release 12.3
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-2-update-2">
+                                    2.1.7. cuBLAS: Release 12.2 Update 2
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-2">
+                                    2.1.8. cuBLAS: Release 12.2
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-1-update-1">
+                                    2.1.9. cuBLAS: Release 12.1 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-0-update-1">
+                                    2.1.10. cuBLAS: Release 12.0 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cublas-release-12-0">
+                                    2.1.11. cuBLAS: Release 12.0
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-library">
+                            2.2. cuFFT Library
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-5">
+                                    2.2.1. cuFFT: Release 12.5
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-4-update-1">
+                                    2.2.2. cuFFT: Release 12.4 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-4">
+                                    2.2.3. cuFFT: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-3-update-1">
+                                    2.2.4. cuFFT: Release 12.3 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-3">
+                                    2.2.5. cuFFT: Release 12.3
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-2">
+                                    2.2.6. cuFFT: Release 12.2
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-1-update-1">
+                                    2.2.7. cuFFT: Release 12.1 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-1">
+                                    2.2.8. cuFFT: Release 12.1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-0-update-1">
+                                    2.2.9. cuFFT: Release 12.0 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cufft-release-12-0">
+                                    2.2.10. cuFFT: Release 12.0
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-library">
+                            2.3. cuSOLVER Library
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-release-12-5-update-1">
+                                    2.3.1. cuSOLVER: Release 12.5 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-release-12-5">
+                                    2.3.2. cuSOLVER: Release 12.5
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-release-12-4-update-1">
+                                    2.3.3. cuSOLVER: Release 12.4 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-release-12-4">
+                                    2.3.4. cuSOLVER: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-release-12-2-update-2">
+                                    2.3.5. cuSOLVER: Release 12.2 Update 2
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusolver-release-12-2">
+                                    2.3.6. cuSOLVER: Release 12.2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-library">
+                            2.4. cuSPARSE Library
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-5-update-1">
+                                    2.4.1. cuSPARSE: Release 12.5 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-5">
+                                    2.4.2. cuSPARSE: Release 12.5
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-4">
+                                    2.4.3. cuSPARSE: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-3-update-1">
+                                    2.4.4. cuSPARSE: Release 12.3 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-3">
+                                    2.4.5. cuSPARSE: Release 12.3
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-2-update-1">
+                                    2.4.6. cuSPARSE: Release 12.2 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-1-update-1">
+                                    2.4.7. cuSPARSE: Release 12.1 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-0-update-1">
+                                    2.4.8. cuSPARSE: Release 12.0 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cusparse-release-12-0">
+                                    2.4.9. cuSPARSE: Release 12.0
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#math-library">
+                            2.5. Math Library
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-math-release-12-5">
+                                    2.5.1. CUDA Math: Release 12.5
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-math-release-12-4">
+                                    2.5.2. CUDA Math: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-math-release-12-3">
+                                    2.5.3. CUDA Math: Release 12.3
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-math-release-12-2">
+                                    2.5.4. CUDA Math: Release 12.2
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-math-release-12-1">
+                                    2.5.5. CUDA Math: Release 12.1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-math-release-12-0">
+                                    2.5.6. CUDA Math: Release 12.0
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#nvidia-performance-primitives-npp">
+                            2.6. NVIDIA Performance Primitives (NPP)
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#npp-release-12-4">
+                                    2.6.1. NPP: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#npp-release-12-0">
+                                    2.6.2. NPP: Release 12.0
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#nvjpeg-library">
+                            2.7. nvJPEG Library
+                        </a>
+                        <ul>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#nvjpeg-release-12-4">
+                                    2.7.1. nvJPEG: Release 12.4
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#nvjpeg-release-12-3-update-1">
+                                    2.7.2. nvJPEG: Release 12.3 Update 1
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#nvjpeg-release-12-2">
+                                    2.7.3. nvJPEG: Release 12.2
+                                </a>
+                            </li>
+                            <li class="toctree-l3">
+                                <a class="reference internal"
+                                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#nvjpeg-release-12-0">
+                                    2.7.4. nvJPEG: Release 12.0
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="toctree-l1">
+                <a class="reference internal"
+                    href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#notices">
+                    3. Notices
+                </a>
+                <ul>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#notice">
+                            3.1. Notice
+                        </a>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#opencl">
+                            3.2. OpenCL
+                        </a>
+                    </li>
+                    <li class="toctree-l2">
+                        <a class="reference internal"
+                            href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#trademarks">
+                            3.3. Trademarks
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="notices">
+            <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+                Privacy Policy
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+                Manage My Privacy
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+                Do Not Sell or Share My Data
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+                Terms of Service
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+                Accessibility
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+                Corporate Policies
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+                Product Security
+            </a>
+            |
+            <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+                Contact
+            </a>
+        </p>
+        <p>
+            Copyright Â© 2007-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+        </p>
+        <p>
+            <span class="lastupdated">
+                Last updated on Jun 20, 2024.
+            </span>
+        </p>
+    </body>
+</body>
+
+</html>

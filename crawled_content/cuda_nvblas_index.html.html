@@ -1,0 +1,925 @@
+<html><head><title>NVBLAS</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/nvblas/contents.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html">
+    1. Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-overview">
+    2. NVBLAS Overview
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#gpu-accelerated-routines">
+    3. GPU Accelerated Routines
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#blas-symbols-interception">
+    4. BLAS Symbols Interception
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#device-memory-support">
+    5. Device Memory Support
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#security-precaution">
+    6. Security Precaution
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#configuration">
+    7. Configuration
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-config-file-environment-variable">
+      7.1. NVBLAS_CONFIG_FILE Environment Variable
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#configuration-keywords">
+      7.2. Configuration Keywords
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-logfile">
+        7.2.1. NVBLAS_LOGFILE
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-trace-log-enabled">
+        7.2.2. NVBLAS_TRACE_LOG_ENABLED
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-cpu-blas-lib">
+        7.2.3. NVBLAS_CPU_BLAS_LIB
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-gpu-list">
+        7.2.4. NVBLAS_GPU_LIST
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-tile-dim">
+        7.2.5. NVBLAS_TILE_DIM
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-gpu-disabled-blas-func-name">
+        7.2.6. NVBLAS_GPU_DISABLED_&lt;BLAS_FUNC_NAME&gt;
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-cpu-ratio-blas-func-name">
+        7.2.7. NVBLAS_CPU_RATIO_&lt;BLAS_FUNC_NAME&gt;
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-autopin-mem-enabled">
+        7.2.8. NVBLAS_AUTOPIN_MEM_ENABLED
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#configuration-file-example">
+        7.2.9. Configuration File Example
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-installation">
+    8. NVBLAS Installation
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#usage">
+    9. Usage
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#notices">
+    10. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#notice">
+      10.1. Notice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#opencl">
+      10.2. OpenCL
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/nvblas/index.html#trademarks">
+      10.3. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/nvblas/contents.html">
+  NVBLAS
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   <span class="section-number">
+    1.
+   </span>
+   Introduction
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/NVBLAS_Library.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <p class="rubric-h1 rubric">
+  NVBLAS
+ </p>
+ <p>
+  The User guide for NVBLAS, drop-in BLAS replacement, multi-GPUs accelerated
+ </p>
+ <h1>
+  <span class="section-number">
+   1.
+  </span>
+  Introduction
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#introduction" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The NVBLAS Library is a GPU-accelerated Libary that implements BLAS (Basic Linear Algebra Subprograms). It can accelerate most BLAS Level-3 routines by dynamically routing BLAS calls to one or more NVIDIA GPUs present in the system, when the charateristics of the call make it speed up on a GPU.
+ </p>
+ <h1>
+  <span class="section-number">
+   2.
+  </span>
+  NVBLAS Overview
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-overview" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The NVBLAS Library is built on top of the cuBLAS Library using only the CUBLASXT API (refer to the CUBLASXT API section of the cuBLAS Documentation for more details). NVBLAS also requires the presence of a CPU BLAS lirbary on the system. Currently NVBLAS intercepts only compute intensive BLAS Level-3 calls (see table below). Depending on the charateristics of those BLAS calls, NVBLAS will redirect the calls to the GPUs present in the system or to CPU. That decision is based on a simple heuristic that estimates if the BLAS call will execute for long enough to amortize the PCI transfers of the input and output data to the GPU.
+  Because NVBLAS does not support all standard BLAS routines, it might be necessary to associate it with an existing full BLAS Library. Please refer to the Usage section for more details.
+ </p>
+ <h1>
+  <span class="section-number">
+   3.
+  </span>
+  GPU Accelerated Routines
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#gpu-accelerated-routines" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  NVBLAS offloads only the compute-intensive BLAS3 routines which have the best potential for acceleration on GPUs.
+ </p>
+ <p>
+  The following table shows the currently supported routines:
+ </p>
+ <table class="docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Routine
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Types
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Operation
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     gemm
+    </p>
+   </td>
+   <td>
+    <p>
+     S,D,C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Multiplication of 2 matrices
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     syrk
+    </p>
+   </td>
+   <td>
+    <p>
+     S,D,C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Symmetric rank-k update
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     herk
+    </p>
+   </td>
+   <td>
+    <p>
+     C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Hermitian rank-k update
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     syr2k
+    </p>
+   </td>
+   <td>
+    <p>
+     S,D,C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Symmetric rank-2k update
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     her2k
+    </p>
+   </td>
+   <td>
+    <p>
+     C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Hermitian rank-2k update
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     trsm
+    </p>
+   </td>
+   <td>
+    <p>
+     S,D,C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Triangular solve with multiple right-hand sides
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     trmm
+    </p>
+   </td>
+   <td>
+    <p>
+     S,D,C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Triangular matrix-matrix multiplication
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     symm
+    </p>
+   </td>
+   <td>
+    <p>
+     S,D,C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Symmetric matrix-matrix multiplication
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     hemm
+    </p>
+   </td>
+   <td>
+    <p>
+     C,Z
+    </p>
+   </td>
+   <td>
+    <p>
+     Hermitian matrix-matrix multiplication
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h1>
+  <span class="section-number">
+   4.
+  </span>
+  BLAS Symbols Interception
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#blas-symbols-interception" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Standard BLAS Library implementations usually expose multiple symbols for the same routines. Letâs say
+  <span class="pre">
+   func
+  </span>
+  is a BLAS routine name,
+  <span class="pre">
+   func_
+  </span>
+  or/and
+  <span class="pre">
+   func
+  </span>
+  are usually defined as extern symbols. Some BLAS Libraries might also expose some symbols with a proprietary appended prefix. NVBLAS intercepts only the symbols
+  <span class="pre">
+   func_
+  </span>
+  and
+  <span class="pre">
+   func
+  </span>
+  . The user needs to make sure that the application intended to be GPU-accelerated by NVBLAS actually calls those defined symbols. Any other symbols will not be intercepted and the original BLAS routine will be executed for those cases.
+ </p>
+ <h1>
+  <span class="section-number">
+   5.
+  </span>
+  Device Memory Support
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#device-memory-support" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Starting with Release 8.0, data can be located on any GPU device, even on GPU devices that are not configured to be part of the computation. When any of the data is located on a GPU, the computation will be exclusively done on GPU whatever the size of the problem. Also, this feature has to be used with caution: the user has to be sure that the BLAS call will indeed be intercepted by NVBLAS, otherwise it will result in a crash when the CPU BLAS tries to execute it.
+ </p>
+ <h1>
+  <span class="section-number">
+   6.
+  </span>
+  Security Precaution
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#security-precaution" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Because the NVBLAS Library relies on a symbols interception mechanism, it is essential to make sure it has not been compromised. In that regard, NVBLAS should never be used from a process running at elevated privileges, such as Administrator on Windows or root on Linux.
+ </p>
+ <h1>
+  <span class="section-number">
+   7.
+  </span>
+  Configuration
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#configuration" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Because NVBLAS is a drop-in replacement of BLAS, it must be configured through an ASCII text file that describes how many and which GPUs can participate in the intercepted BLAS calls. The configuration file is parsed at the time of the loading of the library. The format of the configuration file is based on keywords optionally followed by one or more user-defined parameters. At most one keyword per line is allowed. Blank lines or lines beginning with the character
+  <span class="pre">
+   #
+  </span>
+  are ignored.
+ </p>
+ <h2>
+  <span class="section-number">
+   7.1.
+  </span>
+  NVBLAS_CONFIG_FILE Environment Variable
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-config-file-environment-variable" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The location and name of the configuration file must be defined by the environment variable
+  <span class="pre">
+   NVBLAS_CONFIG_FILE
+  </span>
+  . By default, if
+  <span class="pre">
+   NVBLAS_CONFIG_FILE
+  </span>
+  is not defined, NVBLAS will try to open the file
+  <span class="pre">
+   nvblas.conf
+  </span>
+  in the current directory. For a safe use of NVBLAS, the configuration file should have have restricted write permissions.
+ </p>
+ <h2>
+  <span class="section-number">
+   7.2.
+  </span>
+  Configuration Keywords
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#configuration-keywords" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The configuration keywords syntax is described in the following subsections.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.1.
+  </span>
+  NVBLAS_LOGFILE
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-logfile" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword defines the file where NVBLAS should print status and error messages. By default, if not defined, the standard error output file (eg. stderr) will be used. It is advised to define this keyword early in the configuration to capture errors in parsing that file itself.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.2.
+  </span>
+  NVBLAS_TRACE_LOG_ENABLED
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-trace-log-enabled" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When this keyword is defined, every intercepted BLAS calls will be logged into the NVBLAS_LOGFILE. This feature, even though intrusive, can be useful for debugging purposes.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.3.
+  </span>
+  NVBLAS_CPU_BLAS_LIB
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-cpu-blas-lib" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword defines the CPU BLAS dynamic library file (for example,
+  <span class="pre">
+   .so
+  </span>
+  file on Linux or
+  <span class="pre">
+   .dll
+  </span>
+  on Windows) that NVBLAS should open to find the CPU BLAS symbols definitions. This keyword must be defined for NVBLAS to work. Because CPU Blas libraries are often composed of multiple files, even though this keyword is set to the full path to the main file of the CPU library, it might still be necessary to define the right path to find the rest of the library files in the environment of your system. On Linux, this can be done by setting the environment variable
+  <span class="pre">
+   LD_LIBRARY_PATH
+  </span>
+  whereas on Windows, this can be done by setting the environment variable
+  <span class="pre">
+   PATH
+  </span>
+  .
+ </p>
+ <p>
+  For a safe use of NVBLAS, the following precautions are strongly advised:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The CPU BLAS Library should be located where ordinary users do not have write permissions.
+   </p>
+  </li>
+  <li>
+   <p>
+    The path specified should be absolute, not relative.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   7.2.4.
+  </span>
+  NVBLAS_GPU_LIST
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-gpu-list" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword defines the list of GPUs that should participate in the computation of the intercepted BLAS calls. If not defined, only GPU device 0 is used, since that is normally the most compute-capable GPU installed in the system. This keyword can be set to a list of device numbers separated by blank characters. Also the following wildcard keywords are also accepted for simplicity :
+ </p>
+ <table class="docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Keyword
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Meaning
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     <span class="pre">
+      ALL
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     All compute-capable GPUs detected on the system will be used by NVBLAS
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     <span class="pre">
+      ALL0
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     GPU device 0, AND all others GPUs detected that have the same compute-capabilities as device 0 will be used by NVBLAS
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  In the current release of CUBLAS, the CUBLASXT API supports two GPUs if they are on the same board such as Tesla K10 or GeForce GTX690 and one GPU otherwise. Because NVBLAS is built on top of the CUBLASXT API, NVBLAS has the same restriction. If access to more GPUs devices is needed, details of the licensing are described at
+  <a class="reference external" href="https://developer.nvidia.com/cublasxt">
+   cublasXt
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.5.
+  </span>
+  NVBLAS_TILE_DIM
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-tile-dim" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword defines the tile dimension that should be used to divide the matrices involved in the computation. This definition maps directly to a call of the cublasXt API routine
+  <span class="pre">
+   cublasXtSetBlockDim
+  </span>
+  . Refer to
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cublas/index.html">
+   cuBLAS documentation
+  </a>
+  to understand the tradeoffs associated with setting this to a larger or a smaller value.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.6.
+  </span>
+  <a class="reference external" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas_gpu_disabled">
+   NVBLAS_GPU_DISABLED_&lt;BLAS_FUNC_NAME&gt;
+  </a>
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-gpu-disabled-blas-func-name" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword, appended with the name of a BLAS routine disables NVBLAS from running a specified routine on the GPU. This feature is intended mainly for debugging purposes. By default, all supported BLAS routines are enabled.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.7.
+  </span>
+  <a class="reference external" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas_cpu_ratio">
+   NVBLAS_CPU_RATIO_&lt;BLAS_FUNC_NAME&gt;
+  </a>
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-cpu-ratio-blas-func-name" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword, appended with the name of ta BLAS routine defines the ratio of the workload that should remain on the CPU in the event that the NVBLAS decides to offload work for that routine on the GPU. This functionality is directly mapped to the cublasXt API routine
+  <span class="pre">
+   cublasXtSetCpuRatio
+  </span>
+  . By default, the ratio is defined to zero for all routines. Please refer to the
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cublas/index.html">
+   cuBLAS documentation
+  </a>
+  for details and for the list of routines which support this feature.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.8.
+  </span>
+  NVBLAS_AUTOPIN_MEM_ENABLED
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-autopin-mem-enabled" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This keyword enables the Pinning Memory mode. This functionality is directly mapped to the cublasXt API routine
+  <span class="pre">
+   cublasXtSetPinningMemMode
+  </span>
+  . If this keyowrd is not present in the configuration file, the Pinning Memory mode will be set to
+  <span class="pre">
+   CUBLASXT_PINNING_DISABLED
+  </span>
+  .
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  There are some restrictions to use this feature as specified in the cuBLAS documentation of the underlying routine
+  <span class="pre">
+   cublasXtSetPinningMemMode
+  </span>
+  . Specifically when NVBLAS is used in a multi-threaded applications, this option should not be used if there is a chance that matrices used by different threads overlaps while calling NVBLAS. Please refer to the cuBLAS Documentation of the routine
+  <span class="pre">
+   `cublasXtSetPinningMemMode
+  </span>
+  &lt;
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cublas/index.html#cublasxt_setPinningMemMode">
+   https://docs.nvidia.com/cuda/cublas/index.html#cublasxt_setPinningMemMode
+  </a>
+  &gt;`__ for details.
+ </p>
+ <h3>
+  <span class="section-number">
+   7.2.9.
+  </span>
+  Configuration File Example
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#configuration-file-example" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The following example shows a typical NVBLAS configuration file :
+ </p>
+ <pre># This is the configuration file to use NVBLAS Library
+# Setup the environment variable NVBLAS_CONFIG_FILE to specify your own config file.
+# By default, if NVBLAS_CONFIG_FILE is not defined,
+# NVBLAS Library will try to open the file "nvblas.conf" in its current directory
+# Example : NVBLAS_CONFIG_FILE  /home/cuda_user/my_nvblas.conf
+# The config file should have restricted write permissions accesses
+
+# Specify which output log file (default is stderr)
+NVBLAS_LOGFILE  nvblas.log
+
+# Enable trace log of every intercepted BLAS calls
+NVBLAS_TRACE_LOG_ENABLED
+
+#Put here the CPU BLAS fallback Library of your choice
+#It is strongly advised to use full path to describe the location of the CPU Library
+NVBLAS_CPU_BLAS_LIB  /usr/lib/libopenblas.so
+#NVBLAS_CPU_BLAS_LIB  &lt;mkl_path_installtion&gt;/libmkl_rt.so
+
+# List of GPU devices Id to participate to the computation
+# Use ALL if you want all your GPUs to contribute
+# Use ALL0, if you want all your GPUs of the same type as device 0 to contribute
+# However, NVBLAS consider that all GPU have the same performance and PCI bandwidth
+# By default if no GPU are listed, only device 0 will be used
+
+#NVBLAS_GPU_LIST 0 2 4
+#NVBLAS_GPU_LIST ALL
+NVBLAS_GPU_LIST ALL0
+
+# Tile Dimension
+NVBLAS_TILE_DIM 2048
+
+# Autopin Memory
+NVBLAS_AUTOPIN_MEM_ENABLED
+
+#List of BLAS routines that are prevented from running on GPU (use for debugging purpose
+# The current list of BLAS routines supported by NVBLAS are
+# GEMM, SYRK, HERK, TRSM, TRMM, SYMM, HEMM, SYR2K, HER2K
+
+#NVBLAS_GPU_DISABLED_SGEMM
+#NVBLAS_GPU_DISABLED_DGEMM
+#NVBLAS_GPU_DISABLED_CGEMM
+#NVBLAS_GPU_DISABLED_ZGEMM
+
+# Computation can be optionally hybridized between CPU and GPU
+# By default, GPU-supported BLAS routines are ran fully on GPU
+# The option NVBLAS_CPU_RATIO_&lt;BLAS_ROUTINE&gt; give the ratio [0,1]
+# of the amount of computation that should be done on CPU
+# CAUTION : this option should be used wisely because it can actually
+# significantly reduced the overall performance if too much work is given to CPU
+
+#NVBLAS_CPU_RATIO_CGEMM 0.07
+</pre>
+ <h1>
+  <span class="section-number">
+   8.
+  </span>
+  NVBLAS Installation
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#nvblas-installation" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The NVBLAS Library is part of the CUDA Toolkit, and will be installed along all the other CUDA libraries. It is available on 64-bit operating systems. NVBLAS Library is built on top of cuBLAS, so the cuBLAS library needs to be accessible by NVBLAS.
+ </p>
+ <h1>
+  <span class="section-number">
+   9.
+  </span>
+  Usage
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#usage" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  To use the NVBLAS Library, the user application must be relinked against NVBLAS in addition to the original CPU Blas (technically only NVBLAS is needed unless some BLAS routines not supported by NVBLAS are used by the application). To be sure that the linker links against the exposed symbols of NVBLAS and not the ones from the CPU BLAS, the NVBLAS Library needs to be put before the CPU BLAS on the linkage command line.
+ </p>
+ <p>
+  On Linux, an alternative way to use NVBLAS Library is to use the
+  <span class="pre">
+   LD_PRELOAD
+  </span>
+  environment variable; this technique has the advantage of avoiding the relinkage step. However, the user should avoid defining that environment variable globally because it will cause the NVBLAS library to be loaded by every shell command executed on the system, thus leading to a lack of responsiveness of the system.
+ </p>
+ <p>
+  Finally, mathematical tools and libraries often offer the opportunity to specify the BLAS Library to be used through an environment variable or a configuration file. Because NVBLAS does not support all the standard BLAS routines, it might be necessary to pair NVBLAS with a full BLAS library, even though your application only calls supported NVBLAS routines. Fortunately, those tools and libraries usually offer a way to specify multiple BLAS Libraries. Please refer to the documentation of the appropriate tools and libraries for details.
+ </p>
+ <h1>
+  <span class="section-number">
+   10.
+  </span>
+  Notices
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#notices" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   10.1.
+  </span>
+  Notice
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#notice" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  This document is provided for information purposes only and shall not be regarded as a warranty of a certain functionality, condition, or quality of a product. NVIDIA Corporation (âNVIDIAâ) makes no representations or warranties, expressed or implied, as to the accuracy or completeness of the information contained in this document and assumes no responsibility for any errors contained herein. NVIDIA shall have no liability for the consequences or use of such information or for any infringement of patents or other rights of third parties that may result from its use. This document is not a commitment to develop, release, or deliver any Material (defined below), code, or functionality.
+ </p>
+ <p>
+  NVIDIA reserves the right to make corrections, modifications, enhancements, improvements, and any other changes to this document, at any time without notice.
+ </p>
+ <p>
+  Customer should obtain the latest relevant information before placing orders and should verify that such information is current and complete.
+ </p>
+ <p>
+  NVIDIA products are sold subject to the NVIDIA standard terms and conditions of sale supplied at the time of order acknowledgement, unless otherwise agreed in an individual sales agreement signed by authorized representatives of NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby expressly objects to applying any customer general terms and conditions with regards to the purchase of the NVIDIA product referenced in this document. No contractual obligations are formed either directly or indirectly by this document.
+ </p>
+ <p>
+  NVIDIA products are not designed, authorized, or warranted to be suitable for use in medical, military, aircraft, space, or life support equipment, nor in applications where failure or malfunction of the NVIDIA product can reasonably be expected to result in personal injury, death, or property or environmental damage. NVIDIA accepts no liability for inclusion and/or use of NVIDIA products in such equipment or applications and therefore such inclusion and/or use is at customerâs own risk.
+ </p>
+ <p>
+  NVIDIA makes no representation or warranty that products based on this document will be suitable for any specified use. Testing of all parameters of each product is not necessarily performed by NVIDIA. It is customerâs sole responsibility to evaluate and determine the applicability of any information contained in this document, ensure the product is suitable and fit for the application planned by customer, and perform the necessary testing for the application in order to avoid a default of the application or the product. Weaknesses in customerâs product designs may affect the quality and reliability of the NVIDIA product and may result in additional or different conditions and/or requirements beyond those contained in this document. NVIDIA accepts no liability related to any default, damage, costs, or problem which may be based on or attributable to: (i) the use of the NVIDIA product in any manner that is contrary to this document or (ii) customer product designs.
+ </p>
+ <p>
+  No license, either expressed or implied, is granted under any NVIDIA patent right, copyright, or other NVIDIA intellectual property right under this document. Information published by NVIDIA regarding third-party products or services does not constitute a license from NVIDIA to use such products or services or a warranty or endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property rights of the third party, or a license from NVIDIA under the patents or other intellectual property rights of NVIDIA.
+ </p>
+ <p>
+  Reproduction of information in this document is permissible only if approved in advance by NVIDIA in writing, reproduced without alteration and in full compliance with all applicable export laws and regulations, and accompanied by all associated conditions, limitations, and notices.
+ </p>
+ <p>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding any damages that customer might incur for any reason whatsoever, NVIDIAâs aggregate and cumulative liability towards customer for the products described herein shall be limited in accordance with the Terms of Sale for the product.
+ </p>
+ <h2>
+  <span class="section-number">
+   10.2.
+  </span>
+  OpenCL
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#opencl" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  OpenCL is a trademark of Apple Inc. used under license to the Khronos Group Inc.
+ </p>
+ <h2>
+  <span class="section-number">
+   10.3.
+  </span>
+  Trademarks
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/nvblas/index.html#trademarks" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2007-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

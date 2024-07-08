@@ -1,0 +1,4585 @@
+<html><head><title>1. Introduction — Multi-Process Service r555 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/deploy/mps/contents.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/deploy/mps/index.html">
+    1. Introduction
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#at-a-glance">
+      1.1. At a Glance
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#mps">
+        1.1.1. MPS
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#volta-mps">
+        1.1.2. Volta MPS
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#intended-audience">
+        1.1.3. Intended Audience
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#organization-of-this-document">
+        1.1.4. Organization of This Document
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#prerequisites">
+      1.2. Prerequisites
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#concepts">
+      1.3. Concepts
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#why-mps-is-needed">
+        1.3.1. Why MPS is Needed
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#what-mps-is">
+        1.3.2. What MPS Is
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#see-also">
+      1.4. See Also
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#when-to-use-mps">
+    2. When to Use MPS
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#the-benefits-of-mps">
+      2.1. The Benefits of MPS
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#gpu-utilization">
+        2.1.1. GPU Utilization
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#reduced-on-gpu-context-storage">
+        2.1.2. Reduced on-GPU context storage
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#reduced-gpu-context-switching">
+        2.1.3. Reduced GPU context switching
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#identifying-candidate-applications">
+      2.2. Identifying Candidate applications
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#considerations">
+      2.3. Considerations
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#system-considerations">
+        2.3.1. System Considerations
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#limitations">
+          2.3.1.1. Limitations
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#gpu-compute-modes">
+          2.3.1.2. GPU Compute Modes
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#application-considerations">
+        2.3.2. Application Considerations
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#memory-protection-and-error-containment">
+        2.3.3. Memory Protection and Error Containment
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#memory-protection">
+          2.3.3.1. Memory Protection
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#error-containment">
+          2.3.3.2. Error Containment
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#mps-on-multi-gpu-systems">
+        2.3.4. MPS on Multi-GPU Systems
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#performance">
+        2.3.5. Performance
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-server-connection-limits">
+          2.3.5.1. Client-Server Connection Limits
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#volta-mps-execution-resource-provisioning">
+          2.3.5.2. Volta MPS Execution Resource Provisioning
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#threads-and-linux-scheduling">
+          2.3.5.3. Threads and Linux Scheduling
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#volta-mps-device-memory-limit">
+          2.3.5.4. Volta MPS Device Memory Limit
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#interaction-with-tools">
+        2.3.6. Interaction with Tools
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#debugging-and-cuda-gdb">
+          2.3.6.1. Debugging and CUDA-GDB
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#memcheck">
+          2.3.6.2. memcheck
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#profiling">
+          2.3.6.3. Profiling
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-early-termination">
+        2.3.7. Client Early Termination
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-priority-level-control">
+        2.3.8. Client Priority Level Control
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#architecture">
+    3. Architecture
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#background">
+      3.1. Background
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-server-architecture">
+      3.2. Client-server Architecture
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#provisioning-sequence">
+      3.3. Provisioning Sequence
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#server">
+        3.3.1. Server
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-attach-detach">
+        3.3.2. Client Attach/Detach
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#appendix-tools-and-interface-reference">
+    4. Appendix: Tools and Interface Reference
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#utilities-and-daemons">
+      4.1. Utilities and Daemons
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-cuda-mps-control">
+        4.1.1. nvidia-cuda-mps-control
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-cuda-mps-server">
+        4.1.2. nvidia-cuda-mps-server
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-smi">
+        4.1.3. nvidia-smi
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#environment-variables">
+      4.2. Environment Variables
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-visible-devices">
+        4.2.1. CUDA_VISIBLE_DEVICES
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-pipe-directory">
+        4.2.2. CUDA_MPS_PIPE_DIRECTORY
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-log-directory">
+        4.2.3. CUDA_MPS_LOG_DIRECTORY
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-device-max-connections">
+        4.2.4. CUDA_DEVICE_MAX_CONNECTIONS
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-active-thread-percentage">
+        4.2.5. CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#mps-control-daemon-level">
+          4.2.5.1. MPS Control Daemon Level
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-process-level">
+          4.2.5.2. Client Process Level
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-cuda-context-level">
+          4.2.5.3. Client CUDA Context Level
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-enable-per-ctx-device-multiprocessor-partitioning">
+        4.2.6. CUDA_MPS_ENABLE_PER_CTX_DEVICE_MULTIPROCESSOR_PARTITIONING
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-pinned-device-mem-limit">
+        4.2.7. CUDA_MPS_PINNED_DEVICE_MEM_LIMIT
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-client-priority">
+        4.2.8. CUDA_MPS_CLIENT_PRIORITY
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#mps-logging-format">
+      4.3. MPS Logging Format
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#control-log">
+        4.3.1. Control Log
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#server-log">
+        4.3.2. Server Log
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#mps-known-issues">
+      4.4. MPS Known Issues
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#appendix-common-tasks">
+    5. Appendix: Common Tasks
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#starting-and-stopping-mps-on-linux">
+      5.1. Starting and Stopping MPS on Linux
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#on-a-multi-user-system">
+        5.1.1. On a Multi-user System
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#starting-mps-control-daemon">
+          5.1.1.1. Starting MPS control daemon
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#shutting-down-mps-control-daemon">
+          5.1.1.2. Shutting Down MPS control daemon
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#log-files">
+          5.1.1.3. Log Files
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#on-a-single-user-system">
+        5.1.2. On a Single-User System
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#id9">
+          5.1.2.1. Starting MPS control daemon
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#starting-mps-client-application">
+          5.1.2.2. Starting MPS client application
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#shutting-down-mps">
+          5.1.2.3. Shutting Down MPS
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#id10">
+          5.1.2.4. Log Files
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#scripting-a-batch-queuing-system">
+        5.1.3. Scripting a Batch Queuing System
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#basic-principles">
+          5.1.3.1. Basic Principles
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#per-job-mps-control-a-torque-pbs-example">
+          5.1.3.2. Per-Job MPS Control: A Torque/PBS Example
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#best-practice-for-sm-partitioning">
+      5.2. Best Practice for SM Partitioning
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#notices">
+    6. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#trademarks">
+      6.1. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/deploy/mps/contents.html">
+  Multi-Process Service
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/deploy/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    1.
+   </span>
+   Introduction
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v555 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf">
+    PDF
+   </a>
+  </li>
+ </ul>
+ <p class="rubric-h1 rubric">
+  Multi-Process Service
+ </p>
+ <p>
+  The Multi-Process Service (MPS) is an alternative, binary-compatible implementation of the CUDA Application Programming Interface (API). The MPS runtime architecture is designed to transparently enable co-operative multi-process CUDA applications, typically MPI jobs, to utilize Hyper-Q capabilities on the latest NVIDIA (Kepler-based) Tesla and Quadro GPUs .
+ </p>
+ <h1>
+  <span class="section-number">
+   1.
+  </span>
+  Introduction
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#introduction" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   1.1.
+  </span>
+  At a Glance
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#at-a-glance" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   1.1.1.
+  </span>
+  MPS
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#mps" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The Multi-Process Service (MPS) is an alternative, binary-compatible implementation of the CUDA Application Programming Interface (API). The MPS runtime architecture is designed to transparently enable cooperative multi-process CUDA applications, typically MPI jobs, to utilize Hyper-Q capabilities on the latest NVIDIA (Kepler and later) GPUs. Hyper-Q allows CUDA kernels to be processed concurrently on the same GPU; this can benefit performance when the GPU compute capacity is underutilized by a single application process.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.1.2.
+  </span>
+  Volta MPS
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#volta-mps" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The Volta architecture introduced new MPS capabilities. Compared to MPS on pre-Volta GPUs, Volta MPS provides a few key improvements:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Volta MPS clients submit work directly to the GPU without passing through the MPS server.
+   </p>
+  </li>
+  <li>
+   <p>
+    Each Volta MPS client owns its own GPU address space instead of sharing GPU address space with all other MPS clients.
+   </p>
+  </li>
+  <li>
+   <p>
+    Volta MPS supports limited execution resource provisioning for Quality of Service (QoS).
+   </p>
+  </li>
+ </ul>
+ <p>
+  This document will introduce the new capabilities and note the differences between Volta MPS and MPS on pre-Volta GPUs. Running MPS on Volta will automatically enable the new capabilities.
+ </p>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/mps/_images/image1.png">
+ </a>
+ <h3>
+  <span class="section-number">
+   1.1.3.
+  </span>
+  Intended Audience
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#intended-audience" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  This document is a comprehensive guide to MPS capabilities and usage. It is intended to be read by application developers and users who will be running GPU calculations and intend to achieve the greatest level of execution performance. It is also intended to be read by system administrators who will be enabling the MPS capability in a user-friendly way, typically on multi-node clusters.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.1.4.
+  </span>
+  Organization of This Document
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#organization-of-this-document" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The order of the presentation is as follows:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Introduction and Concepts â describes why MPS is needed and how it enables Hyper-Q for multi-process applications.
+   </p>
+  </li>
+  <li>
+   <p>
+    When to Use MPS â describes what factors to consider when choosing to run an application with or choosing to deploy MPS for your users.
+   </p>
+  </li>
+  <li>
+   <p>
+    Architecture â describes the client-server architecture of MPS in detail and how it multiplexes clients onto the GPU.
+   </p>
+  </li>
+  <li>
+   <p>
+    Appendices â Reference information for the tools and interfaces used by the MPS system and guidance for common use-cases.
+   </p>
+  </li>
+ </ul>
+ <h2>
+  <span class="section-number">
+   1.2.
+  </span>
+  Prerequisites
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#prerequisites" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Portions of this document assume that you are already familiar with:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    the structure of CUDA applications and how they utilize the GPU via the CUDA Runtime and CUDA Driver software libraries.
+   </p>
+  </li>
+  <li>
+   <p>
+    concepts of modern operating systems, such as how processes and threads are scheduled and how inter-process communication typically works
+   </p>
+  </li>
+  <li>
+   <p>
+    the Linux command-line shell environment
+   </p>
+  </li>
+  <li>
+   <p>
+    configuring and running MPI programs via a command-line interface
+   </p>
+  </li>
+ </ul>
+ <h2>
+  <span class="section-number">
+   1.3.
+  </span>
+  Concepts
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#concepts" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   1.3.1.
+  </span>
+  Why MPS is Needed
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#why-mps-is-needed" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  To balance workloads between CPU and GPU tasks, MPI processes are often allocated individual CPU cores in a multi-core CPU machine to provide CPU-core parallelization of potential Amdahl bottlenecks. As a result, the amount of work each individual MPI process is assigned may underutilize the GPU when the MPI process is accelerated using CUDA kernels. While each MPI process may end up running faster, the GPU is being used inefficiently. The Multi-Process Service takes advantage of the inter-MPI rank parallelism, increasing the overall GPU utilization.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.3.2.
+  </span>
+  What MPS Is
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#what-mps-is" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  MPS is a binary-compatible client-server runtime implementation of the CUDA API which consists of several components:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Control Daemon Process â The control daemon is responsible for starting and stopping the server, as well as coordinating connections between clients and servers.
+   </p>
+  </li>
+  <li>
+   <p>
+    Client Runtime â The MPS client runtime is built into the CUDA Driver library and may be used transparently by any CUDA application.
+   </p>
+  </li>
+  <li>
+   <p>
+    Server Process â The server is the clientsâ shared connection to the GPU and provides concurrency between clients.
+   </p>
+  </li>
+ </ul>
+ <h2>
+  <span class="section-number">
+   1.4.
+  </span>
+  See Also
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#see-also" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <ul class="simple">
+  <li>
+   <p>
+    Manpage for
+    <span class="pre">
+     nvidia-cuda-mps-control
+    </span>
+    <span class="pre">
+     (1)
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Manpage for
+    <span class="pre">
+     nvidia-smi
+    </span>
+    <span class="pre">
+     (1)
+    </span>
+   </p>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   2.
+  </span>
+  When to Use MPS
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#when-to-use-mps" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   2.1.
+  </span>
+  The Benefits of MPS
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#the-benefits-of-mps" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   2.1.1.
+  </span>
+  GPU Utilization
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#gpu-utilization" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  A single process may not utilize all the compute and memory-bandwidth capacity available on the GPU. MPS allows kernel and memcopy operations from different processes to overlap on the GPU, achieving higher utilization and shorter running times.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.1.2.
+  </span>
+  Reduced on-GPU context storage
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#reduced-on-gpu-context-storage" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Without MPS, each CUDA processes using a GPU allocates separate storage and scheduling resources on the GPU. In contrast, the MPS server allocates one copy of GPU storage and scheduling resources shared by all its clients. Volta MPS supports increased isolation between MPS clients, so the resource reduction is to a much lesser degree.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.1.3.
+  </span>
+  Reduced GPU context switching
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#reduced-gpu-context-switching" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Without MPS, when processes share the GPU their scheduling resources must be swapped on and off the GPU. The MPS server shares one set of scheduling resources between all of its clients, eliminating the overhead of swapping when the GPU is scheduling between those clients.
+ </p>
+ <h2>
+  <span class="section-number">
+   2.2.
+  </span>
+  Identifying Candidate applications
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#identifying-candidate-applications" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  MPS is useful when each application process does not generate enough work to saturate the GPU. Multiple processes can be run per node using MPS to enable more concurrency. Applications like this are identified by having a small number of blocks-per-grid.
+ </p>
+ <p>
+  Further, if the application shows a low GPU occupancy because of a small number of threads-per-grid, performance improvements may be achievable with MPS.Using fewer blocks-per-grid in the kernel invocation and more threads-per-block to increase the occupancy per block is recommended. MPS allows the leftover GPU capacity to be occupied with CUDA kernels running from other processes.
+ </p>
+ <p>
+  These cases arise in strong-scaling situations, where the compute capacity (node, CPU core and/or GPU count) is increased while the problem size is held fixed. Though the total amount of computation work stays the same, the work per process decreases and may underutilize the available compute capacity while the application is running. With MPS, the GPU will allow kernel launches from different processes to run concurrently and remove an unnecessary point of serialization from the computation.
+ </p>
+ <h2>
+  <span class="section-number">
+   2.3.
+  </span>
+  Considerations
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#considerations" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   2.3.1.
+  </span>
+  System Considerations
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#system-considerations" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <h4>
+  <span class="section-number">
+   2.3.1.1.
+  </span>
+  Limitations
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#limitations" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <ul class="simple">
+  <li>
+   <p>
+    MPS is only supported on the Linux operating system. The MPS server will fail to start when launched on an operating system other than Linux.
+   </p>
+  </li>
+  <li>
+   <p>
+    Only Volta MPS is supported on Tegra platforms.
+   </p>
+  </li>
+  <li>
+   <p>
+    MPS requires a GPU with compute capability version 3.5 or higher. The MPS server will fail to start if one of the GPUs visible after applying
+    <span class="pre">
+     CUDA_VISIBLE_DEVICES
+    </span>
+    is not of compute capability 3.5 or higher.
+   </p>
+  </li>
+  <li>
+   <p>
+    The Unified Virtual Addressing (UVA) feature of CUDA must be available, which is the default for any 64-bit CUDA program running on a GPU with compute capability version 2.0 or higher. If UVA is unavailable, the MPS server will fail to start.
+   </p>
+  </li>
+  <li>
+   <p>
+    The amount of page-locked host memory that can be allocated by MPS clients is limited by the size of the tmpfs filesystem (/dev/shm).
+   </p>
+  </li>
+  <li>
+   <p>
+    Exclusive-mode restrictions are applied to the MPS server, not MPS clients. GPU compute modes are not supported on Tegra platforms.
+   </p>
+  </li>
+  <li>
+   <p>
+    Only one user on a system may have an active MPS server.
+   </p>
+  </li>
+  <li>
+   <p>
+    The MPS control daemon will queue MPS server activation requests from separate users, leading to serialized exclusive access of the GPU between users regardless of GPU exclusivity settings.
+   </p>
+  </li>
+  <li>
+   <p>
+    All MPS client behavior will be attributed to the MPS server process by system monitoring and accounting tools (for example, nvidia-smi, NVML API).
+   </p>
+  </li>
+ </ul>
+ <h4>
+  <span class="section-number">
+   2.3.1.2.
+  </span>
+  GPU Compute Modes
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#gpu-compute-modes" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Three Compute Modes are supported via settings accessible in nvidia-smi:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     PROHIBITED
+    </span>
+    â the GPU is not available for compute applications.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     EXCLUSIVE_PROCESS
+    </span>
+    â the GPU is assigned to only one process at a time, and individual process threads may submit work to the GPU concurrently.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     DEFAULT
+    </span>
+    â multiple processes can use the GPU simultaneously. Individual threads of each process may submit work to the GPU simultaneously.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Using MPS effectively causes
+  <span class="pre">
+   EXCLUSIVE_PROCESS
+  </span>
+  mode to behave like DEFAULT mode for all MPS clients. MPS will always allow multiple clients to use the GPU via the MPS server.
+ </p>
+ <p>
+  When using MPS it is recommended to use
+  <span class="pre">
+   EXCLUSIVE_PROCESS
+  </span>
+  mode to ensure that only a single MPS server is using the GPU, which provides additional insurance that the MPS server is the single point of arbitration between all CUDA processes for that GPU.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.3.2.
+  </span>
+  Application Considerations
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#application-considerations" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ul class="simple">
+  <li>
+   <p>
+    The NVIDIA Codec SDK:
+    <a class="reference external" href="https://developer.nvidia.com/nvidia-video-codec-sdk">
+     https://developer.nvidia.com/nvidia-video-codec-sdk
+    </a>
+    is not supported under MPS on pre-Volta MPS clients.
+   </p>
+  </li>
+  <li>
+   <p>
+    Only 64-bit applications are supported. The MPS server will fail to start if the CUDA application is not 64-bit. The MPS client will fail CUDA initialization.
+   </p>
+  </li>
+  <li>
+   <p>
+    If an application uses the CUDA driver API, then it must use headers from CUDA 4.0 or later (that is, it must not have been built by setting
+    <span class="pre">
+     CUDA_FORCE_API_VERSION
+    </span>
+    to an earlier version). Context creation in the client will fail if the context version is older than 4.0.
+   </p>
+  </li>
+  <li>
+   <p>
+    Dynamic parallelism is not supported. CUDA module load will fail if the module uses dynamic parallelism features.
+   </p>
+  </li>
+  <li>
+   <p>
+    MPS server only supports clients running with the same UID as the server. The client application will fail to initialize if the server is not running with the same UID. Volta MPS may be launched in
+    <span class="pre">
+     -multiuser-server
+    </span>
+    mode to allow clients under different UIDs to connect to a single MPS server launched under the root user while dropping isolation between users. Refer to
+    <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#server">
+     <span class="std std-ref">
+      Server
+     </span>
+    </a>
+    for details regarding
+    <span class="pre">
+     -multiuser-server
+    </span>
+    mode.
+   </p>
+  </li>
+  <li>
+   <p>
+    Stream callbacks are not supported on pre-Volta MPS clients. Calling any stream callback APIs will return an error.
+   </p>
+  </li>
+  <li>
+   <p>
+    CUDA graphs with host nodes are not supported under MPS on pre-Volta MPS clients.
+   </p>
+  </li>
+  <li>
+   <p>
+    The amount of page-locked host memory that pre-Volta MPS client applications can allocate is limited by the size of the tmpfs filesystem (
+    <span class="pre">
+     /dev/shm
+    </span>
+    ). Attempting to allocate more page-locked memory than the allowed size using any of relevant CUDA APIs will fail.
+   </p>
+  </li>
+  <li>
+   <p>
+    Terminating an MPS client without synchronizing with all outstanding GPU work (via Ctrl-C / program exception such as segfault / signals, etc.) can leave the MPS server and other MPS clients in an undefined state, which may result in hangs, unexpected failures, or corruptions.
+   </p>
+  </li>
+  <li>
+   <p>
+    CUDA IPC between CUDA contexts which are created by processes running as MPS clients and CUDA contexts which are created by processes not running as MPS clients is supported under Volta MPS. CUDA IPC is not supported on Tegra platforms.
+   </p>
+  </li>
+  <li>
+   <p>
+    Launching cooperative group kernel with MPS is not supported on Tegra platforms.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   2.3.3.
+  </span>
+  Memory Protection and Error Containment
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#memory-protection-and-error-containment" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  MPS is only recommended for running cooperative processes effectively acting as a single application, such as multiple ranks of the same MPI job, such that the severity of the following memory protection and error containment limitations is acceptable.
+ </p>
+ <h4>
+  <span class="section-number">
+   2.3.3.1.
+  </span>
+  Memory Protection
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#memory-protection" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Volta MPS client processes have fully isolated GPU address spaces.
+ </p>
+ <p>
+  Pre-Volta MPS client processes allocate memory from different partitions of the same GPU virtual address space. As a result:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    An out-of-range write in a CUDA Kernel can modify the CUDA-accessible memory state of another process and will not trigger an error.
+   </p>
+  </li>
+  <li>
+   <p>
+    An out-of-range read in a CUDA Kernel can access CUDA-accessible memory modified by another process, and will not trigger an error, leading to undefined behavior.
+   </p>
+  </li>
+ </ul>
+ <p>
+  This pre-Volta MPS behavior is constrained to memory accesses from pointers within CUDA Kernels. Any CUDA API restricts MPS clients from accessing any resources outside of that MPS Clientâs memory partition. For example, it is not possible to overwrite another MPS clientâs memory using the
+  <span class="pre">
+   cudaMemcpy()
+  </span>
+  API.
+ </p>
+ <h4>
+  <span class="section-number">
+   2.3.3.2.
+  </span>
+  Error Containment
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#error-containment" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Volta MPS supports limited error containment:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    A fatal GPU fault generated by a Volta MPS client process will be contained within the subset of GPUs shared between all clients with the fatal fault-causing GPU.
+   </p>
+  </li>
+  <li>
+   <p>
+    A fatal GPU fault generated by a Volta MPS client process will be reported to all the clients running on the subset of GPUs in which the fatal fault is contained, without indicating which client generated the error. Note that it is the responsibility of the affected clients to exit after being informed of the fatal GPU fault.
+   </p>
+  </li>
+  <li>
+   <p>
+    Clients running on other GPUs remain unaffected by the fatal fault and will run as normal till completion.
+   </p>
+  </li>
+  <li>
+   <p>
+    Once a fatal fault is observed, the MPS server will wait for all the clients associated with the affected GPUs to exit, prohibiting new client connecting to those GPUs from joining. The status of the MPS server changes from
+    <span class="pre">
+     ACTIVE
+    </span>
+    to
+    <span class="pre">
+     FAULT
+    </span>
+    . When all the existing clients associated with the affected GPUs have exited, the MPS server will recreate the GPU contexts on the affected GPUs and resume processing client requests to those GPUs. The MPS server status changes back to
+    <span class="pre">
+     ACTIVE
+    </span>
+    , indicating that it is able to process new clients.
+   </p>
+  </li>
+ </ul>
+ <p>
+  For example, if your system has devices 0, 1, and 2, and if there are four clients client A, client B, client C, and client D connected to the MPS server: client A runs on device 0, client B runs on device 0 and 1, client C runs on device 1, client D runs on device 2. If client A triggers a fatal GPU fault:
+ </p>
+ <p>
+  Since device 0 and device 1 share a comment client, client B, the fatal GPU fault is contained within device 0 and 1.
+ </p>
+ <p>
+  The fatal GPU fault will be reported to all the clients running on device 0 and 1, i.e., client A, client B, and client C.
+ </p>
+ <p>
+  Client D running on device 2 remain unaffected by the fatal fault and continue to run as normal.
+ </p>
+ <p>
+  The MPS server will wait for client A, client B, and client C to exit and reject any new client requests will be rejected with error
+  <span class="pre">
+   CUDA_ERROR_MPS_SERVER_NOT_READY
+  </span>
+  while the server status is
+  <span class="pre">
+   FAULT
+  </span>
+  . After client A, client B, and client C have exited, the server recreates the GPU contexts on device 0 and device 1 and then resumes accepting client requests on all devices. The server status becomes
+  <span class="pre">
+   ACTIVE
+  </span>
+  again.
+ </p>
+ <p>
+  Information about the fatal GPU fault containment will be logged, including:
+ </p>
+ <p>
+  If the fatal GPU fault is a fatal memory fault, the PID of the client which triggered the fatal GPU memory fault.
+ </p>
+ <p>
+  The device IDs of the devices which are affected by this fatal GPU fault.
+ </p>
+ <p>
+  The PIDs of the clients which are affected by this fatal GPU fault. The status of each affected client becomes
+  <span class="pre">
+   INACTIVE
+  </span>
+  and the status of the MPS server becomes
+  <span class="pre">
+   FAULT
+  </span>
+  .
+ </p>
+ <p>
+  The messages indicating the successful recreation of the affected devices after all the affected clients have exited.
+ </p>
+ <p>
+  Pre-Volta MPS client processes share on-GPU scheduling and error reporting resources. As a result:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    A GPU fault generated by any client will be reported to all clients, without indicating which client generated the error.
+   </p>
+  </li>
+  <li>
+   <p>
+    A fatal GPU fault triggered by one client will terminate the MPS server and the GPU activity of all clients.
+   </p>
+  </li>
+ </ul>
+ <p>
+  CUDA API errors generated on the CPU in the CUDA Runtime or CUDA Driver are delivered only to the calling client.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.3.4.
+  </span>
+  MPS on Multi-GPU Systems
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#mps-on-multi-gpu-systems" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The MPS server supports using multiple GPUs. On systems with more than one GPU, you can use
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  to enumerate the GPUs you would like to use. Refer to
+  <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#environment-variables">
+   <span class="std std-ref">
+    Environment Variables
+   </span>
+  </a>
+  for more details.
+ </p>
+ <p>
+  On systems with a mix of Volta / pre-Volta GPUs, if the MPS server is set to enumerate any Volta GPU, it will discard all pre-Volta GPUs. In other words, the MPS server will either operate only on the Volta GPUs and expose Volta capabilities or operate only on pre-Volta GPUs.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.3.5.
+  </span>
+  Performance
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#performance" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <h4>
+  <span class="section-number">
+   2.3.5.1.
+  </span>
+  Client-Server Connection Limits
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-server-connection-limits" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The pre-Volta MPS Server supports up to 16 client CUDA contexts per-device concurrently. Volta MPS server supports 48 client CUDA contexts per-device. These contexts may be distributed over multiple processes. If the connection limit is exceeded, the CUDA application will fail to create a CUDA Context and return an API error from
+  <span class="pre">
+   cuCtxCreate()
+  </span>
+  or the first CUDA Runtime API call that triggers context creation. Failed connection attempts will be logged by the MPS server.
+ </p>
+ <h4>
+  <span class="section-number">
+   2.3.5.2.
+  </span>
+  Volta MPS Execution Resource Provisioning
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#volta-mps-execution-resource-provisioning" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Volta MPS supports limited execution resource provisioning. The client contexts can be set to only use a portion of the available threads. The provisioning capability is commonly used to achieve two goals:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Reduce client memory footprint: Since each MPS client process has fully isolated address space, each client context allocates independent context storage and scheduling resources. Those resources scale with the amount of threads available to the client. By default, each MPS client has all available threads useable. As MPS is usually used with multiple processes running simultaneously, making all threads accessible to every client is often unnecessary, and therefore wasteful to allocate full context storage. Reducing the number of threads available will effectively reduce the context storage allocation size.
+   </p>
+  </li>
+  <li>
+   <p>
+    Improve QoS: The provisioning mechanism can be used as a classic QoS mechanism to limit available compute bandwidth. Reducing the portion of available threads will also concentrate the work submitted by a client to a set of SMs, reducing destructive interference with other clientsâ submitted work.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Setting the limit does not reserve dedicated resources for any MPS client context. It simply limits how much resources can be used by a client context. Kernels launched from different MPS client contexts may execute on the same SM, depending on load-balancing.
+ </p>
+ <p>
+  By default, each client is provisioned to have access to all available threads. This will allow the maximum degree of scheduling freedom, but at a cost of higher memory footprint due to wasted execution resource allocation. The memory usage of each client process can be queried through nvidia-smi.
+ </p>
+ <p>
+  The provisioning limit can be set via a few different mechanisms for different effects. These mechanisms are categorized into two mechanisms: active thread percentage and programmatic interface. In particular, partitioning via active thread percentage are categorized into two strategies: uniform partitioning and non-uniform partitioning.
+ </p>
+ <p>
+  The limit constrained by the uniform active thread percentage is configured for a client process when it starts and cannot be changed for the client process afterwards. The executed limit is reflected through device attribute
+  <span class="pre">
+   cudaDevAttrMultiProcessorCount
+  </span>
+  whose value remains unchanged throughout the client process.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The MPS control utility provides 2 sets of commands to set/query the limit of all future MPS clients. Refer to
+    <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-cuda-mps-control">
+     <span class="std std-ref">
+      nvidia-cuda-mps-control
+     </span>
+    </a>
+    for more details.
+   </p>
+  </li>
+  <li>
+   <p>
+    Alternatively, the limit for all future MPS clients can be set by setting the environment variable
+    <span class="pre">
+     CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+    </span>
+    for the MPS control process. Refer to
+    <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#mps-control-daemon-level">
+     <span class="std std-ref">
+      MPS Control Daemon Level
+     </span>
+    </a>
+    for more details.
+   </p>
+  </li>
+  <li>
+   <p>
+    The limit can be further constrained for new clients by solely setting the environment variable
+    <span class="pre">
+     CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+    </span>
+    for a client process. Refer to
+    <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-process-level">
+     <span class="std std-ref">
+      Client Process Level
+     </span>
+    </a>
+    for more details.
+   </p>
+  </li>
+ </ul>
+ <p>
+  The limit constrained by the non-uniform active thread percentage is configured for every client CUDA context and can be changed throughout the client process. The executed limit is reflected through device attribute
+  <span class="pre">
+   cudaDevAttrMultiProcessorCount
+  </span>
+  whose value returns the portion of available threads that can be used by the client CUDA context current to the calling thread.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The limit constrained by the uniform partitioning mechanisms can be further constrained for new client CUDA contexts by setting the environment variable
+    <span class="pre">
+     CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+    </span>
+    in conjunction with the environment variable
+    <span class="pre">
+     CUDA_MPS_ENABLE_PER_CTX_DEVICE_MULTIPROCESSOR_PARTITIONING
+    </span>
+    . Refer to
+    <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#client-cuda-context-level">
+     <span class="std std-ref">
+      Client CUDA Context Level
+     </span>
+    </a>
+    and
+    <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-enable-per-ctx-device-multiprocessor-partitioning">
+     <span class="std std-ref">
+      CUDA_MPS_ENABLE_PER_CTX_DEVICE_MULTIPROCESSOR_PARTITIONING
+     </span>
+    </a>
+    for more details.
+   </p>
+  </li>
+ </ul>
+ <p>
+  The limit constrained by the programmatic partitioning is configured for a client CUDA context created via
+  <span class="pre">
+   cuCtxCreate_v3()
+  </span>
+  with the execution affinity
+  <span class="pre">
+   CUexecAffinityParam
+  </span>
+  which specifies the number of SMs that the context is limited to use. The executed limit of the context can be queried through
+  <span class="pre">
+   cuCtxGetExecAffinity()
+  </span>
+  . Refer to
+  <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#best-practices-for-partitioning">
+   <span class="std std-ref">
+    Best Practice for SM Partitioning
+   </span>
+  </a>
+  for more details.
+ </p>
+ <p>
+  A common provisioning strategy is to uniformly partition the available threads equally to each MPS client processes (i.e., set active thread percentage to 100% / n, for n expected MPS client processes). This strategy will allocate close to the minimum amount of execution resources, but it could restrict performance for clients that could occasionally make use of idle resources.
+ </p>
+ <p>
+  A more optimal strategy is to uniformly partition the portion by half of the number of expected clients (i.e., set active thread percentage to 100% / 0.5n) to give the load balancer more freedom to overlap execution between clients when there are idle resources.
+ </p>
+ <p>
+  The near optimal provision strategy is to non-uniformly partition the available threads based on the workloads of each MPS clients (i.e., set active thread percentage to 30% for client 1 and set active thread percentage to 70 % client 2 if the ratio of the client1 workload and the client2 workload is 30%: 70%). This strategy will concentrate the work submitted by different clients to disjoint sets of the SMs and effectively minimize the interference between work submissions by different clients.
+ </p>
+ <p>
+  The most optimal provision strategy is to precisely limit the number of SMs to use for each MPS clients knowing the execution resource requirements of each client (i.e., 24 SMs for client1 and 60 SMs for client 2 on a device with 84 SMs). This strategy provides finer grained and more flexible control over the set of SMs the work will be running on than the active thread percentage.
+ </p>
+ <p>
+  If the active thread percentage is used for partitioning, the limit will be internally rounded down to the nearest hardware supported thread count limit. If the programmatic interface is used for partitioning, the limit will be internally rounded up to the nearest hardware supported SM count limit.
+ </p>
+ <h4>
+  <span class="section-number">
+   2.3.5.3.
+  </span>
+  Threads and Linux Scheduling
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#threads-and-linux-scheduling" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  On pre-Volta GPUs, launching more MPS clients than there are available logical cores on your machine will incur increased launch latency and will generally slow down client-server communication due to how the threads get scheduled by the Linux CFS (Completely Fair Scheduler). For setups where multiple GPUs are used with an MPS control daemon and server started per GPU, we recommend pinning each MPS server to a distinct core. This can be accomplished by using the utility
+  <span class="pre">
+   taskset
+  </span>
+  , which allows binding a running program to multiple cores or launching a new one on them. To accomplish this with MPS, launch the control daemon bound to a specific core, for example,
+  <span class="pre">
+   taskset
+  </span>
+  <span class="pre">
+   -c
+  </span>
+  <span class="pre">
+   0
+  </span>
+  <span class="pre">
+   nvidia-cuda-mps-control
+  </span>
+  <span class="pre">
+   -d
+  </span>
+  . The process affinity will be inherited by the MPS server when it starts up.
+ </p>
+ <h4>
+  <span class="section-number">
+   2.3.5.4.
+  </span>
+  Volta MPS Device Memory Limit
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#volta-mps-device-memory-limit" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  On Volta MPS, users can enforce clients to adhere to allocate device memory up to a preset limit. This mechanism provides a facility to fractionalize GPU memory across MPS clients that run on the specific GPU, which enables scheduling and deployment systems to make decisions based on the memory usage for the clients. If a client attempts to allocate memory beyond the preset limit, the cuda memory allocation calls will return out of memory error. The memory limit specific will also account for CUDA internal device allocations which will help users make scheduling decisions for optimal GPU utilization. This can be accomplished through a hierarchy of control mechanisms for users to limit the pinned device memory on MPS clients. The
+  <span class="pre">
+   default
+  </span>
+  limit setting would enforce a device memory limit on all the MPS clients of all future MPS Servers spawned. The
+  <span class="pre">
+   per
+  </span>
+  <span class="pre">
+   server
+  </span>
+  limit setting allows finer grained control on the memory resource limit whereby users have the option to set memory limit selectively using the server PID and thus all clients of the server. Additionally, MPS clients can further constrain the memory limit setting from the server by using the
+  <span class="pre">
+   CUDA_MPS_PINNED_DEVICE_MEM_LIMIT
+  </span>
+  environment variable.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.3.6.
+  </span>
+  Interaction with Tools
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#interaction-with-tools" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <h4>
+  <span class="section-number">
+   2.3.6.1.
+  </span>
+  Debugging and CUDA-GDB
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#debugging-and-cuda-gdb" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  On Volta MPS, GPU coredumps can be generated and debugged using CUDA-GDB. Refer to
+  CUDA-GDB documentation &lt;https://docs.nvidia.com/cuda/cuda-gdb/index.html&gt;`__
+  for usage instructions.
+ </p>
+ <p>
+  Under certain conditions applications invoked from within CUDA-GDB (or any CUDA-compatible debugger, such as Allinea DDT) may be automatically run without using MPS, even when MPS automatic provisioning is active. To take advantage of this automatic fallback, no other MPS client applications may be running at the time. This enables debugging of CUDA applications without modifying the MPS configuration for the system.
+ </p>
+ <p>
+  Hereâs how it works:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    CUDA-GDB attempts to run an application and recognizes that it will become an MPS client.
+   </p>
+  </li>
+  <li>
+   <p>
+    The application running under CUDA-GDB blocks in
+    <span class="pre">
+     cuInit()
+    </span>
+    and waits for all of the active MPS client processes to exit, if any are running.
+   </p>
+  </li>
+  <li>
+   <p>
+    Once all client processes have terminated, the MPS server will allow cuda-gdb and the application being debugged to continue.
+   </p>
+  </li>
+  <li>
+   <p>
+    Any new client processes attempt to connect to the MPS daemon will be provisioned a server normally.
+   </p>
+  </li>
+ </ol>
+ <h4>
+  <span class="section-number">
+   2.3.6.2.
+  </span>
+  memcheck
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#memcheck" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The
+  <span class="pre">
+   memcheck
+  </span>
+  tool is supported on MPS. Refer to the
+  <span class="pre">
+   memcheck
+  </span>
+  <a class="reference external" href="https://docs.nvidia.com/compute-sanitizer/ComputeSanitizer/index.html#memcheck-tool">
+   documentation
+  </a>
+  for usage instructions.
+ </p>
+ <h4>
+  <span class="section-number">
+   2.3.6.3.
+  </span>
+  Profiling
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#profiling" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  CUDA profiling tools (such as nvprof and Nvidia Visual Profiler) and CUPTI-based profilers are supported under MPS.
+ </p>
+ <p>
+  Note that Visual Profiler and nvprof will be deprecated in a future CUDA release. The NVIDIA Volta platform is the last architecture on which these tools are fully supported. It is recommended to use next-generation tools
+  <a class="reference external" href="https://developer.nvidia.com/nsight-systems">
+   NVIDIA Nsight Systems
+  </a>
+  for GPU and CPU sampling and tracing and
+  <a class="reference external" href="https://developer.nvidia.com/nsight-compute">
+   NVIDIA Nsight Compute
+  </a>
+  for GPU kernel profiling.
+ </p>
+ <p>
+  Refer to
+  <a class="reference external" href="https://docs.nvidia.com/cuda/profiler-users-guide/index.html#migrating-to-nsight-tools-from-visual-profiler-and-nvprof">
+   Migrating to Nsight Tools from Visual Profiler and nvprof
+  </a>
+  for more details.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.3.7.
+  </span>
+  Client Early Termination
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-early-termination" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Terminating a MPS client via CTRL-C or signals is not supported and will lead to undefined behavior. The user must
+guarantee that the MPS client is idle, by calling either
+  <span class="pre">
+   cudaDeviceSynchronize
+  </span>
+  or
+  <span class="pre">
+   cudaStreamSynchronize
+  </span>
+  on all streams,
+before the MPS client can be terminated. Early termination of a MPS client without synchronizing all outstanding GPU work may
+leave the MPS server in an undefined state and result in unexpected failures, corruptions, or hangs; as a result, the affected
+MPS server and all its clients must be restarted.
+ </p>
+ <p>
+  On Volta MPS, user can instruct the MPS server to terminate the CUDA contexts of a MPS client process, regardless
+of whether the CUDA contexts are idle or not, by using the control command
+  <span class="pre">
+   terminate_client
+  </span>
+  <span class="pre">
+   &lt;server
+  </span>
+  <span class="pre">
+   PID&gt;
+  </span>
+  <span class="pre">
+   &lt;client
+  </span>
+  <span class="pre">
+   PID&gt;
+  </span>
+  .
+This mechanism enables user to terminate the CUDA contexts of a given MPS client process, even when the CUDA contexts are
+non-idle, without affecting the MPS server or its other MPS clients. The control command
+  <span class="pre">
+   terminate_client
+  </span>
+  sends a request
+to the MPS server which terminates the CUDA contexts of the target MPS client process on behalf of the user and returns after
+the MPS server has completed the request. The return value is
+  <span class="pre">
+   CUDA_SUCCESS
+  </span>
+  if the CUDA contexts of the target MPS client
+process have been successfully terminated; otherwise, a CUDA error describing the failure state. When the MPS server starts
+handling the request, each MPS client context running in the target MPS client process becomes
+  <span class="pre">
+   INACTIVE
+  </span>
+  ; the status changes
+will be logged by the MPS server. Upon successful completion of the client termination, the target MPS client process will
+observe a sticky error
+  <span class="pre">
+   CUDA_ERROR_MPS_CLIENT_TERMINATED
+  </span>
+  , and it becomes safe to kill the target MPS client process with
+signals such as SIGKILL without affecting the rest of the MPS server and its MPS clients. Note that the MPS server is not
+responsible for killing the target MPS client process after the sticky error is set because the target MPS client process might want to:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Perform clean-up of its GPU or CPU state. This may include a device reset. Continue remaining CPU work.
+   </p>
+  </li>
+  <li>
+   <p>
+    Continue remaining CPU work.
+   </p>
+  </li>
+ </ul>
+ <p>
+  If the user wants to terminate the GPU work of a MPS client process that is running inside a PID namespace
+different from the MPS controlâs PID namespace, such as a MPS client process inside a container, the user must use the PID
+of the target MPS client process translated into the MPS controlâs PID namespace. For example, the PID of a MPS client process
+inside the container is 6, and the PID of this MPS client process in the host PID namespace is 1024; the user must use 1024 to
+terminate the GPU work of the target MPS client process.
+ </p>
+ <p>
+  The common workflow for terminating the client application
+  <span class="pre">
+   nbody
+  </span>
+  :
+ </p>
+ <p>
+  Use the control command
+  <span class="pre">
+   ps
+  </span>
+  to get the status of the current active MPS clients
+ </p>
+ <pre><span class="n">$</span><span class="n">echo</span><span class="s">"ps"</span><span class="o">|</span><span class="n">nvidia</span><span class="o">-</span><span class="n">cuda</span><span class="o">-</span><span class="n">mps</span><span class="o">-</span><span class="n">control</span>
+
+<span class="n">PID</span><span class="n">ID</span><span class="n">SERVER</span><span class="n">DEVICE</span><span class="n">NAMESPACE</span><span class="n">COMMAND</span>
+
+<span class="mi">9741</span><span class="mi">0</span><span class="mi">6472</span><span class="n">GPU</span><span class="o">-</span><span class="n">cb1213a3</span><span class="o">-</span><span class="n">d6a4</span><span class="o">-</span><span class="n">be7f</span><span class="mi">4026531836</span><span class="p">.</span><span class="o">/</span><span class="n">nbody</span>
+
+<span class="mi">9743</span><span class="mi">0</span><span class="mi">6472</span><span class="n">GPU</span><span class="o">-</span><span class="n">cb1213a3</span><span class="o">-</span><span class="n">d6a4</span><span class="o">-</span><span class="n">be7f</span><span class="mi">4026531836</span><span class="p">.</span><span class="o">/</span><span class="n">matrixMul</span>
+</pre>
+ <p>
+  Terminate using the PID of
+  <span class="pre">
+   nbody
+  </span>
+  in the host PID namespace as reported by
+  <span class="pre">
+   ps
+  </span>
+  :
+ </p>
+ <pre><span class="n">$</span><span class="n">echo</span><span class="s">"terminate_client 6472 9741"</span><span class="o">|</span><span class="n">nvidia</span><span class="o">-</span><span class="n">cuda</span><span class="o">-</span><span class="n">mps</span><span class="o">-</span><span class="n">control</span>
+
+<span class="cp">#wait until terminate_client to return</span>
+
+<span class="cp">#upon successful termination 0 is returned</span>
+
+<span class="mi">0</span>
+</pre>
+ <p>
+  Now it is safe to kill
+  <span class="pre">
+   nbody
+  </span>
+  :
+ </p>
+ <pre><span class="n">$</span><span class="n">kill</span><span class="mi">-9</span><span class="mi">9741</span>
+</pre>
+ <p>
+  MPS client termination is not supported on Tegra platforms.
+ </p>
+ <h3>
+  <span class="section-number">
+   2.3.8.
+  </span>
+  Client Priority Level Control
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-priority-level-control" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Users are normally only able to control the GPU priority level of their kernels by using the
+  <span class="pre">
+   cudaStreamCreateWithPriority()
+  </span>
+  API while the program is being written. On Volta MPS, the user can use the control command
+  <span class="pre">
+   set_default_client_priority
+  </span>
+  <span class="pre">
+   &lt;Priority
+  </span>
+  <span class="pre">
+   Level&gt;
+  </span>
+  to map the stream priorities of a given client to a different range of internal CUDA priorities. Changes to this setting do not take effect until the next client connection to the server is opened. The user can also set the
+  <span class="pre">
+   CUDA_MPS_CLIENT_PRIORITY
+  </span>
+  environment variable before starting the control daemon or any given client process to set this value.
+ </p>
+ <p>
+  In this release, the allowed priority level values are
+  <span class="pre">
+   0
+  </span>
+  (normal) and
+  <span class="pre">
+   1
+  </span>
+  (below normal). Lower numbers map to higher priorities to match the behavior of the Linux kernel scheduler.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  CUDA priority levels are not guarantees of execution orderâthey are only a performance hint to the CUDA Driver.
+ </p>
+ <p>
+  For example:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Process A is launched at Normal priority and only uses the default CUDA Stream, which has the lowest priority of 0.
+   </p>
+  </li>
+  <li>
+   <p>
+    Process B is launched at Below Normal priority and uses streams with custom Stream priority values, such as -3.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Without this feature, the streams from Process B would be executed first by the CUDA Driver. However, with the Client Priority Level feature, the streams from Process A will take precedence.
+ </p>
+ <h1>
+  <span class="section-number">
+   3.
+  </span>
+  Architecture
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#architecture" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   3.1.
+  </span>
+  Background
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#background" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  CUDA is a general purpose parallel computing platform and programming model that leverages the parallel compute engine in NVIDIA GPUs to solve many complex computational problems in a more efficient way than on a CPU.
+ </p>
+ <p>
+  A CUDA program starts by creating a CUDA context, either explicitly using the driver API or implicitly using the runtime API, for a specific GPU. The context encapsulates all the hardware resources necessary for the program to be able to manage memory and launch work on that GPU.
+ </p>
+ <p>
+  Launching work on the GPU typically involves copying data over to previously allocated regions in GPU memory, running a CUDA kernel that operates on that data, and then copying the results back from GPU memory into system memory. A CUDA kernel consists of a hierarchy of thread groups that execute in parallel on the GPUs compute engine.
+ </p>
+ <p>
+  All work on the GPU launched using CUDA is launched either explicitly into a CUDA stream, or implicitly using a default stream. A stream is a software abstraction that represents a sequence of commands, which may be a mix of kernels, copies, and other commands, that execute in order. Work launched in two different streams can execute simultaneously, allowing for coarse grained parallelism.
+ </p>
+ <p>
+  CUDA streams are aliased onto one or more âwork queuesâ on the GPU by the driver. Work queues are hardware resources that represent an in-order sequence of the subset of commands in a stream to be executed by a specific engine on the GPU, such as the kernel executions or memory copies. GPUs with Hyper-Q have a concurrent scheduler to schedule work from work queues belonging to a single CUDA context. Work launched to the compute engine from work queues belonging to the same CUDA context can execute concurrently on the GPU.
+ </p>
+ <p>
+  The GPU also has a time sliced scheduler to schedule work from work queues belonging to different CUDA contexts. Work launched to the compute engine from work queues belonging to different CUDA contexts cannot execute concurrently. This can cause underutilization of the GPUâs compute resources if work launched from a single CUDA context is not sufficient to use up all resource available to it.
+ </p>
+ <p>
+  Additionally, within the software layer, to receive asynchronous notifications from the OS and perform asynchronous CPU work on behalf of the application the CUDA Driver may create internal threads: an upcall handler thread and potentially a user callback executor thread.
+ </p>
+ <h2>
+  <span class="section-number">
+   3.2.
+  </span>
+  Client-server Architecture
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-server-architecture" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/mps/_images/image2.png">
+ </a>
+ <p>
+  This diagram shows a likely schedule of CUDA kernels when running an MPI application consisting of multiple OS processes without MPS. Note that while the CUDA kernels from within each MPI process may be scheduled concurrently, each MPI process is assigned a serially scheduled time-slice on the whole GPU.
+ </p>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/mps/_images/image3.png">
+ </a>
+ <p>
+  When using pre-Volta MPS, the server manages the hardware resources associated with a single CUDA context. The CUDA contexts belonging to MPS clients funnel their work through the MPS server. This allows the client CUDA contexts to bypass the hardware limitations associated with time sliced scheduling, and permit their CUDA kernels execute simultaneously.
+ </p>
+ <p>
+  Volta provides new hardware capabilities to reduce the types of hardware resources the MPS server must managed. A client CUDA context manages most of the hardware resources on Volta, and submits work to the hardware directly. The Volta MPS server mediates the remaining shared resources required to ensure simultaneous scheduling of work submitted by individual clients, and stays out of the critical execution path.
+ </p>
+ <p>
+  The communication between the MPS client and the MPS server is entirely encapsulated within the CUDA driver behind the CUDA API. As a result, MPS is transparent to the MPI program.
+ </p>
+ <p>
+  MPS clients CUDA contexts retain their upcall handler thread and any asynchronous executor threads. The MPS server creates an additional upcall handler thread and creates a worker thread for each client.
+ </p>
+ <h2>
+  <span class="section-number">
+   3.3.
+  </span>
+  Provisioning Sequence
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#provisioning-sequence" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/mps/_images/image4.png">
+ </a>
+ <p>
+  <span class="caption-number">
+   Figure 1
+  </span>
+  <span class="caption-text">
+   System-wide provisioning with multiple users.
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#provisioning" title="Permalink to this image">
+   ï
+  </a>
+ </p>
+ <h3>
+  <span class="section-number">
+   3.3.1.
+  </span>
+  Server
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#server" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The MPS control daemon is responsible for the startup and shutdown of MPS servers. The control daemon allows at most one MPS server to be active at a time. When an MPS client connects to the control daemon, the daemon launches an MPS server if there is no server active. The MPS server is launched with the same user id as that of the MPS client.
+ </p>
+ <p>
+  If there is an MPS server already active and the user ID of the server and client match, then the control daemon allows the client to proceed to connect to the server. If there is an MPS server already active, but the server and client were launched with different user IDâs, the control daemon requests the existing server to shutdown once all its clients have disconnected. Once the existing server has shutdown, the control daemon launches a new server with the same user ID as that of the new userâs client process. This is shown in the figure above where user Bob starts client Câ before a server is available. Only once user Aliceâs clients exit is a server created for user Bob and client Câ.
+ </p>
+ <p>
+  The MPS control daemon does not shutdown the active server if there are no pending client requests. This means that the active MPS server process will persist even if all active clients exit. The active server is shutdown when either a new MPS client, launched with a different user id than the active MPS server, connects to the control daemon or when the work launched by the clients has caused a fault. This is shown in the example above, where the control daemon issues a server exit request to Aliceâs server only once user Bob starts client C, even though all of Aliceâs clients have exited.
+ </p>
+ <p>
+  On Volta MPS, the restriction of one Linux user per MPS server may be
+relaxed to avoid reprovisioning the MPS server on each new user request.
+Under this mode, clients from all Linux users will appear as clients from the
+root user and connect to the root MPS server. It is important to make sure that
+isolation between different users (including the root user) can be safely disregarded
+before enabling this mode. Clients from all users will
+share the same MPS log files. The same error containment rules (refer to
+  <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#memory-protection-and-error-containment">
+   <span class="std std-ref">
+    Memory Protection and Error Containment
+   </span>
+  </a>
+  )
+also apply in this mode across clients from all users. For example, a
+fatal fault from one client may bring down a different userâs client that
+shares any GPU with the faulting client. To allow multiple Linux users share one MPS server, start the
+control daemon under superuser with the
+  <span class="pre">
+   -multiuser-server
+  </span>
+  option. This
+option is not supported on Tegra platforms.
+ </p>
+ <p>
+  An MPS server may be in one of the following states:
+  <span class="pre">
+   INITIALIZING
+  </span>
+  ,
+  <span class="pre">
+   ACTIVE
+  </span>
+  or
+  <span class="pre">
+   FAULT
+  </span>
+  . The
+  <span class="pre">
+   INITIALIZING
+  </span>
+  state indicates that the MPS
+server is busy initializing and the MPS control will hold the new client
+requests in its queue. The
+  <span class="pre">
+   ACTIVE
+  </span>
+  state indicates the MPS server is able to
+process new client requests. The
+  <span class="pre">
+   FAULT
+  </span>
+  state indicates that the MPS
+server is blocked on a fatal fault caused by a client. Any new client requests
+will be rejected with error
+  <span class="pre">
+   CUDA_ERROR_MPS_SERVER_NOT_READY
+  </span>
+  .
+ </p>
+ <p>
+  A newly launched MPS server will be in the
+  <span class="pre">
+   INITIALIZING
+  </span>
+  state first. After
+successful initialization, the MPS server goes into the
+  <span class="pre">
+   ACTIVE
+  </span>
+  state. When
+a client encounters a fatal fault, the MPS server will transition from
+  <span class="pre">
+   ACTIVE
+  </span>
+  to
+  <span class="pre">
+   FAULT
+  </span>
+  . On pre-Volta MPS, the MPS server shuts down after
+encountering a fatal fault. On Volta MPS, the MPS server becomes
+  <span class="pre">
+   ACTIVE
+  </span>
+  again after all faulting clients have disconnected.
+ </p>
+ <p>
+  The control daemon executable also supports an interactive mode where a user with sufficient permissions can issue commands, for example to see the current list of servers and clients or startup and shutdown servers manually.
+ </p>
+ <h3>
+  <span class="section-number">
+   3.3.2.
+  </span>
+  Client Attach/Detach
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-attach-detach" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When CUDA is first initialized in a program, the CUDA driver attempts to connect to the MPS control daemon. If the connection attempt fails, the program continues to run as it normally would without MPS. If however, the connection attempt succeeds, the MPS control daemon proceeds to ensure that an MPS server, launched with same user id as that of the connecting client, is active before returning to the client. The MPS client then proceeds to connect to the server.
+ </p>
+ <p>
+  All communication between the MPS client, the MPS control daemon, and the MPS server is done using named pipes and UNIX domain sockets. The MPS server launches a worker thread to receive commands from the client. Successful client connection will be logged by the MPS server as the client status becomes
+  <span class="pre">
+   ACTIVE
+  </span>
+  . Upon client process exit, the server destroys any resources not explicitly freed by the client process and terminates the worker thread. The client exit event will be logged by the MPS server.
+ </p>
+ <h1>
+  <span class="section-number">
+   4.
+  </span>
+  Appendix: Tools and Interface Reference
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#appendix-tools-and-interface-reference" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The following utility programs and environment variables are used to manage the MPS execution environment. They are described below, along with other relevant pieces of the standard CUDA programming environment.
+ </p>
+ <h2>
+  <span class="section-number">
+   4.1.
+  </span>
+  Utilities and Daemons
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#utilities-and-daemons" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   4.1.1.
+  </span>
+  nvidia-cuda-mps-control
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-cuda-mps-control" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Typically stored under
+  <span class="pre">
+   /usr/bin
+  </span>
+  on Linux systems and typically run with superuser privileges, this control daemon is used to manage the
+  <span class="pre">
+   nvidia-cuda-mps-server
+  </span>
+  described in the following section. These are the relevant use cases:
+ </p>
+ <pre>man nvidia-cuda-mps-control          # Describes usage of this utility.
+
+nvidia-cuda-mps-control -d           # Start daemon in background process.
+
+ps -ef | grep mps                    # Check if the MPS daemon is running.
+
+echo quit | nvidia-cuda-mps-control  # Shut the daemon down.
+
+nvidia-cuda-mps-control -f           # Start daemon in foreground.
+
+nvidia-cuda-mps-control -v           # Print version of control daemon executable (applicable on Tegra platforms only).
+</pre>
+ <p>
+  The control daemon creates a
+  <span class="pre">
+   nvidia-cuda-mps-control.pid
+  </span>
+  file that contains the PID of the control daemon process in
+the
+  <span class="pre">
+   CUDA_MPS_PIPE_DIRECTORY
+  </span>
+  . When there are multiple instances of the control daemon running in parallel, one can target
+a specific instance by looking up its PID in the corresponding
+  <span class="pre">
+   CUDA_MPS_PIPE_DIRECTORY
+  </span>
+  . If
+  <span class="pre">
+   CUDA_MPS_PIPE_DIRECTORY
+  </span>
+  is not set, the
+  <span class="pre">
+   nvidia-cuda-mps-control.pid
+  </span>
+  file will be created at the default pipe directory at
+  <span class="pre">
+   /tmp/nvidia-mps
+  </span>
+  .
+ </p>
+ <p>
+  When used in interactive mode, the available commands are:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     get_server_list
+    </span>
+    â prints out a list of all PIDs of server instances.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_server_status
+    </span>
+    <span class="pre">
+     &lt;PID&gt;
+    </span>
+    â  this will print out the status of the server with the given &lt;PID&gt;.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     start_server
+    </span>
+    <span class="pre">
+     -
+    </span>
+    <span class="pre">
+     uid
+    </span>
+    <span class="pre">
+     &lt;user
+    </span>
+    <span class="pre">
+     id&gt;
+    </span>
+    â manually starts a new instance of nvidia-cuda-mps-server with the given user ID.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_client_list
+    </span>
+    <span class="pre">
+     &lt;PID&gt;
+    </span>
+    â lists the PIDs of client applications connected to a server instance assigned to the given PID.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     quit
+    </span>
+    â terminates the
+    <span class="pre">
+     nvidia-cuda-mps-control
+    </span>
+    daemon.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Commands available to Volta MPS control:
+ </p>
+ <ul>
+  <li>
+   <p>
+    <span class="pre">
+     get_device_client_list
+    </span>
+    <span class="pre">
+     [&lt;PID&gt;]
+    </span>
+    â lists the devices and PIDs of client applications that enumerated this device. It optionally takes the server instance PID.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     set_default_active_thread_percentage
+    </span>
+    <span class="pre">
+     &lt;percentage&gt;
+    </span>
+    â overrides the default active thread percentage for MPS servers. If there is already a server spawned, this command will only affect the next server. The set value is lost if a quit command is executed. The default is 100.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_default_active_thread_percentage
+    </span>
+    â queries the current default available thread percentage.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     set_active_thread_percentage
+    </span>
+    <span class="pre">
+     &lt;PID&gt;
+    </span>
+    <span class="pre">
+     &lt;percentage&gt;
+    </span>
+    â overrides the active thread percentage for the MPS server instance of the given PID. All clients created with that server afterwards will observe the new limit. Existing clients are not affected.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_active_thread_percentage
+    </span>
+    <span class="pre">
+     &lt;PID&gt;
+    </span>
+    â queries the current available thread percentage of the MPS server instance of the given PID.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     set_default_device_pinned_mem_limit
+    </span>
+    <span class="pre">
+     &lt;dev&gt;
+    </span>
+    <span class="pre">
+     &lt;value&gt;
+    </span>
+    â sets the default device pinned memory limit for each MPS client. If there is already a server spawned, this command will only affect the next server. The set value is lost if a
+    <span class="pre">
+     quit
+    </span>
+    command is executed. The dev argument may be an integer device ordinal or a device UUID string. The value must be in the form of an integer followed by a qualifier, either
+    <span class="pre">
+     G
+    </span>
+    or
+    <span class="pre">
+     M
+    </span>
+    that specifies the value in Gigabyte or Megabyte respectively. For example: to set a limit of 10 gigabytes for device 0, use the following command:
+   </p>
+   <p>
+    <span class="pre">
+     set_default_device_pinned_mem_limit
+    </span>
+    <span class="pre">
+     0
+    </span>
+    <span class="pre">
+     10G
+    </span>
+   </p>
+   <p>
+    By default, there is no memory limit set.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_default_device_pinned_mem_limit
+    </span>
+    <span class="pre">
+     &lt;dev&gt;
+    </span>
+    â queries the current default pinned memory limit for the device. The dev argument may be an integer device ordinal or a device UUID string.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     set_device_pinned_mem_limit
+    </span>
+    <span class="pre">
+     &lt;PID&gt;
+    </span>
+    <span class="pre">
+     &lt;dev&gt;
+    </span>
+    <span class="pre">
+     &lt;value&gt;
+    </span>
+    - overrides the device pinned memory limit for MPS servers. This sets the device pinned memory limit for each client of MPS server instance of the given PID for the device dev. All clients created with that server afterwards will observe the new limit. Existing clients are not affected. The dev argument may be an integer device ordinal or a device UUID string. For example, to set a limit of 900MB for the server with pid 1024 for device 0, use the following command:
+   </p>
+   <p>
+    <span class="pre">
+     set_device_pinned_mem_limit
+    </span>
+    <span class="pre">
+     1024
+    </span>
+    <span class="pre">
+     0
+    </span>
+    <span class="pre">
+     900M
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_device_pinned_mem_limit
+    </span>
+    <span class="pre">
+     &lt;PID&gt;
+    </span>
+    <span class="pre">
+     &lt;dev&gt;
+    </span>
+    â queries the current device pinned memory limit of the MPS server instance of the given PID for the device dev. The dev argument may be an integer device ordinal or a device UUID string.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     terminate_client
+    </span>
+    <span class="pre">
+     &lt;server
+    </span>
+    <span class="pre">
+     PID&gt;
+    </span>
+    <span class="pre">
+     &lt;client
+    </span>
+    <span class="pre">
+     PID&gt;
+    </span>
+    â terminates all the outstanding GPU work of the MPS client process &lt;client PID&gt; running on the MPS server denoted by &lt;server PID&gt;. For example, to terminate the outstanding GPU work for an MPS client process with PID 1024 running on an MPS server with PID 123, use the following command:
+   </p>
+   <p>
+    <span class="pre">
+     terminate_client
+    </span>
+    <span class="pre">
+     123
+    </span>
+    <span class="pre">
+     1024
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     ps
+    </span>
+    <span class="pre">
+     [-p
+    </span>
+    <span class="pre">
+     PID]
+    </span>
+    â reports a snapshot of the current client processes. It optionally takes the server instance PID. It displays the PID, the unique identifier assigned by the server, the partial UUID of the associated device, the PID of the connected server, the namespace PID, and the command line of the client.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     set_default_client_priority
+    </span>
+    <span class="pre">
+     [priority]
+    </span>
+    â sets the default client priority that will be used for new clients. The value is not applied to existing clients. Priority values should be considered as hints to the CUDA Driver, not guarantees. Allowed values are
+    <span class="pre">
+     0
+    </span>
+    <span class="pre">
+     [NORMAL]
+    </span>
+    and 1
+    <span class="pre">
+     [BELOW
+    </span>
+    <span class="pre">
+     NORMAL]
+    </span>
+    . The set value is lost if a quit command is executed. The default is
+    <span class="pre">
+     0
+    </span>
+    <span class="pre">
+     [NORMAL]
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_default_client_priority
+    </span>
+    â queries the current priority value that will be used for new clients.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.1.2.
+  </span>
+  nvidia-cuda-mps-server
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-cuda-mps-server" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Typically stored under
+  <span class="pre">
+   /usr/bin
+  </span>
+  on Linux systems, this daemon is run under the same $UID as the client application running on the node. The
+  <span class="pre">
+   nvidia-cuda-mps-server
+  </span>
+  instances are created on-demand when client applications connect to the control daemon. The server binary should not be invoked directly, and instead the control daemon should be used to manage the startup and shutdown of servers.
+ </p>
+ <p>
+  The
+  <span class="pre">
+   nvidia-cuda-mps-server
+  </span>
+  process owns the CUDA context on the GPU and uses it to execute GPU operations for its client application processes. Due to this, when querying active processes via nvidia-smi (or any NVML-based application) nvidia-cuda-mps-server will appear as the active CUDA process rather than any of the client processes.
+ </p>
+ <p>
+  On Tegra platforms, the version of the
+  <span class="pre">
+   nvidia-cuda-mps-server
+  </span>
+  executable can be printed with:
+ </p>
+ <pre>nvidia-cuda-mps-server -v
+</pre>
+ <h3>
+  <span class="section-number">
+   4.1.3.
+  </span>
+  nvidia-smi
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#nvidia-smi" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Typically stored under
+  <span class="pre">
+   /usr/bin
+  </span>
+  on Linux systems, this is used to configure GPUâs on a node. The following use cases are relevant to managing MPS:
+ </p>
+ <pre>man nvidia-smi                        # Describes usage of this utility.
+
+nvidia-smi -L                         # List the GPU's on node.
+
+nvidia-smi -q                         # List GPU state and configuration information.
+
+nvidia-smi -q -d compute              # Show the compute mode of each GPU.
+
+nvidia-smi -i 0 -c EXCLUSIVE_PROCESS  # Set GPU 0 to exclusive mode, run as root.
+
+nvidia-smi -i 0 -c DEFAULT            # Set GPU 0 to default mode, run as root. (SHARED_PROCESS)
+
+nvidia-smi -i 0 -r                    # Reboot GPU 0 with the new setting.
+</pre>
+ <h2>
+  <span class="section-number">
+   4.2.
+  </span>
+  Environment Variables
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#environment-variables" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   4.2.1.
+  </span>
+  CUDA_VISIBLE_DEVICES
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-visible-devices" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  is used to specify which GPUâs should be visible to a CUDA application. Only the devices whose index or UUID is present in the sequence are visible to CUDA applications and they are enumerated in the order of the sequence.
+ </p>
+ <p>
+  When
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  is set before launching the control daemon, the devices will be remapped by the MPS server. This means that if your system has devices 0, 1 and 2, and if
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  is set to
+  <span class="pre">
+   0,2
+  </span>
+  , then when a client connects to the server it will see the remapped devices â device 0 and a device 1. Therefore, keeping
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  set to
+  <span class="pre">
+   0,2
+  </span>
+  when launching the client would lead to an error.
+ </p>
+ <p>
+  The MPS control daemon will further filter-out any pre-Volta devices, if any visible device is Volta+.
+ </p>
+ <p>
+  To avoid this ambiguity, we recommend using UUIDs instead of indices. These can be viewed by launching
+  <span class="pre">
+   nvidia-smi
+  </span>
+  <span class="pre">
+   -q
+  </span>
+  . When launching the server, or the application, you can set
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  to
+  <span class="pre">
+   UUID_1,UUID_2
+  </span>
+  , where
+  <span class="pre">
+   UUID_1
+  </span>
+  and
+  <span class="pre">
+   UUID_2
+  </span>
+  are the GPU UUIDs. It will also work when you specify the first few characters of the UUID (including
+  <span class="pre">
+   GPU-
+  </span>
+  ) rather than the full UUID.
+ </p>
+ <p>
+  The MPS server will fail to start if incompatible devices are visible after the application of
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   4.2.2.
+  </span>
+  CUDA_MPS_PIPE_DIRECTORY
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-pipe-directory" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The MPS control daemon, the MPS server, and the associated MPS clients communicate with each other via named pipes and UNIX domain sockets. The default directory for these pipes and sockets is
+  <span class="pre">
+   /tmp/nvidia-mps
+  </span>
+  . The environment variable,
+  <span class="pre">
+   CUDA_MPS_PIPE_DIRECTORY
+  </span>
+  , can be used to override the location of these pipes and sockets. The value of this environment variable should be consistent across all MPS clients sharing the same MPS server, and the MPS control daemon.
+ </p>
+ <p>
+  The recommended location for the directory containing these named pipes and domain sockets is local folders such as
+  <span class="pre">
+   /tmp
+  </span>
+  . If the specified location exists in a shared, multi-node filesystem, the path must be unique for each node to prevent multiple MPS servers or MPS control daemons from using the same pipes and sockets. When provisioning MPS on a per-user basis, the directory should be set to a location such that different users will not end up using the same directory.
+ </p>
+ <p>
+  On Tegra platforms, there is no default directory setting for pipes and sockets. Users must set this environment variable such that only intended users have access to this location.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.2.3.
+  </span>
+  CUDA_MPS_LOG_DIRECTORY
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-log-directory" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The MPS control daemon maintains a
+  <span class="pre">
+   control.log
+  </span>
+  file which contains the status of its MPS servers, user commands issued and their result, and startup and shutdown notices for the daemon. The MPS server maintains a
+  <span class="pre">
+   server.log
+  </span>
+  file containing its startup and shutdown information and the status of its clients.
+ </p>
+ <p>
+  By default these log files are stored in the directory
+  <span class="pre">
+   /var/log/nvidia-mps
+  </span>
+  . The
+  <span class="pre">
+   CUDA_MPS_LOG_DIRECTORY
+  </span>
+  environment variable can be used to override the default value. This environment variable should be set in the MPS control daemonâs environment and is automatically inherited by any MPS servers launched by that control daemon.
+ </p>
+ <p>
+  On Tegra platforms, there is no default directory setting for storing the log files. MPS will remain operational without the user setting this environment variable; however, in such instances, MPS logs will not be available.  If logs are required to be captured, then the user must set this environment variable such that only intended users have access to this location.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.2.4.
+  </span>
+  CUDA_DEVICE_MAX_CONNECTIONS
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-device-max-connections" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When encountered in the MPS clientâs environment,
+  <span class="pre">
+   CUDA_DEVICE_MAX_CONNECTIONS
+  </span>
+  sets the preferred number of
+compute and copy engine concurrent connections (work queues) from the host to the device for that
+client. The number actually allocated by the driver may differ from what is requested
+based on hardware resource limitations or other considerations. Under MPS, each
+serverâs clients share one pool of connections, whereas without MPS each CUDA context
+would be allocated its own separate connection pool. Volta MPS clients exclusively
+owns the connections set aside for the client in the shared pool, so setting this
+environment variable under Volta MPS may reduce the number of available clients.
+The default value is 2 for Volta MPS clients.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.2.5.
+  </span>
+  CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-active-thread-percentage" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  On Volta GPUs, this environment variable sets the portion of the available threads that can be used by the client contexts. The limit can be configured at different levels.
+ </p>
+ <h4>
+  <span class="section-number">
+   4.2.5.1.
+  </span>
+  MPS Control Daemon Level
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#mps-control-daemon-level" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Setting this environment variable in an MPS controlâs environment will configure the default active thread percentage when the MPS control daemon starts.
+ </p>
+ <p>
+  All the MPS servers spawned by the MPS control daemon will observe this limit. Once the MPS control daemon has started, changing this environment variable cannot affect the MPS servers.
+ </p>
+ <h4>
+  <span class="section-number">
+   4.2.5.2.
+  </span>
+  Client Process Level
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-process-level" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Setting this environment variable in an MPS clientâs environment will configure the active thread percentage when the client process starts. The new limit will only further constrain the limit set by the control daemon (via
+  <span class="pre">
+   set_default_active_thread_percentage
+  </span>
+  or
+  <span class="pre">
+   set_active_thread_percentage
+  </span>
+  control daemon commands or this environment variable at the MPS control daemon level). If the control daemon has a lower setting, the control daemon setting will be obeyed by the client process instead.
+ </p>
+ <p>
+  All the client CUDA contexts created within the client process will observe the new limit. Once the client process has started, changing the value of this environment variable cannot affect the client CUDA contexts.
+ </p>
+ <h4>
+  <span class="section-number">
+   4.2.5.3.
+  </span>
+  Client CUDA Context Level
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#client-cuda-context-level" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  By default, configuring the active thread percentage at the client CUDA context level is disabled. User must explicitly opt-in via environment variable
+  <span class="pre">
+   CUDA_MPS_ENABLE_PER_CTX_DEVICE_MULTIPROCESSOR_PARTITIONING
+  </span>
+  . Refer to
+  <a class="reference internal" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-enable-per-ctx-device-multiprocessor-partitioning">
+   <span class="std std-ref">
+    CUDA_MPS_ENABLE_PER_CTX_DEVICE_MULTIPROCESSOR_PARTITIONING
+   </span>
+  </a>
+  for more details.
+ </p>
+ <p>
+  Setting this environment variable within a client process will configure the active thread percentage when creating a new client CUDA context. The new limit will only further constraint the limit set at the control daemon level and the client process level. If the control daemon or the client process has a lower setting, the lower setting will be obeyed by the client CUDA context instead. All the client CUDA contexts created afterwards will observe the new limit. Existing client CUDA contexts are not affected.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.2.6.
+  </span>
+  CUDA_MPS_ENABLE_PER_CTX_DEVICE_MULTIPROCESSOR_PARTITIONING
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-enable-per-ctx-device-multiprocessor-partitioning" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  By default, users can only partition the available threads uniformly. An explicit opt-in via this environment variable is required to enable non-uniform partitioning capability. To enable non-uniform partitioning capability, this environment variable must be set before the client process starts.
+ </p>
+ <p>
+  When non-uniform partitioning capability is enabled in an MPS clientâs environment, client CUDA contexts can have different active thread percentages within the same client process via setting
+  <span class="pre">
+   CUDA_MPS_ACTIVE_THREAD_PERCENTAGE
+  </span>
+  before context creations. The device attribute
+  <span class="pre">
+   cudaDevAttrMultiProcessorCount
+  </span>
+  will reflect the active thread percentage and return the portion of available SMs that can be used by the client CUDA context current to the calling thread.
+ </p>
+ <h3>
+  <span class="section-number">
+   4.2.7.
+  </span>
+  CUDA_MPS_PINNED_DEVICE_MEM_LIMIT
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-pinned-device-mem-limit" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The pinned memory limit control limits the amount of GPU memory that is allocatable by CUDA APIs by the client process. On Volta GPUs, this environment variable sets a limit on pinned device memory that can be allocated by the client contexts. Setting this environment variable in an MPS clientâs environment will set the deviceâs pinned memory limit when the client process starts. The new limit will only further constrain the limit set by the control daemon (via
+  <span class="pre">
+   set_default_device_pinned_mem_limit
+  </span>
+  or
+  <span class="pre">
+   set_device_pinned_mem_limit
+  </span>
+  <span class="pre">
+   control
+  </span>
+  daemon commands or this environment variable at the MPS control daemon level). If the control daemon has a lower value, the control daemon setting will be obeyed by the client process instead. This environment variable will have the same semantics as
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  i.e. the value string can contain comma-separated device ordinals and/or device UUIDs with per device memory limit separated by an equals. Example usage:
+ </p>
+ <pre>$ export CUDA_MPS_PINNED_DEVICE_MEM_LIMIT=''0=1G,1=512MB''
+</pre>
+ <p>
+  The following example highlights the hierarchy and usage of the MPS memory limiting functionality.
+ </p>
+ <pre># Set the default device pinned mem limit to 3G for device 0. The default limit constrains the memory allocation limit of all the MPS clients of future MPS servers to 3G on device 0.
+
+$ nvidia-cuda-mps-control set_default_device_pinned_mem_limit 0 3G
+
+# Start daemon in background process
+
+$ nvidia-cuda-mps-control -d
+
+# Set device pinned mem limit to 2G for device 0 for the server instance of the given PID. All the MPS clients on this server will observe this new limit of 2G instead of the default limit of 3G when allocating pinned device memory on device 0.
+
+# Note -- users are allowed to specify a server limit (via set_device_pinned_mem_limit) greater than the default limit previously set by set_default_device_pinned_mem_limit.
+
+$ nvidia-cuda-mps-control set_device_pinned_mem_limit &lt;pid&gt; 0 2G
+
+# Further constrain the device pinned mem limit for a particular MPS client to 1G for device 0. This ensures the maximum amount of memory allocated by this client is capped at 1G.
+
+# Note - setting this environment variable to a value greater than value observed by the server for its clients (through set_default_device_pinned_mem_limit/ set_device_pinned_mem_limit) will not set the limit to the higher value and thus will be ineffective and the eventual limit observed by the client will be that observed by the server.
+
+$ export CUDA_MPS_DEVICE_MEM_LIMIT="0=1G"
+</pre>
+ <h3>
+  <span class="section-number">
+   4.2.8.
+  </span>
+  CUDA_MPS_CLIENT_PRIORITY
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#cuda-mps-client-priority" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The client priority level variable controls the initial default server value for the MPS Control Daemon if used to launch that, or the client priority level value for a given client if used in a client launch. The following examples demonstrate both usages.
+ </p>
+ <pre># Set the default client priority level for new servers and clients to Below Normal
+
+$ export CUDA_MPS_CLIENT_PRIORITY=1
+
+$ nvidia-cuda-mps-control -d
+
+# Set the client priority level for a single program to Normal without changing the priority level for future clients
+
+$ CUDA_MPS_CLIENT_PRIORITY=0 &lt;program&gt;
+</pre>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  CUDA priority levels are not guarantees of execution order â they are only a performance hint to the CUDA Driver.
+ </p>
+ <h2>
+  <span class="section-number">
+   4.3.
+  </span>
+  MPS Logging Format
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#mps-logging-format" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   4.3.1.
+  </span>
+  Control Log
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#control-log" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Some of the example messages logged by the control daemon:
+ </p>
+ <ul>
+  <li>
+   <p>
+    Startup and shutdown of MPS servers identified by their process ids and the user id with which they are being launched.
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     12:50:23.347
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     Starting
+    </span>
+    <span class="pre">
+     new
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     13929
+    </span>
+    <span class="pre">
+     for
+    </span>
+    <span class="pre">
+     user
+    </span>
+    <span class="pre">
+     500
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     12:50:24.870
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     NEW
+    </span>
+    <span class="pre">
+     SERVER
+    </span>
+    <span class="pre">
+     13929:
+    </span>
+    <span class="pre">
+     Ready
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:02:26.226
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     13929
+    </span>
+    <span class="pre">
+     exited
+    </span>
+    <span class="pre">
+     with
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     0
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    New MPS client connections identified by the client process id and the user id of the user that launched the client process.
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:02:10.866
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     NEW
+    </span>
+    <span class="pre">
+     CLIENT
+    </span>
+    <span class="pre">
+     19276
+    </span>
+    <span class="pre">
+     from
+    </span>
+    <span class="pre">
+     user
+    </span>
+    <span class="pre">
+     500:
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     already
+    </span>
+    <span class="pre">
+     exists
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:02:10.961
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     Accepting
+    </span>
+    <span class="pre">
+     connection...
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    User commands issued to the control daemon and their result.
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     12:50:23.347
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     Starting
+    </span>
+    <span class="pre">
+     new
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     13929
+    </span>
+    <span class="pre">
+     for
+    </span>
+    <span class="pre">
+     user
+    </span>
+    <span class="pre">
+     500
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     12:50:24.870
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     NEW
+    </span>
+    <span class="pre">
+     SERVER
+    </span>
+    <span class="pre">
+     13929:
+    </span>
+    <span class="pre">
+     Ready
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Error information such as failing to establish a connection with a client.
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:02:10.961
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     Accepting
+    </span>
+    <span class="pre">
+     connection...
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:02:10.961
+    </span>
+    <span class="pre">
+     Control
+    </span>
+    <span class="pre">
+     13894]
+    </span>
+    <span class="pre">
+     Unable
+    </span>
+    <span class="pre">
+     to
+    </span>
+    <span class="pre">
+     read
+    </span>
+    <span class="pre">
+     new
+    </span>
+    <span class="pre">
+     connection
+    </span>
+    <span class="pre">
+     type
+    </span>
+    <span class="pre">
+     information
+    </span>
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   4.3.2.
+  </span>
+  Server Log
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#server-log" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Some of the example messages logged by the MPS server:
+ </p>
+ <ul>
+  <li>
+   <p>
+    New MPS client connections and disconnections identified by the client process ID.
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:00:09.269
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     13929]
+    </span>
+    <span class="pre">
+     New
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     14781
+    </span>
+    <span class="pre">
+     connected
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-05
+    </span>
+    <span class="pre">
+     13:00:09.270
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     13929]
+    </span>
+    <span class="pre">
+     Client
+    </span>
+    <span class="pre">
+     14777
+    </span>
+    <span class="pre">
+     disconnected
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Error information such as the MPS server failing to start due to system requirements not being met.
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-06
+    </span>
+    <span class="pre">
+     10:51:31.706
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     29489]
+    </span>
+    <span class="pre">
+     MPS
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     failed
+    </span>
+    <span class="pre">
+     to
+    </span>
+    <span class="pre">
+     start
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2013-08-06
+    </span>
+    <span class="pre">
+     10:51:31.706
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     29489]
+    </span>
+    <span class="pre">
+     MPS
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     only
+    </span>
+    <span class="pre">
+     supported
+    </span>
+    <span class="pre">
+     on
+    </span>
+    <span class="pre">
+     64-bit
+    </span>
+    <span class="pre">
+     Linux
+    </span>
+    <span class="pre">
+     platforms,
+    </span>
+    <span class="pre">
+     with
+    </span>
+    <span class="pre">
+     an
+    </span>
+    <span class="pre">
+     SM
+    </span>
+    <span class="pre">
+     3.5
+    </span>
+    <span class="pre">
+     or
+    </span>
+    <span class="pre">
+     higher
+    </span>
+    <span class="pre">
+     GPU.
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Information about fatal GPU error containment on Volta+ MPS
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:07.410
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     of
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     {11661,
+    </span>
+    <span class="pre">
+     1}
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     ACTIVE
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:07.468
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     of
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     {11663,
+    </span>
+    <span class="pre">
+     1}
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     ACTIVE
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:07.518
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     of
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     {11643,
+    </span>
+    <span class="pre">
+     2}
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     ACTIVE
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.906
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     Server
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     handling
+    </span>
+    <span class="pre">
+     a
+    </span>
+    <span class="pre">
+     fatal
+    </span>
+    <span class="pre">
+     GPU
+    </span>
+    <span class="pre">
+     error.
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.906
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     of
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     {11641,
+    </span>
+    <span class="pre">
+     1}
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     INACTIVE
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.906
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     of
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     {11643,
+    </span>
+    <span class="pre">
+     1}
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     INACTIVE
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.906
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     status
+    </span>
+    <span class="pre">
+     of
+    </span>
+    <span class="pre">
+     client
+    </span>
+    <span class="pre">
+     {11643,
+    </span>
+    <span class="pre">
+     2}
+    </span>
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     INACTIVE
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.906
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     The
+    </span>
+    <span class="pre">
+     following
+    </span>
+    <span class="pre">
+     devices
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.906
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     0
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.907
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     1
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.907
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     The
+    </span>
+    <span class="pre">
+     following
+    </span>
+    <span class="pre">
+     clients
+    </span>
+    <span class="pre">
+     have
+    </span>
+    <span class="pre">
+     a
+    </span>
+    <span class="pre">
+     sticky
+    </span>
+    <span class="pre">
+     error
+    </span>
+    <span class="pre">
+     set:
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.907
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     11641
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:08.907
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     11643
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:09.200
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Client
+    </span>
+    <span class="pre">
+     {11641,
+    </span>
+    <span class="pre">
+     1}
+    </span>
+    <span class="pre">
+     exit
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:09.244
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Client
+    </span>
+    <span class="pre">
+     {11643,
+    </span>
+    <span class="pre">
+     1}
+    </span>
+    <span class="pre">
+     exit
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:09.244
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Client
+    </span>
+    <span class="pre">
+     {11643,
+    </span>
+    <span class="pre">
+     2}
+    </span>
+    <span class="pre">
+     exit
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:09.245
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     Destroy
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     context
+    </span>
+    <span class="pre">
+     on
+    </span>
+    <span class="pre">
+     device
+    </span>
+    <span class="pre">
+     0
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:09.269
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     Destroy
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     context
+    </span>
+    <span class="pre">
+     on
+    </span>
+    <span class="pre">
+     device
+    </span>
+    <span class="pre">
+     1
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:10.310
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     Creating
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     context
+    </span>
+    <span class="pre">
+     on
+    </span>
+    <span class="pre">
+     device
+    </span>
+    <span class="pre">
+     0
+    </span>
+   </p>
+   <p>
+    <span class="pre">
+     [2022-04-28
+    </span>
+    <span class="pre">
+     15:56:10.397
+    </span>
+    <span class="pre">
+     Other
+    </span>
+    <span class="pre">
+     11570]
+    </span>
+    <span class="pre">
+     Volta
+    </span>
+    <span class="pre">
+     MPS:
+    </span>
+    <span class="pre">
+     Creating
+    </span>
+    <span class="pre">
+     server
+    </span>
+    <span class="pre">
+     context
+    </span>
+    <span class="pre">
+     on
+    </span>
+    <span class="pre">
+     device
+    </span>
+    <span class="pre">
+     1
+    </span>
+   </p>
+  </li>
+ </ul>
+ <h2>
+  <span class="section-number">
+   4.4.
+  </span>
+  MPS Known Issues
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#mps-known-issues" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <ul>
+  <li>
+   <p>
+    Clients may fail to start, returning
+    <span class="pre">
+     ERROR_OUT_OF_MEMORY
+    </span>
+    when the first CUDA context is created, even though there are fewer client contexts than the hard limit of 16.
+   </p>
+   <p>
+    Comments: When creating a context, the client tries to reserve virtual address space for the Unified Virtual Addressing memory range. On certain systems, this can clash with the system linker and the dynamic shared libraries loaded by it. Ensure that CUDA initialization (e.g.,
+    <span class="pre">
+     cuInit()
+    </span>
+    or any
+    <span class="pre">
+     cuda*()
+    </span>
+    Runtime API function) is one of the first functions called in your code. To provide a hint to the linker and to the Linux kernel that you want your dynamic shared libraries higher up in the VA space (where it wonât clash with CUDAâs UVA range), compile your code as PIC (Position Independent Code) and PIE (Position Independent Executable). Refer to your compiler manual for instructions on how to achieve this.
+   </p>
+  </li>
+  <li>
+   <p>
+    Memory allocation API calls (including context creation) may fail with the following message in the server log: MPS Server failed to create/open SHM segment.
+   </p>
+   <p>
+    Comments: This is most likely due to exhausting the file descriptor limit on your system. Check the maximum number of open file descriptors allowed on your system and increase if necessary. We recommend setting it to 16384 and higher. Typically this information can be checked via the command
+    <span class="pre">
+     ulimit
+    </span>
+    <span class="pre">
+     -n
+    </span>
+    ; refer to your operating system instructions on how to change the limit.
+   </p>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   5.
+  </span>
+  Appendix: Common Tasks
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#appendix-common-tasks" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The convention for using MPS will vary between system environments. The Cray environment, for example, manages MPS in a way that is almost invisible to the user, whereas other Linux-based systems may require the user to manage activating the control daemon themselves. As a user you will need to understand which set of conventions is appropriate for the system you are running on. Some cases are described in this section.
+ </p>
+ <h2>
+  <span class="section-number">
+   5.1.
+  </span>
+  Starting and Stopping MPS on Linux
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#starting-and-stopping-mps-on-linux" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   5.1.1.
+  </span>
+  On a Multi-user System
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#on-a-multi-user-system" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  To cause all users of the system to run CUDA applications via MPS you will need to set up the MPS control daemon to run when the system starts.
+ </p>
+ <h4>
+  <span class="section-number">
+   5.1.1.1.
+  </span>
+  Starting MPS control daemon
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#starting-mps-control-daemon" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  As root, run the commands:
+ </p>
+ <pre>export CUDA_VISIBLE_DEVICES=0           # Select GPU 0.
+
+nvidia-smi -i 0 -c EXCLUSIVE_PROCESS    # Set GPU 0 to exclusive mode.
+
+nvidia-cuda-mps-control -d              # Start the daemon.
+</pre>
+ <p>
+  This will start the MPS control daemon that will spawn a new MPS Server instance for any $UID starting an application and associate it with the GPU visible to the control daemon. Only one instance of the
+  <span class="pre">
+   nvidia-cuda-mps-control
+  </span>
+  daemon should be run per node. Note that
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  should not be set in the client processâs environment.
+ </p>
+ <h4>
+  <span class="section-number">
+   5.1.1.2.
+  </span>
+  Shutting Down MPS control daemon
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#shutting-down-mps-control-daemon" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  To shut down the daemon, as root, run:
+ </p>
+ <pre><span class="n">echo</span><span class="n">quit</span><span class="o">|</span><span class="n">nvidia</span><span class="o">-</span><span class="n">cuda</span><span class="o">-</span><span class="n">mps</span><span class="o">-</span><span class="n">control</span>
+</pre>
+ <h4>
+  <span class="section-number">
+   5.1.1.3.
+  </span>
+  Log Files
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#log-files" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  You can view the status of the daemons by viewing the log files in
+ </p>
+ <p>
+  <span class="pre">
+   /var/log/nvidia-mps/control.log
+  </span>
+ </p>
+ <p>
+  <span class="pre">
+   /var/log/nvidia-mps/server.log
+  </span>
+ </p>
+ <p>
+  These are typically only visible to users with administrative privileges.
+ </p>
+ <h3>
+  <span class="section-number">
+   5.1.2.
+  </span>
+  On a Single-User System
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#on-a-single-user-system" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When running as a single user, the control daemon must be launched with the same user id as that of the client process
+ </p>
+ <h4>
+  <span class="section-number">
+   5.1.2.1.
+  </span>
+  Starting MPS control daemon
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#id9" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  As $UID, run the commands:
+ </p>
+ <p>
+  <span class="pre">
+   export
+  </span>
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES=0
+  </span>
+  <span class="pre">
+   #
+  </span>
+  <span class="pre">
+   Select
+  </span>
+  <span class="pre">
+   GPU
+  </span>
+  <span class="pre">
+   0.
+  </span>
+ </p>
+ <p>
+  <span class="pre">
+   export
+  </span>
+  <span class="pre">
+   CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps
+  </span>
+  <span class="pre">
+   #
+  </span>
+  <span class="pre">
+   Select
+  </span>
+  <span class="pre">
+   a
+  </span>
+  <span class="pre">
+   location
+  </span>
+  <span class="pre">
+   that's
+  </span>
+  <span class="pre">
+   accessible
+  </span>
+  <span class="pre">
+   to
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   given
+  </span>
+  <span class="pre">
+   $UID
+  </span>
+ </p>
+ <p>
+  <span class="pre">
+   export
+  </span>
+  <span class="pre">
+   CUDA_MPS_LOG_DIRECTORY=/tmp/nvidia-log
+  </span>
+  <span class="pre">
+   #
+  </span>
+  <span class="pre">
+   Select
+  </span>
+  <span class="pre">
+   a
+  </span>
+  <span class="pre">
+   location
+  </span>
+  <span class="pre">
+   that's
+  </span>
+  <span class="pre">
+   accessible
+  </span>
+  <span class="pre">
+   to
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   given
+  </span>
+  <span class="pre">
+   $UID
+  </span>
+ </p>
+ <p>
+  <span class="pre">
+   nvidia-cuda-mps-control
+  </span>
+  <span class="pre">
+   -d
+  </span>
+  <span class="pre">
+   #
+  </span>
+  <span class="pre">
+   Start
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   daemon.
+  </span>
+ </p>
+ <p>
+  This will start the MPS control daemon that will spawn a new MPS Server instance for that $UID starting an application and associate it with GPU visible to the control daemon.
+ </p>
+ <h4>
+  <span class="section-number">
+   5.1.2.2.
+  </span>
+  Starting MPS client application
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#starting-mps-client-application" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Set the following variables in the client processâs environment. Note that
+  <span class="pre">
+   CUDA_VISIBLE_DEVICES
+  </span>
+  should not be set in the clientâs environment.
+ </p>
+ <p>
+  <span class="pre">
+   export
+  </span>
+  <span class="pre">
+   CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps
+  </span>
+  <span class="pre">
+   #
+  </span>
+  <span class="pre">
+   Set
+  </span>
+  <span class="pre">
+   to
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   same
+  </span>
+  <span class="pre">
+   location
+  </span>
+  <span class="pre">
+   as
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   MPS
+  </span>
+  <span class="pre">
+   control
+  </span>
+  <span class="pre">
+   daemon
+  </span>
+ </p>
+ <p>
+  <span class="pre">
+   export
+  </span>
+  <span class="pre">
+   CUDA_MPS_LOG_DIRECTORY=/tmp/nvidia-log
+  </span>
+  <span class="pre">
+   #
+  </span>
+  <span class="pre">
+   Set
+  </span>
+  <span class="pre">
+   to
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   same
+  </span>
+  <span class="pre">
+   location
+  </span>
+  <span class="pre">
+   as
+  </span>
+  <span class="pre">
+   the
+  </span>
+  <span class="pre">
+   MPS
+  </span>
+  <span class="pre">
+   control
+  </span>
+  <span class="pre">
+   daemon
+  </span>
+ </p>
+ <h4>
+  <span class="section-number">
+   5.1.2.3.
+  </span>
+  Shutting Down MPS
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#shutting-down-mps" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  To shut down the daemon, as $UID, run:
+ </p>
+ <pre><span class="n">echo</span><span class="n">quit</span><span class="o">|</span><span class="n">nvidia</span><span class="o">-</span><span class="n">cuda</span><span class="o">-</span><span class="n">mps</span><span class="o">-</span><span class="n">control</span>
+</pre>
+ <h4>
+  <span class="section-number">
+   5.1.2.4.
+  </span>
+  Log Files
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#id10" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  You can view the status of the daemons by viewing the log files in
+ </p>
+ <pre><span class="n">$CUDA_MPS_LOG_DIRECTORY</span><span class="o">/</span><span class="n">control</span><span class="p">.</span><span class="n">log</span>
+
+<span class="n">$CUDA_MPS_LOG_DIRECTORY</span><span class="o">/</span><span class="n">server</span><span class="p">.</span><span class="n">log</span>
+</pre>
+ <h3>
+  <span class="section-number">
+   5.1.3.
+  </span>
+  Scripting a Batch Queuing System
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#scripting-a-batch-queuing-system" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <h4>
+  <span class="section-number">
+   5.1.3.1.
+  </span>
+  Basic Principles
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#basic-principles" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Chapters 3 and 4 describe the MPS components, software utilities, and the environment variables that control them. However, using MPS at this level puts a burden on the user since at the application level, the user only cares whether MPS is engaged or not, and should not have to understand the details of environment settings and so on when they are unlikely to deviate from a fixed configuration.
+ </p>
+ <p>
+  There may be consistency conditions that need to be enforced by the system itself, such as clearing CPU- and GPU- memory between application runs, or deleting zombie processes upon job completion.
+ </p>
+ <p>
+  Root-access (or equivalent) is required to change the mode of the GPU.
+ </p>
+ <p>
+  We recommend you manage these details by building some sort of automatic provisioning abstraction on top of the basic MPS components. This section discusses how to implement a batch-submission flag in the PBS/Torque queuing environment and discusses MPS integration into a batch queuing system in-general.
+ </p>
+ <h4>
+  <span class="section-number">
+   5.1.3.2.
+  </span>
+  Per-Job MPS Control: A Torque/PBS Example
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#per-job-mps-control-a-torque-pbs-example" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Torque installations are highly customized. Conventions for specifying job resources vary from site to site and we expect that, analogously, the convention for enabling MPS could vary from site to site as well. Check with your systemâs administrator to find out if they already have a means to provision MPS on your behalf.
+ </p>
+ <p>
+  Tinkering with nodes outside the queuing convention is generally discouraged since jobs are usually dispatched as nodes are released by completing jobs. It is possible to enable MPS on a per-job basis by using the Torque prologue and epilogue scripts to start and stop the
+  <span class="pre">
+   nvidia-cuda-mps-control
+  </span>
+  daemon. In this example, we re-use the
+  <span class="pre">
+   account
+  </span>
+  parameter to request MPS for a job, so that the following command:
+ </p>
+ <p>
+  <span class="pre">
+   qsub
+  </span>
+  <span class="pre">
+   -A
+  </span>
+  <span class="pre">
+   "MPS=true"
+  </span>
+  <span class="pre">
+   ...
+  </span>
+ </p>
+ <p>
+  will result in the prologue script starting MPS as shown:
+ </p>
+ <pre># Activate MPS if requested by user
+
+USER=$2
+ACCTSTR=$7
+echo $ACCTSTR | grep -i "MPS=true"
+if [ $? -eq 0 ]; then
+   nvidia-smi -c 3
+   USERID=`id -u $USER`
+   export CUDA_VISIBLE_DEVICES=0
+   nvidia-cuda-mps-control -d &amp;&amp; echo "MPS control daemon started"
+   sleep 1
+   echo "start_server -uid $USERID" | nvidia-cuda-mps-control &amp;&amp; echo "MPS server started for $USER"
+fi
+</pre>
+ <p>
+  and the epilogue script stopping MPS as shown:
+ </p>
+ <pre># Reset compute mode to default
+nvidia-smi -c 0
+
+# Quit cuda MPS if it's running
+ps aux | grep nvidia-cuda-mps-control | grep -v grep &gt; /dev/null
+if [ $? -eq 0 ]; then
+   echo quit | nvidia-cuda-mps-control
+fi
+
+# Test for presence of MPS zombie
+ps aux | grep nvidia-cuda-mps | grep -v grep &gt; /dev/null
+if [ $? -eq 0 ]; then
+   logger "`hostname` epilogue: MPS refused to quit! Marking offline"
+   pbsnodes -o -N "Epilogue check: MPS did not quit" `hostname`
+fi
+
+# Check GPU sanity, simple check
+nvidia-smi &gt; /dev/null
+if [ $? -ne 0 ]; then
+   logger "`hostname` epilogue: GPUs not sane! Marking `hostname` offline"
+   pbsnodes -o -N "Epilogue check: nvidia-smi failed" `hostname`
+fi
+</pre>
+ <h2>
+  <span class="section-number">
+   5.2.
+  </span>
+  Best Practice for SM Partitioning
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#best-practice-for-sm-partitioning" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Creating a context is a costly operation in terms of time, memory, and the hardware resources.
+ </p>
+ <p>
+  If a context with execution affinity is created at kernel launch time, the user will observe a sudden increase in latency and memory footprint as a result of the context creation. To avoid paying the latency of context creation and the abrupt increase in memory usage at kernel launch time, it is recommended that users create a pool of contexts with different SM partitions upfront and select context with the suitable SM partition on kernel launch:
+ </p>
+ <pre><span class="kt">int</span><span class="n">device</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">cudaDeviceProp</span><span class="n">prop</span><span class="p">;</span>
+<span class="k">const</span><span class="n">Int</span><span class="n">CONTEXT_POOL_SIZE</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+<span class="n">CUcontext</span><span class="n">contextPool</span><span class="p">[</span><span class="n">CONTEXT_POOL_SIZE</span><span class="p">];</span>
+<span class="kt">int</span><span class="n">smCounts</span><span class="p">[</span><span class="n">CONTEXT_POOL_SIZE</span><span class="p">];</span>
+<span class="n">cudaSetDevice</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+<span class="n">cudaGetDeviceProperties</span><span class="p">(</span><span class="o">&amp;</span><span class="n">prop</span><span class="p">,</span><span class="n">device</span><span class="p">);</span>
+<span class="n">smCounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">smCounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">smCounts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">prop</span><span class="p">.</span><span class="n">multiProcessorCount</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+<span class="n">smCounts</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">prop</span><span class="p">.</span><span class="n">multiProcessorCount</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">CONTEXT_POOL_SIZE</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="p">{</span>
+<span class="n">CUexecAffinityParam</span><span class="n">affinity</span><span class="p">;</span>
+<span class="n">affinity</span><span class="p">.</span><span class="n">type</span><span class="o">=</span><span class="n">CU_EXEC_AFFINITY_TYPE_SM_COUNT</span><span class="p">;</span>
+<span class="n">affinity</span><span class="p">.</span><span class="n">param</span><span class="p">.</span><span class="n">smCount</span><span class="p">.</span><span class="n">val</span><span class="o">=</span><span class="n">smCounts</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="n">cuCtxCreate_v3</span><span class="p">(</span><span class="o">&amp;</span><span class="n">contextPool</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">affinity</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">deviceOrdinal</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">CONTEXT_POOL_SIZE</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="p">([</span><span class="n">i</span><span class="p">]()</span><span class="p">{</span>
+<span class="kt">int</span><span class="n">numSms</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="n">numBlocksPerSm</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="n">numThreads</span><span class="o">=</span><span class="mi">128</span><span class="p">;</span>
+<span class="n">CUexecAffinityParam</span><span class="n">affinity</span><span class="p">;</span>
+<span class="n">cuCtxSetCurrent</span><span class="p">(</span><span class="n">contextPool</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="n">cuCtxGetExecAffinity</span><span class="p">(</span><span class="o">&amp;</span><span class="n">affinity</span><span class="p">,</span><span class="n">CU_EXEC_AFFINITY_TYPE_SM_COUNT</span><span class="p">);</span>
+<span class="n">numSms</span><span class="o">=</span><span class="n">affinity</span><span class="p">.</span><span class="n">param</span><span class="p">.</span><span class="n">smCount</span><span class="p">.</span><span class="n">val</span><span class="p">;</span>
+<span class="n">cudaOccupancyMaxActiveBlocksPerMultiprocessor</span><span class="p">(</span>
+<span class="o">&amp;</span><span class="n">numBlocksPerSm</span><span class="p">,</span><span class="n">kernel</span><span class="p">,</span><span class="n">numThreads</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="n">kernelArgs</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="cm">/* add kernel args */</span><span class="p">};</span>
+
+<span class="n">dim3</span><span class="nf">dimBlock</span><span class="p">(</span><span class="n">numThreads</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">dim3</span><span class="nf">dimGrid</span><span class="p">(</span><span class="n">numSms</span><span class="o">*</span><span class="n">numBlocksPerSm</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">cudaLaunchCooperativeKernel</span><span class="p">((</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">my_kernel</span><span class="p">,</span><span class="n">dimGrid</span><span class="p">,</span><span class="n">dimBlock</span><span class="p">,</span><span class="n">kernelArgs</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="p">}</span>
+</pre>
+ <p>
+  The hardware resources needed for client CUDA contexts is limited and support up to 48 client CUDA contexts per-device on Volta MPS. The size of the context pool per-device is limited by the number of CUDA client contexts supported per-device. The memory footprint of each client CUDA context and the value of
+  <span class="pre">
+   CUDA_DEVICE_MAX_CONNECTIONS
+  </span>
+  may further reduce the number of available clients. Therefore, CUDA client contexts with different SM partitions should be created judiciously.
+ </p>
+ <h1>
+  <span class="section-number">
+   6.
+  </span>
+  Notices
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#notices" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  This document is provided for information purposes only and shall not be regarded as a warranty of a certain functionality, condition, or quality of a product. NVIDIA Corporation (âNVIDIAâ) makes no representations or warranties, expressed or implied, as to the accuracy or completeness of the information contained in this document and assumes no responsibility for any errors contained herein. NVIDIA shall have no liability for the consequences or use of such information or for any infringement of patents or other rights of third parties that may result from its use. This document is not a commitment to develop, release, or deliver any Material (defined below), code, or functionality.
+ </p>
+ <p>
+  NVIDIA reserves the right to make corrections, modifications, enhancements, improvements, and any other changes to this document, at any time without notice.
+ </p>
+ <p>
+  Customer should obtain the latest relevant information before placing orders and should verify that such information is current and complete.
+ </p>
+ <p>
+  NVIDIA products are sold subject to the NVIDIA standard terms and conditions of sale supplied at the time of order acknowledgement, unless otherwise agreed in an individual sales agreement signed by authorized representatives of NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby expressly objects to applying any customer general terms and conditions with regards to the purchase of the NVIDIA product referenced in this document. No contractual obligations are formed either directly or indirectly by this document.
+ </p>
+ <p>
+  NVIDIA products are not designed, authorized, or warranted to be suitable for use in medical, military, aircraft, space, or life support equipment, nor in applications where failure or malfunction of the NVIDIA product can reasonably be expected to result in personal injury, death, or property or environmental damage. NVIDIA accepts no liability for inclusion and/or use of NVIDIA products in such equipment or applications and therefore such inclusion and/or use is at customerâs own risk.
+ </p>
+ <p>
+  NVIDIA makes no representation or warranty that products based on this document will be suitable for any specified use. Testing of all parameters of each product is not necessarily performed by NVIDIA. It is customerâs sole responsibility to evaluate and determine the applicability of any information contained in this document, ensure the product is suitable and fit for the application planned by customer, and perform the necessary testing for the application in order to avoid a default of the application or the product. Weaknesses in customerâs product designs may affect the quality and reliability of the NVIDIA product and may result in additional or different conditions and/or requirements beyond those contained in this document. NVIDIA accepts no liability related to any default, damage, costs, or problem which may be based on or attributable to: (i) the use of the NVIDIA product in any manner that is contrary to this document or (ii) customer product designs.
+ </p>
+ <p>
+  No license, either expressed or implied, is granted under any NVIDIA patent right, copyright, or other NVIDIA intellectual property right under this document. Information published by NVIDIA regarding third-party products or services does not constitute a license from NVIDIA to use such products or services or a warranty or endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property rights of the third party, or a license from NVIDIA under the patents or other intellectual property rights of NVIDIA.
+ </p>
+ <p>
+  Reproduction of information in this document is permissible only if approved in advance by NVIDIA in writing, reproduced without alteration and in full compliance with all applicable export laws and regulations, and accompanied by all associated conditions, limitations, and notices.
+ </p>
+ <p>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding any damages that customer might incur for any reason whatsoever, NVIDIAâs aggregate and cumulative liability towards customer for the products described herein shall be limited in accordance with the Terms of Sale for the product.
+ </p>
+ <h2>
+  <span class="section-number">
+   6.1.
+  </span>
+  Trademarks
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/mps/index.html#trademarks" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2013-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jun 27, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

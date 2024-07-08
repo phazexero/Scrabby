@@ -1,0 +1,2759 @@
+<html><head><title>NVIDIA GPUDirect Storage O_DIRECT Requirements Guide - NVIDIA Docs</title></head><body><body class="Page-body">
+ <!-- Putting icons here, so we don't have to include in a bunch of -body hbs's -->
+ <span class="sr-only">
+  Submit Search
+ </span>
+ <!--***********************************************************************************************************************************************************************************
+        This script code is added only when moreAttributes is "mobile-only" just because on Books and Topics "mobile-only" search is the last added, so I've added with the last one
+        because the external script "nvidia-in-book-search-page-widget.js" searches for the hidden fields for both desktop and mobile, so if I load the script before all fields are
+        rendered, the script fails
+    **************************************************************************************************************************************************************************************-->
+ <ul class="Navigation-items">
+  <li class="Navigation-items-item">
+   <a href="https://developer.nvidia.com/" target="_blank">
+    NVIDIA Developer
+   </a>
+  </li>
+  <li class="Navigation-items-item">
+   <a href="https://developer.nvidia.com/blog/" target="_blank">
+    Blog
+   </a>
+  </li>
+  <li class="Navigation-items-item">
+   <a href="https://forums.developer.nvidia.com/" target="_blank">
+    Forums
+   </a>
+  </li>
+  <li class="Navigation-items-item">
+   <a class="Button" data-size="small" data-theme="secondary" href="https://docs.nvidia.com/login" rel="nofollow noopener" style="--button-border-radius: 0px">
+    Join
+   </a>
+  </li>
+ </ul>
+ <a aria-label="home page" href="https://docs.nvidia.com/">
+ </a>
+ <span class="sr-only">
+  Submit Search
+ </span>
+ <!--***********************************************************************************************************************************************************************************
+        This script code is added only when moreAttributes is "mobile-only" just because on Books and Topics "mobile-only" search is the last added, so I've added with the last one
+        because the external script "nvidia-in-book-search-page-widget.js" searches for the hidden fields for both desktop and mobile, so if I load the script before all fields are
+        rendered, the script fails
+    **************************************************************************************************************************************************************************************-->
+ <ul class="Navigation-items">
+  <li class="Navigation-items-item">
+   <a data-cms-ai="0" href="https://developer.nvidia.com/" target="_blank">
+    NVIDIA Developer
+   </a>
+  </li>
+  <li class="Navigation-items-item">
+   <a data-cms-ai="0" href="https://developer.nvidia.com/blog/" target="_blank">
+    Blog
+   </a>
+  </li>
+  <li class="Navigation-items-item">
+   <a data-cms-ai="0" href="https://forums.developer.nvidia.com/" target="_blank">
+    Forums
+   </a>
+  </li>
+  <li class="Navigation-items-item">
+   <a class="Button" data-cms-ai="0" data-size="small" data-theme="secondary" href="https://docs.nvidia.com/login" rel="nofollow noopener" style="--button-border-radius: 0px">
+    Join
+   </a>
+  </li>
+ </ul>
+ <span class="label">
+  Menu
+ </span>
+ <a class="Page-BackToTop" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html">
+ </a>
+ <h1 class="PageHeading-title">
+  NVIDIA GPUDirect Storage O_DIRECT Requirements Guide
+ </h1>
+ <span class="sr-only">
+  Submit Search
+ </span>
+ <!--***********************************************************************************************************************************************************************************
+        This script code is added only when moreAttributes is "mobile-only" just because on Books and Topics "mobile-only" search is the last added, so I've added with the last one
+        because the external script "nvidia-in-book-search-page-widget.js" searches for the hidden fields for both desktop and mobile, so if I load the script before all fields are
+        rendered, the script fails
+    **************************************************************************************************************************************************************************************-->
+ <span class="sr-only">
+  Submit Search
+ </span>
+ <!--***********************************************************************************************************************************************************************************
+        This script code is added only when moreAttributes is "mobile-only" just because on Books and Topics "mobile-only" search is the last added, so I've added with the last one
+        because the external script "nvidia-in-book-search-page-widget.js" searches for the hidden fields for both desktop and mobile, so if I load the script before all fields are
+        rendered, the script fails
+    **************************************************************************************************************************************************************************************-->
+ <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/">
+  NVIDIA Docs Hub
+ </a>
+ <span class="Link">
+  NVIDIA GPUDirect Storage (GDS)
+ </span>
+ <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/index.html">
+  NVIDIA GPUDirect Storage
+ </a>
+ <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html">
+  NVIDIA GPUDirect Storage O_DIRECT Requirements Guide
+ </a>
+ <span class="TopicPage-version">
+  NVIDIA GPUDirect Storage (GDS) (Latest Release)
+ </span>
+ <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/pdf/o-direct-guide.pdf">
+  Download PDF
+ </a>
+ <h2>
+  <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#abstract" id="abstract" name="abstract" shape="rect">
+   NVIDIA GPUDirect Storage O_DIRECT Requirements Guide
+  </a>
+ </h2>
+ <p>
+  The NVIDIA® GPUDirect Storage® O_DIRECT Requirements Guide helps you understand how GDS can provide significant benefits when it can leverage the O_DIRECT
+  <span>
+   fcntl.h
+  </span>
+  file mode for a direct data path between GPU memory and storage.
+ </p>
+ <h2 class="StepModuleHeader-title">
+  <a class="StepModuleHeader-anchorLink" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#intro">
+   1. Introduction
+  </a>
+ </h2>
+ <p>
+  <a class="Link" data-cms-ai="0" id="intro" name="intro" shape="rect">
+  </a>
+  This section provides an introduction to the O_DIRECT requirements for GDS.
+ </p>
+ Note:
+ <p>
+  O_DIRECT is the only supported mode before CUDA toolkit 12.2 (GDS version 1.7). CUDA 12.2 (GDS version 1.7) introduces support for non O_DIRECT file descriptors as well. The rest of this guide is still relevant for applications depending upon GDS benefits by expressing intent to use O_DIRECT file mode.
+ </p>
+ <p>
+  NVIDIA® GPUDirect® Storage (GDS) is the newest addition to the GPUDirect family. GDS enables a direct data path for direct memory access (DMA) transfers between GPU memory and storage, which avoids a bounce buffer through the CPU. This direct path increases system bandwidth and decreases the latency and utilization load on the CPU.
+ </p>
+ <p>
+  GDS can provide significant benefit when it can leverage the O_DIRECT (
+  <a class="xref" data-cms-ai="0" href="https://github.com/torvalds/linux/blob/master/include/uapi/asm-generic/fcntl.h" shape="rect">
+   fcntl.h
+  </a>
+  ) file mode for a direct data path between GPU memory and storage. There are many conditions that must be met to achieve the performance benefits of the O_DIRECT mode, and these conditions are not always met by all file systems. The conditions might depend on the transfer size, whether it’s a read or write, whether the write is to new data (past the end of the file or to a hole in the file), and based on many other conditions such as whether checksums are required. This document describes the conditions where O_DIRECT, on which GDS relies, can be used. The target audience for this guide includes:
+  <a class="Link" data-cms-ai="0" id="intro__ul_ir1_pry_2nb" name="intro__ul_ir1_pry_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   End users and administrators who:
+   <a class="Link" data-cms-ai="0" id="intro__ul_bsr_pry_2nb" name="intro__ul_bsr_pry_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     Understand filesystems, so they can carefully consider the implications of features they enable.
+    </li>
+    <li>
+     Compare support from different filesystems to determine the appropriate models and how to use them.
+    </li>
+    <li>
+     Evaluate the weighted fraction of cases that do or don’t use O_DIRECT effectively.
+    </li>
+   </ul>
+  </li>
+  <li>
+   Middleware developers who:
+   <a class="Link" data-cms-ai="0" id="intro__ul_rcc_sry_2nb" name="intro__ul_rcc_sry_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     Consider the design trade-offs that increase the likelihood that the vendor layer can effectively use O_DIRECT.
+    </li>
+   </ul>
+  </li>
+  <li>
+   Filesystems vendors and implementers who:
+   <a class="Link" data-cms-ai="0" id="intro__ul_f3n_try_2nb" name="intro__ul_f3n_try_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     Accelerate their assessment of the various cases to be handled with O_DIRECT as they enable GDS in new or customized filesystems.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h3 id="rel-docs">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#rel-docs">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#rel-docs" id="rel-docs" name="rel-docs" shape="rect">
+    1.1. Related Documents
+   </a>
+  </a>
+ </h3>
+ <p>
+  Since the original creation of this guide, additional GDS documents and online resources have been created which support and provide additional context for the optimal use of and understanding of this specification.
+ </p>
+ <p>
+  Refer to the following guides for more information about GDS:
+  <a class="Link" data-cms-ai="0" id="rel-docs__ul_sl5_qv1_hnb" name="rel-docs__ul_sl5_qv1_hnb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html" shape="rect">
+    GPUDirect Storage Design Guide
+   </a>
+  </li>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html" shape="rect">
+    GPUDirect Storage Overview Guide
+   </a>
+  </li>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html" shape="rect">
+    cuFile API Reference Guide
+   </a>
+  </li>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html" shape="rect">
+    GPUDirect Storage Release Notes
+   </a>
+  </li>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html" shape="rect">
+    GPUDirect Storage Best Practices Guide
+   </a>
+  </li>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html" shape="rect">
+    GPUDirect Storage Troubleshooting Guide
+   </a>
+  </li>
+ </ul>
+ <p>
+  To learn more about GDS, refer to the following blogs:
+  <a class="Link" data-cms-ai="0" id="rel-docs__ul_ydx_wkp_knb" name="rel-docs__ul_ydx_wkp_knb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a class="xref" data-cms-ai="0" href="https://devblogs.nvidia.com/gpudirect-storage/" shape="rect">
+    GPUDirect Storage: A Direct Path Between Storage and GPU Memory
+   </a>
+   .
+  </li>
+  <li>
+   The
+   <a class="xref" data-cms-ai="0" href="https://developer.nvidia.com/blog/tag/magnum-io/" shape="rect">
+    Magnum IO
+   </a>
+   series.
+  </li>
+ </ul>
+ <h2 class="StepModuleHeader-title">
+  <a class="StepModuleHeader-anchorLink" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#gds-req">
+   2. GPUDirect Storage Requirements
+  </a>
+ </h2>
+ <p>
+  <a class="Link" data-cms-ai="0" id="gds-req" name="gds-req" shape="rect">
+  </a>
+  This section provides some basic background on where GDS can be most effectively used.
+ </p>
+ <p>
+  This information enables readers with varying degrees of technical accuity to get a general sense of whether, and to what degree, GDS can benefit filesystems that make different design choices.
+  <a class="Link" data-cms-ai="0" id="summ-basic-req" name="summ-basic-req" shape="rect">
+  </a>
+ </p>
+ <h3 id="summ-basic-req">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#summ-basic-req">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#summ-basic-req" id="summ-basic-req" name="summ-basic-req" shape="rect">
+    2.1. Summary of Basic Requirements
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about the O_DIRECT requirements
+ </p>
+ <p>
+  The GDS architecture has the following key requirements:
+  <a class="Link" data-cms-ai="0" id="summ-basic-req__ul_rwq_tty_2nb" name="summ-basic-req__ul_rwq_tty_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   The kernel storage driver can perform a DMA of user data to or from GPU memory by using addresses that were obtained from callbacks to the GDS kernel module, nvidia-fs.ko.
+  </li>
+  <li>
+   The device near the storage has a DMA engine that can reach the GPU memory buffer via PCIe.
+   <a class="Link" data-cms-ai="0" id="summ-basic-req__ul_ers_vty_2nb" name="summ-basic-req__ul_ers_vty_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     For local storage, an NVMe device performs DMA.
+    </li>
+    <li>
+     For remote storage, a NIC device performs RDMA.
+    </li>
+   </ul>
+  </li>
+  <li>
+   The filesystem stack that operates at the user-level, or the kernel-level, or both, and never needs to access the data in CPU system memory.
+   <p>
+    Instead, data is transferred directly between storage and GPU memory, which is achieved by filesystems that exclusively use the O_DIRECT mode for a given file.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Figure 1 illustrates a way to visualize conditions for O_DIRECT. It covers cases where there is, or is not, an operator (
+  <a class="Link" data-cms-ai="0" id="summ-basic-req__image_tlj_hhb_gnb" name="summ-basic-req__image_tlj_hhb_gnb" shape="rect">
+  </a>
+ </p>
+ <p>
+  ) in the data path to storage, and whether that operator is in the CPU or GPU. If the operator is in the CPU, you cannot use O_DIRECT.
+  <a class="Link" data-cms-ai="0" id="summ-basic-req__fig_fpq_rz5_fnb" name="summ-basic-req__fig_fpq_rz5_fnb" shape="rect">
+  </a>
+ </p>
+ <p>
+  Figure 1. Summary of Basic Requirements
+ </p>
+ <p>
+  The data coming from (or going to) storage cannot use O_DIRECT if it must be processed in the CPU, as symbolized by cross operator. It can use O_DIRECT if it only goes through the GPU whether there’s a transformational operator there as symbolized by a cross operator like checksum on the GPU or there’s no operation at all, as symbolized by a clean arrow.
+ </p>
+ <p>
+  Lack of support for RDMA in network filesystems, or network block devices, implies the need to copy data to socket buffers in system memory. This need is incompatible with the basic requirements listed above. If the conditions for using GDS do not hold, for example, because the mount for the file is not GDS enabled, or the nvidia-fs.ko driver is not available, compatibility mode, a cuFile feature that falls back to copying through a CPU bounce buffer, can be used. You can enable compatibility mode in the
+  <span>
+   cufile.json
+  </span>
+  file. Users can override the system’s version of the cufile.json file by creating their own copy and pointing the appropriate environment variable to that user’s copy. Outside of compatibility mode, the APIs will fail if O_DIRECT is not possible.
+ </p>
+ Note:
+ <p>
+  As of CUDA toolkit 12.2 (GDS version 1.7), the APIs would work in compatibility mode, even if the file descriptor that is used with the cuFile APIs is opened in non O_DIRECT mode. Even in such a case, the APIs would leverage the GDS path whenever a direct path between storage and gpu buffer exits. For all other cases the APIs go via the page cache for fds opened in non O_DIRECT mode. This can be viewed as the compatibility mode leveraging the page cache that can typically be used for smaller file I/Os with a high degree of temporal locality, like the case of application headers or metadata.
+ </p>
+ <h3 id="client-server">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#client-server">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#client-server" id="client-server" name="client-server" shape="rect">
+    2.2. Client and Server
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about how the client and server work with O_DIRECT.
+ </p>
+ <p>
+  In a local file or block systems, a software stack performs all IO. In a distributed file or block system, at least two agents are involved. the client makes a read or write request, and a server services it. There are two types of filesystems:
+  <a class="Link" data-cms-ai="0" id="client-server__ul_qbb_qvy_2nb" name="client-server__ul_qbb_qvy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   Block-based
+  </li>
+  <li>
+   Network-attached
+  </li>
+ </ul>
+ <p>
+  A block-based system can be serviced locally or remotely, while network-attached filesystems are always remote. Consider the following interaction between a client and server:
+  <a class="Link" data-cms-ai="0" id="client-server__ul_mt4_vvy_2nb" name="client-server__ul_mt4_vvy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   The direct data path between the NIC and GPU memory happens on the client.
+   <p>
+    To enable this direct path, client-side drivers must first be enabled with GDS.
+   </p>
+  </li>
+  <li>
+   RDMA is a protocol to access remote data over a network and uses the NIC to DMA directly into client-side memory.
+   <p>
+    Without RDMA, there is no direct path, and GDS for distributed file and block systems relies on GPUDirect RDMA for the direct path between the NIC and GPU memory.
+   </p>
+  </li>
+  <li>
+   Using RDMA also relies on server-side support.
+  </li>
+ </ul>
+ <p>
+  Filesystem implementations that do not support RDMA on the server side will not support GDS. For example, NFS only works with server-side NFS instead of RDMA support, which is not yet available from all NFS vendors.
+ </p>
+ <h3 id="odirect-not-a-fit">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#odirect-not-a-fit">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#odirect-not-a-fit" id="odirect-not-a-fit" name="odirect-not-a-fit" shape="rect">
+    2.3. Cases Where O_DIRECT is Not a Fit
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about features that are used by specific filesystems, which might inhibit the use of full GDS benefits.
+ </p>
+ <p>
+  In POSIX, the mode in which files are opened is controlled by a set of flags. One of these flags, O_DIRECT, indicates a user’s intent to not buffer transfers in CPU system memory but to rather make transfers be more direct. O_DIRECT, for example, generally disables the use of a page cache. Although this flag is an expression of user intention, the implementation can still make its own trade-offs.
+ </p>
+ <p>
+  For example, the implementation might decide to treat small transfers differently from larger transfers that take a more direct path. In another example, a filesystem might offer an option for the user to enable read ahead for the page cache. This option, however, might conflict with the request from the user to use O_DIRECT for a file. In this case, how the implementation treats the competing requests depends on the implementation policy. Therefore, O_DIRECT can be considered a hint.
+ </p>
+ <p>
+  Several cases are listed below where a user’s request to use O_DIRECT is not currently supported in filesystems, is not used in specific cases, or is fundamentally not feasible. The cases are delineated according to the agent that makes choices or trade-offs which impact that option. Here is some additional information:
+  <a class="Link" data-cms-ai="0" id="odirect-not-a-fit__ul_l3w_vwy_2nb" name="odirect-not-a-fit__ul_l3w_vwy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   Possibly relevant for users
+   <a class="Link" data-cms-ai="0" id="odirect-not-a-fit__ul_zm5_xwy_2nb" name="odirect-not-a-fit__ul_zm5_xwy_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     User-buffered IO: Transfers might be buffered in the user space before being transferred to the kernel.
+     <p>
+      This case might be used when many small transactions have good spatial and temporal locality.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Possibly relevant for middleware
+   <a class="Link" data-cms-ai="0" id="odirect-not-a-fit__ul_ut1_1xy_2nb" name="odirect-not-a-fit__ul_ut1_1xy_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     Metadata management: There might be metadata with the data payload.
+     <p>
+      Metadata might take many forms, including checksums for the data payload, file sizes that must be updated when lengthening files, and maps of file layout when filling holes.
+     </p>
+    </li>
+    <li>
+     Hierarchical storage model: Some implementations used a tiered scheme where some data resides in CPU system memory, and where shorter latency and high bandwidth is possible.
+     <p>
+      There are outer tiers of progressively slower, but higher-capacity storage. An example of this tiered scheme is flash and then spinning disks.
+     </p>
+    </li>
+    <li>
+     Read ahead: An optimization that is sometimes used, especially for buffered IO and many small consecutive transfers, is to anticipate what will be used next and to buffer it in CPU system memory.
+    </li>
+    <li>
+     Examining or transforming data: When the CPU examines or transforms data before (or after) IO transactions, this process interferes with direct transfers between the storage and GPU memory.
+    </li>
+   </ul>
+  </li>
+  <li>
+   Filesystem only
+   <a class="Link" data-cms-ai="0" id="odirect-not-a-fit__ul_v5q_fxy_2nb" name="odirect-not-a-fit__ul_v5q_fxy_2nb" shape="rect">
+   </a>
+   <ul>
+    <li>
+     Kernel-buffered IO: If there is good temporal and spatial locality, and the bandwidth and latency to copy from kernel memory is significantly better than copying from storage, a mechanism such as fscache might be used to maintain a copy in system memory.
+    </li>
+    <li>
+     Inline data: Small files are stored and managed differently than larger files.
+    </li>
+    <li>
+     Block allocation: Various policies are available to allocate space in files, and there might be implications for client- and server-side activities.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  There are cases where middleware performs some of the same functions as a filesystem. Middleware might have more contextual information available to it than low-level calls to the file system, and it might take steps to increase the likelihood that the filesystem can use O_DIRECT. Consider the case of computing a checksum. A user might be able to control whether checksums are even used. If checksums are enabled, middleware might intervene in the following ways:
+  <a class="Link" data-cms-ai="0" id="odirect-not-a-fit__ul_zpz_3xy_2nb" name="odirect-not-a-fit__ul_zpz_3xy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   It could invoke a GPU kernel to compute the checksum and juxtapose the checksum data with the payload so that one cuFileWrite can be used to write back the data to storage.
+  </li>
+  <li>
+   It could again invoke a GPU kernel to compute the checksum to a different buffer and use two cuFileWrites to write each of the checksum and payload.
+   <p>
+    In these cases, the requests to the filesystem can use O_DIRECT.
+   </p>
+  </li>
+ </ul>
+ <h3 id="buffered-io">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#buffered-io">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#buffered-io" id="buffered-io" name="buffered-io" shape="rect">
+    2.3.1. Buffered IO
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about buffered IO in GDS.
+ </p>
+ <p>
+  The Linux virtual file system (VFS) uses a buffered IO when O_DIRECT is not specified, and there are potentially multiple layers of caching. Examples of caching might include the following:
+  <a class="Link" data-cms-ai="0" id="buffered-io__ul_exl_dyy_2nb" name="buffered-io__ul_exl_dyy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   Page caching, which is backed by fscache.
+  </li>
+  <li>
+   File-system-specific page pools, such as ZFS adaptive replay cache (ARC) and Spectrum Storage (GPFS) page pools.
+  </li>
+ </ul>
+ <h3 id="inline-files">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#inline-files">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#inline-files" id="inline-files" name="inline-files" shape="rect">
+    2.3.2. Inline Files
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about inline files in GDS.
+ </p>
+ <p>
+  Filesystems that are based on Linux are implemented by using the common VFS interface to open, close, read, and write files. User data is organized in files, which are represented in the following ways:
+  <a class="Link" data-cms-ai="0" id="inline-files__ul_pvp_jyy_2nb" name="inline-files__ul_pvp_jyy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   Inodes, whose primary purpose is to store metadata.
+  </li>
+  <li>
+   Fixed blocks, which are generally referred to as pages that hold user content.
+   <p>
+    A typical block size is 4096 bytes.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Inline files have data that is smaller than a page size and small enough to fit in the inode. Generally, filesystems provide flags to detect whether the inode is inline. Inodes are normally read into system memory, so inline user data is copied into system memory with the metadata.
+ </p>
+ <p>
+  In RDMA-based network-attached filesystems, files that are smaller than the specified size threshold are sent inline in the remote procedure calls (RPCs). This process involves buffering in system memory, which requires an additional copy of user data rather than a direct data transfer. For some filesystems, such as ext4 and Lustre, the inline files modes can be disabled at the filesystem level or on a per-inode basis.
+ </p>
+ <h3 id="block-alloc-writes">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#block-alloc-writes">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#block-alloc-writes" id="block-alloc-writes" name="block-alloc-writes" shape="rect">
+    2.3.3. Block Allocation For Writes
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about block allocation for writes in GDS.
+ </p>
+ <p>
+  Before data can be written to a file, a data block must be allocated. See Inline Files for more information. For filesystems to support the O_DIRECT mode for writing files, free data blocks in storage must be available and ready to be used by the filesystem. Otherwise, as in the following cases, user data can be buffered into the system page cache, which makes direct data transfers impossible. Here is a list of cases where some filesystems need to fall back to buffered mode because of block allocations:
+ </p>
+ Note:
+ <p>
+  These limitations do not apply to distributed filesystems if the features are implemented on the storage server, and the client does not perform buffering.
+ </p>
+ <ul>
+  <li>
+   Extending writes: writes that are happening to increase the file size.
+  </li>
+  <li>
+   Allocating writes: writes to a block that has not yet been allocated.
+  </li>
+  <li>
+   Writes to preallocated blocks: the block was already allocated in storage, but the metadata needs to be updated before the data is written.
+  </li>
+  <li>
+   Hole filling: writes to a hole in the middle of the file, which was a sparse block.
+  </li>
+  <li>
+   Copy on write (COW) filesystems: copy operations that are triggered when a write to a data buffer involves caching in the CPU system memory.
+  </li>
+  <li>
+   Delayed allocation or allocate on flush: allocation is reactive (not proactive) to reduce disk fragmentation on slow random writes or to large sequential writes for spinning disks.
+  </li>
+ </ul>
+ <p>
+  For network-attached storage or distributed filesystems, the filesystem architecture determines whether the allocation decision is made locally, on each client, or on the remote server. If the block allocation handling is done on the server side, there is no CPU buffering impediment to direct transfers. If block allocation was handled on the client side, there might be some impediments.
+ </p>
+ <h3 id="examine-transform-data">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#examine-transform-data">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#examine-transform-data" id="examine-transform-data" name="examine-transform-data" shape="rect">
+    2.3.4. Examining or Transforming User Data
+   </a>
+  </a>
+ </h3>
+ <p>
+  Here is some information about how to examine or transform user data.
+ </p>
+ <p>
+  Here is a list of some cases where the user data needs to be copied into system memory, so that it can be examined or transformed by the filesystems as part of a read or write transfer:
+  <a class="Link" data-cms-ai="0" id="examine-transform-data__ul_ufn_jzy_2nb" name="examine-transform-data__ul_ufn_jzy_2nb" shape="rect">
+  </a>
+ </p>
+ <ul>
+  <li>
+   Data journaling is used to track changes that are not yet committed to persistent storage.
+   <p>
+    Data journaling typically disables O_DIRECT. In general, the journaling of data is not required with the O_DIRECT use case, unless there is a high-speed journaling media. Metadata journaling does not require access to user data.
+   </p>
+  </li>
+  <li>
+   Checksums can be computed during writes and checked upon reads.
+   <p>
+    For network filesystems with checksum support, the checksums are typically performed on the client to detect network corruptions, in addition to checksum computation on the server.
+   </p>
+  </li>
+  <li>
+   Client-side compression and deduplication can be provided on network clients to achieve bandwidth improvements in addition to compression on the server side for data storage.
+   <p>
+    Inline deduplication requires looking at user content to determine the fingerprint by using MD5 or SHA1 algorithms. Similarly, client-side encryption can provide more secure communication from the client to server.
+   </p>
+  </li>
+  <li>
+   Erasure encoding can be performed by the filesystem or the block device.
+   <p>
+    In such cases, the data is copied to CPU system memory before performing the DMA to the disk pool or network servers. For distributed block devices, the erasure coding decision is performed on the client side.
+   </p>
+   <p>
+    Synchronous replication involves a data copy into system memory before the DMA operation to a remote block device or server, depending on the recovery time objective.
+   </p>
+  </li>
+ </ul>
+ <h3 id="summary">
+  <a data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#summary">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#summary" id="summary" name="summary" shape="rect">
+    2.3.5. Summary
+   </a>
+  </a>
+ </h3>
+ <p>
+  This section contains some final information to consider about O_DIRECT.
+ </p>
+ <p>
+  There are many cases in which the O_DIRECT mode, in which CPU system memory is entirely unused, is not a fit. The relevance of these cases depends on the local or distributed filesystem implementation, and in some cases, on the set of features that were selected by the user. Vendors can provide their own assessments of the relevance of these issues.
+ </p>
+ <h2 class="StepModuleHeader-title">
+  <a class="StepModuleHeader-anchorLink" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#notices-header">
+   Notices
+  </a>
+ </h2>
+ <h3>
+  Notice
+ </h3>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-1" name="notice__notice-para-1" shape="rect">
+  </a>
+  This document is provided for information purposes only and shall not be regarded as a warranty of a certain functionality, condition, or quality of a product. NVIDIA Corporation (“NVIDIA”) makes no representations or warranties, expressed or implied, as to the accuracy or completeness of the information contained in this document and assumes no responsibility for any errors contained herein. NVIDIA shall have no liability for the consequences or use of such information or for any infringement of patents or other rights of third parties that may result from its use. This document is not a commitment to develop, release, or deliver any Material (defined below), code, or functionality.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-2" name="notice__notice-para-2" shape="rect">
+  </a>
+  NVIDIA reserves the right to make corrections, modifications, enhancements, improvements, and any other changes to this document, at any time without notice.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-3" name="notice__notice-para-3" shape="rect">
+  </a>
+  Customer should obtain the latest relevant information before placing orders and should verify that such information is current and complete.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-4" name="notice__notice-para-4" shape="rect">
+  </a>
+  NVIDIA products are sold subject to the NVIDIA standard terms and conditions of sale supplied at the time of order acknowledgement, unless otherwise agreed in an individual sales agreement signed by authorized representatives of NVIDIA and customer (“Terms of Sale”). NVIDIA hereby expressly objects to applying any customer general terms and conditions with regards to the purchase of the NVIDIA product referenced in this document. No contractual obligations are formed either directly or indirectly by this document.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-5" name="notice__notice-para-5" shape="rect">
+  </a>
+  NVIDIA products are not designed, authorized, or warranted to be suitable for use in medical, military, aircraft, space, or life support equipment, nor in applications where failure or malfunction of the NVIDIA product can reasonably be expected to result in personal injury, death, or property or environmental damage. NVIDIA accepts no liability for inclusion and/or use of NVIDIA products in such equipment or applications and therefore such inclusion and/or use is at customer’s own risk.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-6" name="notice__notice-para-6" shape="rect">
+  </a>
+  NVIDIA makes no representation or warranty that products based on this document will be suitable for any specified use. Testing of all parameters of each product is not necessarily performed by NVIDIA. It is customer’s sole responsibility to evaluate and determine the applicability of any information contained in this document, ensure the product is suitable and fit for the application planned by customer, and perform the necessary testing for the application in order to avoid a default of the application or the product. Weaknesses in customer’s product designs may affect the quality and reliability of the NVIDIA product and may result in additional or different conditions and/or requirements beyond those contained in this document. NVIDIA accepts no liability related to any default, damage, costs, or problem which may be based on or attributable to: (i) the use of the NVIDIA product in any manner that is contrary to this document or (ii) customer product designs.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-7" name="notice__notice-para-7" shape="rect">
+  </a>
+  No license, either expressed or implied, is granted under any NVIDIA patent right, copyright, or other NVIDIA intellectual property right under this document. Information published by NVIDIA regarding third-party products or services does not constitute a license from NVIDIA to use such products or services or a warranty or endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property rights of the third party, or a license from NVIDIA under the patents or other intellectual property rights of NVIDIA.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-8" name="notice__notice-para-8" shape="rect">
+  </a>
+  Reproduction of information in this document is permissible only if approved in advance by NVIDIA in writing, reproduced without alteration and in full compliance with all applicable export laws and regulations, and accompanied by all associated conditions, limitations, and notices.
+ </p>
+ <p>
+  <a class="Link" data-cms-ai="0" id="notice__notice-para-9" name="notice__notice-para-9" shape="rect">
+  </a>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, “MATERIALS”) ARE BEING PROVIDED “AS IS.” NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding any damages that customer might incur for any reason whatsoever, NVIDIA’s aggregate and cumulative liability towards customer for the products described herein shall be limited in accordance with the Terms of Sale for the product.
+ </p>
+ <h3>
+  OpenCL
+ </h3>
+ <p>
+  OpenCL is a trademark of Apple Inc. used under license to the Khronos Group Inc.
+ </p>
+ <h3>
+  Trademarks
+ </h3>
+ <p>
+  NVIDIA, the NVIDIA logo, DGX, DGX-1, DGX-2, DGX-A100, Tesla, and Quadro are trademarks and/or registered trademarks of NVIDIA Corporation in the United States and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <span class="Page-copyright-text">
+  © 2020-2024 NVIDIA Corporation and affiliates. All rights reserved.
+ </span>
+ <span class="Page-copyright-update">
+  Last updated on Jun 14, 2024.
+ </span>
+ Topics
+ <ul class="Book-items">
+  <li class="Book-items-item">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/index.html">
+    NVIDIA GPUDirect Storage
+   </a>
+  </li>
+  <li class="Book-items-item">
+   <span class="Link">
+    NVIDIA GPUDirect Storage
+   </span>
+   <ul class="Chapter-chapters">
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html">
+      NVIDIA GPUDirect Storage Design Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#design-intro">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#data-transfer-gpu-storage">
+        2. Data Transfer Issues for GPU and Storage
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#gds-storage-benefits">
+        3. GPUDirect Storage Benefits
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#app-sustain">
+        4. Application Suitability
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#transfers-to-from-gpu">
+          4.1. Transfers To and From the GPU
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#io-bottleneck">
+          4.2. Understanding IO Bottlenecks
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#explicit">
+          4.3. Explicit GDS APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#pinned">
+          4.4. Pinned Memory for DMA Transfers
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#cufile-apis">
+          4.5. cuFile APIs
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#plat-perf-stable">
+        5. Platform Performance Suitability
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#bandw-from-storage">
+          5.1. Bandwidth from Storage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#path-storage-gpu">
+          5.2. Paths from Storage to GPUs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#gpu-bar1-size">
+          5.3. GPU BAR1 Size
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/design-guide/index.html#call-to-action">
+        6. Call to Action
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html">
+      NVIDIA GPUDirect Storage Overview Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#overview-intro">
+        1. Introduction
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#related-docs">
+          1.1. Related Documents
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#dev-benefits">
+          1.2. Benefits for a Developer
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#intended-uses">
+          1.3. Intended Uses
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#func-overview">
+        2. Functional Overview
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#explicit-and-direct">
+          2.1. Explicit and Direct
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#perf-optimize">
+          2.2. Performance Optimizations
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#imp-perf-enhance">
+            2.2.1. Implementation Performance Enhancements
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#concurrency-across-threads">
+            2.2.2. Concurrency Across Threads
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#asychrony">
+            2.2.3. Asynchrony
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#batching">
+            2.2.4. Batching
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#streams">
+            2.2.5. Use of CUDA Streams in cuFile
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#comp-and-gen">
+          2.3. Compatibility and Generality
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#monitoring">
+          2.4. Monitoring
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#solution-scope">
+          2.5. Scope of the Solutions in GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#dynamic-routing-overview">
+          2.6. Dynamic Routing
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#cufile-config-dynamic-routing">
+            2.6.1. cuFile Configuration for Dynamic Routing
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#cufile-config-for-dfs-mount">
+            2.6.2. cuFile Configuration for DFS Mount
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#dynamic-routing-cufile-config-validation">
+            2.6.3. cuFile Configuration Validation for Dynamic Routing
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#software-arch">
+        3. Software Architecture
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#software-comp">
+          3.1. Software Components
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#prim-comp">
+          3.2. Primary Components
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#gds-workflows">
+            3.2.1. Workflows for GDS Functionality
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#workflow-1">
+            3.2.2. Workflow 1
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#workflow-2">
+            3.2.3. Workflow 2
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#align-linux-initiatives">
+          3.3. Aligning with Other Linux Initiatives
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#deployment">
+        4. Deployment
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#deploy-software-comp">
+          4.1. Software Components for Deployment
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/overview-guide/index.html#using-gds-containers">
+          4.2. Using GPUDirect Storage in Containers
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html">
+      cuFile API Reference Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#introduction">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#usage">
+        2. Usage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#dynamic-interactions">
+          2.1. Dynamic Interactions
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#driver-file-buffer">
+          2.2. Driver, File, and Buffer Management
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-compatibility-mode">
+          2.3. cuFile Compatibility Mode
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-api-specification">
+        3. cuFile API Specification
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#data-types">
+          3.1. Data Types
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#declarations-and-definitions">
+            3.1.1. Declarations and Definitions
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#typedefs">
+            3.1.2. Typedefs
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#enumerations">
+            3.1.3. Enumerations
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-driver-api">
+          3.2. cuFile Driver APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-io-api">
+          3.3. cuFile Synchronous IO APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-file-handle-api">
+          3.4. cuFile File Handle APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-buffer-api">
+          3.5. cuFile Buffer APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-stream-api">
+          3.6. cuFile Stream APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-batch-api">
+          3.7. cuFile Batch APIs
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-api-functional-specification">
+        4. cuFile API Functional Specification
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriver-api-functional-specification">
+          4.1. cuFileDriver API Functional Specification
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriveropen">
+            4.1.1. cuFileDriverOpen
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriverclose">
+            4.1.2. cuFileDriverClose
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledrivergetproperties">
+            4.1.3. cuFileDriverGetProperties
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriversetpollmode">
+            4.1.4. cuFileDriverSetPollMode(bool poll, size_t poll_threshold_size)
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriversetmaxdirectiosize">
+            4.1.5. cuFileDriverSetMaxDirectIOSize(size_t max_direct_io_size)
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriversetmaxcachesize">
+            4.1.6. cuFileDriverSetMaxCacheSize(size_t max_cache_size)
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufiledriversetmaxpinnedmemsize">
+            4.1.7. cuFileDriverSetMaxPinnedMemSize(size_t max_pinned_memory_size)
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-io-api-functional-specification">
+          4.2. cuFile IO API Functional Specification
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilehandleregister">
+            4.2.1. cuFileHandleRegister
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#unique_1423451733">
+            4.2.2. cuFileHandleDeregister
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufileread">
+            4.2.3. cuFileRead
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilewrite">
+            4.2.4. cuFileWrite
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-memory-mgmt-functional-specification">
+          4.3. cuFile Memory Management Functional Specification
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebufregister">
+            4.3.1. cuFileBufRegister
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebufderegister">
+            4.3.2. cuFileBufDeregister
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-stream-api-functional-specification">
+          4.4. cuFile Stream API Functional Specification
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilestreamregister">
+            4.4.1. cuFileStreamRegister
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilestreamderegister">
+            4.4.2. cuFileStreamDeregister
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilereadasync">
+            4.4.3. cuFileReadAsync
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilewriteasync">
+            4.4.4. cuFileWriteAsync
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufile-batch-api-functional-specification">
+          4.5. cuFile Batch API Functional Specification
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebatchiosetup">
+            4.5.1. cuFileBatchIOSetUp
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebatchiosubmit">
+            4.5.2. cuFileBatchIOSubmit
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebatchiogetstatus">
+            4.5.3. cuFileBatchIOGetStatus
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebatchiocancel">
+            4.5.4. cuFileBatchIOCancel
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#cufilebatchiodestroy">
+            4.5.5. cuFileBatchIODestroy
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#sample-program">
+        5. Sample Program with cuFile APIs
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/api-reference-guide/index.html#batch-api-known-limitations">
+        6. Known Limitations of cuFile Batch APIs
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html">
+      NVIDIA GPUDirect Storage Release Notes
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#rn-intro">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#new-features">
+        2. New Features and Changes
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#mofed-fs-req">
+        3. MLNX_OFED and Filesystem Requirements
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#support-matrix">
+        4. Support Matrix
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#gds-enabled-libraries">
+        5. GDS Enabled Libraries/Frameworks
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#included-packages">
+        6. Included Packages
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#updates-bug-fixes">
+        7. Minor Updates and Bug Fixes
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#known-issues">
+        8. Known Issues
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/release-notes/index.html#known-limitations">
+        9. Known Limitations
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/getting-started/index.html">
+      Getting Started with NVIDIA GPUDirect Storage
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/getting-started/index.html#gs-intro">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/getting-started/index.html#sys-admin">
+        2. If you are a system administrator or a performance engineer
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/getting-started/index.html#developer">
+        3. If you are a developer
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/getting-started/index.html#oem-odm-csp">
+        4. If you are OEM, ODM, CSP
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/getting-started/index.html#troubleshoting-issues">
+        5. Troubleshooting GDS issues
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="Book-items-item">
+   <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/index.html#understanding-gpudirect-storage">
+    Understanding GPUDirect Storage
+   </a>
+   <ul class="Chapter-chapters">
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html">
+      NVIDIA GPUDirect Storage Best Practices Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#gds-bp-intro">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#settings">
+        2. Software Settings
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#system-settings">
+          2.1. System Settings
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cuda-context-in-gpu-kernels">
+          2.2. Use of CUDA Context in GPU Kernels and Storage IO
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-config">
+          2.3. cuFile Configuration Settings
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#api-usage">
+        3. API Usage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-driveropen">
+          3.1. cuFileDriverOpen
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-handle-register">
+          3.2. cuFileHandleRegister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-bufregister-fileread-filewrite">
+          3.3. cuFileBufRegister, cuFileRead, cuFileWrite, cuFileBatchIOSubmit, cuFileBatchIOGetStatus, cuFileReadAsync, cuFileWriteAsync, and cuFileStreamRegister
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-1">
+            3.3.1. IO Pattern 1
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-2">
+            3.3.2. IO Pattern 2
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-3">
+            3.3.3. IO Pattern 3
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-4">
+            3.3.4. IO Pattern 4
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-5">
+            3.3.5. IO Pattern 5
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-6">
+            3.3.6. IO Pattern 6
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#io-pattern-7">
+            3.3.7. IO Pattern 7
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-handle-deregister">
+          3.4. cuFileHandleDeregister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-buf-deregister">
+          3.5. cuFileBufDeregister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-stream-register">
+          3.6. cuFileStreamRegister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#unique_880314822">
+          3.7. cuFileStreamDeregister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/best-practices-guide/index.html#cufile-driver-close">
+          3.8. cuFileDriverClose
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html">
+      NVIDIA GPUDirect Storage Benchmarking and Configuration Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#introduction">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#about-this-guide">
+        2. About this Guide
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#benchmarking-gds">
+        3. Benchmarking GPUDirect Storage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#determining-pcie-device-affinity">
+          3.1. Determining PCIe Device Affinity
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-configuration-parameters">
+          3.2. GPUDirect Storage Configuration Parameters
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#system-parameters">
+            3.2.1. System Parameters
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-parameters">
+            3.2.2. GPUDirect Storage Parameters
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-benchmarking-tools">
+          3.3. GPUDirect Storage Benchmarking Tools
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gdsio">
+            3.3.1. gdsio Utility
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-stats">
+            3.3.2. gds-stats Tool
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-benchmarking-on-direct-attached-storage-das">
+        4. GPUDirect Storage Benchmarking on Direct Attached Storage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-perf-dgx2">
+          4.1. GPUDirect Storage Performance on DGX-2 System
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-perf-dgx-a100">
+          4.2. GPUDirect Storage Performance on a DGX A100 System
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-benchmarking-on-nas">
+        5. GPUDirect Storage Benchmarking on Network Attached Storage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#gds-benchmarking-on-nfs">
+          5.1. GPUDirect Storage Benchmarking on NFS
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#summary">
+        6. Summary
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#benchmarking-and-performance">
+        A. Benchmarking and Performance
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#the-language-of-performance">
+          A.1. The Language of Performance
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/configuration-guide/index.html#benchmarking-storage-performance">
+          A.2. Benchmarking Storage Performance
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html">
+      NVIDIA GPUDirect Storage Installation and Troubleshooting Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#intro">
+        1. Introduction
+       </a>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#troubleshoot-install">
+        2. Installing GPUDirect Storage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#install-prereqs">
+          2.1. Before You Install GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-installing">
+          2.2. Installing GDS
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#config-file-system-settings">
+            2.2.1. Configuring File System Settings for GDS
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#verify-suc-install">
+            2.2.2. Verifying a Successful GDS Installation
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-lib-tools">
+          2.3. Installed GDS Libraries and Tools
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#uninstall-gds">
+          2.4. Uninstalling GPUDirect Storage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#environment-variables">
+          2.5. Environment Variables Used by GPUDirect Storage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#json-config-params">
+          2.6. JSON Config Parameters Used by GPUDirect Storage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dynamic-routing-config">
+          2.7. GDS Configuration File Changes to Support Dynamic Routing
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#det-installed-version">
+          2.8. Determining Which Version of GDS is Installed
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#experimental-repos-dgx">
+          2.9. Experimental Repos for Network Install of GDS Packages for DGX Systems
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#api-errors">
+        3. API Errors
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#api-error-1">
+          3.1. CU_FILE_DRIVER_NOT_INITIALIZED
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#api-error-2">
+          3.2. CU_FILE_DEVICE_NOT_SUPPORTED
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#api-error-3">
+          3.3. CU_FILE_IO_NOT_SUPPORTED
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#api-error-4">
+          3.4. CU_FILE_CUDA_MEMORY_TYPE_INVALID
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#basic-troubleshooting">
+        4. Basic Troubleshooting
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#log-files-gds-lib">
+          4.1. Log Files for the GDS Library
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#enable-diff-log-file-app">
+          4.2. Enabling a Different cufile.log File for Each Application
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#enable-trace-lib-calls">
+          4.3. Enabling Tracing GDS Library API Calls
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#api-error-5">
+          4.4. cuFileHandleRegister Error
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#troubleshoot-cufile-errors">
+          4.5. Troubleshooting Applications that Return cuFile Errors
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#error-no-activity-gds-stats">
+          4.6. cuFile-* Errors with No Activity in GPUDirect Storage Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cuda-error-35">
+          4.7. CUDA Runtime and Driver Mismatch with Error Code 35
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cuda-api-errors">
+          4.8. CUDA API Errors when Running the cuFile-* APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#find-driver-stats">
+          4.9. Finding GDS Driver Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#track-io-activity-gds-driver">
+          4.10. Tracking IO Activity that Goes Through the GDS Driver
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#read-write-bandwidth-latency-nos">
+          4.11. Read/Write Bandwidth and Latency Numbers in GDS Stats
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#track-regis-deregis-gpu-buffers">
+          4.12. Tracking Registration and Deregistration of GPU Buffers
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#enabling-rdma-logging">
+          4.13. Enabling RDMA-specific Logging for Userspace File Systems
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#system-not-ready">
+          4.14. CUDA_ERROR_SYSTEM_NOT_READY After Installation
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#adding-udev-rules">
+          4.15. Adding udev Rules for RAID Volumes
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#incomplete-write-on-nvme-drives">
+          4.16. When You Observe “Incomplete write” on NVME Drives
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cufile-async-io-failing">
+          4.17. CUFILE async I/O is failing
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#advanced-troubleshooting">
+        5. Advanced Troubleshooting
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#hung-cufile-no-response">
+          5.1. Resolving Hung cuFile* APIs with No Response
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#kernel-panic-stack-traces">
+          5.2. Sending Relevant Data to Customer Support
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#io-failure-stack-trace-warning">
+          5.3. Resolving an IO Failure with EIO and Stack Trace Warning
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#control-gpu-bar-usage">
+          5.4. Controlling GPU BAR Memory Usage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#det-how-much-cache">
+          5.5. Determining the Amount of Cache to Set Aside
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#monitor-bar-mem-usage">
+          5.6. Monitoring BAR Memory Usage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#enomem-error-code">
+          5.7. Resolving an ENOMEM Error Code
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-comp-mode">
+          5.8. GDS and Compatibility Mode
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#enable-comp-mode">
+          5.9. Enabling Compatibility Mode
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#track-enable-comp-mode">
+          5.10. Tracking the IO After Enabling Compatibility Mode
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#bypass-gds">
+          5.11. Bypassing GPUDirect Storage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-not-working-mount">
+          5.12. GDS Does Not Work for a Mount
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-posix-io-same-file">
+          5.13. Simultaneously Running the GPUDirect Storage IO and POSIX IO on the Same File
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-data-verif-tests">
+          5.14. Running Data Verification Tests Using GPUDirect Storage
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html">
+          NVIDIA GPUDirect Storage Installation and Troubleshooting Guide
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#troubleshoot-perf">
+        6. Troubleshooting Performance
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#perf-benchmark-examples">
+          6.1. Running Performance Benchmarks with GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-internal-cache">
+          6.2. Tracking Whether GPUDirect Storage is Using an Internal Cache
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#io-cross-pcie-root-complex">
+          6.3. Tracking when IO Crosses the PCIe Root Complex and Impacts Performance
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#monitor-cpu-usage">
+          6.4. Using GPUDirect Statistics to Monitor CPU Activity
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#monit-perf-tracing">
+          6.5. Monitoring Performance and Tracing with cuFile-* APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#ex-linux-tools">
+          6.6. Example: Using Linux Tracing Tools
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#trace-cufile-apis">
+          6.7. Tracing the cuFile-* APIs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dynamic-routing-improving-performance">
+          6.8. Improving Performance using Dynamic Routing
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#trouble-io-activity">
+        7. Troubleshooting IO Activity
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#manage-coherency-page-cache">
+          7.1. Managing Coherency of Data in the Page Cache and on Disk
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#exascaler-fs-lnet">
+        8. EXAScaler Filesystem LNet Troubleshooting
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#exascaler-client-mod-version">
+          8.1. Determining the EXAScaler Filesystem Client Module Version
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#lnet-network-setup">
+          8.2. Checking the LNet Network Setup on a Client
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-peer-health">
+          8.3. Checking the Health of the Peers
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#multi-rail-support">
+          8.4. Checking for Multi-Rail Support
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-peer-affinity">
+          8.5. Checking GDS Peer Affinity
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-lnet-errors">
+          8.6. Checking for LNet-Level Errors
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#lnet-nids-deg-timeouts">
+          8.7. Resolving LNet NIDs Health Degradation from Timeouts
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#multi-osts-peer-sel">
+          8.8. Configuring LNet Networks with Multiple OSTs for Optimal Peer Selection
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#exascaler-fs-perf">
+        9. Understanding EXAScaler Filesystem Performance
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#osc-tune-perf-param">
+          9.1. osc Tuning Performance Parameters
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#misc-comms">
+          9.2. Miscellaneous Commands for osc, mdc, and stripesize
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#num-config-disks">
+          9.3. Getting the Number of Configured Object-Based Disks
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#addl-stats-exascaler-fs">
+          9.4. Getting Additional Statistics related to the EXAScaler Filesystem
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#get-md-stats">
+          9.5. Getting Metadata Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-exist-mount-lustre">
+          9.6. Checking for an Existing Mount
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#unmount-fs-cluster">
+          9.7. Unmounting an EXAScaler Filesystem Cluster
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#sum-exacaler-fs-stats">
+          9.8. Getting a Summary of EXAScaler Filesystem Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-poll-mode">
+          9.9. Using GPUDirect Storage in Poll Mode
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#trouble-faq-wekafs">
+        10. Troubleshooting and FAQ for the WekaIO Filesystem
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#download-wekaio-cp">
+          10.1. Downloading the WekaIO Client Package
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#wekaio-version-gds">
+          10.2. Determining Whether the WekaIO Version is Ready for GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#mount-wekaio-fs-cluster">
+          10.3. Mounting a WekaIO File System Cluster
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#resolve-fail-mount">
+          10.4. Resolving a Failing Mount
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#resolve-wekaio-usage">
+          10.5. Resolving 100% Usage for WekaIO for Two Cores
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-existing-mount-wekafs">
+          10.6. Checking for an Existing Mount in the Weka File System
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-summ-wekaio">
+          10.7. Checking for a Summary of the WekaIO Filesystem Status
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#summ-wekaio-stats">
+          10.8. Displaying the Summary of the WekaIO Filesystem Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#wekaio-writes-posix">
+          10.9. Why WekaIO Writes Go Through POSIX
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-nvdiafsko-support">
+          10.10. Checking for nvidia-fs.ko Support for Memory Peer Direct
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-mem-peer-stats">
+          10.11. Checking Memory Peer Direct Stats
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#rel-nvidia-fs-stats">
+          10.12. Checking for Relevant nvidia-fs Statistics for the WekaIO Filesystem
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#basic-wekaio-fs-test">
+          10.13. Conducting a Basic WekaIO Filesystem Test
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#unmount-wekaio-fs-cluster">
+          10.14. Unmounting a WekaIO File System Cluster
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#verify-installed-libs-wekaio-fs">
+          10.15. Verify the Installed Libraries for the WekaIO Filesystem
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-config-file-changes">
+          10.16. GDS Configuration File Changes to Support the WekaIO Filesystem
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#relevant-userspace-stats-wekaio-fs">
+          10.17. Check for Relevant User-Space Statistics for the WekaIO Filesystem
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-wekafs-support">
+          10.18. Check for WekaFS Support
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#spectrum-scale-intro">
+        11. Enabling IBM Spectrum Scale Support with GDS
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#spectrum-scale-limitations-with-gds">
+          11.1. IBM Spectrum Scale Limitations with GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#checking-for-peerdirect-support">
+          11.2. Checking nvidia-fs.ko Support for Mellanox PeerDirect
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#verifying-libraries-for-spectrum-scale">
+          11.3. Verifying Installed Libraries for IBM Spectrum Scale
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#checking-peerdirect-stats">
+          11.4. Checking PeerDirect Stats
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#checking-for-relevant-stats">
+          11.5. Checking for Relevant nvidia-fs Stats with IBM Spectrum Scale
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-user-space-stats">
+          11.6. GDS User Space Stats for IBM Spectrum Scale for Each Process
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-configs-to-support-spectrum-scale">
+          11.7. GDS Configuration to Support IBM Spectrum Scale
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#scenarios-compat-mode">
+          11.8. Scenarios for Falling Back to Compatibility Mode
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-limitations-with-spectrum-scale">
+          11.9. GDS Limitations with IBM Spectrum Scale
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-intro">
+        12. NetApp E-series BeeGFS with GDS Solution Deployment
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-package-requirements">
+          12.1. Netapp BeeGFS/GPUDirect Storage and Package Requirements
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-client-config-for-gds">
+          12.2. BeeGFS Client Configuration for GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-gpu-hca-topology">
+          12.3. GPU/HCA Topology on the Client - DGX-A100 and OSS servers Client Server
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-verify-setup">
+          12.4. Verify the Setup
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-list-management-node">
+            12.4.1. List the Management Node
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-list-metadata-nodes">
+            12.4.2. List the Metadata Nodes
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-list-storage-nodes">
+            12.4.3. List the Storage Nodes
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-list-client-nodes">
+            12.4.4. List the Client Nodes
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-display-client-connections">
+            12.4.5. Display Client Connections
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-verify-connectivity-svcs">
+            12.4.6. Verify Connectivity to the Different Services
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-list-storage-pools">
+            12.4.7. List Storage Pools
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-display-free-space-inodes">
+            12.4.8. Display the Free Space and inodes on the Storage and Metadata Targets
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-testing">
+          12.5. Testing
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-verify-integration">
+            12.5.1. Verifying Integration is Working
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#beegfs-conducting-basic-fs-test">
+            12.5.2. Conducting a Basic NetApp BeeGFS Filesystem Test
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#troubleshoot-set-up-vast-data">
+        13. Setting Up and Troubleshooting VAST Data (NFSoRDMA+MultiPath)
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#install-mofed-vast">
+          13.1. Installing MLNX_OFED and VAST NFSoRDMA+Multipath Packages
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#client-software-reqs">
+            13.1.1. Client Software Requirements
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#install-vast">
+            13.1.2. Install the VAST Multipath Package
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#networking-setup">
+          13.2. Set Up the Networking
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#vast-network-config">
+            13.2.1. VAST Network Configuration
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cllent-network-config">
+            13.2.2. Client Network Configuration
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#verify-network-connect">
+            13.2.3. Verify Network Connectivity
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#mount-vast-nfs">
+          13.3. Mount VAST NFS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#debug-monitor">
+          13.4. Debugging and Monitoring VAST Data
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#nvme-nvmeof-support">
+        14. Troubleshooting and FAQ for NVMe and NVMeOF Support
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#mofed-req-install">
+          14.1. MLNX_OFED Requirements and Installation
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#det-nvme-support-gds">
+          14.2. Determining Whether the NVMe device is Supported for GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#det-raid-level">
+          14.3. RAID Support in GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#mount-local-fs">
+          14.4. Mounting a Local Filesystem for GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-exist-mount">
+          14.5. Check for an Existing EXT4 Mount
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#check-io-stats-block-devmt">
+          14.6. Check for IO Statistics with Block Device Mount
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#raid-group-config-gpu-aff">
+          14.7. RAID Group Configuration for GPU Affinity
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#basic-ext4-fs-test">
+          14.8. Conduct a Basic EXT4 Filesystem Test
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#unmount-ext4-fs">
+          14.9. Unmount a EXT4 Filesystem
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#udev-name-conv-block-device">
+          14.10. Udev Device Naming for a Block Device
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#batch-io-performance">
+          14.11. BATCH I/O Performance
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#display-gds-driver-stats">
+        15. Displaying GDS NVIDIA FS Driver Statistics
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#nvidia-fs-stats2">
+          15.1. nvidia-fs Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#analyze-per-gpu-stats">
+          15.2. Analyze Statistics for each GPU
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#reset-nvidia-fs-stats">
+          15.3. Resetting the nvidia-fs Statistics
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#review-peer-aff-stats">
+          15.4. Checking Peer Affinity Stats for a Kernel Filesystem and Storage Drivers
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#peer-affinity-usage-kernel-fs-sd">
+          15.5. Checking the Peer Affinity Usage for a Kernel File System and Storage Drivers
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gpu-peer-dist-table">
+          15.6. Display the GPU-to-Peer Distance Table
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gdsio-tool">
+          15.7. The GDSIO Tool
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#tab-fields">
+          15.8. Tabulated Fields
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gdscheck">
+          15.9. The GDSCHECK Tool
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#nfs-suppport-gds">
+          15.10. NFS Support with GPUDirect Storage
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#install-nfs-server-rdma-mofed_5-1">
+            15.10.1. Install Linux NFS server with RDMA Support on MLNX_OFED 5.3 or Later
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#install-gds-supp-nfs-client">
+            15.10.2. Install GPUDirect Storage Support for the NFS Client
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#nfs-gds-stas-debug">
+          15.11. NFS GPUDirect Storage Statistics and Debugging
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-io-behavior">
+          15.12. GPUDirect Storage IO Behavior
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#read-write-atomiticity-cons">
+            15.12.1. Read/Write Atomicity Consistency with GPUDirect Storage Direct IO
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#write-file-in-o-append-mode">
+            15.12.2. Write with File a Opened in O_APPEND Mode (cuFileWrite)
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gpu-nic-peer-aff">
+            15.12.3. GPU to NIC Peer Affinity
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#comp-mode-unreg-buffers">
+            15.12.4. Compatible Mode with Unregistered Buffers
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#unaligned-writes-non-reg-buff">
+            15.12.5. Unaligned writes with Non-Registered Buffers
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#process-hang-nfs">
+            15.12.6. Process Hang with NFS
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#tool-limit-cuda-9">
+            15.12.7. Tools Support Limitations for CUDA 9 and Earlier
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dynamic-routing-stats">
+          15.13. GDS Statistics for Dynamic Routing
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dynamic-routing-peer-affinity">
+            15.13.1. Peer Affinity Dynamic Routing
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dynamic-routing-cufile-log">
+            15.13.2. cuFile Log Related to Dynamic Routing
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-lib-tracing">
+        16. GDS Library Tracing
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#display-tracepoints">
+          16.1. Example: Display Tracepoints
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#tracepoint-arguments">
+            16.1.1. Example: Tracepoint Arguments
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#track-io-issue-cuapis">
+          16.2. Example: Track the IO Activity of a Process that Issues cuFileRead/ cuFileWrite
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#disp-io-patters-through-gds">
+          16.3. Example: Display the IO Pattern of all the IOs that Go Through GDS
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#io-pattern-process">
+          16.4. Understand the IO Pattern of a Process
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#io-pattern-file-desc">
+          16.5. IO Pattern of a Process with the File Descriptor on Different GPUs
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#iops-bandwidth-process-gpu">
+          16.6. Determine the IOPS and Bandwidth for a Process in a GPU
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#freq-reads-cufileread-api">
+          16.7. Display the Frequency of Reads by Processes that Issue cuFileRead
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#freq-reads-cufileread-0.1-ms">
+          16.8. Display the Frequency of Reads when cuFileRead Takes More than 0.1 ms
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#disp-latency-cufileread">
+          16.9. Displaying the Latency of cuFileRead for Each Process
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#track-process-cufilebufregister">
+          16.10. Example: Tracking the Processes that Issue cuFileBufRegister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#proc-constant-cufilebufregister">
+          16.11. Example: Tracking Whether the Process is Constant when Invoking cuFileBufRegister
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#monitor-io-bb">
+          16.12. Example: Monitoring IOs that are Going Through the Bounce Buffer
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#trace-cufileread-cufilewrite-issues">
+          16.13. Example: Tracing cuFileRead and cuFileWrite Failures, Print, Error Codes, and Time of Failure
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#per-process-user-stats">
+          16.14. Example: User-Space Statistics for Each GDS Process
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-stats-tool">
+          16.15. Example: Viewing GDS User-Level Statistics for a Process
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#sample-ul-stats-per-process">
+          16.16. Example: Displaying Sample User-Level Statistics for each GDS Process
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#gds-space-counters">
+        17. User-Space Counters in GPUDirect Storage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dist-io-util-gpu">
+          17.1. Distribution of IO Usage in Each GPU
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#dynamic-routing-user-space-stats">
+          17.2. User-space Statistics for Dynamic Routing
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#user-space-rdma-counters">
+        18. User-Space RDMA Counters in GPUDirect Storage
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cufile-rdma-io-counters">
+          18.1. cuFile RDMA IO Counters (PER_GPU RDMA STATS)
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cufile-rdma-mem-reg-counters">
+          18.2. cuFile RDMA Memory Registration Counters (RDMA MRSTATS)
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#cheat-sheet">
+        19. Cheat Sheet for Diagnosing Problems
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html">
+      NVIDIA GPUDirect Storage O_DIRECT Requirements Guide
+     </a>
+     <ul class="Chapter-chapters">
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#intro">
+        1. Introduction
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#rel-docs">
+          1.1. Related Documents
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#gds-req">
+        2. GPUDirect Storage Requirements
+       </a>
+       <ul class="Chapter-chapters">
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#summ-basic-req">
+          2.1. Summary of Basic Requirements
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#client-server">
+          2.2. Client and Server
+         </a>
+        </li>
+        <li>
+         <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#odirect-not-a-fit">
+          2.3. Cases Where O_DIRECT is Not a Fit
+         </a>
+         <ul class="Chapter-chapters">
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#buffered-io">
+            2.3.1. Buffered IO
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#inline-files">
+            2.3.2. Inline Files
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#block-alloc-writes">
+            2.3.3. Block Allocation For Writes
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#examine-transform-data">
+            2.3.4. Examining or Transforming User Data
+           </a>
+          </li>
+          <li>
+           <a class="Link" data-cms-ai="0" href="https://docs.nvidia.com/gpudirect-storage/o-direct-guide/index.html#summary">
+            2.3.5. Summary
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ul class="FooterNavigation-items" data-column-count="3">
+  <li class="FooterNavigation-items-item">
+   <span>
+    Corporate Info
+   </span>
+   <ul class="FooterNavigationItem-items">
+    <li class="FooterNavigationItem-items-item">
+     <a class="NavigationLink" data-cms-ai="0" href="https://www.nvidia.com/en-us/" target="_blank">
+      <span class="NavigationLink-text">
+       NVIDIA.com Home
+      </span>
+     </a>
+    </li>
+    <li class="FooterNavigationItem-items-item">
+     <a class="NavigationLink" data-cms-ai="0" href="https://www.nvidia.com/en-us/about-nvidia/" target="_blank">
+      <span class="NavigationLink-text">
+       About NVIDIA
+      </span>
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="FooterNavigation-items-item">
+   <span>
+    ‎NVIDIA Developer
+   </span>
+   <ul class="FooterNavigationItem-items">
+    <li class="FooterNavigationItem-items-item">
+     <a class="NavigationLink" data-cms-ai="0" href="https://developer.nvidia.com/" target="_blank">
+      <span class="NavigationLink-text">
+       Developer Home
+      </span>
+     </a>
+    </li>
+    <li class="FooterNavigationItem-items-item">
+     <a class="NavigationLink" data-cms-ai="0" href="https://blogs.nvidia.com/" target="_blank">
+      <span class="NavigationLink-text">
+       Blog
+      </span>
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="FooterNavigation-items-item">
+   <span>
+    Resources
+   </span>
+   <ul class="FooterNavigationItem-items">
+    <li class="FooterNavigationItem-items-item">
+     <a class="NavigationLink" data-cms-ai="0" href="https://www.nvidia.com/en-us/contact/" target="_blank">
+      <span class="NavigationLink-text">
+       Contact Us
+      </span>
+     </a>
+    </li>
+    <li class="FooterNavigationItem-items-item">
+     <a class="NavigationLink" data-cms-ai="0" href="https://developer.nvidia.com/developer-program" target="_blank">
+      <span class="NavigationLink-text">
+       Developer Program
+      </span>
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" rel="noopener" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" rel="noopener" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/preferences/start/" rel="noopener" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" rel="noopener" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" rel="noopener" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" rel="noopener" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/product-security/" rel="noopener" target="_blank">
+   Product Security
+  </a>
+  |
+  <a class="Link" data-cms-ai="0" href="https://www.nvidia.com/en-us/contact/" rel="noopener" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2024 NVIDIA Corporation
+ </p>
+</body>
+</body></html>

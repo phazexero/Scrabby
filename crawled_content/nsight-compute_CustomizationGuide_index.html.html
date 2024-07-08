@@ -1,0 +1,2380 @@
+<html><head><title>1. Customization Guide — NsightCompute 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-compute/index.html">
+ </a>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Nsight Compute
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/ReleaseNotes/index.html">
+    1. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html">
+    2. Kernel Profiling Guide
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightCompute/index.html">
+    3. Nsight Compute
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html">
+    4. Nsight Compute CLI
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Developer Interfaces
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html">
+    1. Customization Guide
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#introduction">
+      1.1. Introduction
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-sections">
+      1.2. Metric Sections
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#section-files">
+        1.2.1. Section Files
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#section-definition">
+        1.2.2. Section Definition
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-options-and-filters">
+        1.2.3. Metric Options and Filters
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#custom-descriptions">
+        1.2.4. Custom Descriptions
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#counter-domains">
+        1.2.5. Counter Domains
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#missing-sections">
+        1.2.6. Missing Sections
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#derived-metrics">
+        1.2.7. Derived Metrics
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-system">
+      1.3. Rule System
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#writing-rules">
+        1.3.1. Writing Rules
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#integration">
+        1.3.2. Integration
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-system-architecture">
+        1.3.3. Rule System Architecture
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#nvrules-api">
+        1.3.4. NvRules API
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-file-api">
+        1.3.5. Rule File API
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-examples">
+        1.3.6. Rule Examples
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#python-report-interface">
+      1.4. Python Report Interface
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#basic-usage">
+        1.4.1. Basic Usage
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#high-level-interface">
+        1.4.2. High-Level Interface
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-attributes">
+        1.4.3. Metric attributes
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#nvtx-support">
+        1.4.4. NVTX Support
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#sample-script">
+        1.4.5. Sample Script
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#source-counters">
+      1.5. Source Counters
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#report-file-format">
+      1.6. Report File Format
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#version-7-format">
+        1.6.1. Version 7 Format
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/NvRulesAPI/index.html">
+    2. NvRules API
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Training
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/Training/index.html">
+    Training
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Information
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/Archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Copyright and Licenses
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-compute/CopyrightAndLicenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-compute/index.html">
+  NsightCompute
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/nsight-compute/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    1.
+   </span>
+   Customization Guide
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.2.1 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/nsight-compute-history">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   1.
+  </span>
+  Customization Guide
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#customization-guide" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Nsight Compute Customization Guide.
+ </p>
+ <p>
+  User manual on customizing NVIDIA Nsight Compute tools or integrating them with custom workflows. Information on writing section files, rules for automatic result analysis and scripting access to report files.
+ </p>
+ <h2>
+  <span class="section-number">
+   1.1.
+  </span>
+  Introduction
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#introduction" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The goal of NVIDIA Nsight Compute is to design a profiling tool that can be easily extended and customized by expert users. While we provide useful defaults, this allows adapting the reports to a specific use case or to design new ways to investigate collected data. All the following is data driven and does not require the tools to be recompiled.
+ </p>
+ <p>
+  While working with section files or rules files it is recommended to open the
+  Metric Selection
+  tool window from the
+  Profile
+  menu item. This tool window lists all sections and rules that were loaded. Rules are grouped as children of their associated section or grouped in the
+  [Independent Rules]
+  entry. For files that failed to load, the table shows the error message. Use the
+  Reload
+  button to reload rule files from disk.
+ </p>
+ <h2>
+  <span class="section-number">
+   1.2.
+  </span>
+  Metric Sections
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-sections" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightCompute/index.html#profiler-report-details-page">
+   Details
+  </a>
+  page consists of
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#sets-and-sections">
+   sections
+  </a>
+  that focus on a specific part of the kernel analysis each. Every section is defined by a corresponding
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#section-files">
+   section file
+  </a>
+  that specifies the data to be collected as well as the visualization used in the UI or CLI output for this data. Simply modify a deployed section file to add or modify what is collected.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.1.
+  </span>
+  Section Files
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#section-files" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The section files delivered with the tool are stored in the
+  <span class="pre">
+   sections
+  </span>
+  sub-folder of the NVIDIA Nsight Compute install directory. Each section is defined in a separate file with the
+  <span class="pre">
+   .section
+  </span>
+  file extension. At runtime, the installed stock sections (and rules) are deployed to a user-writable directory. This can be disabled with an
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#environment-variables">
+   environment variable
+  </a>
+  . Section files from the deployment directory are loaded automatically at the time the UI connects to a target application or the command line profiler is launched. This way, any changes to section files become immediately available in the next profile run.
+ </p>
+ <p>
+  A section file is a text representation of a
+  Google Protocol Buffer
+  message. The full definition of all available fields of a section message is given in
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#section-definition">
+   Section Definition
+  </a>
+  . In short, each section consists of a unique
+  Identifier
+  (no spaces allowed), a
+  Display Name
+  , an optional
+  Order
+  value (for sorting the sections in the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightCompute/index.html#profiler-report-details-page">
+   Details page
+  </a>
+  ), an optional
+  Description
+  providing guidance to the user, an optional header table, an optional list of metrics to be collected but not displayed, optional bodies with additional UI elements, and other elements. See
+  <span class="pre">
+   ProfilerSection.proto
+  </span>
+  for the exact list of available elements. A small example of a very simple section is:
+ </p>
+ <pre>Identifier: "SampleSection"
+DisplayName: "Sample Section"
+Description: "This sample section shows information on active warps and cycles."
+Header {
+  Metrics {
+    Label: "Active Warps"
+    Name: "smsp__active_warps_avg"
+  }
+  Metrics {
+    Label: "Active Cycles"
+    Name: "smsp__active_cycles_avg"
+  }
+}
+</pre>
+ <p>
+  On data collection, this section will cause the two PerfWorks metrics
+  <span class="pre">
+   smsp__active_warps_avg
+  </span>
+  and
+  <span class="pre">
+   smsp__active_cycles_avg
+  </span>
+  to be collected.
+ </p>
+ <p>
+  <span class="caption-text">
+   The section as shown on the Details page
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#id2" title="Permalink to this image">
+   ï
+  </a>
+ </p>
+ <p>
+  By default, when not available, metrics specified in section files will only generate a warning during data collection, and would then show up as âN/Aâ in the UI or CLI. This is in contrast to metrics requested via
+  <span class="pre">
+   --metrics
+  </span>
+  which would cause an error when not available. How to specify metrics as required for data collection is described in
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-options">
+   Metric Options and Filters
+  </a>
+  .
+ </p>
+ <p>
+  More advanced elements can be used in the body of a section. See the
+  <span class="pre">
+   ProfilerSection.proto
+  </span>
+  file for which elements are available. The following example shows how to use these in a slightly more complex example. The usage of regexes is allowed in tables and charts in the section
+  Body
+  only and follows the format
+  <span class="pre">
+   regex:
+  </span>
+  followed by the actual regex to match
+  PerfWorks
+  metric names.
+ </p>
+ <p>
+  The supported list of metrics that can be used in sections can be queried using the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-profile">
+   command line interface
+  </a>
+  with the
+  <span class="pre">
+   --query-metrics
+  </span>
+  option. Each of these metrics can be used in any section and will be automatically collected if they appear in any enabled section. Note that even if a metric is used in multiple sections, it will only be collected once. Look at all the shipped sections to see how they are implemented.
+ </p>
+ <pre>Identifier: "SampleSection"
+DisplayName: "Sample Section"
+Description: "This sample section shows various metrics."
+Header {
+  Metrics {
+    Label: "Active Warps"
+    Name: "smsp__active_warps_avg"
+  }
+  Metrics {
+    Label: "Active Cycles"
+    Name: "smsp__active_cycles_avg"
+  }
+}
+Body {
+  Items {
+    Table {
+      Label: "Example Table"
+      Rows: 2
+      Columns: 1
+      Metrics {
+        Label: "Avg. Issued Instructions Per Scheduler"
+        Name: "smsp__inst_issued_avg"
+      }
+      Metrics {
+        Label: "Avg. Executed Instructions Per Scheduler"
+        Name: "smsp__inst_executed_avg"
+      }
+    }
+  }
+  Items {
+    Table {
+      Label: "Metrics Table"
+      Columns: 2
+      Order: ColumnMajor
+      Metrics {
+        Name: "regex:.*__elapsed_cycles_sum"
+      }
+    }
+  }
+  Items {
+    BarChart {
+      Label: "Metrics Chart"
+      CategoryAxis {
+        Label: "Units"
+      }
+      ValueAxis {
+        Label: "Cycles"
+      }
+      Metrics {
+        Name: "regex:.*__elapsed_cycles_sum"
+      }
+    }
+  }
+}
+</pre>
+ <p>
+  The output of this section would look similar to this screenshot in the UI
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.2.
+  </span>
+  Section Definition
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#section-definition" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Protocol buffer definitions are in the NVIDIA Nsight Compute installation directory under
+  <span class="pre">
+   extras/FileFormat
+  </span>
+  . To understand section files, start with the definitions and documentation in
+  <span class="pre">
+   ProfilerSection.proto
+  </span>
+  .
+ </p>
+ <p>
+  To see the list of available
+  PerfWorks
+  metrics for any device or chip, use the
+  <span class="pre">
+   --query-metrics
+  </span>
+  option of the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-profile">
+   command line
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.3.
+  </span>
+  Metric Options and Filters
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-options-and-filters" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Sections allow the user to specify alternative
+  options
+  for metrics that have a different metric name on different GPU architectures. Metric options use a min-arch/max-arch range
+  filter
+  , replacing the base metric with the first metric option for which the current GPU architecture matches the filter. While not strictly enforced, options for a base metric are expected to share the same meaning and subsequently unit, etc., with the base metric.
+ </p>
+ <p>
+  In addition to its options, the base metric can be filtered by the same criteria. This is useful for metrics that are only available for certain architectures or in limited collection scopes. See
+  <span class="pre">
+   ProfilerMetricOptions.proto
+  </span>
+  for which filter options are available.
+ </p>
+ <p>
+  In the below example, the metric
+  <span class="pre">
+   dram__cycles_elapsed.avg.per_second
+  </span>
+  is collected on SM 7.0 and SM 7.5-8.6, but not on any in between. It uses the same metric name on these architectures.
+ </p>
+ <pre>Metrics {
+    Label: "DRAM Frequency"
+    Name: "dram__cycles_elapsed.avg.per_second"
+    Filter {
+      MaxArch: CC_70
+    }
+    Options {
+      Name: "dram__cycles_elapsed.avg.per_second"
+      Filter {
+        MinArch: CC_75
+        MaxArch: CC_86
+      }
+    }
+}
+</pre>
+ <p>
+  In the next example, the metric in the section header is only collected for launch-based collection scopes (i.e. kernel- and application replay for CUDA kernels or CUDA Graph nodes), but not in range-based scopes.
+ </p>
+ <pre>Header {
+  Metrics {
+    Label: "Theoretical Occupancy"
+    Name: "sm__maximum_warps_per_active_cycle_pct"
+    Filter {
+      CollectionFilter {
+        CollectionScopes: CollectionScope_Launch
+      }
+    }
+  }
+}
+</pre>
+ <p>
+  Similarly,
+  <span class="pre">
+   CollectionFilter
+  </span>
+  s can be used to set the
+  <span class="pre">
+   Importance
+  </span>
+  of a metric, which specifies an expectation on its availability during data collection.
+  <span class="pre">
+   Required
+  </span>
+  metrics, for instance, are expected to be collectable and would generate an error in case they are not available, whereas
+  <span class="pre">
+   Optional
+  </span>
+  metrics would only generate a warning. Here is a minimal example, illustrating the functionality:
+ </p>
+ <pre>Metrics {
+  Label: "Compute (SM) Throughput"
+  Name: "sm__throughput.avg.pct_of_peak_sustained_elapsed"
+  Filter {
+    CollectionFilter {
+      Importance: Required
+    }
+  }
+}
+</pre>
+ <p>
+  Filters can be applied to an entire section instead of or in addition to being set for individual metrics. If both types of filters are specified, they are combined, such that
+  <span class="pre">
+   Metrics
+  </span>
+  -scope filters take precedence over section-scope filters.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.4.
+  </span>
+  Custom Descriptions
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#custom-descriptions" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Section files support to specify custom descriptions in many places where metrics can be used.
+Specifying custom descriptions should only be required when creating
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#derived-metrics">
+   derived metrics
+  </a>
+  or when adding new metrics through the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-system">
+   rule system
+  </a>
+  .
+When setting this for a metric that would otherwise have a description, the existing one is overriden by the custom value.
+ </p>
+ <pre>Metrics {
+  Label: "Custom Metric"
+  Name: "custom_metric"
+  Description: "Metric added when the rule associated with this section file is triggered."
+}
+</pre>
+ <p>
+  Note that the
+  <span class="pre">
+   Description
+  </span>
+  field is currently only supported for the section
+  <span class="pre">
+   Metrics
+  </span>
+  field, but not for individual
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-options-and-filters">
+   Options
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.5.
+  </span>
+  Counter Domains
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#counter-domains" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  PM sampling metrics are composed of one or more raw counter dependencies internally.
+Each counter is associated with a
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#pm-sampling">
+   counter domain
+  </a>
+  , which describes how and where in the hardware the counter is collected.
+For metrics specified in section files, the automatic domain selection can be overwritten when needed to form more optimal PM sampling metric groups.
+ </p>
+ <pre>Metrics {
+  Label: "Short Scoreboard"
+  Name: "pmsampling:smsp__warps_issue_stalled_short_scoreboard.avg"
+  Groups: "sampling_ws4"
+  CtrDomains: "gpu_sm_c"
+}
+</pre>
+ <p>
+  Note that the
+  <span class="pre">
+   CtrDomains
+  </span>
+  field is currently only supported for the section
+  <span class="pre">
+   Metrics
+  </span>
+  field, but not for individual
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-options-and-filters">
+   Options
+  </a>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.6.
+  </span>
+  Missing Sections
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#missing-sections" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  If new or updated section files are not used by NVIDIA Nsight Compute, it is most commonly one of two reasons:
+ </p>
+ <p>
+  The file is not found:
+  Section files must have the
+  <span class="pre">
+   .section
+  </span>
+  extension. They must also be on the section search path. The default search path is the
+  <span class="pre">
+   sections
+  </span>
+  directory within the installation directory. In NVIDIA Nsight Compute CLI, the search paths can be overwritten using the
+  <span class="pre">
+   --section-folder
+  </span>
+  and
+  <span class="pre">
+   --section-folder-recursive
+  </span>
+  options. In NVIDIA Nsight Compute, the search path can be configured in the
+  Profile
+  options.
+ </p>
+ <p>
+  Syntax errors:
+  If the file is found but has syntax errors, it will not be available for metric collection. However, error messages are reported for easier debugging. In NVIDIA Nsight Compute CLI, use the
+  <span class="pre">
+   --list-sections
+  </span>
+  option to get a list of error messages, if any. In NVIDIA Nsight Compute, error messages are reported in the
+  Metric Selection
+  tool window.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.2.7.
+  </span>
+  Derived Metrics
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#derived-metrics" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Derived Metrics allow you to define new metrics composed of constants or existing metrics directly in a section file. The new metrics are computed at collection time and added permanently to the profile result in the report. They can then subsequently be used for any tables, charts, rules, etc.
+ </p>
+ <p>
+  NVIDIA Nsight Compute currently supports the following syntax for defining derived metrics in section files:
+ </p>
+ <pre>MetricDefinitions {
+  MetricDefinitions {
+    Name: "derived_metric_name"
+    Expression: "derived_metric_expr"
+  }
+  MetricDefinitions {
+    ...
+  }
+  ...
+}
+</pre>
+ <p>
+  The actual metric expression is defined as follows:
+ </p>
+ <pre>derived_metric_expr ::= operand operator operand
+operator            ::= + | - | * | /
+operand             ::= metric | constant
+metric              ::= (an existing metric name)
+constant            ::= double | uint64
+double              ::= (double-precision number of the form "N.(M)?", e.g. "5." or "0.3109")
+uint64              ::= (64-bit unsigned integer number of the form "N", e.g. "2029")
+</pre>
+ <p>
+  Operators are defined as follows:
+ </p>
+ <pre>For op in (+ | - | *): For each element in a metric it is applied to, the expression left-hand side op-combined with expression right-hand side.
+For op in (/): For each element in a metric it is applied to, the expression left-hand side op-combined with expression right-hand side. If the right-hand side operand is of integer-type, and 0, the result is the left-hand side value.
+</pre>
+ <p>
+  Since metrics can contain regular values and/or
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-structure">
+   instanced values
+  </a>
+  , elements are combined as below. Constants are treated as metrics with only a regular value.
+ </p>
+ <pre>1. Regular values are operator-combined.
+a + b
+
+2. If both metrics have no correlation ids, the first N values are operator-combined, where N is the minimum of the number of elements in both metrics.
+a1 + b1
+a2 + b2
+a3
+a4
+
+3. Else if both metrics have correlation ids, the sets of correlation ids from both metrics are joined and then operator-combined as applicable.
+a1 + b1
+a2
+b3
+a4 + b4
+b5
+
+4. Else if only the left-hand side metric has correlation ids, the right-hand side regular metric value is operator-combined with every element of the left-hand side metric.
+a1 + b
+a2 + b
+a3 + b
+
+5. Else if only the right-hand side metric has correlation ids, the right-hand side element values are operator-combined with the regular metric value of the left-hand side metric.
+a + b1 + b2 + b3
+</pre>
+ <p>
+  In all operations, the value kind of the left-hand side operand is used. If the right-hand side operand has a different value kind, it is converted. If the left-hand side operand is a string-kind, it is returned unchanged.
+ </p>
+ <p>
+  Examples for derived metrics are
+  <span class="pre">
+   derived__avg_thread_executed
+  </span>
+  , which provides a hint on the number of threads executed on average at each instruction, and
+  <span class="pre">
+   derived__uncoalesced_l2_transactions_global
+  </span>
+  , which indicates the ratio of actual L2 transactions vs. ideal L2 transactions at each applicable instruction.
+ </p>
+ <pre>MetricDefinitions {
+  MetricDefinitions {
+    Name: "derived__avg_thread_executed"
+    Expression: "thread_inst_executed_true / inst_executed"
+  }
+  MetricDefinitions {
+    Name: "derived__uncoalesced_l2_transactions_global"
+    Expression: "memory_l2_transactions_global / memory_ideal_l2_transactions_global"
+  }
+  MetricDefinitions {
+    Name: "sm__sass_thread_inst_executed_op_ffma_pred_on_x2"
+    Expression: "sm__sass_thread_inst_executed_op_ffma_pred_on.sum.peak_sustained * 2"
+  }
+}
+</pre>
+ <h2>
+  <span class="section-number">
+   1.3.
+  </span>
+  Rule System
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-system" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA Nsight Compute features a new Python-based rule system. It is designed as the successor to the
+  Expert System
+  (un)guided analysis in NVIDIA Visual Profiler, but meant to be more flexible and more easily extensible to different use cases and APIs.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.3.1.
+  </span>
+  Writing Rules
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#writing-rules" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  To create a new rule, you need to create a new text file with the extension
+  <span class="pre">
+   .py
+  </span>
+  and place it at some location that is detectable by the tool (see Nsight Compute Integration on how to specify the search path for rules). At a minimum, the rule file must implement two functions,
+  <span class="pre">
+   get_identifier
+  </span>
+  and
+  <span class="pre">
+   apply
+  </span>
+  . See Rule File API for a description of all functions supported in rule files. See NvRules for details on the interface available in the ruleâs
+  <span class="pre">
+   apply
+  </span>
+  function.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.3.2.
+  </span>
+  Integration
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#integration" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The rule system is integrated into NVIDIA Nsight Compute as part of the profile report view. When you profile a kernel, available rules will be shown in the reportâs
+  Details
+  page. You can either select to apply all available rules at once by clicking
+  Apply Rules
+  at the top of the page, or apply rules individually. Once applied, the rule results will be added to the current report. By default, all rules are applied automatically.
+ </p>
+ <p>
+  Section with a single Bottleneck rule available.
+ </p>
+ <p>
+  The same section with the Bottleneck rule applied. It added a single message to the report.
+ </p>
+ <p>
+  The section Rule has two associated rules, Basic Template Rule and Advanced Template Rule. The latter is not yet applied. Rules can add various UI elements, including warning and error messages as well as charts and tables.
+ </p>
+ <p>
+  Some rules are applied independently from sections. They are shown under Independent Rules.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.3.3.
+  </span>
+  Rule System Architecture
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-system-architecture" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The rule system consists of the Python interpreter, the
+  NvRules C++ interface
+  , the
+  NvRules Python interface
+  (NvRules.py) and a set of rule files. Each rule file is valid Python code that imports the NvRules.py module, adheres to certain standards defined by the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-file-api">
+   Rule File API
+  </a>
+  and is called to from the tool.
+ </p>
+ <p>
+  When applying a rule, a handle to the rule
+  Context
+  is provided to its apply function. This context captures most of the functionality that is available to rules as part of the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#nvrules-api">
+   NvRules API
+  </a>
+  . In addition, some functionality is provided directly by the NvRules module, e.g. for global error reporting. Finally, since rules are valid Python code, they can use regular libraries and language functionality that ship with Python as well.
+ </p>
+ <p>
+  From the rule
+  Context
+  , multiple further objects can be accessed, e.g. the
+  Frontend
+  ,
+  Ranges
+  and
+  Actions
+  . It should be noted that those are only interfaces, i.e. the actual implementation can vary from tool to tool that decides to implement this functionality.
+ </p>
+ <p>
+  Naming of these interfaces is chosen to be as API-independent as possible, i.e. not to imply CUDA-specific semantics. However, since many compute and graphics APIs map to similar concepts, it can easily be mapped to CUDA terminology, too. A
+  Range
+  refers to a CUDA stream, an Action refers to a single CUDA kernel instance. Each action references several
+  Metrics
+  that have been collected during profiling (e.g.
+  <span class="pre">
+   instructions
+  </span>
+  <span class="pre">
+   executed
+  </span>
+  ) or are statically available (e.g. the launch configuration).
+  Metrics
+  are accessed via their names from the
+  Action
+  .
+ </p>
+ <p>
+  Each CUDA stream can contain any number of kernel (or other device activity) instances and so each
+  Range
+  can reference one or more
+  Actions
+  . However, currently only a single
+  Action
+  per
+  Range
+  will be available, as only a single CUDA kernel can be profiled at once.
+ </p>
+ <p>
+  The
+  Frontend
+  provides an interface to manipulate the tool UI by adding messages, graphical elements such as line and bar charts or tables, as well as speedup estimations, focus metrics and source markers. The most common use case is for a rule to show at least one message, stating the result to the user, as illustrated in
+  <span class="pre">
+   extras/RuleTemplates/BasicRuleTemplate.py
+  </span>
+  This could be as simple as âNo issues have been detected,â or contain direct hints as to how the user could improve the code, e.g. âMemory is more heavily utilized than Compute. Consider whether it is possible for the kernel to do more compute work.â For more advanced use cases, such as adding speedup estimates, key performance indicators (a.k.a. focus metrics) or source markers to annotate individual lines of code to your rule, see the templates in
+  <span class="pre">
+   extras/RuleTemplates
+  </span>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   1.3.4.
+  </span>
+  NvRules API
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#nvrules-api" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The
+  NvRules API
+  is defined as a C/C++ style interface, which is converted to the NvRules.py Python module to be consumable by the rules. As such, C++ class interfaces are directly converted to Python classes und functions. See the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NvRulesAPI/index.html#abstract">
+   NvRules API
+  </a>
+  documentation for the classes and functions available in this interface.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.3.5.
+  </span>
+  Rule File API
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-file-api" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The
+  Rule File API
+  is the implicit contract between the rule Python file and the tool. It defines which functions (syntactically and semantically) the Python file must provide to properly work as a rule.
+ </p>
+ <p>
+  Mandatory Functions
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     get_identifier()
+    </span>
+    : Return the unique rule identifier string.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     apply(handle)
+    </span>
+    : Apply this rule to the rule context provided by handle. Use
+    <span class="pre">
+     NvRules.get_context(handle)
+    </span>
+    to obtain the
+    Context
+    interface from handle.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_name()
+    </span>
+    : Return the user-consumable display name of this rule.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     get_description()
+    </span>
+    : Return the user-consumable description of this rule.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Optional Functions
+ </p>
+ <ul>
+  <li>
+   <p>
+    <span class="pre">
+     get_section_identifier()
+    </span>
+    : Return the unique section identifier that maps this rule to a section. Section-mapped rules will only be available if the corresponding section was collected. They implicitly assume that the metrics requested by the section are collected when the rule is applied.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     evaluate(handle)
+    </span>
+    :
+   </p>
+   <p>
+    Declare required metrics and rules that are necessary for this rule to be applied. Use
+    <span class="pre">
+     NvRules.require_metrics(handle,
+    </span>
+    <span class="pre">
+     [...])
+    </span>
+    to declare the list of metrics that must be collected prior to applying this rule.
+   </p>
+   <p>
+    Use e.g.
+    <span class="pre">
+     NvRules.require_rules(handle,
+    </span>
+    <span class="pre">
+     [...])
+    </span>
+    to declare the list of other rules that must be available before applying this rule. Those are the only rules that can be safely proposed by the
+    Controller
+    interface.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   1.3.6.
+  </span>
+  Rule Examples
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#rule-examples" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The following example rule determines on which major GPU architecture a kernel was running.
+ </p>
+ <pre><span class="kn">import</span> <span class="nn">NvRules</span>
+
+<span class="k">def</span> <span class="nf">get_identifier</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s2">"GpuArch"</span>
+
+<span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">handle</span><span class="p">):</span>
+  <span class="n">ctx</span> <span class="o">=</span> <span class="n">NvRules</span><span class="o">.</span><span class="n">get_context</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+  <span class="n">action</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">range_by_idx</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">action_by_idx</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="n">ccMajor</span> <span class="o">=</span> <span class="n">action</span><span class="o">.</span><span class="n">metric_by_name</span><span class="p">(</span><span class="s2">"device__attribute_compute_capability_major"</span><span class="p">)</span><span class="o">.</span><span class="n">as_uint64</span><span class="p">()</span>
+  <span class="n">ctx</span><span class="o">.</span><span class="n">frontend</span><span class="p">()</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">"Running on major compute capability "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ccMajor</span><span class="p">))</span>
+</pre>
+ <h2>
+  <span class="section-number">
+   1.4.
+  </span>
+  Python Report Interface
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#python-report-interface" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA Nsight Compute features a Python-based interface to interact with exported report files.
+ </p>
+ <p>
+  The module is called
+  <span class="pre">
+   ncu_report
+  </span>
+  and works on any Python version from 3.4
+  <a class="footnote-reference brackets" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#fn1" id="id1">
+   1
+  </a>
+  . It can be found in the
+  <span class="pre">
+   extras/python
+  </span>
+  directory of your NVIDIA Nsight Compute package.
+ </p>
+ <p>
+  In order to use the Python module, you need a report file generated by NVIDIA Nsight Compute. You can obtain such a file by saving it from the graphical interface or by using the
+  <span class="pre">
+   --export
+  </span>
+  flag of the command line tool.
+ </p>
+ <p>
+  The types and functions in the
+  <span class="pre">
+   ncu_report
+  </span>
+  module are a subset of the ones available in the NvRules API. The documentation in this section serves as a tutorial. For a more formal description of the exposed API, please refer to the the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NvRulesAPI/index.html#abstract">
+   NvRules API
+  </a>
+  documentation.
+ </p>
+ <span class="brackets">
+  <a class="fn-backref" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#id1">
+   1
+  </a>
+ </span>
+ <p>
+  On Linux machines you will also need a GNU-compatible libc and
+  <span class="pre">
+   libgcc_s.so
+  </span>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   1.4.1.
+  </span>
+  Basic Usage
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#basic-usage" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  In order to be able to import
+  <span class="pre">
+   ncu_report
+  </span>
+  you will either have to navigate to the
+  <span class="pre">
+   extras/python
+  </span>
+  directory, or add its absolute path to the
+  <span class="pre">
+   PYTHONPATH
+  </span>
+  environment variable. Then, the module can be imported like any Python module:
+ </p>
+ <pre>&gt;&gt;&gt; import ncu_report
+</pre>
+ <p>
+  Importing a report
+ </p>
+ <p>
+  Once the module is imported, you can load a report file by calling the
+  <span class="pre">
+   load_report
+  </span>
+  function with the path to the file. This function returns an object of type
+  <span class="pre">
+   IContext
+  </span>
+  which holds all the information concerning that report.
+ </p>
+ <pre>&gt;&gt;&gt; my_context = ncu_report.load_report("my_report.ncu-rep")
+</pre>
+ <p>
+  Querying ranges
+ </p>
+ <p>
+  When working with the Python module, kernel profiling results are grouped into
+  ranges
+  which are represented by
+  <span class="pre">
+   IRange
+  </span>
+  objects. You can inspect the number of
+  ranges
+  contained in the loaded report by calling the
+  <span class="pre">
+   num_ranges()
+  </span>
+  member function of an
+  <span class="pre">
+   IContext
+  </span>
+  object and retrieve a
+  range
+  by its index using
+  <span class="pre">
+   range_by_idx(index)
+  </span>
+  .
+ </p>
+ <pre>&gt;&gt;&gt; my_context.num_ranges()
+1
+&gt;&gt;&gt; my_range = my_context.range_by_idx(0)
+</pre>
+ <p>
+  Querying actions
+ </p>
+ <p>
+  Inside a
+  range
+  , kernel profiling results are called
+  actions
+  . You can query the number of
+  actions
+  contained in a given
+  range
+  by using the
+  <span class="pre">
+   num_actions
+  </span>
+  method of an
+  <span class="pre">
+   IRange
+  </span>
+  object.
+ </p>
+ <pre>&gt;&gt;&gt; my_range.num_actions()
+2
+</pre>
+ <p>
+  In the same way
+  ranges
+  can be obtained from an
+  <span class="pre">
+   IContext
+  </span>
+  object by using the
+  <span class="pre">
+   range_by_idx(index)
+  </span>
+  method, individual
+  actions
+  can be obtained from
+  <span class="pre">
+   IRange
+  </span>
+  objects by using the
+  <span class="pre">
+   action_by_idx(index)
+  </span>
+  method. The resulting
+  actions
+  are represented by the
+  <span class="pre">
+   IAction
+  </span>
+  class.
+ </p>
+ <pre>&gt;&gt;&gt; my_action = my_range.action_by_idx(0)
+</pre>
+ <p>
+  As mentioned previously, an
+  action
+  represents a single kernel profiling result. To query the kernelâs name you can use the
+  <span class="pre">
+   name()
+  </span>
+  member function of the
+  <span class="pre">
+   IAction
+  </span>
+  class.
+ </p>
+ <pre>&gt;&gt;&gt; my_action.name()
+MyKernel
+</pre>
+ <p>
+  Querying metrics
+ </p>
+ <p>
+  To get a tuple of all metric names contained within an
+  action
+  you can use the
+  <span class="pre">
+   metric_names()
+  </span>
+  method. It is meant to be combined with the
+  <span class="pre">
+   metric_by_name()
+  </span>
+  method which returns an
+  <span class="pre">
+   IMetric
+  </span>
+  object. However, for the same task you may also use the
+  <span class="pre">
+   []
+  </span>
+  operator, as explained in the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#python-report-interface-high-level">
+   High-Level Interface
+  </a>
+  section below.
+ </p>
+ <p>
+  The metric names displayed here are the same as the ones you can use with the
+  <span class="pre">
+   --metrics
+  </span>
+  flag of NVIDIA Nsight Compute. Once you have extracted a
+  metric
+  from an
+  action
+  , you can obtain its value by using one of the following three methods:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     as_string()
+    </span>
+    to obtain its value as a Python
+    <span class="pre">
+     str
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     as_uint64()
+    </span>
+    to obtain its value as a Python
+    <span class="pre">
+     int
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     as_double()
+    </span>
+    to obtain its value as a Python
+    <span class="pre">
+     float
+    </span>
+   </p>
+  </li>
+ </ul>
+ <p>
+  For example, to print the display name of the GPU on which the kernel was profiled you can query the
+  <span class="pre">
+   device__attribute_display_name
+  </span>
+  metric.
+ </p>
+ <pre>&gt;&gt;&gt; display_name_metric = my_action.metric_by_name('device__attribute_display_name')
+&gt;&gt;&gt; display_name_metric.as_string()
+'NVIDIA GeForce RTX 3060 Ti'
+</pre>
+ <p>
+  Note that accessing a metric with the wrong type can lead to unexpected (conversion) results.
+ </p>
+ <pre>&gt;&gt;&gt; display_name_metric.as_double()
+0.0
+</pre>
+ <p>
+  Therefore, it is advisable to directly use the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#python-report-interface-high-level">
+   High-Level
+  </a>
+  function
+  <span class="pre">
+   value()
+  </span>
+  , as explained below.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.4.2.
+  </span>
+  High-Level Interface
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#high-level-interface" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  On top of the low-level
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NvRulesAPI/index.html#abstract">
+   NvRules API
+  </a>
+  the Python Report Interface also implements part of the
+  <a class="reference external" href="https://docs.python.org/3/reference/datamodel.html">
+   Python object model
+  </a>
+  . By implementing special methods, the Python Report Interfaceâs exposed classes can be used with built-in Python mechanisms such as iteration, string formatting and length querying.
+ </p>
+ <p>
+  This allows you to access
+  metrics
+  objects via the
+  <span class="pre">
+   self[key]
+  </span>
+  instance method of the
+  <span class="pre">
+   IAction
+  </span>
+  class:
+ </p>
+ <pre>&gt;&gt;&gt; display_name_metric = my_action["device__attribute_display_name"]
+</pre>
+ <p>
+  There is also a convenience method
+  <span class="pre">
+   IMetric.value()
+  </span>
+  which allows you to query the value of a
+  metric
+  object without knowledge of its type:
+ </p>
+ <pre>&gt;&gt;&gt; display_name_metric.value()
+'NVIDIA GeForce RTX 3060 Ti'
+</pre>
+ <p>
+  All the available methods of a class, as well as their associated Python docstrings, can be looked up interactively via
+ </p>
+ <pre>&gt;&gt;&gt; help(ncu_report.IMetric)
+</pre>
+ <p>
+  or similarly for other classes and methods. In your code, you can access the docstrings via the
+  <span class="pre">
+   __doc__
+  </span>
+  attribute, i.e.
+  <span class="pre">
+   ncu_report.IMetric.value.__doc__
+  </span>
+  .
+ </p>
+ <h3>
+  <span class="section-number">
+   1.4.3.
+  </span>
+  Metric attributes
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#metric-attributes" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Apart from the possibility to query the
+  <span class="pre">
+   name()
+  </span>
+  and
+  <span class="pre">
+   value()
+  </span>
+  of an
+  <span class="pre">
+   IMetric
+  </span>
+  object, you can also query the following additional metric attributes:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     metric_type()
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     metric_subtype()
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     rollup_operation()
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     unit()
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     description()
+    </span>
+   </p>
+  </li>
+ </ul>
+ <p>
+  The first method
+  <span class="pre">
+   metric_type()
+  </span>
+  returns one out of three
+  enum
+  values (
+  <span class="pre">
+   IMetric.MetricType_COUNTER
+  </span>
+  ,
+  <span class="pre">
+   IMetric.MetricType_RATIO
+  </span>
+  ,
+  <span class="pre">
+   IMetric.MetricType_THROUGHPUT
+  </span>
+  ) if the metric is a hardware metric, or
+  <span class="pre">
+   IMetric.MetricType_OTHER
+  </span>
+  otherwise (e.g. for launch or device attributes).
+ </p>
+ <p>
+  The method
+  <span class="pre">
+   metric_subtype()
+  </span>
+  returns an
+  enum
+  value representing the subtype of a metric (e.g.
+  <span class="pre">
+   IMetric.MetricSubtype_PEAK_SUSTAINED
+  </span>
+  ,
+  <span class="pre">
+   IMetric.MetricSubtype_PER_CYCLE_ACTIVE
+  </span>
+  ). In case a metric does not have a subtype,
+  <span class="pre">
+   None
+  </span>
+  is returned. All available values (without the necessary
+  <span class="pre">
+   IMetric.MetricSubtype_
+  </span>
+  prefix) may be found in the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-compute/NvRulesAPI/index.html#abstract">
+   NvRules API
+  </a>
+  documentation, or may be looked up interactively by executing
+  <span class="pre">
+   help(ncu_report.IMetric)
+  </span>
+  .
+ </p>
+ <p>
+  <span class="pre">
+   IMetric.rollup_operation()
+  </span>
+  returns the operation which is used to accumulate different values of the same
+  metric
+  and can be one of
+  <span class="pre">
+   IMetric.RollupOperation_AVG
+  </span>
+  ,
+  <span class="pre">
+   IMetric.RollupOperation_MAX
+  </span>
+  ,
+  <span class="pre">
+   IMetric.RollupOperation_MIN
+  </span>
+  or
+  <span class="pre">
+   IMetric.RollupOperation_SUM
+  </span>
+  for averaging, maximum, minimum or summation, respectively. If the
+  metric
+  in question does not specify a rollup operation
+  <span class="pre">
+   None
+  </span>
+  will be returned.
+ </p>
+ <p>
+  Lastly,
+  <span class="pre">
+   unit()
+  </span>
+  and
+  <span class="pre">
+   description()
+  </span>
+  return a (possibly empty) string of the metricâs
+  unit
+  and a short textual
+  description
+  for hardware metrics, respectively.
+ </p>
+ <p>
+  The above methods can be combined to filter through all
+  metrics
+  of a report, given certain criteria:
+ </p>
+ <pre><span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">metric</span><span class="o">.</span><span class="n">metric_type</span><span class="p">()</span> <span class="o">==</span> <span class="n">IMetric</span><span class="o">.</span><span class="n">MetricType_COUNTER</span> <span class="ow">and</span> \
+       <span class="n">metric</span><span class="o">.</span><span class="n">metric_subtype</span><span class="p">()</span> <span class="o">==</span> <span class="n">IMetric</span><span class="o">.</span><span class="n">MetricSubtype_PER_SECOND</span> <span class="ow">and</span> \
+       <span class="n">metric</span><span class="o">.</span><span class="n">rollup_operation</span><span class="p">()</span> <span class="o">==</span> <span class="n">IMetric</span><span class="o">.</span><span class="n">RollupOperation_AVG</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">metric</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">metric</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="si">}</span><span class="si">{</span><span class="n">metric</span><span class="o">.</span><span class="n">unit</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre>
+ <h3>
+  <span class="section-number">
+   1.4.4.
+  </span>
+  NVTX Support
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#nvtx-support" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The
+  <span class="pre">
+   ncu_report
+  </span>
+  has support for the NVIDIA Tools Extension (NVTX). This comes through the
+  <span class="pre">
+   INvtxState
+  </span>
+  object which represents the NVTX state of a profiled kernel.
+ </p>
+ <p>
+  An
+  <span class="pre">
+   INvtxState
+  </span>
+  object can be obtained from an action by using its
+  <span class="pre">
+   nvtx_state()
+  </span>
+  method. It exposes the
+  <span class="pre">
+   domains()
+  </span>
+  method which returns a tuple of integers representing the domains this kernel has state in. These integers can be used with the
+  <span class="pre">
+   domain_by_id(id)
+  </span>
+  method to get an
+  <span class="pre">
+   INvtxDomainInfo
+  </span>
+  object which represents the state of a domain.
+ </p>
+ <p>
+  The
+  <span class="pre">
+   INvtxDomainInfo
+  </span>
+  can be used to obtain a tuple of
+  Push-Pop
+  , or
+  Start-End
+  ranges using the
+  <span class="pre">
+   push_pop_ranges()
+  </span>
+  and
+  <span class="pre">
+   start_end_ranges()
+  </span>
+  methods.
+ </p>
+ <p>
+  There is also a
+  <span class="pre">
+   actions_by_nvtx
+  </span>
+  member function in the
+  <span class="pre">
+   IRange
+  </span>
+  class which allows you to get a tuple of actions matching the NVTX state described in its parameter.
+ </p>
+ <p>
+  The parameters for the
+  <span class="pre">
+   actions_by_nvtx
+  </span>
+  function are two lists of strings representing the state for which we want to query the actions. The first parameter describes the NVTX states to include while the second one describes the NVTX states to exclude. These strings are in the same format as the ones used with the
+  <span class="pre">
+   --nvtx-include
+  </span>
+  and
+  <span class="pre">
+   --nvtx-exclude
+  </span>
+  options.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.4.5.
+  </span>
+  Sample Script
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#sample-script" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  NVTX Push-Pop range filtering
+ </p>
+ <p>
+  This is a sample script which loads a report and prints the names of all the profiled kernels which were wrapped inside
+  <span class="pre">
+   BottomRange
+  </span>
+  and
+  <span class="pre">
+   TopRange
+  </span>
+  Push-Pop ranges
+  of the default NVTX domain.
+ </p>
+ <pre><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">ncu_report</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"usage: </span><span class="si">{}</span><span class="s2"> report_file"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="n">ncu_report</span><span class="o">.</span><span class="n">load_report</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">range_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">report</span><span class="o">.</span><span class="n">num_ranges</span><span class="p">()):</span>
+    <span class="n">current_range</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">range_by_idx</span><span class="p">(</span><span class="n">range_idx</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">action_idx</span> <span class="ow">in</span> <span class="n">current_range</span><span class="o">.</span><span class="n">actions_by_nvtx</span><span class="p">([</span><span class="s2">"BottomRange/*/TopRange"</span><span class="p">],</span> <span class="p">[]):</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">current_range</span><span class="o">.</span><span class="n">action_by_idx</span><span class="p">(</span><span class="n">action_idx</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">action</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+</pre>
+ <h2>
+  <span class="section-number">
+   1.5.
+  </span>
+  Source Counters
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#source-counters" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  The
+  Source
+  page provides correlation of various metrics with CUDA-C, PTX and SASS source of the application, depending on availability.
+ </p>
+ <p>
+  Which source metrics are collected and the order in which they are displayed in this page is controlled using section files, specifically using
+  SourceMetrics
+  entries.
+Each
+  SourceMetrics
+  entry defines one ordered group of metrics, and can be assigned an optional
+  Order
+  value.
+This value defines the ordering among those groups in the Source page. This allows you to define a group of memory-related source counters in one and a group of instruction-related counters in another section file.
+ </p>
+ <pre>Identifier: "CustomSourceMetrics"
+DisplayName: "Custom Source Metrics"
+SourceMetrics {
+  Order: 2
+  Metrics {
+    Label: "Instructions Executed"
+    Name: "inst_executed"
+  }
+  Metrics {
+    Label: "Float-value metric"
+    Name: "float_value_metric"
+    Description: "Custom, optional metric description"
+    DisplayProperties {
+      SourceView {
+        DefaultVisible: false
+      }
+    }
+  }
+  Metrics {
+    Label: ""
+    Name: "collected_but_not_shown"
+  }
+}
+Metrics {
+  Order: 3
+  Metrics {
+    Label: "Uint64-value metric"
+    Name: "uint64_value_metric"
+}
+</pre>
+ <p>
+  If a
+  Source Counter
+  metric is given an empty label attribute in the section file, it will be collected but not shown on the page.
+Default visibility can also be set through the
+  DisplayProperties
+  field as shown in the example above.
+The
+  Metrics
+  groups has been deprecated to define metrics that should be shown on the Source page, and
+  SourceMetrics
+  groups should be used instead, as the former only supports metrics with
+  uint64
+  -type instance values.
+ </p>
+ <h2>
+  <span class="section-number">
+   1.6.
+  </span>
+  Report File Format
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#report-file-format" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  This section documents the internals of the profiler report files (reports in the following) as created by NVIDIA Nsight Compute.
+  The file format is subject to change in future releases without prior notice.
+ </p>
+ <h3>
+  <span class="section-number">
+   1.6.1.
+  </span>
+  Version 7 Format
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#version-7-format" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Reports of version 7 are a combination of raw binary data and serialized Google Protocol Buffer version 2 messages (proto). All binary entries are stored as little endian. Protocol buffer definitions are in the NVIDIA Nsight Compute installation directory under
+  <span class="pre">
+   extras/FileFormat
+  </span>
+  .
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id3">
+  <span class="caption-text">
+   Table 1. Top-level report file format
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#id3" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Offset [bytes]
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Entry
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Type
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Value
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     Magic Number
+    </p>
+   </td>
+   <td>
+    <p>
+     Binary
+    </p>
+   </td>
+   <td>
+    <p>
+     NVR\0
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     4
+    </p>
+   </td>
+   <td>
+    <p>
+     Integer
+    </p>
+   </td>
+   <td>
+    <p>
+     Binary
+    </p>
+   </td>
+   <td>
+    <p>
+     sizeof(File Header)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     8
+    </p>
+   </td>
+   <td>
+    <p>
+     File Header
+    </p>
+   </td>
+   <td>
+    <p>
+     Proto
+    </p>
+   </td>
+   <td>
+    <p>
+     Report version
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     8 + sizeof(File Header)
+    </p>
+   </td>
+   <td>
+    <p>
+     Block 0
+    </p>
+   </td>
+   <td>
+    <p>
+     Mixed
+    </p>
+   </td>
+   <td>
+    <p>
+     CUDA CUBIN source, profile results, session information
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     8 + sizeof(File Header) + sizeof(Block 0)
+    </p>
+   </td>
+   <td>
+    <p>
+     Block 1
+    </p>
+   </td>
+   <td>
+    <p>
+     Mixed
+    </p>
+   </td>
+   <td>
+    <p>
+     CUDA CUBIN source, profile results, session information
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+  </tr>
+ </table>
+ <table class="table-no-stripes docutils align-default" id="id4">
+  <span class="caption-text">
+   Table 2. Per-Block report file format
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#id4" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Offset [bytes]
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Entry
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Type
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Value
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     Integer
+    </p>
+   </td>
+   <td>
+    <p>
+     Binary
+    </p>
+   </td>
+   <td>
+    <p>
+     sizeof(Block Header)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     4
+    </p>
+   </td>
+   <td>
+    <p>
+     Block Header
+    </p>
+   </td>
+   <td>
+    <p>
+     Proto
+    </p>
+   </td>
+   <td>
+    <p>
+     Number of entries per payload type, payload size
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     4 + sizeof(Block Header)
+    </p>
+   </td>
+   <td>
+    <p>
+     Block Payload
+    </p>
+   </td>
+   <td>
+    <p>
+     Mixed
+    </p>
+   </td>
+   <td>
+    <p>
+     Payload (CUDA CUBIN sources, profile results, session information, string table)
+    </p>
+   </td>
+  </tr>
+ </table>
+ <table class="table-no-stripes docutils align-default" id="id5">
+  <span class="caption-text">
+   Table 3. Block payload report file format
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-compute/CustomizationGuide/index.html#id5" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Offset [bytes]
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Entry
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Type
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Value
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     Integer
+    </p>
+   </td>
+   <td>
+    <p>
+     Binary
+    </p>
+   </td>
+   <td>
+    <p>
+     sizeof(Payload type 1, entry 1)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     4
+    </p>
+   </td>
+   <td>
+    <p>
+     Payload type 1, entry 1
+    </p>
+   </td>
+   <td>
+    <p>
+     Proto
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     4 + sizeof(Payload type 1, entry 1)
+    </p>
+   </td>
+   <td>
+    <p>
+     Integer
+    </p>
+   </td>
+   <td>
+    <p>
+     Binary
+    </p>
+   </td>
+   <td>
+    <p>
+     sizeof(Payload type 1, entry 2)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     8 + sizeof(Payload type 1, entry 1)
+    </p>
+   </td>
+   <td>
+    <p>
+     Payload type 1, entry 2
+    </p>
+   </td>
+   <td>
+    <p>
+     Proto
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     Integer
+    </p>
+   </td>
+   <td>
+    <p>
+     Binary
+    </p>
+   </td>
+   <td>
+    <p>
+     sizeof(Payload type 2, entry 1)
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     Payload type 2, entry 1
+    </p>
+   </td>
+   <td>
+    <p>
+     Proto
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+   <td>
+    <p>
+     â¦
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p class="rubric-h1 rubric">
+  Notices
+ </p>
+ <p class="rubric-h2 rubric">
+  Notices
+ </p>
+ <p>
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+ </p>
+ <p>
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems without express written approval of NVIDIA Corporation.
+ </p>
+ <p class="rubric-h2 rubric">
+  Trademarks
+ </p>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jun 03, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

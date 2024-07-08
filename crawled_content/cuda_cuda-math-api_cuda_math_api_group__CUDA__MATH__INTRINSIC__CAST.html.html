@@ -1,0 +1,5130 @@
+<html><head><title>8. Type Casting Intrinsics â CUDA Math API Reference Manual 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__FP8.html">
+    1. FP8 Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html">
+    2. Half Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__BFLOAT16.html">
+    3. Bfloat16 Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__SINGLE.html">
+    4. Single Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SINGLE.html">
+    5. Single Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__DOUBLE.html">
+    6. Double Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html">
+    7. Double Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html">
+    8. Type Casting Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INT.html">
+    9. Integer Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__INT.html">
+    10. Integer Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SIMD.html">
+    11. SIMD Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/structs.html">
+    12. Structs
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/notices.html">
+    13. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+  CUDA Math API Reference Manual
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   <span class="section-number">
+    8.
+   </span>
+   Type Casting Intrinsics
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/CUDA_Math_API.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   8.
+  </span>
+  Type Casting Intrinsics
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#type-casting-intrinsics" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p id="group__cuda__math__intrinsic__cast">
+  This section describes type casting intrinsic functions that are only supported in device code.
+ </p>
+ <p>
+  To use these functions you do not need to include any additional header files in your program.
+ </p>
+ <p class="rubric-h2 rubric">
+  Functions
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga64f62a06692dc6f683a2da3a25bd39de">
+  <span class="std std-ref">
+   __double2float_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a float in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga44785801ae1807a2bc0fde3f4f9d6aae">
+  <span class="std std-ref">
+   __double2float_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a float in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga4a5f6ab65413bdfb6080003392a2954b">
+  <span class="std std-ref">
+   __double2float_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a float in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa2bfeb44d4150a05d590a3c330511990">
+  <span class="std std-ref">
+   __double2float_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a float in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gae8bbbe2efda5aa6f087c94e1e56463e8">
+  <span class="std std-ref">
+   __double2hiint
+  </span>
+ </a>
+ (double x)
+ <p>
+  Reinterpret high 32 bits in a double as a signed integer.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaf91bc76a892f92d470595c3d95703531">
+  <span class="std std-ref">
+   __double2int_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed int in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga57eccdd6189ac5527b52eeff42daaae5">
+  <span class="std std-ref">
+   __double2int_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed int in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gae3ad8b7aba740b05097cb47c70f2387a">
+  <span class="std std-ref">
+   __double2int_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed int in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaf5ba8d1316a96fab5f34f0cfffd4fb07">
+  <span class="std std-ref">
+   __double2int_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed int in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga1b9a396549605e99ad6f0639d8efd0cc">
+  <span class="std std-ref">
+   __double2ll_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed 64-bit int in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaff7010f874f73a459f0055dfa31d3531">
+  <span class="std std-ref">
+   __double2ll_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed 64-bit int in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga410bc39567ec1105a1ef4658bdfa4c4f">
+  <span class="std std-ref">
+   __double2ll_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed 64-bit int in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga1e10c3df99035e81bf902589410a8798">
+  <span class="std std-ref">
+   __double2ll_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to a signed 64-bit int in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga8f685cb937cc96c273d197da7b1633f1">
+  <span class="std std-ref">
+   __double2loint
+  </span>
+ </a>
+ (double x)
+ <p>
+  Reinterpret low 32 bits in a double as a signed integer.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga38ca3e31db652a84d318fe966231e60d">
+  <span class="std std-ref">
+   __double2uint_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned int in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga551e5828292865856f306fb5b3eeb9e7">
+  <span class="std std-ref">
+   __double2uint_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned int in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga872081e638057748cc55697cfbde0de7">
+  <span class="std std-ref">
+   __double2uint_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned int in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga9b6b4afa2ad047c3d10b1a6ec4b540f2">
+  <span class="std std-ref">
+   __double2uint_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned int in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga4041c7521153868536f5081b43aa6e94">
+  <span class="std std-ref">
+   __double2ull_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned 64-bit int in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga33d309bee17d6e98fad0a3db0077e1d8">
+  <span class="std std-ref">
+   __double2ull_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned 64-bit int in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga0b673695ff1ea93070b8795747d0bb0a">
+  <span class="std std-ref">
+   __double2ull_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned 64-bit int in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa228e8924a18963346001d7818665b3b">
+  <span class="std std-ref">
+   __double2ull_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Convert a double to an unsigned 64-bit int in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaeb72123ab9c35d88842baf34140a8ca6">
+  <span class="std std-ref">
+   __double_as_longlong
+  </span>
+ </a>
+ (double x)
+ <p>
+  Reinterpret bits in a double as a 64-bit signed integer.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga46c024bc92e746ef5c6a48ef0ce74b54">
+  <span class="std std-ref">
+   __float2int_rd
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed integer in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa0223a729c7bda6096fc7fc212df32cd">
+  <span class="std std-ref">
+   __float2int_rn
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed integer in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaefb35242e2f0c38d448b7123782aa15f">
+  <span class="std std-ref">
+   __float2int_ru
+  </span>
+ </a>
+ (float)
+ <p>
+  Convert a float to a signed integer in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga0f1b36aae52d3051068da702e4e6e3df">
+  <span class="std std-ref">
+   __float2int_rz
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed integer in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga46a5c844ad314deca27609a775732386">
+  <span class="std std-ref">
+   __float2ll_rd
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed 64-bit integer in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga8491bb2ed031de169206e591e5779f69">
+  <span class="std std-ref">
+   __float2ll_rn
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed 64-bit integer in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga9f3eb6391aaeed6d18da2615d51205eb">
+  <span class="std std-ref">
+   __float2ll_ru
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed 64-bit integer in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gab3d41edef9134fc0aa91ecd6d9dcf0c6">
+  <span class="std std-ref">
+   __float2ll_rz
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to a signed 64-bit integer in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gadaebb858df76995537091414f4b54970">
+  <span class="std std-ref">
+   __float2uint_rd
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned integer in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa32cbc1af788e704c26b48c1a4a87494">
+  <span class="std std-ref">
+   __float2uint_rn
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned integer in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga233419ac96d01a429517c0fdfd4be157">
+  <span class="std std-ref">
+   __float2uint_ru
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned integer in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gad833e48202936c6c70402fdf7549ef23">
+  <span class="std std-ref">
+   __float2uint_rz
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned integer in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga321ba664bb669aec511eb3be642a2be1">
+  <span class="std std-ref">
+   __float2ull_rd
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga6a8ce4db49da2a1eb288722ac108636e">
+  <span class="std std-ref">
+   __float2ull_rn
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gabf910da5dce52e6e4a1df307a8aff874">
+  <span class="std std-ref">
+   __float2ull_ru
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned long long int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga116a44de48af36f1a4d19ca97c9e58cd">
+  <span class="std std-ref">
+   __float2ull_rz
+  </span>
+ </a>
+ (float x)
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gadcf392b5fe3086d1ae06a1a3dcb752b1">
+  <span class="std std-ref">
+   __float_as_int
+  </span>
+ </a>
+ (float x)
+ <p>
+  Reinterpret bits in a float as a signed integer.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ unsigned int
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaaf4c4e5365416bb96b5937df9ffd9497">
+  <span class="std std-ref">
+   __float_as_uint
+  </span>
+ </a>
+ (float x)
+ <p>
+  Reinterpret bits in a float as a unsigned integer.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga5853355db4780e81fb09ac911a8f2def">
+  <span class="std std-ref">
+   __hiloint2double
+  </span>
+ </a>
+ (int hi, int lo)
+ <p>
+  Reinterpret high and low 32-bit integer values as a double.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga802fcfefe56a2b03839f3135ac5ffda3">
+  <span class="std std-ref">
+   __int2double_rn
+  </span>
+ </a>
+ (int x)
+ <p>
+  Convert a signed int to a double.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga5247baba1fb70321b7569ba35000f5f9">
+  <span class="std std-ref">
+   __int2float_rd
+  </span>
+ </a>
+ (int x)
+ <p>
+  Convert a signed integer to a float in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga08cd4822773d557bd092ab986dffa8f1">
+  <span class="std std-ref">
+   __int2float_rn
+  </span>
+ </a>
+ (int x)
+ <p>
+  Convert a signed integer to a float in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga0f3748c434f936ee459feff8e6f0de7d">
+  <span class="std std-ref">
+   __int2float_ru
+  </span>
+ </a>
+ (int x)
+ <p>
+  Convert a signed integer to a float in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa3080c83713f5be18ac3488af0c1d8a9">
+  <span class="std std-ref">
+   __int2float_rz
+  </span>
+ </a>
+ (int x)
+ <p>
+  Convert a signed integer to a float in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga99207ac41a048168ff039e8e6f1084c9">
+  <span class="std std-ref">
+   __int_as_float
+  </span>
+ </a>
+ (int x)
+ <p>
+  Reinterpret bits in an integer as a float.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga7fcf675dbfa5fcb854a07c4b005cca44">
+  <span class="std std-ref">
+   __ll2double_rd
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed 64-bit int to a double in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga70e811280daf5925d1b377f143d76201">
+  <span class="std std-ref">
+   __ll2double_rn
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed 64-bit int to a double in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga8a8f6881e01a8d0de4231157606a17d2">
+  <span class="std std-ref">
+   __ll2double_ru
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed 64-bit int to a double in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gafe3afeae8f48bb3d598e2c7c9417feb0">
+  <span class="std std-ref">
+   __ll2double_rz
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed 64-bit int to a double in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga125d06ca0d57a1d856714af3dbfa68a2">
+  <span class="std std-ref">
+   __ll2float_rd
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed integer to a float in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga5012f7d034ffd3affadc0c1ff4fb4c0b">
+  <span class="std std-ref">
+   __ll2float_rn
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed 64-bit integer to a float in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga30000a07d935a414c23eb79a4f4fd353">
+  <span class="std std-ref">
+   __ll2float_ru
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed integer to a float in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga2dc649ecea6a9f04e8a85f7cfd8444c1">
+  <span class="std std-ref">
+   __ll2float_rz
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Convert a signed integer to a float in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga354a51915a0c6465ac5e5c844724d987">
+  <span class="std std-ref">
+   __longlong_as_double
+  </span>
+ </a>
+ (long long int x)
+ <p>
+  Reinterpret bits in a 64-bit signed integer as a double.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaf214f35ac7732dc82db1a2fe8cf1760b">
+  <span class="std std-ref">
+   __uint2double_rn
+  </span>
+ </a>
+ (unsigned int x)
+ <p>
+  Convert an unsigned int to a double.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa46b5ec834fc7a973b0f90a605a82cad">
+  <span class="std std-ref">
+   __uint2float_rd
+  </span>
+ </a>
+ (unsigned int x)
+ <p>
+  Convert an unsigned integer to a float in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaeef617486f7a4937b87933b54d41b03a">
+  <span class="std std-ref">
+   __uint2float_rn
+  </span>
+ </a>
+ (unsigned int x)
+ <p>
+  Convert an unsigned integer to a float in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga4c31d267e495c32d9718d21bb9b3470b">
+  <span class="std std-ref">
+   __uint2float_ru
+  </span>
+ </a>
+ (unsigned int x)
+ <p>
+  Convert an unsigned integer to a float in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gae1aa4eb377adbff2d94875131f10bfc1">
+  <span class="std std-ref">
+   __uint2float_rz
+  </span>
+ </a>
+ (unsigned int x)
+ <p>
+  Convert an unsigned integer to a float in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga156767b22e3d00f8fa6625804a1cff63">
+  <span class="std std-ref">
+   __uint_as_float
+  </span>
+ </a>
+ (unsigned int x)
+ <p>
+  Reinterpret bits in an unsigned integer as a float.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga7e2b60cf5ff4113e569a64b9a2db0a74">
+  <span class="std std-ref">
+   __ull2double_rd
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned 64-bit int to a double in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga9de34b6ace45642b96873f1415d42d24">
+  <span class="std std-ref">
+   __ull2double_rn
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned 64-bit int to a double in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga5d582e599bf8d35e17ff9b90695b0ebf">
+  <span class="std std-ref">
+   __ull2double_ru
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned 64-bit int to a double in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga3b9d77551c668db0930cc75e1121528a">
+  <span class="std std-ref">
+   __ull2double_rz
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned 64-bit int to a double in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga79735bf3dfb053279868c89b3e1111dc">
+  <span class="std std-ref">
+   __ull2float_rd
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned integer to a float in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1gaa655fbb8e0ce7082496658b9708c655a">
+  <span class="std std-ref">
+   __ull2float_rn
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned integer to a float in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga8ab7e72ff20c099263ad64bc7d02f9ed">
+  <span class="std std-ref">
+   __ull2float_ru
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned integer to a float in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ float
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#group__cuda__math__intrinsic__cast_1ga3e719eed3287f966e05121745cff0a41">
+  <span class="std std-ref">
+   __ull2float_rz
+  </span>
+ </a>
+ (unsigned long long int x)
+ <p>
+  Convert an unsigned integer to a float in round-towards-zero mode.
+ </p>
+ <h2>
+  <span class="section-number">
+   8.1.
+  </span>
+  Functions
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#functions" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2float_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv417__double2float_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a float in round-down mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2float_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv417__double2float_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a float in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2float_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv417__double2float_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a float in round-up mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2float_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv417__double2float_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a float in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2hiint
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__double2hiintd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret high 32 bits in a double as a signed integer.
+ </p>
+ <p>
+  Reinterpret the high 32 bits in the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  as a signed integer.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2int_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2int_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed int in round-down mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer value in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2int_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2int_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed int in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer value in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2int_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2int_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed int in round-up mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer value in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2int_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2int_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed int in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer value in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ll_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__double2ll_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed 64-bit int in round-down mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer value in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ll_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__double2ll_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed 64-bit int in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer value in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ll_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__double2ll_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed 64-bit int in round-up mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer value in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ll_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__double2ll_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to a signed 64-bit int in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer value in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2loint
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__double2lointd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret low 32 bits in a double as a signed integer.
+ </p>
+ <p>
+  Reinterpret the low 32 bits in the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  as a signed integer.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2uint_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv416__double2uint_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned int in round-down mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer value in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2uint_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv416__double2uint_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned int in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer value in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2uint_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv416__double2uint_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned int in round-up mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer value in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2uint_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv416__double2uint_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned int in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer value in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ull_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2ull_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned 64-bit int in round-down mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer value in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ull_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2ull_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned 64-bit int in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer value in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ull_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2ull_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned 64-bit int in round-up mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer value in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double2ull_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__double2ull_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a double to an unsigned 64-bit int in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer value in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __double_as_longlong
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv420__double_as_longlongd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret bits in a double as a 64-bit signed integer.
+ </p>
+ <p>
+  Reinterpret the bits in the double-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  as a signed 64-bit integer.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2int_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2int_rdf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed integer in round-down mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2int_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2int_rnf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed integer in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2int_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2int_ruf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed integer in round-up mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2int_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2int_rzf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed integer in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed integer in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ll_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__float2ll_rdf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed 64-bit integer in round-down mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ll_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__float2ll_rnf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed 64-bit integer in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ll_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__float2ll_ruf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed 64-bit integer in round-up mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ll_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__float2ll_rzf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to a signed 64-bit integer in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to a signed 64-bit integer in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2uint_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__float2uint_rdf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned integer in round-down mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2uint_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__float2uint_rnf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned integer in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2uint_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__float2uint_ruf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned integer in round-up mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2uint_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__float2uint_rzf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned integer in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned integer in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ull_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2ull_rdf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-down mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ull_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2ull_rnf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ull_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2ull_ruf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-up mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float2ull_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float2ull_rzf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a float to an unsigned 64-bit integer in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  to an unsigned 64-bit integer in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  When the floating-point input rounded to integral is outside the range of the return type, the behavior is undefined.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float_as_int
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__float_as_intf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret bits in a float as a signed integer.
+ </p>
+ <p>
+  Reinterpret the bits in the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  as a signed integer.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __float_as_uint
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__float_as_uintf" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret bits in a float as a unsigned integer.
+ </p>
+ <p>
+  Reinterpret the bits in the single-precision floating-point value
+  <span class="pre">
+   x
+  </span>
+  as a unsigned integer.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __hiloint2double
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   hi
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   lo
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv416__hiloint2doubleii" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret high and low 32-bit integer values as a double.
+ </p>
+ <p>
+  Reinterpret the integer value of
+  <span class="pre">
+   hi
+  </span>
+  as the high 32 bits of a double-precision floating-point value and the integer value of
+  <span class="pre">
+   lo
+  </span>
+  as the low 32 bits of the same double-precision floating-point value.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __int2double_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__int2double_rni" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed int to a double.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __int2float_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__int2float_rdi" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-down mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __int2float_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__int2float_rni" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __int2float_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__int2float_rui" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-up mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __int2float_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__int2float_rzi" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __int_as_float
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__int_as_floati" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret bits in an integer as a float.
+ </p>
+ <p>
+  Reinterpret the bits in the signed integer value
+  <span class="pre">
+   x
+  </span>
+  as a single-precision floating-point value.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2double_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ll2double_rdx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed 64-bit int to a double in round-down mode.
+ </p>
+ <p>
+  Convert the signed 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2double_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ll2double_rnx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed 64-bit int to a double in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the signed 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2double_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ll2double_rux" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed 64-bit int to a double in round-up mode.
+ </p>
+ <p>
+  Convert the signed 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2double_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ll2double_rzx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed 64-bit int to a double in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the signed 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2float_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__ll2float_rdx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-down mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2float_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__ll2float_rnx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed 64-bit integer to a float in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the signed 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2float_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__ll2float_rux" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-up mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ll2float_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv413__ll2float_rzx" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert a signed integer to a float in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the signed integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __longlong_as_double
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv420__longlong_as_doublex" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret bits in a 64-bit signed integer as a double.
+ </p>
+ <p>
+  Reinterpret the bits in the 64-bit signed integer value
+  <span class="pre">
+   x
+  </span>
+  as a double-precision floating-point value.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __uint2double_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv416__uint2double_rnj" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned int to a double.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __uint2float_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__uint2float_rdj" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-down mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __uint2float_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__uint2float_rnj" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __uint2float_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__uint2float_ruj" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-up mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __uint2float_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__uint2float_rzj" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __uint_as_float
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__uint_as_floatj" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Reinterpret bits in an unsigned integer as a float.
+ </p>
+ <p>
+  Reinterpret the bits in the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  as a single-precision floating-point value.
+ </p>
+ Returns
+ <p>
+  Returns reinterpreted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2double_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__ull2double_rdy" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned 64-bit int to a double in round-down mode.
+ </p>
+ <p>
+  Convert the unsigned 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2double_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__ull2double_rny" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned 64-bit int to a double in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the unsigned 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2double_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__ull2double_ruy" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned 64-bit int to a double in round-up mode.
+ </p>
+ <p>
+  Convert the unsigned 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2double_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv415__ull2double_rzy" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned 64-bit int to a double in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the unsigned 64-bit integer value
+  <span class="pre">
+   x
+  </span>
+  to a double-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2float_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ull2float_rdy" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-down mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-down (to negative infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2float_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ull2float_rny" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-to-nearest-even mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-to-nearest-even mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2float_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ull2float_ruy" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-up mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-up (to positive infinity) mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   float
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ull2float_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   unsigned
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   long
+  </span>
+ </span>
+ <span class="kt">
+  <span class="pre">
+   int
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html#_CPPv414__ull2float_rzy" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Convert an unsigned integer to a float in round-towards-zero mode.
+ </p>
+ <p>
+  Convert the unsigned integer value
+  <span class="pre">
+   x
+  </span>
+  to a single-precision floating-point value in round-towards-zero mode.
+ </p>
+ Returns
+ <p>
+  Returns converted value.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2007-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

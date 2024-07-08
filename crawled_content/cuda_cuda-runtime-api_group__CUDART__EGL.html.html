@@ -1,0 +1,2544 @@
+<html><head><title>CUDA Runtime API :: CUDA Toolkit Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  CUDA Toolkit Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/cuda/index.html" title="The root of the site.">
+  CUDA Toolkit 
+                  
+                  
+                  v12.5.1
+ </a>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/index.html" title="CUDA Runtime API">
+  CUDA Runtime API
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/driver-vs-runtime-api.html#driver-vs-runtime-api">
+    1.Â Difference between the driver and runtime APIs
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/api-sync-behavior.html#api-sync-behavior">
+    2.Â API synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/stream-sync-behavior.html#stream-sync-behavior">
+    3.Â Stream synchronization behavior
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/graphs-thread-safety.html#graphs-thread-safety">
+    4.Â Graph object thread safety
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/version-mixing-rules.html#version-mixing-rules">
+    5.Â Rules for version mixing
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/modules.html#modules">
+    6.Â Modules
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE.html#group__CUDART__DEVICE">
+      6.1.Â Device Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DEVICE__DEPRECATED.html#group__CUDART__DEVICE__DEPRECATED">
+      6.2.Â Device Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__THREAD__DEPRECATED.html#group__CUDART__THREAD__DEPRECATED">
+      6.3.Â Thread Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__ERROR.html#group__CUDART__ERROR">
+      6.4.Â Error Handling
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__STREAM.html#group__CUDART__STREAM">
+      6.5.Â Stream Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT">
+      6.6.Â Event Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXTRES__INTEROP.html#group__CUDART__EXTRES__INTEROP">
+      6.7.Â External Resource Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION.html#group__CUDART__EXECUTION">
+      6.8.Â Execution Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION__DEPRECATED.html#group__CUDART__EXECUTION__DEPRECATED">
+      6.9.Â Execution Control [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OCCUPANCY.html#group__CUDART__OCCUPANCY">
+      6.10.Â Occupancy
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html#group__CUDART__MEMORY">
+      6.11.Â Memory Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__DEPRECATED.html#group__CUDART__MEMORY__DEPRECATED">
+      6.12.Â Memory Management [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY__POOLS.html#group__CUDART__MEMORY__POOLS">
+      6.13.Â Stream Ordered Memory Allocator
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__UNIFIED.html#group__CUDART__UNIFIED">
+      6.14.Â Unified Addressing
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PEER.html#group__CUDART__PEER">
+      6.15.Â Peer Device Memory Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL.html#group__CUDART__OPENGL">
+      6.16.Â OpenGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL__DEPRECATED.html#group__CUDART__OPENGL__DEPRECATED">
+      6.17.Â OpenGL Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9.html#group__CUDART__D3D9">
+      6.18.Â Direct3D 9 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D9__DEPRECATED.html#group__CUDART__D3D9__DEPRECATED">
+      6.19.Â Direct3D 9 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10.html#group__CUDART__D3D10">
+      6.20.Â Direct3D 10 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D10__DEPRECATED.html#group__CUDART__D3D10__DEPRECATED">
+      6.21.Â Direct3D 10 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11.html#group__CUDART__D3D11">
+      6.22.Â Direct3D 11 Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11__DEPRECATED.html#group__CUDART__D3D11__DEPRECATED">
+      6.23.Â Direct3D 11 Interoperability [DEPRECATED]
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__VDPAU.html#group__CUDART__VDPAU">
+      6.24.Â VDPAU Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL">
+      6.25.Â EGL Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP">
+      6.26.Â Graphics Interoperability
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TEXTURE__OBJECT.html#group__CUDART__TEXTURE__OBJECT">
+      6.27.Â Texture Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__SURFACE__OBJECT.html#group__CUDART__SURFACE__OBJECT">
+      6.28.Â Surface Object Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART____VERSION.html#group__CUDART____VERSION">
+      6.29.Â Version Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__GRAPH.html#group__CUDART__GRAPH">
+      6.30.Â Graph Management
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER__ENTRY__POINT.html#group__CUDART__DRIVER__ENTRY__POINT">
+      6.31.Â Driver Entry Point Access
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL">
+      6.32.Â C++ API Routines
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER">
+      6.33.Â Interactions with the CUDA Driver API
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__PROFILER.html#group__CUDART__PROFILER">
+      6.34.Â Profiler Control
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES">
+      6.35.Â Data types used by CUDA Runtime
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/annotated.html#annotated">
+    7.Â Data Structures
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/class____cudaOccupancyB2DHelper.html#class____cudaOccupancyB2DHelper">
+      7.1.Â __cudaOccupancyB2DHelper
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAccessPolicyWindow.html#structcudaAccessPolicyWindow">
+      7.2.Â cudaAccessPolicyWindow
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArrayMemoryRequirements.html#structcudaArrayMemoryRequirements">
+      7.3.Â cudaArrayMemoryRequirements
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaArraySparseProperties.html#structcudaArraySparseProperties">
+      7.4.Â cudaArraySparseProperties
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaAsyncNotificationInfo__t.html#structcudaAsyncNotificationInfo__t">
+      7.5.Â cudaAsyncNotificationInfo_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChannelFormatDesc.html#structcudaChannelFormatDesc">
+      7.6.Â cudaChannelFormatDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaChildGraphNodeParams.html#structcudaChildGraphNodeParams">
+      7.7.Â cudaChildGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaConditionalNodeParams.html#structcudaConditionalNodeParams">
+      7.8.Â cudaConditionalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html#structcudaDeviceProp">
+      7.9.Â cudaDeviceProp
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame">
+      7.10.Â cudaEglFrame
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc">
+      7.11.Â cudaEglPlaneDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventRecordNodeParams.html#structcudaEventRecordNodeParams">
+      7.12.Â cudaEventRecordNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEventWaitNodeParams.html#structcudaEventWaitNodeParams">
+      7.13.Â cudaEventWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExtent.html#structcudaExtent">
+      7.14.Â cudaExtent
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryBufferDesc.html#structcudaExternalMemoryBufferDesc">
+      7.15.Â cudaExternalMemoryBufferDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryHandleDesc.html#structcudaExternalMemoryHandleDesc">
+      7.16.Â cudaExternalMemoryHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalMemoryMipmappedArrayDesc.html#structcudaExternalMemoryMipmappedArrayDesc">
+      7.17.Â cudaExternalMemoryMipmappedArrayDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreHandleDesc.html#structcudaExternalSemaphoreHandleDesc">
+      7.18.Â cudaExternalSemaphoreHandleDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParams.html#structcudaExternalSemaphoreSignalNodeParams">
+      7.19.Â cudaExternalSemaphoreSignalNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalNodeParamsV2.html#structcudaExternalSemaphoreSignalNodeParamsV2">
+      7.20.Â cudaExternalSemaphoreSignalNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams.html#structcudaExternalSemaphoreSignalParams">
+      7.21.Â cudaExternalSemaphoreSignalParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreSignalParams__v1.html#structcudaExternalSemaphoreSignalParams__v1">
+      7.22.Â cudaExternalSemaphoreSignalParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParams.html#structcudaExternalSemaphoreWaitNodeParams">
+      7.23.Â cudaExternalSemaphoreWaitNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitNodeParamsV2.html#structcudaExternalSemaphoreWaitNodeParamsV2">
+      7.24.Â cudaExternalSemaphoreWaitNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams.html#structcudaExternalSemaphoreWaitParams">
+      7.25.Â cudaExternalSemaphoreWaitParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaExternalSemaphoreWaitParams__v1.html#structcudaExternalSemaphoreWaitParams__v1">
+      7.26.Â cudaExternalSemaphoreWaitParams_v1
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaFuncAttributes.html#structcudaFuncAttributes">
+      7.27.Â cudaFuncAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphEdgeData.html#structcudaGraphEdgeData">
+      7.28.Â cudaGraphEdgeData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphExecUpdateResultInfo.html#structcudaGraphExecUpdateResultInfo">
+      7.29.Â cudaGraphExecUpdateResultInfo
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphInstantiateParams.html#structcudaGraphInstantiateParams">
+      7.30.Â cudaGraphInstantiateParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphKernelNodeUpdate.html#structcudaGraphKernelNodeUpdate">
+      7.31.Â cudaGraphKernelNodeUpdate
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaGraphNodeParams.html#structcudaGraphNodeParams">
+      7.32.Â cudaGraphNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParams.html#structcudaHostNodeParams">
+      7.33.Â cudaHostNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaHostNodeParamsV2.html#structcudaHostNodeParamsV2">
+      7.34.Â cudaHostNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcEventHandle__t.html#structcudaIpcEventHandle__t">
+      7.35.Â cudaIpcEventHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaIpcMemHandle__t.html#structcudaIpcMemHandle__t">
+      7.36.Â cudaIpcMemHandle_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParams.html#structcudaKernelNodeParams">
+      7.37.Â cudaKernelNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaKernelNodeParamsV2.html#structcudaKernelNodeParamsV2">
+      7.38.Â cudaKernelNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchAttribute.html#structcudaLaunchAttribute">
+      7.39.Â cudaLaunchAttribute
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/unioncudaLaunchAttributeValue.html#unioncudaLaunchAttributeValue">
+      7.40.Â cudaLaunchAttributeValue
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchConfig__t.html#structcudaLaunchConfig__t">
+      7.41.Â cudaLaunchConfig_t
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchMemSyncDomainMap.html#structcudaLaunchMemSyncDomainMap">
+      7.42.Â cudaLaunchMemSyncDomainMap
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaLaunchParams.html#structcudaLaunchParams">
+      7.43.Â cudaLaunchParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAccessDesc.html#structcudaMemAccessDesc">
+      7.44.Â cudaMemAccessDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParams.html#structcudaMemAllocNodeParams">
+      7.45.Â cudaMemAllocNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemAllocNodeParamsV2.html#structcudaMemAllocNodeParamsV2">
+      7.46.Â cudaMemAllocNodeParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DParms.html#structcudaMemcpy3DParms">
+      7.47.Â cudaMemcpy3DParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpy3DPeerParms.html#structcudaMemcpy3DPeerParms">
+      7.48.Â cudaMemcpy3DPeerParms
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemcpyNodeParams.html#structcudaMemcpyNodeParams">
+      7.49.Â cudaMemcpyNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemFreeNodeParams.html#structcudaMemFreeNodeParams">
+      7.50.Â cudaMemFreeNodeParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemLocation.html#structcudaMemLocation">
+      7.51.Â cudaMemLocation
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolProps.html#structcudaMemPoolProps">
+      7.52.Â cudaMemPoolProps
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemPoolPtrExportData.html#structcudaMemPoolPtrExportData">
+      7.53.Â cudaMemPoolPtrExportData
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParams.html#structcudaMemsetParams">
+      7.54.Â cudaMemsetParams
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaMemsetParamsV2.html#structcudaMemsetParamsV2">
+      7.55.Â cudaMemsetParamsV2
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr">
+      7.56.Â cudaPitchedPtr
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPointerAttributes.html#structcudaPointerAttributes">
+      7.57.Â cudaPointerAttributes
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPos.html#structcudaPos">
+      7.58.Â cudaPos
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceDesc.html#structcudaResourceDesc">
+      7.59.Â cudaResourceDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaResourceViewDesc.html#structcudaResourceViewDesc">
+      7.60.Â cudaResourceViewDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaTextureDesc.html#structcudaTextureDesc">
+      7.61.Â cudaTextureDesc
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structCUuuid__st.html#structCUuuid__st">
+      7.62.Â CUuuid_st
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/functions.html#functions">
+    8.Â Data Fields
+   </a>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/deprecated.html#deprecated">
+    9.Â Deprecated List
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__VDPAU.html" shape="rect">
+  &lt; Previous
+ </a>
+ |
+ <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html" shape="rect">
+  Next &gt;
+ </a>
+ CUDA Runtime API
+                  (
+ <a href="https://docs.nvidia.com/cuda/pdf/CUDA_Runtime_API.pdf">
+  PDF
+ </a>
+ )
+                  -
+                   
+                  
+                  
+                  v12.5.1
+                  (
+ <a href="https://developer.nvidia.com/cuda-toolkit-archive">
+  older
+ </a>
+ )
+                  -
+                  Last updated July 1, 2024
+                  -
+ <a href="mailto:CUDAIssues@nvidia.com?subject=CUDA%20Toolkit%20Documentation%20Feedback:%20CUDA%20Runtime%20API">
+  Send Feedback
+ </a>
+ <a name="group__CUDART__EGL" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="topictitle2 cppModule">
+  6.25.Â EGL Interoperability
+ </h2>
+ <p>
+  This section describes the EGL interoperability functions of the CUDA runtime application programming interface.
+ </p>
+ <h3 class="fake_sectiontitle member_header">
+  Functions
+ </h3>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" shape="rect">
+   cudaEGLStreamConsumerAcquireFrame
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect" title="">
+   cudaGraphicsResource_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pCudaResource
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   timeout
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Acquire an image frame from the EGLStream with CUDA as a consumer.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g7993b0e3802420547e3f403549be65a1" shape="rect">
+   cudaEGLStreamConsumerConnect
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  , EGLStreamKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglStream
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Connect CUDA to EGLStream as a consumer.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g4e2d79eb6bcb9eca4f6e3f13eb3f7fc3" shape="rect">
+   cudaEGLStreamConsumerConnectWithFlags
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  , EGLStreamKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglStream
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Connect CUDA to EGLStream as a consumer with given flags.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" shape="rect">
+   cudaEGLStreamConsumerDisconnect
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Disconnect CUDA as a consumer to EGLStream .
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" shape="rect">
+   cudaEGLStreamConsumerReleaseFrame
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect" title="">
+   cudaGraphicsResource_t
+  </a>
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pCudaResource
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Releases the last frame acquired from the EGLStream.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gf35966d50689874614985f688a888c03" shape="rect">
+   cudaEGLStreamProducerConnect
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  , EGLStreamKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglStream
+  </span>
+  , EGLint
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   width
+  </span>
+  , EGLint
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   height
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Connect CUDA to EGLStream as a producer.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g381335525d81342c29c0b62cc4f64dc9" shape="rect">
+   cudaEGLStreamProducerDisconnect
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Disconnect CUDA as a producer to EGLStream .
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g5c84a3778586dda401df00052ae5753b" shape="rect">
+   cudaEGLStreamProducerPresentFrame
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect" title="">
+   cudaEglFrame
+  </a>
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglframe
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Present a CUDA eglFrame to the EGLStream with CUDA as a producer.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g631d1080365d32a35a19b87584725748" shape="rect">
+   cudaEGLStreamProducerReturnFrame
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect" title="">
+   cudaEglFrame
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglframe
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Return the CUDA eglFrame to the EGLStream last released by the consumer.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gd9fcc4b06f734887d27aae6f0a57fa95" shape="rect">
+   cudaEventCreateFromEGLSync
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gea2f543a9fc0e52fe4ae712920fd1247" shape="rect" title="">
+   cudaEvent_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   phEvent
+  </span>
+  , EGLSyncKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglSync
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Creates an event from EGLSync object.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g8813b57a44bdd30177666110530d1dcf" shape="rect">
+   cudaGraphicsEGLRegisterImage
+  </a>
+  (  cudaGraphicsResource**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pCudaResource
+  </span>
+  , EGLImageKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   image
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Registers an EGL image.
+ </span>
+ <span class="member_type">
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  Â
+ </span>
+ <span class="member_name">
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gdd6215655a241c047d6d4939e242202a" shape="rect">
+   cudaGraphicsResourceGetMappedEglFrame
+  </a>
+  (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect" title="">
+   cudaEglFrame
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglFrame
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect" title="">
+   cudaGraphicsResource_t
+  </a>
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   resource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   index
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   mipLevel
+  </span>
+  )
+ </span>
+ <span class="desc">
+  Get an eglFrame through which to access a registered EGL graphics resource.
+ </span>
+ <h3 class="sectiontitle">
+  Functions
+ </h3>
+ <a id="group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" name="group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamConsumerAcquireFrame (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect" title="">
+   cudaGraphicsResource_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pCudaResource
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   timeout
+  </span>
+  )
+ </span>
+ Acquire an image frame from the EGLStream with CUDA as a consumer.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Connection on which to acquire
+ <span class="keyword keyword apiItemName">
+  pCudaResource
+ </span>
+ - CUDA resource on which the EGLStream frame will be mapped for use.
+ <span class="keyword keyword apiItemName">
+  pStream
+ </span>
+ - CUDA stream for synchronization and any data migrations implied by
+ <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g1b8600d3bc8514e841e093921c10ebe4" shape="rect">
+  cudaEglResourceLocationFlags
+ </a>
+ .
+ <span class="keyword keyword apiItemName">
+  timeout
+ </span>
+ - Desired timeout in usec.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00384ea7f1214c348f64f565ca860933e5a5" shape="rect">
+   cudaErrorLaunchTimeout
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Acquire an image frame from EGLStreamKHR.
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gdd6215655a241c047d6d4939e242202a" shape="rect" title="Get an eglFrame through which to access a registered EGL graphics resource.">
+   cudaGraphicsResourceGetMappedEglFrame
+  </a>
+  can be called on
+  pCudaResource
+  to get
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect">
+   cudaEglFrame
+  </a>
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g7993b0e3802420547e3f403549be65a1" shape="rect" title="Connect CUDA to EGLStream as a consumer.">
+   cudaEGLStreamConsumerConnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" shape="rect" title="Disconnect CUDA as a consumer to EGLStream .">
+   cudaEGLStreamConsumerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" shape="rect" title="Releases the last frame acquired from the EGLStream.">
+   cudaEGLStreamConsumerReleaseFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g10507a0acb74a90136caacb363a3c6a7" shape="rect" target="_blank">
+   cuEGLStreamConsumerAcquireFrame
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g7993b0e3802420547e3f403549be65a1" name="group__CUDART__EGL_1g7993b0e3802420547e3f403549be65a1" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamConsumerConnect (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  , EGLStreamKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglStream
+  </span>
+  )
+ </span>
+ Connect CUDA to EGLStream as a consumer.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Pointer to the returned connection handle
+ <span class="keyword keyword apiItemName">
+  eglStream
+ </span>
+ - EGLStreamKHR handle
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Connect CUDA as a consumer to EGLStreamKHR specified by
+  eglStream
+  .
+ </p>
+ <p class="p">
+  The EGLStreamKHR is an EGL object that transfers a sequence of image frames from one API to another.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" shape="rect" title="Disconnect CUDA as a consumer to EGLStream .">
+   cudaEGLStreamConsumerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" shape="rect" title="Acquire an image frame from the EGLStream with CUDA as a consumer.">
+   cudaEGLStreamConsumerAcquireFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" shape="rect" title="Releases the last frame acquired from the EGLStream.">
+   cudaEGLStreamConsumerReleaseFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g3f59b85a292d59c19c8b64b8ade8a658" shape="rect" target="_blank">
+   cuEGLStreamConsumerConnect
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g4e2d79eb6bcb9eca4f6e3f13eb3f7fc3" name="group__CUDART__EGL_1g4e2d79eb6bcb9eca4f6e3f13eb3f7fc3" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamConsumerConnectWithFlags (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  , EGLStreamKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglStream
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ Connect CUDA to EGLStream as a consumer with given flags.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Pointer to the returned connection handle
+ <span class="keyword keyword apiItemName">
+  eglStream
+ </span>
+ - EGLStreamKHR handle
+ <span class="keyword keyword apiItemName">
+  flags
+ </span>
+ - Flags denote intended location - system or video.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Connect CUDA as a consumer to EGLStreamKHR specified by
+  stream
+  with specified
+  flags
+  defined by
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g1b8600d3bc8514e841e093921c10ebe4" shape="rect">
+   cudaEglResourceLocationFlags
+  </a>
+  .
+ </p>
+ <p class="p">
+  The flags specify whether the consumer wants to access frames from system memory or video memory. Default is
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg1b8600d3bc8514e841e093921c10ebe4f3361b86e6f88245861cac54cb58f58e" shape="rect">
+   cudaEglResourceLocationVidmem
+  </a>
+  .
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" shape="rect" title="Disconnect CUDA as a consumer to EGLStream .">
+   cudaEGLStreamConsumerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" shape="rect" title="Acquire an image frame from the EGLStream with CUDA as a consumer.">
+   cudaEGLStreamConsumerAcquireFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" shape="rect" title="Releases the last frame acquired from the EGLStream.">
+   cudaEGLStreamConsumerReleaseFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g7be3b064ea600a7bac4906e5d61ba4b7" shape="rect" target="_blank">
+   cuEGLStreamConsumerConnectWithFlags
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" name="group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamConsumerDisconnect (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  )
+ </span>
+ Disconnect CUDA as a consumer to EGLStream .
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Conection to disconnect.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Disconnect CUDA as a consumer to EGLStreamKHR.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g7993b0e3802420547e3f403549be65a1" shape="rect" title="Connect CUDA to EGLStream as a consumer.">
+   cudaEGLStreamConsumerConnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" shape="rect" title="Acquire an image frame from the EGLStream with CUDA as a consumer.">
+   cudaEGLStreamConsumerAcquireFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" shape="rect" title="Releases the last frame acquired from the EGLStream.">
+   cudaEGLStreamConsumerReleaseFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g3ab15cff9be3b25447714101ecda6a61" shape="rect" target="_blank">
+   cuEGLStreamConsumerDisconnect
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" name="group__CUDART__EGL_1g51b3df89a3e0eb8baad7449674797467" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamConsumerReleaseFrame (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect" title="">
+   cudaGraphicsResource_t
+  </a>
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pCudaResource
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  )
+ </span>
+ Releases the last frame acquired from the EGLStream.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Connection on which to release
+ <span class="keyword keyword apiItemName">
+  pCudaResource
+ </span>
+ - CUDA resource whose corresponding frame is to be released
+ <span class="keyword keyword apiItemName">
+  pStream
+ </span>
+ - CUDA stream on which release will be done.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Release the acquired image frame specified by
+  pCudaResource
+  to EGLStreamKHR.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g7993b0e3802420547e3f403549be65a1" shape="rect" title="Connect CUDA to EGLStream as a consumer.">
+   cudaEGLStreamConsumerConnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gb2ef252e72ad2419506f3cf305753c6a" shape="rect" title="Disconnect CUDA as a consumer to EGLStream .">
+   cudaEGLStreamConsumerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g83dd1bfea48c093d3f0b247754970f58" shape="rect" title="Acquire an image frame from the EGLStream with CUDA as a consumer.">
+   cudaEGLStreamConsumerAcquireFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g4dadfefc718210e91c8f44f6a8e4b233" shape="rect" target="_blank">
+   cuEGLStreamConsumerReleaseFrame
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1gf35966d50689874614985f688a888c03" name="group__CUDART__EGL_1gf35966d50689874614985f688a888c03" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamProducerConnect (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  , EGLStreamKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglStream
+  </span>
+  , EGLint
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   width
+  </span>
+  , EGLint
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   height
+  </span>
+  )
+ </span>
+ Connect CUDA to EGLStream as a producer.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Pointer to the returned connection handle
+ <span class="keyword keyword apiItemName">
+  eglStream
+ </span>
+ - EGLStreamKHR handle
+ <span class="keyword keyword apiItemName">
+  width
+ </span>
+ - width of the image to be submitted to the stream
+ <span class="keyword keyword apiItemName">
+  height
+ </span>
+ - height of the image to be submitted to the stream
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Connect CUDA as a producer to EGLStreamKHR specified by
+  stream
+  .
+ </p>
+ <p class="p">
+  The EGLStreamKHR is an EGL object that transfers a sequence of image frames from one API to another.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g381335525d81342c29c0b62cc4f64dc9" shape="rect" title="Disconnect CUDA as a producer to EGLStream .">
+   cudaEGLStreamProducerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g5c84a3778586dda401df00052ae5753b" shape="rect" title="Present a CUDA eglFrame to the EGLStream with CUDA as a producer.">
+   cudaEGLStreamProducerPresentFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g631d1080365d32a35a19b87584725748" shape="rect" title="Return the CUDA eglFrame to the EGLStream last released by the consumer.">
+   cudaEGLStreamProducerReturnFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g5d181803d994a06f1bf9b05f52757bef" shape="rect" target="_blank">
+   cuEGLStreamProducerConnect
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g381335525d81342c29c0b62cc4f64dc9" name="group__CUDART__EGL_1g381335525d81342c29c0b62cc4f64dc9" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamProducerDisconnect (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  )
+ </span>
+ Disconnect CUDA as a producer to EGLStream .
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Conection to disconnect.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Disconnect CUDA as a producer to EGLStreamKHR.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gf35966d50689874614985f688a888c03" shape="rect" title="Connect CUDA to EGLStream as a producer.">
+   cudaEGLStreamProducerConnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g5c84a3778586dda401df00052ae5753b" shape="rect" title="Present a CUDA eglFrame to the EGLStream with CUDA as a producer.">
+   cudaEGLStreamProducerPresentFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g631d1080365d32a35a19b87584725748" shape="rect" title="Return the CUDA eglFrame to the EGLStream last released by the consumer.">
+   cudaEGLStreamProducerReturnFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1gbdc9664bfb17dd3fa1e0a3ca68a8cafd" shape="rect" target="_blank">
+   cuEGLStreamProducerDisconnect
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g5c84a3778586dda401df00052ae5753b" name="group__CUDART__EGL_1g5c84a3778586dda401df00052ae5753b" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamProducerPresentFrame (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect" title="">
+   cudaEglFrame
+  </a>
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglframe
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  )
+ </span>
+ Present a CUDA eglFrame to the EGLStream with CUDA as a producer.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Connection on which to present the CUDA array
+ <span class="keyword keyword apiItemName">
+  eglframe
+ </span>
+ - CUDA Eglstream Proucer Frame handle to be sent to the consumer over EglStream.
+ <span class="keyword keyword apiItemName">
+  pStream
+ </span>
+ - CUDA stream on which to present the frame.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  The
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect">
+   cudaEglFrame
+  </a>
+  is defined as:
+ </p>
+ <pre xml:space="preserve">â typedef struct cudaEglFrame_st {
+           union {
+               <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gaf8b3ba752727d996074a71ee997ce68" shape="rect">cudaArray_t</a>            pArray[<a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g804d292b8842ce5fb4e77d71b979615f" shape="rect">CUDA_EGL_MAX_PLANES</a>];
+               struct <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr" shape="rect">cudaPitchedPtr</a>  pPitch[<a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g804d292b8842ce5fb4e77d71b979615f" shape="rect">CUDA_EGL_MAX_PLANES</a>];
+           } frame;
+           <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc" shape="rect">cudaEglPlaneDesc</a> planeDesc[<a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g804d292b8842ce5fb4e77d71b979615f" shape="rect">CUDA_EGL_MAX_PLANES</a>];
+           unsigned int planeCount;
+           <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe68551b4eb6dfd6964e674c89d210b1" shape="rect">cudaEglFrameType</a> frameType;
+           <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gb6ba961c95f712b86ed7a52e73970a69" shape="rect">cudaEglColorFormat</a> eglColorFormat;
+       } <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect">cudaEglFrame</a>;</pre>
+ <p class="p">
+  For
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect">
+   cudaEglFrame
+  </a>
+  of type
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ggbe68551b4eb6dfd6964e674c89d210b1a5abdfca5372c8f235c4a32aa73a1c23" shape="rect">
+   cudaEglFrameTypePitch
+  </a>
+  , the application may present sub-region of a memory allocation. In that case,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr_16a1476538c1f4bf7b9cad0304b91d5cf" shape="rect">
+   cudaPitchedPtr::ptr
+  </a>
+  will specify the start address of the sub-region in the allocation and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc" shape="rect">
+   cudaEglPlaneDesc
+  </a>
+  will specify the dimensions of the sub-region.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gf35966d50689874614985f688a888c03" shape="rect" title="Connect CUDA to EGLStream as a producer.">
+   cudaEGLStreamProducerConnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g381335525d81342c29c0b62cc4f64dc9" shape="rect" title="Disconnect CUDA as a producer to EGLStream .">
+   cudaEGLStreamProducerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g631d1080365d32a35a19b87584725748" shape="rect" title="Return the CUDA eglFrame to the EGLStream last released by the consumer.">
+   cudaEGLStreamProducerReturnFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g60dcaadeabcbaedb4a271d529306687b" shape="rect" target="_blank">
+   cuEGLStreamProducerPresentFrame
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g631d1080365d32a35a19b87584725748" name="group__CUDART__EGL_1g631d1080365d32a35a19b87584725748" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEGLStreamProducerReturnFrame (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g8d98c18806b2361aeb23e07a3bda96da" shape="rect" title="">
+   cudaEglStreamConnection
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   conn
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect" title="">
+   cudaEglFrame
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglframe
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ge15d9c8b7a240312b533d6122558085a" shape="rect" title="">
+   cudaStream_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pStream
+  </span>
+  )
+ </span>
+ Return the CUDA eglFrame to the EGLStream last released by the consumer.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  conn
+ </span>
+ - Connection on which to present the CUDA array
+ <span class="keyword keyword apiItemName">
+  eglframe
+ </span>
+ - CUDA Eglstream Proucer Frame handle returned from the consumer over EglStream.
+ <span class="keyword keyword apiItemName">
+  pStream
+ </span>
+ - CUDA stream on which to return the frame.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00384ea7f1214c348f64f565ca860933e5a5" shape="rect">
+   cudaErrorLaunchTimeout
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  This API can potentially return cudaErrorLaunchTimeout if the consumer has not returned a frame to EGL stream. If timeout
+                                 is returned the application can retry.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gf35966d50689874614985f688a888c03" shape="rect" title="Connect CUDA to EGLStream as a producer.">
+   cudaEGLStreamProducerConnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g381335525d81342c29c0b62cc4f64dc9" shape="rect" title="Disconnect CUDA as a producer to EGLStream .">
+   cudaEGLStreamProducerDisconnect
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1g5c84a3778586dda401df00052ae5753b" shape="rect" title="Present a CUDA eglFrame to the EGLStream with CUDA as a producer.">
+   cudaEGLStreamProducerPresentFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g70c84d9d01f343fc07cd632f9cfc3a06" shape="rect" target="_blank">
+   cuEGLStreamProducerReturnFrame
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1gd9fcc4b06f734887d27aae6f0a57fa95" name="group__CUDART__EGL_1gd9fcc4b06f734887d27aae6f0a57fa95" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaEventCreateFromEGLSync (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gea2f543a9fc0e52fe4ae712920fd1247" shape="rect" title="">
+   cudaEvent_t
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   phEvent
+  </span>
+  , EGLSyncKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglSync
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ Creates an event from EGLSync object.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  phEvent
+ </span>
+ - Returns newly created event
+ <span class="keyword keyword apiItemName">
+  eglSync
+ </span>
+ - Opaque handle to EGLSync object
+ <span class="keyword keyword apiItemName">
+  flags
+ </span>
+ - Event creation flags
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038ce7993a88ecf2c57b8102d55d997a18c" shape="rect">
+   cudaErrorInitializationError
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038099def426efea2b2366d8d7ad09f974a" shape="rect">
+   cudaErrorLaunchFailure
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038f210f50ae7f17f655e0504929606add9" shape="rect">
+   cudaErrorMemoryAllocation
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Creates an event *phEvent from an EGLSyncKHR eglSync with the flages specified via
+  flags
+  . Valid flags include:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g6f8811acffcc133b5e4a50de6646d18e" shape="rect">
+     cudaEventDefault
+    </a>
+    : Default event creation flag.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g26509a522be9d449aa7c8c279612452d" shape="rect">
+     cudaEventBlockingSync
+    </a>
+    : Specifies that the created event should use blocking synchronization. A CPU thread that uses
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT_1g949aa42b30ae9e622f6ba0787129ff22" shape="rect" title="Waits for an event to complete.">
+     cudaEventSynchronize()
+    </a>
+    to wait on an event created with this flag will block until the event has actually been completed.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT_1gf4fcb74343aa689f4159791967868446" shape="rect" title="Records an event.">
+   cudaEventRecord
+  </a>
+  and TimingData are not supported for events created from EGLSync.
+ </p>
+ <p class="p">
+  The EGLSyncKHR is an opaque handle to an EGL sync object. typedef void* EGLSyncKHR
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT_1g2bf738909b4a059023537eaa29d8a5b7" shape="rect" title="Queries an event's status.">
+   cudaEventQuery
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT_1g949aa42b30ae9e622f6ba0787129ff22" shape="rect" title="Waits for an event to complete.">
+   cudaEventSynchronize
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT_1g2cb6baa0830a1cd0bd957bfd8705045b" shape="rect" title="Destroys an event object.">
+   cudaEventDestroy
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1g8813b57a44bdd30177666110530d1dcf" name="group__CUDART__EGL_1g8813b57a44bdd30177666110530d1dcf" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaGraphicsEGLRegisterImage (  cudaGraphicsResource**
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   pCudaResource
+  </span>
+  , EGLImageKHR
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   image
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   flags
+  </span>
+  )
+ </span>
+ Registers an EGL image.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  pCudaResource
+ </span>
+ - Pointer to the returned object handle
+ <span class="keyword keyword apiItemName">
+  image
+ </span>
+ - An EGLImageKHR image which can be used to create target resource.
+ <span class="keyword keyword apiItemName">
+  flags
+ </span>
+ - Map flags
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038c4673247aee4d1ab8d07871f376e0273" shape="rect">
+   cudaErrorInvalidResourceHandle
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Registers the EGLImageKHR specified by
+  image
+  for access by CUDA. A handle to the registered object is returned as
+  pCudaResource
+  . Additional Mapping/Unmapping is not required for the registered resource and
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gdd6215655a241c047d6d4939e242202a" shape="rect" title="Get an eglFrame through which to access a registered EGL graphics resource.">
+   cudaGraphicsResourceGetMappedEglFrame
+  </a>
+  can be directly called on the
+  pCudaResource
+  .
+ </p>
+ <p class="p">
+  The application will be responsible for synchronizing access to shared objects. The application must ensure that any pending
+                                 operation which access the objects have completed before passing control to CUDA. This may be accomplished by issuing and
+                                 waiting for glFinish command on all GLcontexts (for OpenGL and likewise for other APIs). The application will be also responsible
+                                 for ensuring that any pending operation on the registered CUDA resource has completed prior to executing subsequent commands
+                                 in other APIs accesing the same memory objects. This can be accomplished by calling cuCtxSynchronize or cuEventSynchronize
+                                 (preferably).
+ </p>
+ <p class="p">
+  The surface's intended usage is specified using
+  flags
+  , as follows:
+ </p>
+ <ul class="ul">
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ggd17cc29b28205bbe32ac575eba16c277540ff4c59c6782d5bd5a5c7d1534df19" shape="rect">
+     cudaGraphicsRegisterFlagsNone
+    </a>
+    : Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and
+                                          written to by CUDA. This is the default value.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ggd17cc29b28205bbe32ac575eba16c277f0d4f60ed6cd732dce5522dcc6252a06" shape="rect">
+     cudaGraphicsRegisterFlagsReadOnly
+    </a>
+    : Specifies that CUDA will not write to this resource.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1ggd17cc29b28205bbe32ac575eba16c2778dccc1b266c4fb93d52219bab1fb6fb0" shape="rect">
+     cudaGraphicsRegisterFlagsWriteDiscard
+    </a>
+    : Specifies that CUDA will not read from this resource and will write over the entire contents of the resource, so none of
+                                          the data previously stored in the resource will be preserved.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  The EGLImageKHR is an object which can be used to create EGLImage target resource. It is defined as a void pointer. typedef
+                                 void* EGLImageKHR
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1gc65d1f2900086747de1e57301d709940" shape="rect" title="Unregisters a graphics resource for access by CUDA.">
+   cudaGraphicsUnregisterResource
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EGL.html#group__CUDART__EGL_1gdd6215655a241c047d6d4939e242202a" shape="rect" title="Get an eglFrame through which to access a registered EGL graphics resource.">
+   cudaGraphicsResourceGetMappedEglFrame
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1g9f9b026d175238be6f6e79048d6879c5" shape="rect" target="_blank">
+   cuGraphicsEGLRegisterImage
+  </a>
+ </p>
+ <a id="group__CUDART__EGL_1gdd6215655a241c047d6d4939e242202a" name="group__CUDART__EGL_1gdd6215655a241c047d6d4939e242202a" shape="rect">
+  <!-- -->
+ </a>
+ <span>
+  <span class="keyword keyword apiItemName">
+   __host__
+  </span>
+  â
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf599e5b8b829ce7db0f5216928f6ecb6" shape="rect" title="">
+   cudaError_t
+  </a>
+  cudaGraphicsResourceGetMappedEglFrame (
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect" title="">
+   cudaEglFrame
+  </a>
+  *
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   eglFrame
+  </span>
+  ,
+  <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gf58dd8d3c7a65714ff7f5459adbf7e6f" shape="rect" title="">
+   cudaGraphicsResource_t
+  </a>
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   resource
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   index
+  </span>
+  , unsigned int
+  <span>
+   Â
+  </span>
+  <span class="keyword keyword apiItemName">
+   mipLevel
+  </span>
+  )
+ </span>
+ Get an eglFrame through which to access a registered EGL graphics resource.
+ <h6 class="parameter_header">
+  Parameters
+ </h6>
+ <span class="keyword keyword apiItemName">
+  eglFrame
+ </span>
+ - Returned eglFrame.
+ <span class="keyword keyword apiItemName">
+  resource
+ </span>
+ - Registered resource to access.
+ <span class="keyword keyword apiItemName">
+  index
+ </span>
+ - Index for cubemap surfaces.
+ <span class="keyword keyword apiItemName">
+  mipLevel
+ </span>
+ - Mipmap level for the subresource to access.
+ <h6 class="return_header">
+  Returns
+ </h6>
+ <p class="return">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e0038e355f04607d824883b4a50662830d591" shape="rect">
+   cudaSuccess
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00383e8aef5398ee38e28ed41e357b48917c" shape="rect">
+   cudaErrorInvalidValue
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gg3f51e3575c2178246db0a94a430e00382e491daacef266c7b3e3c1e140a6133c" shape="rect">
+   cudaErrorUnknown
+  </a>
+ </p>
+ <h6 class="description_header">
+  Description
+ </h6>
+ <p>
+  Returns in
+  *eglFrame
+  an eglFrame pointer through which the registered graphics resource
+  resource
+  may be accessed. This API can only be called for EGL graphics resources.
+ </p>
+ <p class="p">
+  The
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect">
+   cudaEglFrame
+  </a>
+  is defined as
+ </p>
+ <pre xml:space="preserve">â typedef struct cudaEglFrame_st {
+           union {
+               <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gaf8b3ba752727d996074a71ee997ce68" shape="rect">cudaArray_t</a>             pArray[<a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g804d292b8842ce5fb4e77d71b979615f" shape="rect">CUDA_EGL_MAX_PLANES</a>];
+               struct <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaPitchedPtr.html#structcudaPitchedPtr" shape="rect">cudaPitchedPtr</a>   pPitch[<a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g804d292b8842ce5fb4e77d71b979615f" shape="rect">CUDA_EGL_MAX_PLANES</a>];
+           } frame;
+           <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc" shape="rect">cudaEglPlaneDesc</a> planeDesc[<a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g804d292b8842ce5fb4e77d71b979615f" shape="rect">CUDA_EGL_MAX_PLANES</a>];
+           unsigned int planeCount;
+           <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gbe68551b4eb6dfd6964e674c89d210b1" shape="rect">cudaEglFrameType</a> frameType;
+           <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1gb6ba961c95f712b86ed7a52e73970a69" shape="rect">cudaEglColorFormat</a> eglColorFormat;
+       } <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglFrame.html#structcudaEglFrame" shape="rect">cudaEglFrame</a>;</pre>
+ <span class="notetitle">
+  Note:
+ </span>
+ <p class="p">
+  Note that in case of multiplanar
+  *eglFrame
+  , pitch of only first plane (unsigned int
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaEglPlaneDesc.html#structcudaEglPlaneDesc_110581a21c1ca7233e2a7749252c08193" shape="rect">
+   cudaEglPlaneDesc::pitch
+  </a>
+  ) is to be considered by the application.
+ </p>
+ <p class="p apiDesc_subtitle">
+  See also:
+ </p>
+ <p class="p see_subsection">
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1g0dd6b5f024dfdcff5c28a08ef9958031" shape="rect" title="Get an array through which to access a subresource of a mapped graphics resource.">
+   cudaGraphicsSubResourceGetMappedArray
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__INTEROP.html#group__CUDART__INTEROP_1ga36881081c8deb4df25c256158e1ac99" shape="rect" title="Get an device pointer through which to access a mapped graphics resource.">
+   cudaGraphicsResourceGetMappedPointer
+  </a>
+  ,
+  <a class="xref" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__EGL.html#group__CUDA__EGL_1ge1e57193ad1dbf554af60d5b2d096ede" shape="rect" target="_blank">
+   cuGraphicsResourceGetMappedEglFrame
+  </a>
+ </p>
+ <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+  Privacy Policy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+  Manage My Privacy
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+  Do Not Sell or Share My Data
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+  Terms of Service
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+  Accessibility
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+  Corporate Policies
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+  Product Security
+ </a>
+ |
+ <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+  Contact
+ </a>
+ Copyright Â© 2007-2024 NVIDIA Corporation
+</body>
+</body></html>

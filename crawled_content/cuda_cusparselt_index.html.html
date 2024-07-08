@@ -1,0 +1,1301 @@
+<html><head><title>cuSPARSELt: A High-Performance CUDA Library for Sparse Matrix-Matrix Multiplication — NVIDIA cuSPARSELt 0.6.1 documentation</title></head><body><body class="wy-body-for-nav">
+ <a class="icon icon-home" href="https://docs.nvidia.com/cuda/cusparselt/index.html">
+  NVIDIA cuSPARSELt
+ </a>
+ 0.6.1
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html">
+    Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-6-1">
+      cuSPARSELt v0.6.1
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-6-0">
+      cuSPARSELt v0.6.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-5-2">
+      cuSPARSELt v0.5.2
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-5-0">
+      cuSPARSELt v0.5.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-4-0">
+      cuSPARSELt v0.4.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-3-0">
+      cuSPARSELt v0.3.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-2-0">
+      cuSPARSELt v0.2.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-1-0">
+      cuSPARSELt v0.1.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-0-1">
+      cuSPARSELt v0.0.1
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html">
+    Getting Started
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#cusparselt-workflow">
+      cuSPARSELt Workflow
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#installation-and-compilation">
+      Installation and Compilation
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#prerequisites">
+      Prerequisites
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#linux">
+        Linux
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#windows">
+        Windows
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#code-example">
+      Code Example
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html">
+    cuSPARSELt Data Types
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#opaque-data-structures">
+      Opaque Data Structures
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparselthandle-t">
+        <span class="pre">
+         cusparseLtHandle_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatdescriptor-t">
+        <span class="pre">
+         cusparseLtMatDescriptor_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatmuldescriptor-t">
+        <span class="pre">
+         cusparseLtMatmulDescriptor_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatmulalgselection-t">
+        <span class="pre">
+         cusparseLtMatmulAlgSelection_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatmulplan-t">
+        <span class="pre">
+         cusparseLtMatmulPlan_t
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#enumerators">
+      Enumerators
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltsparsity-t">
+        <span class="pre">
+         cusparseLtSparsity_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparsecomputetype">
+        <span class="pre">
+         cusparseComputeType
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatdescattribute-t">
+        <span class="pre">
+         cusparseLtMatDescAttribute_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatmuldescattribute-t">
+        <span class="pre">
+         cusparseLtMatmulDescAttribute_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatmulalg-t">
+        <span class="pre">
+         cusparseLtMatmulAlg_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltmatmulalgattribute-t">
+        <span class="pre">
+         cusparseLtMatmulAlgAttribute_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltsplitkmode-t">
+        <span class="pre">
+         cusparseLtSplitKMode_t
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#cusparseltprunealg-t">
+        <span class="pre">
+         cusparseLtPruneAlg_t
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html">
+    cuSPARSELt Functions
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#library-management-functions">
+      Library Management Functions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltinit">
+        <span class="pre">
+         cusparseLtInit
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltdestroy">
+        <span class="pre">
+         cusparseLtDestroy
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltgetversion">
+        <span class="pre">
+         cusparseLtGetVersion
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltgetproperty">
+        <span class="pre">
+         cusparseLtGetProperty
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matrix-descriptor-functions">
+      Matrix Descriptor Functions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltdensedescriptorinit">
+        <span class="pre">
+         cusparseLtDenseDescriptorInit
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltstructureddescriptorinit">
+        <span class="pre">
+         cusparseLtStructuredDescriptorInit
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatdescriptordestroy">
+        <span class="pre">
+         cusparseLtMatDescriptorDestroy
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatdescsetattribute">
+        <span class="pre">
+         cusparseLtMatDescSetAttribute
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatdescgetattribute">
+        <span class="pre">
+         cusparseLtMatDescGetAttribute
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matmul-descriptor-functions">
+      Matmul Descriptor Functions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmuldescriptorinit">
+        <span class="pre">
+         cusparseLtMatmulDescriptorInit
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmuldescsetattribute">
+        <span class="pre">
+         cusparseLtMatmulDescSetAttribute
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmuldescgetattribute">
+        <span class="pre">
+         cusparseLtMatmulDescGetAttribute
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matmul-algorithm-functions">
+      Matmul Algorithm Functions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulalgselectioninit">
+        <span class="pre">
+         cusparseLtMatmulAlgSelectionInit
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulalgsetattribute">
+        <span class="pre">
+         cusparseLtMatmulAlgSetAttribute
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulalggetattribute">
+        <span class="pre">
+         cusparseLtMatmulAlgGetAttribute
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matmul-functions">
+      Matmul Functions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulgetworkspace">
+        <span class="pre">
+         cusparseLtMatmulGetWorkspace
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulplaninit">
+        <span class="pre">
+         cusparseLtMatmulPlanInit
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulplandestroy">
+        <span class="pre">
+         cusparseLtMatmulPlanDestroy
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmul">
+        <span class="pre">
+         cusparseLtMatmul
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulsearch">
+        <span class="pre">
+         cusparseLtMatmulSearch
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#helper-functions">
+      Helper Functions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmaprune">
+        <span class="pre">
+         cusparseLtSpMMAPrune
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmaprune2-deprecated">
+        <span class="pre">
+         cusparseLtSpMMAPrune2
+        </span>
+        <span class="pre">
+         [DEPRECATED]
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmaprunecheck">
+        <span class="pre">
+         cusparseLtSpMMAPruneCheck
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmaprunecheck2-deprecated">
+        <span class="pre">
+         cusparseLtSpMMAPruneCheck2
+        </span>
+        <span class="pre">
+         [DEPRECATED]
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmacompressedsize">
+        <span class="pre">
+         cusparseLtSpMMACompressedSize
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmacompressedsize2-deprecated">
+        <span class="pre">
+         cusparseLtSpMMACompressedSize2
+        </span>
+        <span class="pre">
+         [DEPRECATED]
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmacompress">
+        <span class="pre">
+         cusparseLtSpMMACompress
+        </span>
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltspmmacompress2-deprecated">
+        <span class="pre">
+         cusparseLtSpMMACompress2
+        </span>
+        <span class="pre">
+         [DEPRECATED]
+        </span>
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/logging.html">
+    cuSPARSELt Logging Features
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/license.html">
+    Software License Agreement
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cusparselt/index.html">
+  NVIDIA cuSPARSELt
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li class="breadcrumb-item active">
+   cuSPARSELt: A High-Performance CUDA Library for Sparse Matrix-Matrix Multiplication
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <a href="https://docs.nvidia.com/cuda/cusparselt/_sources/index.rst.txt" rel="nofollow">
+    View page source
+   </a>
+  </li>
+ </ul>
+ <h1>
+  cuSPARSELt: A High-Performance CUDA Library for Sparse Matrix-Matrix Multiplication
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cusparselt/index.html#cusparselt-a-high-performance-cuda-library-for-sparse-matrix-matrix-multiplication" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h1>
+ <p>
+  NVIDIA cuSPARSELt
+  is a high-performance CUDA library dedicated to general matrix-matrix operations in which at least one operand is a sparse matrix:
+ </p>
+ <p>
+  where
+  refers to in-place operations such as transpose/non-transpose, and
+  are scalars.
+ </p>
+ <p>
+  The
+  cuSPARSELt APIs
+  allow flexibility in the algorithm/operation selection, epilogue, and matrix characteristics, including memory layout, alignment, and data types.
+ </p>
+ <p>
+  Download:
+  <a class="reference external" href="https://developer.nvidia.com/cusparselt/downloads">
+   developer.nvidia.com/cusparselt/downloads
+  </a>
+ </p>
+ <p>
+  Provide Feedback:
+  <a class="reference external" href="mailto:Math-Libs-Feedback%40nvidia.com?subject=cuSPARSELt-Feedback">
+   Math-Libs-Feedback
+   <span>
+    @
+   </span>
+   nvidia
+   <span>
+    .
+   </span>
+   com
+  </a>
+ </p>
+ <p>
+  Examples
+  :
+  <a class="reference external" href="https://github.com/NVIDIA/CUDALibrarySamples/tree/master/cuSPARSELt/matmul">
+   cuSPARSELt Example 1
+  </a>
+  ,
+  <a class="reference external" href="https://github.com/NVIDIA/CUDALibrarySamples/tree/master/cuSPARSELt/matmul_advanced">
+   cuSPARSELt Example 2
+  </a>
+ </p>
+ <p>
+  Blog post
+  :
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://developer.nvidia.com/blog/exploiting-ampere-structured-sparsity-with-cusparselt/">
+     Exploiting NVIDIA Ampere Structured Sparsity with cuSPARSELt
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://developer.nvidia.com/blog/structured-sparsity-in-the-nvidia-ampere-architecture-and-applications-in-search-engines/">
+     Structured Sparsity in the NVIDIA Ampere Architecture and Applications in Search Engines
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31552/">
+     Making the Most of Structured Sparsity in the NVIDIA Ampere Architecture
+    </a>
+   </p>
+  </li>
+ </ul>
+ <h2>
+  Key Features
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cusparselt/index.html#key-features" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h2>
+ <ul>
+  <li>
+   <p>
+    NVIDIA Sparse MMA tensor core
+    support
+   </p>
+  </li>
+  <li>
+   <p>
+    Mixed-precision computation support:
+   </p>
+   <table class="docutils align-default">
+    <tr class="row-odd">
+     <th class="head">
+      <p>
+       Input A/B
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Input C
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Output D
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Compute
+      </p>
+     </th>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td rowspan="2">
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="4">
+      <p>
+       <span class="pre">
+        INT8
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        INT8
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        INT8
+       </span>
+      </p>
+     </td>
+     <td rowspan="4">
+      <p>
+       <span class="pre">
+        INT32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        INT32
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        INT32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="5">
+      <p>
+       <span class="pre">
+        E4M3
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        E4M3
+       </span>
+      </p>
+     </td>
+     <td rowspan="5">
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        E4M3
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td rowspan="5">
+      <p>
+       <span class="pre">
+        E5M2
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        E5M2
+       </span>
+      </p>
+     </td>
+     <td rowspan="5">
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        E5M2
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        BF16
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+     <td>
+      <p>
+       <span class="pre">
+        FP32
+       </span>
+      </p>
+     </td>
+    </tr>
+   </table>
+  </li>
+  <li>
+   <p>
+    Matrix pruning and compression functionalities
+   </p>
+  </li>
+  <li>
+   <p>
+    Activation functions, bias vector, and output scaling
+   </p>
+  </li>
+  <li>
+   <p>
+    Batched computation (multiple matrices in a single run)
+   </p>
+  </li>
+  <li>
+   <p>
+    GEMM Split-K mode
+   </p>
+  </li>
+  <li>
+   <p>
+    Auto-tuning functionality (see
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#cusparseltmatmulsearch-label">
+     <span class="std std-ref">
+      cusparseLtMatmulSearch()
+     </span>
+    </a>
+    )
+   </p>
+  </li>
+  <li>
+   <p>
+    NVTX ranging and Logging functionalities
+   </p>
+  </li>
+ </ul>
+ <h2>
+  Support
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cusparselt/index.html#support" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h2>
+ <ul class="simple">
+  <li>
+   <p>
+    Supported SM Architectures
+    :
+    <span class="pre">
+     SM
+    </span>
+    <span class="pre">
+     8.0
+    </span>
+    ,
+    <span class="pre">
+     SM
+    </span>
+    <span class="pre">
+     8.6
+    </span>
+    ,
+    <span class="pre">
+     SM
+    </span>
+    <span class="pre">
+     8.9
+    </span>
+    ,
+    <span class="pre">
+     SM
+    </span>
+    <span class="pre">
+     9.0
+    </span>
+   </p>
+  </li>
+  <li>
+   <p>
+    Supported CPU architectures and operating systems
+    :
+   </p>
+  </li>
+ </ul>
+ <table class="docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     OS
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     CPU archs
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     <span class="pre">
+      Windows
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span class="pre">
+      x86_64
+     </span>
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     <span class="pre">
+      Linux
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span class="pre">
+      x86_64
+     </span>
+     ,
+     <span class="pre">
+      Arm64
+     </span>
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2>
+  Index
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cusparselt/index.html#index" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h2>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html">
+    Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-6-1">
+      cuSPARSELt v0.6.1
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-6-0">
+      cuSPARSELt v0.6.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-5-2">
+      cuSPARSELt v0.5.2
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-5-0">
+      cuSPARSELt v0.5.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-4-0">
+      cuSPARSELt v0.4.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-3-0">
+      cuSPARSELt v0.3.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-2-0">
+      cuSPARSELt v0.2.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-1-0">
+      cuSPARSELt v0.1.0
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html#cusparselt-v0-0-1">
+      cuSPARSELt v0.0.1
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html">
+    Getting Started
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#cusparselt-workflow">
+      cuSPARSELt Workflow
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#installation-and-compilation">
+      Installation and Compilation
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#prerequisites">
+      Prerequisites
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/getting_started.html#code-example">
+      Code Example
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html">
+    cuSPARSELt Data Types
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#opaque-data-structures">
+      Opaque Data Structures
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/types.html#enumerators">
+      Enumerators
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html">
+    cuSPARSELt Functions
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#library-management-functions">
+      Library Management Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matrix-descriptor-functions">
+      Matrix Descriptor Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matmul-descriptor-functions">
+      Matmul Descriptor Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matmul-algorithm-functions">
+      Matmul Algorithm Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#matmul-functions">
+      Matmul Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/functions.html#helper-functions">
+      Helper Functions
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/logging.html">
+    cuSPARSELt Logging Features
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cusparselt/license.html">
+    Software License Agreement
+   </a>
+  </li>
+ </ul>
+ <a accesskey="n" class="btn btn-neutral float-right" href="https://docs.nvidia.com/cuda/cusparselt/release_notes.html" rel="next" title="Release Notes">
+  Next
+ </a>
+ <p style="color: gray;">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" style="color: inherit;" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" style="color: inherit;" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" style="color: inherit;" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" style="color: inherit;" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" style="color: inherit;" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" style="color: inherit;" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" style="color: inherit;" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" style="color: inherit;" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2021 - 2024, NVIDIA Corporation &amp; affiliates.
+ </p>
+</body>
+</body></html>

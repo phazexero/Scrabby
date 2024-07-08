@@ -1,0 +1,652 @@
+<html><head><title>Contents â CUDA-GDB 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/cuda-gdb/contents.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html">
+    1. Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#release-notes">
+    2. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#getting-started">
+    3. Getting Started
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#cuda-gdb-extensions">
+    4. CUDA-GDB Extensions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#kernel-focus">
+    5. Kernel Focus
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#program-execution">
+    6. Program Execution
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#breakpoints-and-watchpoints">
+    7. Breakpoints and Watchpoints
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#inspecting-program-state">
+    8. Inspecting Program State
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#event-notifications">
+    9. Event Notifications
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#automatic-error-checking">
+    10. Automatic Error Checking
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#walk-through-examples">
+    11. Walk-Through Examples
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#tips-and-tricks">
+    12. Tips and Tricks
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#supported-platforms">
+    13. Supported Platforms
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#common-issues-on-supported-operating-systems">
+    14. Common Issues on Supported Operating Systems
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#known-issues">
+    15. Known Issues
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#notices">
+    16. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cuda-gdb/contents.html">
+  CUDA-GDB
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Contents
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/cuda-gdb.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Contents
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-gdb/contents.html#contents" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html">
+    1. Introduction
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#what-is-cuda-gdb">
+      1.1. What is CUDA-GDB?
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#supported-features">
+      1.2. Supported Features
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#about-this-document">
+      1.3. About This Document
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#release-notes">
+    2. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#getting-started">
+    3. Getting Started
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#setting-up-the-debugger-environment">
+      3.1. Setting Up the Debugger Environment
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#temporary-directory">
+        3.1.1. Temporary Directory
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#using-the-cuda-gdb-debugger-on-jetson-and-drive-tegra-devices">
+        3.1.2. Using the CUDA-GDB debugger on Jetson and Drive Tegra devices
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#compiling-the-application">
+      3.2. Compiling the Application
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#debug-compilation">
+        3.2.1. Debug Compilation
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#compilation-with-linenumber-information">
+        3.2.2. Compilation With Linenumber Information
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#compiling-for-specific-gpu-architectures">
+        3.2.3. Compiling For Specific GPU architectures
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#using-the-debugger">
+      3.3. Using the Debugger
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#single-gpu-debugging-with-the-desktop-manager-running">
+        3.3.1. Single-GPU Debugging with the Desktop Manager Running
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#multi-gpu-debugging">
+        3.3.2. Multi-GPU Debugging
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#remote-debugging">
+        3.3.3. Remote Debugging
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#multiple-debuggers">
+        3.3.4. Multiple Debuggers
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#attaching-detaching">
+        3.3.5. Attaching/Detaching
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#cuda-gdb-extensions">
+    4. CUDA-GDB Extensions
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#command-naming-convention">
+      4.1. Command Naming Convention
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#getting-help">
+      4.2. Getting Help
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#initialization-file">
+      4.3. Initialization File
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#gui-integration">
+      4.4. GUI Integration
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#gpu-core-dump-support">
+      4.5. GPU core dump support
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#kernel-focus">
+    5. Kernel Focus
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#software-coordinates-vs-hardware-coordinates">
+      5.1. Software Coordinates vs. Hardware Coordinates
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#current-focus">
+      5.2. Current Focus
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#switching-focus">
+      5.3. Switching Focus
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#program-execution">
+    6. Program Execution
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#interrupting-the-application">
+      6.1. Interrupting the Application
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#single-stepping">
+      6.2. Single Stepping
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#breakpoints-and-watchpoints">
+    7. Breakpoints and Watchpoints
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#symbolic-breakpoints">
+      7.1. Symbolic Breakpoints
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#line-breakpoints">
+      7.2. Line Breakpoints
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#address-breakpoints">
+      7.3. Address Breakpoints
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#kernel-entry-breakpoints">
+      7.4. Kernel Entry Breakpoints
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#conditional-breakpoints">
+      7.5. Conditional Breakpoints
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#watchpoints">
+      7.6. Watchpoints
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#inspecting-program-state">
+    8. Inspecting Program State
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#memory-and-variables">
+      8.1. Memory and Variables
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#variable-storage-and-accessibility">
+      8.2. Variable Storage and Accessibility
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-commands">
+      8.3. Info CUDA Commands
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-devices">
+        8.3.1. info cuda devices
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-sms">
+        8.3.2. info cuda sms
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-warps">
+        8.3.3. info cuda warps
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-lanes">
+        8.3.4. info cuda lanes
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-kernels">
+        8.3.5. info cuda kernels
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-blocks">
+        8.3.6. info cuda blocks
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-threads">
+        8.3.7. info cuda threads
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-launch-trace">
+        8.3.8. info cuda launch trace
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-launch-children">
+        8.3.9. info cuda launch children
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-contexts">
+        8.3.10. info cuda contexts
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#info-cuda-managed">
+        8.3.11. info cuda managed
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#disassembly">
+      8.4. Disassembly
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#registers">
+      8.5. Registers
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#const-banks">
+      8.6. Const banks
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#event-notifications">
+    9. Event Notifications
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#context-events">
+      9.1. Context Events
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#kernel-events">
+      9.2. Kernel Events
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#automatic-error-checking">
+    10. Automatic Error Checking
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#checking-api-errors">
+      10.1. Checking API Errors
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#gpu-error-reporting">
+      10.2. GPU Error Reporting
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#autostep">
+      10.3. Autostep
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#walk-through-examples">
+    11. Walk-Through Examples
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#example-bitreverse">
+      11.1. Example: bitreverse
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#walking-through-the-code">
+        11.1.1. Walking through the Code
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#example-autostep">
+      11.2. Example: autostep
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#debugging-with-autosteps">
+        11.2.1. Debugging with Autosteps
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#example-mpi-cuda-application">
+      11.3. Example: MPI CUDA Application
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#tips-and-tricks">
+    12. Tips and Tricks
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-break-on-launch">
+      12.1. set cuda break_on_launch
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-launch-blocking">
+      12.2. set cuda launch_blocking
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-notify">
+      12.3. set cuda notify
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-ptx-cache">
+      12.4. set cuda ptx_cache
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-single-stepping-optimizations">
+      12.5. set cuda single_stepping_optimizations
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-thread-selection">
+      12.6. set cuda thread_selection
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#set-cuda-value-extrapolation">
+      12.7. set cuda value_extrapolation
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#debugging-docker-containers">
+      12.8. Debugging Docker Containers
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#switching-to-classic-debugger-backend">
+      12.9. Switching to Classic Debugger Backend
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#thread-block-clusters">
+      12.10. Thread Block Clusters
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#debugging-optix-rtcore-applications">
+      12.11. Debugging OptiX/RTCore applications
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#debugging-on-windows-subsystem-for-linux">
+      12.12. Debugging on Windows Subsystem for Linux
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#supported-platforms">
+    13. Supported Platforms
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#common-issues-on-supported-operating-systems">
+    14. Common Issues on Supported Operating Systems
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#known-issues">
+    15. Known Issues
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#notices">
+    16. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#notice">
+      16.1. Notice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#opencl">
+      16.2. OpenCL
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-gdb/index.html#trademarks">
+      16.3. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2012-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jun 20, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

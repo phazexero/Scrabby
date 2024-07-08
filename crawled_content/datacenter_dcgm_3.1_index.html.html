@@ -1,0 +1,855 @@
+<html><head><title>Welcome — NVIDIA DCGM Documentation latest documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/datacenter/dcgm/3.1/contents.html">
+ </a>
+ Version: 3.1 (Latest)
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   User Guide:
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html">
+    Overview
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#terminology">
+      Terminology
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#focus-areas">
+      Focus Areas
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#provide-robust-online-health-and-diagnostics">
+        Provide robust, online health and diagnostics
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#enable-job-level-statistics-and-continuous-gpu-telemetry">
+        Enable job-level statistics and continuous GPU telemetry
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#manage-gpus-as-collections-of-related-resources">
+        Manage GPUs as collections of related resources
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#configure-nvswitches">
+        Configure NVSwitches
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#define-and-enforce-gpu-configuration-state">
+        Define and enforce GPU configuration state
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#automate-gpu-management-policies">
+        Automate GPU management policies
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html#target-users">
+      Target Users
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html">
+    Getting Started
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#supported-platforms">
+      Supported Platforms
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#supported-linux-distributions">
+        Supported Linux Distributions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#installation">
+      Installation
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#pre-requisites">
+        Pre-Requisites
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#remove-older-installations">
+        Remove Older Installations
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#id1">
+        Installation
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#ubuntu-lts-and-debian">
+          Ubuntu LTS and Debian
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#rhel-centos-rocky-linux">
+          RHEL / CentOS / Rocky Linux
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#suse-sles-opensuse">
+          SUSE SLES / OpenSUSE
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#post-install">
+        Post-Install
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#basic-components">
+      Basic Components
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#dcgm-shared-library">
+        DCGM shared library
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#nvidia-host-engine">
+        NVIDIA Host Engine
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#dcgm-cli-tool">
+        DCGM CLI Tool
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#python-bindings">
+        Python Bindings
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#software-development-kit">
+        Software Development Kit
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#modes-of-operation">
+      Modes of Operation
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#embedded-mode">
+        Embedded Mode
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#standalone-mode">
+        Standalone Mode
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/getting-started.html#static-library">
+      Static Library
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html">
+    Feature Overview
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#groups">
+      Groups
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#configuration">
+      Configuration
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#policy">
+      Policy
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#notifications">
+        Notifications
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#actions">
+        Actions
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#job-statistics">
+      Job Statistics
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#health-and-diagnostics">
+      Health and Diagnostics
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#background-health-checks">
+        Background Health Checks
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#active-health-checks">
+        Active Health Checks
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#topology">
+      Topology
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#nvlink-counters">
+      NVLink Counters
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#field-groups">
+      Field Groups
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#link-status">
+      Link Status
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#profiling-metrics">
+      Profiling Metrics
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#metrics">
+        Metrics
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#multiplexing-of-profiling-counters">
+        Multiplexing of Profiling Counters
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#profiling-sampling-rate">
+        Profiling Sampling Rate
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#cuda-test-generator-dcgmproftester">
+        CUDA Test Generator (dcgmproftester)
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#metrics-on-multi-instance-gpu">
+        Metrics on Multi-Instance GPU
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#example-1">
+          Example 1
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#understanding-metrics">
+          Understanding Metrics
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/feature-overview.html#platform-support">
+          Platform Support
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html">
+    DCGM Diagnostics
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#overview">
+      Overview
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#dcgm-diagnostic-goals">
+        DCGM Diagnostic Goals
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#beyond-the-scope-of-the-dcgm-diagnostics">
+        Beyond the Scope of the DCGM Diagnostics
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#run-levels-and-tests">
+        Run Levels and Tests
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#overview-of-plugins">
+      Overview of Plugins
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#deployment-plugin">
+        Deployment Plugin
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#preconditions">
+          Preconditions
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#configuration-parameters">
+          Configuration Parameters
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#stat-outputs">
+          Stat Outputs
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#failure">
+          Failure
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#pcie-gpu-bandwidth-plugin">
+        PCIe - GPU Bandwidth Plugin
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#id2">
+          Preconditions
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#sub-tests">
+          Sub tests
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#memtest-diagnostic">
+        Memtest Diagnostic
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#id3">
+          Overview
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#test-descriptions">
+          Test Descriptions
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#supported-parameters">
+          Supported Parameters
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#sample-commands">
+          Sample Commands
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#pulse-test-diagnostic">
+        Pulse Test Diagnostic
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#id4">
+        Overview
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#test-description">
+        Test Description
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#id5">
+        Sample Commands
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#failure-conditions">
+        Failure Conditions
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#end-user-diagnostics-eud">
+        End User Diagnostics (EUD)
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#supported-products">
+          Supported Products
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#included-tests">
+          Included Tests
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#getting-started-with-eud">
+          Getting Started with EUD
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-diagnostics.html#running-the-eud">
+          Running the EUD
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-modularity.html">
+    DCGM Modularity
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-modularity.html#module-list">
+      Module List
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-modularity.html#disabling-modules">
+      Disabling Modules
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html">
+    Error Injection
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#overview">
+      Overview
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#error-injection-workflow">
+        Error Injection Workflow
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#field-identifiers">
+        Field Identifiers
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#examples-with-dcgmi">
+        Examples with
+        <span class="pre">
+         dcgmi
+        </span>
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#thermal-violation">
+          Thermal Violation
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#pcie-replay-errors">
+          PCIe Replay Errors
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#ecc-errors">
+          ECC Errors
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/dcgm-error-injection.html#api-examples">
+        API Examples
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   API Reference:
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/index.html">
+    Modules
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-admin.html">
+      Administrative
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-admin.html#init-and-shutdown">
+        Init and Shutdown
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-admin.html#auxilary-information-about-dcgm-engine">
+        Auxilary information about DCGM engine
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-system.html">
+      System
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-system.html#discovery">
+        Discovery
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-system.html#grouping">
+        Grouping
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-system.html#field-grouping">
+        Field Grouping
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-system.html#status-handling">
+        Status Handling
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-config.html">
+      Configuration
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-config.html#setup-and-management">
+        Setup and Management
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-config.html#manual-invocation">
+        Manual Invocation
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-field-apis.html">
+      Field APIs
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-process-stats.html">
+      Process Statistics
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-job-stats.html">
+      Job Statistics
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-health-mon.html">
+      Health Monitor
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-policies.html">
+      Policies
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-policies.html#setup-and-management">
+        Setup and Management
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-policies.html#manual-invocation">
+        Manual Invocation
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-topo.html">
+      Topology
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-metadata.html">
+      Metadata
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-topology.html">
+      Topology
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-modules.html">
+      Modules
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-profiling.html">
+      Profiling
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-enums.html">
+      Enums and Macros
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-structs.html">
+      Structure Definitions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-field-types.html">
+      Field Types
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-field-scope.html">
+      Field Scope
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-field-entity.html">
+      Field Entity
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-field-ids.html">
+      Field Identifiers
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-exec-ctrl.html">
+      DCGMAPI_Admin_ExecCtrl
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/dcgm-api-data-structs.html">
+    Data Structures
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Notes:
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html">
+    DCGM Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#id2">
+      3.1.6
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#improvements">
+        Improvements
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#fixed-issues">
+        Fixed Issues
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#id3">
+      3.1.3
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#new-features">
+        New Features
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#major-api-changes-and-deprecations">
+          Major API changes and Deprecations
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#id4">
+        Fixed Issues
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html#known-issues">
+        Known Issues
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/datacenter/dcgm/3.1/contents.html">
+  NVIDIA DCGM Documentation
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <!--<span class="doctype_switcher_placeholder">single</span>-->
+   <span class="icon icon-home">
+    Select Version
+   </span>
+   <span class="version_switcher_placeholder">
+    latest
+   </span>
+  </li>
+  <li>
+   »
+  </li>
+  <li>
+   Welcome
+  </li>
+ </ul>
+ <h1>
+  NVIDIA DCGM Documentation
+ </h1>
+ <p>
+  This documentation repository contains the product documentation for
+  NVIDIA Data Center GPU Manager (DCGM).
+ </p>
+ <!--
+  <img class="biglogo" src="_static/images/logo.jpg">
+  -->
+ <h2 style="margin-bottom: 10 px">
+  Start Here
+ </h2>
+ <!--
+  <p>See the <a href="contents.html">table of contents</a>.</p>
+  -->
+ <h4>
+  User Guide
+ </h4>
+ <p>
+  <a href="https://docs.nvidia.com/datacenter/dcgm/3.1/user-guide/index.html">
+   Get Started
+  </a>
+ </p>
+ <h4>
+  API Reference Manual
+ </h4>
+ <p>
+  <a href="https://docs.nvidia.com/datacenter/dcgm/3.1/dcgm-api/index.html">
+   DCGM Library API
+  </a>
+ </p>
+ <h4>
+  Release Notes
+ </h4>
+ <p>
+  <a href="https://docs.nvidia.com/datacenter/dcgm/3.1/release-notes/changelog.html">
+   Changelog
+  </a>
+ </p>
+ <p>
+  © Copyright 2018-2023, NVIDIA Corporation.
+  <span class="lastupdated">
+   Last updated on 2023-02-01.
+  </span>
+ </p>
+ Built with
+ <a href="https://www.sphinx-doc.org/">
+  Sphinx
+ </a>
+ using a
+ <a href="https://github.com/readthedocs/sphinx_rtd_theme">
+  theme
+ </a>
+ provided by
+ <a href="https://readthedocs.org">
+  Read the Docs
+ </a>
+ .
+</body>
+</body></html>

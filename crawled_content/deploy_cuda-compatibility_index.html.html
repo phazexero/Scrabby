@@ -1,0 +1,1913 @@
+<html><head><title>CUDA Compatibility</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/deploy/cuda-compatibility/contents.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html">
+    1. Why CUDA Compatibility
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#minor-version-compatibility">
+    2. Minor Version Compatibility
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#cuda-11-and-later-defaults-to-minor-version-compatibility">
+      2.1. CUDA 11 and Later Defaults to Minor Version Compatibility
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#application-considerations-for-minor-version-compatibility">
+      2.2. Application Considerations for Minor Version Compatibility
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#deployment-considerations-for-minor-version-compatibility">
+      2.3. Deployment Considerations for Minor Version Compatibility
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#forward-compatibility">
+    3. Forward Compatibility
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#forward-compatibility-support-across-major-toolkit-versions">
+      3.1. Forward Compatibility Support Across Major Toolkit Versions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#installing-the-forward-compatibility-package">
+      3.2. Installing the Forward Compatibility Package
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#from-network-repositories-or-local-installers">
+        3.2.1. From Network Repositories or Local Installers
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#manually-installing-from-runfile">
+        3.2.2. Manually Installing from Runfile
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#deployment-considerations-for-forward-compatibility">
+      3.3. Deployment Considerations for Forward Compatibility
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#use-the-right-compat-package">
+        3.3.1. Use the Right Compat Package
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#feature-exceptions">
+        3.3.2. Feature Exceptions
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#check-for-compatibility-support">
+        3.3.3. Check for Compatibility Support
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#deployment-model-for-forward-compatibility">
+      3.4. Deployment Model for Forward Compatibility
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#conclusion">
+    4. Conclusion
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#frequently-asked-questions">
+    5. Frequently Asked Questions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#notices">
+    6. Notices
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#trademarks">
+      6.1. Trademarks
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/deploy/cuda-compatibility/contents.html">
+  CUDA Compatibility
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/deploy/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    1.
+   </span>
+   Why CUDA Compatibility
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v555 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/deploy/pdf/CUDA_Compatibility.pdf">
+    PDF
+   </a>
+  </li>
+ </ul>
+ <p class="rubric-h1 rubric">
+  CUDA Compatibility
+ </p>
+ <p>
+  CUDA Compatibility describes the use of new CUDA toolkit components on systems with older base installations.
+ </p>
+ <h1>
+  <span class="section-number">
+   1.
+  </span>
+  Why CUDA Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#why-cuda-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The NVIDIAÂ® CUDAÂ® Toolkit enables developers to build NVIDIA GPU accelerated compute applications for desktop computers, enterprise, and data centers to hyperscalers. It consists of the CUDA compiler toolchain including the CUDA runtime (cudart) and various CUDA libraries and tools. To build an application, a developer has to install only the CUDA Toolkit and necessary libraries required for linking.
+ </p>
+ <p>
+  In order to run a CUDA application, the system should have a CUDA enabled GPU and an NVIDIA display driver that is compatible with the CUDA Toolkit that was used to build the application itself. If the application relies on dynamic linking for libraries, then the system should have the right version of such libraries as well.
+ </p>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/cuda-compatibility/_images/CUDA-components.png">
+ </a>
+ <p>
+  <span class="caption-number">
+   Figure 1
+  </span>
+  <span class="caption-text">
+   Components of CUDA
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#cuda-components-fig" title="Permalink to this image">
+   ï
+  </a>
+ </p>
+ <p>
+  Every CUDA toolkit also ships with an NVIDIA display driver package for convenience. This driver supports all the features introduced in that version of the CUDA Toolkit. Please check the toolkit and driver version mapping in the release notes. The driver package includes both the user mode CUDA driver (libcuda.so) and kernel mode components necessary to run the application.
+ </p>
+ <p>
+  Typically, upgrading a CUDA Toolkit involves upgrading both the toolkit and the driver to get the bleeding edge toolkit and driver capabilities.
+ </p>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/cuda-compatibility/_images/forward-compatibility.png">
+ </a>
+ <p>
+  <span class="caption-number">
+   Figure 2
+  </span>
+  <span class="caption-text">
+   CUDA Upgrade Path
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#forward-compatibility-fig" title="Permalink to this image">
+   ï
+  </a>
+ </p>
+ <p>
+  But this is not always required. CUDA Compatibility guarantees allow for upgrading only certain components and that will be the focus of the rest of this document. We will see how the upgrade to a new CUDA Toolkit can be simplified to not always require a full system upgrade.
+ </p>
+ <h1>
+  <span class="section-number">
+   2.
+  </span>
+  Minor Version Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#minor-version-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   2.1.
+  </span>
+  CUDA 11 and Later Defaults to Minor Version Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#cuda-11-and-later-defaults-to-minor-version-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  From CUDA 11 onwards, applications compiled with a CUDA Toolkit release from within a CUDA major release family can run, with limited feature-set, on systems having at least the minimum required driver version as indicated below. This minimum required driver can be different from the driver packaged with the CUDA Toolkit but should belong to the same major release.
+ </p>
+ <p>
+  Refer to the CUDA Toolkit Release Notes for the complete table.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id1">
+  <span class="caption-number">
+   Table 1
+  </span>
+  <span class="caption-text">
+   Example CUDA Toolkit 11.x and 12.x Minimum Required Driver Versions (Refer to CUDA Release Notes)
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#id1" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     CUDA Toolkit
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Linux x86_64 Minimum Required Driver Version
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Windows Minimum Required Driver Version
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     CUDA 12.x
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;=525.60.13
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;=527.41
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     CUDA 11.x
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;= 450.80.02*
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;=452.39*
+    </p>
+   </td>
+  </tr>
+ </table>
+ <ul class="simple">
+  <li>
+   <p>
+    CUDA 11.0 was released with an earlier driver version, but by upgrading to Tesla Recommended Drivers 450.80.02 (Linux) / 452.39 (Windows) as indicated, minor version compatibility is possible across the CUDA 11.x family of toolkits.
+   </p>
+  </li>
+ </ul>
+ <p>
+  While applications built against any of the older CUDA Toolkits always continued to function on newer drivers due to binary backward compatibility, before CUDA 11, applications built against newer CUDA Toolkit releases were not supported on older drivers without forward compatibility package.
+ </p>
+ <p>
+  If you are using a new CUDA 10.x minor release, then the minimum required driver version is the same as the driver thatâs packaged as part of that toolkit release. Consequently, the minimum required driver version changed for every new CUDA Toolkit minor release until CUDA 11.1. Therefore, system administrators always have to upgrade drivers in order to support applications built against CUDA Toolkits from 10.x releases.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id2">
+  <span class="caption-number">
+   Table 2
+  </span>
+  <span class="caption-text">
+   CUDA Toolkit 10.x Minimum Required Driver Versions
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#id2" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     CUDA Toolkit
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Linux x86_64 Minimum Required Driver Version
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Windows Minimum Required Driver Version
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     CUDA 10.2
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;= 440.33
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;=441.22
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     CUDA 10.1
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;= 418.39
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;=418.96
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     CUDA 10.0
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;= 410.48
+    </p>
+   </td>
+   <td>
+    <p>
+     &gt;=411.31
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  With minor version compatibility, upgrading to CUDA 11.1 is now possible on older drivers from within the same major release family such as 450.80.02 that was shipped with CUDA 11.0, as shown below:
+ </p>
+ <p>
+  Minimum required driver version guidance can be found in the CUDA Toolkit Release Notes. Note that if the minimum required driver version is not installed in the system, applications will return an error as shown below.
+ </p>
+ <h2>
+  <span class="section-number">
+   2.2.
+  </span>
+  Application Considerations for Minor Version Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#application-considerations-for-minor-version-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Developers and system admins should note two important caveats when relying on minor version compatibility. If either of these caveats are limiting, then a new CUDA driver from the same minor version of the toolkit that the application was built with or later is required.
+ </p>
+ <ul>
+  <li>
+   <p>
+    Limited feature set
+   </p>
+   <p>
+    Sometimes features introduced in a CUDA Toolkit version may actually span both the toolkit and the driver. In such cases an application that relies on features introduced in a newer version of the toolkit and driver may return the following error on older drivers: cudaErrorCallRequiresNewerDriver. As mentioned earlier, admins should then upgrade the installed driver also.
+   </p>
+   <p>
+    Application developers can avoid running into this problem by having the application explicitly check for the availability of features. Refer to the CUDA Compatibility Developers Guide for more details.
+   </p>
+  </li>
+  <li>
+   <p>
+    Applications using PTX will see runtime issues
+   </p>
+   <p>
+    Applications that compile device code to PTX will not work on older drivers. If the application requires PTX then admins have to upgrade the installed driver.
+   </p>
+   <p>
+    PTX Developers should refer to the CUDA Compatibility Developers Guide and PTX programming guide in the
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#binary-compatibility">
+     CUDA C++ Programming Guide
+    </a>
+    for details on this limitation.
+   </p>
+  </li>
+ </ul>
+ <h2>
+  <span class="section-number">
+   2.3.
+  </span>
+  Deployment Considerations for Minor Version Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#deployment-considerations-for-minor-version-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  As described, applications that directly rely only on the CUDA runtime can be deployed in the following two scenarios:
+ </p>
+ <p>
+  CUDA driver thatâs installed on the system is newer than the runtime.
+CUDA runtime is newer than the CUDA driver on the system but they are from the same major release of CUDA Toolkit.
+ </p>
+ <p>
+  In scenario 2, system admins should be aware of the aforementioned limitations and should be able to tell why an application may be failing if they run into any issues.
+ </p>
+ <p>
+  Minor version compatibility has another benefit that offers flexibility in the use and deployment of libraries. Applications that use libraries that support minor version compatibility can be deployed on systems with a different version of the toolkit and libraries without recompiling the application for the difference in the library version. This holds true for both older and newer versions of the libraries provided they are all from the same major release family. Note that libraries themselves have interdependencies that should be considered. For example, each cuDNN version requires a certain version of cuBLAS.
+ </p>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/cuda-compatibility/_images/NVRTC-compatibility11.3.png">
+ </a>
+ <p>
+  <span class="caption-number">
+   Figure 3
+  </span>
+  <span class="caption-text">
+   NVRTC supports minor version compatibility from CUDA 11.3 onwards
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#nvrtc-compatibility-fig" title="Permalink to this image">
+   ï
+  </a>
+ </p>
+ <p>
+  However, if an application is unable to leverage the minor version compatibility due to any of the aforementioned reasons, then the Forward Compatibility model can be used as an alternative even though Forward Compatibility is mainly intended for compatibility across major toolkit versions.
+ </p>
+ <h1>
+  <span class="section-number">
+   3.
+  </span>
+  Forward Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#forward-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   3.1.
+  </span>
+  Forward Compatibility Support Across Major Toolkit Versions
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#forward-compatibility-support-across-major-toolkit-versions" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Increasingly, data centers and enterprises may not want to update the NVIDIA GPU Driver across major release versions due to the rigorous testing and validation that happens before any system level driver installations are done.
+ </p>
+ <p>
+  To support such scenarios, CUDA introduced a Forward Compatibility Upgrade path in CUDA 10.0.
+ </p>
+ <a class="reference internal image-reference" href="https://docs.nvidia.com/deploy/cuda-compatibility/_images/forward-compatibility-upgrade-path.png">
+ </a>
+ <p>
+  <span class="caption-number">
+   Figure 4
+  </span>
+  <span class="caption-text">
+   Forward Compatibility Upgrade Path
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#forward-compatibility-upgrade-path-fig" title="Permalink to this image">
+   ï
+  </a>
+ </p>
+ <p>
+  Forward Compatibility is applicable only for systems with NVIDIA Data Center GPUs or select NGC Server Ready SKUs of RTX cards. Itâs mainly intended to support applications built on newer CUDA Toolkits to run on systems installed with an older NVIDIA Linux GPU driver from different major release families. This new forward-compatible upgrade path requires the use of a special package called âCUDA compat packageâ.
+ </p>
+ <h2>
+  <span class="section-number">
+   3.2.
+  </span>
+  Installing the Forward Compatibility Package
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#installing-the-forward-compatibility-package" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   3.2.1.
+  </span>
+  From Network Repositories or Local Installers
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#from-network-repositories-or-local-installers" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The CUDA compat package is available in the local installers or the CUDA network repositories provided by NVIDIA as cuda-compat-12.4.
+ </p>
+ <p>
+  Install the package on the system using the package installer.
+ </p>
+ <p>
+  On Ubuntu, for example:
+ </p>
+ <p>
+  The compat package will then be installed to the versioned toolkit location typically found in the toolkit directory. For example, for 12.5 it will be found in
+  <span class="pre">
+   /usr/local/cuda-12.5/
+  </span>
+  .
+ </p>
+ <p>
+  The cuda-compat package consists of the following files:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     libcuda.so.*
+    </span>
+    - the CUDA Driver
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     libnvidia-nvvm.so.*
+    </span>
+    - JIT LTO ( CUDA 11.5 and later only)
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     libnvidia-ptxjitcompiler.so.*
+    </span>
+    - the JIT (just-in-time) compiler for PTX files
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     libcudadebugger.so.*
+    </span>
+    -GPU debugging support for CUDA Driver (CUDA 11.8 and later only)
+   </p>
+  </li>
+ </ul>
+ <p>
+  These files should be kept together as the CUDA driver is dependent on the
+  <span class="pre">
+   libnvidia-ptxjitcompiler.so.*
+  </span>
+  of the same version.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This package only provides the files, and does not configure the system.
+ </p>
+ <p>
+  Example:
+ </p>
+ <p>
+  CUDA Compatibility is installed and the application can now run successfully as shown below. In this example, the user sets
+  <span class="pre">
+   LD_LIBRARY_PATH
+  </span>
+  to include the files installed by the cuda-compat-12-1 package.
+ </p>
+ <p>
+  Check the files installed under
+  <span class="pre">
+   /usr/local/cuda/compat
+  </span>
+  :
+ </p>
+ <p>
+  The user can set
+  <span class="pre">
+   LD_LIBRARY_PATH
+  </span>
+  to include the files installed before running the CUDA 12.1 application:
+ </p>
+ <h3>
+  <span class="section-number">
+   3.2.2.
+  </span>
+  Manually Installing from Runfile
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#manually-installing-from-runfile" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The cuda-compat package files can also be extracted from the appropriate datacenter driver ârunfileâ installers (
+  <span class="pre">
+   .run
+  </span>
+  ) available in NVIDIA driver downloads. To do this:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    Download the latest NVIDIA Data Center GPU driver , and extract the .run file using option -x.
+   </p>
+  </li>
+  <li>
+   <p>
+    Copy the four CUDA compatibility upgrade files, listed at the start of this section, into a user- or root-created directory.
+   </p>
+  </li>
+  <li>
+   <p>
+    Follow your systemâs guidelines for making sure that the system linker picks up the new libraries.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Symlinks under
+  <span class="pre">
+   /usr/local/cuda/compat
+  </span>
+  need to be created manually when using the runfile installer.
+ </p>
+ <h2>
+  <span class="section-number">
+   3.3.
+  </span>
+  Deployment Considerations for Forward Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#deployment-considerations-for-forward-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <h3>
+  <span class="section-number">
+   3.3.1.
+  </span>
+  Use the Right Compat Package
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#use-the-right-compat-package" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  CUDA forward compat packages should be used only in the following situations when forward compatibility is required across major releases.
+ </p>
+ <p>
+  The CUDA compat package is named after the highest toolkit that it can support. If you are on the R470 driver but require 12.5 application support, please install the cuda-compat package for 12.5. But when performing a full system upgrade, when choosing to install both the toolkit and the driver, remove any forward compatible packages present in the system.
+ </p>
+ <p>
+  For example, if you are upgrading the driver to 525.60.13 which is the minimum required driver version for the 12.x toolkits, then the cuda-compat package is not required in most cases. 11.x and 12.x applications will be supported due to backward compatibility and future 12.x applications will be supported due to minor-version compatibility.
+ </p>
+ <p>
+  But there are feature restrictions that may make this option less desirable for your scenario - for example: Applications requiring PTX JIT compilation support. Unlike the minor-version compatibility that is defined between CUDA runtime and CUDA driver, forward compatibility is defined between the kernel driver and the CUDA driver, and hence such restrictions do not apply. In order to circumvent the limitation, a forward compatibility package may be used in such scenarios as well.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id3">
+  <span class="caption-number">
+   Table 3
+  </span>
+  <span class="caption-text">
+   CUDA Application Compatibility Support Matrix
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#id3" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head" colspan="5">
+    <p>
+     NVIDIA Kernel Mode Driver - Production Branch
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <th class="head">
+    <p>
+     CUDA Forward Compatible Upgrade
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     470.57.02+
+    </p>
+    <p>
+     (CUDA 11.4)
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     530.30.02+
+    </p>
+    <p>
+     (CUDA 12.1)
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     535.54.03+
+    </p>
+    <p>
+     (CUDA 12.2)
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     545.23.06+
+    </p>
+    <p>
+     (CUDA 12.3)
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     550.54.14+
+    </p>
+    <p>
+     (CUDA 12.4)
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     555.42.02+
+    </p>
+    <p>
+     (CUDA 12.5)
+    </p>
+   </th>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     12-5
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td rowspan="11">
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td rowspan="11">
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     Not required
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     12-4
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     Not required
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     12-3
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     12-2
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     Not required
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     12-1
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     12-0
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     11-8
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     11-7
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     11-6
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     11-5
+    </p>
+   </td>
+   <td>
+    <p>
+     C
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     11-4
+    </p>
+   </td>
+   <td>
+    <p>
+     Not required
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+   <td>
+    <p>
+     X
+    </p>
+   </td>
+  </tr>
+ </table>
+ <ul class="simple">
+  <li>
+   <p>
+    C - Compatible
+   </p>
+  </li>
+  <li>
+   <p>
+    X - Not compatible
+   </p>
+  </li>
+  <li>
+   <p>
+    Branches R525, R515, R510, R465, R460, R455, R450, R440, R418, R410, R396, R390 are end of life and are not supported targets for compatibility.
+   </p>
+  </li>
+  <li>
+   <p>
+    New Feature Branches (such as 495.xx) are not supported targets for CUDA Forward Compatibility.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Examples of how to read this table:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The CUDA 12-4 compat package is âCâompatible with driver versions 470, 535. It is âNot requiredâ for 550, as 12.4 was paired with 550 and therefore no extra packages are needed.
+   </p>
+  </li>
+  <li>
+   <p>
+    The CUDA â12-3â release is not-compatible (âXâ) with driver version 550 as it was released prior to the driver. Binaries created in 12.3 are still subject to the backwards compatibility guarantees described in this document.
+   </p>
+  </li>
+ </ul>
+ <h3>
+  <span class="section-number">
+   3.3.2.
+  </span>
+  Feature Exceptions
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#feature-exceptions" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  There are specific features in the CUDA driver that require kernel-mode support and will only work with a newer kernel mode driver. A few features depend on other user-mode components and are therefore also unsupported.
+ </p>
+ <table class="table-no-stripes docutils align-default" id="id4">
+  <span class="caption-number">
+   Table 4
+  </span>
+  <span class="caption-text">
+   Forward-Compatible Feature-Driver Support Matrix
+  </span>
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#id4" title="Permalink to this table">
+   ï
+  </a>
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     CUDA Forward Compatible Upgrade
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     CUDA - OpenGL/Vulkan Interop
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     cuMemMap* set of functionalities
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td colspan="3">
+    <p>
+     System Base Installation: 525 (&gt;=.60.04) Driver
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     12-x
+    </p>
+   </td>
+   <td>
+    <p>
+     No
+    </p>
+   </td>
+   <td>
+    <p>
+     Yes [1]
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td colspan="3">
+    <p>
+     System Base Installation: 450 (&gt;=.80.02) Driver
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     11-x
+    </p>
+   </td>
+   <td>
+    <p>
+     No
+    </p>
+   </td>
+   <td>
+    <p>
+     Yes [1]
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  [1] This relies on
+  <span class="pre">
+   CU_DEVICE_ATTRIBUTE_HANDLE_TYPE_POSIX_FILE_DESCRIPTOR_SUPPORTED
+  </span>
+  and
+  <span class="pre">
+   CU_DEVICE_ATTRIBUTE_VIRTUAL_ADDRESS_MANAGEMENT_SUPPORTED
+  </span>
+  , which should be queried if you intend to use the full range of this functionality.
+ </p>
+ <p>
+  [2] Supported on Red Hat Enterprise Linux operating system version 8.1 or higher.
+ </p>
+ <h3>
+  <span class="section-number">
+   3.3.3.
+  </span>
+  Check for Compatibility Support
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#check-for-compatibility-support" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  In addition to the CUDA driver and certain compiler components, there are other drivers in the system installation stack (for example, OpenCL) that remain on the old version. The forward-compatible upgrade path is for CUDA only.
+ </p>
+ <p>
+  A well-written application should use following error codes to determine if CUDA Forward Compatible Upgrade is supported. System administrators should be aware of these error codes to determine if there are errors in the deployment.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     CUDA_ERROR_SYSTEM_DRIVER_MISMATCH
+    </span>
+    <span class="pre">
+     =
+    </span>
+    <span class="pre">
+     803
+    </span>
+    . This error indicates that there is a mismatch between the versions of the display driver and the CUDA driver.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     CUDA_ERROR_COMPAT_NOT_SUPPORTED_ON_DEVICE
+    </span>
+    <span class="pre">
+     =
+    </span>
+    <span class="pre">
+     804
+    </span>
+    . This error indicates that the system was upgraded to run with forward compatibility but the visible hardware detected by CUDA does not support this configuration.
+   </p>
+  </li>
+ </ul>
+ <h2>
+  <span class="section-number">
+   3.4.
+  </span>
+  Deployment Model for Forward Compatibility
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#deployment-model-for-forward-compatibility" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  There are two models of deployment for the CUDA compat package. We recommend the use of the âsharedâ deployment mode.
+ </p>
+ <ul>
+  <li>
+   <p>
+    Shared deployment: Allows sharing the same compat package across installed toolkits in the system. Download and extract the latest forward compatibility package with the highest toolkit version in its name. Using RPATH, or through
+    <span class="pre">
+     LD_LIBRARY_PATH
+    </span>
+    or through an automatic loader (for example,
+    <span class="pre">
+     ld.so.conf
+    </span>
+    ), point to that package. This is the most recommended choice.
+   </p>
+   <p>
+    The user can set
+    <span class="pre">
+     LD_LIBRARY_PATH
+    </span>
+    to include the files installed before running the CUDA 11.1 application:
+   </p>
+   <pre><span class="n">$</span><span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">compat</span><span class="o">:</span><span class="n">$LD_LIBRARY_PATH</span>
+</pre>
+  </li>
+  <li>
+   <p>
+    Per-application deployment: Individual applications can choose a package of their choice and place it as part of the Modules system tied to the toolkit and the libraries. Using the Modules system, the admin, or the user, can set up âmoduleâ scripts for each version of each toolkit package, and then load the module script for the toolkit as needed.
+   </p>
+   <pre><span class="n">$</span><span class="k">module</span><span class="n">load</span><span class="n">cuda</span><span class="o">/</span><span class="mf">11.0</span>
+</pre>
+   <p>
+    There is an important consideration to the per-application deployment approach: older forward compatibility packages are not supported on new driver versions. Therefore the module load scripts should proactively query the system for whether the compatibility package can be used before loading the files. This is especially critical if there was a full system upgrade. In the cases where the module script cannot use CUDA compatible upgrade, a fallback path to the default systemâs installed CUDA driver can provide a more consistent experience and this can be achieved using
+    <span class="pre">
+     RPATH
+    </span>
+    .
+   </p>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   4.
+  </span>
+  Conclusion
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#conclusion" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  The CUDA driver maintains backward compatibility to continue support of applications built on older toolkits. Using a compatible minor driver version, applications build on CUDA Toolkit 11 and newer are supported on any driver from within the corresponding major release. Using the CUDA Forward Compatibility package, system administrators can run applications built using a newer toolkit even when an older driver that does not satisfy the minimum required driver version is installed on the system. This forward compatibility allows the CUDA deployments in data centers and enterprises to benefit from the faster release cadence and the latest features and performance of CUDA Toolkit.
+ </p>
+ <p>
+  CUDA compatibility helps users by:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Faster upgrades to the latest CUDA releases: Enterprises or data centers with NVIDIA GPUs have complex workflows and require advance planning for NVIDIA driver rollouts. Not having to update the driver for newer CUDA releases can mean that new versions of the software can be made available faster to users without any delays.
+   </p>
+  </li>
+  <li>
+   <p>
+    Faster upgrades of the CUDA libraries: Users can upgrade to the latest software libraries and applications built on top of CUDA (for example, math libraries or deep learning frameworks) without an upgrade to the entire CUDA Toolkit or driver. This is possible as these libraries and frameworks do not have a direct dependency on the CUDA runtime, compiler or driver.
+   </p>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   5.
+  </span>
+  Frequently Asked Questions
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#frequently-asked-questions" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  This section includes some FAQs related to CUDA compatibility.
+ </p>
+ <ul>
+  <li>
+   <p>
+    What is the difference between CUDA forward compatible upgrade and CUDA minor version compatibility? When should users use these features?
+   </p>
+   <table class="table-no-stripes docutils align-default">
+    <tr class="row-odd">
+     <th class="head">
+      <p>
+       Area
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       CUDA Forward Compatible Upgrade
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       CUDA Minor Version Compatibility
+      </p>
+     </th>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="2">
+      <p>
+       Compatibility
+      </p>
+     </td>
+     <td>
+      <p>
+       Across older drivers from different major release versions of CUDA.
+      </p>
+     </td>
+     <td>
+      <p>
+       Across minor release versions of CUDA only.
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       Between kernel driver and user mode CUDA driver.
+      </p>
+     </td>
+     <td>
+      <p>
+       Between libraries or runtimes that link to the CUDA driver.
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       When to use
+      </p>
+     </td>
+     <td>
+      <p>
+       If you cannot upgrade the kernel driver but need to use the latest CUDA Toolkit.
+      </p>
+     </td>
+     <td>
+      <p>
+       If you want to support newer applications on older drivers within the same major release family.
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       GPUs supported
+      </p>
+     </td>
+     <td>
+      <p>
+       11.4 UMD (User Mode Driver) and later will extend forward compatibility support
+to select NGC Ready NVIDIA RTX boards. Prior to that forward compatibility will be supported only on NVIDIA Data Center cards.
+      </p>
+     </td>
+     <td>
+      <p>
+       All GPU products supported
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       OS distributions supported
+      </p>
+     </td>
+     <td>
+      <p>
+       Linux only
+      </p>
+     </td>
+     <td>
+      <p>
+       Windows, Linux
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       Features supported
+      </p>
+     </td>
+     <td>
+      <p>
+       Some features such as (CUDA-GL interop, Power 9 ATS, cuMemMap APIs) are not supported.
+These features depend on a new kernel mode driver and thus are not supported.
+These are explicitly called out in the documentation.
+      </p>
+     </td>
+     <td>
+      <p>
+       All existing CUDA features (from older minor releases) work. Users may have to incorporate checks in
+their application when using new features in the minor release (that require a new driver) to ensure graceful errors.
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       CUDA releases supported
+      </p>
+     </td>
+     <td>
+      <p>
+       All CUDA releases supported through the lifetime of the datacenter driver branch. For example,
+R418 (CUDA 10.1) EOLs in March 2022 - so all CUDA versions released (including major releases) during this timeframe are supported.
+      </p>
+     </td>
+     <td>
+      <p>
+       Only works within a âmajorâ release family (such as 12.0 through 12.x).
+Compatibility is not supported across major CUDA releases.
+      </p>
+     </td>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       Application includes PTX or uses NVRTC
+      </p>
+     </td>
+     <td>
+      <p>
+       No additional workflow required.
+      </p>
+     </td>
+     <td>
+      <p>
+       Users should use the new PTX static library to rebuild binaries. Refer to the workflow section for more details.
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td>
+      <p>
+       Requires administrator involvement
+      </p>
+     </td>
+     <td>
+      <p>
+       Depends on the deployment. Users can also set up
+       <span class="pre">
+        LD_LIBRARY_PATH
+       </span>
+       with the new libraries from the
+       <span class="pre">
+        cuda-compat-*
+       </span>
+       package.
+      </p>
+     </td>
+     <td>
+      <p>
+       Not required.
+      </p>
+     </td>
+    </tr>
+   </table>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    For mobile compatibility information, see CUDA Upgradable Package for Jetson. This applies to L4T only.
+   </p>
+  </li>
+  <li>
+   <p>
+    Does CUDA forward compatible upgrades work intra-branch?
+   </p>
+   <p>
+    Users can upgrade the kernel mode driver within the same branch. Sometimes this may require updating the
+    <span class="pre">
+     cuda-compat*
+    </span>
+    package. This use-case is supported only for drivers on LLB and LTS branches of driver for select GPUs.
+   </p>
+  </li>
+  <li>
+   <p>
+    Which GPUs are supported by the driver?
+   </p>
+   <p>
+    The CUDA compatible upgrade is meant to ease the management of large production systems for enterprise customers. 11.4 UMD (User Mode Driver) and later will extend forward compatibility support to select NGC Ready NVIDIA RTX boards. Prior to that forward compatibility will be supported only on NVIDIA Data Center cards.
+Itâs important to note that HW support is defined by the kernel mode driver and as such, newer CUDA drivers on their own will not enable new HW support. Refer to the following table to determine which hardware is supported by your system.
+   </p>
+   <table class="table-no-stripes docutils align-default">
+    <tr class="row-odd">
+     <th class="head" rowspan="2">
+      <p>
+       Hardware Generation
+      </p>
+     </th>
+     <th class="head" rowspan="2">
+      <p>
+       Compute Capability
+      </p>
+     </th>
+     <th class="head" rowspan="2">
+      <p>
+       CTK Support
+      </p>
+     </th>
+     <th class="head" rowspan="2">
+      <p>
+       Latest Forward Compatibility Package Support
+      </p>
+     </th>
+     <th class="head" colspan="2">
+      <p>
+       Driver
+      </p>
+     </th>
+    </tr>
+    <tr class="row-even">
+     <th class="head">
+      <p>
+       Current Minimum Driver in Support
+      </p>
+     </th>
+     <th class="head">
+      <p>
+       Maximum Driver Supported*
+      </p>
+     </th>
+    </tr>
+    <tr class="row-odd">
+     <td>
+      <p>
+       Hopper
+      </p>
+     </td>
+     <td>
+      <p>
+       9.x
+      </p>
+     </td>
+     <td>
+      <p>
+       11.8 - current
+      </p>
+     </td>
+     <td rowspan="11">
+      <p>
+       current
+      </p>
+     </td>
+     <td>
+      <p>
+       525.60.13+
+      </p>
+     </td>
+     <td>
+      <p>
+       latest
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="2">
+      <p>
+       NVIDIA Ampere GPU Arch.
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       8.x
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       11.0 - current
+      </p>
+     </td>
+     <td rowspan="10">
+      <p>
+       470.57.02
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       latest
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="2">
+      <p>
+       Turing
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       7.5
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       10.0 - current
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       latest
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="2">
+      <p>
+       Volta
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       7.x
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       9.0 - current
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       latest
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="2">
+      <p>
+       Pascal
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       6.x
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       8.0 - current
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       latest
+      </p>
+     </td>
+    </tr>
+    <tr class="row-even">
+     <td rowspan="2">
+      <p>
+       Maxwell
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       5.x
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       6.5 - current
+      </p>
+     </td>
+     <td rowspan="2">
+      <p>
+       latest
+      </p>
+     </td>
+    </tr>
+   </table>
+   <ul class="simple">
+    <li>
+     <p>
+      Refer to
+      <a class="reference external" href="https://docs.nvidia.com/datacenter/tesla/drivers/index.html#cuda-drivers">
+       CUDA Driver Lifecycle
+      </a>
+      to find the latest supported driver.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    Whatâs the minimum required driver version of a toolkit?
+   </p>
+   <p>
+    Refer to the
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions__table-cuda-toolkit-driver-versions">
+     Release notes
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    The developer is using PTX code in the application and seeing some errors or issues. What should we do?
+   </p>
+   <p>
+    PTX and application compatibility information can be found in
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#binary-compatibility">
+     Binary Compatibility
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If we build our CUDA application using CUDA 11.0, can it continue to be used with newer NVIDIA drivers (such as CUDA 11.1/R455, 11.x etc.)? Or is it only the other way around?
+   </p>
+   <p>
+    Drivers have always been backwards compatible with CUDA. This means that a CUDA 11.0 application will be compatible with R450 (11.0), R455 (11.1) and beyond. CUDA applications typically statically include all the libraries (for example cudart, CUDA math libraries such as cuBLAS, cuFFT) they need, so they should work on new drivers or CUDA Toolkit installations.
+   </p>
+   <p>
+    In other words, since CUDA is backward compatible, existing CUDA applications can continue to be used with newer CUDA versions.
+   </p>
+  </li>
+  <li>
+   <p>
+    What is the minimum CUDA 11.x driver that supports the CUDA minor version compatibility?
+   </p>
+   <p>
+    The minimum driver version required is 450.80.02.
+   </p>
+  </li>
+  <li>
+   <p>
+    What about new features introduced in minor releases of CUDA? How does a developer build an application using newer CUDA Toolkits (e.g. 11.x) work on a system with a CUDA 11.0 driver (R450)?
+   </p>
+   <p>
+    By using new CUDA versions, users can benefit from new CUDA programming model APIs, compiler optimizations and math library features.
+   </p>
+   <ul>
+    <li>
+     <p>
+      A subset of CUDA APIs donât need a new driver and they can all be used without any driver dependencies. For example, async copy APIs introduced in 11.1 do not need a new driver.
+     </p>
+    </li>
+    <li>
+     <p>
+      To use other CUDA APIs introduced in a minor release (that require a new driver), one would have to implement fallbacks or fail gracefully. This situation is not different from what is available today where developers use macros to compile out features based on CUDA versions. Users should refer to the CUDA headers and documentation for new CUDA APIs introduced in a release.
+     </p>
+     <p>
+      There are some issues that admins can advise the application developers to accommodate in their code. Please refer to the Best Practices Guide for further information.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    Does CUDA compatibility work with containers?
+   </p>
+   <p>
+    Yes. CUDA minor version compatibility and CUDA forward compatible upgrade both work when using either NGC Deep Learning Framework containers or using containers that are based on the official CUDA base images. The images include the CUDA compatible upgrade libraries and the NVIDIA Container Toolkit (nvidia-docker2) has logic to correctly load the required libraries.
+   </p>
+  </li>
+  <li>
+   <p>
+    Iâm running an NGC container and see this error: âThis container was built for NVIDIA Driver Release 450.51 or later, but version 418.126.02 was detected and compatibility mode is UNAVAILABLE.â. What could be wrong?
+   </p>
+   <p>
+    It is possible you are either running a wrong version of the NVIDIA driver on the system or your system does not have an NVIDIA Data Center GPU.
+   </p>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   6.
+  </span>
+  Notices
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#notices" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  This document is provided for information purposes only and shall not be regarded as a warranty of a certain functionality, condition, or quality of a product. NVIDIA Corporation (âNVIDIAâ) makes no representations or warranties, expressed or implied, as to the accuracy or completeness of the information contained in this document and assumes no responsibility for any errors contained herein. NVIDIA shall have no liability for the consequences or use of such information or for any infringement of patents or other rights of third parties that may result from its use. This document is not a commitment to develop, release, or deliver any Material (defined below), code, or functionality.
+ </p>
+ <p>
+  NVIDIA reserves the right to make corrections, modifications, enhancements, improvements, and any other changes to this document, at any time without notice.
+ </p>
+ <p>
+  Customer should obtain the latest relevant information before placing orders and should verify that such information is current and complete.
+ </p>
+ <p>
+  NVIDIA products are sold subject to the NVIDIA standard terms and conditions of sale supplied at the time of order acknowledgement, unless otherwise agreed in an individual sales agreement signed by authorized representatives of NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby expressly objects to applying any customer general terms and conditions with regards to the purchase of the NVIDIA product referenced in this document. No contractual obligations are formed either directly or indirectly by this document.
+ </p>
+ <p>
+  NVIDIA products are not designed, authorized, or warranted to be suitable for use in medical, military, aircraft, space, or life support equipment, nor in applications where failure or malfunction of the NVIDIA product can reasonably be expected to result in personal injury, death, or property or environmental damage. NVIDIA accepts no liability for inclusion and/or use of NVIDIA products in such equipment or applications and therefore such inclusion and/or use is at customerâs own risk.
+ </p>
+ <p>
+  NVIDIA makes no representation or warranty that products based on this document will be suitable for any specified use. Testing of all parameters of each product is not necessarily performed by NVIDIA. It is customerâs sole responsibility to evaluate and determine the applicability of any information contained in this document, ensure the product is suitable and fit for the application planned by customer, and perform the necessary testing for the application in order to avoid a default of the application or the product. Weaknesses in customerâs product designs may affect the quality and reliability of the NVIDIA product and may result in additional or different conditions and/or requirements beyond those contained in this document. NVIDIA accepts no liability related to any default, damage, costs, or problem which may be based on or attributable to: (i) the use of the NVIDIA product in any manner that is contrary to this document or (ii) customer product designs.
+ </p>
+ <p>
+  No license, either expressed or implied, is granted under any NVIDIA patent right, copyright, or other NVIDIA intellectual property right under this document. Information published by NVIDIA regarding third-party products or services does not constitute a license from NVIDIA to use such products or services or a warranty or endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property rights of the third party, or a license from NVIDIA under the patents or other intellectual property rights of NVIDIA.
+ </p>
+ <p>
+  Reproduction of information in this document is permissible only if approved in advance by NVIDIA in writing, reproduced without alteration and in full compliance with all applicable export laws and regulations, and accompanied by all associated conditions, limitations, and notices.
+ </p>
+ <p>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding any damages that customer might incur for any reason whatsoever, NVIDIAâs aggregate and cumulative liability towards customer for the products described herein shall be limited in accordance with the Terms of Sale for the product.
+ </p>
+ <h2>
+  <span class="section-number">
+   6.1.
+  </span>
+  Trademarks
+  <a class="headerlink" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#trademarks" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2018-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on May 31, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

@@ -1,0 +1,736 @@
+<html><head><title>NVIDIA cuBLASDx — cuBLASDx 0.1.0 documentation</title></head><body><body class="wy-body-for-nav">
+ <a class="icon icon-home" href="https://docs.nvidia.com/cuda/cublasdx">
+  cuBLASDx
+ </a>
+ 0.1.0
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/cublasdx">
+    Documentation home
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   User guide:
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html">
+    Requirements and Functionality
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#requirements">
+      Requirements
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#supported-compilers">
+        Supported Compilers
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#supported-functionality">
+      Supported Functionality
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html">
+    Quick Installation Guide
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html#cublasdx-in-your-project">
+      cuBLASDx In Your Project
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html#cublasdx-in-your-cmake-project">
+      cuBLASDx In Your CMake Project
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html#using-custom-cutlass">
+        Using Custom CUTLASS
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html#defined-variables">
+        Defined Variables
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html">
+    General Matrix Multiply Using cuBLASDx
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#defining-gemm-operation">
+      Defining GEMM Operation
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#executing-gemm">
+      Executing GEMM
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#launching-gemm-kernel">
+      Launching GEMM Kernel
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#compilation">
+      Compilation
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html">
+    Achieving High Performance
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#general-advice">
+      General Advice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#memory-management">
+      Memory Management
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#advanced">
+      Advanced
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#further-reading">
+      Further Reading
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#references">
+        References
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/api/index.html">
+    API reference
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html">
+      Operators
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#description-operators">
+        Description Operators
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#size-operator">
+          Size Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#type-operator">
+          Type Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#precision-operator">
+          Precision Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#transposemode-operator">
+          TransposeMode Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#leadingdimension-operator">
+          LeadingDimension Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#function-operator">
+          Function Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#sm-operator">
+          SM Operator
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#execution-operators">
+        Execution Operators
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#block-operator">
+          Block Operator
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#block-configuration-operators">
+          Block Configuration Operators
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html">
+      Traits
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#description-traits">
+        Description Traits
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#size-trait">
+          Size Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#type-trait">
+          Type Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#precision-trait">
+          Precision Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#function-trait">
+          Function Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#transpose-mode-trait">
+          Transpose Mode Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#sm-trait">
+          SM Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#is-blas-trait">
+          is_blas Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#is-blas-execution-trait">
+          is_blas_execution Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#is-complete-blas-trait">
+          is_complete_blas Trait
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#is-complete-blas-execution-trait">
+          is_complete_blas_execution Trait
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#execution-traits">
+        Execution Traits
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#block-traits">
+          Block Traits
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#other-traits">
+        Other Traits
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#is-supported">
+          is_supported
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html#suggested-leading-dimension-of">
+          suggested_leading_dimension_of
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/api/methods.html">
+      Execution Methods
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/api/methods.html#block-execute-method">
+        Block Execute Method
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/methods.html#value-format">
+          Value Format
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/methods.html#input-output-data-format">
+          Input/Output Data Format
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/api/methods.html#shared-memory-usage">
+          Shared Memory Usage
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html">
+    Examples
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#introduction-examples">
+      Introduction Examples
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#simple-gemm-examples">
+      Simple GEMM Examples
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#nvrtc-examples">
+      NVRTC Examples
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#gemm-performance">
+      GEMM Performance
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#advanced-examples">
+      Advanced Examples
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/release_notes.html">
+    Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/release_notes.html#id1">
+      0.1.0
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/release_notes.html#new-features">
+        New Features
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/release_notes.html#known-issues">
+        Known Issues
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/license.html">
+    Software License Agreement
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/license.html#third-party-license-agreements">
+      Third Party License Agreements
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/license.html#cutlass">
+        CUTLASS
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cublasdx">
+  cuBLASDx
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li class="breadcrumb-item active">
+   NVIDIA cuBLASDx
+  </li>
+ </ul>
+ <h1>
+  NVIDIA cuBLASDx
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cublasdx#nvidia-cublasdx" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h1>
+ <p>
+  The cuBLAS Device Extensions (cuBLASDx) library enables you to perform selected linear algebra functions known from
+  <a class="reference external" href="https://docs.nvidia.com/cuda/cublas/">
+   cuBLAS
+  </a>
+  inside your CUDA kernel.
+This is currently limited only to General Matrix Multiplication (GEMM).
+Fusing linear algebra routines with other operations can decrease the latency and improve the overall performance of
+your application.
+ </p>
+ <p>
+  cuBLASDx is a part of the
+  <a class="reference external" href="https://developer.nvidia.com/mathdx">
+   MathDx
+  </a>
+  package which also includes cuFFTDx for FFT calculations.
+Both libraries are designed to work together.
+Examples of such fusion are included in the package.
+When using multiple device extensions libraries in a single project they should all come from the same MathDx release.
+ </p>
+ <p>
+  The documentation consists of three main components:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#requirements-label">
+     <span class="std std-ref">
+      Requirements
+     </span>
+    </a>
+    and
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#functionality-label">
+     <span class="std std-ref">
+      supported features
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    A quick start guide,
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#intro1-label">
+     <span class="std std-ref">
+      General Matrix Multiply Using cuBLASDx
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    An
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/api/index.html#api-reference-label">
+     <span class="std std-ref">
+      API reference
+     </span>
+    </a>
+    for a comprehensive overview of the provided functionality.
+   </p>
+  </li>
+ </ul>
+ <h1>
+  Highlights
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cublasdx#highlights" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h1>
+ <p>
+  The cuBLASDx library currently provides:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    BLAS
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html#function-operator-gemm-label">
+     <span class="std std-ref">
+      GEMM
+     </span>
+    </a>
+    routine embeddable into a CUDA kernel.
+   </p>
+  </li>
+  <li>
+   <p>
+    High performance, no unnecessary data movement from and to global memory.
+   </p>
+  </li>
+  <li>
+   <p>
+    Customizability, options to adjust GEMM routine for different needs (size, precision, type, targeted CUDA architecture, etc.).
+   </p>
+  </li>
+  <li>
+   <p>
+    Ability to fuse BLAS kernels with other operations in order to save global memory trips.
+   </p>
+  </li>
+  <li>
+   <p>
+    Compatibility with future versions of the CUDA Toolkit.
+   </p>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   User guide:
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html">
+    Requirements and Functionality
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#requirements">
+      Requirements
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/requirements_func.html#supported-functionality">
+      Supported Functionality
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html">
+    Quick Installation Guide
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html#cublasdx-in-your-project">
+      cuBLASDx In Your Project
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/installation.html#cublasdx-in-your-cmake-project">
+      cuBLASDx In Your CMake Project
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html">
+    General Matrix Multiply Using cuBLASDx
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#defining-gemm-operation">
+      Defining GEMM Operation
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#executing-gemm">
+      Executing GEMM
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#launching-gemm-kernel">
+      Launching GEMM Kernel
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/introduction1.html#compilation">
+      Compilation
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html">
+    Achieving High Performance
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#general-advice">
+      General Advice
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#memory-management">
+      Memory Management
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#advanced">
+      Advanced
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/performance.html#further-reading">
+      Further Reading
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/api/index.html">
+    API reference
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/api/operators.html">
+      Operators
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/api/traits.html">
+      Traits
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/api/methods.html">
+      Execution Methods
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html">
+    Examples
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#introduction-examples">
+      Introduction Examples
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#simple-gemm-examples">
+      Simple GEMM Examples
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#nvrtc-examples">
+      NVRTC Examples
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#gemm-performance">
+      GEMM Performance
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/examples.html#advanced-examples">
+      Advanced Examples
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/release_notes.html">
+    Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/release_notes.html#id1">
+      0.1.0
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/license.html">
+    Software License Agreement
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/license.html#third-party-license-agreements">
+      Third Party License Agreements
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a accesskey="n" class="btn btn-neutral float-right" href="https://docs.nvidia.com/cuda/requirements_func.html" rel="next" title="Requirements and Functionality">
+  Next
+ </a>
+ <p style="color: gray;">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" style="color: inherit;" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" style="color: inherit;" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" style="color: inherit;" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" style="color: inherit;" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" style="color: inherit;" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" style="color: inherit;" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" style="color: inherit;" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" style="color: inherit;" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2023-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+ </p>
+</body>
+</body></html>

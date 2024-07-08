@@ -1,0 +1,207 @@
+<html><head><title>3. Library support — Cupti 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cupti/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/index.html">
+    CUPTI
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/overview/overview.html">
+    Overview
+   </a>
+  </li>
+ </ul>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/release-notes/release-notes.html">
+    1. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/main/main.html">
+    2. Usage
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cupti/library-support/library-support.html">
+    3. Library support
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/library-support/library-support.html#optix">
+      3.1. OptiX
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html">
+    4. Special Configurations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/modules.html">
+    5. Modules
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/data-structures.html">
+    6. Data Structures
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/namespaces.html">
+    7. Namespaces
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/copyright-and-licenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/notices-header/notices-header.html">
+    Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cupti/index.html">
+  Cupti
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cupti/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    3.
+   </span>
+   Library support
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.2.0 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cupti">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   3.
+  </span>
+  Library support
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/library-support/library-support.html#library-support" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  CUPTI can be used to profile CUDA applications, as well as applications that use CUDA via NVIDIA or third-party libraries. For most such libraries, the behavior is expected to be identical to applications using CUDA directly. However, for certain libraries, CUPTI has certain restrictions, or alternate behavior.
+ </p>
+ <h2>
+  <span class="section-number">
+   3.1.
+  </span>
+  OptiX
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/library-support/library-support.html#optix" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  CUPTI supports profiling of OptiX applications, but with certain restrictions.
+ </p>
+ <p class="rubric-h2 rubric">
+  Tracing
+ </p>
+ <ul class="simple">
+  <li>
+   Internal Kernels
+   <p>
+    Kernels launched by OptiX that contain no user-defined code are given the generic name
+    NVIDIA internal
+    . CUPTI provides the tracing information for these kernels.
+   </p>
+  </li>
+  <li>
+   User Kernels
+   <p>
+    Kernels launched by OptiX can contain user-defined code. OptiX identifies these kernels with a custom name. This name starts with
+    raygen__
+    (for âray generationâ). These kernels can be traced.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric-h2 rubric">
+  Profiling
+ </p>
+ <p>
+  CUPTI can profile both internal and user kernels using the Profiling APIs. In the auto range mode, range names will be numeric values starting from 0 to total number of kernels including internal and user defined kernels or maximum number of range set while calling set config API, whichever is minimum.
+ </p>
+ <p>
+  It is suggested to create the profiling session and enable the profiling at resource allocation time (e.g. context creation) and disable the profiling at the context destruction time.
+ </p>
+ <p>
+  Limitations
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    CUPTI doesnât issue any driver or runtime API callback for user kernels.
+   </p>
+  </li>
+  <li>
+   <p>
+    Event, Metric and PC sampling APIs are not supported for OptiX applications.
+   </p>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

@@ -1,0 +1,1566 @@
+<html><head><title>Getting Started with the CUDA Debugger — nsight-visual-studio-edition 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/introduction/index.html">
+    Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/release-notes/index.html">
+    Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html">
+    Installation and Setup
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   CUDA Debugger
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html">
+    Getting Started with the CUDA Debugger
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#walkthrough-debugging-a-cuda-application">
+      Walkthrough: Debugging a CUDA Application
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#open-the-sample-project-and-set-breakpoints">
+        Open the Sample Project and Set Breakpoints
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#configure-for-local-or-remote-debugging">
+        Configure for Local or Remote Debugging
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#build-the-sample-and-launch-the-debugger">
+        Build the Sample and Launch the Debugger
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#tutorial-using-the-cuda-debugger">
+      Tutorial: Using the CUDA Debugger
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-1-open-a-project-and-build-an-executable">
+        EXERCISE 1: Open a Project and Build an Executable
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-2-set-breakpoints">
+        EXERCISE 2: Set Breakpoints
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-3-run-the-cuda-debugger-and-inspect-variables">
+        EXERCISE 3: Run the CUDA Debugger and Inspect Variables
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-4-run-the-memory-checker">
+        EXERCISE 4: Run the Memory Checker
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#other-topics">
+      Other Topics
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html">
+    Build and Run
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html">
+    Control GPU Execution
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html">
+    Inspect State
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html">
+    Advanced Topics
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Reference
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/reference/index.html">
+    Reference
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Information
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Copyright and License Notices
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/eula/index.html">
+    EULA
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+  nsight-visual-studio-edition
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   Getting Started with the CUDA Debugger
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-2024_2-new-features">
+    v2024.2.1 |
+   </a>
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-archive">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  Getting Started with the CUDA Debugger
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#getting-started-with-the-cuda-debugger" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Introduction to the NVIDIA Nsight VSE CUDA Debugger.
+ </p>
+ <h2>
+  Walkthrough: Debugging a CUDA Application
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#walkthrough-debugging-a-cuda-application" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  In the following walkthrough, we present some of the more common procedures that you might use to debug a CUDA-based application. We use a sample application called Matrix Multiply as an example. NVIDIA CUDA Toolkit SDK includes this sample application. More information, including licensing information, about the NVIDIA CUDA Toolkit and the NVIDIA GPU CUDA Samples can be found at:
+  <a class="reference external" href="http://www.nvidia.com/getcuda">
+   http://www.nvidia.com/getcuda
+  </a>
+ </p>
+ <p>
+  For the purpose of this walkthrough, we are going to assume that the application is debugged remotely (the NVIDIA Nsightâ¢ VSE host software running on a machine with Visual Studio, and the Nsight Monitor running on a separate machine).
+  [1]
+ </p>
+ <p>
+  [1]
+  Note that the
+  Next-Gen CUDA debugger
+  only supports local debugging. Remote debugging is not currently supported.
+ </p>
+ <h3>
+  Open the Sample Project and Set Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#open-the-sample-project-and-set-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    Open the sample project in the CUDAÂ SDK called
+    matrixMul
+    .
+   </p>
+   <p>
+    For assistance in locating sample applications, see
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#work-with-samples">
+     Working with Samples
+    </a>
+    .
+   </p>
+   <p>
+    You might notice that there are other sample projects with similar names: matrixMul_nvrtc, matrixMul_CUBLAS, matrixMultDrv. The project we use in this example uses the CUDA Runtime API.
+   </p>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    NOTE
+    that this file contains code for the CPU (i.e.
+    <span class="pre">
+     matrixMultiply()
+    </span>
+    ) and GPU (i.e.
+    <span class="pre">
+     matrixMultiplyCUDA()
+    </span>
+    , any function specified with a
+    <span class="pre">
+     __global__
+    </span>
+    or
+    <span class="pre">
+     __device__
+    </span>
+    keyword).
+   </p>
+   <p>
+    The
+    Legacy CUDA debugger
+    only supports debugging GPU CUDA kernels
+   </p>
+   <p>
+    The
+    Next-Gen CUDA debugger
+    allows you to debug both CPU and GPU code.
+   </p>
+  </li>
+  <li>
+   <p>
+    First, letâs set some breakpoints in GPUÂ code.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      Open the file called
+      <span class="pre">
+       matrixMul.cu
+      </span>
+      , and find the CUDA kernel function
+      <span class="pre">
+       matrixMulCUDA()
+      </span>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      Set a breakpoint at:
+     </p>
+     <pre><span class="kt">int</span><span class="n">aStep</span><span class="o">=</span><span class="n">BLOCK_SIZE</span>
+</pre>
+    </li>
+    <li>
+     <p>
+      Set another breakpoint at the statement that begins with:
+     </p>
+     <pre><span class="k">for</span><span class="p">{</span><span class="kt">int</span><span class="n">a</span><span class="o">=</span><span class="n">aBegin</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">bBegin</span><span class="p">;</span>
+</pre>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    Now, letâs set some breakpoints in CPU code:
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      In the same file,
+      <span class="pre">
+       matrixMul.cu
+      </span>
+      , find the CPU function
+      <span class="pre">
+       matrixMultiply()
+      </span>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      Set one breakpoint at:
+     </p>
+     <pre><span class="k">if</span><span class="p">(</span><span class="n">block_size</span><span class="o">==</span><span class="mi">16</span><span class="p">)</span>
+</pre>
+    </li>
+    <li>
+     <p>
+      Set another breakpoint at the statement that begins with:
+     </p>
+     <pre><span class="n">printf</span><span class="p">(</span><span class="s">"done</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</pre>
+    </li>
+   </ol>
+  </li>
+ </ol>
+ <p>
+  In this section of the walkthrough, you opened the sample project and set breakpoints. Next, we build the sample project and start the debugging session.
+ </p>
+ <h3>
+  Configure for Local or Remote Debugging
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#configure-for-local-or-remote-debugging" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    Initialize the target machine.
+   </p>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    If you are using the Legacy CUDA debugger on a single machine:
+   </p>
+   <p>
+    Nsight Monitor will be launched automatically for you. You can skip this step.
+   </p>
+   <p>
+    If you are using the Next-Gen CUDA debugger:
+   </p>
+   <p>
+    Remote debugging is not currently supported. The target machine is assumed to be localhost. Please go to
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#build-the-sample-and-launch-the-debugger">
+     Build the Sample and Launch the Debugger
+    </a>
+    .
+   </p>
+   <p>
+    On the target machine, start the Nsight Monitor.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      On the target machine, click the Windows Start menu.
+     </p>
+    </li>
+    <li>
+     <p>
+      Scroll down the through the installed programs and select: NVIDIA Corporation &gt; Nsight Monitor.
+     </p>
+    </li>
+   </ol>
+   <p>
+    The Nsight Monitor starts. The Nsight Monitor icon appears in the system tray.
+   </p>
+  </li>
+  <li>
+   <p>
+    On the host machine, configure the project for local or remote debugging.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      In the Solution Explorer, right-click on the project name matrixMul, and select Nsight User Properties. (As an alternative, you can also go to the
+      Project
+      menu &gt;
+      Nsight User Properties
+      .)
+     </p>
+     <p>
+      The
+      User Settings
+      window appears.
+     </p>
+    </li>
+    <li>
+     <p>
+      In the left pane, choose Launch.
+     </p>
+     <p>
+      Local target (default) settings
+     </p>
+    </li>
+    <li>
+     <p>
+      For remote debugging, you can change the Connection name field by replacing
+      <span class="pre">
+       localhost
+      </span>
+      with the address of your target machine (the remote computer where the application to be debugged will run). This can be the IP address of the machine on your local network, or the machine name as recognized on your network (see
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#host-recommended-ip-formatting">
+       Recommended IPÂ Address Formatting
+      </a>
+      for more information).
+     </p>
+     <p>
+      IMPORTANT: Do not use a mapped drive to specify the hostname. For example:
+     </p>
+     <p>
+      WRONG:
+      <span class="pre">
+       M:\
+      </span>
+      CORRECT:
+      <span class="pre">
+       jsmith.mydomain.com
+      </span>
+     </p>
+     <p>
+      Remote Target: TEST-PC-01
+     </p>
+     <p>
+      You can optionally update the default:
+     </p>
+     <ul>
+      <li>
+       <p>
+        Working directory
+        â You can specify the directory you want the target application to use as its working directory. The default working directory is the project directory
+       </p>
+      </li>
+      <li>
+       <p>
+        Command line arguments
+        â specified with a file in the working directory, or directly in this field.
+       </p>
+      </li>
+      <li>
+       <p>
+        Environment
+        â specify environment variables and their values.
+       </p>
+       <p>
+        The debugger will pickup the environment block from the local debugging option in VS properties, when $(Environment) is set in the environment field.
+       </p>
+      </li>
+      <li>
+       <p>
+        Launch Action
+       </p>
+       <ul>
+        <li>
+         <p>
+          Launch Project â launches the current projectâs executable
+         </p>
+        </li>
+        <li>
+         <p>
+          Launch external program â for late debugger attachment
+         </p>
+         <p>
+          Note: Next-Gen CUDA Debugger does not currently support late attach.
+         </p>
+        </li>
+        <li>
+         <p>
+          Application is a launcher â for late debugger attachment to a program launched by another program (ie. game engine).
+         </p>
+         <p>
+          Note: Next-Gen CUDA Debugger does not currently support late attach.
+         </p>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      Click OK
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    Optional: when remote debugging, to abort the launch when a file fails to copy to the remote system, set the Abort on synchronize failure option to âTrue.â
+   </p>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    If you are using the Next-Gen CUDA debugger:
+   </p>
+   <p>
+    The Connection, Launch, and Security options are not currently supported. Please go to
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#build-the-sample-and-launch-the-debugger">
+     Build the Sample and Launch the Debugger
+    </a>
+    .
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , select Nsight Options. The Nsight Options window opens.
+     </p>
+    </li>
+    <li>
+     <p>
+      In the left hand pane, select General.
+     </p>
+    </li>
+    <li>
+     <p>
+      Under the Launch section, set Abort on synchronize failure to True.
+     </p>
+    </li>
+    <li>
+     <p>
+      Click the OK button.
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    Configure the Legacy CUDA Debugger and Legacy CUDA Memory Checker properties.
+   </p>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    If you are using the Next-Gen CUDA debugger:
+   </p>
+   <p>
+    These options are not currently supported. Please go to
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#build-the-sample-and-launch-the-debugger">
+     Build the Sample and Launch the Debugger
+    </a>
+    .
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the Nsight menu select Nsight Options. The Nsight Options window opens.
+     </p>
+    </li>
+    <li>
+     <p>
+      In the left-hand pane, select
+      CUDA
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      Configure the Legacy CUDA settings to suit your debugging needs.
+     </p>
+    </li>
+   </ol>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    NOTE on the CUDA Data Stack feature:
+   </p>
+   <p>
+    On newer architectures, each GPU thread has a private data stack. Normally the required data stack size is determined by the compiler, and usually the driverâs default size is greater than what a kernel will require.
+   </p>
+   <p>
+    However, if a kernel uses a recursive function, the compiler cannot statically determine the data stack size. In such cases the application must call
+    <span class="pre">
+     cuCtxGetLimit()
+    </span>
+    and
+    <span class="pre">
+     cuCtxSetLimit()
+    </span>
+    with
+    <span class="pre">
+     CU_LIMIT_STACK_SIZE
+    </span>
+    to ensure adequate stack space.
+   </p>
+   <p>
+    Setting
+    <span class="pre">
+     CU_LIMIT_STACK_SIZE
+    </span>
+    is normally the responsibility of the application, for release-compiled kernels.
+   </p>
+   <p>
+    Since debug-compiled kernels require extra stack space, the application would require different stack size settings for debug and release.
+   </p>
+   <p>
+    As a convenience, and to avoid polluting application code with debug-kernel-specific code, we have added settings to the CUDA Debugger that will automatically increase your stack size settings while debugging.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  Build the Sample and Launch the Debugger
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#build-the-sample-and-launch-the-debugger" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    On the host machine, build the matrixMul project.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the Visual Studio Build menu, select Rebuild matrixMul.
+     </p>
+     <p>
+      NVIDIA Nsightâ¢ VSE builds the project.
+     </p>
+     <p class="admonition-title">
+      Note
+     </p>
+     <p>
+      You must use the following nvcc compiler switch to generate symbolics information for CUDA kernels:
+     </p>
+     <pre>-G
+</pre>
+     <p>
+      When debugging native CPU code (requires the Next-Gen Debugger), you should also use the
+      <span class="pre">
+       -g,
+      </span>
+      <span class="pre">
+       -0
+      </span>
+      nvcc compiler flags to generate unoptimized code with symbolics information.
+     </p>
+    </li>
+    <li>
+     <p>
+      View the output window for error messages. If the project built successfully, go to the next step. If the project did not build, you need to correct the problem before going to the next step.
+     </p>
+    </li>
+    <li>
+     <p>
+      From the Nsight menu, choose
+     </p>
+     <ul>
+      <li>
+       <p>
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Start CUDA Debugging (Next-Gen)
+       </p>
+       <p>
+        For information on choosing the correct debugger for your system configuration see the
+        <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+         System Requirements
+        </a>
+        page.
+       </p>
+      </li>
+     </ul>
+     <p>
+      Alternatively, you can also choose to:
+     </p>
+     <ul>
+      <li>
+       <p>
+        Right-click on the project, and select
+        Debug
+        &gt;
+        Start CUDA Debugging (Legacy)/(Next-Gen)
+       </p>
+      </li>
+      <li>
+       <p>
+        Click on the
+        Start CUDA Debugging (Legacy)/(Next-Gen)
+        toolbar icon.
+       </p>
+       <p>
+        Show/hide this icon group by right-clicking on the Visual Studio toolbar and toggling
+        Nsight CUDA Debug
+        .
+       </p>
+      </li>
+      <li>
+       <p>
+        Click on the
+        Start CUDA Debugging (Legacy)/(Next-Gen)
+        toolbar menu item.
+       </p>
+       <p>
+        Show/hide this icon group by right-clicking on the Visual Studio toolbar and toggling
+        Nsight Connections
+        .
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    If you started Legacy CUDA debugging:
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      Youâll notice that on the host machine, a pop-up message indicates that a connection has been made.
+     </p>
+    </li>
+    <li>
+     <p>
+      Note that with a remote debugging configuration, the Nsight Monitor must be started prior to debugging. However, in a local debugging setup, the Nsight Monitor will launch automatically when the CUDA Debugger is started.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ol>
+ <p>
+  Youâve started the debugging session. In the next section of this walkthrough, weâll look at some of the windows that you typically inspect during a debugging session.
+ </p>
+ <p class="rubric" id="edit-the-cu-file-properties">
+  Edit the .cu File Properties
+ </p>
+ <p>
+  In Visual Studio, you may have a dependency fail because the properties of the .cu file are configured incorrectly. To workaround this issue, use the following steps.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Right-click on the included .cu file and select
+    Properties
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Change
+    Item Type
+    to
+    C/C++ header
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Ensure that the
+    Excluded from Build
+    property is set to
+    No
+    .
+   </p>
+  </li>
+ </ol>
+ <p class="rubric" id="inspect-values-of-variables">
+  Inspect Values of Variables
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start the CUDA Debugger.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the Nsight menu in Visual Studio, select either:
+     </p>
+     <ul>
+      <li>
+       <p>
+        Start CUDA Debugging (Next-Gen)
+       </p>
+      </li>
+      <li>
+       <p>
+        Start CUDA Debugging (Legacy)
+       </p>
+       <p>
+        For information on choosing the correct debugger for your system configuration, see
+        <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+         System Requirements
+        </a>
+        .
+       </p>
+       <p>
+        Alternatively, you can also choose to:
+       </p>
+       <ul>
+        <li>
+         <p>
+          Right-click on the project, and select
+          Debug
+          &gt;
+          Start CUDA Debugging (Legacy)/(Next-Gen)
+         </p>
+        </li>
+        <li>
+         <p>
+          Click on the
+          Start CUDA Debugging (Legacy)/(Next-Gen)
+          toolbar icon.
+         </p>
+         <p>
+          Show/hide this icon group by right-clicking on the Visual Studio toolbar and toggling
+          Nsight CUDA Debug
+          .
+         </p>
+        </li>
+        <li>
+         <p>
+          Click on the
+          Start CUDA Debugging (Legacy)/(Next-Gen)
+          toolbar menu item.
+         </p>
+         <p>
+          Show/hide this icon group by right-clicking on the Visual Studio toolbar and toggling
+          Nsight Connections
+          .
+         </p>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt; Locals.
+   </p>
+   <p>
+    The Locals window opens. The Locals window displays the variables and their values in the current lexical scope.
+   </p>
+  </li>
+ </ol>
+ <p>
+  NOTE: You cannot change the value in GPU memory by editing the value in the Locals window.
+ </p>
+ <p class="rubric" id="inspect-values-in-memory">
+  Inspect Values in Memory
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start the CUDA Debugger.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      From the Nsight menu in Visual Studio, choose either:
+     </p>
+     <ul>
+      <li>
+       <p>
+        Start CUDA Debugging (Next-Gen)
+       </p>
+      </li>
+      <li>
+       <p>
+        Start CUDA Debugging (Legacy)
+       </p>
+       <p>
+        For information on choosing the correct debugger for your system configuration, see
+        <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+         System Requirements
+        </a>
+        .
+       </p>
+       <p>
+        Alternatively, you can also choose to:
+       </p>
+       <ul>
+        <li>
+         <p>
+          Right-click on the project, and select
+          Debug
+          &gt;
+          Start CUDA Debugging (Legacy)/(Next-Gen)
+         </p>
+        </li>
+        <li>
+         <p>
+          Click on the
+          Start CUDA Debugging (Legacy)/(Next-Gen)
+          toolbar icon.
+         </p>
+         <p>
+          Show/hide this icon group by right-clicking on the Visual Studio toolbar and toggling
+          Nsight CUDA Debug
+          .
+         </p>
+        </li>
+        <li>
+         <p>
+          Click on the
+          Start CUDA Debugging (Legacy)/(Next-Gen)
+          toolbar menu item.
+         </p>
+         <p>
+          Show/hide this icon group by right-clicking on the Visual Studio toolbar and toggling
+          Nsight Connections.
+         </p>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt; Memory &gt; Memory Window 1.
+   </p>
+   <p>
+    The Memory window opens.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click and drag a variable from the Locals window onto the Memory window.
+   </p>
+   <p>
+    The memory window displays the values at the address that corresponds to the variable (or pointer).
+   </p>
+  </li>
+  <li>
+   <p>
+    When viewing memory in
+    <span class="pre">
+     __local__
+    </span>
+    ,
+    <span class="pre">
+     __const__
+    </span>
+    or
+    <span class="pre">
+     __shared__
+    </span>
+    make sure the Visual Studio Memory view is set to Re-evaluate automatically. This will ensure that the memory shown is for the correct memory space. Without this, the display can change to an address which defaults to global memory.
+   </p>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    You cannot change the value in GPU memory by editing the value in the Memory window.
+   </p>
+  </li>
+ </ol>
+ <p class="rubric" id="inspect-values-of-sass-indexed-constants">
+  Inspect Values of SASS Indexed Constants
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt; Disassembly, and set the
+    CUDA Disassembly
+    for
+    SASS
+    .
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      SASS is a GPU architecture specific disassembly and its implementation is subject to change, therefore not documented by NVIDIA, although it is similar to PTX.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    From the Nsight menu, ensure
+    Break on Launch
+    is set.
+   </p>
+  </li>
+  <li>
+   <p>
+    Start the CUDA Debugger:
+   </p>
+   <ul class="simple">
+    <li>
+     <p>
+      From the Nsight menu in Visual Studio, select:
+      Start CUDA Debugging (Next-Gen)
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      Execution will stop at the first kernel launch.
+     </p>
+    </li>
+    <li>
+     <p>
+      Note that launch user kernel parameter constants are represented in the disassembly view as
+      c[bank][offset]
+      .
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt;
+    Watch
+    .
+   </p>
+   <ul>
+    <li>
+     <p>
+      Add the indexed constants in order to view their values.
+     </p>
+    </li>
+    <li>
+     <p>
+      The
+      c[bank][offset]
+      notation refers to locations in constant memory.
+     </p>
+    </li>
+    <li>
+     <p>
+      Indexed constants may be found elsewhere and are heavily used to reference:
+     </p>
+     <ol class="loweralpha simple">
+      <li>
+       <p>
+        Per module constant variables
+       </p>
+      </li>
+      <li>
+       <p>
+        Per module constant literals (const double = 1.0) that cannot be encoded directly into instructions
+       </p>
+      </li>
+      <li>
+       <p>
+        Per launch user kernel parameters (up to 4KB)
+       </p>
+      </li>
+      <li>
+       <p>
+        Per launch driver kernel parameters (local memory base address, GridDim, BlockDim)
+       </p>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      The bank for module level constants will be different from per kernel launch constants.
+     </p>
+    </li>
+    <li>
+     <p>
+      The banks and offsets will differ between GPU architectures.
+     </p>
+    </li>
+    <li>
+     <p>
+      The Next-Gen CUDA debugger can also read module constants (bank=0, c[0][#]) in the memory view using the syntax (constant int*)0. For c[0][0x100] use (constant int*)0x100.
+     </p>
+    </li>
+    <li>
+     <p>
+      The Next-Gen CUDA debugger can also view the 4KiB of kernel parameters using (params int*)0. This maps to c[3][0x140] or c[3][0x160] depending on the architecture.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ol>
+ <p class="rubric" id="see-also">
+  See Also
+ </p>
+ <p>
+  How Tos
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html#launch-cuda-debugger">
+     How To: Launch the CUDA Debugger
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html#breakpoints">
+     How To: Set GPU Breakpoints
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#setup-local-headless-debugging">
+     How To: Setup Local Headless GPU Debugging
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#specify-debugger-context">
+     How To: Specify Debugger Context
+    </a>
+   </p>
+  </li>
+ </ul>
+ <p>
+  Reference
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/reference/index.html#tesla-compute-cluster">
+     Tesla Compute Cluster (TCC)
+    </a>
+   </p>
+  </li>
+ </ul>
+ <h2>
+  Tutorial: Using the CUDA Debugger
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#tutorial-using-the-cuda-debugger" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  In the following tutorial we look at how to use some of the basic features of the CUDA Debugger. For the purpose of this tutorial, we use a sample application called Matrix Multiply, but you can follow the same procedures, using your own source.
+ </p>
+ <p>
+  This tutorial covers how to debug an application locally. This means that you will need to have the NVIDIA Nsightâ¢ VSE host software running on a machine with Visual Studio, and have the Nsight Monitor also running on the same machine.
+ </p>
+ <p>
+  Make sure that the machine you use meets the system requirements. For more information, see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#system-requirements">
+   System Requirements for NVIDIA Nsight Software
+  </a>
+  .
+ </p>
+ <p>
+  That will be our first exercise in this tutorial: configuring a machine for local debugging. In this tutorial:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#tutorial-1-open-build">
+     EXERCISE 1
+    </a>
+    : Open A Project And Build The Executable
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#tutorial-2-set-breakpoints">
+     EXERCISE 2
+    </a>
+    : Set Breakpoints
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#tutorial-3-run-cuda-debugger">
+     EXERCISE 3
+    </a>
+    : Run The CUDA Debugger And Inspect Variables
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#tutorial-4-run-memory-checker">
+     EXERCISE 4
+    </a>
+    : Run The Memory Checker
+   </p>
+  </li>
+ </ul>
+ <h3>
+  EXERCISE 1: Open a Project and Build an Executable
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-1-open-a-project-and-build-an-executable" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Letâs open the sample project matrixMul. This is a simple CUDA-based application that multiplies 2 matrices. The algorithms in the source code are relatively simple, but will still give you a sense of how the CUDA Debugger works. The matrixMul application is included with the CUDA Toolkit software (see
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#work-with-samples">
+   Working with Samples
+  </a>
+  ).
+ </p>
+ <p>
+  Make sure that you understand the importance of using a CUDA Toolkit that works with NVIDIA Nsightâ¢ VSE.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  CUDA Toolkit: In order to use a project with the NVIDIA Nsightâ¢ VSE tools, we recommend that you use the compiler that ships with the tools. The default installation directory for this version of the compiler is:
+ </p>
+ <pre>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+</pre>
+ <p>
+  The compiler is in a subdirectory labeled by its version, such as:
+ </p>
+ <pre>...\&lt;version_number&gt;\bin\nvcc.exe
+</pre>
+ <p>
+  The NVIDIA Nsightâ¢ VSE tools work best with this version of the compiler. However, the tools also work with the standard toolkit. Whichever compiler you use, the CUDA Toolkit that you use to compile your CUDA C code must support the following switch to generate symbolics information for CUDA kernels:
+  <span class="pre">
+   -G
+  </span>
+  .
+ </p>
+ <p>
+  It is also recommended that you use the
+  <span class="pre">
+   -g
+  </span>
+  <span class="pre">
+   -0
+  </span>
+  nvcc flags to generate unoptimized code with symbolics information for the native host side code, when using the Next-Gen Debugger.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Open the sample project called matrixMul.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      Browse to
+     </p>
+     <pre>C:\ProgramData\NVIDIA Corporation\CUDA Samples\&lt;version_number&gt;
+</pre>
+    </li>
+    <li>
+     <p>
+      Here you will find a number of sample projects, with supported Visual Studio version projects and solutions.
+     </p>
+    </li>
+    <li>
+     <p>
+      Browse to the
+     </p>
+     <pre>C:\ProgramData\NVIDIA Corporation\CUDA Samples\&lt;version_number&gt;\0_Simple\MatrixMul
+</pre>
+    </li>
+    <li>
+     <p>
+      Double-click on the
+     </p>
+     <pre>matrixMul_vs20YY.sln
+</pre>
+     <p>
+      file for your version of Visual Studio
+     </p>
+    </li>
+    <li>
+     <p>
+      Visual Studio starts. The matrixMul project opens. You might notice that 0_Simple contains other sample project with a similar names, such as matrixMulDrv. This project uses the CUDA driver API. The project we use in this example uses CUDART (CUDA Runtime API).
+     </p>
+    </li>
+   </ol>
+  </li>
+  <li>
+   <p>
+    Build the matrixMul project.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      From the Visual Studio Build menu, select Rebuild matrixMul. NVIDIA Nsightâ¢ VSE builds the project.
+     </p>
+    </li>
+    <li>
+     <p>
+      View the output window for error messages. If the project built successfully, go to the next step. If the project did not build, you need to correct the problem before going to the next step.
+     </p>
+    </li>
+   </ol>
+  </li>
+ </ol>
+ <p>
+  You have now successfully opened the project and built the matrixMul executable.
+ </p>
+ <h3>
+  EXERCISE 2: Set Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-2-set-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Before we run the matrixMul application, letâs set some breakpoints at key places in the source code. This will cause the CUDA Debugger to pause execution of the target application at those points, and give us an opportunity to inspect the values of variables and the state of each thread.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Open the file called
+    <span class="pre">
+     matrixMul_kernel.cu
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Set a breakpoint in
+    <span class="pre">
+     matrixMul_kernel.cu
+    </span>
+    at the statement:
+   </p>
+   <pre><span class="kt">int</span><span class="n">aBegin</span><span class="o">=</span><span class="n">wA</span><span class="o">*</span><span class="n">BLOCK_SIZE</span><span class="o">*</span><span class="n">by</span><span class="p">;</span>
+</pre>
+   <p>
+    You can also use any of the other various methods that Visual Studio provides to set breakpoints. Visual Studio marks the location of the breakpoint with a red circle (glyph).
+   </p>
+  </li>
+  <li>
+   <p>
+    Letâs set another breakpoint. Set a breakpoint at the statement that begins:
+   </p>
+   <pre><span class="kt">int</span><span class="n">aStep</span><span class="o">=</span><span class="n">BLOCK_SIZE</span><span class="p">;</span>
+</pre>
+  </li>
+  <li>
+   <p>
+    Letâs set another breakpoint at:
+   </p>
+   <pre><span class="kt">int</span><span class="nf">BS</span><span class="p">(</span><span class="n">ty</span><span class="p">,</span><span class="n">tx</span><span class="p">)</span><span class="o">=</span><span class="n">B</span><span class="p">[</span><span class="n">b</span><span class="o">+</span><span class="n">wB</span><span class="o">*</span><span class="n">ty</span><span class="o">+</span><span class="n">tx</span><span class="p">];</span>
+</pre>
+   <p>
+    This particular breakpoint will be interesting because it occurs on a line of source code immediately preceding the
+    <span class="pre">
+     _synchthreads
+    </span>
+    statement.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  EXERCISE 3: Run the CUDA Debugger and Inspect Variables
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-3-run-the-cuda-debugger-and-inspect-variables" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  Letâs start the CUDA Debugger and take a look at variables and memory at the breakpoints we set.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Start the Nsight Monitor.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      On the target machine, click the Windows Start menu.
+     </p>
+    </li>
+    <li>
+     <p>
+      Scroll down the through the installed programs and select: NVIDIA Corporation &gt; Nsight Monitor.
+     </p>
+    </li>
+   </ol>
+   <p>
+    The Nsight Monitor starts. The monitor icon appears in the system tray.
+   </p>
+  </li>
+  <li>
+   <p>
+    Start the CUDA Debugger. From the Nsight menu in Visual Studio, select Start CUDA Debugging. (Alternately, you can also right-click on the project and choose Start CUDA Debugging.)
+   </p>
+   <p>
+    The CUDA Debugger starts. Notice that a popup message indicates that a connection has been made. The debugger start the matrixMul application. Execution continues until the debugger encounters the first breakpoint, at which point the debugger pauses execution.
+   </p>
+   <p>
+    You cannot use F5 to start the CUDA Debugger unless you change the key bindings. The default key binding in Visual Studio for the F5 key is to start the native debugger (CPU debugger). However, once the CUDA Debugger starts, it will respond to the other key bindings that affect run control (such as F11 and F12).
+   </p>
+  </li>
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt; Locals. The Locals window opens. The Locals window displays the variables and their values in the current lexical scope. Notice the value of the variable aBegin in the Locals window.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click the Step Into icon or press F11.
+   </p>
+   <p>
+    Notice that the value of the variable aBegin changed. The color red indicates that the value changed as a result of the last instruction executed, which in this case was the statement that had the first breakpoint.
+   </p>
+   <p>
+    Keep in mind that, unlike using the native debugger on CPU code, you cannot change the value in GPU memory by editing the value in the Locals window.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click the Run icon or press F5.
+   </p>
+  </li>
+ </ol>
+ <p>
+  The CUDA Debugger resumes execution of the matrixMul application, and pauses before executing the instruction on the line of source code at the next breakpoint. Before we continue execution, letâs take a look at the values in memory.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the Debug menu, choose Windows &gt; Memory &gt; Memory Window 1. The Memory window opens.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click and drag a variable from the Locals window onto the Memory window. The memory window displays the values at the address that corresponds to the variable (or pointer).
+   </p>
+  </li>
+ </ol>
+ <p>
+  When viewing memory in
+  <span class="pre">
+   __local__
+  </span>
+  ,
+  <span class="pre">
+   __const__
+  </span>
+  or
+  <span class="pre">
+   __shared__
+  </span>
+  make sure the Visual Studio Memory view is set to Re-evaluate automatically. This will ensure that the memory shown is for the correct memory space. Without this, the display can change to an address which defaults to global memory.
+ </p>
+ <table class="docutils align-default">
+  <tr class="row-odd">
+   <td>
+    <p>
+     Note:
+    </p>
+   </td>
+   <td>
+    <p>
+     You cannot change the value in GPU memory by editing the value in the Memory window.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3>
+  EXERCISE 4: Run the Memory Checker
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#exercise-4-run-the-memory-checker" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The CUDA Memory Checker keeps track of all memory allocations. to ensure that invalid memory locations are not accessed by the target application.
+ </p>
+ <p>
+  Writing to an out-of-bounds memory location in a CUDA kernel launch causes the GPU to terminate the launch, and places the CUDA context in a permanent error state. This results in all CUDA API functions returning an error code, such as CUDA_ERROR_UNKNOWN. The coding errors that lead to invalid memory access can been difficult to debug without a memory checker.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    From the Nsight menu, select Enable CUDA Memory Checker. A checkmark indicates that the Memory Checker is enabled.
+   </p>
+  </li>
+  <li>
+   <p>
+    Start the CUDA Debugger.
+   </p>
+   <ol class="loweralpha">
+    <li>
+     <p>
+      Make sure that the Nsight Monitor is running on the target machine (either a remote machine or localhost, depending on your configuration).
+     </p>
+    </li>
+    <li>
+     <p>
+      From Nsight menu, select Start CUDA Debugging. (Or right-click on the project and choose Start CUDA Debugging.)
+     </p>
+     <p>
+      The CUDA Debugger starts and launches the target application.
+     </p>
+    </li>
+   </ol>
+  </li>
+ </ol>
+ <h2>
+  Other Topics
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html#other-topics" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <table class="docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     CUDA Debugger
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html">
+      Build and Run
+     </a>
+    </p>
+    <p>
+     <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html">
+      Control GPU Execution
+     </a>
+    </p>
+    <p>
+     <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html">
+      Inspect State
+     </a>
+    </p>
+    <p>
+     <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html">
+      Advanced Topics
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p class="rubric-h1 rubric">
+  Notices
+ </p>
+ <p class="rubric-h2 rubric">
+  Notice
+ </p>
+ <p>
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+ </p>
+ <p>
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems without express written approval of NVIDIA Corporation.
+ </p>
+ <p class="rubric-h2 rubric">
+  Trademarks
+ </p>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jun 03, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

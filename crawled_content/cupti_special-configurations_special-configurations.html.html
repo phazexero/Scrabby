@@ -1,0 +1,278 @@
+<html><head><title>4. Special Configurations — Cupti 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cupti/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/index.html">
+    CUPTI
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/overview/overview.html">
+    Overview
+   </a>
+  </li>
+ </ul>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/release-notes/release-notes.html">
+    1. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/main/main.html">
+    2. Usage
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/library-support/library-support.html">
+    3. Library support
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html">
+    4. Special Configurations
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#multi-instance-gpu-mig">
+      4.1. Multi-Instance GPU (MIG)
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#nvidia-virtual-gpu-vgpu">
+      4.2. NVIDIA Virtual GPU (vGPU)
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#windows-subsystem-for-linux-wsl">
+      4.3. Windows Subsystem for Linux (WSL)
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/modules.html">
+    5. Modules
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/data-structures.html">
+    6. Data Structures
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/namespaces.html">
+    7. Namespaces
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/copyright-and-licenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/notices-header/notices-header.html">
+    Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cupti/index.html">
+  Cupti
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cupti/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    4.
+   </span>
+   Special Configurations
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.2.0 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cupti">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   4.
+  </span>
+  Special Configurations
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#special-configurations" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <h2>
+  <span class="section-number">
+   4.1.
+  </span>
+  Multi-Instance GPU (MIG)
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#multi-instance-gpu-mig" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  Multi-Instance GPU (MIG) is a feature that allows a GPU to be partitioned into multiple CUDA devices. The partitioning is carried out on two levels: First, a GPU can be split into one or multiple GPU Instances. Each GPU Instance claims ownership of one or more streaming multiprocessors (SM), a subset of the overall GPU memory, and possibly other GPU resources, such as the video encoders/decoders. Second, each GPU Instance can be further partitioned into one or more Compute Instances. Each Compute Instance has exclusive ownership of its assigned SMs of the GPU Instance. However, all Compute Instances within a GPU Instance share the GPU Instanceâs memory and memory bandwidth. Every Compute Instance acts and operates as a CUDA device with a unique device ID. See the driver release notes as well as the documentation for the
+  <span class="pre">
+   nvidia-smi
+  </span>
+  CLI tool for more information on how to configure MIG instances.
+ </p>
+ <p>
+  From the profiling perspective, a Compute Instance can be of one of two types:
+  isolated
+  or
+  shared
+  .
+ </p>
+ <p>
+  An
+  isolated
+  Compute Instance owns all of itâs assigned resources and does not share any GPU unit with another Compute Instance. In other words, the Compute Instance is of the same size as its parent GPU Instance and consequently does not have any other sibling Compute Instances. Tracing and Profiling works for isolated Compute Instances.
+ </p>
+ <p>
+  A
+  shared
+  Compute Instance uses GPU resources that can potentially also be accessed by other Compute Instances in the same GPU Instance. Due to this resource sharing, collecting profiling data from shared units is not permitted. Attempts to collect metrics from a shared unit will result in NaN values. Better error reporting will be done in a future release. Collecting metrics from GPU units that are exclusively owned by a shared Compute Instance is still possible. Tracing works for shared Compute Instances.
+ </p>
+ <p>
+  To allow users to determine which metrics are available on a target device, new APIs have been added which can be used to query counter availability before starting the profiling session. See APIs
+  <span class="pre">
+   NVPW_RawMetricsConfig_SetCounterAvailability
+  </span>
+  and
+  <span class="pre">
+   cuptiProfilerGetCounterAvailability
+  </span>
+  .
+ </p>
+ <p>
+  All Compute Instances on a GPU share the same clock frequencies. To get consistent metric values with multi-pass collection, it is recommended to lock the GPU clocks during the profiling session. CLI tool
+  <span class="pre">
+   nvidia-smi
+  </span>
+  can be used to configure a fixed frequency for the whole GPU by calling
+  <span class="pre">
+   nvidia-smi
+  </span>
+  <span class="pre">
+   --lock-gpu-clocks=tdp,tdp
+  </span>
+  . This sets the GPU clocks to the base TDP frequency until you reset the clocks by calling
+  <span class="pre">
+   nvidia-smi
+  </span>
+  <span class="pre">
+   --reset-gpu-clocks
+  </span>
+  .
+ </p>
+ <h2>
+  <span class="section-number">
+   4.2.
+  </span>
+  NVIDIA Virtual GPU (vGPU)
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#nvidia-virtual-gpu-vgpu" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  CUPTI supports tracing and profiling features on NVIDIA virtual GPUs (vGPUs). Activity, Callback and Profiling APIs are supported but Event and Metric APIs are not supported on NVIDIA vGPUs. If you want to use profiling features that NVIDIA vGPU supports, you must enable them for each vGPU VM that requires them. These can be enabled by setting a vGPU plugin parameter
+  <span class="pre">
+   enable_profiling
+  </span>
+  . How to set the parameter for a vGPU VM depends on the hypervisor that you are using. Tracing is enabled by default, it doesnât require any specific setting. However tracing results might not be accurate after virtual machine (VM) migration. Therefore it is recommended to set the vGPU plugin parameter
+  <span class="pre">
+   enable_profiling
+  </span>
+  for accurate results. Refer to the NVIDIA Virtual GPU Software documentation for the list of
+  <a class="reference external" href="https://docs.nvidia.com/grid/latest/grid-vgpu-user-guide/index.html#cuda-open-cl-support-vgpu">
+   supported GPUs
+  </a>
+  , how to
+  <a class="reference external" href="https://docs.nvidia.com/grid/latest/grid-vgpu-user-guide/index.html#enabling-cuda-toolkit-profilers-vgpu">
+   enable profiling features
+  </a>
+  using the vGPU plugin parameter and for
+  <a class="reference external" href="https://docs.nvidia.com/grid/latest/grid-vgpu-user-guide/index.html#limitations-with-cuda-toolkit-profilers-enabled">
+   limitations
+  </a>
+  on use of CUPTI with NVIDIA vGPU.
+ </p>
+ <h2>
+  <span class="section-number">
+   4.3.
+  </span>
+  Windows Subsystem for Linux (WSL)
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html#windows-subsystem-for-linux-wsl" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  WSL or Windows Subsystem for Linux is a Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 10 and later OS builds. CUPTI supports tracing APIs
+  Activity
+  and
+  Callback
+  on the second generation of WSL (WSL 2) on Volta and later GPU architectures. Profiler APIs
+  Event
+  and
+  Metric
+  are not supported on WSL while
+  Profiling
+  and
+  PC Sampling
+  APIs are only supported on WSL 2 and Windows 11 systems.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

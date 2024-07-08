@@ -1,0 +1,739 @@
+<html><head><title>2. Half Precision Intrinsics â CUDA Math API Reference Manual 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__FP8.html">
+    1. FP8 Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html">
+    2. Half Precision Intrinsics
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF__CONSTANTS.html">
+      2.1. Half Arithmetic Constants
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__ARITHMETIC.html">
+      2.2. Half Arithmetic Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__COMPARISON.html">
+      2.3. Half Comparison Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__FUNCTIONS.html">
+      2.4. Half Math Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__MISC.html">
+      2.5. Half Precision Conversion and Data Movement
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF2__ARITHMETIC.html">
+      2.6. Half2 Arithmetic Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF2__COMPARISON.html">
+      2.7. Half2 Comparison Functions
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF2__FUNCTIONS.html">
+      2.8. Half2 Math Functions
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__BFLOAT16.html">
+    3. Bfloat16 Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__SINGLE.html">
+    4. Single Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SINGLE.html">
+    5. Single Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__DOUBLE.html">
+    6. Double Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html">
+    7. Double Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html">
+    8. Type Casting Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INT.html">
+    9. Integer Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__INT.html">
+    10. Integer Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SIMD.html">
+    11. SIMD Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/structs.html">
+    12. Structs
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/notices.html">
+    13. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+  CUDA Math API Reference Manual
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   <span class="section-number">
+    2.
+   </span>
+   Half Precision Intrinsics
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/CUDA_Math_API.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   2.
+  </span>
+  Half Precision Intrinsics
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#half-precision-intrinsics" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p id="group__cuda__math__intrinsic__half">
+  This section describes half precision intrinsic functions.
+ </p>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program. All of the functions defined here are available in device code. Some of the functions are also available to host compilers, please refer to respective functionsâ documentation for details.
+ </p>
+ <p>
+  NOTE: Aggressive floating-point optimizations performed by host or device compilers may affect numeric behavior of the functions implemented in this header.
+ </p>
+ <p>
+  The following macros are available to help users selectively enable/disable various definitions present in the header file:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <span class="pre">
+     CUDA_NO_HALF
+    </span>
+    - If defined, this macro will prevent the definition of additional type aliases in the global namespace, helping to avoid potential conflicts with symbols defined in the user program.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     __CUDA_NO_HALF_CONVERSIONS__
+    </span>
+    - If defined, this macro will prevent the use of the C++ type conversions (converting constructors and conversion operators) that are common for built-in floating-point types, but may be undesirable for
+    <span class="pre">
+     half
+    </span>
+    which is essentially a user-defined type.
+   </p>
+  </li>
+  <li>
+   <p>
+    <span class="pre">
+     __CUDA_NO_HALF_OPERATORS__
+    </span>
+    and
+    <span class="pre">
+     __CUDA_NO_HALF2_OPERATORS__
+    </span>
+    - If defined, these macros will prevent the inadvertent use of usual arithmetic and comparison operators. This enforces the storage-only type semantics and prevents C++ style computations on
+    <span class="pre">
+     half
+    </span>
+    and
+    <span class="pre">
+     half2
+    </span>
+    types.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric-h2 rubric">
+  Groups
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF__CONSTANTS.html#group__cuda__math__intrinsic__half__constants">
+  <span class="std std-ref">
+   Half Arithmetic Constants
+  </span>
+ </a>
+ <p>
+  To use these constants, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__ARITHMETIC.html#group__cuda__math____half__arithmetic">
+  <span class="std std-ref">
+   Half Arithmetic Functions
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__COMPARISON.html#group__cuda__math____half__comparison">
+  <span class="std std-ref">
+   Half Comparison Functions
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__FUNCTIONS.html#group__cuda__math____half__functions">
+  <span class="std std-ref">
+   Half Math Functions
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF__MISC.html#group__cuda__math____half__misc">
+  <span class="std std-ref">
+   Half Precision Conversion and Data Movement
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF2__ARITHMETIC.html#group__cuda__math____half2__arithmetic">
+  <span class="std std-ref">
+   Half2 Arithmetic Functions
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF2__COMPARISON.html#group__cuda__math____half2__comparison">
+  <span class="std std-ref">
+   Half2 Comparison Functions
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH____HALF2__FUNCTIONS.html#group__cuda__math____half2__functions">
+  <span class="std std-ref">
+   Half2 Math Functions
+  </span>
+ </a>
+ <p>
+  To use these functions, include the header file
+  <span class="pre">
+   cuda_fp16.h
+  </span>
+  in your program.
+ </p>
+ <p class="rubric-h2 rubric">
+  Structs
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#struct____half">
+  <span class="std std-ref">
+   __half
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#struct____half">
+   <span class="std std-ref">
+    __half
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#struct____half2">
+  <span class="std std-ref">
+   __half2
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#struct____half2">
+   <span class="std std-ref">
+    __half2
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2__raw.html#struct____half2__raw">
+  <span class="std std-ref">
+   __half2_raw
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2__raw.html#struct____half2__raw">
+   <span class="std std-ref">
+    __half2_raw
+   </span>
+  </a>
+  data type
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half__raw.html#struct____half__raw">
+  <span class="std std-ref">
+   __half_raw
+  </span>
+ </a>
+ <p>
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half__raw.html#struct____half__raw">
+   <span class="std std-ref">
+    __half_raw
+   </span>
+  </a>
+  data type
+ </p>
+ <p class="rubric-h2 rubric">
+  Typedefs
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1gae9346c2e791857fefc93141e8abbb973">
+  <span class="std std-ref">
+   __nv_half
+  </span>
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1ga1b8823b035b23b1e85e62eea2bca7b94">
+  <span class="std std-ref">
+   __nv_half2
+  </span>
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1ga0fc2581a3e84f7a243ac9621d9b72d33">
+  <span class="std std-ref">
+   __nv_half2_raw
+  </span>
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1gaced553ec1d5e052a45d88d8a893d3765">
+  <span class="std std-ref">
+   __nv_half_raw
+  </span>
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1ga3a4b5246a149b3134f45656c14b1f92b">
+  <span class="std std-ref">
+   half
+  </span>
+ </a>
+ <p>
+  This datatype is meant to be the first-class or fundamental implementation of the half-precision numbers format.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1ga1b22ac0f59c836bd0560a50f269de46c">
+  <span class="std std-ref">
+   half2
+  </span>
+ </a>
+ <p>
+  This datatype is meant to be the first-class or fundamental implementation of type for pairs of half-precision numbers.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1ga5ecf930623ba3b275f39169975fdba2d">
+  <span class="std std-ref">
+   nv_half
+  </span>
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   nv_
+  </span>
+  prefixed alias.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#group__cuda__math__intrinsic__half_1ga87a356aba89538b1ad48e4ca356e43aa">
+  <span class="std std-ref">
+   nv_half2
+  </span>
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   nv_
+  </span>
+  prefixed alias.
+ </p>
+ <h2>
+  <span class="section-number">
+   2.9.
+  </span>
+  Typedefs
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#typedefs" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#_CPPv46__half" title="__half">
+  <span class="n">
+   <span class="pre">
+    __half
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __nv_half
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv49__nv_half" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#_CPPv47__half2" title="__half2">
+  <span class="n">
+   <span class="pre">
+    __half2
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __nv_half2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv410__nv_half2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2__raw.html#_CPPv411__half2_raw" title="__half2_raw">
+  <span class="n">
+   <span class="pre">
+    __half2_raw
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __nv_half2_raw
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv414__nv_half2_raw" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half__raw.html#_CPPv410__half_raw" title="__half_raw">
+  <span class="n">
+   <span class="pre">
+    __half_raw
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __nv_half_raw
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv413__nv_half_raw" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   __nv_
+  </span>
+  prefixed alias.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#_CPPv46__half" title="__half">
+  <span class="n">
+   <span class="pre">
+    __half
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    half
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv44half" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is meant to be the first-class or fundamental implementation of the half-precision numbers format.
+ </p>
+ <p>
+  Should be implemented in the compiler in the future. Current implementation is a simple typedef to a respective user-level type with underscores.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#_CPPv47__half2" title="__half2">
+  <span class="n">
+   <span class="pre">
+    __half2
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    half2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv45half2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is meant to be the first-class or fundamental implementation of type for pairs of half-precision numbers.
+ </p>
+ <p>
+  Should be implemented in the compiler in the future. Current implementation is a simple typedef to a respective user-level type with underscores.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half.html#_CPPv46__half" title="__half">
+  <span class="n">
+   <span class="pre">
+    __half
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nv_half
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv47nv_half" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   nv_
+  </span>
+  prefixed alias.
+ </p>
+ <span class="k">
+  <span class="pre">
+   typedef
+  </span>
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____half2.html#_CPPv47__half2" title="__half2">
+  <span class="n">
+   <span class="pre">
+    __half2
+   </span>
+  </span>
+ </a>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nv_half2
+   </span>
+  </span>
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html#_CPPv48nv_half2" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  This datatype is an
+  <span class="pre">
+   nv_
+  </span>
+  prefixed alias.
+ </p>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2007-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

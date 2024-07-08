@@ -1,0 +1,1043 @@
+<html><head><title>Signal Memory Management Functions â npp 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+ </a>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Contents:
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html">
+    What is NPP ?
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#general-conventions">
+    General Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#image-processing-conventions">
+    Image Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/introduction.html#signal-processing-conventions">
+    Signal Processing Conventions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html">
+    Data Types, Structs, Enums, and Constants
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_arithmetic_and_logical_operations.html">
+    Image Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_color_conversion.html">
+    Image Color Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_data_exchange_and_initialization.html">
+    Image Data Exchange And Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_filtering_functions.html">
+    Image Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_geometry_transforms.html">
+    Image Geometry Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_linear_transforms.html">
+    Image Linear Transforms Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_morphological_operations.html">
+    Image Morphological Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_statistics_functions.html">
+    Image Statistics Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_threshold_and_compare_operations.html">
+    Image Threshold And Compare Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/image_memory_management.html">
+    Image Memory Management Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_arithmetic_and_logical_operations.html">
+    Signal Arithmetic And Logical Operations
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_conversion_functions.html">
+    Signal Conversion Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_filtering_functions.html">
+    Signal Filtering Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_initialization.html">
+    Signal Initialization Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_statistical_functions.html">
+    Signal Statistical Functions
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html">
+    Signal Memory Management Functions
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#group__signal__malloc_1signal_malloc">
+      Malloc
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#group__signal__free_1signal_free">
+      Free
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/npp/index.html">
+  npp
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   Signal Memory Management Functions
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v23.05 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/NPP_Library.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  Signal Memory Management Functions
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#signal-memory-management-functions" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p id="group__signal__memory__management">
+  Functions that provide memory management functionality like malloc and free.
+ </p>
+ <h2>
+  Malloc
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#group__signal__malloc_1signal_malloc" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p id="group__signal__malloc_1signal_malloc">
+  Signal-allocator methods for allocating 1D arrays of data in device memory. All allocators have size parameters to specify the size of the signal (1D array) being allocated.
+ </p>
+ <p>
+  The allocator methods return a pointer to the newly allocated memory of appropriate type. If device-memory allocation is not possible due to resource constaints the allocators return 0 (i.e. NULL pointer).
+ </p>
+ <p>
+  All signal allocators allocate memory aligned such that it is beneficial to the performance of the majority of the signal-processing primitives. It is no mandatory however to use these allocators. Any valid CUDA device-memory pointers can be passed to NPP primitives.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-functions">
+  Functions
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8u" title="Npp8u">
+  <span class="n">
+   <span class="pre">
+    Npp8u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_8u
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_8u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit unsigned signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of unsigned chars in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp8s" title="Npp8s">
+  <span class="n">
+   <span class="pre">
+    Npp8s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_8s
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_8s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  8-bit signed signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of (signed) chars in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16u" title="Npp16u">
+  <span class="n">
+   <span class="pre">
+    Npp16u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_16u
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_16u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit unsigned signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of unsigned shorts in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16s" title="Npp16s">
+  <span class="n">
+   <span class="pre">
+    Npp16s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_16s
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_16s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of shorts in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp16sc" title="Npp16sc">
+  <span class="n">
+   <span class="pre">
+    Npp16sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_16sc
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_16sc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  16-bit complex-value signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of 16-bit complex numbers in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32u" title="Npp32u">
+  <span class="n">
+   <span class="pre">
+    Npp32u
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_32u
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_32u" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit unsigned signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of unsigned ints in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32s" title="Npp32s">
+  <span class="n">
+   <span class="pre">
+    Npp32s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_32s
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_32s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit integer signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of ints in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32sc" title="Npp32sc">
+  <span class="n">
+   <span class="pre">
+    Npp32sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_32sc
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_32sc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit complex integer signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of complex integner values in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32f" title="Npp32f">
+  <span class="n">
+   <span class="pre">
+    Npp32f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_32f
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_32f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit float signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of floats in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp32fc" title="Npp32fc">
+  <span class="n">
+   <span class="pre">
+    Npp32fc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_32fc
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_32fc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  32-bit complex float signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of complex float values in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64s" title="Npp64s">
+  <span class="n">
+   <span class="pre">
+    Npp64s
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_64s
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_64s" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit long integer signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of long ints in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64sc" title="Npp64sc">
+  <span class="n">
+   <span class="pre">
+    Npp64sc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_64sc
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_64sc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit complex long integer signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of complex long int values in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64f" title="Npp64f">
+  <span class="n">
+   <span class="pre">
+    Npp64f
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_64f
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_64f" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit float (double) signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of doubles in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/npp/nppdefs.html#c.Npp64fc" title="Npp64fc">
+  <span class="n">
+   <span class="pre">
+    Npp64fc
+   </span>
+  </span>
+ </a>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsMalloc_64fc
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="n">
+  <span class="pre">
+   size_t
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   nSize
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsMalloc_64fc" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  64-bit complex complex signal allocator.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    nSize
+    â Number of complex double valuess in the new signal.
+   </p>
+  </li>
+ </ul>
+ Returns
+ <p>
+  A pointer to the new signal. 0 (NULL-pointer) indicates that an error occurred during allocation.
+ </p>
+ <h2>
+  Free
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#group__signal__free_1signal_free" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p id="group__signal__free_1signal_free">
+  Free signal memory.
+ </p>
+ <p class="breathe-sectiondef-title rubric-h3 rubric" id="breathe-section-title-functions">
+  Functions
+ </p>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    nppsFree
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   void
+  </span>
+ </span>
+ <span class="p">
+  <span class="pre">
+   *
+  </span>
+ </span>
+ <span class="n">
+  <span class="pre">
+   pValues
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/npp/signal_memory_management.html#c.nppsFree" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Free method for any signal memory.
+ </p>
+ Parameters
+ <ul class="simple">
+  <li>
+   <p>
+    pValues
+    â A pointer to memory allocated using nppiMalloc_&lt;modifier&gt;.
+   </p>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2009-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

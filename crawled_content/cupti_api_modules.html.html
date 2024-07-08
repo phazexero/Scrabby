@@ -1,0 +1,309 @@
+<html><head><title>5. Modules — Cupti 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cupti/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/index.html">
+    CUPTI
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/overview/overview.html">
+    Overview
+   </a>
+  </li>
+ </ul>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/release-notes/release-notes.html">
+    1. Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/main/main.html">
+    2. Usage
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/library-support/library-support.html">
+    3. Library support
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/special-configurations/special-configurations.html">
+    4. Special Configurations
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cupti/api/modules.html">
+    5. Modules
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__ACTIVITY__API.html">
+      5.1. CUPTI Activity API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__CALLBACK__API.html">
+      5.2. CUPTI Callback API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__CHECKPOINT__API.html">
+      5.3. CUPTI Checkpoint API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__EVENT__API.html">
+      5.4. CUPTI Event API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__METRIC__API.html">
+      5.5. CUPTI Metric API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__PCSAMPLING__API.html">
+      5.6. CUPTI PC Sampling API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__PCSAMPLING__UTILITY.html">
+      5.7. CUPTI PC Sampling Utility API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__PROFILER__API.html">
+      5.8. CUPTI Profiling API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__RESULT__API.html">
+      5.9. CUPTI Result Codes
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__SASS__METRICS__API.html">
+      5.10. CUPTI SASS Metrics API
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__VERSION__API.html">
+      5.11. CUPTI Version
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/data-structures.html">
+    6. Data Structures
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/api/namespaces.html">
+    7. Namespaces
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/copyright-and-licenses/index.html">
+    Copyright and Licenses
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cupti/notices-header/notices-header.html">
+    Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cupti/index.html">
+  Cupti
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cupti/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   <span class="section-number">
+    5.
+   </span>
+   Modules
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v2024.2.0 |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cupti">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   5.
+  </span>
+  Modules
+  <a class="headerlink" href="https://docs.nvidia.com/cupti/api/modules.html#modules" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__ACTIVITY__API.html#group__cupti__activity__api">
+     <span class="std std-ref">
+      CUPTI Activity API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI Activity API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__CALLBACK__API.html#group__cupti__callback__api">
+     <span class="std std-ref">
+      CUPTI Callback API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI Callback API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__CHECKPOINT__API.html#group__cupti__checkpoint__api">
+     <span class="std std-ref">
+      CUPTI Checkpoint API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI Checkpoint API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__EVENT__API.html#group__cupti__event__api">
+     <span class="std std-ref">
+      CUPTI Event API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI Event API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__METRIC__API.html#group__cupti__metric__api">
+     <span class="std std-ref">
+      CUPTI Metric API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI Metric API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__PCSAMPLING__API.html#group__cupti__pcsampling__api">
+     <span class="std std-ref">
+      CUPTI PC Sampling API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI PC Sampling API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__PCSAMPLING__UTILITY.html#group__cupti__pcsampling__utility">
+     <span class="std std-ref">
+      CUPTI PC Sampling Utility API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI PC Sampling Utility API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__PROFILER__API.html#group__cupti__profiler__api">
+     <span class="std std-ref">
+      CUPTI Profiling API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI Profiling API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__RESULT__API.html#group__cupti__result__api">
+     <span class="std std-ref">
+      CUPTI Result Codes
+     </span>
+    </a>
+    : Error and result codes returned by CUPTI functions.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__SASS__METRICS__API.html#group__cupti__sass__metrics__api">
+     <span class="std std-ref">
+      CUPTI SASS Metrics API
+     </span>
+    </a>
+    : Functions, types, and enums that implement the CUPTI SASS Metrics API.
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference internal" href="https://docs.nvidia.com/cupti/api/group__CUPTI__VERSION__API.html#group__cupti__version__api">
+     <span class="std std-ref">
+      CUPTI Version
+     </span>
+    </a>
+    : Function and macro to determine the CUPTI version.
+   </p>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

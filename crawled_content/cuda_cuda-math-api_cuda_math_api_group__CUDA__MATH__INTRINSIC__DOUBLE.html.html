@@ -1,0 +1,5449 @@
+<html><head><title>7. Double Precision Intrinsics â CUDA Math API Reference Manual 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+ </a>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__FP8.html">
+    1. FP8 Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__HALF.html">
+    2. Half Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__BFLOAT16.html">
+    3. Bfloat16 Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__SINGLE.html">
+    4. Single Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SINGLE.html">
+    5. Single Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__DOUBLE.html">
+    6. Double Precision Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html">
+    7. Double Precision Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__CAST.html">
+    8. Type Casting Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INT.html">
+    9. Integer Mathematical Functions
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__INT.html">
+    10. Integer Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__SIMD.html">
+    11. SIMD Intrinsics
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/structs.html">
+    12. Structs
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/notices.html">
+    13. Notices
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cuda-math-api/index.html">
+  CUDA Math API Reference Manual
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/cuda/index.html">
+   </a>
+   Â»
+  </li>
+  <li>
+   <span class="section-number">
+    7.
+   </span>
+   Double Precision Intrinsics
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <span>
+    v12.5 |
+   </span>
+   <a class="reference external" href="https://docs.nvidia.com/cuda/pdf/CUDA_Math_API.pdf">
+    PDF
+   </a>
+   <span>
+    |
+   </span>
+   <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit-archive">
+    Archive
+   </a>
+   <span>
+    Â
+   </span>
+  </li>
+ </ul>
+ <h1>
+  <span class="section-number">
+   7.
+  </span>
+  Double Precision Intrinsics
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#double-precision-intrinsics" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p id="group__cuda__math__intrinsic__double">
+  This section describes double precision intrinsic functions that are only supported in device code.
+ </p>
+ <p>
+  To use these functions you do not need to include any additional header files in your program.
+ </p>
+ <p class="rubric-h2 rubric">
+  Functions
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gad39098ab6fd26648cffe5db8e2a45158">
+  <span class="std std-ref">
+   __dadd_rd
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Add two floating-point values in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga74f3cdb085ac807f35d429ab67aac193">
+  <span class="std std-ref">
+   __dadd_rn
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Add two floating-point values in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga8ef4f73ad7b62ff2e288087e8eb47c35">
+  <span class="std std-ref">
+   __dadd_ru
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Add two floating-point values in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gaf520dfdc3b41b44681740296308e1ed1">
+  <span class="std std-ref">
+   __dadd_rz
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Add two floating-point values in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga8a7184dfc723a76a91e7b087a2a0c494">
+  <span class="std std-ref">
+   __ddiv_rd
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Divide two floating-point values in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gaf22df51b72de1f50fdaa316a47ef2f63">
+  <span class="std std-ref">
+   __ddiv_rn
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Divide two floating-point values in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gaa8b59c6371a7df3735434e313a765ae0">
+  <span class="std std-ref">
+   __ddiv_ru
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Divide two floating-point values in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gabd0f67c5396419f266027fa5be66d5a1">
+  <span class="std std-ref">
+   __ddiv_rz
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Divide two floating-point values in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga0721a748fb3f7a07b75e3ca80c6447e6">
+  <span class="std std-ref">
+   __dmul_rd
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Multiply two floating-point values in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gae77590b36e65f63b157db453ddb37e29">
+  <span class="std std-ref">
+   __dmul_rn
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Multiply two floating-point values in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga339ea2648f77714c87123a9198c899d3">
+  <span class="std std-ref">
+   __dmul_ru
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Multiply two floating-point values in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gadc7aed39944bdacd98df5f30f4918e00">
+  <span class="std std-ref">
+   __dmul_rz
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Multiply two floating-point values in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga76b42ce1d523e8655454a061d0ed3728">
+  <span class="std std-ref">
+   __drcp_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\frac{1}{x}\)
+  </span>
+  in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga36354399debeb6772d61a430dc2ba65e">
+  <span class="std std-ref">
+   __drcp_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\frac{1}{x}\)
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga4c05b47c04839e6ee616c84abe3264e1">
+  <span class="std std-ref">
+   __drcp_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\frac{1}{x}\)
+  </span>
+  in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga036d4c6182e8d98a127e686b46af0d2a">
+  <span class="std std-ref">
+   __drcp_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\frac{1}{x}\)
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga30f36726737fda2d626c0c22119a9e46">
+  <span class="std std-ref">
+   __dsqrt_rd
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\sqrt{x}\)
+  </span>
+  in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gafc059c9318903bb71b8af4c6c5c11cca">
+  <span class="std std-ref">
+   __dsqrt_rn
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\sqrt{x}\)
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gafc3365498bd0f2e3c92cca193b7bd636">
+  <span class="std std-ref">
+   __dsqrt_ru
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\sqrt{x}\)
+  </span>
+  in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gaff77be863e7bde0ce875ba0514a45f7c">
+  <span class="std std-ref">
+   __dsqrt_rz
+  </span>
+ </a>
+ (double x)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(\sqrt{x}\)
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga33557b4e6079b7af6479f00bc967ff66">
+  <span class="std std-ref">
+   __dsub_rd
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Subtract two floating-point values in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga169a4b29f0db2ca1eae3f94ab5953d91">
+  <span class="std std-ref">
+   __dsub_rn
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Subtract two floating-point values in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gab07fbe4d4228acc3fe9366fb41cd7ea4">
+  <span class="std std-ref">
+   __dsub_ru
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Subtract two floating-point values in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gae3db86effaab85115908bfb7f43bce10">
+  <span class="std std-ref">
+   __dsub_rz
+  </span>
+ </a>
+ (double x, double y)
+ <p>
+  Subtract two floating-point values in round-towards-zero mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gacaa00a783aab97d687005b464bcc4b02">
+  <span class="std std-ref">
+   __fma_rd
+  </span>
+ </a>
+ (double x, double y, double z)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(x \times y + z\)
+  </span>
+  as a single operation in round-down mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga57cb4940e3202c0e1302aa71703b7761">
+  <span class="std std-ref">
+   __fma_rn
+  </span>
+ </a>
+ (double x, double y, double z)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(x \times y + z\)
+  </span>
+  as a single operation in round-to-nearest-even mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1gaf4ac27af0c60df25d27c25bcab855a69">
+  <span class="std std-ref">
+   __fma_ru
+  </span>
+ </a>
+ (double x, double y, double z)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(x \times y + z\)
+  </span>
+  as a single operation in round-up mode.
+ </p>
+ <span class="tag-as-table-cell">
+  __device__ double
+ </span>
+ <a class="reference internal" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#group__cuda__math__intrinsic__double_1ga152174d74c12f3d5af74bbb18dd546bd">
+  <span class="std std-ref">
+   __fma_rz
+  </span>
+ </a>
+ (double x, double y, double z)
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \(x \times y + z\)
+  </span>
+  as a single operation in round-towards-zero mode.
+ </p>
+ <h2>
+  <span class="section-number">
+   7.1.
+  </span>
+  Functions
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#functions" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dadd_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dadd_rddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Add two floating-point values in round-down mode.
+ </p>
+ <p>
+  Adds two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  +
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dadd_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dadd_rd(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     -x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( -0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dadd_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dadd_rndd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Add two floating-point values in round-to-nearest-even mode.
+ </p>
+ <p>
+  Adds two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  +
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dadd_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dadd_rn(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     -x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dadd_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dadd_rudd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Add two floating-point values in round-up mode.
+ </p>
+ <p>
+  Adds two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  +
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dadd_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dadd_ru(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     -x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dadd_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dadd_rzdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Add two floating-point values in round-towards-zero mode.
+ </p>
+ <p>
+  Adds two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  +
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dadd_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dadd_rz(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dadd_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     -x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ddiv_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__ddiv_rddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Divide two floating-point values in round-down mode.
+ </p>
+ <p>
+  Divides two floating-point values
+  <span class="pre">
+   x
+  </span>
+  by
+  <span class="pre">
+   y
+  </span>
+  in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  /
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the quotient
+    <span class="pre">
+     x
+    </span>
+    /
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     y
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ddiv_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__ddiv_rndd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Divide two floating-point values in round-to-nearest-even mode.
+ </p>
+ <p>
+  Divides two floating-point values
+  <span class="pre">
+   x
+  </span>
+  by
+  <span class="pre">
+   y
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  /
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the quotient
+    <span class="pre">
+     x
+    </span>
+    /
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     y
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ddiv_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__ddiv_rudd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Divide two floating-point values in round-up mode.
+ </p>
+ <p>
+  Divides two floating-point values
+  <span class="pre">
+   x
+  </span>
+  by
+  <span class="pre">
+   y
+  </span>
+  in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  /
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the quotient
+    <span class="pre">
+     x
+    </span>
+    /
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     y
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __ddiv_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__ddiv_rzdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Divide two floating-point values in round-towards-zero mode.
+ </p>
+ <p>
+  Divides two floating-point values
+  <span class="pre">
+   x
+  </span>
+  by
+  <span class="pre">
+   y
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  /
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the quotient
+    <span class="pre">
+     x
+    </span>
+    /
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __ddiv_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     y
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dmul_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dmul_rddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Multiply two floating-point values in round-down mode.
+ </p>
+ <p>
+  Multiplies two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  *
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the product
+    <span class="pre">
+     x
+    </span>
+    *
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dmul_rd(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dmul_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dmul_rndd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Multiply two floating-point values in round-to-nearest-even mode.
+ </p>
+ <p>
+  Multiplies two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  *
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the product
+    <span class="pre">
+     x
+    </span>
+    *
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dmul_rn(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dmul_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dmul_rudd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Multiply two floating-point values in round-up mode.
+ </p>
+ <p>
+  Multiplies two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  *
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the product
+    <span class="pre">
+     x
+    </span>
+    *
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dmul_ru(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dmul_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dmul_rzdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Multiply two floating-point values in round-towards-zero mode.
+ </p>
+ <p>
+  Multiplies two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  *
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    sign of the product
+    <span class="pre">
+     x
+    </span>
+    *
+    <span class="pre">
+     y
+    </span>
+    is XOR of the signs of
+    <span class="pre">
+     x
+    </span>
+    and
+    <span class="pre">
+     y
+    </span>
+    when neither inputs nor result are NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) is equivalent to __dmul_rz(
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ).
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \infty \)
+    </span>
+    of appropriate sign for
+    <span class="pre">
+     x
+    </span>
+    <span class="math notranslate nohighlight">
+     \( \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dmul_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( 0 \)
+    </span>
+    of appropriate sign for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __drcp_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__drcp_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  in round-down mode.
+ </p>
+ <p>
+  Compute the reciprocal of
+  <span class="pre">
+   x
+  </span>
+  in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __drcp_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__drcp_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p>
+  Compute the reciprocal of
+  <span class="pre">
+   x
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __drcp_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__drcp_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  in round-up mode.
+ </p>
+ <p>
+  Compute the reciprocal of
+  <span class="pre">
+   x
+  </span>
+  in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __drcp_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__drcp_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p>
+  Compute the reciprocal of
+  <span class="pre">
+   x
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \frac{1}{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsqrt_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv410__dsqrt_rdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  in round-down mode.
+ </p>
+ <p>
+  Compute the square root of
+  <span class="pre">
+   x
+  </span>
+  in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsqrt_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv410__dsqrt_rnd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p>
+  Compute the square root of
+  <span class="pre">
+   x
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsqrt_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv410__dsqrt_rud" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  in round-up mode.
+ </p>
+ <p>
+  Compute the square root of
+  <span class="pre">
+   x
+  </span>
+  in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsqrt_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv410__dsqrt_rzd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p>
+  Compute the square root of
+  <span class="pre">
+   x
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Requires compute capability &gt;= 2.0.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="math notranslate nohighlight">
+   \( \sqrt{x} \)
+  </span>
+  .
+ </p>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsub_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dsub_rddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Subtract two floating-point values in round-down mode.
+ </p>
+ <p>
+  Subtracts two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  -
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dsub_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( -0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsub_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dsub_rndd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Subtract two floating-point values in round-to-nearest-even mode.
+ </p>
+ <p>
+  Subtracts two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  -
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dsub_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsub_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dsub_rudd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Subtract two floating-point values in round-up mode.
+ </p>
+ <p>
+  Subtracts two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  -
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dsub_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __dsub_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv49__dsub_rzdd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Subtract two floating-point values in round-towards-zero mode.
+ </p>
+ <p>
+  Subtracts two floating-point values
+  <span class="pre">
+   x
+  </span>
+  and
+  <span class="pre">
+   y
+  </span>
+  in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This operation will never be merged into a single multiply-add instruction.
+ </p>
+ Returns
+ <p>
+  Returns
+  <span class="pre">
+   x
+  </span>
+  -
+  <span class="pre">
+   y
+  </span>
+  .
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __dsub_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     y
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp\infty \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __dsub_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     x
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    for finite
+    <span class="pre">
+     x
+    </span>
+    , including
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __fma_rd
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   z
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv48__fma_rdddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation in round-down mode.
+ </p>
+ <p>
+  Computes the value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single ternary operation, rounding the result once in round-down (to negative infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ Returns
+ <p>
+  Returns the rounded value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __fma_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rd(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( -0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rd(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( -0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y + z \)
+    </span>
+    is exactly zero and
+    <span class="math notranslate nohighlight">
+     \( z \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __fma_rn
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   z
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv48__fma_rnddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation in round-to-nearest-even mode.
+ </p>
+ <p>
+  Computes the value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single ternary operation, rounding the result once in round-to-nearest-even mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ Returns
+ <p>
+  Returns the rounded value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __fma_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rn(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rn(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y + z \)
+    </span>
+    is exactly zero and
+    <span class="math notranslate nohighlight">
+     \( z \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __fma_ru
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   z
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv48__fma_ruddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation in round-up mode.
+ </p>
+ <p>
+  Computes the value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single ternary operation, rounding the result once in round-up (to positive infinity) mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ Returns
+ <p>
+  Returns the rounded value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __fma_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_ru(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_ru(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y + z \)
+    </span>
+    is exactly zero and
+    <span class="math notranslate nohighlight">
+     \( z \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <span class="pre">
+  __device__
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="sig-name descname">
+  <span class="n">
+   <span class="pre">
+    __fma_rz
+   </span>
+  </span>
+ </span>
+ <span class="sig-paren">
+  (
+ </span>
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   x
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   y
+  </span>
+ </span>
+ ,
+ <span class="kt">
+  <span class="pre">
+   double
+  </span>
+ </span>
+ <span class="n sig-param">
+  <span class="pre">
+   z
+  </span>
+ </span>
+ <span class="sig-paren">
+  )
+ </span>
+ <a class="headerlink" href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html#_CPPv48__fma_rzddd" title="Permalink to this definition">
+  ï
+ </a>
+ <p>
+  Compute
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation in round-towards-zero mode.
+ </p>
+ <p>
+  Computes the value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single ternary operation, rounding the result once in round-towards-zero mode.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  For accuracy information see the CUDA C++ Programming Guide, Mathematical Functions Appendix, Intrinsic Functions section.
+ </p>
+ Returns
+ <p>
+  Returns the rounded value of
+  <span class="math notranslate nohighlight">
+   \( x \times y + z \)
+  </span>
+  as a single operation.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    __fma_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rz(
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm \infty \)
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns NaN.
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( +\infty \)
+    </span>
+    ) returns NaN if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is an exact
+    <span class="math notranslate nohighlight">
+     \( -\infty \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="math notranslate nohighlight">
+     \( \mp 0 \)
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y \)
+    </span>
+    is exact
+    <span class="math notranslate nohighlight">
+     \( \pm 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    __fma_rz(
+    <span class="pre">
+     x
+    </span>
+    ,
+    <span class="pre">
+     y
+    </span>
+    ,
+    <span class="pre">
+     z
+    </span>
+    ) returns
+    <span class="math notranslate nohighlight">
+     \( +0 \)
+    </span>
+    if
+    <span class="math notranslate nohighlight">
+     \( x \times y + z \)
+    </span>
+    is exactly zero and
+    <span class="math notranslate nohighlight">
+     \( z \neq 0 \)
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    If either argument is NaN, NaN is returned.
+   </p>
+  </li>
+ </ul>
+ <p class="notices">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright Â© 2007-2024, NVIDIA Corporation &amp; affiliates. All rights reserved.
+ </p>
+ <p>
+  <span class="lastupdated">
+   Last updated on Jul 1, 2024.
+  </span>
+ </p>
+</body>
+</body></html>

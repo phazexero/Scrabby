@@ -1,0 +1,1021 @@
+<html><head><title>Version 418.152.00(Linux)/426.78(Windows) :: NVIDIA Data Center GPU Driver Documentation</title></head><body><body>
+ <span id="company">
+  NVIDIA
+ </span>
+ <span id="site-title">
+  NVIDIA Data Center GPU Driver Documentation
+ </span>
+ Search In:
+ Entire Site
+ Just This Document
+ clear search
+ search
+ <a href="https://docs.nvidia.com/datacenter/tesla/index.html" title="The root of the site.">
+  NVIDIA Data Center GPU
+ </a>
+ <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html" title="Version 418.152.00(Linux)/426.78(Windows)">
+  Version 418.152.00(Linux)/426.78(Windows)
+ </a>
+ <ul>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#driver-highlights">
+    1. Version Highlights
+   </a>
+   <ul>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#fixed-issues">
+      1.1. Fixed Issues
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#known-issues">
+      1.2. Known Issues
+     </a>
+    </li>
+    <li>
+     <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#virtualization">
+      1.3. Virtualization
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#hardware-software-support">
+    2. Hardware and Software Support
+   </a>
+  </li>
+ </ul>
+ <h2>
+  Search Results
+ </h2>
+ Version 418.152.00(Linux)/426.78(Windows)
+                  
+                  
+                  
+                  
+                  (
+ <a href="https://docs.nvidia.com/datacenter/tesla/pdf/tesla-release-notes-418-15200.pdf">
+  PDF
+ </a>
+ )
+                  -
+                  
+                  
+                  
+                  Last updated June 23, 2020
+                  -
+ <a name="abstract" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#abstract" name="abstract" shape="rect">
+   Version 418.152.00(Linux)/426.78(Windows)
+  </a>
+ </h2>
+ <p class="shortdesc">
+  Release notes for the  Release 418 family of NVIDIAÂ® TeslaÂ® Drivers for Linux and
+                        Windows.
+ </p>
+ <p class="p">
+  This edition of Release Notes describes the Release 418 family of NVIDIAÂ® TeslaÂ® Drivers
+                        for Linux and Windows. NVIDIA provides these notes to describe performance improvements,
+                        bug fixes and limitations in each documented version of the driver.
+ </p>
+ <a name="driver-highlights" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#driver-highlights" name="driver-highlights" shape="rect">
+   1. Version Highlights
+  </a>
+ </h2>
+ <p class="p">
+  This section provides highlights of the NVIDIA Tesla 418 Driver, version 418.152.00 for
+                        Linux and 426.78 for Windows. For changes related to the 418 release of the NVIDIA
+                        display driver, review the file "NVIDIA_Changelog" available in the .run installer
+                        packages.
+ </p>
+ <p class="p">
+  Driver release date: 6/24/2020
+ </p>
+ <a name="fixed-issues" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#fixed-issues" name="fixed-issues" shape="rect">
+   1.1. Fixed Issues
+  </a>
+ </h3>
+ <a name="fixed-issues__ul_tyh_hys_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="fixed-issues__ul_tyh_hys_4fb">
+  <li class="li">
+   <p class="p">
+    Various security issues were addressed, for additional details on the med-high
+                                 severity issues please review
+    <a class="xref" href="http://www.nvidia.com/object/product-security.html" shape="rect" target="_blank">
+     NVIDIA Product Security
+    </a>
+    for more
+                                 information.
+   </p>
+  </li>
+ </ul>
+ <a name="known-issues" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#known-issues" name="known-issues" shape="rect">
+   1.2. Known Issues
+  </a>
+ </h3>
+ <h3 class="title sectiontitle">
+  GPU Performance Counters
+ </h3>
+ <p class="p">
+  The use of developer tools from NVIDIA that access various performance counters 
+                              requires administrator privileges. See this
+  <a class="xref" href="https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters" shape="rect" target="_blank">
+   note
+  </a>
+  for more details.
+                              For example, reading NVLink utilization metrics from
+  nvidia-smi (nvidia-smi nvlink -g 0)
+  would require administrator privileges.
+ </p>
+ <h3 class="title sectiontitle">
+  NVML
+ </h3>
+ <p class="p">
+  NVML APIs may report incorrect values for NVLink counters (read/write). This issue 
+                              will be fixed in a later release of the driver.
+ </p>
+ <h3 class="title sectiontitle">
+  NoScanout Mode
+ </h3>
+ <p class="p">
+  NoScanout mode is no longer supported on NVIDIA Tesla products. If NoScanout mode was
+                              previously used, then the following line in the âscreenâ section of
+                              /etc/X11/xorg.conf should be removed to ensure that X server starts on Tesla
+                              products:
+ </p>
+ <pre class="pre screen" xml:space="preserve">Option         "UseDisplayDevice" "None"</pre>
+ <p class="p">
+  Tesla products now support one display of up to 4K resolution.
+ </p>
+ <h3 class="title sectiontitle">
+  Unified Memory Support
+ </h3>
+ <p class="p">
+  Some Unified Memory APIs (for example, CPU page faults) are not supported on Windows
+                              in this version of the driver. Review the CUDA Programming Guide on the system
+                              requirements for Unified Memory
+ </p>
+ <p class="p">
+  CUDA and unified memory is not supported when used with Linux power management states
+                              S3/S4.
+ </p>
+ <h3 class="title sectiontitle">
+  IMPU FRU for Volta GPUs
+ </h3>
+ The driver does not support the IPMI FRU
+                           multi-record information structure for NVLink. See the Design Guide for Tesla P100 and
+                           Tesla V100-SXM2 for more information.
+ <h3 class="title sectiontitle">
+  Video Memory Support
+ </h3>
+ <p class="p">
+  For Windows 7 64-bit, this driver recognizes up to the total available video memory
+                              on Tesla cards for Direct3D and OpenGL applications.
+ </p>
+ <p class="p">
+  For Windows 7 32-bit, this driver recognizes only up to 4 GB of video memory on Tesla
+                              cards for DirectX, OpenGL, and CUDA applications.
+ </p>
+ <h3 class="title sectiontitle">
+  Experimental OpenCL Features
+ </h3>
+ <p class="p">
+  Select features in OpenCL 2.0 are available in the driver for evaluation purposes
+                              only.
+ </p>
+ <p class="p">
+  The following are the features as well as a description of known issues with these
+                              features in the driver:
+ </p>
+ <p class="p">
+  Device side enqueue
+ </p>
+ <a name="known-issues__ul_oq4_3zs_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="known-issues__ul_oq4_3zs_4fb">
+  <li class="li">
+   <p class="p">
+    The current implementation is limited to 64-bit platforms only.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    OpenCL 2.0 allows kernels to be enqueued with global_work_size larger than
+                                    the compute capability of the NVIDIA GPU. The current implementation
+                                    supports only combinations of global_work_size and local_work_size that are
+                                    within the compute capability of the NVIDIA GPU. The maximum supported CUDA
+                                    grid and block size of NVIDIA GPUs is available at
+    <a class="xref" href="http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#computecapabilities" shape="rect" target="_blank">
+     http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#computecapabilities
+    </a>
+    .
+                                    For a given grid dimension, the global_work_size can be determined by CUDA
+                                    grid size x CUDA block size.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    For executing kernels (whether from the host or the device), OpenCL 2.0
+                                    supports non-uniform ND-ranges where global_work_size does not need to be
+                                    divisible by the local_work_size. This capability is not yet supported in
+                                    the NVIDIA driver, and therefore not supported for device side kernel
+                                    enqueues.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Shared virtual memory
+ </p>
+ <a name="known-issues__ul_sq4_3zs_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="known-issues__ul_sq4_3zs_4fb">
+  <li class="li">
+   <p class="p">
+    The current implementation of shared virtual memory is limited to 64-bit
+                                    platforms only.
+   </p>
+  </li>
+ </ul>
+ <a name="virtualization" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title topictitle2">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#virtualization" name="virtualization" shape="rect">
+   1.3. Virtualization
+  </a>
+ </h3>
+ <p class="p">
+  To make use of GPU passthrough with virtual machines running Windows and Linux, the
+                           hardware platform must support the following features:
+ </p>
+ <a name="virtualization__ul_usn_ztt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="virtualization__ul_usn_ztt_4fb">
+  <li class="li">
+   <p class="p">
+    A CPU with hardware-assisted instruction set virtualization: Intel VT-x or
+                                 AMD-V.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Platform support for I/O DMA remapping.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On Intel platforms the DMA remapper technology is called Intel VT-d.
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    On AMD platforms it is called AMD IOMMU.
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Support for these feature varies by processor family, product, and system, and should be
+                           verified at the manufacturer's website.
+ </p>
+ <h3 class="title sectiontitle">
+  Supported Hypervisors
+ </h3>
+ <p class="p">
+  The following hypervisors are supported:
+ </p>
+ <a name="virtualization__table" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="virtualization__table" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e276" rowspan="1" valign="top" width="59.56873315363881%">
+    Hypervisor
+   </th>
+   <th class="entry" colspan="1" id="d54e279" rowspan="1" valign="top" width="40.43126684636118%">
+    Notes
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e276" rowspan="1" valign="top" width="59.56873315363881%">
+    Citrix XenServer
+   </td>
+   <td class="entry" colspan="1" headers="d54e279" rowspan="1" valign="top" width="40.43126684636118%">
+    Version 6.0 and later
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e276" rowspan="1" valign="top" width="59.56873315363881%">
+    VMware vSphere (ESX / ESXi)
+   </td>
+   <td class="entry" colspan="1" headers="d54e279" rowspan="1" valign="top" width="40.43126684636118%">
+    Version 5.1 and later.
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e276" rowspan="1" valign="top" width="59.56873315363881%">
+    Red Hat KVM
+   </td>
+   <td class="entry" colspan="1" headers="d54e279" rowspan="1" valign="top" width="40.43126684636118%">
+    Red Hat Enterprise Linux 7 with KVM
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e276" rowspan="1" valign="top" width="59.56873315363881%">
+    Microsoft Hyper-V
+   </td>
+   <td class="entry" colspan="1" headers="d54e279" rowspan="1" valign="top" width="40.43126684636118%">
+    <p class="p">
+     Windows Server 2016 Hyper-V Generation 2
+    </p>
+   </td>
+  </tr>
+ </table>
+ Tesla products now support one display of up to 4K resolution.
+ <h3 class="title sectiontitle">
+  Supported Graphics Cards
+ </h3>
+ <p class="p">
+  The following GPUs are supported for device passthrough:
+ </p>
+ <a name="virtualization__table_jnc_1wt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="virtualization__table_jnc_1wt_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e350" rowspan="1" valign="top" width="43.47826086956522%">
+    GPU Family
+   </th>
+   <th class="entry" colspan="1" id="d54e353" rowspan="1" valign="top" width="56.52173913043479%">
+    Boards Supported
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e350" rowspan="1" valign="top" width="43.47826086956522%">
+    Turing
+   </td>
+   <td class="entry" colspan="1" headers="d54e353" rowspan="1" valign="top" width="56.52173913043479%">
+    Tesla: T4
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e350" rowspan="1" valign="top" width="43.47826086956522%">
+    Volta
+   </td>
+   <td class="entry" colspan="1" headers="d54e353" rowspan="1" valign="top" width="56.52173913043479%">
+    Tesla: V100
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e350" rowspan="1" valign="top" width="43.47826086956522%">
+    Pascal
+   </td>
+   <td class="entry" colspan="1" headers="d54e353" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Tesla: P100, P40, P4
+    </p>
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e350" rowspan="1" valign="top" width="43.47826086956522%">
+    Maxwell
+   </td>
+   <td class="entry" colspan="1" headers="d54e353" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Tesla: M60, M40, M6, M4
+    </p>
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e350" rowspan="1" valign="top" width="43.47826086956522%">
+    Kepler
+   </td>
+   <td class="entry" colspan="1" headers="d54e353" rowspan="1" valign="top" width="56.52173913043479%">
+    <p class="p">
+     Tesla: K520, K80
+    </p>
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#hardware-software-support" name="hardware-software-support" shape="rect">
+   2. Hardware and Software Support
+  </a>
+ </h2>
+ <p class="p">
+  Support for these feature varies by processor family, product, and system, and should be
+                        verified at the manufacturer's website.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported Operating Systems
+ </h2>
+ <p class="p">
+  The Release 440 driver is supported on the following operating systems:
+ </p>
+ <a name="hardware-software-support__ul_qkn_kyt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_qkn_kyt_4fb">
+  <li class="li">
+   <p class="p">
+    Windows 64-bit operating systems:
+   </p>
+   <a name="hardware-software-support__ul_ac1_4yt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_ac1_4yt_4fb">
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® Server 2019
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® Server 2016
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® Server 2012 R2
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® 10
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® 8.1 (**Not supported starting with
+                                          Volta**)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Microsoft WindowsÂ® 7 (**Not supported starting with Volta**)
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li class="li">
+   <p class="p">
+    Linux 64-bit distributions:
+   </p>
+   <a name="hardware-software-support__ul_mkm_tyt_4fb" shape="rect">
+    <!-- -->
+   </a>
+   <ul class="ul" id="hardware-software-support__ul_mkm_tyt_4fb">
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux / CentOS 8.y (where y &lt;= 2)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux / CentOS 7.y (where y &lt;= 8)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Red Hat Enterprise Linux / CentOS 6.10 (**Deprecated**)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      SUSE Linux Enterprise Server 15.1
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      SUSE Linux Enterprise Server 12.4 (Service Pack 4)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 18.04.z LTS (where z &lt;= 4)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      Ubuntu 16.04.z LTS (where z &lt;= 6)
+     </p>
+    </li>
+    <li class="li">
+     <p class="p">
+      OpenSUSE Leap 15.1
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <h2 class="title sectiontitle">
+  API Support
+ </h2>
+ <p class="p">
+  This release supports the following APIs:
+ </p>
+ <a name="hardware-software-support__ul_pfg_czt_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <ul class="ul" id="hardware-software-support__ul_pfg_czt_4fb">
+  <li class="li">
+   <p class="p">
+    NVIDIAÂ® CUDAÂ® 10.1 for NVIDIAÂ® Kepler
+    TM
+    , Maxwell
+    TM
+    ,
+                                 Pascal
+    TM
+    , Volta
+    TM
+    and Turing
+    TM
+    GPUs
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    OpenGLÂ® 4.5
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    VulkanÂ® 1.1
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    DirectX 11
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    DirectX 12 (Windows 10)
+   </p>
+  </li>
+  <li class="li">
+   <p class="p">
+    Open Computing Language (OpenCL
+    TM
+    software) 1.2
+   </p>
+  </li>
+ </ul>
+ <p class="p">
+  Note that for using graphics APIs on Windows (i.e. OpenGL, Vulkan, DirectX 11 and
+                           DirectX 12) or any WDDM 2.0+ based functionality on Tesla GPUs, vGPU is required.
+                           See the
+  <a class="xref" href="https://docs.nvidia.com/grid/index.html" shape="rect" target="_blank">
+   vGPU documentation
+  </a>
+  for more information.
+ </p>
+ <h2 class="title sectiontitle">
+  Supported NVIDIA Tesla GPUs
+ </h2>
+ <p class="p">
+  The Tesla driver package is designed for systems that have one or more Tesla products
+                           installed. This release of the Tesla driver supports CUDA C/C++ applications and
+                           libraries that rely on the CUDA C Runtime and/or CUDA Driver API.
+ </p>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e642" rowspan="1" valign="top">
+    Tesla Server Platforms
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e648" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e651" rowspan="1" valign="top" width="52.38095238095239%">
+    Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e642 d54e648" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA HGX-2
+   </td>
+   <td class="entry" colspan="1" headers="d54e642 d54e651" rowspan="1" valign="top" width="52.38095238095239%">
+    V100 and NVSwitch
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_q4y_525_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_q4y_525_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e682" rowspan="1" valign="top">
+    Tesla T-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e688" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e691" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e682 d54e688" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla T4
+   </td>
+   <td class="entry" colspan="1" headers="d54e682 d54e691" rowspan="1" valign="top" width="52.38095238095239%">
+    Turing
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_dfj_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_dfj_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e722" rowspan="1" valign="top">
+    Tesla V-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e728" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e731" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e722 d54e728" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla V100
+   </td>
+   <td class="entry" colspan="1" headers="d54e722 d54e731" rowspan="1" valign="top" width="52.38095238095239%">
+    Volta
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_rrp_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_rrp_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e763" rowspan="1" valign="top">
+    Tesla P-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e769" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e772" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e763 d54e769" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P100
+   </td>
+   <td class="entry" colspan="1" headers="d54e763 d54e772" rowspan="1" valign="top" width="52.38095238095239%">
+    Pascal
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e763 d54e769" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P40
+   </td>
+   <td class="entry" colspan="1" headers="d54e763 d54e772" rowspan="1" valign="top" width="52.38095238095239%">
+    Pascal
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e763 d54e769" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla P4
+   </td>
+   <td class="entry" colspan="1" headers="d54e763 d54e772" rowspan="1" valign="top" width="52.38095238095239%">
+    Pascal
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_kct_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_kct_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e821" rowspan="1" valign="top">
+    Tesla K-Series Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e827" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e830" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e821 d54e827" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla K520
+   </td>
+   <td class="entry" colspan="1" headers="d54e821 d54e830" rowspan="1" valign="top" width="52.38095238095239%">
+    Kepler
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e821 d54e827" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla K80
+   </td>
+   <td class="entry" colspan="1" headers="d54e821 d54e830" rowspan="1" valign="top" width="52.38095238095239%">
+    Kepler
+   </td>
+  </tr>
+ </table>
+ <a name="hardware-software-support__table_npr_315_4fb" shape="rect">
+  <!-- -->
+ </a>
+ <table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="hardware-software-support__table_npr_315_4fb" rules="all" summary="">
+  <tr class="row">
+   <th class="entry" colspan="2" id="d54e870" rowspan="1" valign="top">
+    Tesla M-Class Products
+   </th>
+  </tr>
+  <tr class="row">
+   <th class="entry" colspan="1" id="d54e876" rowspan="1" valign="top" width="47.61904761904761%">
+    Product
+   </th>
+   <th class="entry" colspan="1" id="d54e879" rowspan="1" valign="top" width="52.38095238095239%">
+    GPU Architecture
+   </th>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e870 d54e876" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M60
+   </td>
+   <td class="entry" colspan="1" headers="d54e870 d54e879" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e870 d54e876" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M40 24 GB
+   </td>
+   <td class="entry" colspan="1" headers="d54e870 d54e879" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e870 d54e876" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M40
+   </td>
+   <td class="entry" colspan="1" headers="d54e870 d54e879" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e870 d54e876" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M6
+   </td>
+   <td class="entry" colspan="1" headers="d54e870 d54e879" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+  <tr class="row">
+   <td class="entry" colspan="1" headers="d54e870 d54e876" rowspan="1" valign="top" width="47.61904761904761%">
+    NVIDIA Tesla M4
+   </td>
+   <td class="entry" colspan="1" headers="d54e870 d54e879" rowspan="1" valign="top" width="52.38095238095239%">
+    Maxwell
+   </td>
+  </tr>
+ </table>
+ <a name="notices-header" shape="rect">
+  <!-- -->
+ </a>
+ <h2 class="title topictitle1">
+  <a href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-15200/index.html#notices-header" name="notices-header" shape="rect">
+   Notices
+  </a>
+ </h2>
+ <a name="notice" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Notice
+ </h3>
+ <p class="p" id="notice__notice-para-1">
+  <a name="notice__notice-para-1" shape="rect">
+   <!-- -->
+  </a>
+  This document is provided for information
+                                 purposes only and shall not be regarded as a warranty of a
+                                 certain functionality, condition, or quality of a product.
+                                 NVIDIA Corporation (âNVIDIAâ) makes no representations or
+                                 warranties, expressed or implied, as to the accuracy or
+                                 completeness of the information contained in this document
+                                 and assumes no responsibility for any errors contained
+                                 herein. NVIDIA shall have no liability for the consequences
+                                 or use of such information or for any infringement of
+                                 patents or other rights of third parties that may result
+                                 from its use. This document is not a commitment to develop,
+                                 release, or deliver any Material (defined below), code, or
+                                 functionality.
+ </p>
+ <p class="p" id="notice__notice-para-2">
+  <a name="notice__notice-para-2" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA reserves the right to make corrections, modifications,
+                                 enhancements, improvements, and any other changes to this
+                                 document, at any time without notice.
+ </p>
+ <p class="p" id="notice__notice-para-3">
+  <a name="notice__notice-para-3" shape="rect">
+   <!-- -->
+  </a>
+  Customer should obtain the latest relevant information before
+                                 placing orders and should verify that such information is
+                                 current and complete.
+ </p>
+ <p class="p" id="notice__notice-para-4">
+  <a name="notice__notice-para-4" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are sold subject to the NVIDIA standard terms and
+                                 conditions of sale supplied at the time of order
+                                 acknowledgement, unless otherwise agreed in an individual
+                                 sales agreement signed by authorized representatives of
+                                 NVIDIA and customer (âTerms of Saleâ). NVIDIA hereby
+                                 expressly objects to applying any customer general terms and
+                                 conditions with regards to the purchase of the NVIDIA
+                                 product referenced in this document. No contractual
+                                 obligations are formed either directly or indirectly by this
+                                 document.
+ </p>
+ <p class="p" id="notice__notice-para-5">
+  <a name="notice__notice-para-5" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA products are not designed, authorized, or warranted to be
+                                 suitable for use in medical, military, aircraft, space, or
+                                 life support equipment, nor in applications where failure or
+                                 malfunction of the NVIDIA product can reasonably be expected
+                                 to result in personal injury, death, or property or
+                                 environmental damage. NVIDIA accepts no liability for
+                                 inclusion and/or use of NVIDIA products in such equipment or
+                                 applications and therefore such inclusion and/or use is at
+                                 customerâs own risk.
+ </p>
+ <p class="p" id="notice__notice-para-6">
+  <a name="notice__notice-para-6" shape="rect">
+   <!-- -->
+  </a>
+  NVIDIA makes no representation or warranty that products based on
+                                 this document will be suitable for any specified use.
+                                 Testing of all parameters of each product is not necessarily
+                                 performed by NVIDIA. It is customerâs sole responsibility to
+                                 evaluate and determine the applicability of any information
+                                 contained in this document, ensure the product is suitable
+                                 and fit for the application planned by customer, and perform
+                                 the necessary testing for the application in order to avoid
+                                 a default of the application or the product. Weaknesses in
+                                 customerâs product designs may affect the quality and
+                                 reliability of the NVIDIA product and may result in
+                                 additional or different conditions and/or requirements
+                                 beyond those contained in this document. NVIDIA accepts no
+                                 liability related to any default, damage, costs, or problem
+                                 which may be based on or attributable to: (i) the use of the
+                                 NVIDIA product in any manner that is contrary to this
+                                 document or (ii) customer product designs.
+ </p>
+ <p class="p" id="notice__notice-para-7">
+  <a name="notice__notice-para-7" shape="rect">
+   <!-- -->
+  </a>
+  No license, either expressed or implied, is granted under any NVIDIA
+                                 patent right, copyright, or other NVIDIA intellectual
+                                 property right under this document. Information published by
+                                 NVIDIA regarding third-party products or services does not
+                                 constitute a license from NVIDIA to use such products or
+                                 services or a warranty or endorsement thereof. Use of such
+                                 information may require a license from a third party under
+                                 the patents or other intellectual property rights of the
+                                 third party, or a license from NVIDIA under the patents or
+                                 other intellectual property rights of NVIDIA.
+ </p>
+ <p class="p" id="notice__notice-para-8">
+  <a name="notice__notice-para-8" shape="rect">
+   <!-- -->
+  </a>
+  Reproduction of information in this document is permissible only if
+                                 approved in advance by NVIDIA in writing, reproduced without
+                                 alteration and in full compliance with all applicable export
+                                 laws and regulations, and accompanied by all associated
+                                 conditions, limitations, and notices.
+ </p>
+ <p class="p" id="notice__notice-para-9">
+  <a name="notice__notice-para-9" shape="rect">
+   <!-- -->
+  </a>
+  THIS DOCUMENT AND ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE
+                                 BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER
+                                 DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING
+                                 PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED,
+                                 IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE
+                                 MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF
+                                 NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+                                 PARTICULAR PURPOSE. TO THE EXTENT NOT PROHIBITED BY LAW, IN
+                                 NO EVENT WILL NVIDIA BE LIABLE FOR ANY DAMAGES, INCLUDING
+                                 WITHOUT LIMITATION ANY DIRECT, INDIRECT, SPECIAL,
+                                 INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, HOWEVER
+                                 CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING
+                                 OUT OF ANY USE OF THIS DOCUMENT, EVEN IF NVIDIA HAS BEEN
+                                 ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. Notwithstanding
+                                 any damages that customer might incur for any reason
+                                 whatsoever, NVIDIAâs aggregate and cumulative liability
+                                 towards customer for the products described herein shall be
+                                 limited in accordance with the Terms of Sale for the
+                                 product.
+ </p>
+ <a name="trademarks" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle notices">
+  Trademarks
+ </h3>
+ <p class="p">
+  NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA
+                                 Corporation in the Unites States and other countries. Other company and product
+                                 names may be trademarks of the respective companies with which they are
+                                 associated.
+ </p>
+ <a name="copyright-present" shape="rect">
+  <!-- -->
+ </a>
+ <h3 class="title sectiontitle">
+  Copyright
+ </h3>
+ <p class="p">
+  Â©
+  <span class="ph">
+   2020
+  </span>
+  NVIDIA Corporation &amp; affiliates. All rights
+                                 reserved.
+ </p>
+ <p>
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/email-preferences/" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" target="_blank">
+   Contact
+  </a>
+ </p>
+</body>
+</body></html>

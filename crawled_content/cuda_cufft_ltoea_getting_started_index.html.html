@@ -1,0 +1,566 @@
+<html><head><title>Quick start — cuFFT LTO EA 11.1.3 documentation</title></head><body><body class="wy-body-for-nav">
+ <a class="icon icon-home" href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html">
+  cuFFT LTO EA
+ </a>
+ 11.1.3
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html">
+    Documentation home
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   User guide
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/getting_started/index.html">
+    Quick start
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/index.html">
+    How to use cuFFT LTO EA
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html">
+      Just-In-Time Link-Time Optimizations
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html#what-is-jit-lto">
+        What is JIT LTO?
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html#jit-lto-in-cufft-lto-ea">
+        JIT LTO in cuFFT LTO EA
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/jit_lto.html#the-cost-of-jit-lto">
+        The cost of JIT LTO
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/requirements.html">
+      Requirements
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/requirements.html#software-requirements">
+        Software requirements
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html">
+      API usage
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#generating-the-lto-callback">
+        Generating the LTO callback
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#offline-compilation">
+          Offline compilation
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#using-nvrtc">
+          Using NVRTC
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/api_usage.html#associating-the-lto-callback-with-the-cufft-plan">
+        Associating the LTO callback with the cuFFT plan
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/supported_functionalities.html">
+      Supported functionalities
+     </a>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html">
+      Frequently asked questions
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html#i-am-getting-an-error-with-the-message-error-cufftxtsetjitcallback-was-not-declared-in-this-scope">
+        I am getting an error with the message: âerror: âcufftXtSetJITCallbackâ was not declared in this scopeâ
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html#i-am-getting-an-error-with-the-message-undefined-reference-to-cufftxtsetjitcallback">
+        I am getting an error with the message: âundefined reference to âcufftXtSetJITCallbackââ
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/tips.html#my-existing-callback-works-fine-without-lto-using-cufftxtsetcallback-but-planning-fails-when-attempting-to-use-lto-callbacks-cufftxtsetjitcallback">
+        My existing callback works fine without LTO (using cufftXtSetCallback) but planning fails when attempting to use LTO callbacks (
+        <span class="xref std std-ref">
+         cufftXtSetJITCallback
+        </span>
+        )
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html">
+    API reference
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#associating-lto-callbacks-with-cufft-plan">
+      Associating LTO callbacks with cuFFT Plan
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#cufftxtsetjitcallback">
+        cufftXtSetJITCallback
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#lto-callback-signatures">
+      LTO callback signatures
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-single-precision-complex">
+        Load Single-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-double-precision-complex">
+        Load Double-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-single-precision-real">
+        Load Single-Precision Real
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#load-double-precision-real">
+        Load Double-Precision Real
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-single-precision-complex">
+        Store Single-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-double-precision-complex">
+        Store Double-Precision Complex
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-single-precision-real">
+        Store Single-Precision Real
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#store-double-precision-real">
+        Store Double-Precision Real
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html">
+    Release Notes
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#cufft-lto-ea-preview-11-1-3-0">
+      cuFFT LTO EA preview 11.1.3.0
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#new-features">
+        New features
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#known-issues">
+        Known issues
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#cufft-lto-ea-preview-11-1-0-0">
+      cuFFT LTO EA preview 11.1.0.0
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#id1">
+        New features
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/release_notes.html#id2">
+        Known issues
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/contact_us/index.html">
+    Contact us
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/contact_us/index.html#questions-suggestions">
+      Questions? Suggestions?
+     </a>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html">
+  cuFFT LTO EA
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li class="breadcrumb-item active">
+   Quick start
+  </li>
+ </ul>
+ <h1>
+  Quick start
+  <a class="headerlink" href="https://docs.nvidia.com/cuda/cufft/ltoea/getting_started/index.html#quick-start" title="Permalink to this heading">
+   Â¶
+  </a>
+ </h1>
+ <p>
+  This section contains a simplified and annotated version of the cuFFT LTO EA sample distributed alongside the binaries in the zip file.
+ </p>
+ <p>
+  The sample performs a low-pass filter of multiple signals in the frequency domain.
+ </p>
+ <pre><span class="cm">/* </span>
+<span class="cm"> * Example showing the use of LTO callbacks with CUFFT to perform </span>
+<span class="cm"> * R2C -&gt; callback -&gt; C2R.</span>
+<span class="cm"> * </span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="cpf">&lt;vector&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;random&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;cuda_runtime_api.h&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;cufftXt.h&gt;</span>
+
+<span class="cp">#define ERROR_VALUE -1</span>
+<span class="cp">#define PASS_VALUE   0</span>
+
+<span class="c1">// Check CUDA API error</span>
+<span class="kr">inline</span><span class="kt">int</span><span class="nf">checkErrors</span><span class="p">(</span><span class="n">cudaError_t</span><span class="n">error</span><span class="p">,</span><span class="kt">int</span><span class="n">line_number</span><span class="p">)</span><span class="p">{</span>
+<span class="k">if</span><span class="p">(</span><span class="n">error</span><span class="o">!=</span><span class="n">cudaSuccess</span><span class="p">)</span><span class="p">{</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Example failed in CUDA API on line %d with error %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">line_number</span><span class="p">,</span><span class="n">error</span><span class="p">);</span>
+<span class="k">return</span><span class="n">ERROR_VALUE</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span><span class="n">PASS_VALUE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Check cuFFT API error</span>
+<span class="kr">inline</span><span class="kt">int</span><span class="nf">checkErrors</span><span class="p">(</span><span class="n">cufftResult</span><span class="n">error</span><span class="p">,</span><span class="kt">int</span><span class="n">line_number</span><span class="p">)</span><span class="p">{</span>
+<span class="k">if</span><span class="p">(</span><span class="n">error</span><span class="o">!=</span><span class="n">CUFFT_SUCCESS</span><span class="p">)</span><span class="p">{</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Example failed in cuFFT API on line %d with error %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">line_number</span><span class="p">,</span><span class="n">error</span><span class="p">);</span>
+<span class="k">return</span><span class="n">ERROR_VALUE</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span><span class="n">PASS_VALUE</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#define CHECK_ERROR(error) checkErrors(error, __LINE__)</span>
+
+<span class="c1">// NOTE: Header containing the compiled LTO callback device function in a C array, generated with bin2c</span>
+<span class="cp">#include</span><span class="cpf">"callback_fatbin.h"</span>
+
+<span class="c1">// Struct to pass data to callback</span>
+<span class="k">struct</span><span class="nc">cb_params</span><span class="p">{</span>
+<span class="kt">unsigned</span><span class="n">window_N</span><span class="p">;</span>
+<span class="kt">unsigned</span><span class="n">signal_size</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// Problem input parameters</span>
+<span class="k">constexpr</span><span class="kt">unsigned</span><span class="n">batches</span><span class="o">=</span><span class="mi">830</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="kt">unsigned</span><span class="n">signal_size</span><span class="o">=</span><span class="mi">328</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="kt">unsigned</span><span class="n">window_size</span><span class="o">=</span><span class="mi">32</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="kt">unsigned</span><span class="n">complex_signal_size</span><span class="o">=</span><span class="n">signal_size</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">// Initialize the input signal with random values</span>
+<span class="kt">void</span><span class="nf">init_input_signals</span><span class="p">(</span><span class="kt">unsigned</span><span class="n">batches</span><span class="p">,</span><span class="kt">unsigned</span><span class="n">signal_size</span><span class="p">,</span><span class="kt">float</span><span class="o">*</span><span class="n">signals</span><span class="p">)</span><span class="p">{</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">mt19937</span><span class="n">e2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">uniform_real_distribution</span><span class="o">&lt;&gt;</span><span class="n">dist</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">);</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span><span class="n">batch</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">batch</span><span class="o">&lt;</span><span class="n">batches</span><span class="p">;</span><span class="o">++</span><span class="n">batch</span><span class="p">)</span><span class="p">{</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">s</span><span class="o">&lt;</span><span class="n">signal_size</span><span class="p">;</span><span class="o">++</span><span class="n">s</span><span class="p">)</span><span class="p">{</span>
+<span class="kt">unsigned</span><span class="n">idx</span><span class="o">=</span><span class="n">batch</span><span class="o">*</span><span class="n">signal_size</span><span class="o">+</span><span class="n">s</span><span class="p">;</span>
+<span class="n">signals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">=</span><span class="n">dist</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="nf">main</span><span class="p">()</span><span class="p">{</span>
+
+<span class="c1">// Padded array for in-place transforms</span>
+<span class="kt">float</span><span class="n">input_signals</span><span class="p">[</span><span class="n">batches</span><span class="p">][</span><span class="mi">2</span><span class="o">*</span><span class="n">complex_signal_size</span><span class="p">]</span><span class="o">=</span><span class="p">{};</span>
+<span class="kt">float</span><span class="n">output_signals</span><span class="p">[</span><span class="n">batches</span><span class="p">][</span><span class="mi">2</span><span class="o">*</span><span class="n">complex_signal_size</span><span class="p">];</span>
+<span class="kt">float</span><span class="n">reference</span><span class="p">[</span><span class="n">batches</span><span class="p">][</span><span class="mi">2</span><span class="o">*</span><span class="n">complex_signal_size</span><span class="p">];</span>
+
+<span class="n">init_input_signals</span><span class="p">(</span><span class="n">batches</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">complex_signal_size</span><span class="p">,</span><span class="o">&amp;</span><span class="n">input_signals</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="k">const</span><span class="kt">size_t</span><span class="n">complex_size_bytes</span><span class="o">=</span><span class="n">batches</span><span class="o">*</span><span class="n">complex_signal_size</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">);</span>
+
+<span class="c1">// Allocate and copy input from host to GPU</span>
+<span class="kt">float</span><span class="o">*</span><span class="n">device_signals</span><span class="p">;</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaMalloc</span><span class="p">((</span><span class="kt">void</span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">device_signals</span><span class="p">,</span><span class="n">complex_size_bytes</span><span class="p">));</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaMemcpy</span><span class="p">(</span><span class="n">device_signals</span><span class="p">,</span><span class="n">input_signals</span><span class="p">,</span><span class="n">complex_size_bytes</span><span class="p">,</span><span class="n">cudaMemcpyHostToDevice</span><span class="p">));</span>
+
+<span class="c1">// Define a structure used to pass in the window size</span>
+<span class="n">cb_params</span><span class="n">host_params</span><span class="p">;</span>
+<span class="n">host_params</span><span class="p">.</span><span class="n">window_N</span><span class="o">=</span><span class="n">window_size</span><span class="p">;</span>
+<span class="n">host_params</span><span class="p">.</span><span class="n">signal_size</span><span class="o">=</span><span class="n">complex_signal_size</span><span class="p">;</span>
+
+<span class="c1">// Allocate and copy callback parameters from host to GPU</span>
+<span class="n">cb_params</span><span class="o">*</span><span class="n">device_params</span><span class="p">;</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaMalloc</span><span class="p">((</span><span class="kt">void</span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">device_params</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">cb_params</span><span class="p">)));</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaMemcpy</span><span class="p">(</span><span class="n">device_params</span><span class="p">,</span><span class="o">&amp;</span><span class="n">host_params</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">cb_params</span><span class="p">),</span><span class="n">cudaMemcpyHostToDevice</span><span class="p">));</span>
+
+<span class="c1">// Create a CUFFT plan for the forward transform, and a cuFFT plan for the inverse transform with load callback</span>
+<span class="n">cufftHandle</span><span class="n">forward_plan</span><span class="p">,</span><span class="n">inverse_plan_cb</span><span class="p">;</span>
+<span class="kt">size_t</span><span class="n">work_size</span><span class="p">;</span>
+
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftCreate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">forward_plan</span><span class="p">));</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftCreate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">inverse_plan_cb</span><span class="p">));</span>
+
+<span class="c1">// NOTE: LTO callbacks must be set before plan creation and cannot be unset (yet)</span>
+<span class="kt">size_t</span><span class="n">lto_callback_fatbin_size</span><span class="o">=</span><span class="k">sizeof</span><span class="p">(</span><span class="n">window_callback</span><span class="p">);</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftXtSetJITCallback</span><span class="p">(</span><span class="n">inverse_plan_cb</span><span class="p">,</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">window_callback</span><span class="p">,</span><span class="n">lto_callback_fatbin_size</span><span class="p">,</span>
+<span class="n">CUFFT_CB_LD_COMPLEX</span><span class="p">,</span><span class="p">(</span><span class="kt">void</span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">device_params</span><span class="p">));</span>
+
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftMakePlan1d</span><span class="p">(</span><span class="n">forward_plan</span><span class="p">,</span><span class="n">signal_size</span><span class="p">,</span><span class="n">CUFFT_R2C</span><span class="p">,</span><span class="n">batches</span><span class="p">,</span><span class="o">&amp;</span><span class="n">work_size</span><span class="p">));</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftMakePlan1d</span><span class="p">(</span><span class="n">inverse_plan_cb</span><span class="p">,</span><span class="n">signal_size</span><span class="p">,</span><span class="n">CUFFT_C2R</span><span class="p">,</span><span class="n">batches</span><span class="p">,</span><span class="o">&amp;</span><span class="n">work_size</span><span class="p">));</span>
+
+<span class="c1">// Transform signal forward</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Transforming signal cufftExecR2C</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftExecR2C</span><span class="p">(</span><span class="n">forward_plan</span><span class="p">,</span><span class="p">(</span><span class="n">cufftReal</span><span class="o">*</span><span class="p">)</span><span class="n">device_signals</span><span class="p">,</span><span class="p">(</span><span class="n">cufftComplex</span><span class="o">*</span><span class="p">)</span><span class="n">device_signals</span><span class="p">));</span>
+
+<span class="c1">// Apply window via load callback and inverse-transform the signal</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Transforming signal cufftExecC2R</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftExecC2R</span><span class="p">(</span><span class="n">inverse_plan_cb</span><span class="p">,</span><span class="p">(</span><span class="n">cufftComplex</span><span class="o">*</span><span class="p">)</span><span class="n">device_signals</span><span class="p">,</span><span class="p">(</span><span class="n">cufftReal</span><span class="o">*</span><span class="p">)</span><span class="n">device_signals</span><span class="p">));</span>
+
+<span class="c1">// Copy device memory to host</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaMemcpy</span><span class="p">(</span><span class="n">output_signals</span><span class="p">,</span><span class="n">device_signals</span><span class="p">,</span><span class="n">complex_size_bytes</span><span class="p">,</span><span class="n">cudaMemcpyDeviceToHost</span><span class="p">));</span>
+
+<span class="c1">// Destroy CUFFT context</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftDestroy</span><span class="p">(</span><span class="n">forward_plan</span><span class="p">));</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cufftDestroy</span><span class="p">(</span><span class="n">inverse_plan_cb</span><span class="p">));</span>
+
+<span class="c1">// Cleanup memory</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaFree</span><span class="p">(</span><span class="n">device_signals</span><span class="p">));</span>
+<span class="n">CHECK_ERROR</span><span class="p">(</span><span class="n">cudaFree</span><span class="p">(</span><span class="n">device_params</span><span class="p">));</span>
+
+<span class="k">return</span><span class="n">PASS_VALUE</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+ <p>
+  Specifically, it does the following:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    It allocates and initializes the input:
+    <span class="pre">
+     batches
+    </span>
+    of signals of size
+    <span class="pre">
+     signal_size
+    </span>
+    are initialized with random values.
+   </p>
+  </li>
+  <li>
+   <p>
+    It copies the input data to the GPU.
+   </p>
+  </li>
+  <li>
+   <p>
+    It creates a forward (R2C, Real-To-Complex) plan and an inverse (C2R, Complex-To-Real) plan.
+   </p>
+  </li>
+  <li>
+   <p>
+    After plan creation (with
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cufft/index.html#function-cufftcreate">
+     cufftCreate(â¦)
+    </a>
+    ) but before the planning function is called, it associates the array containing the fatbin with the callback function with the plan using the extension to the cuFFT API
+    <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#api-reference-cufftxtsetjitcallback-label">
+     <span class="std std-ref">
+      cufftXtSetJITCallback(â¦)
+     </span>
+    </a>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    It calls the planning function (
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cufft/index.html#function-cufftmakeplan1d">
+     cufftMakePlan1d(â¦)
+    </a>
+    ) for both plans.
+   </p>
+  </li>
+  <li>
+   <p>
+    It executes the forward plan.
+   </p>
+  </li>
+  <li>
+   <p>
+    It executes the inverse plan. This plan runs the loading callback that implements the low-pass filter as a window function.
+   </p>
+  </li>
+  <li>
+   <p>
+    It copies the results back to the host.
+   </p>
+  </li>
+  <li>
+   <p>
+    It destroys the plans with
+    <a class="reference external" href="https://docs.nvidia.com/cuda/cufft/index.html#function-cufftdestroy">
+     cufftDestroy(â¦)
+    </a>
+    , and frees the GPU resources.
+   </p>
+  </li>
+ </ol>
+ <p>
+  The callback device function is located in a separate source file that looks like this:
+ </p>
+ <pre><span class="cm">/* </span>
+<span class="cm"> * Example showing the use of LTO callbacks with CUFFT to perform </span>
+<span class="cm"> * truncation with zero padding.</span>
+<span class="cm"> * </span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="cpf">&lt;cufftXt.h&gt;</span>
+
+<span class="k">struct</span><span class="nc">cb_params</span><span class="p">{</span>
+<span class="kt">unsigned</span><span class="n">window_N</span><span class="p">;</span>
+<span class="kt">unsigned</span><span class="n">signal_size</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// This is the load callback routine. It filters high frequencies</span>
+<span class="c1">// based on a truncation window specified by the user</span>
+<span class="c1">// NOTE: unlike the non-LTO version, the callback device function</span>
+<span class="c1">// must have the name cufftJITCallbackLoadComplex, it cannot be aliased</span>
+<span class="n">__device__</span><span class="n">cufftComplex</span><span class="n">cufftJITCallbackLoadComplex</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="n">input</span><span class="p">,</span>
+<span class="kt">size_t</span><span class="n">index</span><span class="p">,</span>
+<span class="kt">void</span><span class="o">*</span><span class="n">info</span><span class="p">,</span>
+<span class="kt">void</span><span class="o">*</span><span class="n">sharedmem</span><span class="p">)</span><span class="p">{</span>
+
+<span class="k">const</span><span class="n">cb_params</span><span class="o">*</span><span class="n">params</span><span class="o">=</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="n">cb_params</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
+<span class="n">cufftComplex</span><span class="o">*</span><span class="n">cb_output</span><span class="o">=</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">cufftComplex</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="k">const</span><span class="kt">unsigned</span><span class="n">sample</span><span class="o">=</span><span class="n">index</span><span class="o">%</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">signal_size</span><span class="p">;</span>
+
+<span class="k">return</span><span class="p">(</span><span class="n">sample</span><span class="o">&lt;</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">window_N</span><span class="p">)</span><span class="o">?</span><span class="n">cb_output</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">:</span><span class="n">cufftComplex</span><span class="p">{</span><span class="mf">0.f</span><span class="p">,</span><span class="mf">0.f</span><span class="p">};</span>
+<span class="p">}</span>
+</pre>
+ <p>
+  There are some restrictions when it comes to naming the LTO-callback functions in the cuFFT LTO EA. See
+  <a class="reference internal" href="https://docs.nvidia.com/cuda/cufft/ltoea/api/index.html#api-reference-callback-signatures-label">
+   <span class="std std-ref">
+    here
+   </span>
+  </a>
+  for more details.
+ </p>
+ <p>
+  Before compiling the example, we need to copy the library files and headers included in the tar ball into the CUDA Toolkit folder.
+ </p>
+ <pre>$cpnvidia-cufft-11.1.0-Linux/opt/cufft/include/*/path/to/cuda/toolkit/include
+$cpnvidia-cufft-11.1.0-Linux/opt/cufft/lib/*/path/to/cuda/toolkit/lib64
+</pre>
+ <p>
+  The example can then be compiled and run like this:
+ </p>
+ <pre>$nvcc--std<span class="o">=</span>c++11--generate-code<span class="nv">arch</span><span class="o">=</span>compute_50,code<span class="o">=</span>lto_50-dc-fatbincallback.cu-ocallback.fatbin
+$bin2c--namewindow_callback--typelonglongcallback.fatbin&gt;callback_fatbin.h
+$g++-I/path/to/cuda/toolkit/include-L/path/to/cuda/toolkit/lib64lto_ea.cpp-olto_ea-lcufft-lcudart
+$./lto_ea
+TransformingsignalcufftExecR2C
+TransformingsignalcufftExecC2R
+</pre>
+ <a accesskey="p" class="btn btn-neutral float-left" href="https://docs.nvidia.com/cuda/cufft/ltoea/index.html" rel="prev" title="NVIDIA cuFFT LTO EA preview documentation">
+  Previous
+ </a>
+ <a accesskey="n" class="btn btn-neutral float-right" href="https://docs.nvidia.com/cuda/cufft/ltoea/usage/index.html" rel="next" title="How to use cuFFT LTO EA">
+  Next
+ </a>
+ <p style="color: gray;">
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" style="color: inherit;" target="_blank">
+   Privacy Policy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" style="color: inherit;" target="_blank">
+   Manage My Privacy
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/preferences/start/" style="color: inherit;" target="_blank">
+   Do Not Sell or Share My Data
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/" style="color: inherit;" target="_blank">
+   Terms of Service
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" style="color: inherit;" target="_blank">
+   Accessibility
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/about-nvidia/company-policies/" style="color: inherit;" target="_blank">
+   Corporate Policies
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/product-security/" style="color: inherit;" target="_blank">
+   Product Security
+  </a>
+  |
+  <a href="https://www.nvidia.com/en-us/contact/" style="color: inherit;" target="_blank">
+   Contact
+  </a>
+ </p>
+ <p>
+  Copyright © 2023-2024, NVIDIA Corporation and affiliates.
+ </p>
+</body>
+</body></html>

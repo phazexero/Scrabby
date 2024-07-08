@@ -1,0 +1,1339 @@
+<html><head><title>Advanced Topics — nsight-visual-studio-edition 12.5 documentation</title></head><body><body class="wy-body-for-nav">
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+ </a>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/introduction/index.html">
+    Introduction
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/release-notes/index.html">
+    Release Notes
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html">
+    Installation and Setup
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   CUDA Debugger
+  </span>
+ </p>
+ <ul class="current">
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-debugger/index.html">
+    Getting Started with the CUDA Debugger
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-build-run/index.html">
+    Build and Run
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-control-gpu-execution/index.html">
+    Control GPU Execution
+   </a>
+  </li>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html">
+    Inspect State
+   </a>
+  </li>
+  <li class="toctree-l1 current">
+   <a class="current reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html">
+    Advanced Topics
+   </a>
+   <ul>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#ptx-and-sass-assembly-debugging">
+      PTX and SASS Assembly Debugging
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#to-enable-ptx-sass-assembly-debugging">
+        To Enable PTX/SASS Assembly Debugging
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#address-breakpoints">
+        Address Breakpoints
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#run-control">
+        Run Control
+       </a>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#registers-view">
+        Registers View
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#memory-checker">
+      Memory Checker
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#to-use-the-memory-checker">
+        To Use the Memory Checker
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#out-of-patch-ram-errors">
+          Out of Patch RAM Errors
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#memory-checker-results">
+        Memory Checker Results
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#example-1">
+          Example 1
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#example-2">
+          Example 2
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li class="toctree-l2">
+     <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#restrictions-when-debugging-optix-applications">
+      Restrictions When Debugging OptiX Applications
+     </a>
+     <ul>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#restrictions-for-nvidia-nsight-visual-studio-edition">
+        Restrictions for NVIDIA Nsight Visual Studio Edition
+       </a>
+       <ul>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#legacy-cuda-debugger">
+          Legacy CUDA Debugger
+         </a>
+        </li>
+        <li class="toctree-l4">
+         <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#next-gen-cuda-debugger">
+          Next-Gen CUDA Debugger
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="toctree-l3">
+       <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#api-trace">
+        API Trace
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Reference
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/reference/index.html">
+    Reference
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Release Information
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/archives/index.html">
+    Archives
+   </a>
+  </li>
+ </ul>
+ <p class="caption" role="heading">
+  <span class="caption-text">
+   Copyright and License Notices
+  </span>
+ </p>
+ <ul>
+  <li class="toctree-l1">
+   <a class="reference internal" href="https://docs.nvidia.com/nsight-visual-studio-edition/eula/index.html">
+    EULA
+   </a>
+  </li>
+ </ul>
+ <a href="https://docs.nvidia.com/nsight-visual-studio-edition/index.html">
+  nsight-visual-studio-edition
+ </a>
+ <ul class="wy-breadcrumbs">
+  <li>
+   <a class="icon icon-home" href="https://docs.nvidia.com/index.html">
+   </a>
+   »
+  </li>
+  <li>
+   Advanced Topics
+  </li>
+  <li class="wy-breadcrumbs-aside">
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-2024_2-new-features">
+    v2024.2.1 |
+   </a>
+   <a class="reference external" href="https://developer.nvidia.com/nsight-visual-studio-edition-archive">
+    Archive
+   </a>
+  </li>
+ </ul>
+ <h1>
+  Advanced Topics
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#advanced-topics" title="Permalink to this headline">
+   ï
+  </a>
+ </h1>
+ <p>
+  Advanced topics for working with the NVIDIA Nsight VSE CUDA Debugger.
+ </p>
+ <p>
+  In this section, learn more about advanced CUDA topics, such as PTX and SASS assembly debugging, how to use the CUDA Memory Checker, and restrictions when debugging OptiX applications.
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#ptx-and-sass-assembly-debugging">
+     PTX and SASS Assembly Debugging
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#memory-checker">
+     Use the Memory Checker
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+     Restrictions when Debugging OptiX Restrictions
+    </a>
+   </p>
+  </li>
+ </ul>
+ <h2>
+  PTX and SASS Assembly Debugging
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#ptx-and-sass-assembly-debugging" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p>
+  PTX is a low-level parallel-thread execution virtual machine and instruction set architecture (ISA). PTX exposes the GPU as a parallel computing device.
+ </p>
+ <p>
+  In addition, PTX provides a stable programming model and instruction set for general purpose parallel programming, and is designed to be efficient on NVIDIA GPUs. High-level language compilers for languages such as CUDA and C/C++ generate PTX instructions, which are optimized for and translated to native target-architecture instructions.
+ </p>
+ <p>
+  SASS
+  is the low-level assembly language that compiles to binary microcode, which executes natively on NVIDIA GPU hardware.
+ </p>
+ <p>
+  As of NVIDIA Nsight Visual Studio EditionÂ 6.0, PTX and SASS assembly debugging is now available. To utilize this feature, use the following tutorial.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The Legacy CUDA Debugger does not support debugging with OptiX applications, and the Next-Gen CUDAÂ Debugger has a number of restrictions.
+ </p>
+ <p>
+  See
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+   Restrictions When Debugging OptiX Applications
+  </a>
+  :
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions-legacy-cuda">
+     Legacy CUDA Debugger
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions-nextgen-cuda">
+     Next-Gen CUDA Debugger &gt; Disasm
+    </a>
+   </p>
+  </li>
+ </ul>
+ <h3>
+  To Enable PTX/SASS Assembly Debugging
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#to-enable-ptx-sass-assembly-debugging" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    In Visual Studio, go to
+    Tools
+    &gt;
+    Options
+    &gt;
+    Debugging
+    .
+   </p>
+   <p>
+    Select both
+    Enable Address Level Debugging
+    , as well as the sub-option,
+    Show disassembly if source is not available
+    .
+   </p>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    Currently, this only works with CUDA applications that have debug symbolics (i.e., that are built with
+    <span class="pre">
+     âG0
+    </span>
+    ). PTX disassembly views will be blank if the application is not built with debug symbolics (
+    <span class="pre">
+     âG0
+    </span>
+    ).
+   </p>
+   <p>
+    In addition, this displays only one CUDA function for the current stopped kernel. The user cannot scroll to other CUDA kernels in the module.                                                                        |
+   </p>
+  </li>
+  <li>
+   <p>
+    Once the CUDA Debugger is stopped, you can open the Visual Studio Disassembly document through one of the following methods:
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      The Visual Studio source viewâs
+      Go to Disassembly
+      command.
+     </p>
+    </li>
+    <li>
+     <p>
+      The call stackâs
+      Go to Disassembly
+      command.
+     </p>
+    </li>
+    <li>
+     <p>
+      The breakpoint viewâs
+      Go to Disassembly
+      command.
+     </p>
+    </li>
+    <li>
+     <p>
+      Using the Visual Studio menu
+      Debug
+      &gt;
+      Windows
+      &gt;
+      Disassembly
+      .
+     </p>
+    </li>
+   </ol>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    This can only work when stopped in a CUDA kernel via a breakpoint. There is no static or offline disassembly in the Visual Studio disassembly view.
+   </p>
+  </li>
+  <li>
+   <p>
+    When going to disassembly, there may be multiple associated addresses. In this case, Visual Studio will pop up a dialog asking you to choose which address you want to view.
+   </p>
+  </li>
+  <li>
+   <p>
+    The Visual Studio options that are supported in the disassembly document window include the following:
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      Show Source Code
+      ;
+     </p>
+    </li>
+    <li>
+     <p>
+      Show Code Bytes
+      ;
+     </p>
+    </li>
+    <li>
+     <p>
+      Show Line Numbers
+      ;
+     </p>
+    </li>
+    <li>
+     <p>
+      Show Toolbar
+      ;
+     </p>
+    </li>
+    <li>
+     <p>
+      Show Address
+      .
+     </p>
+    </li>
+   </ol>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    Note that the
+    Show Symbols
+    option is currently not supported.
+   </p>
+  </li>
+  <li>
+   <p>
+    You can choose to view the CUDA disassembly as PTX, SASS, or a PTX and SASS combination. This is located in the top-right of the Visual Studio Disassembly view, and controls which disassembly is shown.
+   </p>
+   <a class="image reference internal image-reference" href="https://docs.nvidia.com/nsight-visual-studio-edition/_images/debugger.cuda.disassembly.select.view.001.png">
+   </a>
+   <p class="admonition-title">
+    Note
+   </p>
+   <p>
+    The number in brackets [0090] in the Visual Studio Disassembly View is the PTX line number.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  Address Breakpoints
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#address-breakpoints" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  With the Legacy CUDA Debugger PTX and SASS assembly debugging feature, address breakpoints are supported. Standard Visual Studio controls for adding and removing breakpoints can be seen in the breakpoint column of the disassembly.
+ </p>
+ <p>
+  A few items to note with address breakpoints:
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    Visual Studio disables address breakpoints after each debug session.
+   </p>
+  </li>
+  <li>
+   <p>
+    These breakpoints may use any of the advanced breakpoint conditionals.
+   </p>
+  </li>
+  <li>
+   <p>
+    Some instructions are not able to be patched (i.e., breakpoints cannot be set on them). When this happens, the breakpoint will be moved to the previous patchable breakpoint instruction.
+   </p>
+  </li>
+  <li>
+   <p>
+    The address of a source breakpoint can be seen in the Address column of the Visual Studio breakpointâs view.
+   </p>
+  </li>
+  <li>
+   <p>
+    The address breakpoints are always set at a SASS address.
+   </p>
+  </li>
+ </ol>
+ <h3>
+  Run Control
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#run-control" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  When using run control with the Legacy CUDA Debugger PTX and SASS assembly debugging, stepping in / out / over all work normally as expected. This follows the Visual Studio Source, Statement, and Instruction control. Stepping in the last line of a kernel will continue the program.
+ </p>
+ <p>
+  When stepping instructions (which is the default for disassembly) and SASS is showing, the Legacy CUDA Debugger will always step at the SASS level.
+ </p>
+ <ol class="arabic simple">
+  <li>
+   <p>
+    PTX
+    &gt; Steps only PTX instructions.
+   </p>
+  </li>
+  <li>
+   <p>
+    SASS
+    &gt; Steps only SASS instructions.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX + SASS
+    &gt; Also steps SASS instructions.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Note that there is no control for stepping PTX when SASS is showing.
+ </p>
+ <p>
+  Additional information on PTX can be found in the CUDA documentation:
+ </p>
+ <pre>NVIDIA GPU Computing Toolkit installation path\CUDA\&lt;version number&gt;\doc\
+</pre>
+ <h3>
+  Registers View
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#registers-view" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The Visual Studio
+  Debugger
+  &gt;
+  Windows
+  &gt;
+  Registers
+  can be configured to display CPU, SASS, and PTX registers by right-mouse clicking on the view and selecting the desired set of registers.
+ </p>
+ <ol class="arabic">
+  <li>
+   <p>
+    Device
+    (on Legacy Debugger) or
+    SASS
+    (on Next-Gen Debugger)Â â shows GPU registers.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX
+    â shows PTX registers, assuming the application is built with debug symbolics.
+   </p>
+  </li>
+  <li>
+   <p>
+    SASS loc
+    â shows in-scope SASS registers.
+   </p>
+   <p>
+    Note that the Next-Gen Debugger does not provide SASS loc register views.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX loc
+    â shows in-scope GPU PTX registers, assuming the application is built with debug symbolics.
+   </p>
+  </li>
+ </ol>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The Next-Gen Debugger also provides a formatted, customizable registers view via
+  Nsight
+  &gt;
+  Windows
+  &gt;
+  GPU Registers
+  .
+ </p>
+ <p>
+  For more information, see the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-nextgen-windows-registers">
+   Next-Gen CUDA Debugger registers view
+  </a>
+  , and
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#variables-expression-value">
+   how to evaluate the value of an expression
+  </a>
+  .
+ </p>
+ <h2>
+  Memory Checker
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#memory-checker" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  This feature is only supported by the Legacy CUDA Debugger. The Next-Gen CUDA Debugger will support this in a future release.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The Legacy CUDA Debugger does not support debugging with OptiX applications.
+ </p>
+ <p>
+  See:Â
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions">
+   Restrictions When Debugging OptiX Applications
+  </a>
+  &gt;Â
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#optix-restrictions-legacy-cuda">
+   Legacy CUDA Debugger
+  </a>
+ </p>
+ <p>
+  The CUDA Memory Checker detects problems in global and shared memory. If the CUDA Debugger detects an MMU fault when running a kernel, it will not be able to specify the exact location of the fault. In this case, enable the CUDA Memory Checker and restart debugging, and the CUDA Memory Checker will pinpoint the exact statements that are triggering the fault.
+ </p>
+ <p>
+  The CUDA Memory Checker will also detect problems in code that is built in release mode. Without symbols (
+  <span class="pre">
+   -G0
+  </span>
+  ) it will not show any associated source code.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  The CUDA Memory Checker must be enabled before debugging is started.
+ </p>
+ <p class="admonition-title">
+  Note
+ </p>
+ <p>
+  Keep in mind that there is a performance penalty associated with running kernels with the CUDA Memory Checker enabled.
+ </p>
+ <h3>
+  To Use the Memory Checker
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#to-use-the-memory-checker" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <ol class="arabic">
+  <li>
+   <p>
+    In Visual Studio, open a CUDA-based project.
+   </p>
+  </li>
+  <li>
+   <p>
+    Enable the Memory Checker using one of three methods:
+   </p>
+   <ul>
+    <li>
+     <p>
+      From the
+      <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/install-setup/index.html#using-vs-2019">
+       Nsight menu
+      </a>
+      , select Options &gt;
+      CUDA
+      . Change the setting for
+      Enable Memory Checker
+      from False (the default setting) to
+      True
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      As an alternative, you can select the Memory Checker icon from the CUDA toolbar to enable memory checking.
+     </p>
+    </li>
+    <li>
+     <p>
+      Or, use the
+      Nsight
+      menu and select
+      Enable CUDA Memory Checker
+      .
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p>
+    The user can enable checking in global memory or shared memory, as well as overall control of the CUDA Memory Checker.
+   </p>
+   <p>
+    When the global memory space is enabled, NVIDIA Nsightâ¢ VSE will also check violations in memory allocated from device code via
+    <span class="pre">
+     malloc
+    </span>
+    and
+    <span class="pre">
+     free
+    </span>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Launch the CUDA Debugger.
+   </p>
+   <ol class="loweralpha simple">
+    <li>
+     <p>
+      Make sure that the Nsight Monitor is running on the target system.
+     </p>
+    </li>
+    <li>
+     <p>
+      From Nsight menu, select Start CUDA Debugging (Legacy).Or you can use one of the following alternate methods:
+     </p>
+     <ul class="simple">
+      <li>
+       <p>
+        Right-click on the project in Solution Explorer and choose
+        Debug
+        &gt;
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Nsight CUDA Debugging toolbar &gt;
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+      <li>
+       <p>
+        Nsight Connections toolbar &gt;
+        Start CUDA Debugging (Legacy)
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      The Legacy CUDA Debugger starts and launches the target application.
+     </p>
+    </li>
+   </ol>
+  </li>
+ </ol>
+ <p>
+  During the debugging session, if the target attempts to write to an invalid memory location, the debugger triggers a breakpoint on the offending line of code, which stops execution. The CUDA Debugger stops before executing the instruction that would have written to the invalid memory location.
+ </p>
+ <p>
+  The CUDA Memory Checker treats misaligned pointers and attempted writes to an invalid address as two separate checks. This means that you can hit two separate breakpoints for the same attempted memory access.
+ </p>
+ <p>
+  For example, the following statement would trigger first a breakpoint because the pointer is misaligned, and then a second breakpoint because it attempts to write to an invalid memory address:
+ </p>
+ <pre><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="mh">0xffffffff</span><span class="o">=</span><span class="mh">0xbad</span><span class="p">;</span>
+</pre>
+ <h4>
+  Out of Patch RAM Errors
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#out-of-patch-ram-errors" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  When the CUDA Memory Checker is enabled, it will consume extra memory on the GPU. If there is not enough patch RAM for the CUDA Debugger, it will give the following error:
+ </p>
+ <pre>Internal debugger error occurred while attempting to launch
+"KernelName - CUmodule 0x04e67f10: code patching failed due to lack of code patching memory.
+</pre>
+ <p>
+  If this happens, increase the patch RAM factor by going to
+  Nsight
+  &gt;
+  Options
+  &gt;
+  CUDA
+  &gt;
+  Code Patching Memory Factor
+  .
+ </p>
+ <p>
+  This is a multiplier of the kernelâs instruction size, which is added to a base patch RAM size of 64k.
+ </p>
+ <p>
+  Another option is to disable the shared or global memory checking, in order to use less patch RAM.
+ </p>
+ <h3>
+  Memory Checker Results
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#memory-checker-results" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  The CUDA Memory Checker results go to the Nsight page of the Output window, as well as to the
+  <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-inspect-state/index.html#cuda-legacy-info-view">
+   CUDA Information
+  </a>
+  tool window.
+ </p>
+ <table class="table-no-stripes docutils align-default">
+  <tr class="row-odd">
+   <th class="head">
+    <p>
+     Error Code
+    </p>
+   </th>
+   <th class="head">
+    <p>
+     Meaning
+    </p>
+   </th>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     mis ld
+    </p>
+   </td>
+   <td>
+    <p>
+     misaligned access during a memory load
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     mis st
+    </p>
+   </td>
+   <td>
+    <p>
+     misaligned access during a memory store
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     mis atom
+    </p>
+   </td>
+   <td>
+    <p>
+     misaligned access during an atomic memory transaction - an atomic function was passed a misaligned address
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     adr ld
+    </p>
+   </td>
+   <td>
+    <p>
+     invalid address during a memory load
+    </p>
+   </td>
+  </tr>
+  <tr class="row-even">
+   <td>
+    <p>
+     adr st
+    </p>
+   </td>
+   <td>
+    <p>
+     invalid address during a memory store - attempted write to a memory location that was out of range, also sometimes referred to as a limit violation.
+    </p>
+   </td>
+  </tr>
+  <tr class="row-odd">
+   <td>
+    <p>
+     adr atom
+    </p>
+   </td>
+   <td>
+    <p>
+     invalid address during an atomic memory transaction - an atomic function attempted a memory access at an invalid address.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h4>
+  Example 1
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#example-1" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The following code snippet shows an example of attempting to write to a memory address out-of-bounds of the declared array.
+ </p>
+ <p>
+  Attempt to Write to Array Index Out of Bounds
+ </p>
+ <pre><span class="n">__device__</span><span class="kt">float</span><span class="n">globalArray</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">__global__</span><span class="kt">void</span><span class="n">naughtyWriter</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span><span class="n">i</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=&gt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> Â  </span><span class="c1">//error: index  will exceed array length</span>
+<span class="n">globalArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+ <p>
+  Notice that
+  Code Example 1
+  declares
+  <span class="pre">
+   globalArray[]
+  </span>
+  as an array of data type
+  <span class="pre">
+   float
+  </span>
+  , in global memory (
+  <span class="pre">
+   __device__
+  </span>
+  memory). If the array had been declared in a function executed by the CPU, the array would have been placed in thread-local memory, which is NOT checked by the CUDA Memory Checker.
+ </p>
+ <h4>
+  Example 2
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#example-2" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  The following code snippet shows an example of an attempt to write to an invalid memory address. If the CUDA Memory Checker is enabled, debugging an application that attempts to execute this code would trigger a breakpoint before executing the statement that assigns
+  <span class="pre">
+   0xd1e
+  </span>
+  to the array.
+ </p>
+ <p>
+  Attempt to Write to an Invalid Memory Address
+ </p>
+ <pre><span class="n">__global__</span><span class="kt">void</span><span class="n">other</span><span class="n">NaughtyWriter</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="n">pValues</span><span class="p">,</span><span class="kt">int</span><span class="n">numElements</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="n">pValues</span><span class="p">[</span><span class="n">numElements</span><span class="p">]</span><span class="o">=</span><span class="mh">0xd1e</span><span class="p">;</span><span class="w"> Â  </span><span class="o">&gt;</span><span class="c1">//error:  invalid memory address</span>
+<span class="p">}</span>
+</pre>
+ <h2>
+  Restrictions When Debugging OptiX Applications
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#restrictions-when-debugging-optix-applications" title="Permalink to this headline">
+   ï
+  </a>
+ </h2>
+ <p class="rubric" id="overview">
+  Overview
+ </p>
+ <p>
+  When using the
+  <a class="reference external" href="https://developer.nvidia.com/optix">
+   OptiX SDK
+  </a>
+  to develop applications, certain framework libraries are considered proprietary and have debugging and profiling tool restrictions. For many NVIDIA tools, call stacks that involve these libraries are completely restricted. Certain NVIDIA tools provide some visibility into user code using the framework libraries. These include:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Nsight Visual Studio Editionâs Next-Gen CUDA Debugger
+   </p>
+  </li>
+  <li>
+   <p>
+    Nsight Compute Profiler
+   </p>
+  </li>
+  <li>
+   <p>
+    cuda-gdb debugger
+   </p>
+  </li>
+ </ul>
+ <h3>
+  Restrictions for NVIDIA Nsight Visual Studio Edition
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#restrictions-for-nvidia-nsight-visual-studio-edition" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <h4>
+  Legacy CUDA Debugger
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#legacy-cuda-debugger" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p>
+  Call stacks and state information that involve these libraries are completely restricted.
+ </p>
+ <h4>
+  Next-Gen CUDA Debugger
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#next-gen-cuda-debugger" title="Permalink to this headline">
+   ï
+  </a>
+ </h4>
+ <p class="rubric" id="general">
+  General
+ </p>
+ <p>
+  By default, OptiX applications are built with
+  <span class="pre">
+   -lineinfo
+  </span>
+  , which optimizes SASS, typically for profiling. The
+  <span class="pre">
+   -linetable
+  </span>
+  option does not match exactly to the source, so stepping behavior is not what you get with
+  <span class="pre">
+   -G
+  </span>
+  , typically for debugging. Optimized SASS makes source stepping and source breakpoint setting haphazard at best. As such, it is recommended that you set breakpoints and step in SASS disassembly as much as possible.
+ </p>
+ <p>
+  Call stack and GPU state information may be restricted to user code. OptiX Library portions of the call stack will be labeled as
+  [NVIDIA Internal]
+  , and state information for these portions of the stack will be restricted.
+ </p>
+ <p class="rubric" id="breakpoints">
+  Breakpoints
+ </p>
+ <p>
+  Breakpoints may only be set in unrestricted OptiX module code and user code. More specifically:
+ </p>
+ <p>
+  Function Breakpoints
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Function breakpoints in user code work the same as in other CUDA applications.
+   </p>
+  </li>
+  <li>
+   <p>
+    Function breakpoints in restricted OptiX internal code will not resolve. For example, if you use
+    <span class="pre">
+     .*
+    </span>
+    the debugger will only resolve breakpoints in user and unrestricted OptiX functions.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Source Breakpoints
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    As mentioned in
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#general">
+     General
+    </a>
+    , OptiX code is typically optimized. This can result in source breakpoints being resolved to multiple locations. Correspondingly, the breakpointâs view may show multiple child instances for a given breakpoint. As such, it is recommended that you set breakpoints and step in SASS disassembly as much as possible.
+   </p>
+  </li>
+ </ul>
+ <p>
+  SASS Breakpoints
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    For the most part, SASS breakpoints work as expected, aside from one exception: Visual Studio saves SASS breakpoints with an absolute address, so the address may be different between sessions. (They are not Function + offset, which would relocate correctly.)
+   </p>
+  </li>
+ </ul>
+ <p>
+  PTX Breakpoints
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    PTX breakpoints work the same as in other CUDA applications.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="break-on-activity">
+  Break on Activity
+ </p>
+ <p>
+  Break on Launch
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Launch function internal breakpoints cannot be set in restricted OptiX internal code. Therefore, the
+    Break on Launch
+    functionality cannot be used to break on Optix callbacks to user code.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="disasm">
+  Disasm
+ </p>
+ <p>
+  Restrictions:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    The Disassembly view will not show restricted OptiX module code.
+   </p>
+  </li>
+  <li>
+   <p>
+    Stepping into restricted OptiX code will not be permitted.
+   </p>
+  </li>
+  <li>
+   <p>
+    No restricted functions or their file names will be displayed when scrolling or otherwise changing the viewâs disassembly location.
+   </p>
+  </li>
+ </ul>
+ <p>
+  The following only applies to unrestricted OptiX framework library code and user code, with the above exceptions:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    SASS may be displayed and stepped normally.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX, if present, may be displayed and stepped normally.
+   </p>
+  </li>
+  <li>
+   <p>
+    OptiX unrestricted code may be shown as
+    <span class="pre">
+     /generated/generated
+    </span>
+    .
+   </p>
+   <ul>
+    <li>
+     <p>
+      A dialog may appear the first time the debugger is looking for the OptiX
+      <span class="pre">
+       /generated/generated
+      </span>
+      file. Canceling the dialog will ensure it does not display anymore.
+     </p>
+    </li>
+    <li>
+     <p>
+      Corresponding file names will also be shown.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p class="rubric" id="call-stack">
+  Call Stack
+ </p>
+ <ul>
+  <li>
+   <p>
+    Shows [NVIDIA Internal] for restricted OptiX functions.
+   </p>
+  </li>
+  <li>
+   <p>
+    Multiple restricted functions may be collapsed into one [NVIDIA internal] frame.
+   </p>
+  </li>
+  <li>
+   <p>
+    [NVIDIA Internal] frames have no source or disasm, and other restricted state information.
+   </p>
+  </li>
+  <li>
+   <p>
+    User code below and between [NVIDIA Internal] frames may be viewed and inspected normally, except some registers may be incorrect.
+   </p>
+   <p>
+    Note that this is not possible with cuda-gdb.
+   </p>
+  </li>
+  <li>
+   <p>
+    User code above the topmost [NVIDIA internal] frame may be viewed and inspected normally.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="modules">
+  Modules
+ </p>
+ <ul>
+  <li>
+   <p>
+    Restricted modules will be displayed as:
+   </p>
+   <pre>[CUDA]&lt;module handle&gt;
+</pre>
+  </li>
+  <li>
+   <p>
+    User and unrestricted modules, are displayed the same as in other CUDA applications.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="run-control-1">
+  Run Control
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    Disassembly stepping behaves the same as other CUDA applications.
+   </p>
+  </li>
+  <li>
+   <p>
+    As mentioned in
+    <a class="reference external" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#general">
+     General
+    </a>
+    , OptiX code is typically optimized. This can result in erratic source stepping. As such, it is recommended that you set breakpoints and step in SASS disassembly as much as possible.
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="autos">
+  Autos
+ </p>
+ <p>
+  Automatic variable state is unsupported when the call stack involves [NVIDIA Internal] frames.
+ </p>
+ <p class="rubric" id="locals">
+  Locals
+ </p>
+ <p>
+  Local variable state view only shows the launch information when the call stack involves [NVIDIA Internal] frames.
+ </p>
+ <p class="rubric" id="watch">
+  Watch
+ </p>
+ <ul>
+  <li>
+   <p>
+    Watch variables do not show up when the call stack involves [NVIDIA Internal] frames.
+   </p>
+  </li>
+  <li>
+   <p>
+    PTX registers (e.g., %r279 or %r515)Â will not resolve due to missing device debug info (
+    <span class="pre">
+     -G
+    </span>
+    ) and will display the following message:
+   </p>
+   <pre>Unable to evaluate the expression.
+</pre>
+  </li>
+ </ul>
+ <p class="rubric" id="memory">
+  Memory
+ </p>
+ <p>
+  Memory view has the same behavior as in other CUDA applications.
+ </p>
+ <p class="rubric" id="gpu-registers-visual-studio-and-gpu-registers-view">
+  GPU Registers (Visual Studio and GPU Registers View)
+ </p>
+ <p>
+  The Registers view has the same behavior as in other CUDA applications above the topmost [NVIDIA Internal] call stack frame, but register values are not reliable below.
+ </p>
+ <p>
+  Restrictions:
+ </p>
+ <ul class="simple">
+  <li>
+   <p>
+    PTX registers do not display due to missing device debug info (
+    <span class="pre">
+     -G
+    </span>
+    ).
+   </p>
+  </li>
+ </ul>
+ <p class="rubric" id="warp-info">
+  Warp Info
+ </p>
+ <p>
+  The Warp Info view has the same behavior as in other CUDA applications.
+ </p>
+ <p class="rubric" id="lane-info">
+  Lane Info
+ </p>
+ <p>
+  The Lane Info view has the same behavior as in other CUDA applications.
+ </p>
+ <p class="rubric" id="symbolics">
+  Symbolics
+ </p>
+ <p>
+  By default, OptiX framework modules do not have symbolics.
+ </p>
+ <h3>
+  API Trace
+  <a class="headerlink" href="https://docs.nvidia.com/nsight-visual-studio-edition/cuda-advanced-topics/index.html#api-trace" title="Permalink to this headline">
+   ï
+  </a>
+ </h3>
+ <p>
+  API Trace information that involve restricted OptiX library functions are completely restricted.
+ </p>
+ <p class="rubric-h1 rubric">
+  Notices
+ </p>
+ <p class="rubric-h2 rubric">
+  Notice
+ </p>
+ <p>
+  ALL NVIDIA DESIGN SPECIFICATIONS, REFERENCE BOARDS, FILES, DRAWINGS, DIAGNOSTICS, LISTS, AND OTHER DOCUMENTS (TOGETHER AND SEPARATELY, âMATERIALSâ) ARE BEING PROVIDED âAS IS.â NVIDIA MAKES NO WARRANTIES, EXPRESSED, IMPLIED, STATUTORY, OR OTHERWISE WITH RESPECT TO THE MATERIALS, AND EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES OF NONINFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+ </p>
+ <p>
+  Information furnished is believed to be accurate and reliable. However, NVIDIA Corporation assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication of otherwise under any patent rights of NVIDIA Corporation. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all other information previously supplied. NVIDIA Corporation products are not authorized as critical components in life support devices or systems without express written approval of NVIDIA Corporation.
+ </p>
+ <p class="rubric-h2 rubric">
+  Trademarks
+ </p>
+ <p>
+  NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
+ </p>
+ <p>
+  © Copyright 2018-2024, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+  <span class="lastupdated">
+   Last updated on Jun 03, 2024.
+  </span>
+ </p>
+</body>
+</body></html>
